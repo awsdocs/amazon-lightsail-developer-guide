@@ -7,7 +7,7 @@ When you create a Lightsail instance, some network ports are open by default\. W
 
 The firewall and port settings are listed in the **Networking** tab of your instance's management page in the Amazon Lightsail console\. Choose **Edit rules** or **Add another** to change or create rules\.
 
-![\[Networking tab on the manage instance page\]](https://d9yljz1nd5001.cloudfront.net/en_us/1cade0c7e07039bf59652df47a09d228/images/amazon-lightsail-manage-instance-page-networking-tab.png)
+![\[Networking tab on the manage instance page\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/amazon-lightsail-manage-instance-page-networking-tab.png)
 
 ## Application layer protocol types<a name="understanding-firewall-and-port-mappings-in-amazon-lightsail-application-types"></a>
 

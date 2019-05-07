@@ -61,7 +61,7 @@ Snapshots are exported to the same AWS Region from Lightsail to Amazon EC2\. To 
 1. Locate the instance or block storage disk that you want to export, and expand the node to view the available snapshots for that resource\. 
 
 1. Choose the **Action** menu for the desired snapshot, then choose **Export to Amazon EC2**\.  
-![\[Export snapshot in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1cade0c7e07039bf59652df47a09d228/images/amazon-lightsail-action-menu-export-snapshot.png)
+![\[Export snapshot in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/amazon-lightsail-action-menu-export-snapshot.png)
 
 1. Review the important details displayed on the prompt\.
 
@@ -75,7 +75,7 @@ Use the task monitor in the Lightsail console to track the status of your export
 
 The following information is displayed in the task monitor for snapshot exports:
 
-![\[The task monitor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1cade0c7e07039bf59652df47a09d228/images/amazon-lightsail-task-monitor-export-snapshot.png)
+![\[The task monitor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/amazon-lightsail-task-monitor-export-snapshot.png)
 + **Snapshot name** — The name of the source Lightsail snapshot\.
 + **Export started** — The date and time the snapshot export was started\.
 + **Snapshot created** — The date and time the source Lightsail snapshot was created\.

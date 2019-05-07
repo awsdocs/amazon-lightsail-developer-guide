@@ -34,7 +34,7 @@ These steps are also in the Amazon EC2 documentation\. To learn more, see [Resto
 1. Locate and select the exported Lightsail block storage disk snapshot\.
 
    Exported disk snapshot can be identified by the *A disk snapshot exported from Amazon Lightsail* description of the EBS snapshot as shown in the following screenshot:  
-![\[EBS snapshots in the Amazon EC2 console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1cade0c7e07039bf59652df47a09d228/images/amazon-lightsail-ec2-console-ebs-snapshots.png)
+![\[EBS snapshots in the Amazon EC2 console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/amazon-lightsail-ec2-console-ebs-snapshots.png)
 
 1. Choose **Actions**, then choose **Create Volume**\.
 

@@ -21,7 +21,7 @@ Aside from security benefits mentioned above, there are other reasons to use HTT
 
 To enable HTTPS, you must follow these steps in order\.
 
-![\[HTTPS process overview\]](https://d9yljz1nd5001.cloudfront.net/en_us/1cade0c7e07039bf59652df47a09d228/images/create-https-load-balancer-process-summary.png)
+![\[HTTPS process overview\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/create-https-load-balancer-process-summary.png)
 
 You can get started with HTTPS by following these links\.
 +  [Create a Lightsail load balancer and attach instances to it](create-lightsail-load-balancer-and-attach-lightsail-instances.md) 
