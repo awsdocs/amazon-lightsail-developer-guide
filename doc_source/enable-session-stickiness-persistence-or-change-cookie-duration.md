@@ -15,7 +15,7 @@ You can also adjust the cookie duration using the AWS Command Line Interface \(A
 1. Choose the **Inbound traffic** tab\.
 
 1. Choose **Enable session persistence**\.  
-![\[Session persistence enabled\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/session-persistence-enabled.png)
+![\[Session persistence enabled\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/session-persistence-enabled.png)
 
 ## Adjust the cookie duration<a name="adjust-cookie-duration"></a>
 

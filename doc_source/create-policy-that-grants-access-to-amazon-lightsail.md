@@ -4,7 +4,7 @@
 
 When you're trying to access Lightsail, you might see the following 403 error\. Don't panic\! We'll help you sort this out\.
 
-![\[403 error in Amazon Lightsail - unauthorized\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/403-not-authorized-access-error-in-amazon-lightsail.png)
+![\[403 error in Amazon Lightsail - unauthorized\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/403-not-authorized-access-error-in-amazon-lightsail.png)
 
 ## Troubleshooting: Try these things first<a name="troubleshooting-try-these-things-first"></a>
 
@@ -80,7 +80,7 @@ If you don't have an account that has Lightsail access, follow these steps to cr
 1. Choose **Create user**\.
 
    If you're successful, your screen should look like this\.  
-![\[Successful creation of an IAM user with the attached policy.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/iam-console-add-user-success.png)
+![\[Successful creation of an IAM user with the attached policy.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/iam-console-add-user-success.png)
 
 1. If you created the user for yourself, then show the password and copy it to a safe location\.
 

@@ -12,7 +12,7 @@ If you make periodic snapshots of a disk, the snapshots are incremental\. Only t
 1. From the Lightsail home page, choose **Snapshots**\.
 
 1. Find the disk that has the snapshot you want to delete, and then expand the list of snapshots by choosing the disk name\.  
-![\[Use the shortcut menu to show your disk snapshots and delete one\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/animated-gif-delete-disk-snapshot-single.gif)
+![\[Use the shortcut menu to show your disk snapshots and delete one\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/animated-gif-delete-disk-snapshot-single.gif)
 
 1. Choose **Delete snapshot**\.
 
@@ -23,7 +23,7 @@ If you make periodic snapshots of a disk, the snapshots are incremental\. Only t
 1. From the Lightsail home page, choose **Snapshots**\.
 
 1. Find the disk that has the snapshots you want to delete, and then expand the list of snapshots by choosing the disk name\.  
-![\[Use the shortcut menu to show your disk snapshots and delete multiple disk snapshots\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/animated-gif-delete-disk-snapshot-multiple.gif)
+![\[Use the shortcut menu to show your disk snapshots and delete multiple disk snapshots\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/animated-gif-delete-disk-snapshot-multiple.gif)
 
 1. Choose **Delete multiple**\.
 

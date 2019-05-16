@@ -7,7 +7,7 @@ By default, Lightsail performs health checks on your instances at the root \(`"/
 
 Health checking starts as soon as you attach your Lightsail instances to your load balancer\. You can see the health check status on the load balancer management page\.
 
-![\[Health check status indicator\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/target-instances-health-check-passed.png)
+![\[Health check status indicator\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/target-instances-health-check-passed.png)
 
 ## Customize your health check path<a name="why-customize-health-check-path"></a>
 
@@ -20,7 +20,7 @@ You might want to customize your health check path\. For example, if your home p
 1. On the **Target instances** tab, choose **Customize health checking**\.
 
 1. Type a valid path for your health check, and then choose **Save**\.  
-![\[Customize the health check path\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/customize-health-checking-path.png)
+![\[Customize the health check path\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/customize-health-checking-path.png)
 
 ## Health check metrics<a name="health-check-metrics"></a>
 

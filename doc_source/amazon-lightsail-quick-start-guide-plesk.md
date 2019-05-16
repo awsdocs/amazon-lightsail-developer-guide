@@ -15,7 +15,7 @@ Configuring firewall settings allows you to access the Plesk panel for your inst
    + Custom > UDP > 53
    + Custom > TCP > 8443
    + Custom > TCP > 8447  
-![\[Plesk firewall entries in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/amazon-lightsail-plesk-firewall.png)
+![\[Plesk firewall entries in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/amazon-lightsail-plesk-firewall.png)
 
 For more information, see [Set up and configure Plesk on Lightsail](set-up-and-configure-plesk-stack-on-lightsail.md)\.
 
@@ -32,7 +32,7 @@ You need the one\-time login URL to access the Plesk panel as an administrator\.
    ```
 
    You should see a response similar to this, which contains the one\-time login URL:  
-![\[Plesk panel one-time login URL.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/amazon-lightsail-plesk-password.png)
+![\[Plesk panel one-time login URL.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/amazon-lightsail-plesk-password.png)
 
 1. Copy the URL to your clipboard, or make note of it\. You will need it later to sign in to the Plesk panel for the first time\.
 

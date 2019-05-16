@@ -25,7 +25,7 @@ The database parameters differ depending on the database engine; therefore, you 
    ```
 
    You should see a result similar to the following example:  
-![\[Get relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/amazon-lightsail-get-database-parameters-result.png)
+![\[Get relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/amazon-lightsail-get-database-parameters-result.png)
 **Note**  
 A next page token ID is listed if the parameter results are paginated\. Make note of the next page token ID and use it as shown in the next step to view the next page of parameter results\.
 
@@ -60,7 +60,7 @@ After you have the name of the parameter you want to change, perform the followi
   ```
 
   You should see a result similar to the following example:  
-![\[Change relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/amazon-lightsail-update-database-parameters-result.png)
+![\[Change relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/amazon-lightsail-update-database-parameters-result.png)
 
   The database parameter is updated depending on the apply method used\.
 **Note**  

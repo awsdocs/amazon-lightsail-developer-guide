@@ -34,12 +34,12 @@ Your database may become unavailable during maintenance or backup operations\. T
    ```
 
    You should see a result similar to the following example:  
-![\[The get-relational-databases response.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/amazon-lightsail-database-get-relational-databases-reponse.png)
+![\[The get-relational-databases response.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/amazon-lightsail-database-get-relational-databases-reponse.png)
 **Note**  
 If the database that you want to modify is not listed, confirm that your AWS CLI is configured for the AWS Region where the database is located\. For more information, see [Configuring the AWS CLI](lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli.md)\.
 
 1. Highlight the name of the database that you want to modify and press **Ctrl\+C** if you’re using Windows, or **Cmd\+C** if you’re using macOS, to copy it to your clipboard so that you can use it in the next step\.  
-![\[Copy the database name.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/amazon-lightsail-copy-database-name-cli.png)
+![\[Copy the database name.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/amazon-lightsail-copy-database-name-cli.png)
 
 1. Enter one of the following commands depending on the preferred window that you are changing\.
    + Enter the following command to change the database maintenance window\. Be sure to paste the name of the database in place of *DatabaseName*, and enter the new maintenance window time frame in place of *MaintenanceWindow*:
@@ -70,7 +70,7 @@ You must enter the preferred maintenance window time in ddd:hh24:mi\-ddd:hh24:mi
 You must enter the preferred backup window time in hh24:mi\-hh24:mi format\. It also must be in Universal Coordinated Time \(UTC\) format, and defined for a minimum window of 30 minutes\. The preferred backup window cannot overlap the preferred maintenance window\.
 
    You should see a result similar to the following example:  
-![\[Database preferred maintenance window update result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b2fb86c05aa70ef4defbdc74847a0bb8/images/amazon-lightsail-update-database-preferred-maintenance-window-response.png)
+![\[Database preferred maintenance window update result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/amazon-lightsail-update-database-preferred-maintenance-window-response.png)
 
 ## Next steps<a name="changing-preferred-maintenance-and-backup-windows-next-steps"></a>
 
