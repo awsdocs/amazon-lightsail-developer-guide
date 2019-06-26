@@ -15,12 +15,12 @@ At this time, we don't support creating a smaller instance size \(or bundle\) fr
 ## Create your instance<a name="create-larger-instance-from-snapshot-using-console-get-your-snapshot-name"></a>
 
 1. On the home page, choose the instance from which you want to create your snapshot\. Or choose **Manage** from the instance menu\.  
-![\[Manage instance menu\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/linux-instance-manage-instance-from-shortcut-menu-home-page.gif)
+![\[Manage instance menu\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/linux-instance-manage-instance-from-shortcut-menu-home-page.gif)
 
 1. Choose **Snapshots**\.
 
 1. Choose **Create new instance** from the snapshot menu\.  
-![\[Manage snapshot menu\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/animated-gif-create-new-linux-unix-based-lightsail-instance-from-snapshot.gif)
+![\[Manage snapshot menu\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/animated-gif-create-new-linux-unix-based-lightsail-instance-from-snapshot.gif)
 
 1. On the **Create an instance from a snapshot** page, you have a few optional settings to decide on at the top\. For example, you can change the Availability Zone, [add a launch script](lightsail-how-to-configure-server-additional-data-shell-script.md), or [change the way you connect to your instance](understanding-ssh-in-amazon-lightsail.md)\.
 

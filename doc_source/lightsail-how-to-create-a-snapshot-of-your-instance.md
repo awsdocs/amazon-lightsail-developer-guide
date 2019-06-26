@@ -10,7 +10,7 @@ The steps to create a snapshot of a Windows Server\-based Lightsail instance are
 You must already have an instance in Lightsail to create a snapshot of it\. After you have an instance, follow these steps to create a snapshot:
 
 1. On the Lightsail home page, choose your instance\. Or choose **Manage** on the shortcut menu\.  
-![\[Manage instance menu\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/linux-instance-manage-instance-from-shortcut-menu-home-page.gif)
+![\[Manage instance menu\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/linux-instance-manage-instance-from-shortcut-menu-home-page.gif)
 
 1. Choose **Snapshots**\.
 

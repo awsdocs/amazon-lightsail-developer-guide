@@ -12,7 +12,7 @@ Deleted instances cannot be recovered\. Create a snapshot of an instance before 
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. For the instance you want to delete, choose the actions menu icon \(⋮\), then choose **Delete**\.  
-![\[Delete an instance from the Lightsail console home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/animation_delete_instance.gif)
+![\[Delete an instance from the Lightsail console home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/animation_delete_instance.gif)
 
 1. Choose **Yes** to confirm the deletion\.
 
@@ -21,7 +21,7 @@ Deleted instances cannot be recovered\. Create a snapshot of an instance before 
 1. In the Lightsail console on the home page, choose the instance you want to delete\.
 
 1. Choose the **Delete** tab, then choose **Delete instance**\.  
-![\[Delete an instance from the Lightsail console instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/amazon-lightsail-delete-instance-button.png)
+![\[Delete an instance from the Lightsail console instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-delete-instance-button.png)
 
 1. Choose **Yes** to confirm the deletion\.
 
@@ -40,7 +40,7 @@ Deleted instances cannot be recovered\. Create a snapshot of an instance before 
    ```
 
    You should see results similar to the following:  
-![\[AWS CLI output for Lightsail get-instances operation.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/amazon-lightsail-get-instance-output.png)
+![\[AWS CLI output for Lightsail get-instances operation.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-get-instance-output.png)
 
 1. Select and copy the name of the instance you want to delete so you can use it in the next step\.
 **Note**  
@@ -53,7 +53,7 @@ If the instance you want to delete does not appear, confirm that your AWS CLI is
    ```
 
    If the deletion is successful, you should see a confirmation similar to the following:  
-![\[AWS CLI output for Lightsail delete-instance operation.\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/amazon-lightsail-delete-instance-output.png)
+![\[AWS CLI output for Lightsail delete-instance operation.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-delete-instance-output.png)
 **Note**  
 If the deletion isn’t successful, you should see an error message\. Confirm that you copied and pasted the exact name of the instance and try again\.
 

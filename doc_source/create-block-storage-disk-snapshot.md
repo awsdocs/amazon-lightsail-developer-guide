@@ -11,7 +11,7 @@ For more information, see [Disk snapshots in Lightsail](block-storage-disk-snaps
 1. On the Lightsail home page, choose the **Storage** tab\.
 
 1. Choose the block storage disk that you want to take a snapshot of, or choose **Manage** from the shortcut menu\.  
-![\[Use the shortcut menu to manage your block storage disk\]](https://d9yljz1nd5001.cloudfront.net/en_us/b380b072d417d05346bbc87239d4fd76/images/animated-gif-manage-block-storage-disk-shortcut-menu.gif)
+![\[Use the shortcut menu to manage your block storage disk\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/animated-gif-manage-block-storage-disk-shortcut-menu.gif)
 
 1. Choose **Snapshots**\.
 
