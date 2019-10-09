@@ -8,7 +8,7 @@ Database parameters, also known as database system variables, define fundamental
 For more information about MySQL system variables, refer to the [MySQL 5\.6](https://dev.mysql.com/doc/refman/5.6/en/server-system-variables.html), [MySQL 5\.7](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html), or [MySQL 8\.0](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html) documentation\. For more information about PostgreSQL system variables, refer to the [PostgreSQL 9\.6](https://www.postgresql.org/docs/9.6/index.html), [PostgreSQL 10](https://www.postgresql.org/docs/10/index.html), or [PostgreSQL 11\.1](https://www.postgresql.org/docs/11/index.html) documentation\.
 
 ## Prerequisites<a name="prerequisites-to-update-database-parameters"></a>
-+ If you haven't done so already, install and configure the AWS CLI\. For more information, see [Set up and configure the AWS CLI to work with Lightsail](lightsail-how-to-set-up-and-configure-aws-cli.md)\.
++ If you haven't done so already, install and configure the AWS CLI\. For more information, see [Configuring the AWS Command Line Interface to work with Amazon Lightsail](lightsail-how-to-set-up-and-configure-aws-cli.md)\.
 
 ## Get a list of available database parameters<a name="get-database-parameters"></a>
 
@@ -25,7 +25,7 @@ The database parameters differ depending on the database engine; therefore, you 
    ```
 
    You should see a result similar to the following example:  
-![\[Get relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-get-database-parameters-result.png)
+![\[Get relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-get-database-parameters-result.png)
 **Note**  
 A next page token ID is listed if the parameter results are paginated\. Make note of the next page token ID and use it as shown in the next step to view the next page of parameter results\.
 
@@ -60,7 +60,7 @@ After you have the name of the parameter you want to change, perform the followi
   ```
 
   You should see a result similar to the following example:  
-![\[Change relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-update-database-parameters-result.png)
+![\[Change relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-update-database-parameters-result.png)
 
   The database parameter is updated depending on the apply method used\.
 **Note**  

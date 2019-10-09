@@ -16,7 +16,7 @@ You can edit the DNS records in your domain's DNS zone at any time using the Lig
 1. Sign in to the Lightsail console\.
 
 1. Choose the **Networking** tab, and then choose the name of the DNS zone you want to edit\.  
-![\[DNS zone editor in the Amazon Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-dns-zone-records.png)
+![\[DNS zone editor in the Amazon Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-dns-zone-records.png)
 
 1. On the DNS zone management page, choose one of the following options:
    + To add a new record, choose **Add record**\.

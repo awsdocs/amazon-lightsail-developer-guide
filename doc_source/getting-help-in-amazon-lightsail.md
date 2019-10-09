@@ -8,7 +8,7 @@ In Amazon Lightsail, you can get help in several ways\.
 
 Lightsail has a context\-sensitive **Help** panel on each page of the console with additional tips and information that are specific to the page you're on\. Open the help panel any time you have a question about something on the page, and close it when you're good to go\. You can open the help panel by choosing **Help** on any page, or by choosing any of the small question marks throughout the user interface\.
 
-![\[Context-sensitive Help panel in Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/context-sensitive-help-panel-in-amazon-lightsail.png)
+![\[Context-sensitive Help panel in Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/context-sensitive-help-panel-in-amazon-lightsail.png)
 
 ## About this developer guide<a name="getting-help-developer-guide"></a>
 
@@ -27,7 +27,7 @@ You can use the AWS Command Line Interface \(AWS CLI\) or the Lightsail REST API
 **Note**  
 You need to generate access keys to use the Lightsail API\. [Learn more about setting up access keys to use the Lightsail API](lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli.md)\.
 
-The AWS CLI is helpful when you work with your Lightsail resources\. In the AWS CLI, just type `aws lightsail help` to learn about the available commands\. For help on a specific CLI command, type the command name followed by `help` to learn more about its parameters and exceptions\. For more information, see the [Lightsail CLI reference](http://docs.aws.amazon.com/cli/latest/reference/lightsail/index.html)\.
+The AWS CLI is helpful when you work with your Lightsail resources\. In the AWS CLI, just type `aws lightsail help` to learn about the available commands\. For help on a specific CLI command, type the command name followed by `help` to learn more about its parameters and exceptions\. For more information, see the [Lightsail CLI reference](https://docs.aws.amazon.com/cli/latest/reference/lightsail/index.html)\.
 
 ## AWS forums and other community resources<a name="aws-forums-and-other-community-resources"></a>
 

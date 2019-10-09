@@ -20,18 +20,18 @@ You can create a Plesk hosting stack in Lightsail that includes the following fe
 1. Under **Apps \+ OS**, choose **Plesk Hosting Stack on Ubuntu**\.
 
 1. Choose your instance plan\.
-
-   Plesk is not supported on the $3\.50 USD per month Lightsail plan\.
+**Note**  
+Plesk is not supported on the $3\.50 USD per month Lightsail plan\.
 
 1. Enter a name for your instance\.
 
 1. Choose one of the following options to add tags to your instance:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
@@ -54,7 +54,7 @@ Before you can log in to your instance, you need to configure some firewall sett
    + Custom > UDP > 53
    + Custom > TCP > 8443
    + Custom > TCP > 8447  
-![\[Plesk firewall entries in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-plesk-firewall.png)
+![\[Plesk firewall entries in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-plesk-firewall.png)
 
    Port 8447 is needed for updates and upgrades under **Tools and Settings**\.
 
@@ -71,7 +71,7 @@ For security reasons, we recommend that you allow access only to services you wa
 The following instructions are for your first\-time login to your Lightsail instance running Plesk\.
 
 1. On the Lightsail home page, under **Instances**, choose the terminal connection icon on your Plesk on Amazon Lightsail instance to manage it\.  
-![\[Connect to your Plesk on Amazon Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/connect-quickly-to-your-plesk-instance-terminal.png)
+![\[Connect to your Plesk on Amazon Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/connect-quickly-to-your-plesk-instance-terminal.png)
 
 1. Type the following command\.
 
@@ -106,6 +106,6 @@ The following instructions are for your first\-time login to your Lightsail inst
 1. On the **Create Your Webspace** page, create a **username** and **password**, and then choose **OK**\.
 
    If successful, you're logged into the Plesk dashboard\.  
-![\[Plesk dashboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/plesk-admin-dashboard.png)
+![\[Plesk dashboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/plesk-admin-dashboard.png)
 
    To log in again, just navigate to `https://public IP or static IP of instance:8443` and log in using username 'admin' and the password you created earlier\.

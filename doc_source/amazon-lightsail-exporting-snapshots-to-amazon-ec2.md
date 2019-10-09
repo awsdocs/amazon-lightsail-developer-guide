@@ -16,7 +16,7 @@ We recommend getting familiar with the Lightsail export process before completin
 Lightsail uses an AWS Identity and Access Management \(IAM\) service\-linked role \(SLR\) to export snapshots to Amazon EC2\. For more information about SLRs, see [Using service\-linked roles for Amazon Lightsail](amazon-lightsail-using-service-linked-roles.md)\.
 
 The following additional permissions may need to be configured in IAM depending on the user that will perform the snapshot export:
-+ If the [Amazon account root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html) will perform the export, then continue to the [Prerequisites](#exporting-snapshots-to-amazon-ec2-prerequisites) section of this guide\. The account root user already has the required permissions to perform the snapshot export\.
++ If the [Amazon account root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html) will perform the export, then continue to the [Prerequisites section](#exporting-snapshots-to-amazon-ec2-prerequisites) of this guide\. The account root user already has the required permissions to perform the snapshot export\.
 + If an IAM user will perform the export, then an AWS account administrator must add the following policy to the user\. For more information about how to change permissions for a user, see [Changing Permissions for an IAM User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_change-permissions.html#users_change_permissions-add-console) in the IAM documentation\.
 
   ```
@@ -61,7 +61,7 @@ Snapshots are exported to the same AWS Region from Lightsail to Amazon EC2\. To 
 1. Locate the instance or block storage disk that you want to export, and expand the node to view the available snapshots for that resource\. 
 
 1. Choose the **Action** menu for the desired snapshot, then choose **Export to Amazon EC2**\.  
-![\[Export snapshot in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-action-menu-export-snapshot.png)
+![\[Export snapshot in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-action-menu-export-snapshot.png)
 
 1. Review the important details displayed on the prompt\.
 
@@ -75,7 +75,7 @@ Use the task monitor in the Lightsail console to track the status of your export
 
 The following information is displayed in the task monitor for snapshot exports:
 
-![\[The task monitor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-task-monitor-export-snapshot.png)
+![\[The task monitor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-task-monitor-export-snapshot.png)
 + **Snapshot name** — The name of the source Lightsail snapshot\.
 + **Export started** — The date and time the snapshot export was started\.
 + **Snapshot created** — The date and time the source Lightsail snapshot was created\.

@@ -3,7 +3,7 @@
 **Note**  
 Every Lightsail server comes with high\-performing, persistent SSD\-based block storage\. Your system disk is automatically replicated within its Availability Zone to protect you from component failure\. This offers you high availability and durability\. You can also create additional block storage disks and attach them to your Lightsail instances\.
 
- *Last updated: November 14, 2017* 
+ *Last updated: July 10, 2019* 
 
 System disks offer the consistent and low\-latency performance you need to run your workloads\. With Lightsail disks, you can scale your usage up or down within minutes—and pay a low price for only what you provision\.
 
@@ -23,7 +23,6 @@ For customers with applications that require sustained IOPS performance or high 
 You can learn more about [Amazon EBS volumes](http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/EBSVolumes.html) in the *Amazon EC2 User Guide*\.
 
 ## Disk limits<a name="block-disk-storage-limits"></a>
-+ You can create additional storage disks with a capacity of up to 16 TB \(16,384 GB\)\.
-+ Your total disk storage must not exceed 20 TB in a single AWS account\.
-+ You can attach up to 15 disks to a single Lightsail instance, in addition to the system disk\.
-+ You can only attach a block storage disk to one Lightsail instance\.
++ 20,000 GB per Region\.
++ 16 TB per disk maximum, or 8 GB per disk minimum\.
++ Each instance can have up to 15 attached disks, and 1 boot volume disk\.

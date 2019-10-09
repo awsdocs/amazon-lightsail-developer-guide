@@ -42,5 +42,5 @@ Keep your access keys in a safe place\. You should name the file something like 
 
 ## Next steps<a name="set-up-access-keys-next-steps"></a>
 +  [Install the SDK](https://aws.amazon.com/tools/#sdk) 
-+  [Set up the AWS CLI](lightsail-how-to-set-up-and-configure-aws-cli.md) 
++  [Configure the AWS Command Line Interface to work with Amazon Lightsail](lightsail-how-to-set-up-and-configure-aws-cli.md) 
 +  [Read the API docs](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/Welcome.html) 

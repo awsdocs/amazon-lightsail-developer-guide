@@ -6,7 +6,7 @@ If you no longer need a block storage disk, you can detach it from your stopped 
 
 ## Prerequisites<a name="delete-block-storage-disk-prerequisites"></a>
 + Stop your instance from running\. You have to do this before you can detach and then delete your disk\. [Learn how to stop your instance](lightsail-how-to-start-stop-or-restart-your-instance-virtual-private-server.md)
-+ \(Optional\) We recommend that you create a snapshot of your disk\. That way, you have a backup in case you change your mind\. [Learn how to create a snapshot of your disk](create-block-storage-disk-snapshot.md)
++ \(Optional\) We recommend that you create a snapshot of your disk\. That way, you have a backup in case you change your mind\. For more information, see [Creating a snapshot of your database in Amazon Lightsail](create-block-storage-disk-snapshot.md)
 
 ## Detach and delete your disk<a name="delete-block-storage-disk-detach-and-delete"></a>
 
@@ -15,7 +15,7 @@ Once you stop your Lightsail instance, you can safely detach and delete your dis
 1. On the home page, choose **Storage**\.
 
 1. Choose the name of your attached disk to manage it\.  
-![\[Example of a block storage disk that is still attached to a Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/example-disk-still-attached-home-page-storage-tab.png)
+![\[Example of a block storage disk that is still attached to a Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/example-disk-still-attached-home-page-storage-tab.png)
 
 1. On the disk management page, choose **Detach**\.
 

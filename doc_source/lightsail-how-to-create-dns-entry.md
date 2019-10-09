@@ -9,7 +9,7 @@ We recommend that you transfer management of your domain's DNS records to Lights
 **Note**  
 You continue to manage renewals and billing for your domain at your domain registrar, even after transferring management of your domain's DNS records to Lightsail\.
 
-These steps are covered in the following sections of this guide:
+**Contents**
 + [Step 1: Complete the prerequisites](#lightail-creating-dns-zone-prerequisites)
 + [Step 2: Create a DNS zone in the Lightsail console](#lightail-create-a-dns-zone)
 + [Step 3: Add records to the DNS zone](#lightail-add-records-to-the-dns-zone)
@@ -21,11 +21,11 @@ Complete the following prerequisites if you haven’t already done so:
 
 1. Register a domain name\. Then confirm that you have administrative access to edit the domain's name servers\.
 
-   If you need a registered domain name, get one through a domain registrar, such as Amazon Route 53\. For more information, see [Registering a New Domain](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register.html) in the Route 53 documentation\.
+   If you need a registered domain name, get one through a domain name registrar, such as Amazon Route 53\. For more information, see [Registering a New Domain](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register.html) in the Route 53 documentation\.
 
 1. Confirm that the necessary DNS record types for your domain are supported by the DNS zone in Lightsail\. The Lightsail DNS zone currently supports address \(A\), canonical name \(CNAME\), mail exchanger \(MX\), name server \(NS\), service locator \(SRV\), and text \(TXT\) record types\. For NS records, you can use wildcard DNS record entries\.
 
-   If the DNS record types required for your domain are not supported by the DNS zone in Lightsail, then you may want to use Route 53 as your DNS hosting provider\. For more information, see [Supported DNS Record Types](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html) and [Making Amazon Route 53 the DNS Service for an Existing Domain](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html)\.
+   If the DNS record types required for your domain are not supported by the DNS zone in Lightsail, then you may want to use Route 53 as your domain's DNS hosting provider because it supports a greater number of record types\. For more information, see [Supported DNS Record Types](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html) and [Making Amazon Route 53 the DNS Service for an Existing Domain](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html) in the Route 53 documentation\.
 
 1. Create a Lightsail instance to which you will point your domain\. For more information, see [Create an Amazon Lightsail instance](how-to-create-amazon-lightsail-instance-virtual-private-server-vps.md)\.
 
@@ -33,9 +33,7 @@ Complete the following prerequisites if you haven’t already done so:
 
 ## Step 2: Create a DNS zone in the Lightsail console<a name="lightail-create-a-dns-zone"></a>
 
-To create a DNS zone in Lightsail, specify the domain name that the DNS zone applies to\.
-
-**To create a DNS zone**
+Complete the following steps to create a DNS zone in Lightsail\. When you create a DNS zone, you must specify the domain name that the DNS zone will apply to\.
 
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
@@ -43,33 +41,33 @@ To create a DNS zone in Lightsail, specify the domain name that the DNS zone app
 
 1. Enter your registered domain name, such as `example.com`, into the text box\.
 
-   It isn’t necessary to include `www` when entering your domain name\. You can add the `www` using an address \(A\) record as part of the [Step 2: Add records to the DNS zone](#lightail-add-records-to-the-dns-zone) section later in this guide\.
+   It isn’t necessary to include `www` when entering your domain name\. You can add the `www` using an address \(A\) record as part of the [Step 3: Add records to the DNS zone](#lightail-add-records-to-the-dns-zone) section later in this guide\.
 **Note**  
 Lightsail DNS zones are created in the Virginia \(`us-east-1`\) AWS Region\. You will get a resource name conflict error \("some names are already in use"\) if you named a resource in that region the same as the Lightsail DNS zone \(e\.g\., `example.com`\) you want to create\.  
-To resolve the error, [create a snapshot of the resource](lightsail-how-to-create-a-snapshot-of-your-instance.md)\. [Create a new resource from the snapshot](lightsail-how-to-create-instance-from-snapshot.md) and give it a new, unique name\. Then, delete the original resource that is named the same as the domain for which you want to create a Lightsail DNS zone\.
+To resolve the error, [create a snapshot of the resource](understanding-instance-snapshots-in-amazon-lightsail.md)\. [Create a new resource from the snapshot](lightsail-how-to-create-instance-from-snapshot.md) and give it a new, unique name\. Then, delete the original resource that is named the same as the domain for which you want to create a Lightsail DNS zone\.
 
 1. Choose one of the following options to add tags to your DNS zone:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
 1. Choose **Create DNS zone**\.
 
-   On the DNS zone management page, add DNS records or delete the DNS zone\. Note the Lightsail name servers that are listed on this page; you need these later in this guide\.  
-![\[The DNS zone management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-dns-zone-management-page.png)
+   You are redirected to the DNS zone management page, where you can add DNS records or delete the DNS zone\. Note the Lightsail name servers that are listed on this page; you need these later in this guide\.  
+![\[The DNS zone management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-dns-zone-management-page.png)
 
 ## Step 3: Add records to the DNS zone<a name="lightail-add-records-to-the-dns-zone"></a>
 
-Add records to your domain’s DNS zone to specify how you want internet traffic routed\. For example, you could route traffic for the apex of your domain, such as `example.com`, to one instance, while routing traffic for a subdomain, such as `blog.example.com`, to another instance\.
-
-**To add records to the DNS zone**
+Complete the following steps to add records to your domain’s DNS zone\. DNS records specify how internet traffic is routed for the domain\. For example, you could route traffic for the apex of your domain, such as `example.com`, to one instance, and route traffic for a subdomain, such as `blog.example.com`, to a different instance\.
 
 1. On the DNS zone management page, choose **Add record**\.
+
+   Your DNS zones are listed in the **Networking tab** of the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. Choose one of the following record types:  
 **Address \(A\) record**  
@@ -119,17 +117,15 @@ Time to live \(TTL\) for DNS records cannot be configured in the Lightsail DNS z
 
 ## Step 4: Change the name servers at your domain’s current DNS hosting provider<a name="lightail-change-the-name-servers"></a>
 
-To transfer management of your domain's DNS records to Lightsail, sign in to the website of your domain’s current DNS hosting provider\. Then change your domain’s name servers to the Lightsail name servers\.
+Complete the following steps to transfer management of your domain's DNS records to Lightsail\. To do this, you sign in to the website of your domain’s current DNS hosting provider, and change your domain’s name servers to the Lightsail name servers\.
 
-For detailed steps for completing this process, see the documentation from your domain’s current DNS hosting provider\. The following steps are provided only for general guidance\.
+For detailed steps to complete this process, see the documentation from your domain’s current DNS hosting provider\. The following steps are provided only for general guidance\.
 
 **Important**  
 If web traffic is currently being routed to your domain, make sure that all of the existing DNS records are present in the Lightsail DNS zone before changing the name servers at your domain’s current DNS hosting provider\. This way, traffic continually flows uninterrupted after the transfer to the Lightsail DNS zone\.
 
-**To change the name servers at your domain’s current DNS hosting provider**
-
 1. Write down the Lightsail name servers that are listed in on your domain's DNS zone management page\.  
-![\[The DNS zone name servers in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-dns-zone-name-servers.png)
+![\[The DNS zone name servers in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-dns-zone-name-servers.png)
 
 1. Sign in to your domain’s current DNS hosting provider’s website\.
 
@@ -141,7 +137,7 @@ For more information about locating this page, see the documentation from your d
 
 1. Save your changes\.
 **Note**  
-Allow time for the name server change to propagate through the internet's DNS, which may take several hours\.
+Allow time for the name server change to propagate through the internet's DNS, which may take several hours\. After that is completed, internet traffic for your domain should begin routing through the Lightsail DNS zone\.
 
 ## Next steps<a name="lightail-dns-management-next-steps"></a>
 + [Edit or delete a DNS zone in Amazon Lightsail](amazon-lightsail-edit-or-delete-a-dns-zone.md)

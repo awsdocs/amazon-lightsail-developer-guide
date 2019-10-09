@@ -16,7 +16,7 @@ To export snapshots to a different Region, first copy the snapshot to a differen
 
 Exporting a Lightsail instance snapshot results in an Amazon Machine Image \(AMI\) and an Amazon Elastic Block Store \(Amazon EBS\) snapshot being created in Amazon EC2\. This is because Lightsail instances are comprised of an image and a system disk, but both are grouped together as a single instance entity in the Lightsail console to make them more efficient to manage\. If the source Lightsail instance had one or more block storage disks attached to it when the snapshot was created, then additional EBS snapshots for each attached disk will be created in Amazon EC2\. Exporting a Lightsail block storage disk snapshot results in a single EBS snapshot being created in Amazon EC2\. All exported resources in Amazon EC2 have their own distinct unique identifiers that are different than their Lightsail counterparts\.
 
-![\[Exporting Lightsail snapshots to Amazon EC2.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-export-snapshot-diagram.png)
+![\[Exporting Lightsail snapshots to Amazon EC2.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-export-snapshot-diagram.png)
 
 **Note**  
 Lightsail uses an AWS Identity and Access Management \(IAM\) service\-linked role \(SLR\) to export snapshots to Amazon EC2\. For more information about SLRs, see [Using service\-linked roles for Amazon Lightsail](amazon-lightsail-using-service-linked-roles.md)\.
@@ -34,7 +34,7 @@ Lightsail can be used to create Amazon EC2 instances from exported instance snap
 
 Creating an Amazon EC2 instance from an exported instance snapshot \(AMI and EBS snapshot\) results in a single EC2 instance being launched\. The AMI and EBS snapshot that resulted from exporting the Lightsail instance snapshot are automatically linked together to form the EC2 instance\. The exported Lightsail block storage disk snapshot \(EBS snapshot\) can be used to create an EBS volume in Amazon EC2\.
 
-![\[Exporting Lightsail snapshots to Amazon EC2.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-create-resources-diagram.png)
+![\[Exporting Lightsail snapshots to Amazon EC2.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-create-resources-diagram.png)
 
 **Note**  
 Lightsail uses a CloudFormation stack to create instances and their related resources in EC2\. For more information, see [AWS CloudFormation stacks for Amazon Lightsail](amazon-lightsail-cloudformation-stacks.md)\.

@@ -19,7 +19,7 @@ If you change your password on your Windows Server\-based Lightsail instance, yo
 
 1. If you haven't done so already, install and configure the AWS CLI\.
 
-   For more information, see [Set up and configure the AWS CLI to work with Lightsail](lightsail-how-to-set-up-and-configure-aws-cli.md)\.
+   For more information, see [Configuring the AWS Command Line Interface to work with Amazon Lightsail](lightsail-how-to-set-up-and-configure-aws-cli.md)\.
 
 1. Open a command prompt or a terminal\.
 

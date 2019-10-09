@@ -1,4 +1,4 @@
-# Create a larger Lightsail instance from a snapshot using the AWS CLI<a name="lightsail-how-to-create-larger-instance-from-snapshot-using-aws-cli"></a>
+# Creating a larger Amazon Lightsail instance, block storage disk, or database from a snapshot using the AWS CLI<a name="lightsail-how-to-create-larger-instance-from-snapshot-using-aws-cli"></a>
 
  *Last updated: October 16, 2017* 
 
@@ -13,7 +13,7 @@ At this time, we don't support creating a smaller instance size \(or bundle\) fr
 
 1. First, if you haven't already, you need to install the AWS CLI\. To learn more, see [Installing the AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)\. Be sure [you configure the AWS CLI](lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli.md)\.
 
-1. You also need a snapshot of your instance to work from\. If you haven't created a snapshot yet, see this topic: [Create a snapshot in Lightsail](lightsail-how-to-create-a-snapshot-of-your-instance.md)\.
+1. You also need a snapshot of your instance to work from\. To learn more, see [Creating a snapshot of your Linux or Unix instance in Amazon Lightsail](lightsail-how-to-create-a-snapshot-of-your-instance.md)\.
 
 ## Step 1: Get your snapshot name<a name="create-larger-instance-from-snapshot-get-your-snapshot-name"></a>
 
@@ -57,7 +57,7 @@ This might seem obvious, but you need to have your snapshot name before you exec
 
 A *bundle* is really just a pricing plan and a configuration for your instance\. For example, **Medium** Linux\-based bundles cost $20 USD per month and have 4\.0 GB of RAM, 80 GB SSD storage, and so on\.
 
-If you started out with a smaller bundle and need more compute power, you might want to upgrade to a larger bundle\. To learn more, see [Create a larger Lightsail instance from a snapshot using the console](how-to-create-larger-instance-from-snapshot-using-console.md)\.
+If you started out with a smaller bundle and need more compute power, you might want to upgrade to a larger bundle\. For more information, see [Creating a larger instance, block storage disk, or database from a snapshot in Amazon Lightsail](how-to-create-larger-instance-from-snapshot-using-console.md)\.
 
 **Important**  
 You cannot resize to a smaller bundle from a snapshot\. If you want to create a smaller bundle, you have to start over\.

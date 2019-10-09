@@ -5,17 +5,20 @@ You can use Lightsail load balancers to add redundancy to your web application o
 
  *Last updated: November 29, 2017* 
 
-A Lightsail load balancer distributes incoming application traffic among multiple Lightsail instances, in multiple Availability Zones\. Load balancing can increase the fault tolerance of your applications and helps makes them more highly available\.
+A Lightsail load balancer distributes incoming web traffic among multiple Lightsail instances, in multiple Availability Zones\. Load balancing increases the availability and fault tolerance of the application on your instances\.
 
-The load balancer serves as a single point of contact for clients, which increases the availability of your application\. You can add and remove instances from your load balancer as your needs change, without disrupting the overall flow of requests to your application\.
+You can add and remove instances from your Lightsail load balancer as your needs change, without disrupting the overall flow of requests to your application\.
 
-With Lightsail load balancing, we create a DNS host name and route any requests sent to this host name to a pool of target Lightsail instances\. You can add as many *target instances* to your load balancer as you like, as long as you stay within your Lightsail account limits for total number of instances\.
+With Lightsail load balancing, we create a DNS host name and route any requests sent to this host name to a pool of target Lightsail instances\. You can add as many target instances to your load balancer as you like, as long as you stay within your Lightsail account limits for total number of instances\.
 
-By default, your load balancer handles unencrypted traffic requests \(HTTP\) through port 80\. You can set up HTTPS using a validated SSL/TLS certificate so that your load balancer can also handle encrypted traffic\. To set up HTTPS, see [Create an SSL/TLS certificate](create-tls-ssl-certificate-and-attach-to-lightsail-load-balancer-https.md)\.
+## Lightsail load balancer features<a name="lightsail-load-balancer-features"></a>
 
-By default, Lightsail performs *health checks* on your instances at the root of your web application\. The health checks are used to monitor the health of the registered instances so that the load balancer can send requests only to the healthy instances\. To customize where your health checks are performed, see [Configure health checks on your instances](enable-set-up-health-checking-for-lightsail-load-balancer-metrics.md)\.
-
-You can also enable *session persistence* for your users\. This is helpful if you're storing session information locally in the user's browser\. For example, you might be running a Magento e\-commerce application with a shopping cart on Lightsail\. If your users add items to their shopping cart and then end their session, when they come back the shopping cart items will still be there if you turn on session persistence\. [Learn more about session persistence](enable-session-stickiness-persistence-or-change-cookie-duration.md)
+The following features can be configured on Lightsail load balancers:
++ You can set up HTTPS using a validated SSL/TLS certificate so that your load balancer can also handle encrypted traffic\. For more information, see [SSL/TLS certificates in Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)\.
+**Note**  
+By default, a Lightsail load balancer handles unencrypted traffic requests \(HTTP\) through port 80\.
++ By default, a Lightsail load balancer performs health checks on the attached instances at the root of the web application\. The health checks monitor the health of the instances so that the load balancer can send requests only to the healthy instances\. For more information, see [Health checking for a Lightsail load balancer](understanding-lightsail-load-balancer-health-checking.md)\.
++ You can also enable *session persistence* for your users\. This is helpful if you're storing session information locally in the user's browser\. For example, you might be running a Magento e\-commerce application with a shopping cart on Lightsail\. If your users add items to their shopping cart and then end their session, when they come back the shopping cart items will still be there if you turn on session persistence\. [Learn more about session persistence](enable-session-stickiness-persistence-or-change-cookie-duration.md)
 
 ## When to use load balancers<a name="when-to-use-lightsail-load-balancers"></a>
 

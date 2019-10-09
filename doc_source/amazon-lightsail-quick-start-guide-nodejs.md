@@ -19,7 +19,7 @@ You need the default application password to access pre\-installed applications 
 If you're in a directory other than the user home directory, then enter `cat $HOME/bitnami_application_password`\.
 
    You should see a response similar to this, which contains the default application password:  
-![\[Bitnami default application password.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-bitnami-application-password.png)
+![\[Bitnami default application password.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-bitnami-application-password.png)
 
 For more information, see [Getting the application user name and password for your 'Powered by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
 
@@ -61,4 +61,4 @@ A snapshot is a copy of the system disk and original configuration of an instanc
 
 Under the **Snapshot** tab of your instance’s management page, enter a name for the snapshot, then choose **Create snapshot**\.
 
-For more information, see the [Create a snapshot of your Linux/Unix\-based instance in Lightsail](lightsail-how-to-create-a-snapshot-of-your-instance.md)\.
+For more information, see [Creating a snapshot of your Linux or Unix instance in Amazon Lightsail](lightsail-how-to-create-a-snapshot-of-your-instance.md)\.

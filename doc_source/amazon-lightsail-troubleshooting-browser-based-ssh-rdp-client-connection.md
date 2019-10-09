@@ -12,7 +12,7 @@ The SSH and RDP browser\-based clients use host key or certificate validation to
 
 The following error message displays when there’s a host key or certificate mismatch, and Lightsail determines that the mismatch might have been caused by a recent operating system upgrade, or a deliberate update to the host key or certificate by you or another user\. In this case, Lightsail has determined that the host key or certificate mismatch was not caused by a bad actor on the network between your browser and the instance\.
 
-![\[Host key or certificate mismatch error for the Lightsail browser-based SSH or RDP client.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-browser-ssh-rdp-cant-connect-resest-record.png)
+![\[Host key or certificate mismatch error for the Lightsail browser-based SSH or RDP client.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-browser-ssh-rdp-cant-connect-resest-record.png)
 
 Choose **Reset record** if you expected the mismatch\. This action deletes the host key or certificate that Lightsail has on record for the instance, and permits the browser\-based SSH or RDP session to connect to the instance\.
 
@@ -29,13 +29,13 @@ aws lightsail delete-known-host-keys --region us-west-2 --instance-name WordPres
 ```
 
 **Note**  
-For more information about the AWS CLI, see [Set up and configure the AWS CLI to work with Lightsail](lightsail-how-to-set-up-and-configure-aws-cli.md)\.
+For more information about the AWS CLI, see [Configuring the AWS Command Line Interface to work with Amazon Lightsail](lightsail-how-to-set-up-and-configure-aws-cli.md)\.
 
 **Can’t connect, contact customer support**
 
 The following error message displays when there’s a host key or certificate mismatch, and Lightsail determines that there is suspicious activity that warrants further investigation, such as a man\-in\-the\-middle attack\.
 
-![\[Host key or certificate mismatch error for the Lightsail browser-based SSH or RDP client.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-browser-ssh-rdp-cant-connect.png)
+![\[Host key or certificate mismatch error for the Lightsail browser-based SSH or RDP client.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-browser-ssh-rdp-cant-connect.png)
 
 This error message means that you can’t connect to the instance using the browser\-based SSH or RDP client\. [Contact support](https://console.aws.amazon.com/support/home#/) for assistance\.
 
@@ -43,6 +43,6 @@ This error message means that you can’t connect to the instance using the brow
 
 The following error message displays when you try to connect to an instance that hasn’t yet started after it’s created, rebooted, or restarted\. Wait a few minutes and then choose **Reconnect** to try again\.
 
-![\[Instance unavailable when trying to connect using the Lightsail browser-based SSH or RDP client.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-browser-ssh-rdp-cant-connect-right-now.png)
+![\[Instance unavailable when trying to connect using the Lightsail browser-based SSH or RDP client.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-browser-ssh-rdp-cant-connect-right-now.png)
 
 If you still can’t connect, [contact support](https://console.aws.amazon.com/support/home#/)\.

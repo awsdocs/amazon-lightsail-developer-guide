@@ -6,7 +6,7 @@ The [general and slow query logs](amazon-lightsail-viewing-database-logs-and-his
 
 ## Prerequisite<a name="prerequisite-to-enable-general-and-slow-query-logs"></a>
 
-If you haven't done so already, install and configure the AWS CLI\. For more information, see [Set up and configure the AWS CLI to work with Lightsail](lightsail-how-to-set-up-and-configure-aws-cli.md)\.
+If you haven't done so already, install and configure the AWS CLI\. For more information, see [Configuring the AWS Command Line Interface to work with Amazon Lightsail](lightsail-how-to-set-up-and-configure-aws-cli.md)\.
 
 ## Enable the general and slow query logs in the Lightsail console<a name="enable-the-general-and-slow-query-logs"></a>
 

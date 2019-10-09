@@ -2,7 +2,7 @@
 
  *Last updated: March 15, 2019* 
 
-Amazon Lightsail provides the latest major versions of the MySQL and ProstgreSQL databases\. This guide helps you decide which database is right for your project\.
+Amazon Lightsail provides the latest major versions of the MySQL and PostgreSQL databases\. This guide helps you decide which database is right for your project\.
 
 ## Compare managed databases in Lightsail<a name="lightsail-compare-databases"></a>
 

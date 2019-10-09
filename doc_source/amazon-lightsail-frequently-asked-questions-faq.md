@@ -1,6 +1,6 @@
 # Frequently Asked Questions in Amazon Lightsail<a name="amazon-lightsail-frequently-asked-questions-faq"></a>
 
- *Last updated: March 15, 2019* 
+ *Last updated: October 2, 2019* 
 
 This topic answers frequently asked questions \(FAQ\)\. If you have a FAQ that is not answered here, use the **Questions? Comments?** feedback button at the bottom of the page\. You can also post a question in the [Lightsail discussion forum](https://forums.aws.amazon.com/forum.jspa?forumID=231)\.
 
@@ -13,7 +13,7 @@ Amazon Lightsail is the easiest way to get started with AWS, providing everythin
 You can create preconfigured virtual private servers \(instances\) that include everything to easily deploy and manage your application, or create databases for which the security and health of the underlying infrastructure and operating system is managed by Lightsail\. Lightsail is best suited to projects that require a few dozen instances or less, and developers who prefer a simple management interface\. Common use cases for Lightsail include running websites, web applications, business software, blogs, e\-commerce sites, and more\. As your project grows, you can use load balancers and attached block storage with your instance to increase redundancy and uptime and access dozens of other AWS services to add new capabilities\.
 
 **Does Lightsail offer an API?**  
-Yes\. Everything you do in the Lightsail console is backed by a publically available API\. Learn how to install and use the Lightsail [CLI](http://docs.aws.amazon.com/cli/latest/reference/lightsail/index.html) and [API](http://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/Welcome.html)\.
+Yes\. Everything you do in the Lightsail console is backed by a publically available API\. Learn how to install and use the Lightsail [CLI](https://docs.aws.amazon.com/cli/latest/reference/lightsail/index.html) and [API](http://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/Welcome.html)\.
 
 **How do I sign up for Lightsail?**  
 To start using Lightsail, choose [Get Started](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?client=lightsail) and log in\. You use your Amazon Web Services account to access Lightsail; if you don't already have one, you'll be prompted to create one\.
@@ -23,16 +23,16 @@ Lightsail is currently available in all the Availability Zones in the following 
 • US East \(N\. Virginia\)  
 • US East \(Ohio\)  
 • US West \(Oregon\)  
-• EU \(Frankfurt\)  
-• EU \(Ireland\)  
-• EU \(London\)  
-• EU \(Paris\)  
-• Canada \(Central\)  
 • Asia Pacific \(Mumbai\)  
 • Asia Pacific \(Seoul\)  
 • Asia Pacific \(Singapore\)  
 • Asia Pacific \(Sydney\)  
 • Asia Pacific \(Tokyo\)  
+• Canada \(Central\)  
+• EU \(Frankfurt\)  
+• EU \(Ireland\)  
+• EU \(London\)  
+• EU \(Paris\)  
 For more information, see [AWS Regions and Availability Zones in Lightsail](understanding-regions-and-availability-zones-in-amazon-lightsail.md)\.
 
 **What are Availability Zones?**  
@@ -42,7 +42,7 @@ Availability Zones are collections of data centers that run on physically distin
 You can currently create up to 20 Lightsail instances, 5 static IPs, 3 DNS zones, 20 TB of attached block storage, 40 databases, and 5 load balancers in a Lightsail account\. You can also generate up to 20 certificates during each calendar year\. If you need to increase your account limit for instances, static IPs, block storage, or certificates in your account, please open a case with [customer service](https://console.aws.amazon.com/support/home?region=us-east-1)\. We do not currently support increases for DNS zones or load balancers\.
 
 **How can I get more help?**  
-We're here for you\. Our context\-sensitive **Help** panel in Lightsail offers immediate helpful tips about your actions in the console\. From the Lightsail console, you can also access a library of [getting started guides](https://lightsail.aws.amazon.com/ls/docs/getting-started), [overviews](https://lightsail.aws.amazon.com/ls/docs/overview), and [how\-to topics](https://lightsail.aws.amazon.com/ls/docs/how-to)\. And if you want to use the API or AWS CLI, Lightsail has a full API reference for all supported programming languages\. You can also use Lightsail support resources\.  
+We're here for you\. Our context\-sensitive **Help** panel in Lightsail offers immediate helpful tips about your actions in the console\. From the Lightsail console, you can also access a library of [getting started guides](https://lightsail.aws.amazon.com/ls/docs/getting-started), [overviews](https://lightsail.aws.amazon.com/ls/docs/overview), and [how\-to topics](https://lightsail.aws.amazon.com/ls/docs/how-to)\. And if you want to use the Lightsail API, or AWS CLI, Lightsail has a full API reference for all supported programming languages\. You can also use Lightsail support resources\.  
 If you have an issue with your account or billing, contact [customer service](https://console.aws.amazon.com/support/home?region=us-east-2#/) online\. You get free 24x7 access with your Lightsail account\.  
 If you have a general question about how to use Lightsail, search the Lightsail documentation and [support forums](https://forums.aws.amazon.com/forum.jspa?forumID=231)\.  
 Additionally, AWS Support offers an array of paid plans to cover your individual needs\.
@@ -75,10 +75,10 @@ Lightsail offers a 1\-click secure connection to your instance's terminal right 
 If you prefer to connect to your Linux/Unix\-based instance using your own client, Lightsail will do the SSH key storing and management work for you, and provide you with a secure key to use in your SSH client\.
 
 **How can I back up my instances?**  
-If you want to back up your data, you can use the Lightsail console or API to take a [snapshot](understanding-instance-snapshots-in-amazon-lightsail.md) of your instance\. If there is a failure or bad code deployment, you can later use your instance snapshot to create a brand new instance\. We recommend stopping your instance temporarily when taking a snapshot, to ensure your data is complete and not corrupted in any way\.
+If you want to back up your data, you can use the Lightsail console or API to create a manual snapshot of your instance, or enable automatic snapshots to have Lightsail create daily snapshots for you\. If there is a failure or bad code deployment, you can later use your instance snapshot to create a brand new instance\. For more information, see [Snapshots in Amazon Lightsail](understanding-instance-snapshots-in-amazon-lightsail.md)\.
 
 **Can I upgrade my plan?**  
-Yes\. You can take a snapshot of your instance and use the Lightsail console or CLI to launch a new, larger size instance\. Learn how to do this using the [Lightsail console](lightsail-how-to-create-a-snapshot-of-your-instance.md) or the [AWS Command Line Interface](lightsail-how-to-create-larger-instance-from-snapshot-using-aws-cli.md)\.
+Yes\. You can use a snapshot of your instance to create a new, larger size instance\. For more information, see [Snapshots in Amazon Lightsail](understanding-instance-snapshots-in-amazon-lightsail.md)\.
 
 **How can I connect Lightsail instances to other resources in my AWS account?**  
 You can connect your Lightsail instances to Amazon VPC resources in your AWS account privately, by using VPC peering\. Just choose **Enable VPC peering** on your Lightsail account page, and Lightsail does the work for you\. Once VPC peering is enabled, you can address other AWS resources in your default Amazon VPC by using their private IPs\. Find instructions [here](lightsail-how-to-set-up-vpc-peering-with-aws-resources.md)\.  
@@ -86,7 +86,7 @@ Note that you need to have a default Amazon VPC set up in your AWS account in or
 
 **What is the difference between stopping and deleting my instance?**  
 When you stop your instance, it is powered down at its current state and is available for you to start again at any time\. Stopping your instance will release its public IP, so it is recommended that you use static IPs for instances that must retain the same IP after they stop\.  
-When you delete your instance, you are performing a destructive action\. Unless you have taken an instance snapshot, all of your instance data will be lost and you cannot recover it again\. The instance's public and private IPs will also be released\. If you were using a static IP with that instance, the static IP is detached, but remains in your account\.
+When you delete your instance, you are performing a destructive action\. Unless you have created an instance snapshot, all of your instance data will be lost and you cannot recover it again\. Automatic snapshots are also deleted with the instance unless you keep them by copying them as manual snapshots\. The instance's public and private IPs will also be released\. If you were using a static IP with that instance, the static IP is detached, but remains in your account\.
 
 ## Databases<a name="amazon-lightsail-faq-databases"></a>
 
@@ -148,7 +148,7 @@ Lightsail block storage provides additional storage volumes \(called "attached d
 Lightsail block storage disks use solid\-state drives \(SSD\)\. This type of block storage balances a low price and good performance and is intended to support the vast majority of workloads that run on Lightsail\. For customers with applications that require sustained IOPS performance, high amounts of throughput per disk, or that are running large databases like MongoDB, Cassandra, etc\., we recommend using Amazon EC2 with GP2 or Provisioned IOPS SSD storage instead of Lightsail\.
 
 **How are attached disks different than the storage included in my Lightsail plan?**  
-The system disk included with your Lightsail plan is your instance's root device\. If you terminate your instance, the system disk will be deleted as well\. If you experience an instance failure, the system disk could be impacted\. You also cannot detach your system disk or back it up separately from your instance\. Data stored on an attached disk persists independently of the instance\. Attached disks can be detached and moved between instances and can be backed up independently from an instance using disk snapshot\. To protect your data, we recommend that you use your Lightsail instance's system disk only for temporary data\. For data requiring a higher level of durability, we recommend using attached disks and regularly backing up your disk using disk or instance snapshots\.
+The system disk included with your Lightsail plan is your instance's root device\. If you terminate your instance, the system disk will be deleted as well\. If you experience an instance failure, the system disk could be impacted\. You also cannot detach your system disk or back it up separately from your instance\. Data stored on an attached disk persists independently of the instance\. Attached disks can be detached and moved between instances\. They can be backed up independently from an instance by creating a manual snapshot of the disk\. To protect your data, we recommend that you use your Lightsail instance's system disk only for temporary data\. For data requiring a higher level of durability, we recommend using attached disks and regularly backing up your disk using disk or instance snapshots\.
 
 **How large can I make my attached disk?**  
 Each attached disk can be up to 16 TB, and the total amount of attached block storage in a Lightsail account must not exceed 20 TB\.
@@ -172,7 +172,7 @@ Yes, to help keep your data secure, all Lightsail attached disks and disk snapsh
 Lightsail block storage is designed to be highly available and reliable\. Each attached disk is automatically replicated within its Availability Zone to protect you from component failure\. Lightsail block storage disks are designed for 99\.99% availability\. Lightsail also supports disk snapshots to allow regular backups of your data\.
 
 **How do I back up my attached disk?**  
-You can back up your disk by taking a disk snapshot\. You can also back up your entire instance and any attached disks by taking an instance snapshot\.
+You can back up your disk by creating a manual snapshot of the disk\. You can also back up your entire instance and any attached disks by creating a manual snapshot of the instance, or by enabling automatic snapshots for the instance with the disk attached\. Disks attached to instances are included in instance manual and automatic snapshots\.
 
 ## Load balancers<a name="amazon-lightsail-faq-load-balancers"></a>
 
@@ -234,6 +234,53 @@ If your load balancer is deleted, your certificate is deleted as well\. If you n
 **Can I download my certificate provided by Lightsail?**  
 No, Lightsail certificates are bound to your Lightsail account and cannot be removed and used outside of Lightsail\.
 
+## Manual and automatic snapshots<a name="amazon-lightsail-faq-snapshots"></a>
+
+**What are snapshots?**  
+Snapshots are point\-in\-time backups of instances, databases, or block storage disks\. You can create a snapshot of your resources at any time, or you can enable automatic snapshots on instances and disks to have Lightsail create snapshots for you\. You can use snapshots as baselines to create new resources or to back up your data\. A snapshot contains all of the data that is needed to restore your resource \(from the moment when the snapshot was taken\)\. When you restore a resource by creating it from a snapshot, the new resource begins as an exact replica of the original resource that was used to create the snapshot\.  
+You can manually take snapshots of your Lightsail instances, disks, and databases, or you can use [automatic snapshots](amazon-lightsail-configuring-automatic-snapshots.md) to instruct Lightsail to take daily snapshots of your instances and disks automatically\. For more information, see [Snapshots in Amazon Lightsail](understanding-instance-snapshots-in-amazon-lightsail.md)\.
+
+**What are automatic snapshots?**  
+Automatic snapshots are a way to schedule daily snapshots of your Linux/Unix instances in Amazon Lightsail\. You can pick a time of the day, and Lightsail will automatically take a snapshot for you each day at the time you chose and always keep your seven most recent automatic snapshots\. Enabling snapshots is free, you only pay for the actual storage used by your snapshots\.
+
+**What are the differences between manual and automatic snapshots?**  
+Automatic snapshots cannot be tagged or exported directly to Amazon EC2\. However, automatic snapshots can be copied and converted into manual snapshots\. To copy an automatic snapshot into a manual one, choose **Keep** from the automatic snapshot’s context menu to copy it as a manual snapshot\.
+
+**What resources support snapshots?**  
+Manual snapshots can be created for instances, databases, and disks\.  
+Automatic snapshots can be enabled for Linux or Unix instances using the Lightsail console, Lightsail API, or AWS CLI, and for disks using only the Lightsail API, or AWS CLI\. Automatic snapshots are not currently supported for Windows instances, or managed databases\.
+
+**How long can I store snapshots?**  
+Manual snapshots are stored until you choose to delete them\. For more information, see [Deleting snapshots in Amazon Lightsail](amazon-lightsail-deleting-snapshots.md)\.  
+Automatic snapshots are stored until they are replaced by a newer automatic snapshots\. Lightsail stores the latest seven automatic snapshots before deleting the oldest one and replacing it with the newest one\. However, you can keep a specific automatic snapshot by copying it as a manual snapshot\. For more information, see [Keeping automatic snapshots of instances or disks in Amazon Lightsail](amazon-lightsail-keeping-automatic-snapshots.md)\. You will be billed the [snapshot storage fee](https://aws.amazon.com/lightsail/pricing/) for the automatic snapshots stored in your account\.
+
+**How are automatic snapshots enabled?**  
+Automatic snapshots can be enabled using the Lightsail console, Lightsail API, or AWS CLI when you create a Linux or Unix instance, or later after the instance is running\.  
+Automatic snapshots can also be enabled for disks when you create them or after they're created; however, it can only be done using the Lightsail API, or AWS CLI\.  
+For more information, see [Enabling or disabling automatic snapshots for instances or disks in Amazon Lightsail](amazon-lightsail-configuring-automatic-snapshots.md)\.
+
+**When are automatic snapshots created?**  
+When you enable automatic snapshots, a default time is set based on the AWS Region where the resource is located\. You can change the automatic snapshot to your preferred time of day, in hourly increments\. For more information, see [Changing the automatic snapshot time for instances or disks in Amazon Lightsail](amazon-lightsail-changing-automatic-snapshot-time.md)\.
+
+**How many snapshots can I store?**  
+You can store as many manual snapshots as you’d like\. However, only the latest seven automatic snapshots are stored before the oldest one is replaced with the newest one\.
+
+**How are snapshots billed?**  
+You only pay for the snapshots stored on your Lightsail account\. Lightsail snapshots \(manual and automatic\) cost $0\.05 USD/GB\-month to store\.
+
+**Will I lose my snapshots if I disable automatic snapshots?**  
+No\. If you disable automatic snapshots, Lightsail will stop creating a daily snapshot, and your existing automatic snapshots will be kept\. When you re\-enable automatic snapshots, Lightsail will resume taking daily snapshots, deleting the oldest one and replacing it with the newest one\.
+
+**What should I do if I don’t want an automatic snapshot to be replaced?**  
+You can keep a specific automatic snapshot by copying it as a manual snapshot\. For more information, see [Keeping automatic snapshots of instances or disks in Amazon Lightsail](amazon-lightsail-keeping-automatic-snapshots.md)\.
+
+**Can I delete an automatic snapshot?**  
+You can delete an automatic snapshot at any time by choosing **Delete** from the automatic snapshot’s context menu\. For more information, see [Deleting automatic snapshots of instances or disks in Amazon Lightsail](amazon-lightsail-deleting-automatic-snapshots.md)\.
+
+**How can I use snapshots?**  
+Snapshots can be used as a baseline or to create new resources if something goes wrong with the original resource\. Snapshots can also \. For more information, see [Snapshots in Amazon Lightsail](understanding-instance-snapshots-in-amazon-lightsail.md)\.  
+Snapshots can also be exported to Amazon EC2 to create new resources within that service\. For more information, see [Exporting Amazon Lightsail snapshots](amazon-lightsail-exporting-snapshots.md)\.
+
 ## Networking<a name="amazon-lightsail-faq-networking"></a>
 
 **How do I use IPs in Lightsail?**  
@@ -244,7 +291,7 @@ A [static IP](understanding-static-ip-addresses-in-amazon-lightsail.md) is a fix
 
 **What are DNS records?**  
 DNS is a globally distributed service that translates human readable names like www\.example\.com into numeric IP addresses, like 192\.0\.2\.1 that computers use to connect to each other\. With Lightsail, you can easily map your registered domain names such as photos\.example\.com to the public IPs of your Lightsail instances\. In this way, when users type human readable names like example\.com into their browsers, Lightsail automatically translates the address into the IP of the instance you want to direct your users to\. Each of these translations is referred to as a DNS query\.  
-It's important to know that to use a domain in Lightsail, you must first register it\. You can register new domains using [Route 53](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register.html), or your preferred DNS registrar\.
+It's important to know that to use a domain in Lightsail, you must first register it\. You can register new domains using [Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register.html), or your preferred DNS registrar\.
 
 **Can I manage firewall settings for my instance?**  
 Yes\. You can control the data traffic for your instances by using the Lightsail firewall\. From the Lightsail console, you can set rules about which ports of your instance are publicly accessible for different types of traffic\.
@@ -296,16 +343,16 @@ When you exceed the monthly free data transfer allowance of your plan, you will 
 • US East \(N\. Virginia\): $0\.09 USD/GB  
 • US East \(Ohio\): $0\.09 USD/GB  
 • US West \(Oregon\): $0\.09 USD/GB  
-• Central Europe \(Frankfurt\): $0\.09 USD/GB  
-• Western Europe \(Ireland\): $0\.09 USD/GB  
-• Western Europe \(London\): $0\.09 USD/GB  
-• Western Europe \(Paris\): $0\.09 USD/GB  
-• Canada \(Central\): $0\.09 USD/GB  
 • Asia Pacific \(Mumbai\): $0\.13 USD/GB  
 • Asia Pacific \(Seoul\): $0\.13 USD/GB  
 • Asia Pacific \(Singapore\): $0\.12 USD/GB  
 • Asia Pacific \(Sydney\): $0\.17 USD/GB  
 • Asia Pacific \(Tokyo\): $0\.14 USD/GB  
+• Canada \(Central\): $0\.09 USD/GB  
+• EU \(Frankfurt\): $0\.09 USD/GB  
+• EU \(Ireland\): $0\.09 USD/GB  
+• EU \(London\): $0\.09 USD/GB  
+• EU \(Paris\): $0\.09 USD/GB  
 Instances created in different Availability Zones can communicate between zones privately and for free, and are much less likely to be impaired concurrently\. Availability Zones enable you to build highly available applications and websites without increasing the cost of data transfer or compromising your application's security\.
 
 **How do my data transfer plan allowances vary by AWS Region?**  <a name="lightsail-faq-data-transfer-charges"></a>
@@ -327,8 +374,8 @@ If you delete your instance early and create another one, the free data transfer
 DNS management is free within Lightsail\. You can create up to 3 DNS zones and as many records as you want for each DNS zone\. You also get a monthly allowance of 3 million DNS queries per month to your zones\. Beyond your first 3 million queries in a month, you are charged $0\.40 USD per 1 million DNS queries\.
 
 **What do Lightsail snapshots cost?**  
-Lightsail snapshots cost $0\.05 USD/GB\-month for instance snapshots, manual database snapshots, and disk snapshots\. This means if you take a snapshot of your 30 GB SSD instance and keep it for a month, you pay $1\.50 USD at the end of the month\.  
-When you take multiple, successive snapshots of the same instance, Lightsail automatically cost\-optimizes your snapshots\. For each new snapshot you take, you're changed only for the part of the data that changed\. In the example above, if your instance data only changes by 2 GB, your second instance snapshot costs only $0\.10 USD per month\.
+Lightsail snapshots \(manual and automatic\) cost $0\.05 USD/GB\-month to store\. This means that if you create a snapshot of an instance that is using 28 GB of space, and keep it for a month, you pay $1\.40 USD for the month\.  
+When you take multiple, successive snapshots of the same instance, Lightsail automatically cost\-optimizes your snapshots\. For each new snapshot you take, you're charged only for the part of the data that changed\. In the example above, if your instance data only changes by 2 GB, your second instance snapshot costs only $0\.10 USD per month\.
 
 **How can I manage my AWS account?**  
 Lightsail is an AWS service and runs on the AWS trusted and proven cloud infrastructure\. You use the same AWS account and credentials to log in to Lightsail and the AWS Management Console\.  
@@ -350,13 +397,13 @@ Lightsail offers you an easy way to run and scale a wide set of cloud\-based app
 Exporting to Amazon EC2 allows you to run your application on a wider set of instance types, ranging from virtual machines with more CPU power, memory, and networking capabilities, to specialized or accelerated instances with FPGAs and GPUs\. In addition, Amazon EC2 performs less automatic management and set\-up, allowing you more control over how you configure your cloud environment, such as your VPC\. 
 
 **How does exporting to Amazon EC2 work?**  
-To get started, you need to export your Lightsail instance or block storage disk snapshot\. Customers who are comfortable with Amazon EC2 can then use the Amazon EC2 creation wizard or API to create a new Amazon EC2 instances or Amazon EBS volumes, as they would from an existing EC2 AMI or EBS volume\. Alternatively, Lightsail also provides a guided Lightsail console experience to help you easily create a new EC2 instance\.
+To get started, you need to export your manual snapshot of a Lightsail instance or block storage disk\. Customers who are comfortable with Amazon EC2 can then use the Amazon EC2 creation wizard or API to create a new Amazon EC2 instances or Amazon EBS volumes, as they would from an existing EC2 AMI or EBS volume\. Alternatively, Lightsail also provides a guided Lightsail console experience to help you easily create a new EC2 instance\.
 
 **How am I billed?**  
-Using the export to Amazon EC2 feature is free\. Once you have exported your snapshots to Amazon EC2, you will be charged for the Amazon EC2 image separately and in addition to your Lightsail snapshot\. Any new Amazon EC2 instances you launch will also be billed by Amazon EC2, including their Amazon EBS storage volume\(s\) and data transfer\. Refer to the [Amazon EC2 pricing page](https://aws.amazon.com/ec2/pricing/) for details on the pricing for your new instance and resources\. Lightsail resources that continue to run in your Lightsail account will continue to be billed at their regular rates until they are deleted\.
+Using the export to Amazon EC2 feature is free\. Once you have exported your manual snapshots to Amazon EC2, you will be charged for the Amazon EC2 image separately and in addition to your Lightsail manual snapshot\. Any new Amazon EC2 instances you launch will also be billed by Amazon EC2, including their Amazon EBS storage volume\(s\) and data transfer\. Refer to the [Amazon EC2 pricing page](https://aws.amazon.com/ec2/pricing/) for details on the pricing for your new instance and resources\. Lightsail resources that continue to run in your Lightsail account will continue to be billed at their regular rates until they are deleted\.
 
 **Can I export managed databases or disk snapshots?**  
-The export feature allows you to export Lightsail disk snapshots but doesn't currently support managed database snapshots\. Disk snapshots can be rehydrated as Amazon EBS volumes from the Amazon EC2 console or API\.
+The export feature allows you to export manual Lightsail disk snapshots but doesn't currently support manual snapshots of managed databases\. Disk snapshots can be rehydrated as Amazon EBS volumes from the Amazon EC2 console or API\.
 
 **What Lightsail resources can I export?**  
 The Lightsail export to Amazon EC2 feature is designed to support the export of Linux and Windows instances and their attached block storage \(if applicable\) to Amazon EC2\. It also supports the export of unattached block storage disks to Amazon EBS\. It does not currently support the export of load balancers, databases, static IPs or DNS records\. 
@@ -374,18 +421,19 @@ Tags have multiple use cases \- they enable you to group and filter your resourc
 For more information about using tags in Lightsail, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
 **What resources can be tagged?**  
-Lightsail current supports tagging for the following resources:  
+Lightsail currently supports tagging for the following resources:  
 • Instances \(Linux and Windows\)  
 • Block storage disks  
 • Load balancers  
 • Databases  
 • DNS zones  
-• Instance, disk, and database snapshots  
-Snapshots also support tags but are automatically given the same tags as the source resource\. You can edit these tags when you use a snapshot to create a new instance, disk, or database\.
+• Manual snapshots of instances, disks, and databases  
+Manual snapshots support tags; however, you must use the Lightsail API, or AWS CLI to tag snapshots\. If you use the Lightsail console to create a manual snapshot of a tagged instance, disk, or database, the manual snapshot is automatically given the same tags as the source resource\. You can edit these tags when you use the Lightsail console to create a new resource from a tagged manual snapshot\.  
+Automatic snapshots cannot be tagged\.
 
 **How can I tag my Lightsail snapshots?**  
-The Lightsail console automatically tags snapshots with the same tags as its parent resource\. If you use the Lightsail API to create a snapshot, you can choose the tags for the snapshot yourself\.  
-Database snapshots tags are not currently included in billing reports \(cost allocation tags\)\.
+The Lightsail console automatically tags manual snapshots with the same tags as its source resource\. If you use the Lightsail API, or AWS CLI to create a snapshot, you can choose the tags for the snapshot yourself\.  
+Tags for manual snapshots of databases are not currently included in billing reports \(cost allocation tags\)\.
 
 **What is the difference between key\-value and key\-only tags?**  
 Lightsail tags are key\-value pairs, allowing you to organize resources such as instances across different categories \(e\.g\. project:Blog, project:Game, project:Test\)\. This allows you full control across all use cases such as resource organization, bill reporting, and access management\. The Lightsail console also allows you to tag your resources with key\-only tags for quick filtering in the console\.

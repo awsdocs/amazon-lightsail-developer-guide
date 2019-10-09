@@ -1,6 +1,6 @@
 # What is Amazon Lightsail?<a name="what-is-amazon-lightsail"></a>
 
- *Last updated: March 23, 2018* 
+ *Last updated: July 26, 2019* 
 
 Amazon Lightsail is the easiest way to get started with AWS if you just need virtual private servers\. Lightsail includes everything you need to launch your project quickly – a virtual machine, SSD\-based storage, data transfer, DNS management, and a static IP – for a low, predictable price\. After you create your instance, you can easily connect to it\. You can manage your instances using the Lightsail console, Lightsail API, or Lightsail command line interface \(CLI\)\.
 
@@ -47,7 +47,7 @@ You can also create a Lightsail load balancer and attach target instances to cre
 ## Development stacks in Lightsail<a name="what-developer-stacks-are-available-in-lightsail"></a>
 
 **Linux**
-+ LAMP stack \(PHP 5 and PHP 7\) powered by Bitnami
++ LAMP stack \(PHP 7\) powered by Bitnami
 + Node\.js powered by Bitnami
 + MEAN Stack powered by Bitnami \(HVM\)
 + LEMP Stack \(Nginx\) by Bitnami

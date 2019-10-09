@@ -20,17 +20,17 @@ Complete the following prerequisites before you get started:
 Complete the following steps to edit an existing Lightsail guide:
 
 1. Find the Lightsail guide that you want to edit and copy the slug that is in the address bar\. This is the text after the last forward slash \(`/`\) as shown in the following screenshot:  
-![\[Slug for a Lightsail guide.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-guide-slug.png)
+![\[Slug for a Lightsail guide.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-guide-slug.png)
 
 1. Sign in to GitHub and go to the [Lightsail developer guide repository](https://github.com/awsdocs/amazon-lightsail-developer-guide)\.
 
 1. Choose **Find file**\.  
-![\[Find file on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-github-find-file.png)
+![\[Find file on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-github-find-file.png)
 
 1. Search for the guide slug, or paste the slug that you copied earlier in this guide\.
 
 1. In the search results, choose the guide that you wish to edit\.  
-![\[Find file search results on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-github-find-file-results.png)
+![\[Find file search results on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-github-find-file-results.png)
 
 1. Choose the **Fork this project and edit this file** \(pencil\) icon\.
 
@@ -55,7 +55,7 @@ Complete the following steps to write and submit a new Lightsail guide:
 1. Sign in to GitHub and go to the [Lightsail developer guide repository](https://github.com/awsdocs/amazon-lightsail-developer-guide)\.
 
 1. Choose **Create new file**\.  
-![\[Create new file on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-github-create-new-file.png)
+![\[Create new file on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-github-create-new-file.png)
 
 1. Name your file and enter the text for your guide into the **Edit new file** text box\.
 

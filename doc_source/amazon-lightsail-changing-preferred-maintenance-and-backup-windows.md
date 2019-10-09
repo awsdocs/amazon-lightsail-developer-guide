@@ -34,43 +34,43 @@ Your database may become unavailable during maintenance or backup operations\. T
    ```
 
    You should see a result similar to the following example:  
-![\[The get-relational-databases response.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-database-get-relational-databases-reponse.png)
+![\[The get-relational-databases response.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-database-get-relational-databases-reponse.png)
 **Note**  
 If the database that you want to modify is not listed, confirm that your AWS CLI is configured for the AWS Region where the database is located\. For more information, see [Configuring the AWS CLI](lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli.md)\.
 
 1. Highlight the name of the database that you want to modify and press **Ctrl\+C** if you’re using Windows, or **Cmd\+C** if you’re using macOS, to copy it to your clipboard so that you can use it in the next step\.  
-![\[Copy the database name.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-copy-database-name-cli.png)
+![\[Copy the database name.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-copy-database-name-cli.png)
 
 1. Enter one of the following commands depending on the preferred window that you are changing\.
    + Enter the following command to change the database maintenance window\. Be sure to paste the name of the database in place of *DatabaseName*, and enter the new maintenance window time frame in place of *MaintenanceWindow*:
 
      ```
-     aws lightsail update-relational-database DatabaseName --preferred-maintenance-window MaintenanceWindow
+     aws lightsail update-relational-database --relational-database-name DatabaseName --preferred-maintenance-window MaintenanceWindow
      ```
 
      Example:
 
      ```
-     aws lightsail update-relational-database myproductiondb --preferred-maintenance-window Tue:16:00-Tue:16:30
+     aws lightsail update-relational-database --relational-database-name myproductiondb --preferred-maintenance-window Tue:16:00-Tue:16:30
      ```
 **Note**  
 You must enter the preferred maintenance window time in ddd:hh24:mi\-ddd:hh24:mi format\. It also must be in Universal Coordinated Time \(UTC\) format, and defined for a minimum window of 30 minutes\. The preferred maintenance window cannot overlap the preferred backup window\.
    + Enter the following command to change the database backup window\. Be sure to paste the name of the database in place of *DatabaseName*, and enter the new backup window time frame in place of *BackupWindow*:
 
      ```
-     aws lightsail update-relational-database DatabaseName --preferred-backup-window BackupWindow
+     aws lightsail update-relational-database --relational-database-name DatabaseName --preferred-backup-window BackupWindow
      ```
 
      Example:
 
      ```
-     aws lightsail update-relational-database myproductiondb --preferred-backup-window 14:00-14:30
+     aws lightsail update-relational-database --relational-database-name myproductiondb --preferred-backup-window 14:00-14:30
      ```
 **Note**  
 You must enter the preferred backup window time in hh24:mi\-hh24:mi format\. It also must be in Universal Coordinated Time \(UTC\) format, and defined for a minimum window of 30 minutes\. The preferred backup window cannot overlap the preferred maintenance window\.
 
    You should see a result similar to the following example:  
-![\[Database preferred maintenance window update result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/839d5f6fb9fda85efe16b0c03ccc5f0f/images/amazon-lightsail-update-database-preferred-maintenance-window-response.png)
+![\[Database preferred maintenance window update result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-update-database-preferred-maintenance-window-response.png)
 
 ## Next steps<a name="changing-preferred-maintenance-and-backup-windows-next-steps"></a>
 

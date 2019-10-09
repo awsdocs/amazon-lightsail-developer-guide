@@ -1,6 +1,6 @@
 # Choose an Amazon Lightsail instance image<a name="compare-options-choose-lightsail-instance-image"></a>
 
- *Last updated: October 29, 2017* 
+ *Last updated: July 26, 2019* 
 
 Lightsail provides several options for you to create your virtual private server\. This topic helps you decide which operating system \(OS\), application, or development stack is right for your project\. We organized the applications by functional area \(e\.g\., CMS and e\-Commerce\)\.
 
@@ -84,7 +84,7 @@ There are thousands of add\-on modules and designs available for Drupal free of 
 
 Lightsail has five application stacks and servers for a wide variety of development projects\. Each image uses Linux/Unix \(Ubuntu\) as the base operating system\.
 
-** **LAMP stack \(PHP 5 and PHP 7\) powered by Bitnami** **  
+** **LAMP stack \(PHP 7\) powered by Bitnami** **  
 The Bitnami LAMP stack simplifies the development and deployment of PHP applications\. It includes ready\-to\-run versions of Apache, MySQL, PHP, and phpMyAdmin, as well as the other software required to run each of those components\. Bitnami LAMP stack is completely integrated and configured, so you'll be ready to start developing your application as soon as you create your instance in Lightsail\. Bitnami LAMP stack is regularly updated to ensure that you always have access to the latest stable releases for each bundled component\.  
 [Learn more about the Bitnami LAMP stack](https://bitnami.com/stack/lamp)\.
 
