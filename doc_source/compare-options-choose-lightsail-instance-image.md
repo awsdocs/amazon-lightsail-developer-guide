@@ -1,6 +1,6 @@
 # Choose an Amazon Lightsail instance image<a name="compare-options-choose-lightsail-instance-image"></a>
 
- *Last updated: July 26, 2019* 
+ *Last updated: November 24, 2019* 
 
 Lightsail provides several options for you to create your virtual private server\. This topic helps you decide which operating system \(OS\), application, or development stack is right for your project\. We organized the applications by functional area \(e\.g\., CMS and e\-Commerce\)\.
 
@@ -24,7 +24,7 @@ Windows Server 2012 R2 is also available as a base operating system\. If you're 
 You can use Windows Server 2012 R2 with the same use cases as listed under Windows Server 2016\.  
  [Learn more about the Windows Server 2012 R2 image](https://aws.amazon.com/marketplace/pp/B00KQOWCAQ) 
 
-** **Amazon Linux 2017** **  
+** **Amazon Linux 2018** **  
 The Amazon Linux AMI is a supported and maintained Linux image provided by Amazon Web Services \(AWS\) for use on Lightsail and Amazon EC2\. It's designed to provide a stable, secure, and high\-performance execution environment for applications running on Lightsail\. It includes packages that enable easy integration with AWS, such as the AWS Command Line Interface \(AWS CLI\) and AWS API tools\. AWS provides ongoing security and maintenance updates to all instances running the Amazon Linux AMI\.  
 [Learn more about the Amazon Linux AMI](https://aws.amazon.com/amazon-linux-ami/)
 
