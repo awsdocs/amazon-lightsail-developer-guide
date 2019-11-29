@@ -1,11 +1,11 @@
 # Updating database parameters in Amazon Lightsail<a name="amazon-lightsail-updating-database-parameters"></a>
 
- *Last updated: March 15, 2019* 
+ *Last updated: November 29, 2019* 
 
 Database parameters, also known as database system variables, define fundamental properties of a managed database in Amazon Lightsail\. For example, you can define a database parameter to limit the number of database connections, or define another parameter to limit the database buffer pool size\. This guide shows you how to get a list of the parameters for your managed database, and how to update them using the AWS Command Line Interface \(AWS CLI\)\.
 
 **Note**  
-For more information about MySQL system variables, refer to the [MySQL 5\.6](https://dev.mysql.com/doc/refman/5.6/en/server-system-variables.html), [MySQL 5\.7](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html), or [MySQL 8\.0](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html) documentation\. For more information about PostgreSQL system variables, refer to the [PostgreSQL 9\.6](https://www.postgresql.org/docs/9.6/index.html), [PostgreSQL 10](https://www.postgresql.org/docs/10/index.html), or [PostgreSQL 11\.1](https://www.postgresql.org/docs/11/index.html) documentation\.
+For more information about MySQL system variables, refer to the [MySQL 5\.6](https://dev.mysql.com/doc/refman/5.6/en/server-system-variables.html), [MySQL 5\.7](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html), or [MySQL 8\.0](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html) documentation\. For more information about PostgreSQL system variables, refer to the [PostgreSQL 9\.6](https://www.postgresql.org/docs/9.6/index.html), [PostgreSQL 10](https://www.postgresql.org/docs/10/index.html), or [PostgreSQL 11\.5](https://www.postgresql.org/docs/11/index.html) documentation\.
 
 ## Prerequisites<a name="prerequisites-to-update-database-parameters"></a>
 + If you haven't done so already, install and configure the AWS CLI\. For more information, see [Configuring the AWS Command Line Interface to work with Amazon Lightsail](lightsail-how-to-set-up-and-configure-aws-cli.md)\.
