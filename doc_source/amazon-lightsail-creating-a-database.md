@@ -1,6 +1,6 @@
 # Creating a database in Amazon Lightsail<a name="amazon-lightsail-creating-a-database"></a>
 
- *Last updated: March 15, 2019* 
+ *Last updated: November 29, 2019* 
 
 Create a managed database in Amazon Lightsail in minutes\. You can choose between the latest major versions of MySQL or PostgreSQL, and configure your database with a standard or high availability plan\.
 
@@ -27,7 +27,7 @@ For more information about managed databases in Lightsail, see [Choosing an Amaz
    + **Specify login credentials** — Specify your own database user name and password\. Otherwise, Lightsail specifies the user name, and creates a strong password for you\. 
      + To specify your own user name, choose **Specify login credentials**, and enter your user name into the text box\.
 **Important**  
-The user name can't be a word reserved by the selected database engine\. Additionally, the master user name cannot be changed after the database is created\. To learn more about reserved words, refer to the [MySQL 5\.6](https://dev.mysql.com/doc/refman/5.6/en/keywords.html), [MySQL 5\.7](https://dev.mysql.com/doc/refman/5.7/en/keywords.html), or [MySQL 8\.0](https://dev.mysql.com/doc/refman/8.0/en/keywords.html) documentation\. For PostgreSQL, refer to the [PostgreSQL 9\.6](https://www.postgresql.org/docs/9.6/sql-keywords-appendix.html), [PostgreSQL 10](https://www.postgresql.org/docs/10/sql-keywords-appendix.html), or [PostgreSQL 11\.1](https://www.postgresql.org/docs/11/sql-keywords-appendix.html) documentation\.
+The user name can't be a word reserved by the selected database engine\. Additionally, the master user name cannot be changed after the database is created\. To learn more about reserved words, refer to the [MySQL 5\.6](https://dev.mysql.com/doc/refman/5.6/en/keywords.html), [MySQL 5\.7](https://dev.mysql.com/doc/refman/5.7/en/keywords.html), or [MySQL 8\.0](https://dev.mysql.com/doc/refman/8.0/en/keywords.html) documentation\. For PostgreSQL, refer to the [PostgreSQL 9\.6](https://www.postgresql.org/docs/9.6/sql-keywords-appendix.html), [PostgreSQL 10](https://www.postgresql.org/docs/10/sql-keywords-appendix.html), or [PostgreSQL 11\.5](https://www.postgresql.org/docs/11/sql-keywords-appendix.html) documentation\.
      + To specify your own password, clear the **Create a strong password for me** check box, and enter your password into the text box\. 
    + **Specify the master database name** — Specify your own master database name, or Lightsail specifies the name for you\. To specify your own master database name, choose **Specify the master database name**, and enter a name into the text box\.
 
