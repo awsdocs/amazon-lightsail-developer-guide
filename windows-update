@@ -1,0 +1,1 @@
+My users have experienced extreme slowdowns on Lightsail servers when there's a Windows Update in progress. It seems like the updates only run when a user is logged in rather than in off-hours. The slowdown makes the server unuseable. The only solution that I've been able to implement is to turn off the Windows Update service.
