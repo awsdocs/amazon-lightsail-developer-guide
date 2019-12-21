@@ -9,7 +9,7 @@ We strongly encourage you to let Lightsail generate the password for your instan
 
 ## Changing your Administrator password using Windows Server<a name="changing-your-password-using-windows"></a>
 
-You can change your Admininstrator password using the Windows Server **Change Password** tool\. Type `Ctrl` \+ `Alt` \+ `Del` on your Windows Server\-based Lightsail instance, and then choose **Change a password**\.
+You can change your Administrator password using the Windows Server **Change Password** tool\. Type `Ctrl` \+ `Alt` \+ `Del` on your Windows Server\-based Lightsail instance, and then choose **Change a password**\.
 
 ## Decrypt your key<a name="decrypt-password-using-cyphertext-and-cli"></a>
 
