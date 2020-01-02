@@ -61,7 +61,7 @@ You can connect to Amazon EC2 instances similar to how you connect to Lightsail 
 
 ## Securing Amazon EC2 instances<a name="securing-amazon-ec2-instances"></a>
 
-After you create an EC2 instance from an exported Lightsail snapshot, you may need to perform a few actions to improve the security of your new instances\. The actions are differet depending on the operating system of your EC2 instance\.
+After you create an EC2 instance from an exported Lightsail snapshot, you may need to perform a few actions to improve the security of your new instances\. The actions are different depending on the operating system of your EC2 instance\.
 
 **Securing Linux and Unix instances in Amazon EC2**
 
