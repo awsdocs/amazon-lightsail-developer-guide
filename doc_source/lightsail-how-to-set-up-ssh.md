@@ -26,11 +26,19 @@ If you don't choose to use the default key, you can create a new key pair at the
 1. Choose **Create new**\.
 
 1. Lightsail displays the region where we're creating the new key\.  
-![\[Here's the region where your key pair is being created\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-create-new-key-pair-in-region.png)
+![\[Here's the region where your key pair is being created\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-create-new-key-pair-in-region.png)
 
    Choose **Create**\.
 
-1. Give your key pair a name, and then choose **Generate key pair**\.
+1. Enter a name for your key pair\.
+
+   Resource names:
+   + Must be unique within each AWS Region in your Lightsail account\.
+   + Must contain 2 to 255 characters\.
+   + Must start and end with an alphanumeric character or number\.
+   + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.
+
+1. Choose **Generate key pair**\.
 **Important**  
 Save your key somewhere you can easily find it\. Also, it's a good idea to make sure permissions are set so that no one else can read it\.
 
@@ -62,6 +70,6 @@ You can also choose to upload an existing key at the time you create your Lights
 
 You can manage your keys on the **SSH keys** tab of the **Account** page\. You will see each key pair in use in each region\.
 
-![\[Key pair management on the Account page\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-account-key-pairs-management.png)
+![\[Key pair management on the Account page\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-account-key-pairs-management.png)
 
 On this page, you can change the key you want to use to connect to your Lightsail instance\. You can also create a new key, upload an existing key, or download a private key\. You may want to use an SSH client like PuTTY to connect, which will require you to have the private half of the key\. You can download the key on the **Account** page\. [Learn more about setting up PuTTY to connect to a Lightsail instance](lightsail-how-to-set-up-putty-to-connect-using-ssh.md)\.

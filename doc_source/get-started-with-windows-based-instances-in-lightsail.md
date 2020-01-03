@@ -52,15 +52,21 @@ You can create a Windows Server\-based instance using the Lightsail console or b
 **Note**  
 Some instance plans are not available for some blueprints\. For example, you can't use the two smallest plans with the SQL Server Express blueprint\. At a minimum, you must use the plan that has 2 GB RAM and 50 GB SSD, or choose one of the larger plans\.
 
-1. Give your instance a unique name\.
+1. Enter a name for your instance\.
+
+   Resource names:
+   + Must be unique within each AWS Region in your Lightsail account\.
+   + Must contain 2 to 255 characters\.
+   + Must start and end with an alphanumeric character or number\.
+   + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.
 
 1. Choose one of the following options to add tags to your instance:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
@@ -79,8 +85,10 @@ For more information about key\-only and key\-value tags, see [Tags in Amazon Li
 1. Type the following AWS CLI command to create a $40 USD per month Windows Server 2016 instance running in the Ohio region:
 
    ```
-   aws lightsail create-instances --instance-names "my-windows-instance" --availability-zone us-east-2a --blueprint-id windows_server_2016_2017_09_13 --bundle-id medium_win_1_0
+   aws lightsail create-instances --instance-names InstanceName --availability-zone us-east-2a --blueprint-id windows_server_2016_2017_09_13 --bundle-id medium_win_1_0
    ```
+
+   In the command, replace *InstanceName* with the name of your new instance\.
 
    If successful, you'll see the following output from the AWS CLI\.
 
@@ -117,7 +125,7 @@ After you create your instance, you may need to wait up to 15 minutes before you
 **To connect using the Lightsail browser\-based RDP client**
 
 1. On the home page, choose the **Connect using RDP** icon next to your instance\.  
-![\[The quickest way to connect to your Windows Server-based Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/connect-to-windows-instance-using-rdp-connection-shortcut.png)
+![\[The quickest way to connect to your Windows Server-based Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/connect-to-windows-instance-using-rdp-connection-shortcut.png)
 
 1. Alternately, you can connect to your instance from the shortcut menu or the instance management page\.
 
@@ -132,7 +140,7 @@ After you create your instance, you may need to wait up to 15 minutes before you
 1. Paste the IP address into the **Computer** field\.
 
 1. Choose **Show Options**, and then type `Administrator` for your **User name**\.  
-![\[Remote Desktop Connection application in Windows\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/remote-desktop-connection-windows-server-based-instance-lightsail.png)
+![\[Remote Desktop Connection application in Windows\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/remote-desktop-connection-windows-server-based-instance-lightsail.png)
 
 1. Choose **Connect**\.
 
@@ -145,7 +153,7 @@ After you create your instance, you may need to wait up to 15 minutes before you
 1. Copy the default password to the clipboard\.
 
 1. Paste your password into **Remote Desktop Connection**, and then choose **Remember me** to prevent this dialog box from appearing in the future\.  
-![\[Enter credentials in Remote Desktop Connection in Windows\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/remote-desktop-connection-enter-credentials-lightsail-windows.png)
+![\[Enter credentials in Remote Desktop Connection in Windows\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/remote-desktop-connection-enter-credentials-lightsail-windows.png)
 
 1. Choose **OK**\.
 

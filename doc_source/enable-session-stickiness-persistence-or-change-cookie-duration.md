@@ -15,7 +15,7 @@ You can also adjust the cookie duration using the AWS Command Line Interface \(A
 1. Choose the **Inbound traffic** tab\.
 
 1. Choose **Enable session persistence**\.  
-![\[Session persistence enabled\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/session-persistence-enabled.png)
+![\[Session persistence enabled\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/session-persistence-enabled.png)
 
 ## Adjust the cookie duration<a name="adjust-cookie-duration"></a>
 
@@ -30,8 +30,10 @@ If you haven't done so already, set up the AWS CLI and configure it\.
 1. Type the following AWS CLI command to increase the cookie duration to three days \(259,200 seconds\)\.
 
    ```
-   aws lightsail update-load-balancer-attribute --load-balancer-name example-load-balancer --attribute-name SessionStickiness_LB_CookieDurationSeconds --attribute-value 259200
+   aws lightsail update-load-balancer-attribute --load-balancer-name LoadBalancerName --attribute-name SessionStickiness_LB_CookieDurationSeconds --attribute-value 259200
    ```
+
+   In the command, replace *LoadBalancerName* with the name of your load balancer\.
 
    If successful, you should see the following response\.
 

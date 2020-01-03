@@ -12,7 +12,7 @@ Complete the following prerequisites if you haven't already:
   + [Download FileZilla Client for Mac OS X](https://filezilla-project.org/download.php?platform=osx)
   + [Download FileZilla Client for Linux](https://filezilla-project.org/download.php?platform=linux)
 + Get the public IP address of your instance\. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/), and then copy the public IP address that is displayed next to your instance, as shown in the following example:  
-![\[The public IP for an instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-instance-public-ip.png)
+![\[The public IP for an instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-instance-public-ip.png)
 
 ## Get the SSH key for your instance<a name="get-the-ssh-key-for-your-instance"></a>
 
@@ -28,7 +28,7 @@ If you’re using your own key pair, or you created a key pair using the Lightsa
 1. Choose the **SSH Keys** tab\.
 
 1. Choose **Download** next to the default private key for the region where your instance is located\.  
-![\[SSH keypairs in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-ssh-key-pairs.png)
+![\[SSH keypairs in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-ssh-key-pairs.png)
 
 1. Save your private key in a secured location on your local drive\.
 
@@ -57,11 +57,11 @@ Complete the following steps to configure FileZilla to connect to your instance\
 1. Next to the **Key File** text box, choose **Browse**\.
 
 1. Locate the private key file that you downloaded from the Lightsail console earlier in this procedure, and then choose **Open**\.  
-![\[SFTP configuration in FileZilla.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-filezilla-sftp-configuration.png)
+![\[SFTP configuration in FileZilla.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-filezilla-sftp-configuration.png)
 
 1. Choose **Connect**\.
 
    You are successfully connected if you see status messages similar to the following example:  
-![\[FileZilla successfully connected to an instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-filezilla-sftp-successfully-connected.png)
+![\[FileZilla successfully connected to an instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-filezilla-sftp-successfully-connected.png)
 
    For more information about using FileZilla, including how to transfer files between your local computer and your instance, see the [FileZilla Wiki page](https://wiki.filezilla-project.org/Using)\.

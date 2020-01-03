@@ -19,7 +19,7 @@ After you [verify that you control the domain where you want to have encrypted \
 1. For **Sub\-domain**, type `www` in front of `example.com` or don't use a prefix if using an apex domain\.
 
 1. For destination IP, choose your load balancer from the list of available load balancers\.  
-![\[Choose your load balancer and create an alias (A) record\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/create-alias-a-record-for-lightsail-load-balancer.png)
+![\[Choose your load balancer and create an alias (A) record\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/create-alias-a-record-for-lightsail-load-balancer.png)
 
 1. Choose **Save**\.
 
@@ -42,7 +42,7 @@ If you're using an apex domain, you need to point your apex to a subdomain \(lik
 1. For **Alias**, choose **Yes**\.
 
 1. Go to the Lightsail console and copy the **DNS name** from your load balancer management page\.  
-![\[DNS name on the load balancer management page\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/dns-name-on-load-balancer-management-page.png)
+![\[DNS name on the load balancer management page\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/dns-name-on-load-balancer-management-page.png)
 
 1. Go back to the Amazon Route 53 console and paste the DNS name into the **Alias Target** field\.
 
@@ -51,6 +51,6 @@ If you're using an apex domain, you need to point your apex to a subdomain \(lik
    Lightsail already performs health checks on your load balancer\. [Learn more about health checking](enable-set-up-health-checking-for-lightsail-load-balancer-metrics.md)
 
    Your record set should look something like this\.  
-![\[Create a record set in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/create-record-set-alias-record-route-53.png)
+![\[Create a record set in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/create-record-set-alias-record-route-53.png)
 
 1. Choose **Create**\.

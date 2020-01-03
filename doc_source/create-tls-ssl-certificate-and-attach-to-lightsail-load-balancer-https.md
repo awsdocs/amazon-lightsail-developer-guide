@@ -25,6 +25,12 @@ Before you get started, you will need the following\.
 
 1. If needed, change the **certificate name**\.
 
+   Resource names:
+   + Must be unique within each AWS Region in your Lightsail account\.
+   + Must contain 2 to 255 characters\.
+   + Must start and end with an alphanumeric character or number\.
+   + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.
+
 1. Optionally, you can add alternate domains and subdomains\.
 
    For more information, see [Add alternate domains and subdomains to your SSL/TLS certificate](add-alternate-domain-names-to-tls-ssl-certificate-https.md)
@@ -34,7 +40,7 @@ Before you get started, you will need the following\.
    Lightsail begins the validation process\. You have 72 hours to verify that you own your domain\.
 
    After you create your certificate, you see the certificate along with the domain name and all your alternate domains and subdomains\. You need to create a DNS record for each domain and subdomain\.  
-![\[Certificate pending validation with domains and subdomains\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-certificate-validation.png)
+![\[Certificate pending validation with domains and subdomains\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-certificate-validation.png)
 
 ## Next step<a name="create-ssl-tls-certificate-next-steps"></a>
 +  [Verify that you own your domain](verify-tls-ssl-certificate-using-dns-cname-https.md) 

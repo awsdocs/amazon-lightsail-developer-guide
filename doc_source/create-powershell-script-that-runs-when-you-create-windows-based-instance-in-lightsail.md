@@ -28,15 +28,21 @@ The following procedure installs a tool called *chocolatey* on a new instance, r
 **Note**  
 You must always wrap your PowerShell scripts in `<powershell></powershell>` tags\. You can enter non\-PowerShell commands or batch scripts using `<script></script>` tags or without any tags at all\.
 
-1. Enter a unique name for your instance\.
+1. Enter a name for your instance\.
+
+   Resource names:
+   + Must be unique within each AWS Region in your Lightsail account\.
+   + Must contain 2 to 255 characters\.
+   + Must start and end with an alphanumeric character or number\.
+   + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.
 
 1. Choose one of the following options to add tags to your instance:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 

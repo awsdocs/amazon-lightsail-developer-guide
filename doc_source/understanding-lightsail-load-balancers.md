@@ -9,7 +9,7 @@ A Lightsail load balancer distributes incoming web traffic among multiple Lights
 
 You can add and remove instances from your Lightsail load balancer as your needs change, without disrupting the overall flow of requests to your application\.
 
-With Lightsail load balancing, we create a DNS host name and route any requests sent to this host name to a pool of target Lightsail instances\. You can add as many target instances to your load balancer as you like, as long as you stay within your Lightsail account limits for total number of instances\.
+With Lightsail load balancing, we create a DNS host name and route any requests sent to this host name to a pool of target Lightsail instances\. You can add as many target instances to your load balancer as you like, as long as you stay within your Lightsail account quotas for total number of instances\.
 
 ## Lightsail load balancer features<a name="lightsail-load-balancer-features"></a>
 

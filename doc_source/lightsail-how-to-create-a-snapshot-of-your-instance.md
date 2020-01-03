@@ -9,14 +9,21 @@ The steps to create a snapshot of a Windows Server\-based Lightsail instance are
 
 You must already have an instance in Lightsail to create a snapshot of it\. After you have an instance, follow these steps to create a snapshot:
 
-1. On the Lightsail home page, choose your instance\. Or choose **Manage** on the shortcut menu\.  
-![\[Manage instance menu\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/linux-instance-manage-instance-from-shortcut-menu-home-page.gif)
+1. On the Lightsail home page, choose the name of your instance for which you want to create a snapshot\.
 
-1. Choose **Snapshots**\.
+1. Choose the **Snapshots** tab\.
 
-1. If needed, change the name of your snapshot, and then choose **Create snapshot**\.
+1. Under the **Manual snapshots** section of the page, choose **Create snapshot**, then enter a name for your snapshot\.
 
-   You can see the snapshot you just created in the **Recent snapshots** section\. It will show up as **In progress\.\.\.**\.
+   Resource names:
+   + Must be unique within each AWS Region in your Lightsail account\.
+   + Must contain 2 to 255 characters\.
+   + Must start and end with an alphanumeric character or number\.
+   + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.
+
+1. Choose **Create**\.
+
+   You can see the snapshot you just created with a status of **Snapshotting\.\.\.**\.
 
    After the snapshot is finished, you can [create another instance from the snapshot](lightsail-how-to-create-instance-from-snapshot.md)\. For example, you may want to choose a larger size bundle than you had previously\.
 

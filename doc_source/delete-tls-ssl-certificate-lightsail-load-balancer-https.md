@@ -6,7 +6,7 @@ You can delete an SSL/TLS certificate that you're no longer using\. For example,
 
 **Important**  
 If the certificate you're deleting is valid and in use, your load balancer will no longer be able to handle encrypted \(HTTPS\) traffic\. Your Lightsail load balancer will still support unencrypted \(HTTP\) traffic\.  
-Deleting an SSL/TLS certificate is final and can't be undone\. You have a limited number of certificates you can create over a 365\-day period\. For more information, see [Limits](http://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html)\.
+Deleting an SSL/TLS certificate is final and can't be undone\. You have a quota of certificates you can create over a 365\-day period\. For more information, see [Quotas](http://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html) in the AWS Certificate Manager User Guide\.
 
 1. On the Lightsail home page, choose **Networking**\.
 

@@ -1,6 +1,6 @@
 # Choosing an Amazon Lightsail database<a name="amazon-lightsail-choosing-a-database"></a>
 
- *Last updated: November 29, 2019* 
+ *Last updated: January 3, 2020* 
 
 Amazon Lightsail provides the latest major versions of the MySQL and PostgreSQL databases\. This guide helps you decide which database is right for your project\.
 
@@ -8,7 +8,7 @@ Amazon Lightsail provides the latest major versions of the MySQL and PostgreSQL 
 
 **MySQL**
 
-MySQL 5\.6, MySQL 5\.7, and MySQL 8\.0 are available in Lightsail\. MySQL is the most widely adopted open source relational database\. It serves as the primary relational data store for many popular websites, applications, and commercial products\. MySQL is a reliable, stable, and secure SQL\-based database management system, with more than 20 years of community\-backed development and support\. The MySQL database is suitable for a wide variety of use cases, including mission\-critical apps and dynamic websites\. It also functions as an embedded database for software, hardware, and appliances\.
+MySQL 5\.6, 5\.7, and 8\.0 are available in Lightsail\. MySQL is the most widely adopted open source relational database\. It serves as the primary relational data store for many popular websites, applications, and commercial products\. MySQL is a reliable, stable, and secure SQL\-based database management system, with more than 20 years of community\-backed development and support\. The MySQL database is suitable for a wide variety of use cases, including mission\-critical apps and dynamic websites\. It also functions as an embedded database for software, hardware, and appliances\.
 
 For more information, see the following MySQL documentation:
 + [MySQL 5\.6 documentation](https://dev.mysql.com/doc/refman/5.6/en/)
@@ -17,14 +17,14 @@ For more information, see the following MySQL documentation:
 
 **PostgreSQL**
 
-PostgreSQL 9\.6, 10, and 11\.5 are available in Lightsail\. PostgreSQL is a powerful, open source object\-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance\.
+PostgreSQL 9\.6, 10\.10, and 11\.5 are available in Lightsail\. PostgreSQL is a powerful, open source object\-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance\.
 
 There is a wealth of information to be found describing how to install and use PostgreSQL through the [official documentation](https://www.postgresql.org/docs/)\. The [PostgreSQL community](https://www.postgresql.org/community/) provides many helpful places to become familiar with the technology, discover how it works, and find career opportunities\.
 
 For more information, see the following PostgreSQL documentation:
-+ [PostgreSQL 9\.6 Documentation](https://www.postgresql.org/docs/9.6/index.html)
-+ [PostgreSQL 10 Documentation](https://www.postgresql.org/docs/10/index.html)
-+ [PostgreSQL 11\.5 Documentation](https://www.postgresql.org/docs/11/index.html)
++ [PostgreSQL 9\.6 documentation](https://www.postgresql.org/docs/9.6/index.html)
++ [PostgreSQL 10 documentation](https://www.postgresql.org/docs/10/index.html)
++ [PostgreSQL 11 documentation](https://www.postgresql.org/docs/11/index.html)
 
 **Note**  
 Lightsail also offers a Windows Server 2016 instance with SQL Server 2016 Express\. For more information, see [Choose an Amazon Lightsail instance image](compare-options-choose-lightsail-instance-image.md)\.

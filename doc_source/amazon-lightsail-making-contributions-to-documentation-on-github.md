@@ -9,6 +9,11 @@ The Amazon Lightsail documentation is on GitHub in the [Lightsail developer guid
 
 In this guide, we show you how to [edit an existing guide](#editing-an-existing-guide) or how to [create a new guide](#creating-a-new-guide) by creating a pull request on GitHub\. After you submit a pull request, it will be reviewed by the Lightsail team and a decision will be made to accept it, reject it, or to engage in a conversation with you to learn more\. You will get a response to your pull request within 48 hours\. If your request is accepted, then it will be published to the Lightsail documentation in the next round of updates typically within two weeks\.
 
+**Contents**
++ [Prerequisites](#making-contributions-to-documentation-on-github-prerequisites)
++ [Edit an existing guide](#editing-an-existing-guide)
++ [Create a new guide](#creating-a-new-guide)
+
 ## Prerequisites<a name="making-contributions-to-documentation-on-github-prerequisites"></a>
 
 Complete the following prerequisites before you get started:
@@ -20,17 +25,17 @@ Complete the following prerequisites before you get started:
 Complete the following steps to edit an existing Lightsail guide:
 
 1. Find the Lightsail guide that you want to edit and copy the slug that is in the address bar\. This is the text after the last forward slash \(`/`\) as shown in the following screenshot:  
-![\[Slug for a Lightsail guide.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-guide-slug.png)
+![\[Slug for a Lightsail guide.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-guide-slug.png)
 
 1. Sign in to GitHub and go to the [Lightsail developer guide repository](https://github.com/awsdocs/amazon-lightsail-developer-guide)\.
 
 1. Choose **Find file**\.  
-![\[Find file on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-github-find-file.png)
+![\[Find file on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-github-find-file.png)
 
 1. Search for the guide slug, or paste the slug that you copied earlier in this guide\.
 
 1. In the search results, choose the guide that you wish to edit\.  
-![\[Find file search results on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-github-find-file-results.png)
+![\[Find file search results on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-github-find-file-results.png)
 
 1. Choose the **Fork this project and edit this file** \(pencil\) icon\.
 
@@ -55,7 +60,7 @@ Complete the following steps to write and submit a new Lightsail guide:
 1. Sign in to GitHub and go to the [Lightsail developer guide repository](https://github.com/awsdocs/amazon-lightsail-developer-guide)\.
 
 1. Choose **Create new file**\.  
-![\[Create new file on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-github-create-new-file.png)
+![\[Create new file on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-github-create-new-file.png)
 
 1. Name your file and enter the text for your guide into the **Edit new file** text box\.
 

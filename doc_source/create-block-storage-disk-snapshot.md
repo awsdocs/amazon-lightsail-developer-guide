@@ -10,9 +10,20 @@ For more information, see [Snapshots in Amazon Lightsail](understanding-instance
 
 1. On the Lightsail home page, choose the **Storage** tab\.
 
-1. Choose the block storage disk that you want to take a snapshot of, or choose **Manage** from the shortcut menu\.  
-![\[Use the shortcut menu to manage your block storage disk\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/animated-gif-manage-block-storage-disk-shortcut-menu.gif)
+1. Choose the name of the block storage disk for which you want to create a snapshot\.
 
-1. Choose **Snapshots**\.
+1. Choose the **Snapshots** tab\.
 
-1. Type a name for your snapshot, and then choose **Create snapshot**\.
+1. Under the **Manual snapshots** section of the page, choose **Create snapshot**, then enter a name for your snapshot\.
+
+   Resource names:
+   + Must be unique within each AWS Region in your Lightsail account\.
+   + Must contain 2 to 255 characters\.
+   + Must start and end with an alphanumeric character or number\.
+   + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.
+
+1. Choose **Create**\.
+
+   You can see the snapshot you just created with a status of **Snapshotting\.\.\.**\.
+
+   After the snapshot is finished, you can [create another disk from the snapshot](create-new-block-storage-disk-from-snapshot.md)\.

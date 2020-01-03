@@ -20,26 +20,26 @@ To start using Lightsail, choose [Get Started](https://portal.aws.amazon.com/gp/
 
 **In which AWS Regions is Lightsail available?**  
 Lightsail is currently available in all the Availability Zones in the following AWS Regions:  
-• US East \(N\. Virginia\)  
-• US East \(Ohio\)  
-• US West \(Oregon\)  
-• Asia Pacific \(Mumbai\)  
-• Asia Pacific \(Seoul\)  
-• Asia Pacific \(Singapore\)  
-• Asia Pacific \(Sydney\)  
-• Asia Pacific \(Tokyo\)  
-• Canada \(Central\)  
-• EU \(Frankfurt\)  
-• EU \(Ireland\)  
-• EU \(London\)  
-• EU \(Paris\)  
+• US East \(Ohio\) \(us\-east\-2\)  
+• US East \(N\. Virginia\) \(us\-east\-1\)  
+• US West \(Oregon\) \(us\-west\-2\)  
+• Asia Pacific \(Mumbai\) \(ap\-south\-1\)  
+• Asia Pacific \(Seoul\) \(ap\-northeast\-2\)  
+• Asia Pacific \(Singapore\) \(ap\-southeast\-1\)  
+• Asia Pacific \(Sydney\) \(ap\-southeast\-2\)  
+• Asia Pacific \(Tokyo\) \(ap\-northeast\-1\)  
+• Canada \(Central\) \(ca\-central\-1\)  
+• EU \(Frankfurt\) \(eu\-central\-1\)  
+• EU \(Ireland\) \(eu\-west\-1\)  
+• EU \(London\) \(eu\-west\-2\)  
+• EU \(Paris\) \(eu\-west\-3\)  
 For more information, see [AWS Regions and Availability Zones in Lightsail](understanding-regions-and-availability-zones-in-amazon-lightsail.md)\.
 
 **What are Availability Zones?**  
 Availability Zones are collections of data centers that run on physically distinct, independent infrastructure and are engineered to be highly reliable\. Common points of failure such as generators and cooling equipment are not shared between Availability Zones\. Additionally, Availability Zones are physically separate, so that even extremely uncommon disasters such as fires, tornados, or flooding can affect only a single Availability Zone\.
 
-**What are the Lightsail service limits?**  
-You can currently create up to 20 Lightsail instances, 5 static IPs, 3 DNS zones, 20 TB of attached block storage, 40 databases, and 5 load balancers in a Lightsail account\. You can also generate up to 20 certificates during each calendar year\. If you need to increase your account limit for instances, static IPs, block storage, or certificates in your account, please open a case with [customer service](https://console.aws.amazon.com/support/home?region=us-east-1)\. We do not currently support increases for DNS zones or load balancers\.
+**What are the Lightsail service quotas?**  
+You can currently create up to 20 Lightsail instances, 5 static IPs, 3 DNS zones, 20 TB of attached block storage, 40 databases, and 5 load balancers in a Lightsail account\. You can also generate up to 20 certificates during each calendar year\. If you need to increase your account quota for instances, static IPs, block storage, or certificates in your account, please open a case with [customer service](https://console.aws.amazon.com/support/home?region=us-east-1)\. We do not currently support increases for DNS zones or load balancers\.
 
 **How can I get more help?**  
 We're here for you\. Our context\-sensitive **Help** panel in Lightsail offers immediate helpful tips about your actions in the console\. From the Lightsail console, you can also access a library of [getting started guides](https://lightsail.aws.amazon.com/ls/docs/getting-started), [overviews](https://lightsail.aws.amazon.com/ls/docs/overview), and [how\-to topics](https://lightsail.aws.amazon.com/ls/docs/how-to)\. And if you want to use the Lightsail API, or AWS CLI, Lightsail has a full API reference for all supported programming languages\. You can also use Lightsail support resources\.  
@@ -193,7 +193,7 @@ Lightsail load balancers direct traffic to your healthy target instances based o
 After you create your load balancer and attach your instances, Lightsail sends a health check request to the root of your web application\. You can customize the location by specifying a path \(a common file or webpage URL\) for Lightsail to ping\. If the target instance can be reached using this path, then Lightsail will route traffic there\. If one of your target instances is unresponsive, the health check fails and Lightsail will not route traffic to that instance\. [Learn more about health checking](enable-set-up-health-checking-for-lightsail-load-balancer-metrics.md)
 
 **How many instances I can attach to my load balancer?**  
-You can add as many target instances to your load balancer as you would like \- up to your Lightsail account instance limit\.
+You can add as many target instances to your load balancer as you would like \- up to your Lightsail account instance quota\.
 
 **Can I assign one instance to multiple load balancers?**  
 Yes, Lightsail supports adding instances as target instances for more than one load balancer, if desired\.
@@ -284,7 +284,7 @@ Snapshots can also be exported to Amazon EC2 to create new resources within that
 ## Networking<a name="amazon-lightsail-faq-networking"></a>
 
 **How do I use IPs in Lightsail?**  
-Each Lightsail instance automatically gets a private IP address and a public IP address, which are reachable from the internet\. You can use the private IP to send data to other Lightsail instances and AWS resources in private, for free\. You can also substitute as static IP for the public IP of a Lightsail instance\.
+Each Lightsail instance automatically gets a private IP address and a public IP address\. You can use the private IP to transmit data between Lightsail instances and AWS resources privately, for free\. You can use the public IP to connect to your instance from the Internet, such as through a registered domain name or through an SSH or RDP connection from your local computer\. You can also attach a static IP to the instance, which substitutes the public IP with an IP address that doesn't change even if the instance is stopped and started\.
 
 **What is a static IP?**  
 A [static IP](understanding-static-ip-addresses-in-amazon-lightsail.md) is a fixed, public IP that is dedicated to your Lightsail account\. You can assign a static IP to an instance, replacing its public IP\. If you decide to replace your instance with another one, you can reassign the static IP to the new instance\. In this way, you don't have to reconfigure any external systems \(like DNS records\) to point to a new IP every time you want to replace your instance\.
@@ -302,7 +302,7 @@ Yes\. You can control the data traffic for your instances by using the Lightsail
 Lightsail plans are billed on an on\-demand hourly rate, so you pay only for what you use\. For every Lightsail plan you use, we charge you the fixed hourly price, up to the maximum monthly plan cost\. The least expensive Lightsail plan starts at $0\.0047 USD/hour \($3\.50 USD/month\)\. Lightsail plans that include a Windows Server license start at $0\.01075 USD/hour \($8 USD/month\)\.
 
 **When am I getting charged for a plan?**  
-Your Lightsail instances are charged only when they're in the running or stopped state\. If you delete your Lightsail instance before the end of the month, we only charge you a prorated cost, based on the total number of hours that you used your Lightsail instance\. For example, if you use the least expensive Lightsail plan for 100 hours in a month, you will be charged 67 cents \(100\*0\.0067\)\.
+Lightsail instances and managed databases incur charges until they are deleted\. If you delete your Lightsail instance or managed database before the end of the month, we only charge you a prorated cost, based on the total number of hours that you used your Lightsail instance or managed database for that month\. For example, if you use the least expensive Lightsail instance plan for 100 hours in a month, you will be charged 46 cents \(100\*0\.0046\)\.
 
 **Can I try Lightsail instances for free?**  
 Yes\! Whether you're an existing or new AWS customer, you get 750 hours of free usage of the $3\.50 USD Lightsail plan for free\. You also can try Lightsail plans that include a Windows Server license for free using the $8 USD Windows plan\.  
@@ -340,19 +340,19 @@ Even if you exceed your data transfer allowance, many types of data transfer are
 
 **What types of data transfer do I get charged for?**  
 When you exceed the monthly free data transfer allowance of your plan, you will get charged for data transfer OUT from a Lightsail instance to the internet or to another AWS Region or to AWS resources in the same Region when using public IP addresses\. The charge for these types of data transfer above the free allowance is as follows:  
-• US East \(N\. Virginia\): $0\.09 USD/GB  
-• US East \(Ohio\): $0\.09 USD/GB  
-• US West \(Oregon\): $0\.09 USD/GB  
-• Asia Pacific \(Mumbai\): $0\.13 USD/GB  
-• Asia Pacific \(Seoul\): $0\.13 USD/GB  
-• Asia Pacific \(Singapore\): $0\.12 USD/GB  
-• Asia Pacific \(Sydney\): $0\.17 USD/GB  
-• Asia Pacific \(Tokyo\): $0\.14 USD/GB  
-• Canada \(Central\): $0\.09 USD/GB  
-• EU \(Frankfurt\): $0\.09 USD/GB  
-• EU \(Ireland\): $0\.09 USD/GB  
-• EU \(London\): $0\.09 USD/GB  
-• EU \(Paris\): $0\.09 USD/GB  
+• US East \(Ohio\) \(us\-east\-2\): $0\.09 USD/GB  
+• US East \(N\. Virginia\) \(us\-east\-1\): $0\.09 USD/GB  
+• US West \(Oregon\) \(us\-west\-2\): $0\.09 USD/GB  
+• Asia Pacific \(Mumbai\) \(ap\-south\-1\): $0\.13 USD/GB  
+• Asia Pacific \(Seoul\) \(ap\-northeast\-2\): $0\.13 USD/GB  
+• Asia Pacific \(Singapore\) \(ap\-southeast\-1\): $0\.12 USD/GB  
+• Asia Pacific \(Sydney\) \(ap\-southeast\-2\): $0\.17 USD/GB  
+• Asia Pacific \(Tokyo\) \(ap\-northeast\-1\): $0\.14 USD/GB  
+• Canada \(Central\) \(ca\-central\-1\): $0\.09 USD/GB  
+• EU \(Frankfurt\) \(eu\-central\-1\): $0\.09 USD/GB  
+• EU \(Ireland\) \(eu\-west\-1\): $0\.09 USD/GB  
+• EU \(London\) \(eu\-west\-2\): $0\.09 USD/GB  
+• EU \(Paris\) \(eu\-west\-3\): $0\.09 USD/GB  
 Instances created in different Availability Zones can communicate between zones privately and for free, and are much less likely to be impaired concurrently\. Availability Zones enable you to build highly available applications and websites without increasing the cost of data transfer or compromising your application's security\.
 
 **How do my data transfer plan allowances vary by AWS Region?**  <a name="lightsail-faq-data-transfer-charges"></a>

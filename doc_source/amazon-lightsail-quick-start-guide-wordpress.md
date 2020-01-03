@@ -1,45 +1,27 @@
 # Quick start guide: WordPress on Amazon Lightsail<a name="amazon-lightsail-quick-start-guide-wordpress"></a>
 
- *Last updated: August 13, 2018*
+ *Last updated: August 13, 2018* 
 
 Here are a few steps you should take to get started after your WordPress instance is up and running on Amazon Lightsail:
 
 ## Step 1: Get the default application password for your WordPress website<a name="amazon-lightsail-wordpress-get-the-default-user-password"></a>
 
-The default wordpress username is __user__
-
-### Option 1
 You need the default application password to sign in to your WordPress websiteâ€™s administration dashboard\.
 
 1. On your instance management page, under the **Connect** tab, choose **Connect using SSH**\.
 
-2. After you're connected, enter the following command to get the default application password:
+1. After you're connected, enter the following command to get the default application password:
 
    ```
    cat bitnami_application_password
    ```
-**Note**
+**Note**  
 If you're in a directory other than the user home directory, then enter `cat $HOME/bitnami_application_password`\.
 
-   You should see a response similar to this, which contains the default application password:
-![\[Bitnami default application password.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-bitnami-application-password.png)
+   You should see a response similar to this, which contains the default application password:  
+![\[Bitnami default application password.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-bitnami-application-password.png)
 
 For more information, see [Getting the application user name and password for your 'Powered by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
-
-### Option 2
-#### You can also reset the default password to your desired password
-We will be using [WP-CLI](https://wp-cli.org/) for this operation. WP-CLI is the command-line interface for WordPress and is shipped with your bitnami instance.
-
-1. On your instance management page, under the **Connect** tab, choose **Connect using SSH**\.
-
-2. After you are connected, enter the following command to reset the default user password:
-
-```bash
-sudo -u daemon wp user update user --user_pass=YOUR_PASSWORD
-```
-__<em>DO NOT FORGET</em> to replace <em>YOUR_PASSWORD</em> with your desired password__
-
-For more information about WP-CLI, see [WP-CLI Commands](https://developer.wordpress.org/cli/commands/)
 
 ## Step 2: Sign in to your WordPress website<a name="amazon-lightsail-wordpress-sign-in"></a>
 
@@ -53,8 +35,8 @@ Now that you have the default user password, navigate to your WordPress websiteâ
 
 1. Sign in using the default user name \(user\) and the default password retrieved earlier in this guide\.
 
-   The WordPress administration dashboard appears\.
-![\[The WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-wordpress-dashboard.png)
+   The WordPress administration dashboard appears\.  
+![\[The WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-wordpress-dashboard.png)
 
 For more information, see [Getting the application user name and password for your 'Powered by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)
 

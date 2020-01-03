@@ -16,15 +16,21 @@ When you create a snapshot of a standard database, the database becomes unavaila
 
 1. Choose the **Snapshots & restore** tab\.
 
-1. Under the **Create database snapshot** section, enter a name for the new snapshot, or use the default name\.
+1. Under the **Manual snapshots** section of the page, choose **Create snapshot**, then enter a name for your snapshot\.
 
-1. Choose **Create snapshot**\.
+   Resource names:
+   + Must be unique within each AWS Region in your Lightsail account\.
+   + Must contain 2 to 255 characters\.
+   + Must start and end with an alphanumeric character or number\.
+   + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.
+
+1. Choose **Create**\.
 
    The snapshot creation process begins and a status of **Snapshot in progress** is shown\.  
-![\[Database snapshot in progress\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-database-snapshot-in-progress.png)
+![\[Database snapshot in progress\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-database-snapshot-in-progress.png)
 
    After the snapshot creation process is complete, the new snapshot is listed under the **Recent snapshots** section\. You can also view all of the snapshots for your account in the Lightsail home page, under the **Snapshots** tab\.  
-![\[Recent database snapshots in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-database-recent-snapshots.png)
+![\[Recent database snapshots in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-database-recent-snapshots.png)
 
 ## Next steps<a name="creating-a-database-snapshot-next-steps"></a>
 

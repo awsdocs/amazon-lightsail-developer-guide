@@ -1,13 +1,13 @@
 # Understanding public network ports and firewall settings in Amazon Lightsail<a name="understanding-firewall-and-port-mappings-in-amazon-lightsail"></a>
 
- *Last updated: September 19, 2018* 
+ *Last updated: January 2, 2020* 
 
 **Note**  
 When you create a Lightsail instance, some network ports are open by default\. When a port is open, your instance can accept public network connections\. You can change the network port settings for your Lightsail instance on the **Networking** tab of your instance management page\.
 
 The firewall and port settings are listed in the **Networking** tab of your instance's management page in the Amazon Lightsail console\. Choose **Edit rules** or **Add another** to change or create rules\.
 
-![\[Networking tab on the manage instance page\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-manage-instance-page-networking-tab.png)
+![\[Networking tab on the manage instance page\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-manage-instance-page-networking-tab.png)
 
 ## Application layer protocol types<a name="understanding-firewall-and-port-mappings-in-amazon-lightsail-application-types"></a>
 
@@ -94,8 +94,7 @@ HTTPS \- TCP \- 443
 Custom \- TCP \- 53  
 Custom \- UDP \- 53  
 Custom \- TCP \- 8443  
-Custom \- TCP \- 8447  
-The custom ports 8443, 8447, and 53 must be manually configured after creating a Plesk instance\. For more information, see [Set up and configure Plesk on Lightsail](set-up-and-configure-plesk-stack-on-lightsail.md)\.
+Custom \- TCP \- 8447
 
 **Windows Server 2016 and 2012 R2**  
 SSH \- TCP \- 22  

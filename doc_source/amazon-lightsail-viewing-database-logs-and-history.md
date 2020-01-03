@@ -1,6 +1,6 @@
 # Viewing your database logs and history in Amazon Lightsail<a name="amazon-lightsail-viewing-database-logs-and-history"></a>
 
- *Last updated: November 29, 2019* 
+ *Last updated: January 3, 2020* 
 
 View your database logs and history of changes in the Amazon Lightsail console\. Database logs provide useful information that could help you diagnose issues with your database\. Likewise, database history shows you changes made to your database, which allows you to associate problems with a recent change\.
 
@@ -26,4 +26,4 @@ View your database logs and history of changes in the Amazon Lightsail console\.
 The general and slow query logs are disabled by default for MySQL databases\. You can enable these logs, and begin collecting data, by updating a few database parameters\. For more information, see [Enabling the MySQL database general and slow query logs in Amazon Lightsail](amazon-lightsail-enabling-mysql-general-and-slow-query-logs)\.
 
    **PostgreSQL database logs**
-   + **Postgres log** — A record of database startup and shutdown times\. It can also contain diagnostics, such as errors, warnings, notices, and debug messages that occur during database startup, shutdown, and while the database is running\. For more information, see the error reporting and logging article in the [PostgreSQL 9\.6](https://www.postgresql.org/docs/9.6/runtime-config-logging.html), [PostgreSQL 10](https://www.postgresql.org/docs/10/runtime-config-logging.html), or [PostgreSQL 11\.5](https://www.postgresql.org/docs/11/runtime-config-logging.html) documentation\.
+   + **Postgres log** — A record of database startup and shutdown times\. It can also contain diagnostics, such as errors, warnings, notices, and debug messages that occur during database startup, shutdown, and while the database is running\. For more information, see the error reporting and logging article in the [PostgreSQL 9\.6](https://www.postgresql.org/docs/9.6/runtime-config-logging.html), [PostgreSQL 10](https://www.postgresql.org/docs/10/runtime-config-logging.html), or [PostgreSQL 11](https://www.postgresql.org/docs/11/runtime-config-logging.html) documentation\.

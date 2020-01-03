@@ -18,6 +18,7 @@ You will be billed the [snapshot storage fee](https://aws.amazon.com/lightsail/p
 The following restrictions apply to automatic snapshots:
 + Automatic snapshots cannot be enabled or disabled for block storage disks using the Lightsail console\. To enable or disable automatic snapshots for block storage disks, you must use the Lightsail API, AWS Command Line Interface \(AWS CLI\), or SDKs\. For more information, see [Enabling or disabling automatic snapshots using the AWS CLI](#configuring-automatic-snapshots-using-cli)\.
 + Automatic snapshot is currently not supported for Windows instances, or managed databases\. Instead, you must create manual snapshots of your Windows instances or managed databases to back them up\. For more information, see [Creating a snapshot of your Windows Server instance in Amazon Lightsail](prepare-windows-based-instance-and-create-snapshot.md) and [Creating a snapshot of your database in Amazon Lightsail](amazon-lightsail-creating-a-database-snapshot.md)\. Managed databases also have the point\-in\-time backup feature enabled by default, which you can use to restore your data to a new database\. For more information, see [Creating a database from a point\-in\-time backup in Amazon Lightsail](amazon-lightsail-creating-a-database-from-point-in-time-backup.md)\.
++ Automatic snapshots don't retain tags from the source resource\. To keep a tag from the source resource on a new resource created from an automatic snapshot, you must manually add the tag when you create the new resource from the automatic snapshot\. For more information, see [Adding tags to a resource in Amazon Lightsail](amazon-lightsail-adding-tags-to-a-resource.md)\.
 
 ## Enabling or disabling automatic snapshots for instances using the Lightsail console<a name="configuring-automatic-snapshots-using-console"></a>
 
@@ -26,12 +27,12 @@ Complete the following steps to enable or disable automatic snapshots for an ins
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the Lightsail home page, choose the **Instances** tab\.  
-![\[The Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-home-page-instances-storage.png)
+![\[The Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-home-page-instances-storage.png)
 
 1. Choose the name of the instance for which you want to enable or disable automatic snapshots\.
 
 1. On the instance management page, choose the **Snapshots** tab\.  
-![\[The instance management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-instance-management-snapshots.png)
+![\[The instance management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-instance-management-snapshots.png)
 
 1. Under the **Automatic snapshots** section, choose the toggle to enable it\. Likewise, choose the toggle to disable it if it's enabled\.
 
@@ -122,7 +123,7 @@ The `autoSnapshotAddOnRequest={snapshotTimeOfDay=HH:00}` parameter is optional i
      ```
 
    You should see a result similar to the following example:  
-![\[Enable auto snapshot operation result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-enable-auto-backup-operation.png)
+![\[Enable auto snapshot operation result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-enable-auto-backup-operation.png)
 
    The automatic snapshot is enabled or disabled after a few moments\.
    + If you *enabled* automatic snapshots, you may want to also change the automatic snapshot time\. For more information, see [Changing the automatic snapshot time for instances or block storage disks in Amazon Lightsail](amazon-lightsail-changing-automatic-snapshot-time.md)\.

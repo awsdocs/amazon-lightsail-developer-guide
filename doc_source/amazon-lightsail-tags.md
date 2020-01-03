@@ -9,7 +9,7 @@ Amazon Lightsail allows you to assign labels to your resources as tags\. Each ta
 
 A key without a value is referred to as a key\-only tag in Lightsail\. A key with a value is referred to as a key\-value tag\. The following diagram illustrates how tagging works\. In this example, each resource has a set of key\-value and key\-only tags\. The key\-value tags identify projects and priorities, and key\-only tags identify customers and application versions\.
 
-![\[Tagging in Amazon Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-tags.png)
+![\[Tagging in Amazon Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-tags.png)
 
 ## Organize billing and control access using tags<a name="organize-billing-and-control-access-using-tags"></a>
 
@@ -28,10 +28,10 @@ The following Lightsail resources can be tagged in the Lightsail console:
 + DNS zones
 + Load balancers
 
-**Note**  
-Snapshots inherit tags from the source resource\. A Lightsail resource created from a snapshot will have the same tags that were present on the source resource when the snapshot was created\.
+**Important**  
+Snapshots created using the Lightsail console automatically inherit tags from the source resource\. A Lightsail resource created from that snapshot will have the same tags that were present on the source resource when the snapshot was created\.
 
-The following resources can be tagged using the [Lightsail API operations](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/Welcome.html), or the [AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/reference/lightsail/) \(AWS CLI\) or SDKs:
+The following resources can be tagged using the [Lightsail API](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_TagResource.html), [AWS Command Line Interface \(AWS CLI\)](https://docs.aws.amazon.com/cli/latest/reference/lightsail/tag-resource.html), or SDKs:
 + Database snapshots
 + Databases
 + Disk snapshots
@@ -42,6 +42,9 @@ The following resources can be tagged using the [Lightsail API operations](https
 + Key pairs
 + Load balancer TLS certificates \(TLS certificates created using Lightsail\)
 + Load balancers
+
+**Important**  
+Snapshots created using the Lightsail API, AWS CLI, or SDKs do not automatically inherit tags from the source resource\. Instead, you must manually specify the tags from the source resource using the `tags` parameter\.
 
 ## Tag restrictions<a name="tag-restrictions"></a>
 

@@ -15,7 +15,7 @@ Once you stop your Lightsail instance, you can safely detach and delete your dis
 1. On the home page, choose **Storage**\.
 
 1. Choose the name of your attached disk to manage it\.  
-![\[Example of a block storage disk that is still attached to a Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/example-disk-still-attached-home-page-storage-tab.png)
+![\[Example of a block storage disk that is still attached to a Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/example-disk-still-attached-home-page-storage-tab.png)
 
 1. On the disk management page, choose **Detach**\.
 

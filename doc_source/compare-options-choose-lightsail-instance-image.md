@@ -1,6 +1,6 @@
 # Choose an Amazon Lightsail instance image<a name="compare-options-choose-lightsail-instance-image"></a>
 
- *Last updated: November 24, 2019* 
+ *Last updated: November 26, 2019* 
 
 Lightsail provides several options for you to create your virtual private server\. This topic helps you decide which operating system \(OS\), application, or development stack is right for your project\. We organized the applications by functional area \(e\.g\., CMS and e\-Commerce\)\.
 
@@ -109,7 +109,7 @@ Bitnami Nginx Stack provides a complete PHP, MySQL, and Nginx development enviro
 ** **Plesk Hosting Stack on Ubuntu** **  
 Build, secure, and run websites and applications on Lightsail and AWS using the Hosting Stack powered by Plesk\. This includes all your web\-based server management and security tools, plus WordPress automation in a graphical user interface\. It simplifies the work of web professionals and provides the scalability, security, and performance that your customers need\.  
  [Set up and configure Plesk on Lightsail](set-up-and-configure-plesk-stack-on-lightsail.md)   
-[Learn more about the Plesk stack](https://docs.plesk.com/release-notes/onyx/whats-new/)\.
+[Learn more about the Plesk stack](https://docs.plesk.com/en-US/current/administrator-guide/about-plesk.70559/)\.
 
 ## E\-commerce applications in Lightsail<a name="compare-ecommerce-applications-in-lightsail"></a>
 

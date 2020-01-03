@@ -6,7 +6,7 @@ A reverse Domain Name System \(DNS\) lookup is used by email servers to track wh
 
 For example, if a reverse DNS lookup of the IP address `192.168.1.2` returns the subdomain `mail.example.com`, and a forward DNS lookup of the subdomain `mail.example.com` returns the IP address `192.168.1.2`, then reverse DNS for IP address `192.168.1.2` is forward\-confirmed\. To learn more, see [Forward\-confirmed reverse DNS](https://en.wikipedia.org/wiki/Forward-confirmed_reverse_DNS) on Wikipedia\.
 
-You can configure reverse DNS for your Amazon Lightsail instance by completing prerequisites, and then submitting a request to AWS Support to remove outbound messaging limitations\. These steps are covered in the following sections\.
+You can configure reverse DNS for your Amazon Lightsail instance by completing prerequisites, and then submitting a request to AWS Support to remove outbound messaging quotas\. These steps are covered in the following sections\.
 
 ## Prerequisites<a name="amazon-lightsail-reverse-dns-prerequisites"></a>
 
@@ -26,7 +26,7 @@ We recommend that you transfer management of your domain’s DNS records to Ligh
 
 ## Submit a request to AWS Support to configure reverse DNS<a name="amazon-lightsail-submit-request-for-reverse-dns"></a>
 
-For security reasons, Lightsail limits outbound messages through port 25 by default\. However, you can request AWS Support to remove this limit from your account and configure reverse DNS for your static IP\.
+For security reasons, Lightsail limits outbound messages through port 25 by default\. However, you can request AWS Support to remove this quota from your account and configure reverse DNS for your static IP\.
 
 **To submit a request to AWS Support**
 
@@ -38,7 +38,7 @@ The request must be submitted using the AWS account root user\. For more informa
 **Note**  
 The form references Amazon Elastic Compute \(EC2\) resources, such as elastic IPs \(EIPs\) and EC2 instances\. However, you can also use the form for your Lightsail resources, such as static IPs and Lightsail instances\.
    + **Email address** — Enter the email address where you can receive correspondence about your request\. Your account email address is prepopulated in this text box\.
-   + **Use case description** — Enter the reason for requesting removal of the email limitation\.
+   + **Use case description** — Enter the reason for requesting removal of the email quota\.
    + **Elastic IP address** — Enter the static IP address that you attached to your instance in step 2 of the prerequisites earlier in this guide\. You can enter up to two static IP addresses\.
    + **Reverse DNS record for EIP** — Enter the subdomain that you defined in step 3 of the prerequisites earlier in this guide\. This is the domain that is returned when the reverse DNS lookup is performed\.
 

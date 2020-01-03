@@ -9,11 +9,11 @@ You might encounter errors with your Lightsail load balancers\. This topic ident
 Choose the issue below that best describes your problem, and follow the links to fix the issue\. If you encounter an issue that's not in the list, use the **Questions? Comments?** link at the bottom of this page to submit feedback or contact AWS Customer Support\.
 
 **I can't create a certificate\.**  
-There is a limit to the number of certificates you can create in an AWS account\. For more information, see [Limits](http://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html)\. The same limits apply to Lightsail certificates for load balancers\.  
+There is a quota to the number of certificates you can create in an AWS account\. For more information, see [Quotas](http://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html) in the AWS Certificate Manager User Guide\. The same quota apply to Lightsail certificates for load balancers\.  
 *Actual error message:*  **Sorry, you've requested too many certificates for your account\.**
 
 **I can't attach any more instances to my load balancer\.**  
-You can attach as many Lightsail instances as you like to your load balancer, as long as you stay within the limit of 20 total Lightsail instances per AWS account\.  
+You can attach as many Lightsail instances as you like to your load balancer, as long as you stay within the quota of 20 total Lightsail instances per AWS account\.  
 *Actual error message:*  **Sorry, you've reached the maximum number of instances you can attach to this load balancer\.**
 
 **I can't attach a specific instance to my load balancer\.**  

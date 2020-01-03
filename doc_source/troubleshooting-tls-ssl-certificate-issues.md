@@ -7,7 +7,7 @@ You might encounter errors with your Lightsail load balancers\. This topic ident
 Choose the issue below that best describes your problem, and follow the links to fix the issue\. If you encounter an issue that's not in the list, use the **Questions? Comments?** link at the bottom of this page to submit feedback or contact AWS Customer Support\.
 
 **I can't create a certificate\.**  
-There is a limit to the number of certificates you can create in an AWS account\. For more information, see [Limits](http://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html)\. The same limits apply to Lightsail certificates for load balancers\.  
+There is a quota to the number of certificates you can create in an AWS account\. For more information, see [Quotas](http://docs.aws.amazon.com/acm/latest/userguide/acm-limits.html) in the AWS Certificate Manager User Guide\. The same quotas apply to Lightsail certificates for load balancers\.  
 *Actual error message:*  **Sorry, you've requested too many certificates for your account\.**
 
 **My certificate request failed\.**  

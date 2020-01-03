@@ -17,11 +17,17 @@ You can’t recover a deleted database\. You can create a final snapshot of your
 
 1. Choose the **Delete** tab\.
 
-1. Add a checkmark next to **Create snapshot before deletion** to create a final snapshot before deleting the database\. Then name your snapshot\.
+1. Add a checkmark next to **Create snapshot before deletion** to create a final snapshot before deleting the database\. Then enter a name for your snapshot\.
+
+   Resource names:
+   + Must be unique within each AWS Region in your Lightsail account\.
+   + Must contain 2 to 255 characters\.
+   + Must start and end with an alphanumeric character or number\.
+   + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.
 
 1. Choose **Delete database**\.
 
 1. Choose **Yes, delete** to confirm the deletion\.  
-![\[Creating a database snapshot before deleting a database\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-delete-database-with-snapshot.png)
+![\[Creating a database snapshot before deleting a database\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-delete-database-with-snapshot.png)
 
    If you opted to create a snapshot before deleting, you can view it on the **Snapshots** tab of the Lightsail home page\.

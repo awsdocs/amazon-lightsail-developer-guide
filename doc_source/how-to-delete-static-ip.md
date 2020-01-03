@@ -16,7 +16,7 @@ You can get to the Lightsail home page by choosing the **Amazon Lightsail** logo
 Deleting a static IP will completely remove the static IP\. Other resources that rely on this static IP may be impacted\.
 
 1. From the Lightsail home page, choose **Delete** from the manage static IP menu\.  
-![\[Delete a static IP from the manage static IP menu on the Lightsail home page\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-delete-static-ip-from-manage-static-ip-menu.png)
+![\[Delete a static IP from the manage static IP menu on the Lightsail home page\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-delete-static-ip-from-manage-static-ip-menu.png)
 
 1. Choose **Yes** when Lightsail asks you to confirm\.
 
@@ -28,13 +28,13 @@ You can get to the manage static IP page by choosing any static IP resource in L
 Deleting a static IP will completely remove the static IP\. Other resources that rely on this static IP may be impacted\.
 
 1. From the manage static IP page, choose the **Delete** tab\.  
-![\[Delete a static IP from the manage static IP page (Delete tab)\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-manage-static-ip.png)
+![\[Delete a static IP from the manage static IP page (Delete tab)\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-manage-static-ip.png)
 
 1. Choose **Delete this static IP**  
-![\[Delete a static IP from the manage static IP page (not attached to an instance)\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-delete-static-ip-from-manage-static-ip-page-not-attached.png)
+![\[Delete a static IP from the manage static IP page (not attached to an instance)\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-delete-static-ip-from-manage-static-ip-page-not-attached.png)
 
    If your static IP is attached to an instance, you'll see a slightly different screen\.  
-![\[Delete a static IP from the manage static IP page (attached to an instance)\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-delete-static-ip-from-manage-static-ip-page-attached.png)
+![\[Delete a static IP from the manage static IP page (attached to an instance)\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-delete-static-ip-from-manage-static-ip-page-attached.png)
 
 1. Choose **Yes** when Lightsail asks you to confirm\.
 
@@ -65,7 +65,7 @@ You'll need the name of your static IP to release it\. You can get that by using
                "attachedTo": "MyInstance",
                "arn": "arn:aws:lightsail:us-east-2:123456789101:StaticIp/5282f35e-c720-4e5a-1234-12345EXAMPLE",
                "isAttached": true,
-               "ipAddress": "12.345.678.90",
+               "ipAddress": "192.0.2.0",
                "createdAt": 1489750629.026,
                "location": {
                    "availabilityZone": "all",
@@ -77,7 +77,7 @@ You'll need the name of your static IP to release it\. You can get that by using
                "resourceType": "StaticIp",
                "arn": "arn:aws:lightsail:us-east-2:123456789101:StaticIp/f5885e14-8984-49e5-1234-12345EXAMPLE",
                "isAttached": false,
-               "ipAddress": "12.345.67.8",
+               "ipAddress": "192.0.2.2",
                "createdAt": 1483653597.815,
                "location": {
                    "availabilityZone": "all",
@@ -92,11 +92,13 @@ You'll need the name of your static IP to release it\. You can get that by using
 
    For example, you can copy the value to the clipboard\.
 
-1. Type the following command, where *Example\-StaticIP* is the name of the static IP you want to release\.
+1. Type the following command\.
 
    ```
-   aws lightsail release-static-ip --static-ip-name "Example-StaticIP"
+   aws lightsail release-static-ip --static-ip-name StaticIpName
    ```
+
+   In the command, replace *StaticIpName* with the name of your static IP\.
 
    If successful, you should see output similar to the following\.
 
@@ -120,7 +122,3 @@ You'll need the name of your static IP to release it\. You can get that by using
        ]
    }
    ```
-
-## Troubleshooting static IP deletion<a name="troubleshooting-static-ip-deletion"></a>
-
-If you run into any issues when deleting a static IP, [contact Customer Support](https://console.aws.amazon.com/support/home#/)\.

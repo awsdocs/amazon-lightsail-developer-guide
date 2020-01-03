@@ -26,10 +26,16 @@ The total number of domains and subdomains must not exceed 10, so you can add up
 
 1. Enter your primary domain \(e\.g\., `www.example.com`\)\.
 
-1. Give your certificate a name or accept the default \(the same name as your primary domain\)\.
+1. Enter a name for your certificate or accept the default\.
+
+   Resource names:
+   + Must be unique within each AWS Region in your Lightsail account\.
+   + Must contain 2 to 255 characters\.
+   + Must start and end with an alphanumeric character or number\.
+   + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.
 
 1. Enter your domains and subdomains in the list\. Choose the plus icon to add a new line\.  
-![\[Create domains and subdomains for your SSL/TLS certificate\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/animated-gif-create-domain-and-subdomains-ssl-tls-certificate.gif)
+![\[Create domains and subdomains for your SSL/TLS certificate\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/animated-gif-create-domain-and-subdomains-ssl-tls-certificate.gif)
 
 1. Choose **Create**\.
 

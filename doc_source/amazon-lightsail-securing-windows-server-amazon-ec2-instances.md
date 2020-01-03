@@ -7,7 +7,7 @@ To improve the security of a Windows Server instance in Amazon Elastic Compute C
 **Note**  
 If you created Linux or Unix instances in Amazon EC2 from a Lightsail snapshot, then you should perform a few steps to secure those instances\. For more information, see [Securing a Linux or Unix instance in Amazon EC2 created from an Amazon Lightsail snapshot](amazon-lightsail-securing-linux-unix-amazon-ec2-instances.md)\.
 
-These steps are covered in the following sections of this guide:
+**Contents**
 + [Connect to your Windows Server instance in Amazon EC2](#connect-to-your-windows-server-instance-in-ec2)
 + [Change the default administrator password of your Windows Server instance in Amazon EC2](#change-the-password-of-your-windows-server-instance-in-ec2)
 
@@ -23,20 +23,22 @@ Change the default password on your Windows Server instance to remove the associ
 
 **To change the default administrator password of your Windows Server instance in Amazon EC2**
 
-1. After you establish an RDP connection to your instance, open a Command Prompt and enter the following command\. Replace *password* with your new password\.
+1. After you establish an RDP connection to your instance, open a Command Prompt and enter the following command\.
 
    ```
-   net user Administrator "password"
+   net user Administrator "Password"
    ```
 
-   Example:
+   In the command, replace *Password* with your new password\.
+
+   **Example:**
 
    ```
    net user Administrator "%4=Bwk^GEAg8$u@5"
    ```
 
    You should see a result similar to the following:  
-![\[Password reset on Windows Server in Amazon EC2.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-ec2-window-server-password-reset.png)
+![\[Password reset on Windows Server in Amazon EC2.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-ec2-window-server-password-reset.png)
 
 1. Store the new password in a safe place\. You cannot retrieve the new password using the Amazon EC2 console\. The console can retrieve only the default password\. If you attempt to connect to the instance using the default password after changing it, an error message appears stating that your credentials did not work\.
 

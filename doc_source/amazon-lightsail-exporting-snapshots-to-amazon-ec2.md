@@ -11,6 +11,12 @@ This guide describes how to export a Lightsail snapshot, track the status of you
 **Important**  
 We recommend getting familiar with the Lightsail export process before completing the steps in this guide\. For more information, see [Exporting Amazon Lightsail snapshots](amazon-lightsail-exporting-snapshots.md)\.
 
+**Contents**
++ [Service\-linked role and required IAM permissions to export Lightsail snapshots](#service-linked-role-details)
++ [Prerequisites](#exporting-snapshots-to-amazon-ec2-prerequisites)
++ [Export a Lightsail snapshot to Amazon EC2](#exporting-a-lightsail-snapshot)
++ [Track the status of your export](#track-the-status-of-your-export)
+
 ## Service\-linked role and required IAM permissions to export Lightsail snapshots<a name="service-linked-role-details"></a>
 
 Lightsail uses an AWS Identity and Access Management \(IAM\) service\-linked role \(SLR\) to export snapshots to Amazon EC2\. For more information about SLRs, see [Using service\-linked roles for Amazon Lightsail](amazon-lightsail-using-service-linked-roles.md)\.
@@ -61,7 +67,7 @@ Snapshots are exported to the same AWS Region from Lightsail to Amazon EC2\. To 
 1. Locate the instance or block storage disk that you want to export, and expand the node to view the available snapshots for that resource\. 
 
 1. Choose the **Action** menu for the desired snapshot, then choose **Export to Amazon EC2**\.  
-![\[Export snapshot in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-action-menu-export-snapshot.png)
+![\[Export snapshot in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-action-menu-export-snapshot.png)
 
 1. Review the important details displayed on the prompt\.
 
@@ -75,7 +81,7 @@ Use the task monitor in the Lightsail console to track the status of your export
 
 The following information is displayed in the task monitor for snapshot exports:
 
-![\[The task monitor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cfefe1b500656f5beb2491eaf820d8f4/images/amazon-lightsail-task-monitor-export-snapshot.png)
+![\[The task monitor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-task-monitor-export-snapshot.png)
 + **Snapshot name** — The name of the source Lightsail snapshot\.
 + **Export started** — The date and time the snapshot export was started\.
 + **Snapshot created** — The date and time the source Lightsail snapshot was created\.
