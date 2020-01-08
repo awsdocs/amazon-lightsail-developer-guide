@@ -36,11 +36,11 @@ CentOS is a Linux distribution that provides a free, enterprise\-class, communit
 Debian is a computer operating system composed of software packages released as free and open source software primarily under the GNU General Public License along with other free software licenses\. Debian GNU/Linux, which includes the GNU OS tools and Linux kernel, is a popular and influential Linux distribution\. It is distributed with access to repositories containing thousands of software packages ready for installation and use\.  
 [Learn more about Debian](https://www.debian.org/doc/)\.
 
-** **FreeBSD 11** **  
+** **FreeBSD 12** **  
 FreeBSD is an operating system used to power servers, desktops, and embedded systems\. Derived from BSD, the version of UNIX developed at the University of California, Berkeley, FreeBSD has been continually developed by a large community for more than 30 years\. FreeBSD's networking, security, storage, and monitoring features, including the pf firewall, the Capsicum and CloudABI capability frameworks, the ZFS filesystem, and the DTrace dynamic tracing framework, make FreeBSD the platform of choice for many of the busiest web sites and most pervasive embedded networking and storage systems\.  
-[Learn more about FreeBSD 11](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/)\.
+[Learn more about FreeBSD 12](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/)\.
 
-** **openSUSE 42\.2 Leap** **  
+** **openSUSE 15\.1 Leap** **  
 openSUSE Leap\. The openSUSE distribution is a stable, easy to use and complete multi\-purpose Linux distribution\. It is aimed towards users and developers working on the desktop or server\. It is great for beginners, experienced users and ultra geeks alike, in short, it is perfect for everybody\!  
 [Learn more about openSUSE](https://www.opensuse.org/)\.
 
