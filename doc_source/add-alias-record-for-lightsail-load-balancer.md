@@ -33,9 +33,7 @@ After you [verify that you control the domain where you want to have encrypted \
 
 1. Choose **Create Record Set**\.
 
-1. For **Name**, type `www`\.
-**Note**  
-If you're using an apex domain, you need to point your apex to a subdomain \(like `www`\) and then use a CNAME there to point to the load balancer\.
+1. For **Name**, type `www` in front of `example.com` or don't use a prefix if using an apex domain\.
 
 1. Accept the default record \(**A \- IPv4 address**\)\.
 
