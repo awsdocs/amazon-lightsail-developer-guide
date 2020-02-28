@@ -10,7 +10,7 @@ Creating a Lightsail WordPress instance only takes a few minutes\. Follow this t
 
 Here's a quick overview of the process:
 
-![\[Overview of the process to convert your existing WordPress blog to Amazon Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/steps-for-migrating-your-existing-wordpress-blog-to-amazon-lightsail.png)
+![\[Overview of the process to convert your existing WordPress blog to Amazon Lightsail\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/steps-for-migrating-your-existing-wordpress-blog-to-amazon-lightsail.png)
 
 Let's get started\!
 
@@ -33,7 +33,7 @@ You can use WordPress to back up your existing blog\. You'll just need to be abl
 1. On the WordPress **Dashboard**, choose **Tools**, and then choose **Export**\.
 
 1. On the **Export** page, choose **All content** to export everything as an XML file\.  
-![\[Export your WordPress blog using the export tools\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-wordpress-blog-export-file.png)
+![\[Export your WordPress blog using the export tools\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-wordpress-blog-export-file.png)
 
 1. Choose **Download export file** to download your old blog as an XML file\.
 
@@ -52,7 +52,7 @@ You can create a new WordPress instance in Lightsail in just a few minutes\. Her
    You can choose the default Availability Zone or change that once you select an AWS Region\.
 
 1. WordPress is the default application on this page\. Double\-check that **WordPress** is selected\.  
-![\[Pick WordPress as your Lightsail instance image\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-pick-your-instance-image.png)
+![\[Pick WordPress as your Lightsail instance image\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-pick-your-instance-image.png)
 
 1. Choose your instance plan \(or *bundle*\)\.
 
@@ -68,11 +68,11 @@ You can create a new WordPress instance in Lightsail in just a few minutes\. Her
 
 1. Choose one of the following options to add tags to your instance:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
@@ -85,12 +85,12 @@ Now that you have a new blog in Lightsail, you'll need to access the WordPress D
 1. Go to the Lightsail home page and find your WordPress blog\.
 
 1. Copy the **Public IP** address to the clipboard\. You'll find this address listed on the Lightsail home page or on the instance details page\.  
-![\[Find your Lightsail WordPress blog public IP address on the home page\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-find-your-ip-address-updated.png)
+![\[Find your Lightsail WordPress blog public IP address on the home page\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-find-your-ip-address-updated.png)
 
 1. Paste the IP address into your browser\.
 
    You should see something like this:  
-![\[WordPress blog made using Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/wordpress-blog-lightsail-bitnami-new.png)
+![\[WordPress blog made using Lightsail\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/wordpress-blog-lightsail-bitnami-new.png)
 
 1. Choose **Manage** in the lower right corner\.
 
@@ -101,7 +101,7 @@ Now that you have a new blog in Lightsail, you'll need to access the WordPress D
 1. To get the login password, you'll need to connect to your instance\.
 
    The simplest way to connect is to use the terminal icon next to your Lightsail instance\.  
-![\[Choose the terminal icon to connect to your Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-terminal-icon-wordpress-instance-updated.png)
+![\[Choose the terminal icon to connect to your Lightsail instance\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-terminal-icon-wordpress-instance-updated.png)
 
 1. Type the following:
 
@@ -112,19 +112,19 @@ Now that you have a new blog in Lightsail, you'll need to access the WordPress D
 If you're in a directory other than the user home directory, then type `cat $HOME/bitnami_application_password`\.
 
    You should see something like this:  
-![\[Getting the WordPress password from the browser-based SSH terminal\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-bitnami-wordpress-password.png)
+![\[Getting the WordPress password from the browser-based SSH terminal\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-bitnami-wordpress-password.png)
 
 1. Highlight your password in the terminal screen, then choose the clipboard icon\.
 
 1. Highlight the text you want to copy in the clipboard text box, then press Ctrl\+C or Cmd\+C to copy the text to your local clipboard\.  
-![\[Copying text using the browser-based clipboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/lightsail-terminal-ssh-rdp-clipboard.png)
+![\[Copying text using the browser-based clipboard\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/lightsail-terminal-ssh-rdp-clipboard.png)
 **Important**  
 You should save your password somewhere at this time\. You can always change it later to something that's easier to remember\.
 
 1. Paste your password into the WordPress login page, and then choose **Log In**\.
 
    If successful, you'll see the WordPress Dashboard\.  
-![\[Successful login to the WordPress Dashboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-wordpress-dashboard.png)
+![\[Successful login to the WordPress Dashboard\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-wordpress-dashboard.png)
 
 ## Step 4: Import your XML file into your new Lightsail blog<a name="migrate-wordpress-blog-in-wordpress"></a>
 
@@ -133,7 +133,7 @@ Once you have successfully logged into the WordPress Dashboard on your new Light
 1. From the WordPress **Dashboard** on your new Lightsail instance, choose **Tools**\.
 
 1. Choose **Import**, and then choose **Install Now** to install the WordPress import tool\.  
-![\[Install the Import tool in the WordPress Dashboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-wordpress-dashboard-install-import-tool.png)
+![\[Install the Import tool in the WordPress Dashboard\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-wordpress-dashboard-install-import-tool.png)
 
 1. Once the tool is done installing, choose **Run Importer** to run the import tool\.
 

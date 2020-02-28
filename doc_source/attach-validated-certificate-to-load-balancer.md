@@ -4,7 +4,7 @@
 
 After you verify that you control your domain, you'll receive the following notification on the Lightsail load balancer management page\.
 
-![\[Successful validation of domain\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/example-com-verified-and-ready-to-use.png)
+![\[Successful validation of domain\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/example-com-verified-and-ready-to-use.png)
 
 Your next step is to attach the certificate to your Lightsail load balancer\.
 
@@ -15,4 +15,4 @@ Your next step is to attach the certificate to your Lightsail load balancer\.
 1. Select your certificate from the dropdown list where it says **Select an SSL/TLS certificate to enable HTTPS**\.
 
    Your certificate attaches and the yellow warning icon on the tab is gone\.  
-![\[HTTPS enabled with certificate attached\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/https-enabled-with-validated-certificate.png)
+![\[HTTPS enabled with certificate attached\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/https-enabled-with-validated-certificate.png)

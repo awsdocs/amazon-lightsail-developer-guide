@@ -19,9 +19,9 @@ You need the default application password to sign in to your WordPress websiteâ€
 If you're in a directory other than the user home directory, then enter `cat $HOME/bitnami_application_password`\.
 
    You should see a response similar to this, which contains the default application password:  
-![\[Bitnami default application password.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-bitnami-application-password.png)
+![\[Bitnami default application password.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-bitnami-application-password.png)
 
-For more information, see [Getting the application user name and password for your 'Powered by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
+For more information, see [Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
 
 ## Step 2: Sign in to your WordPress website<a name="amazon-lightsail-wordpress-sign-in"></a>
 
@@ -36,9 +36,9 @@ Now that you have the default user password, navigate to your WordPress websiteâ
 1. Sign in using the default user name \(user\) and the default password retrieved earlier in this guide\.
 
    The WordPress administration dashboard appears\.  
-![\[The WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-wordpress-dashboard.png)
+![\[The WordPress administration dashboard.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-wordpress-dashboard.png)
 
-For more information, see [Getting the application user name and password for your 'Powered by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)
+For more information, see [Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)
 
 To change the default user password, see [Resetting your password in the WordPress documentation](https://codex.wordpress.org/Resetting_Your_Password)\.
 

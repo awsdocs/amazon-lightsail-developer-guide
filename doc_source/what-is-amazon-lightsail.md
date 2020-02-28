@@ -1,6 +1,6 @@
 # What is Amazon Lightsail?<a name="what-is-amazon-lightsail"></a>
 
- *Last updated: November 26, 2019* 
+ *Last updated: January 13, 2020* 
 
 Amazon Lightsail is the easiest way to get started with AWS if you just need virtual private servers\. Lightsail includes everything you need to launch your project quickly – a virtual machine, SSD\-based storage, data transfer, DNS management, and a static IP – for a low, predictable price\. After you create your instance, you can easily connect to it\. You can manage your instances using the Lightsail console, Lightsail API, or Lightsail command line interface \(CLI\)\.
 
@@ -33,26 +33,28 @@ You can also create a Lightsail load balancer and attach target instances to cre
 ## CMS applications in Lightsail<a name="what-apps-are-available-in-lightsail"></a>
 
 **Linux**
-+ WordPress powered by Bitnami
-+ WordPress Multisite powered by Bitnami
-+ Drupal powered by Bitnami
-+ Joomla powered by Bitnami
++ WordPress certified by Bitnami
++ WordPress Multisite certified by Bitnami
++ Drupal certified by Bitnami
++ Ghost certified by Bitnami
++ Joomla certified by Bitnami
++ Plesk Hosting Stack on Ubuntu
 
 ## E\-commerce and project management applications in Lightsail<a name="ecommerce-and-project-management-apps-in-lightsail"></a>
 
 **Linux**
-+ Magento powered by Bitnami \(eCommerce\)
++ Magento certified by Bitnami \(eCommerce\)
 + Redmine \(Project Management\)
 
 ## Development stacks in Lightsail<a name="what-developer-stacks-are-available-in-lightsail"></a>
 
 **Linux**
-+ LAMP stack \(PHP 7\) powered by Bitnami
-+ Node\.js powered by Bitnami
-+ MEAN Stack powered by Bitnami \(HVM\)
++ LAMP stack \(PHP 7\) certified by Bitnami
++ Node\.js certified by Bitnami
++ MEAN Stack certified by Bitnami \(HVM\)
 + LEMP Stack \(Nginx\) by Bitnami
-+ GitLab powered by Bitnami \(HVM\)
-+ Plesk Hosting Stack on Ubuntu
++ Django certified by Bitnami
++ GitLab certified by Bitnami \(HVM\)
 
 **Windows**
 + SQL Server 2016 Express

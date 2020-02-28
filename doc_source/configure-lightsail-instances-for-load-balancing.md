@@ -25,7 +25,7 @@ See [WordPress on AWS](https://cloudonaut.io/wordpress-on-aws-you-are-holding-it
 **Horizontally scale?** Yes, with some considerations\.
 
  **Configuration recommendations before using a Lightsail load balancer** 
-+ In Lightsail, the Node\.js stack powered by Bitnami contains Node\.js, Apache, Redis \(an in\-memory database\), and Python\. Depending on the application you're deploying, you can load balance across a few servers\. However, you would need to configure a load balancer to balance the traffic among all the web servers and move Redis to another server\.
++ In Lightsail, the Node\.js stack certified by Bitnami contains Node\.js, Apache, Redis \(an in\-memory database\), and Python\. Depending on the application you're deploying, you can load balance across a few servers\. However, you would need to configure a load balancer to balance the traffic among all the web servers and move Redis to another server\.
 + Split the Redis server to another server to communicate with all the instances\. Add a database server, if necessary\.
 + One of the primary use cases for Redis is to cache data locally so you don't have to constantly hit the central database\. We recommend that you [enable session persistence](enable-session-stickiness-persistence-or-change-cookie-duration.md) to leverage the performance improvement from Redis\.
 + You can also have a shared Redis node, so you can also share a node or use a local cache on each machine using session persistence\.

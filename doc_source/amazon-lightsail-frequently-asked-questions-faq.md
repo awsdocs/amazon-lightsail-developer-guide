@@ -1,8 +1,23 @@
 # Frequently Asked Questions in Amazon Lightsail<a name="amazon-lightsail-frequently-asked-questions-faq"></a>
 
- *Last updated: October 2, 2019* 
+ *Last updated: February 27, 2020* 
 
 This topic answers frequently asked questions \(FAQ\)\. If you have a FAQ that is not answered here, use the **Questions? Comments?** feedback button at the bottom of the page\. You can also post a question in the [Lightsail discussion forum](https://forums.aws.amazon.com/forum.jspa?forumID=231)\.
+
+**Contents**
++ [General](#amazon-lightsail-frequently-asked-questions-faq-general)
++ [Instances](#amazon-lightsail-faq-instances)
++ [Databases](#amazon-lightsail-faq-databases)
++ [Block storage](#amazon-lightsail-faq-block-storage)
++ [Load balancers](#amazon-lightsail-faq-load-balancers)
++ [Certificates](#amazon-lightsail-faq-certificates)
++ [Manual and automatic snapshots](#amazon-lightsail-faq-snapshots)
++ [Networking](#amazon-lightsail-faq-networking)
++ [Billing and account management](#amazon-lightsail-frequently-asked-questions-faq-billing-and-account-management)
++ [Export to Amazon Elastic Compute Cloud \(Amazon EC2\)](#amazon-lightsail-faq-export-to-ec2)
++ [Tags in Lightsail](#amazon-lightsail-faq-tagging)
++ [Contacts and notifications](#faq-contacts-and-notifications)
++ [Metrics and alarms](#faq-metrics-and-alarms)
 
 ## General<a name="amazon-lightsail-frequently-asked-questions-faq-general"></a>
 
@@ -56,11 +71,11 @@ A Lightsail instance is a virtual private server \(VPS\) that lives in the AWS C
 Also referred to as a bundle, a Lightsail plan includes a virtual server with a fixed amount of memory \(RAM\) and compute \(vCPUs\), SSD\-based storage \(disks\), and a free data transfer allowance\. Lightsail plans also offer static IP addresses \(5 per account\) and DNS management \(3 domain zones per account\)\. Lightsail plans are charged on an hourly, on\-demand basis, so you only pay for a plan when you're using it\.
 
 **What software can I run on my instances?**  
-Lightsail offers a range of operating system and application templates that are automatically installed when you create a new Lightsail instance\. Application templates include WordPress, WordPress Multisite, Drupal, Joomla\!, Magento, Redmine, LAMP, Nginx \(LEMP\), MEAN, Node\.js, and more\.  
+Lightsail offers a range of operating system and application templates that are automatically installed when you create a new Lightsail instance\. Application templates include WordPress, WordPress Multisite, Django, Drupal, Ghost, Joomla\!, Magento, Redmine, LAMP, Nginx \(LEMP\), MEAN, and Node\.js\.  
 You can install additional software on your instances by using the in\-browser SSH or your own SSH client\.
 
 **What operating systems can I use with Amazon Lightsail?**  
-Lightsail currently supports 6 Linux or Unix\-like distributions: Amazon Linux, CentOS, Debian, FreeBSD, OpenSUSE, and Ubuntu, as well as 2 Windows Server versions: 2012 R2 and 2016\.
+Lightsail currently supports 6 Linux or Unix\-like distributions: Amazon Linux, CentOS, Debian, FreeBSD, OpenSUSE, and Ubuntu, as well as two Windows Server versions: 2012 R2 and 2016\.
 
 **How do I create a Lightsail instance?**  
 After logging in to Lightsail, you can use the Lightsail [console](https://lightsail.aws.amazon.com/ls/webapp), command line interface \(CLI\), or API to create and manage instances\.  
@@ -69,6 +84,10 @@ The first time you log in to the console, choose Create Instance\. The create in
 **How do Lightsail instances perform?**  
 Lightsail instances are specifically engineered by AWS for web servers, developer environments, and small database use cases\. Such workloads don't use the full CPU often or consistently, but occasionally need a performance burst\. Lightsail uses burstable performance instances that provide a baseline level of CPU performance with the additional ability to burst above the baseline\. This design enables you to get the performance you need, when you need it, while protecting you from the variable performance or other common side effects that you might typically experience from over\-subscription in other environments\.  
 If you need highly configurable environments and instances with consistently high CPU performance for applications such as video encoding or HPC applications, we recommend you use [Amazon EC2](https://aws.amazon.com/ec2/)\.
+
+**How do I know when my instances are bursting?**  
+On the CPU utilization metric graphs for your instance, you will see a sustainable zone, and a burstable zone\. Your Lightsail instance can operate in the sustainable zone indefinitely with no impact to the operation of your system\. Your instance may begin operating in the burstable zone when under heavy load\. While operating in the burstable zone your instance is consuming a higher amount of CPU cycles\. Therefore, it can only operate in this zone for a limited period of time\. For more information, see [Viewing instance metrics in Amazon Lightsail](amazon-lightsail-viewing-instance-health-metrics.md)\.  
+Add a metric alarm to be notified when your instance’s CPU utilization crosses from the sustainable zone to the bursting zone\. For more information, see [Creating instance alarms in Amazon Lightsail](amazon-lightsail-adding-instance-health-metric-alarms.md)\. 
 
 **How do I connect to a Lightsail instance?**  
 Lightsail offers a 1\-click secure connection to your instance's terminal right from your browser, supporting SSH access for Linux/Unix\-based instances and RDP access for Windows\-based instances\. To use 1\-click connections, launch your instance management screens, choose **Connect using SSH** or **Connect using RDP**, and a new browser window opens and automatically connects to your instance\.  
@@ -226,7 +245,7 @@ You can add up to 10 domains or subdomains per certificate\. Lightsail does not 
 To change the domains \(add/delete\) associated with your certificate, you will need to resubmit the certificate and revalidate your ownership of the domain\(s\)\. Follow the steps in the certificate management screens to regenerate your certificate and add or remove domains when prompted\.
 
 **How do I renew my certificate?**  
-Lightsail provides managed renewal for your SSL/TLS certificates\. This means that Lightsail tries to renew the certificates automatically before they expire with no action required from you\. Your Lightsail certificate must be actively associated load balancer before it can be automatically renewed\.
+Lightsail provides managed renewal for your SSL/TLS certificates\. This means that Lightsail tries to renew the certificates automatically before they expire with no action required from you\. Your Lightsail certificate must be actively associated with a load balancer before it can be automatically renewed\.
 
 **What happens to my certificate when I delete my load balancer?**  
 If your load balancer is deleted, your certificate is deleted as well\. If you need to use a certificate for the same domain\(s\) in the future, you will need to request and validate a new certificate\.
@@ -397,7 +416,7 @@ Lightsail offers you an easy way to run and scale a wide set of cloud\-based app
 Exporting to Amazon EC2 allows you to run your application on a wider set of instance types, ranging from virtual machines with more CPU power, memory, and networking capabilities, to specialized or accelerated instances with FPGAs and GPUs\. In addition, Amazon EC2 performs less automatic management and set\-up, allowing you more control over how you configure your cloud environment, such as your VPC\. 
 
 **How does exporting to Amazon EC2 work?**  
-To get started, you need to export your manual snapshot of a Lightsail instance or block storage disk\. Customers who are comfortable with Amazon EC2 can then use the Amazon EC2 creation wizard or API to create a new Amazon EC2 instances or Amazon EBS volumes, as they would from an existing EC2 AMI or EBS volume\. Alternatively, Lightsail also provides a guided Lightsail console experience to help you easily create a new EC2 instance\.
+To get started, you need to export your manual snapshot of a Lightsail instance or block storage disk\. Snapshots of Ghost and Django instances cannot be exported to Amazon EC2 at this time\. Customers who are comfortable with Amazon EC2 can then use the Amazon EC2 creation wizard or API to create a new Amazon EC2 instances or Amazon EBS volumes, as they would from an existing EC2 AMI or EBS volume\. Alternatively, Lightsail also provides a guided Lightsail console experience to help you easily create a new EC2 instance\.
 
 **How am I billed?**  
 Using the export to Amazon EC2 feature is free\. Once you have exported your manual snapshots to Amazon EC2, you will be charged for the Amazon EC2 image separately and in addition to your Lightsail manual snapshot\. Any new Amazon EC2 instances you launch will also be billed by Amazon EC2, including their Amazon EBS storage volume\(s\) and data transfer\. Refer to the [Amazon EC2 pricing page](https://aws.amazon.com/ec2/pricing/) for details on the pricing for your new instance and resources\. Lightsail resources that continue to run in your Lightsail account will continue to be billed at their regular rates until they are deleted\.
@@ -406,7 +425,7 @@ Using the export to Amazon EC2 feature is free\. Once you have exported your man
 The export feature allows you to export manual Lightsail disk snapshots but doesn't currently support manual snapshots of managed databases\. Disk snapshots can be rehydrated as Amazon EBS volumes from the Amazon EC2 console or API\.
 
 **What Lightsail resources can I export?**  
-The Lightsail export to Amazon EC2 feature is designed to support the export of Linux and Windows instances and their attached block storage \(if applicable\) to Amazon EC2\. It also supports the export of unattached block storage disks to Amazon EBS\. It does not currently support the export of load balancers, databases, static IPs or DNS records\. 
+The Lightsail export to Amazon EC2 feature is designed to support the export of Linux and Windows instances and their attached block storage \(if applicable\) to Amazon EC2\. It also supports the export of unattached block storage disks to Amazon EBS\. It does not currently support the export of load balancers, databases, static IPs or DNS records\. Additionally, snapshots of Ghost and Django instances cannot be exported to Amazon EC2 at this time\.
 
 ## Tags in Lightsail<a name="amazon-lightsail-faq-tagging"></a>
 
@@ -437,3 +456,23 @@ Tags for manual snapshots of databases are not currently included in billing rep
 
 **What is the difference between key\-value and key\-only tags?**  
 Lightsail tags are key\-value pairs, allowing you to organize resources such as instances across different categories \(e\.g\. project:Blog, project:Game, project:Test\)\. This allows you full control across all use cases such as resource organization, bill reporting, and access management\. The Lightsail console also allows you to tag your resources with key\-only tags for quick filtering in the console\.
+
+## Contacts and notifications<a name="faq-contacts-and-notifications"></a>
+
+**What are notifications?**  
+You can configure alarms in Lightsail to notify you when a metric for one of your instances, databases, or load balancers crosses a specified threshold\. Notifications can be in the form of a banner displayed in the Lightsail console, an email sent to an address you specify, or an SMS text message sent to a mobile phone number you specify\. To be notified by email and SMS text message, you must add your email address and mobile phone number as notification contacts in each AWS Region where you want to monitor your resources\. For more information about notifications, see [Notifications in Amazon Lightsail](amazon-lightsail-notifications.md)\.
+
+**How many contacts can I add?**  
+You can add one email address and one mobile phone number in each AWS Region where you want to monitor your resources\. SMS text messaging is not supported in all AWS Regions in which you can create Lightsail resources, and text messages cannot be sent to some countries and regions of the world\. For more information about notifications, see [Notifications in Amazon Lightsail](amazon-lightsail-notifications.md)\.
+
+## Metrics and alarms<a name="faq-metrics-and-alarms"></a>
+
+**What are metrics?**  
+Lightsail reports metric data for instances, databases, and load balancers\. Some metrics include your instance’s CPU utilization percentage, the amount of inbound and outbound network traffic, system and instance error counts, database disk queue depth, database free storage space, load balancer error counts, load balancer response times, and more\. Metrics allow you to monitor and maintain the reliability, availability, and performance of your resources\. Monitor and collect metric data from your resources regularly so that you can more readily debug a multi\-point failure, if one occurs\. For more information, see [Resource metrics in Amazon Lightsail](amazon-lightsail-resource-health-metrics.md)\.
+
+**What are alarms?**  
+You can create an alarm in Lightsail that watches a metric for your instances, databases, and load balancers\. The alarm can be configured to notify you based on the value of the metric relative to a threshold that you specify\. For more information, see [Alarms in Amazon Lightsail](amazon-lightsail-alarms.md)\.  
+Notifications can be a banner displayed in the Lightsail console, an email sent to your email address, and an SMS text message sent to your mobile phone number\. For more information about notifications, see [Notifications in Amazon Lightsail](amazon-lightsail-notifications.md)\.
+
+**How many alarms can I add?**  
+You can configure two alarms for each metric that is available for instances, databases, and load balancers\. For more information, see [Alarms in Amazon Lightsail](amazon-lightsail-alarms.md)\.

@@ -1,13 +1,13 @@
 # Understanding public network ports and firewall settings in Amazon Lightsail<a name="understanding-firewall-and-port-mappings-in-amazon-lightsail"></a>
 
- *Last updated: January 2, 2020* 
+ *Last updated: January 13, 2020* 
 
 **Note**  
 When you create a Lightsail instance, some network ports are open by default\. When a port is open, your instance can accept public network connections\. You can change the network port settings for your Lightsail instance on the **Networking** tab of your instance management page\.
 
 The firewall and port settings are listed in the **Networking** tab of your instance's management page in the Amazon Lightsail console\. Choose **Edit rules** or **Add another** to change or create rules\.
 
-![\[Networking tab on the manage instance page\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-manage-instance-page-networking-tab.png)
+![\[Networking tab on the manage instance page\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-manage-instance-page-networking-tab.png)
 
 ## Application layer protocol types<a name="understanding-firewall-and-port-mappings-in-amazon-lightsail-application-types"></a>
 
@@ -67,12 +67,12 @@ Each Lightsail image \(or *blueprint*\) has a default set of network ports that 
 SSH \- TCP \- 22  
 HTTP \- TCP \- 80
 
-**WordPress, Joomla\!, and Drupal \(CMS applications\)**  
+**WordPress, Ghost, Joomla\!, and Drupal \(CMS applications\)**  
 SSH \- TCP \- 22  
 HTTP \- TCP \- 80  
 HTTPS \- TCP \- 443
 
-**LAMP, Node\.js, MEAN, GitLab, and LEMP/Nginx \(development stacks\)**  
+**LAMP, Django, Node\.js, MEAN, GitLab, and LEMP/Nginx \(development stacks\)**  
 SSH \- TCP \- 22  
 HTTP \- TCP \- 80  
 HTTPS \- TCP \- 443

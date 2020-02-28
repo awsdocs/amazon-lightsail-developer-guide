@@ -13,13 +13,13 @@ To view a detailed breakdown of your monthly Lightsail bill:
    The billing dashboard home page displays a high\-level month\-to\-date breakdown of your bill\.
 
 1. Choose **Bill Details** on the dashboard home page, or choose **Bills** in the left navigation pane, to view a detailed version of your monthly bill\.  
-![\[AWS Billing and Cost Management Dashboard home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-billing-dashboard-home-page.png)
+![\[AWS Billing and Cost Management Dashboard home page.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-billing-dashboard-home-page.png)
 
 1. Choose the **Date** drop\-down menu to select a month other than the current month\.  
-![\[Date selector in the AWS Billing and Cost Management Dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-billing-dashboard-date-drop-down.png)
+![\[Date selector in the AWS Billing and Cost Management Dashboard.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-billing-dashboard-date-drop-down.png)
 
 1. Scroll down on the **Bills** page, and expand the Lightsail line item to view detailed usage for each region\.  
-![\[Detailed monthly bill for Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-detailed-monthly-bill.png)
+![\[Detailed monthly bill for Lightsail.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-detailed-monthly-bill.png)
 
 ## Billing usage types<a name="billing-usage-types"></a>
 

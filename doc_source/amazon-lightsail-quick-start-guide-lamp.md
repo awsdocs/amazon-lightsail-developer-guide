@@ -19,9 +19,9 @@ You need the default application password to access pre\-installed applications 
 If you're in a directory other than the user home directory, then enter `cat $HOME/bitnami_application_password`\.
 
    You should see a response similar to this, which contains the default application password:  
-![\[Bitnami default application password.\]](https://d9yljz1nd5001.cloudfront.net/en_us/aa4810f664dabff907209ee92babaa14/images/amazon-lightsail-bitnami-application-password.png)
+![\[Bitnami default application password.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-bitnami-application-password.png)
 
-For more information, see [Getting the application user name and password for your 'Powered by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
+For more information, see [Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
 
 ## Step 2: Attach a static IP address to your LAMP instance<a name="amazon-lightsail-lamp-attach-static-ip"></a>
 
@@ -39,7 +39,7 @@ Navigate to the public IP address of your instance to access the application ins
 
 1. Browse to the public IP address, for example by going to `http://192.0.2.3`\.
 
-For more information, see [Getting the application user name and password for your 'Powered by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
+For more information, see [Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
 
 ## Step 4: Map your domain name to your LAMP instance<a name="amazon-lightsail-lamp-map-your-domain-to-your-instance"></a>
 

@@ -55,6 +55,9 @@ Instance and block storage disk snapshots can be copied from one Amazon Web Serv
 
 Lightsail is the easiest way to get started with AWS\. However, there are limitations with Lightsail that are not present in Amazon EC2 or other AWS services\. Export your Lightsail instance and block storage disk snapshots to Amazon EC2 to take advantage of the wider range of instance types available, and use the full range of services in AWS\. For more information, see [Exporting Amazon Lightsail snapshots](amazon-lightsail-exporting-snapshots.md)\.
 
+**Note**  
+Snapshots of Ghost and Django instances cannot be exported to Amazon EC2 at this time\.
+
 ## Deleting snapshots<a name="deleting-snapshots"></a>
 
 Delete Lightsail snapshots when you no longer need them to avoid incurring a monthly [snapshot storage fee](https://aws.amazon.com/lightsail/pricing/)\. For more information, see [Deleting snapshots in Amazon Lightsail](amazon-lightsail-deleting-snapshots.md)\.
