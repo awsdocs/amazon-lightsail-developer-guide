@@ -1,7 +1,7 @@
 # Lightsail load balancer health checking<a name="understanding-lightsail-load-balancer-health-checking"></a>
 
 **Note**  
-By default, Lightsail performs health checks on your instances at the root \(`"/"`\) of your web application\. The health checks are used to monitor the health of the target instances so that the load balancer can send requests only to the healthy instances\. You'll receive a **Passed** or **Failed** message on each instance attached to the load balancer\.
+By default, Lightsail performs health checks on your instances by fetching the root path \(`"/"`\) of your web application\. The health checks are used to monitor the health of the target instances so that the load balancer can send requests only to the healthy instances\. You'll receive a **Passed** or **Failed** message on each instance attached to the load balancer\.
 
  *Last updated: October 14, 2019* 
 
