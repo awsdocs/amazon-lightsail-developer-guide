@@ -73,7 +73,7 @@ The following policy grants access to reboot/start/stop an instance, manage inst
 
 To get the ARN for your instance, use the `GetInstance` Lightsail API action, and specify the name of the instance using the `instanceName` parameter\. Your instance ARN will be listed in the results of that action as shown in the following example\. For more information, see [GetInstance](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetInstance.html) in the *Amazon Lightsail API Reference*\.
 
-![\[An instance ARN in the GetInstance results.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-instance-arn.png)
+![\[An instance ARN in the GetInstance results.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-instance-arn.png)
 
 ## Allow management of a specific database<a name="security_iam_resource-based-policy-examples-manage-specific-database"></a>
 
@@ -124,4 +124,4 @@ The following policy grants access to reboot/start/stop and update a specific da
 
 To get the ARN for your database, use the `GetRelationalDatabase` Lightsail API action, and specify the name of the database using the `relationalDatabaseName` parameter\. Your database ARN will be listed in the results of that action as shown in the following example\. For more information, see [GetRelationalDatabase](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabase.html) in the *Amazon Lightsail API Reference*\.
 
-![\[A database ARN in the GetRelationalDatabase results.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-database-arn.png)
+![\[A database ARN in the GetRelationalDatabase results.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-database-arn.png)

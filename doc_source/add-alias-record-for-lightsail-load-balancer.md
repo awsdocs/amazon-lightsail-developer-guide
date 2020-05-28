@@ -1,6 +1,6 @@
 # Point your domain to your Lightsail load balancer<a name="add-alias-record-for-lightsail-load-balancer"></a>
 
- *Last updated: June 12, 2019* 
+ *Last updated: May 28, 2020* 
 
 After you [verify that you control the domain where you want to have encrypted \(HTTPS\) traffic](verify-tls-ssl-certificate-using-dns-cname-https.md), you need to add an address \(A\) record to your domain's DNS hosting provider that points your domain to your Lightsail load balancer\. In this guide, we show you how to add the A record to a Lightsail DNS zone, and a Amazon Route 53 hosted zone\.
 
@@ -19,7 +19,7 @@ After you [verify that you control the domain where you want to have encrypted \
 1. For **Sub\-domain**, type `www` in front of `example.com` or don't use a prefix if using an apex domain\.
 
 1. For destination IP, choose your load balancer from the list of available load balancers\.  
-![\[Choose your load balancer and create an alias (A) record\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/create-alias-a-record-for-lightsail-load-balancer.png)
+![\[Choose your load balancer and create an alias (A) record\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/create-alias-a-record-for-lightsail-load-balancer.png)
 
 1. Choose **Save**\.
 
@@ -33,14 +33,14 @@ After you [verify that you control the domain where you want to have encrypted \
 
 1. Choose **Create Record Set**\.
 
-1. For **Name**, type `www` in front of `example.com` or don't use a prefix if using an apex domain\.
+1. For **Name**, type `www` in front of `example.com`, or don't use a prefix if using an apex domain\.
 
 1. Accept the default record \(**A \- IPv4 address**\)\.
 
 1. For **Alias**, choose **Yes**\.
 
 1. Go to the Lightsail console and copy the **DNS name** from your load balancer management page\.  
-![\[DNS name on the load balancer management page\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/dns-name-on-load-balancer-management-page.png)
+![\[DNS name on the load balancer management page\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/dns-name-on-load-balancer-management-page.png)
 
 1. Go back to the Amazon Route 53 console and paste the DNS name into the **Alias Target** field\.
 
@@ -49,6 +49,6 @@ After you [verify that you control the domain where you want to have encrypted \
    Lightsail already performs health checks on your load balancer\. [Learn more about health checking](enable-set-up-health-checking-for-lightsail-load-balancer-metrics.md)
 
    Your record set should look something like this\.  
-![\[Create a record set in Route 53 to point an alias to your Lightsail load balancer\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/create-record-set-alias-record-route-53.png)
+![\[Create a record set in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/create-record-set-alias-record-route-53.png)
 
 1. Choose **Create**\.

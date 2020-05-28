@@ -49,12 +49,12 @@ Complete the following steps to change the automatic snapshot time for an instan
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the Lightsail home page, choose the **Instances** tab\.  
-![\[The Lightsail home page.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-home-page-instances-storage.png)
+![\[The Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-home-page-instances-storage.png)
 
 1. Choose the name of the instance for which you want to change the automatic snapshot time\.
 
 1. On the instance management page, choose the **Snapshots** tab\.  
-![\[The instance management page in the Lightsail console.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-instance-management-snapshots.png)
+![\[The instance management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-instance-management-snapshots.png)
 
 1. Under the **Automatic snapshots** section, choose **Change snapshot time**\.
 
@@ -90,7 +90,7 @@ Complete the following steps to change the automatic snapshot time for an instan
    ```
 
    You should see a result similar to the following example:  
-![\[Enable auto snapshot operation result.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-update-auto-snapshot-time-operation.png)
+![\[Enable auto snapshot operation result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-update-auto-snapshot-time-operation.png)
 
    The automatic snapshot time is updated after a few moments\. A restriction may apply to the effective date of your new automatic snapshot time\. For more information, see [Automatic snapshot time restrictions](#automatic-snapshot-time-restrictions)\.
 **Note**  

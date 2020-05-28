@@ -27,12 +27,12 @@ Complete the following steps to enable or disable automatic snapshots for an ins
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the Lightsail home page, choose the **Instances** tab\.  
-![\[The Lightsail home page.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-home-page-instances-storage.png)
+![\[The Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-home-page-instances-storage.png)
 
 1. Choose the name of the instance for which you want to enable or disable automatic snapshots\.
 
 1. On the instance management page, choose the **Snapshots** tab\.  
-![\[The instance management page in the Lightsail console.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-instance-management-snapshots.png)
+![\[The instance management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-instance-management-snapshots.png)
 
 1. Under the **Automatic snapshots** section, choose the toggle to enable it\. Likewise, choose the toggle to disable it if it's enabled\.
 
@@ -123,7 +123,7 @@ The `autoSnapshotAddOnRequest={snapshotTimeOfDay=HH:00}` parameter is optional i
      ```
 
    You should see a result similar to the following example:  
-![\[Enable auto snapshot operation result.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-enable-auto-backup-operation.png)
+![\[Enable auto snapshot operation result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-enable-auto-backup-operation.png)
 
    The automatic snapshot is enabled or disabled after a few moments\.
    + If you *enabled* automatic snapshots, you may want to also change the automatic snapshot time\. For more information, see [Changing the automatic snapshot time for instances or block storage disks in Amazon Lightsail](amazon-lightsail-changing-automatic-snapshot-time.md)\.

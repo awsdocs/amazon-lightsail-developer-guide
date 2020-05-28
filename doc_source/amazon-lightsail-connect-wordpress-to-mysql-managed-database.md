@@ -26,7 +26,7 @@ Complete these steps to transfer your WordPress website data for posts, pages, a
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. In the **Instances** tab, choose the browser\-based SSH client icon for your WordPress instance\.  
-![\[The browser-based SSH client icon in the Lightsail console.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-wordpress-quick-connect.png)
+![\[The browser-based SSH client icon in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-wordpress-quick-connect.png)
 
 1. After the browser\-based SSH client is connected to your WordPress instance, enter the following command to transfer the `bitnami_wordpress` database on the instance to your MySQL managed database\. Be sure to replace *DbUserName* with the user name for your managed database, and replace *DbEndpoint* with the endpoint address for your managed database\.
 
@@ -45,12 +45,12 @@ Complete these steps to transfer your WordPress website data for posts, pages, a
    ```
 
 1. At the prompt, enter the password for your MySQL managed database, and press **Enter**\.  
-![\[Password prompt to transfer WordPress database to a MySQL managed database in Lightsail.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-transfer-wordpress-database-to-mysql-managed-database.png)
+![\[Password prompt to transfer WordPress database to a MySQL managed database in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-transfer-wordpress-database-to-mysql-managed-database.png)
 **Note**  
 You will not be able to see the password as it is being typed\. You should copy and paste the password into the SSH client window so that you don’t mistype it\.
 
 1. A result similar to the following displays if the data was successfully transferred\.  
-![\[Successfully transfered WordPress database to a MySQL mananaged database in Lightsail.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-transfer-wordpress-database-to-mysql-managed-database-success.png)
+![\[Successfully transfered WordPress database to a MySQL mananaged database in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-transfer-wordpress-database-to-mysql-managed-database-success.png)
 
    If you get an error, confirm that you’re using the correct database user name, password, or endpoint, and try again\.
 
@@ -71,7 +71,7 @@ Complete these steps to edit the WordPress configuration file so that your websi
    ```
 
 1. Press the down arrow on your keyboard to scroll down until you find the values for **DB\_USER**, **DB\_PASSWORD**, and **DB\_HOST** as shown in the following example\.  
-![\[Wordpress configuration file before modifications.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-wordpress-wpconfig-file-original.png)
+![\[Wordpress configuration file before modifications.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-wordpress-wpconfig-file-original.png)
 
 1. Modify the following values:
    + **DB\_USER** — Edit this to match the master user name for the MySQL managed database\. The default master user name for Lightsail managed databases is dbmasteruser\.
@@ -79,7 +79,7 @@ Complete these steps to edit the WordPress configuration file so that your websi
    + **DB\_HOST** — Edit this to match the endpoint for the MySQL managed database\. Be sure to add the `:3306` port number at the end of the host address\. For example: `ls-c6d76d20d6s6d7a695e26.csodadgdeaqi.us-west-2.rds.amazonaws.com:3306`\.
 
      The result should look like the following:  
-![\[Modifications to the WordPress configuration file.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-wordpress-wpconfig-file-modifications.png)
+![\[Modifications to the WordPress configuration file.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-wordpress-wpconfig-file-modifications.png)
 
 1. Press **Ctrl\+X** to exit Nano, then press **Y** and **Enter** to save your edits to the WordPress configuration file\.
 **Note**  
@@ -96,7 +96,7 @@ If for any reason you need to restore the original `wp-config.php` file, enter t
    ```
 
    A result similar to the following displays when the services have restarted:  
-![\[Restarting server services on the WordPress instances.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-restart-wordpress-services.png)
+![\[Restarting server services on the WordPress instances.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-restart-wordpress-services.png)
 
    Congratulations\! Your WordPress site is now configured to use the MySQL managed database\.
 

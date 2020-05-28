@@ -24,7 +24,7 @@ Get your database endpoint and port information from the Lightsail console\. You
 1. On the **Connect** tab, under the **Endpoint and port** section, note the endpoint and port information\.
 
    We recommend copying the endpoint to your clipboard to avoid entering it incorrectly\. To do that, highlight the endpoint and press **Ctrl\+C** if you’re using Windows, or **Cmd\+C** if you’re using macOS, to copy it to your clipboard\. Then, press **Ctrl\+V** or **Cmd\+V** as appropriate to paste it\.  
-![\[Database endpoint and port in the Lightsail console\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-postgres-database-endpoint-and-port.png)
+![\[Database endpoint and port in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-postgres-database-endpoint-and-port.png)
 
 1. On the **Connect** tab, under the **User name and passwords** section, make note of the user name, then choose **Show** under the **Password** section to view the current database password\.
 
@@ -53,12 +53,12 @@ For more information about using pgAdmin, see the [pgAdmin Documentation](https:
 1. Choose **Create**, then choose **Server**\.
 
 1.   
-![\[pgAdmin server configuration\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-pgadmin-create-server.png)
+![\[pgAdmin server configuration\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-pgadmin-create-server.png)
 
 1. In the **Create \- Server** form, enter a name for the server\. We recommend using a name for the connection that is similar to your database\. This helps you identify it in the future\.
 
 1. Choose the **Connection** tab, then enter the following information into the form that displays:  
-![\[pgAdmin server configuration form\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-pgadmin-create-server-form-connection-tab.png)
+![\[pgAdmin server configuration form\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-pgadmin-create-server-form-connection-tab.png)
    + **Host name/address** — Enter the database endpoint that you obtained earlier\. If you copied the database endpoint from the Lightsail console, and it’s still in your clipboard, press **Ctrl\+V** if you’re using Windows, or **Cmd\+V** if you’re using macOS, to paste it\.
    + **Port** — Enter the port for your database that you obtained earlier\. The default port for PostgreSQL is 5432\.
    + **Maintenance database** — Specify the name of the initial database to which the client will connect\. This is the master database name that you specified when you created your PostgreSQL database in Lightsail\.
@@ -75,7 +75,7 @@ For more information about using pgAdmin, see the [pgAdmin Documentation](https:
 1. To connect to your database, double\-click your new database connection\.
 
    If the connection is successful, you will see a list of available resources for that database\.  
-![\[pgAdmin workspace\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-pgadmin-connected.png)
+![\[pgAdmin workspace\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-pgadmin-connected.png)
 
 ## Next steps<a name="connecting-to-your-postgres-database-next-steps"></a>
 

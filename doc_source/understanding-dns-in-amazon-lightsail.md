@@ -3,14 +3,11 @@
 **Note**  
 The Domain Name System \(DNS\) routes easy\-to\-remember domain names, such as `example.com`, to the internet protocol \(IP\) addresses of web servers\. In Amazon Lightsail, you can point a domain name to your running instance or load balancer\.
 
- *Last updated: September 21, 2018* 
+ *Last updated: May 7, 2020* 
 
-People can access the web application on your Lightsail instance by browsing to the public internet protocol \(IP\) address for your instance\. However, IP addresses are complex and difficult for people to remember\. Therefore, you should have people browse to an easy\-to\-remember domain name, like `example.com`, to access the web application on your Lightsail instance\. This is achieved through the Domain Name System \(DNS\), which functions as a directory that maps registered domain names to IP addresses\.
+People can access the web application on your Lightsail instance by browsing to the public internet protocol \(IP\) address of your instance\. However, IP addresses are complex and difficult for people to remember\. Therefore, you should have people browse to an easy\-to\-remember domain name, like `example.com`, to access the web application on your instance\. This is achieved through the Domain Name System \(DNS\), which functions as a directory that maps registered domain names to IP addresses\.
 
-To map your domain name to your Lightsail instance, you add an address \(A\) record that points your domain name to the static IP address of your instance\. You can manage domain DNS records at the registrar where the domain name was registered, or you can manage them separately using another DNS hosting provider, such as Lightsail\.
-
-**Note**  
-To make it easier to map your domain name to your Lightsail instance, we recommend that you transfer management of your domain's DNS records to Lightsail by creating a DNS zone\. For more information, see [Creating a DNS zone to manage your domain’s DNS records in Amazon Lightsail](lightsail-how-to-create-dns-entry.md)\.
+To map your domain name to your Lightsail instance, you add an address \(A\) record that points your domain name to the static IP address of your instance\. You can manage domain DNS records at the registrar where the domain name was registered, or you can manage them separately using another DNS hosting provider, such as Lightsail\. To make it easier to map your domain name to your Lightsail instance, we recommend that you transfer management of your domain's DNS records to Lightsail by creating a DNS zone\. For more information, see [Creating a DNS zone to manage your domain’s DNS records in Amazon Lightsail](lightsail-how-to-create-dns-entry.md)\. You can create up to three DNS zones in Lightsail\. If you require more than three DNS zones, because you manage more than three domain names, we recommend using Route 53 to manage the DNS of all your domains\. You can use Route 53 to point your domain name to your Lightsail instance\. For more information about managing DNS with Route 53, see [Using Amazon Route 53 to point a domain to an Amazon Lightsail instance](amazon-lightsail-using-route-53-to-point-a-domain-to-an-instance.md)\.
 
 ## DNS terminology<a name="lightsail-dns-zone-terminology"></a>
 

@@ -17,7 +17,7 @@ Enable the public mode feature to make your database publicly accessible\. This 
 1. Choose the **Networking** tab\.
 
 1. Under the **Public mode** section, use the toggle to turn it on\. Likewise, use the toggle to turn it off\.  
-![\[The database public mode toggle in the Lightsail console\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-database-public-mode-toggle.png)
+![\[The database public mode toggle in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-database-public-mode-toggle.png)
 
    The public accessibility setting begins applying immediately but may require a few minutes to complete\. During this time, the status of your database changes to **Modifying**\. The status of your database changes to **Available** after the public accessibility setting is applied\.
 

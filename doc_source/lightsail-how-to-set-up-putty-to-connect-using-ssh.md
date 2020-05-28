@@ -1,6 +1,6 @@
 # Download and set up PuTTY to connect using SSH in Amazon Lightsail<a name="lightsail-how-to-set-up-putty-to-connect-using-ssh"></a>
 
- *Last updated: August 16, 2018* 
+ *Last updated: May 28, 2020* 
 
 You can use an SSH client like PuTTY to connect to your Lightsail instance\. PuTTY requires a copy of your private SSH key\. You might already have a key, or you might want to use the key pair that Lightsail creates\. Either way, we've got you covered\. For more information about SSH, see [SSH and connecting to your Lightsail instance](understanding-ssh-in-amazon-lightsail.md)\.
 
@@ -29,7 +29,7 @@ You have several options for getting your private key\. You might want to use th
 1. Choose **Account** on the top navigation bar, and then choose **Account** from the drop\-down\.
 
 1. Choose the **SSH Keys** tab\.  
-![\[SSH key pairs in the Lightsail console\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-ssh-key-pairs.png)
+![\[SSH key pairs in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-ssh-key-pairs.png)
 
 1. Choose one of the following options depending on which private key you prefer to use:
    + **To use the default private key that Lightsail generates**, choose **Download** next to the default private key for the AWS Region where your instance is located\.
@@ -79,7 +79,7 @@ You're almost there\! Hang on while we make one last change\.
 Port 22 is already open for SSH on your Lightsail instance, so accept the default port\.
 
 1. Under **Category**, expand **SSH**, and then choose **Auth**\.  
-![\[PuTTY and the SSH Auth option in the configuration dialog\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/putty-configuration-connection-ssh-auth.png)
+![\[PuTTY and the SSH Auth option in the configuration dialog\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/putty-configuration-connection-ssh-auth.png)
 
 1. Choose **Browse** to navigate to the `.ppk` file that you created in the previous step, and then choose **Open**\.
 
@@ -87,11 +87,11 @@ Port 22 is already open for SSH on your Lightsail instance, so accept the defaul
 
 1. Log in using one of the following default user names depending on your instance operating system:
    + Amazon Linux, openSUSE, and FreeBSD: `ec2-user`
+   + CentOS: `centos`
    + Debian: `admin`
    + Ubuntu: `ubuntu`
    + Certified by Bitnami instances: `bitnami`
    + Plesk instances: `ubuntu`
-   + CentOS: `centos`
 
    For more information about instance operating systems, see [Choosing an image in Lightsail](compare-options-choose-lightsail-instance-image.md)\.
 

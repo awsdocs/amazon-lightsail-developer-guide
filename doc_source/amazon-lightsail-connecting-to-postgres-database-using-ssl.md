@@ -39,4 +39,4 @@ Complete the following steps to connect to your Postgres database using SSL\.
 1. Type the password for the database user you specified in the previous command when prompted, and press **Enter**\.
 
    You should see a result similar to the following example\. Your connection is encrypted if you see a value of “SSL connection\."  
-![\[Postgres database connection status.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-postgres-ssl-connection.png)
+![\[Postgres database connection status.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-postgres-ssl-connection.png)

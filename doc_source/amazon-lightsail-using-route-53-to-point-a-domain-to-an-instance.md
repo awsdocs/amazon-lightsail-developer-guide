@@ -4,10 +4,10 @@
 
 The DNS zone in Amazon Lightsail makes it easy to point a registered domain name, like `example.com`, to your website running on a Lightsail instance\. You can create up to three Lightsail DNS zones \(for three domains\), and not all DNS record types are supported\.
 
+If the Lightsail DNS zone is too limited for you, then we recommend using an Amazon Route 53 hosted zone to manage your domain’s DNS records\. You can manage the DNS for up to 500 domains using Route 53, and it supports a greater variety of DNS record types\. Or, you might already be using Route 53 to manage your domain’s DNS records and prefer to continue using it\. This guide shows you how to edit the DNS records for a domain managed in Route 53 to point to your Lightsail instance\.
+
 **Note**  
 For more information about Lightsail DNS zones, see [DNS in Amazon Lightsail](understanding-dns-in-amazon-lightsail.md)\.
-
-If the Lightsail DNS zone is too limited for you, then we recommend using an Amazon Route 53 hosted zone to manage your domain’s DNS records\. You can manage the DNS for up to 500 domains using Route 53, and it supports a greater variety of DNS record types\. Or, you might already be using Route 53 to manage your domain’s DNS records and prefer to continue using it\. This guide shows you how to edit the DNS records for a domain managed in Route 53 to point to your Lightsail instance\.
 
 ## Prerequisites<a name="using-amazon-route-53-prerequisites"></a>
 
@@ -21,9 +21,10 @@ You don’t need to create a Lightsail DNS zone if you plan on using Route 53 to
 
 ## Pointing a domain to a Lightsail instance using Route 53<a name="pointing-a-domain-to-a-lightsail-instance-using-route-53"></a>
 
-The following steps provide guidance about to configure the two most common DNS records, address and canonical name, in Route 53\. However, the steps are similar for other record types\. For additional information, see [Creating Records by Using the Amazon Route 53 Console](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-creating.html) in the Route 53 documentation\.
+Complete the following steps to configure the two most common DNS records, address and canonical name, in Route 53 to point your domain to a Lightsail instance\.
 
-**To point a domain to a Lightsail instance using Route 53**
+**Note**  
+This procedure is also documented in the Route 53 Developer Guide\. For more information, see [Creating Records by Using the Amazon Route 53 Console](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-creating.html) in the Route 53 documentation\.
 
 1. Sign in to the [Route 53 console](https://console.aws.amazon.com/route53)\.
 
@@ -42,7 +43,7 @@ An address \(A\) record maps a domain, such as `example.com`, or a subdomain, su
    1. Enter the static IP address \(public IP address\) of your Lightsail instance in the **Value** text box\.
 
    1. Keep the routing policy as **Simple**\.  
-![\[Address record example in a Route 53 hosted zone.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-route-53-hosted-zone-a-record.png)
+![\[Address record example in a Route 53 hosted zone.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-route-53-hosted-zone-a-record.png)
 **CNAME – Canonical name**  
 A canonical name \(CNAME\) record maps an alias or subdomain, such as `www.example.com`, to a domain, such as `example.com`, or a subdomain, such as `www2.example.com`\. A CNAME record redirects one domain to another\.  
 
@@ -53,7 +54,7 @@ A canonical name \(CNAME\) record maps an alias or subdomain, such as `www.examp
    1. Enter a domain or subdomain in the **Value** text box\.
 
    1. Keep the routing policy as **Simple**\.  
-![\[Canonical name record example in a Route 53 hosted zone.\]](https://s3-us-west-2.amazonaws.com/parkside-localized-docs-devo/v1/en_us/b3f6d19f6c5a2810c4336f10d978ee98/images/amazon-lightsail-route-53-hosted-zone-cname-record.png)
+![\[Canonical name record example in a Route 53 hosted zone.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-route-53-hosted-zone-cname-record.png)
 
 1. Choose **Create** to add the record to your hosted zone\.
 
