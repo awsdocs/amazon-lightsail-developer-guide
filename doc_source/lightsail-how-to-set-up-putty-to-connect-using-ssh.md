@@ -91,6 +91,7 @@ Port 22 is already open for SSH on your Lightsail instance, so accept the defaul
    + Ubuntu: `ubuntu`
    + Certified by Bitnami instances: `bitnami`
    + Plesk instances: `ubuntu`
+   + CentOS: `centos`
 
    For more information about instance operating systems, see [Choosing an image in Lightsail](compare-options-choose-lightsail-instance-image.md)\.
 
