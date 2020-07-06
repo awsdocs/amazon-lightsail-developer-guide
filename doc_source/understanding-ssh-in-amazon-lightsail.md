@@ -21,6 +21,8 @@ You can also manage SSH keys from the **Account** page\.
 
 In Lightsail, the SSH key pairs you use are AWS Region specific\. Lightsail creates a **Default** key in each region\. If you want to create a new key pair to use with your instances, you'll need to create or upload a new key pair in each region where you have Lightsail instances\. After you create a new key pair, you can upload the same key to multiple regions\. For more information, see [Regions and Availability Zones in Lightsail](understanding-regions-and-availability-zones-in-amazon-lightsail.md)\.
 
+NOTE: If you are using a Mac with 10.15.5 (Catalina) - You can connect to your AWS Lightsail Instance by simply downloading the .pem file from the Account page. After that, in order to ensure that the SSH connection is working, you will need to first download it to a directory and from there changemode or chmod 600 the file. From there, while working in the same directory, the following command will ensure that you can connect without a problem: ssh -i "....pem" username@publicIPAddress
+
 ## Using an SSH client such as PuTTY<a name="setting-up-putty-and-other-clients"></a>
 
 To set up PuTTY to connect to your Lightsail instance, see [Set up PuTTY to connect to your Lightsail instance](lightsail-how-to-set-up-putty-to-connect-using-ssh.md)\.
