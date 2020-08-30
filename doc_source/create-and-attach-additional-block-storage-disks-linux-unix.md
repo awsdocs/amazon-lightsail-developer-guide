@@ -172,7 +172,7 @@ You probably want to mount this disk every time you reboot your Lightsail instan
    For example, your new line might look something like this\.
 
    ```
-   /dev/xvdf /data ext4 defaults, nofail 0 2
+   /dev/xvdf /data ext4 defaults,nofail 0 2
    ```
 
 1. Save the file and exit your text editor\.
