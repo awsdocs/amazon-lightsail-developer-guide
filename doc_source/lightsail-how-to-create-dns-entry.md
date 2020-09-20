@@ -121,7 +121,7 @@ Time to live \(TTL\) for DNS records cannot be configured in the Lightsail DNS z
 
 Complete the following steps to transfer management of your domain's DNS records to Lightsail\. To do this, you sign in to the website of your domain’s current DNS hosting provider, and change your domain’s name servers to the Lightsail name servers\.
 
-For detailed steps to complete this process, see the documentation from your domain’s current DNS hosting provider\. The following steps are provided only for general guidance\. If your domain was registered using Amazon Route 53, see [Adding or Changing Name Servers or Glue Records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-name-servers-glue-records.html#domain-name-servers-glue-records-procedure) in the *Route 53 Developer Guide* for detailed steps to change the name servers for your domain\.
+For detailed steps to complete this process, see the documentation from your domain’s current DNS hosting provider\. The following steps are provided only for general guidance\. If your domain was registered using Amazon Route 53, see [Adding or Changing Name Servers or Glue Records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-name-servers-glue-records.html#domain-name-servers-glue-records-adding-changing) in the *Route 53 Developer Guide* for detailed steps to change the name servers for your domain\.
 
 **Important**  
 If web traffic is currently being routed to your domain, make sure that all of the existing DNS records are present in the Lightsail DNS zone before changing the name servers at your domain’s current DNS hosting provider\. This way, traffic continually flows uninterrupted after the transfer to the Lightsail DNS zone\.
