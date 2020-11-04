@@ -62,7 +62,7 @@ Complete the following steps to create an instance metric alarm using the Lights
 
 1. Choose one of the following notification methods:
    + **Email** — You are notified by email when the alarm state changes to ALARM\.
-   + **SMS text message** — You are notified by SMS text message when the alarm state changes to ALARM\. SMS messaging is not supported in all AWS Regions in which you can create Lightsail resources, and SMS text messages cannot be sent to all countries/regions\. For more information, see [SMS text messaging support](amazon-lightsail-adding-editing-notification-contacts.md#sms-support)\.
+   + **SMS text message** — You are notified by SMS text message when the alarm state changes to ALARM\. SMS messaging is not supported in all AWS Regions in which you can create Lightsail resources, and SMS text messages cannot be sent to all countries/regions\.
 **Note**  
 You are required to add an email address or mobile phone number if you select to be notified by email or SMS but you haven’t yet configured a notification contact in the resource’s AWS Region\. For more information, see [Notifications in Amazon Lightsail](amazon-lightsail-notifications.md)\.
 
