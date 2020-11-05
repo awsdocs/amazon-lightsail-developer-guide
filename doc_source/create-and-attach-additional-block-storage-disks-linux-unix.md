@@ -1,6 +1,6 @@
 # Create and attach additional block storage disks to your Linux\-based Lightsail instances<a name="create-and-attach-additional-block-storage-disks-linux-unix"></a>
 
- *Last updated: November 14, 2017* 
+ *Last updated: November 4, 2020* 
 
 You can create and attach additional block storage disks for your Lightsail instances\. After you create additional disks, you need to connect to your Linux/Unix\-based Lightsail instance and format and mount the disk\.
 
@@ -28,11 +28,11 @@ If you have a Windows Server\-based instance, see the following topic instead: [
 
 1. Choose one of the following options to add tags to your disk:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
@@ -41,14 +41,14 @@ For more information about key\-only and key\-value tags, see [Tags in Amazon Li
    After a few seconds, your disk is created and you're on the new disk management page\.
 
 1. Choose your instance from the list, and then choose **Attach** to attach the new disk to your instance\.  
-![\[Choosing your instance from the drop-down list and attaching the disk to the instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/animated-gif-attach-disk-to-linux-wordpress-instance.gif)
+![\[Choosing your instance from the drop-down list and attaching the disk to the instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/animated-gif-attach-disk-to-linux-wordpress-instance.gif)
 
 ## Step 2: Connect to your instance to format and mount the disk<a name="connect-to-linux-unix-instance-using-ssh-format-mount-disk"></a>
 
 1. After you create and attach your disk, go back to the instance management page in Lightsail\.
 
    The **Connect** tab is displayed by default\.  
-![\[The Connect tab of the instance management page\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/lightsail-instance-management-page-connect-tab.png)
+![\[The Connect tab of the instance management page\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/lightsail-instance-management-page-connect-tab.png)
 
 1. Choose **Connect using SSH** to connect to your instance\.
 

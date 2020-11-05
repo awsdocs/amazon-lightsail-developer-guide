@@ -20,7 +20,7 @@ Complete the following steps to delete notification contacts using the Lightsail
 1. On the Lightsail home page, choose **Account** on the top navigation menu\.
 
 1. Choose **Account** in the drop\-down menu\.  
-![\[Account menu in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-account-drop-down.png)
+![\[Account menu in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-account-drop-down.png)
 
 1. Choose the delete icon next to the email address or mobile phone number that you want to delete in the **Notification contacts** section on the **Profile & contacts** tab\.
 

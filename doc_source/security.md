@@ -12,5 +12,6 @@ This documentation helps you understand how to apply the shared responsibility m
 
 **Topics**
 + [Identity and Access Management for Amazon Lightsail](security_iam.md)
++ [Compliance Validation for Amazon Lightsail](amazon-lightsail-compliance.md)
 + [Resilience in Amazon Lightsail](disaster-recovery-resiliency.md)
 + [Infrastructure Security in Amazon Lightsail](infrastructure-security.md)

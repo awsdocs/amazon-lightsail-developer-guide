@@ -1,8 +1,10 @@
 # Keeping automatic snapshots of instances or disks in Amazon Lightsail<a name="amazon-lightsail-keeping-automatic-snapshots"></a>
 
- *Last updated: October 2, 2019* 
+ *Last updated: September 24, 2020* 
 
-When you [enable the automatic snapshots feature](amazon-lightsail-configuring-automatic-snapshots.md) for an instance or block storage disk in Amazon Lightsail, only the latest seven automatic snapshots of the resource are stored\. Then, the oldest one is replaced with the newest one\. If you want to keep a specific automatic snapshot from being replaced, you can copy it as a manual snapshot\. Manual snapshots are kept until you delete them\.
+When you [enable the automatic snapshots feature](amazon-lightsail-configuring-automatic-snapshots.md) for an instance or block storage disk in Amazon Lightsail, only the latest seven daily automatic snapshots of the resource are stored\. Then, the oldest one is replaced with the newest one\. Additionally, all automatic snapshots associated with a resource are deleted when you delete the source resource\.
+
+If you want to keep a specific automatic snapshot from being replaced, or from being deleted when you delete the source resource, you can copy it as a manual snapshot\. Manual snapshots are kept until you manually delete them\.
 
 Follow the steps in this guide to keep an automatic snapshot by copying it as a manual snapshot\. You will be billed the [snapshot storage fee](https://aws.amazon.com/lightsail/pricing/) for the automatic snapshots stored on your Lightsail account\.
 
@@ -25,12 +27,12 @@ Complete the following steps to keep automatic snapshots for an instance using t
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the Lightsail home page, choose the **Instances** tab\.  
-![\[The Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-home-page-instances-storage.png)
+![\[The Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-home-page-instances-storage.png)
 
 1. Choose the name of the instance for which you want to keep automatic snapshots\.
 
 1. On the instance management page, choose the **Snapshots** tab\.  
-![\[The instance management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-instance-management-snapshots.png)
+![\[The instance management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-instance-management-snapshots.png)
 
 1. Under the **Automatic snapshots** section, choose the ellipsis icon next to the automatic snapshot that you want to keep, then choose **Keep snapshot**\.
 
@@ -65,7 +67,7 @@ Complete the following steps to keep automatic snapshots for an instance or bloc
    ```
 
    You should see a result similar to the following, which lists the available automatic snapshots:  
-![\[Get auto snapshots operation results containing the available auto snapshots for an instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-available-auto-backups-operation.png)
+![\[Get auto snapshots operation results containing the available auto snapshots for an instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-available-auto-backups-operation.png)
 
 1. Enter the following command to keep an automatic snapshot for a specific resource:
 
@@ -87,7 +89,7 @@ Complete the following steps to keep automatic snapshots for an instance or bloc
    ```
 
    You should see a result similar to the following example:  
-![\[Copy snapshot operation result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-copy-snapshot-operation.png)
+![\[Copy snapshot operation result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-copy-snapshot-operation.png)
 
    The automatic snapshot is copied as a manual snapshot after a few moments\. Manual snapshots are kept until you delete them\.
 **Important**  

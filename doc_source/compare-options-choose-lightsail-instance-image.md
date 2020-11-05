@@ -1,6 +1,6 @@
 # Choose an Amazon Lightsail instance image<a name="compare-options-choose-lightsail-instance-image"></a>
 
- *Last updated: January 13, 2020* 
+ *Last updated: September 4, 2020* 
 
 Lightsail provides several options for you to create your virtual private server\. This topic helps you decide which operating system \(OS\), application, or development stack is right for your project\. We organized the applications by functional area \(e\.g\., CMS and e\-Commerce\)\.
 
@@ -14,9 +14,13 @@ Lightsail has two platforms to choose from: Linux/Unix\-based or Windows\-based 
 
 Lightsail has several operating systems to choose from\.
 
+** **Windows Server 2019** **  
+Unless you need to run Windows Server 2012 R2 or Windows Server 2016 for some reason, we recommend using the latest version of Windows Server 2019\.  
+Lightsail running Windows Server is a fast and dependable environment for deploying applications using the Microsoft Web Platform\. Lightsail enables you to run any compatible Windows\-based solution on AWS' high\-performance, reliable, cost\-effective, cloud computing platform\. Common Windows use cases include Enterprise Windows\-based application hosting, website and web\-service hosting, data processing, distributed testing, ASP\.NET application hosting, and any other application requiring Windows software\.  
+ [Learn more about the Windows Server 2019 image](https://aws.amazon.com/marketplace/pp/B07QZ4XZ8F) 
+
 ** **Windows Server 2016** **  
-Unless you need to run Windows Server 2012 R2 for some reason, we recommend using the latest version of Windows Server 2016\.  
-Lightsail running Windows Server is a fast and dependable environment for deploying applications using the Microsoft Web Platform\. Lightsail enables you to run any compatible Windows\-based solution on AWS' high\-performance, reliable, cost\-effective, cloud computing platform\. Common Windows use cases include Enterprise Windows\-based application hosting, website and web\-service hosting, data processing, media transcoding, distributed testing, ASP\.NET application hosting, and any other application requiring Windows software\.  
+Lightsail running Windows Server is a fast and dependable environment for deploying applications using the Microsoft Web Platform\. Lightsail enables you to run any compatible Windows\-based solution on AWS' high\-performance, reliable, cost\-effective, cloud computing platform\. Common Windows use cases include Enterprise Windows\-based application hosting, website and web\-service hosting, data processing, distributed testing, ASP\.NET application hosting, and any other application requiring Windows software\.  
  [Learn more about the Windows Server 2016 image](https://aws.amazon.com/marketplace/pp/B01M7SJEU7) 
 
 ** **Windows Server 2012 R2** **  
@@ -24,15 +28,25 @@ Windows Server 2012 R2 is also available as a base operating system\. If you're 
 You can use Windows Server 2012 R2 with the same use cases as listed under Windows Server 2016\.  
  [Learn more about the Windows Server 2012 R2 image](https://aws.amazon.com/marketplace/pp/B00KQOWCAQ) 
 
-** **Amazon Linux 2018** **  
-The Amazon Linux AMI is a supported and maintained Linux image provided by Amazon Web Services \(AWS\) for use on Lightsail and Amazon EC2\. It's designed to provide a stable, secure, and high\-performance execution environment for applications running on Lightsail\. It includes packages that enable easy integration with AWS, such as the AWS Command Line Interface \(AWS CLI\) and AWS API tools\. AWS provides ongoing security and maintenance updates to all instances running the Amazon Linux AMI\.  
-[Learn more about the Amazon Linux AMI](https://aws.amazon.com/amazon-linux-ami/)
+** **Amazon Linux 2** **  
+Amazon Linux 2 is the next generation of Amazon Linux, a Linux server operating system from Amazon Web Services \(AWS\)\. It provides a secure, stable, and high performance execution environment to develop and run cloud and enterprise applications\. With Amazon Linux 2, you get an application environment that offers long term support with access to the latest innovations in the Linux ecosystem\. Amazon Linux 2 is provided at no additional charge\.  
+The primary differences between Amazon Linux 2 and Amazon Linux \(2018\) are:  
++ Amazon Linux 2 offers long\-term support until June 30, 2023\.
++ Amazon Linux 2 is available as virtual machine images for on\-premises development and testing\.
++ Amazon Linux 2 provides the systemd service and systems manager as opposed to System V init system in Amazon Linux \(2018\)\.
++ Amazon Linux 2 comes with an updated Linux kernel, C library, compiler, and tools\.
++ Amazon Linux 2 provides the ability to install additional software packages through the extras mechanism\.
+Learn more about [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/)\.
+
+** **Amazon Linux \(2018\)** **  
+The Amazon Linux image is a supported and maintained Linux image provided by Amazon Web Services \(AWS\) for use on Lightsail and Amazon EC2\. It's designed to provide a stable, secure, and high\-performance execution environment for applications running on Lightsail\. It includes packages that enable easy integration with AWS, such as the AWS Command Line Interface \(AWS CLI\) and AWS API tools\. AWS provides ongoing security and maintenance updates to all instances running the Amazon Linux AMI\.  
+Learn more about [Amazon Linux \(2018\)](https://aws.amazon.com/amazon-linux-ami/)\.
 
 ** **CentOS 7** **  
 CentOS is a Linux distribution that provides a free, enterprise\-class, community\-supported computing platform functionally compatible with its upstream source, Red Hat Enterprise Linux\.  
 [Learn more about CentOS](https://aws.amazon.com/marketplace/pp/B00O7WM7QW)\.
 
-** **Debian 8 and 9** **  
+** **Debian 8, 9, and 10** **  
 Debian is a computer operating system composed of software packages released as free and open source software primarily under the GNU General Public License along with other free software licenses\. Debian GNU/Linux, which includes the GNU OS tools and Linux kernel, is a popular and influential Linux distribution\. It is distributed with access to repositories containing thousands of software packages ready for installation and use\.  
 [Learn more about Debian](https://www.debian.org/doc/)\.
 
@@ -44,7 +58,7 @@ FreeBSD is an operating system used to power servers, desktops, and embedded sys
 The openSUSE distribution is a stable, easy to use and complete multi\-purpose Linux distribution\. It is aimed towards users and developers working on the desktop or server\. It is great for beginners, experienced users and ultra geeks alike, in short, it is perfect for everybody\!  
 [Learn more about openSUSE](https://www.opensuse.org/)\.
 
-** **Ubuntu 16 and 18** **  
+** **Ubuntu 16, 18, and 20** **  
 Ubuntu Server is a Debian\-based Linux operating system used for virtual servers\. A default installation of Ubuntu contains a wide range of software that includes LibreOffice, Firefox, Thunderbird, and Transmission\. You can install many additional software packages, such as Evolution, GIMP, Pidgin, and Synaptic by using the APT\-based package management tool \(`apt-get`\)\.  
 [Learn more about Ubuntu](https://help.ubuntu.com/community/CommunityHelpWiki)\.
 
@@ -69,6 +83,10 @@ Bitnami WordPress is a preconfigured, ready\-to\-use image for running WordPress
 WordPress Multisite enables administrators to host and manage multiple websites from the same WordPress instance\. These websites can all have unique domain names and can be customized by their owners, while sharing assets such as themes and plugins that are made available by the server admin\. Updates to all sites can be pushed at once, ensuring that they are always kept safe and secure\.  
 WordPress Multisite is great for organizations such as universities, corporations, and agencies that need to enable many people to host their own websites while giving overall control to a central administrator\.  
 [Learn more about the Bitnami WordPress Multisite application](https://bitnami.com/stack/wordpress-multisite)\.
+
+** **cPanel & WebHost Manager \(WHM\)** **  
+cPanel & WHM is a suite of tools built for Linux OS that gives you the ability to automate web hosting tasks via a simple graphical user interface\. Its goal — to make managing servers easier for you and managing websites easier for your customers\.  
+[Learn more about cPanel & WHM](https://cpanel.net/products/cpanel-whm-features/)\.
 
 ** **Ghost certified by Bitnami** **  
 Ghost is a publishing platform that is suitable for everything from personal blogs to major news websites\. Built on Node\.js, its modern technology stack makes it versatile and flexible for developers seeking to integrate with other applications and tools, while maintaining ease of use for content creators\.  

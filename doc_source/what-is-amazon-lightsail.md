@@ -1,6 +1,6 @@
 # What is Amazon Lightsail?<a name="what-is-amazon-lightsail"></a>
 
- *Last updated: January 13, 2020* 
+ *Last updated: September 4, 2020* 
 
 Amazon Lightsail is the easiest way to get started with AWS if you just need virtual private servers\. Lightsail includes everything you need to launch your project quickly – a virtual machine, SSD\-based storage, data transfer, DNS management, and a static IP – for a low, predictable price\. After you create your instance, you can easily connect to it\. You can manage your instances using the Lightsail console, Lightsail API, or Lightsail command line interface \(CLI\)\.
 
@@ -19,14 +19,16 @@ You can also create a Lightsail load balancer and attach target instances to cre
 ## Operating systems in Lightsail<a name="what-operating-systems-templates-are-available-in-lightsail"></a>
 
 **Linux**
-+ Amazon Linux 2018
++ Amazon Linux \(2018\)
++ Amazon Linux 2
 + CentOS 7
-+ Ubuntu Server 16 and 18
++ Ubuntu 16, 18, and 20
 + Free BSD 10
-+ Debian 8 and 9
++ Debian 8, 9, and 10
 + openSUSE Leap
 
 **Windows**
++ Windows Server 2019
 + Windows Server 2016
 + Windows Server 2012 R2
 
@@ -35,6 +37,7 @@ You can also create a Lightsail load balancer and attach target instances to cre
 **Linux**
 + WordPress certified by Bitnami
 + WordPress Multisite certified by Bitnami
++ cPanel & WHM
 + Drupal certified by Bitnami
 + Ghost certified by Bitnami
 + Joomla certified by Bitnami

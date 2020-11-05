@@ -1,6 +1,6 @@
 # Exporting Amazon Lightsail snapshots to Amazon EC2<a name="amazon-lightsail-exporting-snapshots-to-amazon-ec2"></a>
 
- *Last updated: November 28, 2018* 
+ *Last updated: July 29, 2020* 
 
 You can export Amazon Lightsail instance and block storage disk snapshots to Amazon Elastic Compute Cloud \(Amazon EC2\)\. Exporting a Lightsail instance snapshot results in an Amazon Machine Image \(AMI\) and an Amazon Elastic Block Store \(Amazon EBS\) snapshot being created in Amazon EC2\. This is because Lightsail instances are comprised of an image and a system disk, but both are grouped together as a single instance entity in the Lightsail console to make them more efficient to manage\. If the source Lightsail instance has one or more block storage disks attached to it when the snapshot is created, then additional EBS snapshots for each attached disk are created in Amazon EC2\.
 
@@ -67,9 +67,9 @@ Snapshots are exported to the same AWS Region from Lightsail to Amazon EC2\. To 
 1. Locate the instance or block storage disk that you want to export, and expand the node to view the available snapshots for that resource\. 
 
 1. Choose the **Action** menu for the desired snapshot, then choose **Export to Amazon EC2**\.  
-![\[Export snapshot in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-action-menu-export-snapshot.png)
+![\[Export snapshot in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-action-menu-export-snapshot.png)
 **Note**  
-Snapshots of Ghost and Django instances cannot be exported to Amazon EC2 at this time\.
+Snapshots of cPanel & WHM, Django, and Ghost instances cannot be exported to Amazon EC2 at this time\.
 
 1. Review the important details displayed on the prompt\.
 
@@ -83,7 +83,7 @@ Use the task monitor in the Lightsail console to track the status of your export
 
 The following information is displayed in the task monitor for snapshot exports:
 
-![\[The task monitor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-task-monitor-export-snapshot.png)
+![\[The task monitor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-task-monitor-export-snapshot.png)
 + **Snapshot name** — The name of the source Lightsail snapshot\.
 + **Export started** — The date and time the snapshot export was started\.
 + **Snapshot created** — The date and time the source Lightsail snapshot was created\.

@@ -40,7 +40,7 @@ Before you get started, you will need the following\.
    Lightsail begins the validation process\. You have 72 hours to verify that you own your domain\.
 
    After you create your certificate, you see the certificate along with the domain name and all your alternate domains and subdomains\. You need to create a DNS record for each domain and subdomain\.  
-![\[Certificate pending validation with domains and subdomains\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-certificate-validation.png)
+![\[Certificate pending validation with domains and subdomains\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-certificate-validation.png)
 
 ## Next step<a name="create-ssl-tls-certificate-next-steps"></a>
 +  [Verify that you own your domain](verify-tls-ssl-certificate-using-dns-cname-https.md) 

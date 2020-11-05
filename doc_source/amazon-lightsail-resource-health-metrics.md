@@ -1,11 +1,11 @@
 # Resource metrics in Amazon Lightsail<a name="amazon-lightsail-resource-health-metrics"></a>
 
- *Last updated: February 27, 2020* 
-
 **Note**  
-Monitor the performance of your instances, databases, and load balancers in Amazon Lightsail by checking and collecting their metric data\. Establish a baseline over time, so that you can configure alarms to more easily detect anomalies and issues with the performance of your resources\.
+Monitor the performance of your instances, databases, distributions, and load balancers in Amazon Lightsail by checking and collecting their metric data\. Establish a baseline over time, so that you can configure alarms to more easily detect anomalies and issues with the performance of your resources\.
 
-Amazon Lightsail reports metric data for instances, databases, and load balancers\. You can view and monitor this data in the Lightsail console\. Monitoring is an important part of maintaining the reliability, availability, and performance of your resources\. Monitor and collect metric data from your resources regularly so that you can more readily debug a multi\-point failure, if one occurs\.
+ *Last updated: July 23, 2020* 
+
+Amazon Lightsail reports metric data for instances, databases, content delivery network \(CDN\) distributions, and load balancers\. You can view and monitor this data in the Lightsail console\. Monitoring is an important part of maintaining the reliability, availability, and performance of your resources\. Monitor and collect metric data from your resources regularly so that you can more readily debug a multi\-point failure, if one occurs\.
 
 **Contents**
 + [Monitoring your resources effectively](#monitoring-resources-effectively)
@@ -35,17 +35,17 @@ Data points with a period of 60 seconds \(1 minute resolution\) are available fo
 
 Data points that are initially available with a shorter period are aggregated together for long\-term storage\. For example, data points with a 1 minute granularity remain available for 15 days with 1 minute resolution\. After 15 days this data is still available, but is aggregated and is retrievable only with a resolution of 5 minutes\. After 63 days, the data is further aggregated and is available with a resolution of 1 hour\. If you need availability of metrics longer than these periods, you can use the Lightsail API, AWS Command Line Interface \(AWS CLI\), and SDKs to retrieve the data points for offline or different storage\.
 
-For more information, see [GetInstanceMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetInstanceMetricData.html), [GetLoadBalancerMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerMetricData.html), and [GetRelationalDatabaseMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseMetricData.html) in the *Lightsail API reference*\.
+For more information, see [GetInstanceMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetInstanceMetricData.html), [GetLoadBalancerMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerMetricData.html), [GetDistributionMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetDistributionMetricData.html), and [GetRelationalDatabaseMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseMetricData.html) in the *Lightsail API reference*\.
 
 ### Statistics<a name="concepts-statistics"></a>
 
 Metric statistics are the means in which data is aggregated over a period of time\. Example statistics include `Average`, `Sum`, and `Maximum`\. For example, instance CPU utilization metric data can be averaged using the `Average` statistic, database connections can be added using the `Sum` statistic, the maximum load balancer response time can be retrieved using the `Maximum` statistic, and so on\.
 
-For a list of available metric statistics, see [statistics for GetInstanceMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetInstanceMetricData.html#Lightsail-GetInstanceMetricData-request-statistics), [statistics for GetLoadBalancerMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerMetricData.html#Lightsail-GetLoadBalancerMetricData-request-statistics), and [statistics for GetRelationalDatabaseMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseMetricData.html#Lightsail-GetRelationalDatabaseMetricData-request-statistics) in the *Lightsail API reference*\.
+For a list of available metric statistics, see [statistics for GetInstanceMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetInstanceMetricData.html#Lightsail-GetInstanceMetricData-request-statistics), [statistics for GetLoadBalancerMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerMetricData.html#Lightsail-GetLoadBalancerMetricData-request-statistics), [statistics for GetDistributionMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetDistributionMetricData.html#Lightsail-GetDistributionMetricData-request-statistics), and [statistics for GetRelationalDatabaseMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseMetricData.html#Lightsail-GetRelationalDatabaseMetricData-request-statistics) in the *Lightsail API reference*\.
 
 ### Units<a name="concepts-units"></a>
 
-Each statistic has a unit of measure\. Example units include `Bytes`, `Seconds`, `Count`, and `Percent`\. For the complete list of the units, see [units for GetInstanceMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetInstanceMetricData.html#Lightsail-GetInstanceMetricData-request-unit), [units for GetLoadBalancerMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerMetricData.html#Lightsail-GetLoadBalancerMetricData-request-unit), and [units for GetRelationalDatabaseMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseMetricData.html#Lightsail-GetRelationalDatabaseMetricData-request-unit) in the *Lightsail API reference*\.
+Each statistic has a unit of measure\. Example units include `Bytes`, `Seconds`, `Count`, and `Percent`\. For the complete list of the units, see [units for GetInstanceMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetInstanceMetricData.html#Lightsail-GetInstanceMetricData-request-unit), [units for GetLoadBalancerMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerMetricData.html#Lightsail-GetLoadBalancerMetricData-request-unit), [units for GetDistributionMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetDistributionMetricData.html#Lightsail-GetDistributionMetricData-request-unit), and [units for GetRelationalDatabaseMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseMetricData.html#Lightsail-GetRelationalDatabaseMetricData-request-unit) in the *Lightsail API reference*\.
 
 ### Periods<a name="concepts-periods"></a>
 
@@ -64,9 +64,10 @@ An alarm watches a single metric over a specified period of time, and notifies y
 ### Instance metrics<a name="overview-instance-metrics"></a>
 
 The following instance metrics are available\. For more information, see [Viewing instance metrics in Amazon Lightsail](amazon-lightsail-viewing-instance-health-metrics.md)\.
++ **Burst capacity \(`BurstCapacityPercentage` and `BurstCapacityTime`\)** — Burst capacity percentage is the percentage of CPU performance available to your instance\. Burst capacity minutes is the amount of time available for your instance to burst at 100% CPU utilization\. Your instance continuously consumes and accrues burst capacity\. Burst capacity minutes is consumed at the full rate only when your instance operates at 100% CPU utilization\. For more information about instance burst capacity, see [Viewing instance burst capacity in Amazon Lightsail](amazon-lightsail-viewing-instance-burst-capacity.md)\.
 + **CPU utilization \(`CPUUtilization`\)** — The percentage of allocated compute units that are currently in use on the instance\. This metric identifies the processing power to run the applications on the instance\. Tools in your operating system can show a lower percentage than Lightsail when the instance is not allocated a full processor core\.
-**Note**  
-When viewing the CPU utilization metric graphs for your instances in the Lightsail console, you will see sustainable, and burstable zones\. For more information about what these zones mean, see [CPU utilization sustainable and burstable zones](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-viewing-instance-health-metrics#cpu-utilization-zones)\.
+
+  When viewing the CPU utilization metric graphs for your instances in the Lightsail console, you will see sustainable, and burstable zones\. For more information about what these zones mean, see [CPU utilization sustainable and burstable zones](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-viewing-instance-health-metrics#cpu-utilization-zones)\.
 + **Incoming network traffic \(`NetworkIn`\)** — The number of bytes received on all network interfaces by the instance\. This metric identifies the volume of incoming network traffic to the instance\. The number reported is the number of bytes received during the period\. Because this metric is reported in 5\-minute intervals, divide the reported number by 300 to find Bytes/second\.
 + **Outgoing network traffic \(`NetworkOut`\)** — The number of bytes sent out on all network interfaces by the instance\. This metric identifies the volume of outgoing network traffic from the instance\. The number reported is the number of bytes sent during the period\. Because this metric is reported in 5\-minute intervals, divide the reported number by 300 to find Bytes/second\.
 + **Status check failures \(`StatusCheckFailed`\)** — Reports whether the instance passed or failed both the instance status check and the system status check\. This metric can be either 0 \(passed\) or 1 \(failed\)\. This metric is available at a 1\-minute frequency\.
@@ -83,10 +84,19 @@ The following database metrics are available\. For more information, see [Viewin
 + **Network receive throughput \(`NetworkReceiveThroughput`\)** — The incoming \(Receive\) network traffic on the database, including both customer database traffic and AWS traffic used for monitoring and replication\.
 + **Network transmit throughput \(`NetworkTransmitThroughput`\)** — The outgoing \(Transmit\) network traffic on the database, including both customer database traffic and AWS traffic used for monitoring and replication\.
 
+### Distribution metrics<a name="overview-distribution-metrics"></a>
+
+The following distribution metrics are available\. For more information, see [Viewing distribution metrics in Amazon Lightsail](amazon-lightsail-viewing-distribution-health-metrics.md)\.
++ **Requests** — The total number of viewer requests received by your distribution, for all HTTP methods, and for both HTTP and HTTPS requests\.
++ **Bytes uploaded** — The number of bytes uploaded to your origin by your distribution, using POST and PUT requests\.
++ **Bytes downloaded** — The number of bytes downloaded by viewers for GET, HEAD, and OPTIONS requests\.
++ **Total error rate** — The percentage of all viewer requests for which the response’s HTTP status code was 4xx or 5xx\.
++ **HTTP 4xx error rate** — The percentage of all viewer requests for which the response’s HTTP status code was 4xx\. In these cases, the client or client viewer may have made an error\. For example, a status code of 404 \(Not Found\) means that the client requested an object that could not be found\.
++ **HTTP 5xx error rate** — The percentage of all viewer requests for which the response’s HTTP status code was 5xx\. In these cases, the origin server did not satisfy the request\. For example, a status code of 503 \(Service Unavailable\) means that the origin server is currently unavailable\.
+
 ### Load balancer metrics<a name="overview-load-balancer-metrics"></a>
 
 The following load balancer metrics are available\. For more information, see [Viewing load balancer metrics in Amazon Lightsail](amazon-lightsail-viewing-load-balancer-health-metrics.md)\.
-+ **Client TLS negotiation error count \(`ClientTLSNegotiationErrorCount`\)** — The number of TLS connections initiated by the client that did not establish a session with the load balancer due to a TLS error generated by the load balancer\. Possible causes include a mismatch of ciphers or protocols\.
 + **Healthy host count \(`HealthyHostCount`\)** — The number of target instances that are considered healthy\.
 + **Unhealthy host count \(`UnhealthyHostCount`\)** — The number of target instances that are considered unhealthy\.
 + **Load balancer HTTP 4XX \(`HTTPCode_LB_4XX_Count`\)** — The number of HTTP 4XX client error codes that originated from the load balancer\. Client errors are generated when requests are malformed or incomplete\. These requests were not received by the target instance\. This count does not include response codes generated by the target instances\.
@@ -96,12 +106,14 @@ The following load balancer metrics are available\. For more information, see [V
 + **Instance HTTP 4XX \(`HTTPCode_Instance_4XX_Count`\)** — The number of HTTP 4XX response codes generated by the target instances\. This does not include any response codes generated by the load balancer\.
 + **Instance HTTP 5XX \(`HTTPCode_Instance_5XX_Count`\)** — The number of HTTP 5XX response codes generated by the target instances\. This does not include any response codes generated by the load balancer\.
 + **Instance response time \(`InstanceResponseTime`\)** — The time elapsed, in seconds, after the request leaves the load balancer until a response from the target instance is received\.
-+ **Rejected connection count \(`RejectedConnectionCount`\)** — The number of connections that were rejected because the load balancer had reached its maximum number of connections\.
++ **Client TLS negotiation error count \(`ClientTLSNegotiationErrorCount`\)** — The number of TLS connections initiated by the client that did not establish a session with the load balancer due to a TLS error generated by the load balancer\. Possible causes include a mismatch of ciphers or protocols\.
 + **Request count \(`RequestCount`\)** — The number of requests processed over IPv4\. This count includes only the requests with a response generated by a target instance of the load balancer\.
++ **Rejected connection count \(`RejectedConnectionCount`\)** — The number of connections that were rejected because the load balancer had reached its maximum number of connections\.
 
 ## More information about metrics in Lightsail<a name="metrics-more-information"></a>
 
 Here are some articles to help you view resource metrics in Lightsail:
 + [Viewing instance metrics in Amazon Lightsail](amazon-lightsail-viewing-instance-health-metrics.md)
 + [Viewing database metrics in Amazon Lightsail](amazon-lightsail-viewing-database-health-metrics.md)
++ [Viewing distribution metrics in Amazon Lightsail](amazon-lightsail-viewing-distribution-health-metrics.md)
 + [Viewing load balancer metrics in Amazon Lightsail](amazon-lightsail-viewing-load-balancer-health-metrics.md)

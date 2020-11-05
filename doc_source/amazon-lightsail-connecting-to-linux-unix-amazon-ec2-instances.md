@@ -1,6 +1,6 @@
 # Connecting to a Linux or Unix instance in Amazon EC2 created from an Amazon Lightsail snapshot<a name="amazon-lightsail-connecting-to-linux-unix-amazon-ec2-instances"></a>
 
- *Last updated: January 13, 2018* 
+ *Last updated: September 4, 2020* 
 
 After a Linux or Unix instance is created in Amazon Elastic Compute Cloud \(Amazon EC2\) from an Amazon Lightsail snapshot, you can connect to the instance via SSH similar to how you connected to the source Lightsail instance\. To authenticate to your instance, use either the default Lightsail key pair for the source instance’s AWS Region, or your own key pair\. This guide shows you how to connect to your Linux or Unix instance in EC2 using PuTTY\.
 
@@ -38,7 +38,7 @@ Get the public DNS address for your Amazon EC2 instance, so that you can use it 
 1. In the lower pane, locate the **Public DNS** address for your instance\.
 
    This is the address that you will use when configuring an SSH client to connect to your instance\. Continue to the [Download and install PuTTY](#download-and-install-putty) section of this guide to learn how to download and install the PuTTY SSH client\.  
-![\[An instance's public DNS in the Amazon EC2 console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-ec2-public-dns.png)
+![\[An instance's public DNS in the Amazon EC2 console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-ec2-public-dns.png)
 
 ## Download and install PuTTY<a name="download-and-install-putty"></a>
 
@@ -57,22 +57,22 @@ PuTTYgen generates pairs of public and private keys to be used with PuTTY\. This
 1. Start PuTTYgen\.
 
    For example, choose the **Windows Start** menu, choose **All Programs**, choose **PuTTY**, and choose **PuTTYgen**\.  
-![\[PuTTY Key Generator.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/puttygen-key-generator.png)
+![\[PuTTY Key Generator.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/puttygen-key-generator.png)
 
 1. Choose **Load**\.
 
    By default, PuTTYgen displays only files with the \.PPK extension\. To locate your \.PEM file, select the option to display files of all types\.  
-![\[Load the Lightsail private key to the PuTTY Key Generator.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-putty-load-private-key.png)
+![\[Load the Lightsail private key to the PuTTY Key Generator.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-putty-load-private-key.png)
 
 1. Choose the default Lightsail key file \(\.PEM\) that you downloaded earlier in this guide, and then choose **Open**\.
 
 1. After PuTTYgen confirms that you successfully imported the key, choose **OK**\.  
-![\[PuTTY Key Generator notice.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-putty-puttygen-notice.png)
+![\[PuTTY Key Generator notice.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-putty-puttygen-notice.png)
 
 1. Choose **Save private key**, and then confirm that you don't want to save it with a passphrase\.
 
    If you create a passphrase as an extra measure of security, you must enter it every time you connect to your instance using PuTTY\.  
-![\[Save your private key in the PuTTY Key Generator.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-putty-save-private-key.png)
+![\[Save your private key in the PuTTY Key Generator.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-putty-save-private-key.png)
 
 1. Specify a name and a location to save your private key, and then choose **Save**\.
 
@@ -93,30 +93,31 @@ Configure PuTTY, now that you have all of the requirements to connect to your Li
    For example, choose the **Windows Start** menu, choose **All Programs**, choose **PuTTY**, and choose **PuTTY**\.
 
 1. In the **Host Name** text box, enter the public DNS address for your instance that you obtained from the Amazon EC2 console earlier in this guide\.  
-![\[PuTTY SSH client.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-putty-host-name.png)
+![\[PuTTY SSH client.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-putty-host-name.png)
 
 1. Under the **Connection** section in the left navigation pane, choose **Data**\.
 
 1. In the **Auto\-login username** text box, enter a user name to use when logging in to the instance\.  
-![\[Instance user name in PuTTY.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-putty-login-details.png)
+![\[Instance user name in PuTTY.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-putty-login-details.png)
 
    Enter one of the following default user names depending on the blueprint of the source Lightsail instance:
-   + Amazon Linux, FreeBSD, and openSUSE instances: `ec2-user`
+   + Amazon Linux, Amazon Linux 2, FreeBSD, and openSUSE instances: `ec2-user`
    + CentOS instances: `centos`
    + Debian instances: `admin`
    + Ubuntu instances: `ubuntu`
    + "Certified by Bitnami" instances: `bitnami`
    + Plesk instances: `ubuntu`
+   + cPanel & WHM instances: `centos`
 
 1. Under the **Connection** section in the left navigation pane, expand **SSH**, and then choose **Auth**\.
 
 1. Choose **Browse** to navigate to the \.PPK file that you created in the previous section of this guide, and then choose **Open**\.  
-![\[PuTTY authentication parameters.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-putty-authentication-parameters.png)
+![\[PuTTY authentication parameters.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-putty-authentication-parameters.png)
 
 1. Choose **Open** to connect to your instance, and then choose **Yes** to trust this connection in the future\.
 
    You should see a screen similar to the following if you've successfully connected to your instance:  
-![\[PuTTY connected to an EC2 instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-putty-connected.png)
+![\[PuTTY connected to an EC2 instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-putty-connected.png)
 
 ## Next steps<a name="connecting-to-linux-unix-instances-next-steps"></a>
 

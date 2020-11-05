@@ -1,13 +1,15 @@
 # Instance firewalls in Amazon Lightsail<a name="understanding-firewall-and-port-mappings-in-amazon-lightsail"></a>
 
+ *Last updated: September 4, 2020* 
+
 **Note**  
 A firewall in Amazon Lightsail controls the traffic allowed to connect to your instance at the protocol and port level\. When you create a new instance, its firewall is preconfigured with a set of default rules that allow basic access to your instance\. Edit your instance's firewall, at any time, by adding and deleting firewall rules to allow traffic to reach your instance\.
 
- *Last updated: May 7, 2020* 
+ *Last updated: July 9, 2020* 
 
 The firewall in the Amazon Lightsail console acts as a virtual firewall that controls the traffic allowed to connect to your instance\. Each instance that you create in Lightsail has its own firewall\. Each firewall contains a set of rules that filter traffic coming into the instance\. Edit your instance's firewall, at any time, by adding and deleting rules to allow or restrict traffic\. 
 
-**Contents:**
+**Contents**
 + [Understanding Lightsail firewalls](#understanding-firewalls)
 + [Creating firewall rules](#creating-firewall-rules)
 + [Specifying protocols](#specifying-protocols)
@@ -23,7 +25,7 @@ All internet traffic into and out of your Lightsail instance passes through its 
 
 Firewall rules are always permissive; you can't create rules that deny access\. You add rules to your firewall to allow traffic to reach your instance\. When you add a rule to your firewall, you specify the protocol to use, the port to open, and the IP addresses that are allowed to connect to your instance, as shown in the following example\. You can also specify an application layer protocol type, which is a preset that specifies the protocol and port range for you based on the service that you plan to use on your instance\.
 
-![\[Plugins menu on the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/firewall-rule-example.png)
+![\[Plugins menu on the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/firewall-rule-example.png)
 
 Firewall rules, and their configurable parameters are explained in the next few sections of this guide\.
 
@@ -77,10 +79,11 @@ You can specify an application layer protocol type when you create a firewall ru
 You can specify the application layer protocol type only by using the Lightsail console\. You cannot specify the application layer protocol type using the Lightsail API, AWS Command Line Interface \(AWS CLI\), or SDKs\.
 
 The following application layer protocol types are available in the Lightsail console:
-+ **Custom rule** – Choose this option to specify your own protocol and ports\.
++ **Custom** – Choose this option to specify your own protocol and ports\.
 + **All protocols** – Choose this option to specify all protocols, and specify your own ports\.
 + **All TCP** – Choose this option to use the TCP protocol but you're unsure of which port to open\. This enables the TCP over all ports \(0\-65535\)\.
 + **All UDP** – Choose this option to use the UDP protocol but you're unsure of which port to open\. This enables the UDP over all ports \(0\-65535\)\.
++ **Custom ICMP** – Choose this option to use the ICMP protocol and define an ICMP type and code\. For more information about ICMP types and codes, see [Control Messages](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages) on *Wikipedia*\.
 + **DNS** – Choose this option when you want to enable DNS on your instance\. This enables TCP and UDP over ports 53\.
 + **HTTP** – Choose this option when you want to enable web browsers to connect to a website that is hosted on your instance\. This enables TCP over port 80\.
 + **HTTPS** – Choose this option when you want to enable web browsers to establish an encrypted connection to a website that is hosted on your instance\. This enables TCP over port 443\.
@@ -92,13 +95,13 @@ The following application layer protocol types are available in the Lightsail co
 
 ## Specifying source IP addresses<a name="specifying-source-ip-addresses"></a>
 
-By default, firewall rules allow all IP addresses to connect to your instance through the specified protocol and port\. This is ideal for traffic such as web browsers over HTTP and HTTPS\. However, this poses a security risk for traffic such as SSH and RDP, since you would not want to allow all IP addresses to be able to connect to your instance using those applications\. For that reason, you can choose to restrict restrict a firewall rule to an IP address or range of IP addresses\. You can specify a single IPv4 address \(for example, 203\.0\.113\.1\), or a range of IPv4 addresses\. In the Lightsail console, the range can be specified using a dash \(for example, 192\.0\.2\.0\-192\.0\.2\.255\) or in CIDR block notation \(for example, 192\.0\.2\.0/24\)\. For more information about CIDR block notation, see [Classless Inter\-Domain Routing](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) on *Wikipedia*\.
+By default, firewall rules allow all IP addresses to connect to your instance through the specified protocol and port\. This is ideal for traffic such as web browsers over HTTP and HTTPS\. However, this poses a security risk for traffic such as SSH and RDP, since you would not want to allow all IP addresses to be able to connect to your instance using those applications\. For that reason, you can choose to restrict a firewall rule to an IP address or range of IP addresses\. You can specify a single IPv4 address \(for example, 203\.0\.113\.1\), or a range of IPv4 addresses\. In the Lightsail console, the range can be specified using a dash \(for example, 192\.0\.2\.0\-192\.0\.2\.255\) or in CIDR block notation \(for example, 192\.0\.2\.0/24\)\. For more information about CIDR block notation, see [Classless Inter\-Domain Routing](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) on *Wikipedia*\.
 
 ## Default Lightsail firewall rules<a name="default-lightsail-firewall-rules"></a>
 
 When you create a new instance, its firewall is preconfigured with the following set of default rules that allow basic access to your instance\. The default rules are different depending on the type of instance that you create\. These rules are listed as application, protocol, port, and source IP address \(for example, application \- protocol \- port \- source IP address\)\.
 
-**Amazon Linux, CentOS, Debian, FreeBSD, openSUSE, and Ubuntu \(base operating systems\)**  
+**Amazon Linux, Amazon Linux 2, CentOS, Debian, FreeBSD, openSUSE, and Ubuntu \(base operating systems\)**  
 SSH \- TCP \- 22 \- all IP addresses  
 HTTP \- TCP \- 80 \- all IP addresses
 
@@ -106,6 +109,17 @@ HTTP \- TCP \- 80 \- all IP addresses
 SSH \- TCP \- 22 \- all IP addresses  
 HTTP \- TCP \- 80 \- all IP addresses  
 HTTPS \- TCP \- 443 \- all IP addresses
+
+**cPanel & WHM \(CMS application\)**  
+SSH \- TCP \- 22  
+DNS \(UDP\) \- UDP \- 53  
+DNS \(TCP\) \- TCP \- 53  
+HTTP \- TCP \- 80  
+HTTPS \- TCP \- 443  
+Custom \- TCP \- 2078  
+Custom \- TCP \- 2083  
+Custom \- TCP \- 2087  
+Custom \- TCP \- 2089
 
 **LAMP, Django, Node\.js, MEAN, GitLab, and LEMP/Nginx \(development stacks\)**  
 SSH \- TCP \- 22 \- all IP addresses  
@@ -131,7 +145,7 @@ Custom \- UDP \- 53 \- all IP addresses
 Custom \- TCP \- 8443 \- all IP addresses  
 Custom \- TCP \- 8447 \- all IP addresses
 
-**Windows Server 2016 and 2012 R2**  
+**Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2**  
 SSH \- TCP \- 22 \- all IP addresses  
 HTTP \- TCP \- 80 \- all IP addresses  
 RDP \- TCP \- 3389 \- all IP addresses

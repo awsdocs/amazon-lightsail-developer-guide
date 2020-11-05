@@ -8,7 +8,7 @@ In Amazon Lightsail, you can get help in several ways\.
 
 Lightsail has a context\-sensitive **Help** panel on each page of the console with additional tips and information that are specific to the page you're on\. Open the help panel any time you have a question about something on the page, and close it when you're good to go\. You can open the help panel by choosing **Help** on any page, or by choosing any of the small question marks throughout the user interface\.
 
-![\[Context-sensitive Help panel in Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/context-sensitive-help-panel-in-amazon-lightsail.png)
+![\[Context-sensitive Help panel in Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/context-sensitive-help-panel-in-amazon-lightsail.png)
 
 ## About this developer guide<a name="getting-help-developer-guide"></a>
 

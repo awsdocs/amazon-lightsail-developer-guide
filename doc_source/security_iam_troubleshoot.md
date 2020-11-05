@@ -10,7 +10,7 @@ If the AWS Management Console tells you that you're not authorized to perform an
 
 The following example error occurs when the `mateojackson` IAM user tries to access the Lightsail console but does not have `lightsail:*` \(full\-access\) permissions\.
 
-![\[Unauthorized access error message in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-unauthorized-error-message.png)
+![\[Unauthorized access error message in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-unauthorized-error-message.png)
 
 In this case, Mateo asks his administrator to update his policies to allow him to access the Lightsail console using the `lightsail:*` \(full\-access\) permissions\.
 

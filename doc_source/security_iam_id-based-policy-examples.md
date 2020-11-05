@@ -1,5 +1,7 @@
 # Amazon Lightsail Identity\-Based Policy Examples<a name="security_iam_id-based-policy-examples"></a>
 
+ *Last updated: February 18, 2020* 
+
 By default, IAM users and roles don't have permission to create or modify Lightsail resources\. They also can't perform tasks using the AWS Management Console, AWS CLI, or AWS API\. An IAM administrator must create IAM policies that grant users and roles permission to perform specific API operations on the specified resources they need\. The administrator must then attach those policies to the IAM users or groups that require those permissions\.
 
 To learn how to create an IAM identity\-based policy using these example JSON policy documents, see [Creating Policies on the JSON Tab](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html#access_policies_create-json-editor) in the *IAM User Guide*\.
@@ -41,39 +43,37 @@ This example shows how you might create a policy that allows IAM users to view t
 
 ```
 {
-       "Version": "2012-10-17",
-       "Statement": [
-           {
-               "Sid": "ViewOwnUserInfo",
-               "Effect": "Allow",
-               "Action": [
-                   "iam:GetUserPolicy",
-                   "iam:ListGroupsForUser",
-                   "iam:ListAttachedUserPolicies",
-                   "iam:ListUserPolicies",
-                   "iam:GetUser"
-               ],
-               "Resource": [
-                   "arn:aws:iam::*:user/${aws:username}"
-               ]
-           },
-           {
-               "Sid": "NavigateInConsole",
-               "Effect": "Allow",
-               "Action": [
-                   "iam:GetGroupPolicy",
-                   "iam:GetPolicyVersion",
-                   "iam:GetPolicy",
-                   "iam:ListAttachedGroupPolicies",
-                   "iam:ListGroupPolicies",
-                   "iam:ListPolicyVersions",
-                   "iam:ListPolicies",
-                   "iam:ListUsers"
-               ],
-               "Resource": "*"
-           }
-       ]
-   }
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ViewOwnUserInfo",
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetUserPolicy",
+                "iam:ListGroupsForUser",
+                "iam:ListAttachedUserPolicies",
+                "iam:ListUserPolicies",
+                "iam:GetUser"
+            ],
+            "Resource": ["arn:aws:iam::*:user/${aws:username}"]
+        },
+        {
+            "Sid": "NavigateInConsole",
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetGroupPolicy",
+                "iam:GetPolicyVersion",
+                "iam:GetPolicy",
+                "iam:ListAttachedGroupPolicies",
+                "iam:ListGroupPolicies",
+                "iam:ListPolicyVersions",
+                "iam:ListPolicies",
+                "iam:ListUsers"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
 ```
 
 ## Allowing Creation and Deletion of Lightsail Resources Based on Tags<a name="security_iam_id-based-policy-examples-view-widget-tags"></a>

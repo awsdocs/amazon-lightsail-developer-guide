@@ -1,6 +1,6 @@
 # Delete an SSL/TLS certificate in Amazon Lightsail<a name="delete-tls-ssl-certificate-lightsail-load-balancer-https"></a>
 
- *Last updated: November 29, 2017* 
+ *Last updated: July 23, 2020* 
 
 You can delete an SSL/TLS certificate that you're no longer using\. For example, your certificate might be expired and you've already attached an updated certificate that's validated\. If you want to duplicate your certificate before deleting it, you can choose **Duplicate** from the same shortcut menu in step 5, below\.
 
@@ -12,10 +12,8 @@ Deleting an SSL/TLS certificate is final and can't be undone\. You have a quota 
 
 1. Choose the load balancer where your SSL/TLS certificate is attached\.
 
-1. Choose **Inbound traffic**\.
+1. Choose the **Inbound traffic** tab on your load balancer's management page\.
 
-1. Under **Certificates**, find the certificate you want to delete\.
+1. In the **Certificates** section of the page, choose the ellipsis icon \(⋮\) for the certificate that you want to delete, and choose **Delete**\.
 
-1. From the shortcut menu, choose **Delete**\.
-
-1. Choose **Yes, delete**\.
+   The **Delete** option is unavailable if the certificate you want to delete is in use\. To delete certificates that are in use, you need to first change the certificate of the load balancer that is using the certificate, or disable HTTPS on the load balancer that is using the certificate\.

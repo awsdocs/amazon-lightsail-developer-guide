@@ -1,6 +1,6 @@
 # Viewing instance metrics in Amazon Lightsail<a name="amazon-lightsail-viewing-instance-health-metrics"></a>
 
- *Last updated: February 27, 2020* 
+ *Last updated: May 27, 2020* 
 
 After you launch an instance in Amazon Lightsail, you can view its metric graphs on the **Metrics** tab of the instance’s management page\. Monitoring metrics is an important part of maintaining the reliability, availability, and performance of your resources\. Monitor and collect metric data from your resources regularly so that you can more readily debug a multi\-point failure, if one occurs\. For more information about metrics, see [Metrics in Amazon Lightsail](amazon-lightsail-resource-health-metrics.md)\.
 
@@ -15,9 +15,10 @@ When monitoring your resources, you should establish a baseline for normal resou
 ## Instance metrics available in Lightsail<a name="instance-metrics"></a>
 
 The following instance metrics are available:
++ **Burst capacity \(`BurstCapacityPercentage` and `BurstCapacityTime`\)** — Burst capacity percentage is the percentage of CPU performance available to your instance\. Burst capacity minutes is the amount of time available for your instance to burst at 100% CPU utilization\. Your instance continuously consumes and accrues burst capacity\. Burst capacity minutes is consumed at the full rate only when your instance operates at 100% CPU utilization\. For more information about instance burst capacity, see [Viewing instance burst capacity in Amazon Lightsail](amazon-lightsail-viewing-instance-burst-capacity.md)\.
 + **CPU utilization \(`CPUUtilization`\)** — The percentage of allocated compute units that are currently in use on the instance\. This metric identifies the processing power to run the applications on the instance\. Tools in your operating system can show a lower percentage than Lightsail when the instance is not allocated a full processor core\.
-**Note**  
-When viewing the CPU utilization metric graphs for your instances in the Lightsail console, you will see sustainable, and burstable zones\. For more information about these zones, see [CPU utilization sustainable and burstable zones](#cpu-utilization-zones)\.
+
+  When viewing the CPU utilization metric graphs for your instances in the Lightsail console, you will see sustainable, and burstable zones\. For more information about what these zones mean, see [CPU utilization sustainable and burstable zones](#cpu-utilization-zones)\.
 + **Incoming network traffic \(`NetworkIn`\)** — The number of bytes received on all network interfaces by the instance\. This metric identifies the volume of incoming network traffic to the instance\. The number reported is the number of bytes received during the period\. Because this metric is reported in 5\-minute intervals, divide the reported number by 300 to find Bytes/second\.
 + **Outgoing network traffic \(`NetworkOut`\)** — The number of bytes sent out on all network interfaces by the instance\. This metric identifies the volume of outgoing network traffic from the instance\. The number reported is the number of bytes sent during the period\. Because this metric is reported in 5\-minute intervals, divide the reported number by 300 to find Bytes/second\.
 + **Status check failures \(`StatusCheckFailed`\)** — Reports whether the instance passed or failed both the instance status check and the system status check\. This metric can be either 0 \(passed\) or 1 \(failed\)\. This metric is available at a 1\-minute frequency\.
@@ -30,7 +31,7 @@ Lightsail uses burstable instances which provide a baseline amount of CPU perfor
 
 On the CPU utilization metric graph for your instances, you will see a sustainable zone, and a burstable zone\. Your Lightsail instance can operate in the sustainable zone indefinitely with no impact to the operation of your system\.
 
-![\[Sustainable and burstable zones on the CPU utilization graph.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/cpu-utilization-burstable-zone.png)
+![\[Sustainable and burstable zones on the CPU utilization graph.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/cpu-utilization-burstable-zone.png)
 
 Your instance may begin operating in the burstable zone when under heavy load, such as when compiling code, installing new software, running a batch job, or serving peak load requests\. While operating in the burstable zone, your instance is consuming a higher amount of CPU cycles\. Therefore, it can only operate in this zone for a limited period of time\.
 

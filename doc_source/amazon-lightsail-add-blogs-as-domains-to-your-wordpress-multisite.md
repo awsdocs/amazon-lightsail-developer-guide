@@ -24,15 +24,15 @@ In this step you will activate the WordPress MU Domain Mapping plugin that is pr
 For more information, see [Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
 
 1. Choose **My Sites**, then **Network Admin**, and **Plugins** in the top navigation pane\.  
-![\[Plugins menu on the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/wp-multisite-add-blogs-as-domains-plugins-menu.png)
+![\[Plugins menu on the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/wp-multisite-add-blogs-as-domains-plugins-menu.png)
 
 1. Choose **Network Activate** listed under the WordPress MU Domain Mapping plugin\.  
-![\[WordPress MU domain mapping.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/wp-multisite-add-blogs-as-domains-wordpress-mu-domain-mapping.png)
+![\[WordPress MU domain mapping.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/wp-multisite-add-blogs-as-domains-wordpress-mu-domain-mapping.png)
 
 1. After the WordPress MU Domain Mapping plugin is active, choose **Settings**, then **Domain Mapping** in the left navigation pane\.
 
 1. In the Domain Mapping Configuration page, choose the **Permanent redirect** checkbox\. Leave all other options as they are\.  
-![\[WordPress domain mapping options.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/wp-multisite-add-blogs-as-domains-domain-options.png)
+![\[WordPress domain mapping options.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/wp-multisite-add-blogs-as-domains-domain-options.png)
 
 1. Choose **Save**\.
 
@@ -43,12 +43,12 @@ For more information, see [Getting the application user name and password for yo
 Complete these steps to create a blog site on your WordPress Multisite instance that uses a domain which is different than your main blog’s primary domain\.
 
 1. In the administration dashboard of your WordPress Multisite instance, choose **My Sites**, then **Network Admin**, and **Sites**\.  
-![\[Sites menu in the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/wp-multisite-add-blogs-as-domains-sites-menu.png)
+![\[Sites menu in the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/wp-multisite-add-blogs-as-domains-sites-menu.png)
 
 1. Choose **Add New** to add a new blog site\.
 
 1. Enter a site address, which is the domain that will be used for the new blog site\. For example, if your new blog site will use `example-blog.com` as the domain, then enter use `example-blog` into the text box\. Ignore the primary domain suffix displayed on the page\.  
-![\[Ignore the domain suffix in the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/wp-multisite-add-blogs-as-domains-ignore-domain-suffix.png)
+![\[Ignore the domain suffix in the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/wp-multisite-add-blogs-as-domains-ignore-domain-suffix.png)
 
 1. Enter a site title, select a site language, and enter an admin email\.
 
@@ -57,17 +57,17 @@ Complete these steps to create a blog site on your WordPress Multisite instance 
 1. Choose **My Sites**, then **Network Admin**, and **Sites** in the top navigation pane\. The newly created blog site should be listed\.
 
 1. Hover your cursor over the newly created blog site, and make note of the site ID number shown in the URL pop up at the bottom of the browser window\. You will need the site ID in the next set of steps\.  
-![\[WordPress site ID.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/wp-multisite-add-blogs-as-domains-site-id.png)
+![\[WordPress site ID.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/wp-multisite-add-blogs-as-domains-site-id.png)
 
 1. Choose **Settings**, then **Domain** in the left navigation pane\.
 
 1. Enter the site ID acquired earlier in this guide into the **Site ID** text box, and enter the domain for the new blog site into the **Domain** text box\.  
-![\[Adding a new domain in WordPress.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/wp-multisite-add-blogs-as-domains-new-domain.png)
+![\[Adding a new domain in WordPress.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/wp-multisite-add-blogs-as-domains-new-domain.png)
 
 1. Choose **Save**\.
 
 1. Choose **My Sites**, then **Network Admin**, and **Sites** in the top navigation pane\. The new blog site’s domain should be listed under the Mapping column as shown in the following screenshot:  
-![\[Sites list in the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/wp-multisite-add-blogs-as-domains-sites-list.png)
+![\[Sites list in the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/wp-multisite-add-blogs-as-domains-sites-list.png)
 
    At this point, the new blog site has been created in your WordPress Multisite instance, but the domain is not yet configured to route to the new blog site\. Continue to the next step to add an address record \(A record\) to your domain’s DNS zone\.
 
@@ -87,14 +87,14 @@ You can create a maximum of three DNS zones in the Lightsail console\. If you ne
 1. Under the **DNS zones** section of the page, choose the DNS zone for your new blog site’s domain\.
 
 1. In the DNS zone editor, choose **Add record**\.  
-![\[The DNS zone editor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/wp-multisite-add-blogs-as-domains-dns-zone.png)
+![\[The DNS zone editor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/wp-multisite-add-blogs-as-domains-dns-zone.png)
 
 1. Choose **A record** in the record type drop\-down menu\.
 
 1. In the **Subdomain** text box, enter an “at” \(@\) symbol to create a record for the root of the domain\.
 
 1. In the **Resolves to** text box, choose the static IP address attached to your WordPress Multisite instance\.  
-![\[Adding an address record to the DNS zone in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/wp-multisite-add-blogs-as-domains-a-record.png)
+![\[Adding an address record to the DNS zone in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/wp-multisite-add-blogs-as-domains-a-record.png)
 
 1. Choose the Save icon\.
 
@@ -109,12 +109,12 @@ Although you are able to access the new blog using the domain name, you’re not
 1. Choose **My Sites**, then **Network Admin**, and **Sites** in the top navigation pane\.
 
 1. Choose the new blog site from the list of sites\.  
-![\[Sites list in the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/wp-multisite-add-blogs-as-domains-sites.png)
+![\[Sites list in the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/wp-multisite-add-blogs-as-domains-sites.png)
 
 1. In the **Site Address \(URL\)** text box, enter the correct domain for the blog site  
-![\[Site address URL in the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/wp-multisite-add-blogs-as-domains-site-address-url.png)
+![\[Site address URL in the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/wp-multisite-add-blogs-as-domains-site-address-url.png)
 
 1. Choose **Save Changes**\.  
-![\[WordPress domains.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/wp-multisite-add-blogs-as-domains-choose-dashboard.png)
+![\[WordPress domains.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/wp-multisite-add-blogs-as-domains-choose-dashboard.png)
 
    The site URL is updated to reflect the correct domain name\. When you choose Dashboard, displayed under the URL, you should be redirected to the administration dashboard for your new blog site\.

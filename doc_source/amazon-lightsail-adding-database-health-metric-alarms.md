@@ -26,11 +26,11 @@ The following limits apply to alarms:
 
 Before you configure a metric alarm for your database, you should view the historical data of the metric\. Identify the metric's low\-levels, mid\-levels, and high\-levels over a period of the last two weeks\. In the following network transmit throughput \(`NetworkTransmitThroughput`\) metric graph example, the low\-levels are 0\-10 KB/second per hour, the mid\-levels are between 10\-20 KB/second per hour, and the high\-levels are between 20\-80 KB/second per hour\.
 
-![\[Database NetworkTransmitThroughput example.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-networkout-transmit-example.png)
+![\[Database NetworkTransmitThroughput example.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-networkout-transmit-example.png)
 
 If you configure the alarm threshold to be **greater than or equal to** somewhere in the low\-level range \(e\.g\., 5 KB/second per hour\), then you will get more frequent, and potentially unnecessary alarm notifications\. If you configure the alarm threshold to be **greater than or equal to** somewhere in the high\-level range \(e\.g\., 20 KB per hour\), then you will get less frequent alarm notifications, but that might be more important to investigate\. When you configure an alarm, and enable it, an alarm line representing the threshold appears on the graph as shown in the following example\. The alarm line labeled as 1 represents the threshold for Alarm 1, and the alarm line labeled as 2 represents the threshold for Alarm 2\.
 
-![\[Database NetworkTransmitThroughput example, with alarm line.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-networkout-transmit-graph-example-alarmed.png)
+![\[Database NetworkTransmitThroughput example, with alarm line.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-networkout-transmit-graph-example-alarmed.png)
 
 ## Default alarm settings<a name="default-database-alarm-settings"></a>
 
@@ -107,4 +107,4 @@ If either of these options is unavailable, you might not have configured the not
 ## Next steps after creating database alarms<a name="next-steps-creating-database-alarms"></a>
 
 There are a few additional tasks that you can perform for your database alarms:
-+ To stop receiving notifications, you can remove your email and mobile phone from Lightsail\. For more information, see [Deleting or disabling metric alarms in Amazon Lightsail](amazon-lightsail-deleting-notification-contacts.md)\. You can also disable or delete an alarm to stop receiving notifications for a specific alarm\. For more information, see [Deleting or disabling metric alarms in Amazon Lightsail](amazon-lightsail-deleting-health-metric-alarms.md)\.
++ To stop receiving notifications, you can remove your email and mobile phone from Lightsail\. For more information, see [Deleting notification contacts in Amazon Lightsail](amazon-lightsail-deleting-notification-contacts.md)\. You can also disable or delete an alarm to stop receiving notifications for a specific alarm\. For more information, see [Deleting or disabling metric alarms in Amazon Lightsail](amazon-lightsail-deleting-health-metric-alarms.md)\.

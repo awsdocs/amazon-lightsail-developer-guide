@@ -27,22 +27,22 @@ Complete the following steps to install the WP Offload Media plugin on your Word
    For more information, see [Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
 
 1. Hover over **Plugins** in the left navigation menu, and choose **Add New**\.  
-![\[Add new plugin menu item in the WordPress dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-wordpress-add-new-plugin-menu.png)
+![\[Add new plugin menu item in the WordPress dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-wordpress-add-new-plugin-menu.png)
 
 1. Search for **WP Offload Media Lite**\.
 
 1. In the search results, choose **Install Now** next to the **WP Offload Media** plugin\.  
-![\[WP Offload Media Lite plugin for WordPress.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-wp-offload-media-plugin.png)
+![\[WP Offload Media Lite plugin for WordPress.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-wp-offload-media-plugin.png)
 
 1. Choose **Activate** after the plugin is done installing\.
 
 1. In the left navigation menu, choose **Settings**, then choose **Offload Media**\.  
-![\[Wordpress dashboard settings.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-offload-media-menu.png)
+![\[Wordpress dashboard settings.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-offload-media-menu.png)
 
 1. In the **Offload Media** page, choose **Amazon S3** as the storage provider, then choose **Define access keys in wp\-config\.php**\.
 
    With this option, you must add your AWS account credentials to the `wp-config.php` on the instance\. These steps are covered later in this tutorial\.  
-![\[WP Offload Media page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-offload-media-configuration.png)
+![\[WP Offload Media page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-offload-media-configuration.png)
 
    Leave the **Offload Media** page open; you will return to it later in this tutorial\. Continue to the [Step 3: Create an IAM user and policy](#create-iam-user-and-policy-for-wordpress) section of this tutorial\.
 
@@ -61,12 +61,12 @@ Complete the following steps to create a new AWS Identity and Access Management 
 1. In the **User name** text box, enter a name for the new user\. Enter something descriptive, such as `wp_s3_user` or `wp_offload_media_plugin_user`, so that you can easily identify it in the future when performing maintenance\.
 
 1. Under the **Access type** section, choose **Programmatic access**\.  
-![\[Access types in the IAM console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-iam-user-programmatic-access.png)
+![\[Access types in the IAM console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-iam-user-programmatic-access.png)
 
 1. Choose **Next: Permissions**\.
 
 1. Choose **Attach existing policies directly**, search for **S3**, and then choose **AmazonS3FullAccess** in the search results\.  
-![\[Attach existing policies to a user in the IAM console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-iam-user-attach-existing-policies.png)
+![\[Attach existing policies to a user in the IAM console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-iam-user-attach-existing-policies.png)
 
 1. Choose **Next: Tags**, and then choose **Next: Review**\.
 
@@ -86,7 +86,7 @@ You can also connect to your instance using your own SSH client\. For more infor
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. Choose the browser\-based SSH client icon for the WordPress instance\.  
-![\[The browser-based SSH client icon in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-wordpress-browser-based-ssh-client.png)
+![\[The browser-based SSH client icon in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-wordpress-browser-based-ssh-client.png)
 
 1. In the SSH client window that appears, enter the following command to create a backup of the `wp-config.php` file in case something goes wrong:
 
@@ -123,7 +123,7 @@ You can also connect to your instance using your own SSH client\. For more infor
    ```
 
    The result should look like the following example:  
-![\[AWS account credentials in the wp-config.php file.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-ssh-wp-config-s3-bucket.png)
+![\[AWS account credentials in the wp-config.php file.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-ssh-wp-config-s3-bucket.png)
 
 1. Press **Ctrl\+X** to exit Nano, then press **Y**, and **Enter** to save your edits to the `wp-config.php` file\.
 
@@ -134,7 +134,7 @@ You can also connect to your instance using your own SSH client\. For more infor
    ```
 
    You will see a result similar to the following when the services have restarted:  
-![\[Restarting the services on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-ssh-restart-services-bitnami.png)
+![\[Restarting the services on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-ssh-restart-services-bitnami.png)
 
    Close the SSH window and toggle back to the **Offload Media** page that you left open earlier in this tutorial\. You are now ready to [create the Amazon S3 bucket using the WP Offload Media plugin](#create-the-amazon-s3-bucket)\.
 
@@ -149,17 +149,17 @@ Complete the following steps to create the Amazon S3 bucket using the WP Offload
    You should now see that the Amazon S3 provider is configured\.
 
 1. Choose **Create new bucket**\.  
-![\[Creating a new Amazon S3 bucket using the WP Offload Media plugin.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-offload-media-create-new-bucket.png)
+![\[Creating a new Amazon S3 bucket using the WP Offload Media plugin.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-offload-media-create-new-bucket.png)
 
 1. In the **Region** drop\-down menu, choose the desired AWS Region\. We recommend that you choose the same region in which your WordPress instance is located\.
 
 1. In the **Bucket** text box, enter a name for the new S3 bucket\.  
-![\[Configuring the new Amazon S3 bucket using the WP Offload Media plugin.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-offload-media-bucket-configuration.png)
+![\[Configuring the new Amazon S3 bucket using the WP Offload Media plugin.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-offload-media-bucket-configuration.png)
 
 1. Choose **Create New Bucket**\.
 
    The page refreshes to confirm that a new bucket was created\. Review the settings that appear and adjust them accordingly to how you want your WordPress website to behave\.  
-![\[WP Offload Media plugin settings.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-offload-media-settings-saved.png)
+![\[WP Offload Media plugin settings.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-offload-media-settings-saved.png)
 
    From now on, images and attachments added to blog posts are automatically uploaded to the Amazon S3 bucket that you created\.
 

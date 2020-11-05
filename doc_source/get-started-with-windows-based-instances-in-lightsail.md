@@ -1,8 +1,8 @@
 # Get started with Windows Server\-based instances in Lightsail<a name="get-started-with-windows-based-instances-in-lightsail"></a>
 
- *Last updated: October 16, 2017* 
+ *Last updated: September 3, 2020* 
 
-You can create Lightsail instances that run the Windows Server operating system \(OS\)\. We have two OS blueprints available: Windows Server 2016 or Windows Server 2012 R2\. In addition, we have a blueprint that comes preconfigured with SQL Server Express 2016\.
+You can create Lightsail instances that run the Windows Server operating system \(OS\)\. We have three OS blueprints available: Windows Server 2019, Windows Server 2016 R2, and Windows Server 2012 R2\. In addition, we have a blueprint that comes preconfigured with SQL Server Express 2016\.
 
 This topic provides information about choosing your software, creating your Windows Server\-based instance, and connecting to it\.
 
@@ -12,9 +12,13 @@ Learn more about [Windows Server on AWS](https://aws.amazon.com/windows/)
 
 There are three options for creating a Windows Server\-based instance in Lightsail\.
 
+ **Windows Server 2019**   
+Unless you need to run Windows Server 2012 R2 or Windows Server 2016 for some reason, we recommend using the latest version of Windows Server 2019\.  
+Lightsail running Windows Server is a fast and dependable environment for deploying applications using the Microsoft Web Platform\. Lightsail enables you to run any compatible Windows\-based solution on AWS' high\-performance, reliable, cost\-effective, cloud computing platform\. Common Windows use cases include Enterprise Windows\-based application hosting, website and web\-service hosting, data processing, distributed testing, ASP\.NET application hosting, and any other application requiring Windows software\.  
+ [Learn more about the Windows Server 2019 image](https://aws.amazon.com/marketplace/pp/B07QZ4XZ8F) 
+
  **Windows Server 2016**   
-Unless you need to run Windows Server 2012 R2 for some reason, we recommend using the latest version of Windows Server 2016\.  
-Lightsail running Windows Server is a fast and dependable environment for deploying applications using the Microsoft Web Platform\. Lightsail enables you to run any compatible Windows\-based solution on the AWS high\-performance, reliable, cost\-effective, cloud computing platform\. Common Windows Server use cases include Enterprise Windows\-based application hosting, website and web service hosting, data processing, media transcoding, distributed testing, ASP\.NET application hosting, and any other application requiring Windows software\.  
+Lightsail running Windows Server is a fast and dependable environment for deploying applications using the Microsoft Web Platform\. Lightsail enables you to run any compatible Windows\-based solution on AWS' high\-performance, reliable, cost\-effective, cloud computing platform\. Common Windows use cases include Enterprise Windows\-based application hosting, website and web\-service hosting, data processing, distributed testing, ASP\.NET application hosting, and any other application requiring Windows software\.  
  [Learn more about the Windows Server 2016 image](https://aws.amazon.com/marketplace/pp/B01M7SJEU7) 
 
  **Windows Server 2012 R2**   
@@ -42,7 +46,7 @@ You can create a Windows Server\-based instance using the Lightsail console or b
 
 1. Select the **Microsoft Windows** platform\.
 
-1. To choose the Windows Server 2016 or 2012 R2 blueprint, choose **OS Only**\.
+1. To choose the Windows Server 2019, Windows Server 2016 or 2012 R2 blueprint, choose **OS Only**\.
 
    To choose the SQL Server Express blueprint, choose **Apps \+ OS**\.
 
@@ -62,11 +66,11 @@ Some instance plans are not available for some blueprints\. For example, you can
 
 1. Choose one of the following options to add tags to your instance:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
@@ -125,7 +129,7 @@ After you create your instance, you may need to wait up to 15 minutes before you
 **To connect using the Lightsail browser\-based RDP client**
 
 1. On the home page, choose the **Connect using RDP** icon next to your instance\.  
-![\[The quickest way to connect to your Windows Server-based Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/connect-to-windows-instance-using-rdp-connection-shortcut.png)
+![\[The quickest way to connect to your Windows Server-based Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/connect-to-windows-instance-using-rdp-connection-shortcut.png)
 
 1. Alternately, you can connect to your instance from the shortcut menu or the instance management page\.
 
@@ -140,7 +144,7 @@ After you create your instance, you may need to wait up to 15 minutes before you
 1. Paste the IP address into the **Computer** field\.
 
 1. Choose **Show Options**, and then type `Administrator` for your **User name**\.  
-![\[Remote Desktop Connection application in Windows\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/remote-desktop-connection-windows-server-based-instance-lightsail.png)
+![\[Remote Desktop Connection application in Windows\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/remote-desktop-connection-windows-server-based-instance-lightsail.png)
 
 1. Choose **Connect**\.
 
@@ -153,7 +157,7 @@ After you create your instance, you may need to wait up to 15 minutes before you
 1. Copy the default password to the clipboard\.
 
 1. Paste your password into **Remote Desktop Connection**, and then choose **Remember me** to prevent this dialog box from appearing in the future\.  
-![\[Enter credentials in Remote Desktop Connection in Windows\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/remote-desktop-connection-enter-credentials-lightsail-windows.png)
+![\[Enter credentials in Remote Desktop Connection in Windows\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/remote-desktop-connection-enter-credentials-lightsail-windows.png)
 
 1. Choose **OK**\.
 

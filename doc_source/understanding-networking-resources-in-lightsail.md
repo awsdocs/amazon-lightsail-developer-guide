@@ -1,24 +1,22 @@
 # Networking resources in Lightsail<a name="understanding-networking-resources-in-lightsail"></a>
 
 **Note**  
-Lightsail has several networking resources to choose from: DNS zones, load balancers, and static IP addresses\. These resources improve how users and outside services connect to your Lightsail instances\. DNS helps make your web application easier to find, static IP addresses let you keep the same IP address every time you reboot your instance, and load balancers add redundancy and help you handle more web traffic\.
+Lightsail has several networking resources to choose from: Static IPs, content delivery network \(CDN\) distributions, DNS zones, and load balancers\. These resources improve how users and outside services connect to your Lightsail instances\. 
 
- *Last updated: November 29, 2017* 
+ *Last updated: July 23, 2020* 
 
-## DNS zones<a name="networking-resources-dns-zones"></a>
+## Distributions<a name="networking-resources-distributions"></a>
 
-You can create *DNS zones* to make it easier to find your web application\.
-
- [Learn more about DNS zones](understanding-dns-in-amazon-lightsail.md) 
-
-## Lightsail load balancers<a name="networking-resources-load-balancers"></a>
-
-You can create *load balancers* to add redundancy or to handle more traffic\.
-
- [Learn more about load balancers](understanding-lightsail-load-balancers.md) 
+You can create a content delivery network \(CDN\) distribution to speed up the delivery of your content to your users around the world\. For more information, see [Content delivery network distributions in Amazon Lightsail](amazon-lightsail-content-delivery-network-distributions.md)\.
 
 ## Static IPs<a name="networking-resources-static-ip-addresses"></a>
 
-You can create *static IP addresses* to keep the same IP address every time you reboot your instance\.
+You can create *static IP addresses* to keep the same IP address every time you reboot your instance\. For more information, see [Static IP addresses in Amazon Lightsail](understanding-static-ip-addresses-in-amazon-lightsail.md)\.
 
- [Learn more about Static IPs](understanding-static-ip-addresses-in-amazon-lightsail.md) 
+## DNS zones<a name="networking-resources-dns-zones"></a>
+
+You can create *DNS zones* to make it easier to find your web application\. For more information, see [DNS in Amazon Lightsail](understanding-dns-in-amazon-lightsail.md)\.
+
+## Load balancers<a name="networking-resources-load-balancers"></a>
+
+You can create *load balancers* to add redundancy or to handle more traffic\. For more information, see [Load balancers in Amazon Lightsail](understanding-lightsail-load-balancers.md)\.

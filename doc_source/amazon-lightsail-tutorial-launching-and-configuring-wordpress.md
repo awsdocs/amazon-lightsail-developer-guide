@@ -29,17 +29,17 @@ For more information about creating an instance in Lightsail, see [Creating an A
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the **Instances** tab of the Lightsail home page, choose **Create instance**\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-01.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-01.png)
 
 1. Choose the AWS Region and Availability Zone for your instance\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-02.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-02.png)
 
 1. Choose your instance image\.
 
    1. Choose **Linux/Unix** as the platform\.
 
    1. Choose **WordPress** as the blueprint\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-03.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-03.png)
 
 1. Choose an instance plan\.
 
@@ -52,7 +52,7 @@ For more information about creating an instance in Lightsail, see [Creating an A
    + Must contain 2 to 255 characters\.
    + Must start and end with an alphanumeric character or number\.
    + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-04.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-04.png)
 
 1. Choose **Create instance**\.
 
@@ -66,16 +66,16 @@ Complete the following steps to connect to your instance using the browser\-base
 For more information, see [Getting the application user name and password for your Certified by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)
 
 1. On the **Instances** tab of the [Lightsail home page](https://lightsail.aws.amazon.com/), choose the SSH quick\-connect icon for your WordPress instance\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-05.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-05.png)
 
 1. After the browser\-based SSH client window opens, enter the following command to retrieve the default application password:
 
    ```
-   $HOME/bitnami_application_password
+   cat $HOME/bitnami_application_password
    ```
 
 1. Make note of the password displayed on the screen\. You use it later to sign in to the administration dashboard of your WordPress website\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-06.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-06.png)
 
 ## Step 4: Sign in to the administration dashboard of your WordPress website<a name="signing-in-to-the-administration-dashboard"></a>
 
@@ -93,17 +93,17 @@ For more information, see [Getting the application user name and password for yo
    ```
 
    In the address, replace *PublicIpAddress* with the public IP address of your WordPress instance\. You can get your instance's public IP address from the Lightsail console as shown in the following example:  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-wordpress-tutorial-public-ip-address.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-wordpress-tutorial-public-ip-address.png)
 
 1. In the **Username or Email Address** box, enter `user`\.
 
 1. In the **Password** box, enter the default password obtained earlier in this tutorial\.
 
 1. Choose **Log in**\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-07.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-07.png)
 
    You are now signed in to the administration dashboard of your WordPress website where you can perform administrative actions\. For more information about administering your WordPress website, see the [WordPress Codex](https://codex.wordpress.org/) in the WordPress documentation\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-08.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-08.png)
 
 ## Step 5: Create a Lightsail static IP address and attach it to your WordPress instance<a name="tutorial-launching-and-configuring-wordpress-creating-a-lightsail-static-ip"></a>
 
@@ -115,16 +115,16 @@ Complete the following steps to create a static IP address and attach it to your
 For more information, see [Create a static IP and attach it to an instance in Amazon Lightsail](lightsail-create-static-ip.md)\.
 
 1. On the **Instances** tab of the [Lightsail home page](https://lightsail.aws.amazon.com/), choose your running WordPress instance\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-09.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-09.png)
 
 1. Choose the **Networking** tab, then choose **Create static IP**\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-10.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-10.png)
 
 1. The static IP location, and attached instance are pre\-selected based on the instance that you chose earlier in this tutorial\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-11.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-11.png)
 
 1. Name your static IP, then choose **Create**\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-12.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-12.png)
 
 ## Step 6: Create a Lightsail DNS zone and map a domain to your WordPress instance<a name="tutorial-launching-and-configuring-wordpress-creating-a-dns-zone"></a>
 
@@ -136,15 +136,15 @@ Complete the following steps to create a Lightsail DNS zone and map a domain to 
 For more information, see [Creating a DNS zone to manage your domain’s DNS records in Amazon Lightsail](lightsail-how-to-create-dns-entry.md)\.
 
 1. On the **Networking** tab of the [Lightsail home page](https://lightsail.aws.amazon.com/), choose **Create DNS zone**\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-13.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-13.png)
 
 1. Enter your domain, then choose **Create DNS zone**\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-14.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-14.png)
 
 1. Make note of the name server addresses listed on the page\.
 
    You add these name server addresses to your domain name’s registrar to transfer management of your domain’s DNS records to Lightsail\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-15.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-15.png)
 
 1. After management of your domain’s DNS records are transferred to Lightsail, add an A record to point the apex of your domain to your WordPress instance, as follows:
 
@@ -155,7 +155,7 @@ For more information, see [Creating a DNS zone to manage your domain’s DNS rec
    1. In the **Maps to** box, choose the static IP that you attached to the WordPress instance in the previous step of this tutorial\.
 
    1. Choose the save icon\.  
-![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-wordpress-tutorial-16.png)
+![\[Launching and configuring WordPress in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-wordpress-tutorial-16.png)
 
    Allow time for the change to propagate through the internet's DNS before your domain begins routing traffic to your WordPress instance\.
 

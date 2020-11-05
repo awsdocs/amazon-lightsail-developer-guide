@@ -1,6 +1,6 @@
 # Frequently Asked Questions in Amazon Lightsail<a name="amazon-lightsail-frequently-asked-questions-faq"></a>
 
- *Last updated: February 27, 2020* 
+ *Last updated: October 15, 2020* 
 
 This topic answers frequently asked questions \(FAQ\)\. If you have a FAQ that is not answered here, use the **Questions? Comments?** feedback button at the bottom of the page\. You can also post a question in the [Lightsail discussion forum](https://forums.aws.amazon.com/forum.jspa?forumID=231)\.
 
@@ -10,6 +10,7 @@ This topic answers frequently asked questions \(FAQ\)\. If you have a FAQ that i
 + [Databases](#amazon-lightsail-faq-databases)
 + [Block storage](#amazon-lightsail-faq-block-storage)
 + [Load balancers](#amazon-lightsail-faq-load-balancers)
++ [Content delivery network distributions](#amazon-lightsail-faq-cdn-distributions)
 + [Certificates](#amazon-lightsail-faq-certificates)
 + [Manual and automatic snapshots](#amazon-lightsail-faq-snapshots)
 + [Networking](#amazon-lightsail-faq-networking)
@@ -54,7 +55,7 @@ For more information, see [AWS Regions and Availability Zones in Lightsail](unde
 Availability Zones are collections of data centers that run on physically distinct, independent infrastructure and are engineered to be highly reliable\. Common points of failure such as generators and cooling equipment are not shared between Availability Zones\. Additionally, Availability Zones are physically separate, so that even extremely uncommon disasters such as fires, tornados, or flooding can affect only a single Availability Zone\.
 
 **What are the Lightsail service quotas?**  
-You can currently create up to 20 Lightsail instances, 5 static IPs, 3 DNS zones, 20 TB of attached block storage, 40 databases, and 5 load balancers in a Lightsail account\. You can also generate up to 20 certificates during each calendar year\. If you need to increase your account quota for instances, static IPs, block storage, or certificates in your account, please open a case with [customer service](https://console.aws.amazon.com/support/home?region=us-east-1)\. We do not currently support increases for DNS zones or load balancers\.
+For the latest Lightsail service quotas, including which quotas can be increased, see the [Lightsail service quotas](https://docs.aws.amazon.com/general/latest/gr/lightsail.html#limits_lightsail) in the *AWS General Reference*\. If you need to increase a quota, please open a case with [customer service](https://console.aws.amazon.com/support/home?region=us-east-1)\.
 
 **How can I get more help?**  
 We're here for you\. Our context\-sensitive **Help** panel in Lightsail offers immediate helpful tips about your actions in the console\. From the Lightsail console, you can also access a library of [getting started guides](https://lightsail.aws.amazon.com/ls/docs/getting-started), [overviews](https://lightsail.aws.amazon.com/ls/docs/overview), and [how\-to topics](https://lightsail.aws.amazon.com/ls/docs/how-to)\. And if you want to use the Lightsail API, or AWS CLI, Lightsail has a full API reference for all supported programming languages\. You can also use Lightsail support resources\.  
@@ -71,11 +72,11 @@ A Lightsail instance is a virtual private server \(VPS\) that lives in the AWS C
 Also referred to as a bundle, a Lightsail plan includes a virtual server with a fixed amount of memory \(RAM\) and compute \(vCPUs\), SSD\-based storage \(disks\), and a free data transfer allowance\. Lightsail plans also offer static IP addresses \(5 per account\) and DNS management \(3 domain zones per account\)\. Lightsail plans are charged on an hourly, on\-demand basis, so you only pay for a plan when you're using it\.
 
 **What software can I run on my instances?**  
-Lightsail offers a range of operating system and application templates that are automatically installed when you create a new Lightsail instance\. Application templates include WordPress, WordPress Multisite, Django, Drupal, Ghost, Joomla\!, Magento, Redmine, LAMP, Nginx \(LEMP\), MEAN, and Node\.js\.  
+Lightsail offers a range of operating system and application templates that are automatically installed when you create a new Lightsail instance\. Application templates include WordPress, WordPress Multisite, cPanel & WHM, Django, Drupal, Ghost, Joomla\!, Magento, Redmine, LAMP, Nginx \(LEMP\), MEAN, and Node\.js\.  
 You can install additional software on your instances by using the in\-browser SSH or your own SSH client\.
 
 **What operating systems can I use with Amazon Lightsail?**  
-Lightsail currently supports 6 Linux or Unix\-like distributions: Amazon Linux, CentOS, Debian, FreeBSD, OpenSUSE, and Ubuntu, as well as two Windows Server versions: 2012 R2 and 2016\.
+Lightsail currently supports 7 Linux or Unix\-like distributions: Amazon Linux, Amazon Linux 2, CentOS, Debian, FreeBSD, OpenSUSE, and Ubuntu, as well as three Windows Server versions: 2012 R2, 2016, and 2019\.
 
 **How do I create a Lightsail instance?**  
 After logging in to Lightsail, you can use the Lightsail [console](https://lightsail.aws.amazon.com/ls/webapp), command line interface \(CLI\), or API to create and manage instances\.  
@@ -227,6 +228,67 @@ Session persistence enables the load balancer to bind a visitor's session to a s
 **What kind of connections do Lightsail load balancers support?**  
 Lightsail load balancers support HTTP and HTTPS connections\.
 
+## Content delivery network distributions<a name="amazon-lightsail-faq-cdn-distributions"></a>
+
+**What can I do with Lightsail CDN distributions?**  
+Lightsail content delivery network \(CDN\) distributions make it easy for you to accelerate the delivery of content hosted on your Lightsail resources by storing and serving it on Amazon’s global delivery network, powered by Amazon CloudFront\. Distributions also help you enable your website to support HTTPS traffic by providing simple SSL certificate creation and hosting\. Finally, distributions can help reduce the load on your Lightsail resources and help your website handle large traffic spikes\. Like all of Lightsail’s features, setup can be completed with just a few clicks, and you pay a simple monthly price\.
+
+**What types of resources can I use as the origin of my distributions?**  
+Lightsail distributions allow you to use your Lightsail instances and load balancers as origins\. Resources outside of Lightsail, such as S3 buckets, are not supported\.
+
+**Do I need to attach a static IP to my Lightsail instance in order to use it as an origin for my Lightsail distribution?**  
+Yes, static IPs are required to be attached to instances that are specified as origins\.
+
+**How do I setup a Lightsail distribution with my WordPress website?**  
+Simply create your distribution, select your WordPress instance as the origin, choose your plan, and you’re all set\. Lightsail distributions automatically configure your distribution settings to optimize performance for most WordPress configurations\.
+
+**Can I attach multiple origins?**  
+Although you cannot attach multiple origins to your Lightsail distribution, you can attach multiple instances to a Lightsail load balancer and specify it as the origin of your distribution\.
+
+**Do Lightsail distributions support certificate creation?**  
+Yes\. Lightsail distributions makes it easy to create, verify, and attach certificates directly from your distribution’s management page\.
+
+**Is a certificate required?**  
+A certificate is only required if you wish to use your custom domain name with your distribution\. All Lightsail distributions are created with a unique Amazon CloudFront domain name that is HTTPS\-enabled\. However, if you wish to use your custom domain with your distribution, then you need to attach a certificate for your custom domain to your distribution\.
+
+**Is there a limit to the number of certificates I can create?**  
+Yes, refer to the [Lightsail service quotas](https://docs.aws.amazon.com/general/latest/gr/lightsail.html#limits_lightsail) for more information\.
+
+**How can I configure my distribution to redirect HTTP requests to HTTPS?**  
+Lightsail distributions automatically redirect all HTTP requests to HTTPS to ensure that your content is served securely\.
+
+**How can I configure my apex domain to point to my Lightsail distribution?**  
+In order to point your apex domain to your CDN distribution, you must create an ALIAS record in the domain name system \(DNS\) of your domain that maps your apex domain to your distribution’s default domain\. If your DNS hosting provider does not support ALIAS records, you can use Lightsail DNS zones to easily configure your apex domain to point to your distribution’s domain\.
+
+**What are the differences between Lightsail’s instance data transfer quotas and distribution data transfer quotas?**  
+While data transfer IN and OUT count toward your instance’s data transfer quota, only data transfer OUT to your origin and to your viewers counts toward you distribution’s quota\. In addition, all data transfer OUT in excess of your distribution’s quota is charged an overage fee, whereas some types of data transfer OUT are free for instances\. Finally, Lightsail distributions use a different regional overage model, though the majority of the rates are the same as those charged for instance overage\.
+
+**Can I change the plan associated with my distribution?**  
+Yes, you can change your distribution's plan once per month\. If you wish to change your plan a second time, you must wait until the beginning of the following month to do so\.
+
+**How do I know if my distribution is working?**  
+Lightsail distributions provide you with a variety of metrics that track the performance of your distribution, including the total number of requests your distribution has received, the amount of data your distribution has sent to clients and to your origin, and the percentage of requests that have resulted in errors\. Additionally, you can create alerts that are linked to distribution metrics\.
+
+**Can I delete cached content on my Lightsail distribution?**  
+You can delete all cached content, but not specific files or folders\.
+
+**When should I use Lightsail distributions versus Amazon CloudFront distributions?**  
+Lightsail distributions are designed specifically for users who are hosting websites or web applications on Lightsail resources, such as instances and load balancers\. If you’re using another service in AWS to host your website or app, have complex configuration needs, or have a workload that involves a high number of requests per second or large amount of video streaming, we recommend that you use Amazon CloudFront\.
+
+**Can I move my Lightsail content delivery network \(CDN\) distribution to Amazon CloudFront?**  
+Yes, you can move your Lightsail distribution by creating a similarly configured distribution in Amazon CloudFront\. All of the settings that can be configured in a Lightsail distribution can also be configured in a CloudFront distribution\. Complete the following steps to move your distribution to CloudFront:  
++ Take a snapshot of your Lightsail instance that is configured as your distribution's origin\. Export the snapshot to Amazon EC2, and then create a new instance from the snapshot in EC2\. For more information, see [Exporting Amazon Lightsail snapshots](amazon-lightsail-exporting-snapshots.md)\.
+**Note**  
+ Create an application load balancer in Elastic Load Balancing if you need to load balance your website or web application\. For more information, see the [Elastic Load Balancing User Guide](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html)\.
++ Disable custom domains for your Lightsail distribution to detach certificates that you might have attached to it\. For more information, see [Disabling custom domains for your Amazon Lightsail distributions](amazon-lightsail-disabling-distribution-custom-domains.md)\.
++ Using the AWS Command Line Interface \(AWS CLI\), run the get\-distributions command to get a list of your Lightsail distribution’s settings\. For more information, see [get\-distributions](https://docs.aws.amazon.com/cli/latest/reference/lightsail/get-distributions.html) in the *AWS CLI Reference*\.
++ Sign in to the [CloudFront console](https://console.aws.amazon.com/cloudfront/) and create a distribution with the same configuration settings as your Lightsail distribution\. For more information, see [Creating a Distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-creating-console.html) in the *Amazon CloudFront Developer Guide*\.
++ Create a certificate in AWS Certificate Manager \(ACM\) that you will attach to your CloudFront distribution\. For more information, see [Request a Public Certificate](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html) in the *ACM User Guide*\.
++ Update your CloudFront distribution to use the ACM certificate you created\. For more information, see [Updating your CloudFront distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-procedures.html#cnames-and-https-updating-cloudfront) in the *CloudFront User Guide*\.
+
+**How is Lightsail CDN intended to be used?**  
+Lightsail CDN distributions are created using fixed\-priced bundles of data transfer to make the cost of using the service simple and predictable\. Distribution bundles are designed to cover a month’s worth of usage\. Using distribution bundles in a way to avoid incurring overage fees \(including, but not limited to, frequently upgrading or downgrading bundles, or using an excessively large number of distributions with a single origin\) is beyond the intended scope of use and is not permitted\. In addition, workloads that involve a high number of requests per second or large amount of video streaming are not permitted\. Engaging in these behaviors may result in throttling or suspension of your data services or account\.
+
 ## Certificates<a name="amazon-lightsail-faq-certificates"></a>
 
 **How can I use Lightsail\-provisioned certificates?**  
@@ -346,19 +408,20 @@ Lightsail certificates and certificate management are free with use of a Lightsa
 They're free in Lightsail, as long as you are using them\! You don't pay for a static IP if it is attached to an instance\. Public IPs are a scarce resource and Lightsail is committed to helping to use them efficiently, so we charge a small $0\.005 USD/hour fee for static IPs not attached to an instance for more than 1 hour\.
 
 **What does data transfer cost?**  
-Your instance and database plans include a free data transfer allowance\.  
+Your instance, database, and content delivery network \(CDN\) distribution plans include a data transfer allowance\.  
 For Lightsail instances, both data transfer in and data transfer out of your instance count toward your data transfer allowance\. If you exceed your data transfer allowance, you will only get charged for data transfer OUT from a Lightsail instance to the internet or to AWS resources using the public IP address of the instance\. Both data transfer IN to Lightsail instances and data transfer OUT from a Lightsail instance when using the instance's private IP address are free beyond your data transfer allowance\.  
-For Lightsail managed databases, only data transfer OUT is counted against your allowance\. If you exceed your data transfer allowance, you will only get charged for data transfer OUT from a Lightsail managed database to the internet\.
+For Lightsail managed databases, only data transfer OUT is counted against your allowance\. If you exceed your data transfer allowance, you will only get charged for data transfer OUT from a Lightsail managed database to the internet\.  
+For Lightsail CDN distributions, all data transfer out of your distribution counts toward your allowance\. All data transfer out of your distribution will incur a charge after you exceed your distribution data transfer allowance\.
 
 **How does my data transfer allowance work with my load balancers?**  
-Your load balancer does not consume your data transfer allowance\. Traffic between the load balancer and the target instances is metered and counts toward your data transfer allowance for your instances, in the same way that traffic in from and out to the internet is counted toward your data transfer allowance for Lightsail instances that are not behind a load balancer\. Traffic into and out of your load balancer to the internet is not calculated toward the data transfer allowance for your instances\.
+Your load balancer does not consume your data transfer allowance\. Traffic between the load balancer and the target instances or distributions is metered and counts toward your data transfer allowance for your instances or distributions, in the same way that traffic in from and out to the internet is counted toward your data transfer allowance for Lightsail instances that are not behind a load balancer\. Traffic into and out of your load balancer to the internet is not calculated toward the data transfer allowance for your instances\.
 
 **What if I exceed my data transfer plan allowance?**  
-We have designed our data transfer plans so that the vast majority of our customers will be fully covered by their allowance and not incur any additional charges\. If you exceed your data transfer allowance, you will be charged an overage fee per GB of data transfer used \(data transfer OUT to the internet only\)\.  
-Even if you exceed your data transfer allowance, many types of data transfer are free\. Data transfer IN to Lightsail instances and databases is always free\. Data transfer OUT from a Lightsail instance to another Lightsail instance, in between Lightsail instances and Lightsail managed databases, or to AWS resources in the same Region is also free if private IP addresses are used\.
+We have designed our data transfer plans so that the vast majority of our customers will be fully covered by their allowance and not incur any additional charges\. If your instance exceeds its plan data transfer allowance, you will be charged an overage fee per GB of data transfer used \(data transfer OUT to the internet only\)\.  
+Even if your instance exceeds its plan data transfer allowance, many types of data transfer are free\. Data transfer IN to Lightsail instances and databases is always free\. Data transfer OUT from a Lightsail instance to another Lightsail instance, in between Lightsail instances and Lightsail managed databases, or to AWS resources in the same Region is also free if private IP addresses are used\.
 
 **What types of data transfer do I get charged for?**  
-When you exceed the monthly free data transfer allowance of your plan, you will get charged for data transfer OUT from a Lightsail instance to the internet or to another AWS Region or to AWS resources in the same Region when using public IP addresses\. The charge for these types of data transfer above the free allowance is as follows:  
+When you exceed the monthly free data transfer allowance of your instance plan, you will get charged for data transfer OUT from a Lightsail instance to the internet or to another AWS Region or to AWS resources in the same Region when using public IP addresses\. The charge for these types of data transfer above the free allowance is as follows:  
 • US East \(Ohio\) \(us\-east\-2\): $0\.09 USD/GB  
 • US East \(N\. Virginia\) \(us\-east\-1\): $0\.09 USD/GB  
 • US West \(Oregon\) \(us\-west\-2\): $0\.09 USD/GB  
@@ -372,9 +435,19 @@ When you exceed the monthly free data transfer allowance of your plan, you will 
 • EU \(Ireland\) \(eu\-west\-1\): $0\.09 USD/GB  
 • EU \(London\) \(eu\-west\-2\): $0\.09 USD/GB  
 • EU \(Paris\) \(eu\-west\-3\): $0\.09 USD/GB  
-Instances created in different Availability Zones can communicate between zones privately and for free, and are much less likely to be impaired concurrently\. Availability Zones enable you to build highly available applications and websites without increasing the cost of data transfer or compromising your application's security\.
+Instances created in different Availability Zones can communicate between zones privately and for free, and are much less likely to be impaired concurrently\. Availability Zones enable you to build highly available applications and websites without increasing the cost of data transfer or compromising your application's security\.  
+When you exceed the data transfer allowance of your Lightsail CDN distribution plan, you are charged for all data transfer OUT\. The charge for data transfer above your distribution’s allowance is different from Lightsail instances and is as follows:  
+• Asia Pacific: $0\.13 USD/GB  
+• Canada: $0\.09 USD/GB  
+• Europe: $0\.09 USD/GB  
+• India: $0\.13 USD/GB  
+• Japan: $0\.14 USD/GB  
+• Middle East: $0\.11 USD/GB  
+• South Africa: $0\.11 USD/GB  
+• South America: $0\.11 USD/GB  
+• United States: $0\.09 USD/GB 
 
-**How do my data transfer plan allowances vary by AWS Region?**  <a name="lightsail-faq-data-transfer-charges"></a>
+**How do my instance data transfer plan allowances vary by AWS Region?**  <a name="lightsail-faq-data-transfer-charges"></a>
 All AWS Regions have the same data transfer plan allowance as listed on [amazonlightsail\.com](http://amazonlightsail.com) and [amazonlightsail\.com/pricing](http://amazonlightsail.com/pricing), with the exception of the Asia Pacific \(Mumbai\) and the Asia Pacific \(Sydney\) Regions\. In these two AWS Regions, the data transfer plan allowance for instances is as follows:  
 • $3\.50 USD/month plan: \.5 TB  
 • $5 USD/month plan: 1 TB  
@@ -386,8 +459,8 @@ All AWS Regions have the same data transfer plan allowance as listed on [amazonl
 Data transfer allowances for Lightsail managed databases are the same in all regions\.
 
 **How does my data transfer allowance work for instances?**  
-Beyond the free data transfer IN and between instances, every single Lightsail plan also includes a healthy amount of free data transfer OUT\. For example, using the least expensive Lightsail bundle you can send up to 1 TB of data to and from the internet within the month, at no extra charge\. Your data transfer allowance resets every month, and you can consume it whenever you need within the month\.  
-If you delete your instance early and create another one, the free data transfer allowance is shared between the two instances\. Data transfer overages above the free allowance are charged at $0\.09 USD/GB\.
+Every Lightsail instance plan includes a data transfer allowance\. For example, using the $3\.50 USD per month plan, your instance can send to the internet and receive from the internet up to 1 TB of data each month, at no extra charge\. Your data transfer allowance resets every month, and your instance can consume it whenever it needs to within the month\.  
+After your instance reaches its data transfer allowance for the month, data transfer out to the internet is billed starting at $0\.09 USD per GB depending on the AWS Region in which your instance is located\. If you delete your instance and create another one in the same month, in the same AWS Region, the free data transfer allowance is shared between the two instances\.
 
 **What does Lightsail DNS management cost?**  
 DNS management is free within Lightsail\. You can create up to 3 DNS zones and as many records as you want for each DNS zone\. You also get a monthly allowance of 3 million DNS queries per month to your zones\. Beyond your first 3 million queries in a month, you are charged $0\.40 USD per 1 million DNS queries\.
@@ -416,7 +489,7 @@ Lightsail offers you an easy way to run and scale a wide set of cloud\-based app
 Exporting to Amazon EC2 allows you to run your application on a wider set of instance types, ranging from virtual machines with more CPU power, memory, and networking capabilities, to specialized or accelerated instances with FPGAs and GPUs\. In addition, Amazon EC2 performs less automatic management and set\-up, allowing you more control over how you configure your cloud environment, such as your VPC\. 
 
 **How does exporting to Amazon EC2 work?**  
-To get started, you need to export your manual snapshot of a Lightsail instance or block storage disk\. Snapshots of Ghost and Django instances cannot be exported to Amazon EC2 at this time\. Customers who are comfortable with Amazon EC2 can then use the Amazon EC2 creation wizard or API to create a new Amazon EC2 instances or Amazon EBS volumes, as they would from an existing EC2 AMI or EBS volume\. Alternatively, Lightsail also provides a guided Lightsail console experience to help you easily create a new EC2 instance\.
+To get started, you need to export your manual snapshot of a Lightsail instance or block storage disk\. Snapshots of cPanel & WHM, Django, and Ghost instances cannot be exported to Amazon EC2 at this time\. Customers who are comfortable with Amazon EC2 can then use the Amazon EC2 creation wizard or API to create a new Amazon EC2 instances or Amazon EBS volumes, as they would from an existing EC2 AMI or EBS volume\. Alternatively, Lightsail also provides a guided Lightsail console experience to help you easily create a new EC2 instance\.
 
 **How am I billed?**  
 Using the export to Amazon EC2 feature is free\. Once you have exported your manual snapshots to Amazon EC2, you will be charged for the Amazon EC2 image separately and in addition to your Lightsail manual snapshot\. Any new Amazon EC2 instances you launch will also be billed by Amazon EC2, including their Amazon EBS storage volume\(s\) and data transfer\. Refer to the [Amazon EC2 pricing page](https://aws.amazon.com/ec2/pricing/) for details on the pricing for your new instance and resources\. Lightsail resources that continue to run in your Lightsail account will continue to be billed at their regular rates until they are deleted\.
@@ -425,7 +498,7 @@ Using the export to Amazon EC2 feature is free\. Once you have exported your man
 The export feature allows you to export manual Lightsail disk snapshots but doesn't currently support manual snapshots of managed databases\. Disk snapshots can be rehydrated as Amazon EBS volumes from the Amazon EC2 console or API\.
 
 **What Lightsail resources can I export?**  
-The Lightsail export to Amazon EC2 feature is designed to support the export of Linux and Windows instances and their attached block storage \(if applicable\) to Amazon EC2\. It also supports the export of unattached block storage disks to Amazon EBS\. It does not currently support the export of load balancers, databases, static IPs or DNS records\. Additionally, snapshots of Ghost and Django instances cannot be exported to Amazon EC2 at this time\.
+The Lightsail export to Amazon EC2 feature is designed to support the export of Linux and Windows instances and their attached block storage \(if applicable\) to Amazon EC2\. It also supports the export of unattached block storage disks to Amazon EBS\. It does not currently support the export of load balancers, databases, static IPs or DNS records\. Additionally, snapshots of cPanel & WHM, Django, and Ghost instances cannot be exported to Amazon EC2 at this time\.
 
 ## Tags in Lightsail<a name="amazon-lightsail-faq-tagging"></a>
 

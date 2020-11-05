@@ -1,6 +1,6 @@
 # Creating instance metric alarms in Amazon Lightsail<a name="amazon-lightsail-adding-instance-health-metric-alarms"></a>
 
- *Last updated: February 27, 2020* 
+ *Last updated: November 4, 2020* 
 
 You can create an Amazon Lightsail alarm that watches a single instance metric\. An alarm can be configured to notify you based on the value of the metric relative to a threshold that you specify\. Notifications can be a banner displayed in the Lightsail console, an email sent to your email address, and an SMS text message sent to your mobile phone number\. For more information about alarms, see [Alarms in Amazon Lightsail](amazon-lightsail-alarms.md)\.
 
@@ -26,11 +26,11 @@ The following limits apply to alarms:
 
 Before you configure a metric alarm for your instance, you should view the historical data of the metric\. Identify the metric's low\-levels, mid\-levels, and high\-levels over a period of the last two weeks\. In the following outgoing network traffic \(`NetworkOut`\) metric graph example, the low\-levels are 0\-10 KB per hour, the mid\-levels are between 10\-20 KB per hour, and the high\-levels are between 20\-80 KB per hour\.
 
-![\[Instance NetworkOut example.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-networkout-graph-example.png)
+![\[Instance NetworkOut example.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-networkout-graph-example.png)
 
 If you configure the alarm threshold to be **greater than or equal to** somewhere in the low\-level range \(e\.g\., 5 KB per hour\), then you will get more frequent, and potentially unnecessary alarm notifications\. If you configure the alarm threshold to be **greater than or equal to** somewhere in the high\-level range \(e\.g\., 20 KB per hour\), then you will get less frequent alarm notifications, but that might be more important to investigate\. When you configure an alarm, and enable it, an alarm line representing the threshold appears on the graph as shown in the following example\. The alarm line labeled as 1 represents the threshold for Alarm 1, and the alarm line labeled as 2 represents the threshold for Alarm 2\.
 
-![\[Instance NetworkOut example, with alarm line.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-networkout-graph-example-alarmed.png)
+![\[Instance NetworkOut example, with alarm line.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-networkout-graph-example-alarmed.png)
 
 ## Default alarm settings<a name="default-instance-alarm-settings"></a>
 
@@ -62,7 +62,7 @@ Complete the following steps to create an instance metric alarm using the Lights
 
 1. Choose one of the following notification methods:
    + **Email** — You are notified by email when the alarm state changes to ALARM\.
-   + **SMS text message** — You are notified by SMS text message when the alarm state changes to ALARM\. SMS messaging is not supported in all AWS Regions in which you can create Lightsail resources, and SMS text messages cannot be sent to all countries/regions\.
+   + **SMS text message** — You are notified by SMS text message when the alarm state changes to ALARM\. SMS messaging is not supported in all AWS Regions in which you can create Lightsail resources, and SMS text messages cannot be sent to all countries/regions\. For more information, see [SMS text messaging support](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-adding-editing-notification-contacts#sms-support)\.
 **Note**  
 You are required to add an email address or mobile phone number if you select to be notified by email or SMS but you haven’t yet configured a notification contact in the resource’s AWS Region\. For more information, see [Notifications in Amazon Lightsail](amazon-lightsail-notifications.md)\.
 
@@ -107,4 +107,4 @@ If either of these options is unavailable, you might not have configured the not
 ## Next steps after creating instance alarms<a name="next-steps-creating-instance-alarms"></a>
 
 There are a few additional tasks that you can perform for your instance alarms:
-+ To stop receiving notifications, you can remove your email and mobile phone from Lightsail\. For more information, see [Deleting or disabling metric alarms in Amazon Lightsail](amazon-lightsail-deleting-notification-contacts.md)\. You can also disable or delete an alarm to stop receiving notifications for a specific alarm\. For more information, see [Deleting or disabling metric alarms in Amazon Lightsail](amazon-lightsail-deleting-health-metric-alarms.md)\.
++ To stop receiving notifications, you can remove your email and mobile phone from Lightsail\. For more information, see [Deleting notification contacts in Amazon Lightsail](amazon-lightsail-deleting-notification-contacts.md)\. You can also disable or delete an alarm to stop receiving notifications for a specific alarm\. For more information, see [Deleting or disabling metric alarms in Amazon Lightsail](amazon-lightsail-deleting-health-metric-alarms.md)\.

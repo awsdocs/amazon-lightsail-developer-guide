@@ -43,7 +43,7 @@ An address \(A\) record maps a domain, such as `example.com`, or a subdomain, su
    1. Enter the static IP address \(public IP address\) of your Lightsail instance in the **Value** text box\.
 
    1. Keep the routing policy as **Simple**\.  
-![\[Address record example in a Route 53 hosted zone.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-route-53-hosted-zone-a-record.png)
+![\[Address record example in a Route 53 hosted zone.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-route-53-hosted-zone-a-record.png)
 **CNAME – Canonical name**  
 A canonical name \(CNAME\) record maps an alias or subdomain, such as `www.example.com`, to a domain, such as `example.com`, or a subdomain, such as `www2.example.com`\. A CNAME record redirects one domain to another\.  
 
@@ -54,7 +54,7 @@ A canonical name \(CNAME\) record maps an alias or subdomain, such as `www.examp
    1. Enter a domain or subdomain in the **Value** text box\.
 
    1. Keep the routing policy as **Simple**\.  
-![\[Canonical name record example in a Route 53 hosted zone.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-route-53-hosted-zone-cname-record.png)
+![\[Canonical name record example in a Route 53 hosted zone.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-route-53-hosted-zone-cname-record.png)
 
 1. Choose **Create** to add the record to your hosted zone\.
 

@@ -1,6 +1,6 @@
 # Snapshots in Amazon Lightsail<a name="understanding-instance-snapshots-in-amazon-lightsail"></a>
 
- *Last updated: October 2, 2019* 
+ *Last updated: September 24, 2020* 
 
 You can create point\-in\-time snapshots of instances, databases, and block storage disks in Amazon Lightsail, and use them as baselines to create new resources or for data backup\. A snapshot contains all of the data that is needed to restore your resource \(from the moment when the snapshot was taken\)\. When you restore a resource by creating it from a snapshot, the new resource begins as an exact replica of the original resource that was used to create the snapshot\. You will be billed a [snapshot storage fee](https://aws.amazon.com/lightsail/pricing/) for snapshots on your Lightsail account; whether they are manual snapshots, automatic snapshots, copied snapshots, or system disk snapshots\. Your resources can fail at any time—create snapshots frequently to avoid permanently losing your data\.
 
@@ -25,13 +25,15 @@ For more information about creating manual snapshots, see the following guides:
 
 ## Automatic snapshots<a name="automatic-snapshots"></a>
 
-If you're hosting critical information on your Lightsail instance or block storage disk, you should back them up often by creating manual snapshots\. However, it's not always easy to find the time to perform frequent administrative tasks\. If that's the case for you, then use automatic snapshots to have Lightsail create daily backups of your instance or block storage disk on your behalf, without manual interaction\. The latest seven automatic snapshots are stored before the oldest one is replaced with the newest one\.
+If you're hosting critical information on your Lightsail instance or block storage disk, you should back them up often by creating manual snapshots\. However, it's not always easy to find the time to perform frequent administrative tasks\. If that's the case for you, then use automatic snapshots to have Lightsail create daily backups of your instance or block storage disk on your behalf, without manual interaction\. The latest seven daily automatic snapshots are stored before the oldest one is replaced with the newest one\.
 
 For more information about automatic snapshots, see the following guides:
 + [Enabling or disabling automatic snapshots for instances or disks in Amazon Lightsail](amazon-lightsail-configuring-automatic-snapshots.md)
 + [Changing the automatic snapshot time for instances or disks in Amazon Lightsail](amazon-lightsail-changing-automatic-snapshot-time.md)
-+ [Keeping automatic snapshots of instances or disks in Amazon Lightsail](amazon-lightsail-keeping-automatic-snapshots.md)
 + [Deleting automatic snapshots of instances or disks in Amazon Lightsail](amazon-lightsail-deleting-automatic-snapshots.md)
+
+**Important**  
+All automatic snapshots associated with a resource are deleted when you delete the source resource\. This behavior differs from manual snapshots, which are kept in your Lightsail account even after you delete the source resource\. To keep your automatic snapshots when you delete the source resource, see [Keeping automatic snapshots of instances or disks in Amazon Lightsail](amazon-lightsail-keeping-automatic-snapshots.md)\.
 
 ## System disk snapshots<a name="system-disk-snapshots"></a>
 
@@ -56,7 +58,7 @@ Instance and block storage disk snapshots can be copied from one Amazon Web Serv
 Lightsail is the easiest way to get started with AWS\. However, there are limitations with Lightsail that are not present in Amazon EC2 or other AWS services\. Export your Lightsail instance and block storage disk snapshots to Amazon EC2 to take advantage of the wider range of instance types available, and use the full range of services in AWS\. For more information, see [Exporting Amazon Lightsail snapshots](amazon-lightsail-exporting-snapshots.md)\.
 
 **Note**  
-Snapshots of Ghost and Django instances cannot be exported to Amazon EC2 at this time\.
+Snapshots of cPanel & WHM, Django, and Ghost instances cannot be exported to Amazon EC2 at this time\.
 
 ## Deleting snapshots<a name="deleting-snapshots"></a>
 

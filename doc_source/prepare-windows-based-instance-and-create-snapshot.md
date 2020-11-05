@@ -1,18 +1,17 @@
 # Creating a snapshot of your Windows Server instance in Amazon Lightsail<a name="prepare-windows-based-instance-and-create-snapshot"></a>
 
- *Last updated: August 9, 2018* 
+ *Last updated: September 3, 2020* 
 
 A snapshot is a copy of the system disk and original configuration of an instance\. The snapshot includes such information as memory, CPU, disk size, and data transfer rate\. For more information, see [Snapshots in Amazon Lightsail](understanding-instance-snapshots-in-amazon-lightsail.md)\.
 
 To create a snapshot of your Windows Server instance in Lightsail, first create a backup snapshot\. Next, create a second snapshot using a special utility known as System Preparation \(Sysprep\)\. Sysprep generalizes the Windows Server installation so that the instance can be backed up as a snapshot\. Then, when you create an instance from that snapshot, you have an out\-of\-box experience as if you were running that Windows instance for the first time\.
 
+To create a snapshot of a Linux or Unix instance, see [Create a snapshot of your Linux or Unix instance in Amazon Lightsail](lightsail-how-to-create-a-snapshot-of-your-instance.md)\.
+
 **Contents**
 + [Step 1: Create a backup snapshot before running Sysprep](#lightsail-create-a-backup-snapshot)
 + [Step 2: Connect to your instance and shut it down using Sysprep](#lightsail-connect-and-shutdown-instance-using-sysprep)
 + [Step 3: Create a snapshot after running Sysprep](#lightsail-create-snapshot-after-running-sysprep)
-
-**Note**  
-To create a snapshot of a Linux or Unix instance, see Create a snapshot of your Linux or Unix instance in Amazon Lightsail\.
 
 ## Step 1: Create a backup snapshot before running Sysprep<a name="lightsail-create-a-backup-snapshot"></a>
 
@@ -27,7 +26,7 @@ When you create a snapshot before running Sysprep, instances that you create usi
 1. On the Lightsail home page, choose the name of the Windows Server instance for which you want to create a snapshot\.
 
 1. Choose **Stop** at the top of the instance management page to stop your instance\.  
-![\[Stop your Windows Server instance before creating a snapshot.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-stop-a-windows-instance.png)
+![\[Stop your Windows Server instance before creating a snapshot.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-stop-a-windows-instance.png)
 **Note**  
 Stopping an instance makes any website or service on it unavailable until you start it again\.
 
@@ -53,25 +52,25 @@ Stopping an instance makes any website or service on it unavailable until you st
 
 Now that you have a backup snapshot, it’s time to run Sysprep on your Windows Server instance\. This causes the instance to shut down so that you can take a snapshot\. For more information about Sysprep, see [Sysprep Overview](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview) in the Microsoft documentation\.
 
-In this step, connect to your instance and run Sysprep through a preinstalled application\. The application is called **EC2Launch** on Windows Server 2016 instances, and **EC2Config** on Windows Server 2012 instances\.
+In this step, connect to your instance and run Sysprep through a preinstalled application\. The application is called **EC2LaunchSettings** on Windows Server 2019 and Windows Server 2016 instances, and **Ec2ConfigService Settings** on Windows Server 2012 instances\.
 
 **To connect to your instance and run Sysprep**
 
 1. On the instance management page, choose the **Connect** tab, then choose **Connect using RDP**\.
 
    The browser\-based RDP window opens, as shown in the following example:  
-![\[The browser-based RDP client in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-web-based-rdp-client.png)
+![\[The browser-based RDP client in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-web-based-rdp-client.png)
 
 1. On the taskbar, choose the Windows icon, or choose **Win** to open the Start menu\.
 
 1. Choose one of these options:
-   + On Windows Server 2016 instances, choose **Start**, then choose **Ec2LaunchSettings**\.
+   + On Windows Server 2019 and Windows Server 2016 instances, choose **Start**, then choose **Ec2LaunchSettings**\.
    + On Windows Server 2012 instances, choose **Start**, then choose **Ec2ConfigService Settings**\.
 
 1. In the Administrator Password section, choose **Random \(Retrieve from console\)**, then choose **Shutdown with Sysprep**\.
 
    On the Ec2ConfigService Settings application found in Windows Server 2012 instances, the **Random \(Retrieve from console\)** and **Shutdown with Sysprep** options are listed under the **Launch** tab\.  
-![\[The Ec2 Launch Settings application on Windows Server 2016 instances.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-ec2launchsettings.png)
+![\[The Ec2 Launch Settings application on Windows Server 2016 instances.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-ec2launchsettings.png)
 
 1. Choose **Yes** to confirm that you want to run Sysprep and shut down the instance\.
 
@@ -104,7 +103,7 @@ After your instance is in a stopped state, create a snapshot in the Lightsail co
 1. After the snapshot is created, choose **Start** at the top of the instance management page to start your instance again\.
 
    At this point, you should have two snapshots of your Windows Server instance as shown in the following example:  
-![\[Recent snapshots in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2f596334045058acdba2fdcc5e035cef/images/amazon-lightsail-recent-windows-snapshots.png)
+![\[Recent snapshots in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-recent-windows-snapshots.png)
 
    Use the Sysprep snapshot to create new instances\. Use the backup snapshot only if the original instance doesn’t function as expected after running Sysprep\.
 
