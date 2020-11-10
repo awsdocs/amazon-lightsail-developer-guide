@@ -5,7 +5,7 @@ Lightsail provides several health metrics for your resources to help you keep yo
 
  *Last updated: July 23, 2020* 
 
-You can view the following Amazon Lightsail resource metrics over different time periods\. For more informationa bout resource metrics in Lightsail, see [Resource metrics in Amazon Lightsail](amazon-lightsail-resource-health-metrics.md)\.
+You can view the following Amazon Lightsail resource metrics over different time periods\. For more information about resource metrics in Lightsail, see [Resource metrics in Amazon Lightsail](amazon-lightsail-resource-health-metrics.md)\.
 
 ## Instance metrics<a name="understanding-instance-metrics"></a>
 
