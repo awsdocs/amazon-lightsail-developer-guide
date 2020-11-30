@@ -20,7 +20,7 @@ You can have a maximum of two access keys \(active or inactive\) at a time\.
 
    You can copy them from this screen or choose **Download Key File** to download a \.csv file containing the access keys\.
 **Important**  
-Keep your access keys in a safe place\. You should name the file something like `MyLightsailKeys.csv` so that you don't struggle to find them later\.
+If you've downloaded the CSV file, you should delete it after you've completed step 2. Don't worry, you can always create new access keys later if you need to.
 
 ## Step 2: Configure the AWS CLI<a name="set-up-access-keys-"></a>
 
