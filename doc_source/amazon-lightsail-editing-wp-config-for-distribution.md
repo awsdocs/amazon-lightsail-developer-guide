@@ -58,7 +58,7 @@ We recommend that you create a snapshot of your WordPress instance before gettin
 1. Enter the following command to restart the Apache service on your instance\.
 
    ```
-   sudo /opt/bitnami/ctlscript.sh restart Apache
+   sudo /opt/bitnami/ctlscript.sh restart apache
    ```
 
 1. Wait a few moments for your the Apache service to restart, then test that your distribution is caching your content\. For more information, see [Testing your Amazon Lightsail distribution](amazon-lightsail-testing-distribution.md)\.
