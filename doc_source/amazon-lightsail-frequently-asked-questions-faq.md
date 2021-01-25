@@ -1,12 +1,13 @@
 # Frequently Asked Questions in Amazon Lightsail<a name="amazon-lightsail-frequently-asked-questions-faq"></a>
 
- *Last updated: October 15, 2020* 
+ *Last updated: November 12, 2020* 
 
 This topic answers frequently asked questions \(FAQ\)\. If you have a FAQ that is not answered here, use the **Questions? Comments?** feedback button at the bottom of the page\. You can also post a question in the [Lightsail discussion forum](https://forums.aws.amazon.com/forum.jspa?forumID=231)\.
 
 **Contents**
 + [General](#amazon-lightsail-frequently-asked-questions-faq-general)
 + [Instances](#amazon-lightsail-faq-instances)
++ [Container services](#amazon-lightsail-faq-containers)
 + [Databases](#amazon-lightsail-faq-databases)
 + [Block storage](#amazon-lightsail-faq-block-storage)
 + [Load balancers](#amazon-lightsail-faq-load-balancers)
@@ -23,7 +24,7 @@ This topic answers frequently asked questions \(FAQ\)\. If you have a FAQ that i
 ## General<a name="amazon-lightsail-frequently-asked-questions-faq-general"></a>
 
 **What is Amazon Lightsail?**  
-Amazon Lightsail is the easiest way to get started with AWS, providing everything you need to get your project running in the cloud\. Lightsail provides developers compute, storage, and networking capacity and capabilities to deploy and manage websites, web applications, and databases in the cloud\. Lightsail includes everything you need to launch your project quickly – a virtual machine, a managed database, SSD\-based storage, data transfer, DNS management, and a static IP – for a low, predictable monthly price\. You can also scale out your application or website over time and improve its availability and redundancy by adding other Lightsail resources, like load balancers, attached block storage and managed databases\.
+Amazon Lightsail is the easiest way to get started with AWS for developers, small businesses, students, and other users who need a solution to build and host their websites and web applications in the cloud\. Lightsail provides developers compute, storage, and networking capacity\. Lightsail includes everything you need to launch your project quickly – virtual machines, containers, databases, CDN, load balancers, DNS management etc\. – for a low, predictable monthly price\.
 
 **What can I do with Lightsail?**  
 You can create preconfigured virtual private servers \(instances\) that include everything to easily deploy and manage your application, or create databases for which the security and health of the underlying infrastructure and operating system is managed by Lightsail\. Lightsail is best suited to projects that require a few dozen instances or less, and developers who prefer a simple management interface\. Common use cases for Lightsail include running websites, web applications, business software, blogs, e\-commerce sites, and more\. As your project grows, you can use load balancers and attached block storage with your instance to increase redundancy and uptime and access dozens of other AWS services to add new capabilities\.
@@ -107,6 +108,70 @@ Note that you need to have a default Amazon VPC set up in your AWS account in or
 **What is the difference between stopping and deleting my instance?**  
 When you stop your instance, it is powered down at its current state and is available for you to start again at any time\. Stopping your instance will release its public IP, so it is recommended that you use static IPs for instances that must retain the same IP after they stop\.  
 When you delete your instance, you are performing a destructive action\. Unless you have created an instance snapshot, all of your instance data will be lost and you cannot recover it again\. Automatic snapshots are also deleted with the instance unless you keep them by copying them as manual snapshots\. The instance's public and private IPs will also be released\. If you were using a static IP with that instance, the static IP is detached, but remains in your account\.
+
+## Container services<a name="amazon-lightsail-faq-containers"></a>
+
+**What can I do with Lightsail container services?**  
+Lightsail container services provide an easy way to run containerized applications in the cloud\. You can run a variety of applications on a container service, ranging from simple web apps to multi\-tiered micro services\. You just specify the container image, power \(CPU, RAM\) and scale \(number of nodes\) required for your container service\. Lightsail takes care of running the container service without you having to manage any underlying infrastructure\. Lightsail will provide you with a load balanced TLS endpoint to access the application running on the container service\.
+
+**Can Lightsail container service run Docker containers?**  
+Yes\. Lightsail supports Linux\-based Docker containers\. Windows containers are currently not supported\.
+
+**How do I use my Docker container images with Lightsail container service?**  
+You can use either container images on registries like Docker Hub or build your own custom image and push it to Lightsail in a few easy steps using the AWS CLI\. For more information, see [Pushing and managing container images on your Amazon Lightsail container services](amazon-lightsail-pushing-container-images.md)\.
+
+**Can I pull my container images from a private container registry?**  
+Currently, only public container registries are supported by Lightsail container services\. Alternately, you can push your custom container images from your local machine to Lightsail to keep them private\. 
+
+**Can I change the power and scale of my service based on demand?**  
+Yes, container service power and scale can be changed at any time even after the service is created\.
+
+**Can I customize the name of the HTTPS endpoint created by Lightsail container service?**  
+Lightsail provides a HTTPS endpoint for every container service in the format “*<service\-name>*\.*<random\-guid>*\.*<aws\-region\-name>*\.cs\.amazonlightsail\.com\. Only the service name can be customized\. Alternately, you can use a custom domain name\. For more information, see [Enabling and managing custom domains for your Amazon Lightsail container services](amazon-lightsail-enabling-container-services-custom-domains.md)\.
+
+**Can I use custom domains for the HTTPS endpoint of a Lightsail container service?**  
+Yes\. You can create and attach an SSL/TLS certificate with custom domain names to your container service from within Lightsail\. The certificates need to be domain validated\. If you manage your domain via Lightsail DNS, you can create CNAME records mapping to your container services\. Creating an A\-record for a container service while using Lightsail DNS zones is not currently supported\. Alternately, you can use a DNS provider who supports adding ALIAS records, mapping your apex domain to the Lightsail container service default hostname\. For more information, see [Enabling and managing custom domains for your Amazon Lightsail container services](amazon-lightsail-enabling-container-services-custom-domains.md)\.
+
+**What do Lightsail container services cost?**  
+Lightsail container services are billed on an on\-demand hourly rate, so you pay only for what you use\. For every Lightsail container service you use, we charge you the fixed hourly price, up to the maximum monthly service price\. Maximum monthly service price can be calculated by multiplying the base price of the power of your service with the scale of your service\. For example, a service of Micro power and scale of 2 will cost a maximum of $10\*2=$20/month\. The least expensive Lightsail container service starts at $0\.0094 USD/hour \($7 USD/month\)\. Additional data transfer charges may apply for usage above the free\-quota of 500 GB per month for each service\. 
+
+**Will I be charged for the whole month even if I run my container service for a few days?**  
+Your Lightsail container services are charged only when they're in the running or disabled state\. If you delete your Lightsail container service before the end of the month, we charge you a prorated cost based on the total number of hours that you used your Lightsail container service\. For example, if you use your Lightsail container service with a power of Micro and scale of 1 for 100 hours in a month, you will be charged $1\.34 \($0\.0134\*100\)
+
+**Will I be charged for data transfer in and out of the container service?**  
+Every container service comes with a data transfer quota \(500 GB per month\)\. This counts towards both the data transfer IN and OUT of your service\. When you exceed the quota, you will get charged for data transfer OUT from a Lightsail container service to the Internet or to another AWS Region or to AWS resources in the same Region when using public IP addresses\. The charge for these types of data transfer above the free allowance is as follows:  
+• US East \(Ohio\) \(us\-east\-2\): $0\.09 USD/GB  
+• US East \(N\. Virginia\) \(us\-east\-1\): $0\.09 USD/GB  
+• US West \(Oregon\) \(us\-west\-2\): $0\.09 USD/GB  
+• Asia Pacific \(Mumbai\) \(ap\-south\-1\): $0\.13 USD/GB  
+• Asia Pacific \(Seoul\) \(ap\-northeast\-2\): $0\.13 USD/GB  
+• Asia Pacific \(Singapore\) \(ap\-southeast\-1\): $0\.12 USD/GB  
+• Asia Pacific \(Sydney\) \(ap\-southeast\-2\): $0\.17 USD/GB  
+• Asia Pacific \(Tokyo\) \(ap\-northeast\-1\): $0\.14 USD/GB  
+• Canada \(Central\) \(ca\-central\-1\): $0\.09 USD/GB  
+• EU \(Frankfurt\) \(eu\-central\-1\): $0\.09 USD/GB  
+• EU \(Ireland\) \(eu\-west\-1\): $0\.09 USD/GB  
+• EU \(London\) \(eu\-west\-2\): $0\.09 USD/GB  
+• EU \(Paris\) \(eu\-west\-3\): $0\.09 USD/GB
+
+**What is the difference between stopping and deleting my container service?**  
+When you disable your container service, your container nodes are in a disabled state and the public endpoint of the service returns a HTTP status code ‘503’\. Enabling the service restores it to the last active deployment\. Power and scale configurations are also retained\. Public endpoint name does not change after re\-enabling\. Deployment history and container images are preserved\.  
+When you delete your container service, you are performing a destructive action\. All the container nodes of the service will be permanently deleted\. The HTTPS public endpoint address, container images, deployment history, and logs associated with your service will also be permanently deleted\. You will not be able to recover the endpoint address\.
+
+**Will I be charged if my container service is in a disabled state?**  
+Yes, you are charged according to the power and scale configuration of your container service, even when it is in a disabled state\. 
+
+**Can I use container services as the origin to my Lightsail content delivery network \(CDN\) distributions?**  
+Container services are currently not supported as origins for Lightsail CDN distributions\. 
+
+**Can I use container services as targets for my Lightsail load balancer?**  
+No\. Container services are currently not available as targets for Lightsail load balancers\. However, the public endpoints of container services come with built\-in load balancing\. 
+
+**Can I configure the public endpoint of my container service to redirect HTTP requests to HTTPS?**  
+Lightsail container service public endpoints automatically redirect all HTTP requests to HTTPS to ensure that your content is served securely\.
+
+**Do container services support monitoring and alerting?**  
+Container services provide metrics for CPU utilization and memory utilization across the nodes of your service\. Alerting based on these metrics is currently not supported\. 
 
 ## Databases<a name="amazon-lightsail-faq-databases"></a>
 
@@ -234,7 +299,7 @@ Lightsail load balancers support HTTP and HTTPS connections\.
 Lightsail content delivery network \(CDN\) distributions make it easy for you to accelerate the delivery of content hosted on your Lightsail resources by storing and serving it on Amazon’s global delivery network, powered by Amazon CloudFront\. Distributions also help you enable your website to support HTTPS traffic by providing simple SSL certificate creation and hosting\. Finally, distributions can help reduce the load on your Lightsail resources and help your website handle large traffic spikes\. Like all of Lightsail’s features, setup can be completed with just a few clicks, and you pay a simple monthly price\.
 
 **What types of resources can I use as the origin of my distributions?**  
-Lightsail distributions allow you to use your Lightsail instances and load balancers as origins\. Resources outside of Lightsail, such as S3 buckets, are not supported\.
+Lightsail distributions allow you to use your Lightsail instances and load balancers as origins\. Lightsail containers are not currently supported as origins\. Resources outside of Lightsail, such as S3 buckets, are not supported\.
 
 **Do I need to attach a static IP to my Lightsail instance in order to use it as an origin for my Lightsail distribution?**  
 Yes, static IPs are required to be attached to instances that are specified as origins\.
@@ -515,6 +580,7 @@ For more information about using tags in Lightsail, see [Tags in Amazon Lightsai
 **What resources can be tagged?**  
 Lightsail currently supports tagging for the following resources:  
 • Instances \(Linux and Windows\)  
+• Container services  
 • Block storage disks  
 • Load balancers  
 • Databases  

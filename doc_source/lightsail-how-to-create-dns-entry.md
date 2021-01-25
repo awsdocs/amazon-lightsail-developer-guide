@@ -1,6 +1,6 @@
 # Creating a DNS zone to manage your domain’s DNS records in Amazon Lightsail<a name="lightsail-how-to-create-dns-entry"></a>
 
- *Last updated: November 4, 2020* 
+ *Last updated: January 12, 2021* 
 
 To route traffic for your domain name, such as `example.com`, to your Amazon Lightsail instance, you add a record to the Domain Name System \(DNS\) of your domain\. You can manage the DNS records of your domain using the registrar where you registered your domain, or you can manage them using Lightsail\.
 
@@ -50,18 +50,18 @@ To resolve the error, [create a snapshot of the resource](understanding-instance
 
 1. Choose one of the following options to add tags to your DNS zone:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
 1. Choose **Create DNS zone**\.
 
    You are redirected to the DNS zone management page, where you can add DNS records or delete the DNS zone\. Note the Lightsail name servers that are listed on this page; you need these later in this guide\.  
-![\[The DNS zone management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-dns-zone-management-page.png)
+![\[The DNS zone management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-dns-zone-management-page.png)
 
 ## Step 3: Add records to the DNS zone<a name="lightail-add-records-to-the-dns-zone"></a>
 
@@ -80,6 +80,13 @@ An A record maps a domain, such as `example.com`, or a subdomain, such as `blog.
    1. In the **Resolves to** text box, enter the target IP address for the record, select your running instance, or configured load balancer\. When you select a running instance, the public IP address of that instance is automatically added\.
 **Note**  
 We recommend that you attach a static IP to your Lightsail instance and then choose the static IP as the value that the record resolves to\. For more information, see [Create a static IP in Amazon Lightsail](lightsail-create-static-ip.md)\.  
+**AAAA record**  
+An AAAA record maps a domain, such as `example.com`, or a subdomain, such as `blog.example.com`, to a web server’s or instance’s IPv6 address, such as `2001:0db8:85a3:0000:0000:8a2e:0370:7334`\.  
+Lightsail does not support static IPv6 addresses\. If you delete your Lightsail resource and create a new resource, or if you disable and reenable IPv6 on the same resource, you might need to update your AAAA record to reflect the latest IPv6 address for the resource\.
+
+   1. In the **Subdomain** text box, enter the target subdomain for the record, or enter an `@` symbol to define the apex of your domain\.
+
+   1. In the **Resolves to** text box, enter the target IPv6 address for the record, select your running instance, or configured load balancer\. When you select a running instance, the public IPv6 address of that instance is automatically added\.  
 **Canonical name \(CNAME\) record**  
 A CNAME record maps an alias or subdomain, such as `www.example.com`, to another domain, such as `example.com`, or another subdomain, such as `blog.example.com`\.  
 
@@ -127,7 +134,7 @@ For detailed steps to complete this process, see the documentation from your dom
 If web traffic is currently being routed to your domain, make sure that all of the existing DNS records are present in the Lightsail DNS zone before changing the name servers at your domain’s current DNS hosting provider\. This way, traffic continually flows uninterrupted after the transfer to the Lightsail DNS zone\.
 
 1. Write down the Lightsail name servers that are listed in on your domain's DNS zone management page\.  
-![\[The DNS zone name servers in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-dns-zone-name-servers.png)
+![\[The DNS zone name servers in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-dns-zone-name-servers.png)
 
 1. Sign in to your domain’s current DNS hosting provider’s website\.
 

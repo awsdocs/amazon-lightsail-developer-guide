@@ -1,6 +1,6 @@
 # Configuring your WordPress instance to work with your Amazon Lightsail distribution<a name="amazon-lightsail-editing-wp-config-for-distribution"></a>
 
- *Last updated: December 03, 2020* 
+ *Last updated: January 12, 2021* 
 
 In this guide, we show you how to configure your WordPress instance to work with your Amazon Lightsail distribution\. To configure your WordPress instance to work with your distribution, determine if: 
 + **Your WordPress website uses Hypertext Transfer Protocol \(HTTP\) only** \- If your website uses HTTP only, and is not configured to use HTTPS, then you must follow the instructions in the [Configure your WordPress instance to work with your distribution using SSL/TLS termination](#configuring-non-https-wordpress-for-distribution) section of this guide\.

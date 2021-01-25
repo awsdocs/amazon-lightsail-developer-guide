@@ -38,7 +38,7 @@ Change the default password on your Windows Server instance to remove the associ
    ```
 
    You should see a result similar to the following:  
-![\[Password reset on Windows Server in Amazon EC2.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-ec2-window-server-password-reset.png)
+![\[Password reset on Windows Server in Amazon EC2.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-ec2-window-server-password-reset.png)
 
 1. Store the new password in a safe place\. You cannot retrieve the new password using the Amazon EC2 console\. The console can retrieve only the default password\. If you attempt to connect to the instance using the default password after changing it, an error message appears stating that your credentials did not work\.
 

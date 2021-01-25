@@ -19,7 +19,7 @@ Complete these steps to ensure that your domain, such as `example.com`, redirect
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the Lightsail home page, choose the SSH quick connect icon for your WordPress Multisite instance\.  
-![\[SSH quick connect on the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/wp-multisite-ssh-quick-connect.png)
+![\[SSH quick connect on the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/wp-multisite-ssh-quick-connect.png)
 
 1. After your Lightsail browser\-based SSH session is connected, enter the following command to change the directory to `/opt/bitnami/apps/wordpress`:
 

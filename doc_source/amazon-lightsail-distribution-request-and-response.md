@@ -411,6 +411,8 @@ You can configure whether your distribution forwards query string parameters to 
 
 By default, your distribution waits as long as 30 seconds \(3 attempts of 10 seconds each\) before returning an error response to the viewer\.
 
+
+
 ### Origin response timeout<a name="request-custom-request-timeout"></a>
 
 The *origin response timeout*, also known as the *origin read timeout* or *origin request timeout*, applies to both of the following:

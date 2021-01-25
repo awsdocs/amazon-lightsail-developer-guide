@@ -28,6 +28,6 @@ You can’t recover a deleted database\. You can create a final snapshot of your
 1. Choose **Delete database**\.
 
 1. Choose **Yes, delete** to confirm the deletion\.  
-![\[Creating a database snapshot before deleting a database\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/amazon-lightsail-delete-database-with-snapshot.png)
+![\[Creating a database snapshot before deleting a database\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-delete-database-with-snapshot.png)
 
    If you opted to create a snapshot before deleting, you can view it on the **Snapshots** tab of the Lightsail home page\.

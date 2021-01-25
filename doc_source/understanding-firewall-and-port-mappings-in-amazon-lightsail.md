@@ -1,13 +1,11 @@
 # Instance firewalls in Amazon Lightsail<a name="understanding-firewall-and-port-mappings-in-amazon-lightsail"></a>
 
- *Last updated: September 4, 2020* 
-
 **Note**  
 A firewall in Amazon Lightsail controls the traffic allowed to connect to your instance at the protocol and port level\. When you create a new instance, its firewall is preconfigured with a set of default rules that allow basic access to your instance\. Edit your instance's firewall, at any time, by adding and deleting firewall rules to allow traffic to reach your instance\.
 
- *Last updated: July 9, 2020* 
+ *Last updated: January 12, 2021* 
 
-The firewall in the Amazon Lightsail console acts as a virtual firewall that controls the traffic allowed to connect to your instance\. Each instance that you create in Lightsail has its own firewall\. Each firewall contains a set of rules that filter traffic coming into the instance\. Edit your instance's firewall, at any time, by adding and deleting rules to allow or restrict traffic\. 
+The firewall in the Amazon Lightsail console acts as a virtual firewall that controls the traffic allowed to connect to your instance\. Each instance that you create in Lightsail has two firwalls; one for IPv4 addresses and another for IPv6 addresses \. Each firewall contains a set of rules that filter traffic coming into the instance\. Both firewalls are independent of each other; you must configure firewall rules separately for IPv4 and IPv6\. Edit your instance's firewall, at any time, by adding and deleting rules to allow or restrict traffic\. 
 
 **Contents**
 + [Understanding Lightsail firewalls](#understanding-firewalls)
@@ -21,11 +19,11 @@ The firewall in the Amazon Lightsail console acts as a virtual firewall that con
 
 ## Understanding Lightsail firewalls<a name="understanding-firewalls"></a>
 
-All internet traffic into and out of your Lightsail instance passes through its firewall\. A Lightsail firewall controls the internet traffic that is allowed to flow into your instance\. However, it does not control the traffic that flows out of it—the firewall allows all outbound traffic\.
+Each Lightsail instance has two firewalls; one for IPv4 addresses and another for IPv6 addresses\. All internet traffic into and out of your Lightsail instance passes through its firewalls\. An instance's firewalls control the internet traffic that is allowed to flow into your instance\. However, they don't control the traffic that flows out of it—the firewalls allow all outbound traffic\. Edit your instance's firewalls, at any time, by adding and deleting rules to allow or restrict incoming traffic\. Note that both firewalls are independent of each other; you must configure firewall rules separately for IPv4 and IPv6\.
 
-Firewall rules are always permissive; you can't create rules that deny access\. You add rules to your firewall to allow traffic to reach your instance\. When you add a rule to your firewall, you specify the protocol to use, the port to open, and the IP addresses that are allowed to connect to your instance, as shown in the following example\. You can also specify an application layer protocol type, which is a preset that specifies the protocol and port range for you based on the service that you plan to use on your instance\.
+Firewall rules are always permissive; you can't create rules that deny access\. You add rules to your instance's firewalls to allow traffic to reach your instance\. When you add a rule to your instance's firewall, you specify the protocol to use, the port to open, and the IPv4 and IPv6 addresses that are allowed to connect to your instance, as shown in the following example \(for IPv4\)\. You can also specify an application layer protocol type, which is a preset that specifies the protocol and port range for you based on the service that you plan to use on your instance\.
 
-![\[Plugins menu on the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/firewall-rule-example.png)
+![\[IPv4 firewall in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/firewall-rule-example.png)
 
 Firewall rules, and their configurable parameters are explained in the next few sections of this guide\.
 
@@ -46,6 +44,8 @@ A protocol is the format in which data is transmitted between two computers\. Li
 + **Transmission Contact Protocol \(TCP\)** is primarily used for establishing and maintaining a connection between clients and the application running on your instance, until the exchange of data is complete\. It is a widely used protocol, and one which you might often specify in your firewall rules\. TCP guarantees that no transmitted data is missing, and that all of the data that's sent makes it to the intended recipient\. It is ideal use is for network applications that need high reliability, and for which transmission time is relatively less critical, such as web browsing, financial transactions, and text messaging\. These use\-cases will lose significant value if parts of the data is lost\.
 + **User Datagram Protocol \(UDP\)** is primarily used for establishing low\-latency and loss\-tolerating connections between clients and the application running on your instance\. It is ideal use is for network applications in which perceived latency is critical, such as gaming, voice, and video communications\. These use\-cases can suffer some data loss without adversely affecting perceived quality\.
 + **Internet Control Message Protocol \(ICMP\)** is primarily used to diagnose network communication issues, such as to determine if data is reaching its intended destination in a timely manner\. It is ideal use is for the Ping utility, which you can use to test the speed of the connection between your local computer and your instance\. It reports how long it takes data to reach your instance and come back to your local computer\.
+**Note**  
+When you add an ICMP rule to the IPv6 firewall of your instance using the Lightsail console, the rule is automatically configured to use ICMPv6\. For more information, see [Internet Control Message Protocol for IPv6](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol_for_IPv6) on *Wikipedia*\.
 + **All** is used to allow all protocol traffic to flow into your instance\. Specify this protocol when you're unsure which protocol to specify\. This includes all internet protocols; not just the ones specified above\. For more information, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the *Internet Assigned Numbers Authority website*\.
 
 ## Specifying ports<a name="specifying-ports"></a>
@@ -83,23 +83,26 @@ The following application layer protocol types are available in the Lightsail co
 + **All protocols** – Choose this option to specify all protocols, and specify your own ports\.
 + **All TCP** – Choose this option to use the TCP protocol but you're unsure of which port to open\. This enables the TCP over all ports \(0\-65535\)\.
 + **All UDP** – Choose this option to use the UDP protocol but you're unsure of which port to open\. This enables the UDP over all ports \(0\-65535\)\.
++ **All ICMP** – Choose this option to specify all ICMP types and codes\.
 + **Custom ICMP** – Choose this option to use the ICMP protocol and define an ICMP type and code\. For more information about ICMP types and codes, see [Control Messages](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages) on *Wikipedia*\.
 + **DNS** – Choose this option when you want to enable DNS on your instance\. This enables TCP and UDP over ports 53\.
 + **HTTP** – Choose this option when you want to enable web browsers to connect to a website that is hosted on your instance\. This enables TCP over port 80\.
 + **HTTPS** – Choose this option when you want to enable web browsers to establish an encrypted connection to a website that is hosted on your instance\. This enables TCP over port 443\.
 + **MySQL/Aurora** – Choose this option to enable a client to connect to a MySQL or Aurora database hosted on your instance\. This enables TCP over port 3306\. 
 + **Oracle\-RDS** – Choose this option to enable a client to connect to an Oracle or RDS database hosted on your instance\. This enables TCP over port 1521\.
-+ **Ping \(ICMP\)** – Choose this option to enable your instance to respond to requests using the Ping utility\. This enables ICMP type 8 \(echo\) and code \-1 \(all codes\)\.
++ **Ping \(ICMP\)** – Choose this option to enable your instance to respond to requests using the Ping utility\. On the IPv4 fireall, this enables ICMP type 8 \(echo\) and code \-1 \(all codes\)\. On the IPv6 firewall, this enables ICMP type 129 \(echo reply\) and code 0\.
 + **RDP** – Choose this option to enable an RDP client to connect to your instance\. This enables TCP over port 3389\.
 + **SSH** – Choose this option to enable an SSH client to connect to your instance\. This enables TCP over port 22\.
 
 ## Specifying source IP addresses<a name="specifying-source-ip-addresses"></a>
 
-By default, firewall rules allow all IP addresses to connect to your instance through the specified protocol and port\. This is ideal for traffic such as web browsers over HTTP and HTTPS\. However, this poses a security risk for traffic such as SSH and RDP, since you would not want to allow all IP addresses to be able to connect to your instance using those applications\. For that reason, you can choose to restrict a firewall rule to an IP address or range of IP addresses\. You can specify a single IPv4 address \(for example, 203\.0\.113\.1\), or a range of IPv4 addresses\. In the Lightsail console, the range can be specified using a dash \(for example, 192\.0\.2\.0\-192\.0\.2\.255\) or in CIDR block notation \(for example, 192\.0\.2\.0/24\)\. For more information about CIDR block notation, see [Classless Inter\-Domain Routing](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) on *Wikipedia*\.
+By default, firewall rules allow all IP addresses to connect to your instance through the specified protocol and port\. This is ideal for traffic such as web browsers over HTTP and HTTPS\. However, this poses a security risk for traffic such as SSH and RDP, since you would not want to allow all IP addresses to be able to connect to your instance using those applications\. For that reason, you can choose to restrict a firewall rule to an IPv4 or IPv6 address or range of IP addresses\.
++ **For the IPv4 firewall** \- You can specify a single IPv4 address \(for example, 203\.0\.113\.1\), or a range of IPv4 addresses\. In the Lightsail console, the range can be specified using a dash \(for example, 192\.0\.2\.0\-192\.0\.2\.255\) or in CIDR block notation \(for example, 192\.0\.2\.0/24\)\. For more information about CIDR block notation, see [Classless Inter\-Domain Routing](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) on *Wikipedia*\.
++ **For the IPv6 firewall** \- You can specify a single IPv6 address \(for example, 2001:0db8:85a3:0000:0000:8a2e:0370:7334\), or a range of IPv6 addresses\. In the Lightsail console, the IPv6 range can be specified using only CIDR block notation \(for example, 2001:db8::/32\)\. For more information about IPv6 CIDR block notation, see [IPv6 CIDR blocks](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#IPv6_CIDR_blocks) on *Wikipedia*\.
 
 ## Default Lightsail firewall rules<a name="default-lightsail-firewall-rules"></a>
 
-When you create a new instance, its firewall is preconfigured with the following set of default rules that allow basic access to your instance\. The default rules are different depending on the type of instance that you create\. These rules are listed as application, protocol, port, and source IP address \(for example, application \- protocol \- port \- source IP address\)\.
+When you create a new instance, its IPv4 and IPv6 firewalls are preconfigured with the following set of default rules that allow basic access to your instance\. The default rules are different depending on the type of instance that you create\. These rules are listed as application, protocol, port, and source IP address \(for example, application \- protocol \- port \- source IP address\)\.
 
 **Amazon Linux, Amazon Linux 2, CentOS, Debian, FreeBSD, openSUSE, and Ubuntu \(base operating systems\)**  
 SSH \- TCP \- 22 \- all IP addresses  
@@ -111,15 +114,15 @@ HTTP \- TCP \- 80 \- all IP addresses
 HTTPS \- TCP \- 443 \- all IP addresses
 
 **cPanel & WHM \(CMS application\)**  
-SSH \- TCP \- 22  
-DNS \(UDP\) \- UDP \- 53  
-DNS \(TCP\) \- TCP \- 53  
-HTTP \- TCP \- 80  
-HTTPS \- TCP \- 443  
-Custom \- TCP \- 2078  
-Custom \- TCP \- 2083  
-Custom \- TCP \- 2087  
-Custom \- TCP \- 2089
+SSH \- TCP \- 22 \- all IP addresses  
+DNS \(UDP\) \- UDP \- 53 \- all IP addresses  
+DNS \(TCP\) \- TCP \- 53 \- all IP addresses  
+HTTP \- TCP \- 80 \- all IP addresses  
+HTTPS \- TCP \- 443 \- all IP addresses  
+Custom \- TCP \- 2078 \- all IP addresses  
+Custom \- TCP \- 2083 \- all IP addresses  
+Custom \- TCP \- 2087 \- all IP addresses  
+Custom \- TCP \- 2089 \- all IP addresses
 
 **LAMP, Django, Node\.js, MEAN, GitLab, and LEMP/Nginx \(development stacks\)**  
 SSH \- TCP \- 22 \- all IP addresses  

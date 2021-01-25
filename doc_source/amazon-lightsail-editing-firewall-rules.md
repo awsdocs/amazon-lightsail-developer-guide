@@ -1,8 +1,8 @@
 # Adding and editing firewall rules in Amazon Lightsail<a name="amazon-lightsail-editing-firewall-rules"></a>
 
- *Last updated: May 20, 2020* 
+ *Last updated: January 12, 2021* 
 
-You can add rules to the firewall for your Amazon Lightsail instance to control the traffic that is allowed to connect to it\. When you add a firewall rule, you can specify the application layer protocol type, protocol, ports, and the source IP addresses that are allowed to connect to your instance\. For more information about firewalls, see [Firewall and ports in Amazon Lightsail](understanding-firewall-and-port-mappings-in-amazon-lightsail.md)\.
+You can add rules to the IPv4 and IPv6 firewalls of your Amazon Lightsail instance to control the traffic that is allowed to connect to it\. When you add a firewall rule, you can specify the application layer protocol type, protocol, ports, and the source IPv4 or IPv6 addresses that are allowed to connect to your instance\. For more information about firewalls, see [Firewall and ports in Amazon Lightsail](understanding-firewall-and-port-mappings-in-amazon-lightsail.md)\.
 
 **Contents**
 + [Adding and editing firewall rules](#firewall-adding-rules)
@@ -21,11 +21,15 @@ Complete the following steps to add or edit firewall rules in the Lightsail cons
 
 1. Choose the **Networking** tab on your instance's management page\.
 
-   The **Networking** tab displays your instance's public and private IP addresses, and the configured firewall rules for your instance\.
+   The **Networking** tab displays your instance's public and private IP addresses, and the configured IPv4 or IPv6 firewalls for your instance\.
+**Note**  
+The IPv6 firewall is displayed only if you have enabled IPv6 for the instance\. For more information, see [Enabling or disabling IPv6 in Amazon Lightsail](amazon-lightsail-enable-disable-ipv6.md)\.
 
-1. Scroll down to the **Firewall** section of the page, and choose **Add rule**\.
+1. Complete one of the following steps depending on whether the source IP for the rule is an IPv4 or IPv6 address:
+   + To add an IPv4 firewall rule, scroll down to the **IPv4 Firewall** section of the page, and choose **Add rule**\.
+   + To add an IPv6 firewall rule, scroll down to the **IPv6 Firewall** section of the page and choose **Add rule**\.
 
-   You can also choose **Edit** \(pencil icon\) next to an existing rule to edit it\.
+   You can also choose **Edit** \(pencil icon\) next to an existing rule on either of the firewalls to edit it\.
 
 1. Choose an application layer protocol type in the **Application** drop\-down menu\.
 
@@ -36,6 +40,8 @@ Complete the following steps to add or edit firewall rules in the Lightsail cons
 
      You can also enter a single port number or range of port numbers \(for example, 7000\-8000\) in the **Port** field\.
    + \(Optional\) If you choose the **Custom ICMP** option, then you can specify an ICMP type in the **Type** field, and an ICMP code in the **Code** field\. For more information about ICMP types and codes, see [Control Messages](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages) on *Wikipedia*\.
+**Note**  
+When you add an ICMP rule to the IPv6 firewall of your instance using the Lightsail console, the rule is automatically configured to use ICMPv6\. For more information, see [Internet Control Message Protocol for IPv6](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol_for_IPv6) on *Wikipedia*\.
    + \(Optional\) Select **Restrict to IP address** to restrict access for the specified protocol and port to a specific IP address or range of IP addresses\. Leave this option unselected to allow all IP addresses for the specified protocol and port\.
 
      You can enter a single IPv4 address \(for example, `203.0.113.1`\), or a range of IPv4 addresses\. The range can be specified using a dash \(for example, `192.0.2.0-192.0.2.255`\) or in CIDR block notation \(for example, `192.0.2.0/24`\)\. For more information about CIDR block notation, see [Classless Inter\-Domain Routing](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation) on *Wikipedia*\.
@@ -57,7 +63,9 @@ Complete the following steps to delete instance firewalls rule in the Lightsail 
 
 1. Choose the **Networking** tab on your instance's management page\.
 
-1. Scroll down to the **Firewall** section of the page, and choose **Delete** \(the trash icon\) next to an existing rule to delete it\.
+1. Complete one of the following steps depending on whether the source IP for the rule is an IPv4 or IPv6 address:
+   + To delete an IPv4 firewall rule, scroll down to the **IPv4 Firewall** section of the page, and choose **Delete** \(the trash icon\) next to an existing rule to delete it\.
+   + To delete an IPv6 firewall rule, scroll down to the **IPv6 Firewall** section of the page, and choose **Delete** \(the trash icon\) next to an existing rule to delete it\.
 
    The firewall rule is deleted after a few moments\.
 

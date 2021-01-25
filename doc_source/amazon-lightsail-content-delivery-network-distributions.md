@@ -18,7 +18,7 @@ In the following diagram:
 + 2 represents your distribution, or the edge locations that pull, cache, and serve content from your origin\.
 + 3 represents your users who are served content from the edge locations\.
 
-![\[Lightsail distribution diagram\]](https://d9yljz1nd5001.cloudfront.net/en_us/a825044edce3b3cf14c8cdbea7367d2e/images/distribution-diagram.png)
+![\[Lightsail distribution diagram\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/distribution-diagram.png)
 
 **Note**  
 This diagram is for illustration purpose only and doesn't show actual edge locations\. For more information about edge locations, see [Edge locations and IP address ranges](#edge-locations) later in this guide\.

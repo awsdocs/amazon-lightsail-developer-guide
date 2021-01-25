@@ -1,6 +1,6 @@
 # Create an access key to use the Amazon Lightsail API or the AWS Command Line Interface<a name="lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli"></a>
 
- *Last updated: May 17, 2017* 
+ *Last updated: January 25, 2021* 
 
 To use the Lightsail API or the AWS Command Line Interface \(AWS CLI\), you need to create a new access key\. The access key consists of an **Access Key ID** and a **Secret Access Key**\. Use the following procedures to create the key and configure the AWS CLI to make calls to the Lightsail API\.
 
@@ -8,19 +8,21 @@ To use the Lightsail API or the AWS Command Line Interface \(AWS CLI\), you need
 
 You can create a new access key in the AWS Identity and Access Management \(IAM\) console\. 
 
-1. Open **Your Security Credentials** in [the IAM console](https://console.aws.amazon.com/iam/home#/users)\.
+1. Sign in to the [the IAM console](https://console.aws.amazon.com/iam/home#/users)\.
 
-1. Choose **Access Keys \(Access Key ID and Secret Access Key\)**\.
+1. Choose the name of the user for which you want to create an access key\. The user you choose should have full access or specific access to Lightsail actions\.
 
-1.  Choose **Create New Access Key**\. 
+1. Choose the **Security credentials** tabs\.
+
+1. Choose **Create access key** under the **Access keys** section of the page\.
 **Note**  
-You can have a maximum of two access keys \(active or inactive\) at a time\.
+You can have a maximum of two access keys \(active or inactive\) at a time per user\. If you already have two access keys, then you must delete one of them before creating a new one\. Make sure that an access key is not actively in use before deleting it\.
 
-1. Choose **Show Access Key** to see your **Access Key ID** and a **Secret Access Key**\. 
+1. Make note of the **Access key ID** and **Secret access key** listed\. Choose **Show** under the **Secret access key** column to see your **Secret access key**\.
 
-   You can copy them from this screen or choose **Download Key File** to download a \.csv file containing the access keys\.
+   You can copy them from this screen or choose **Download Key File** to download a \.csv file containing the access key ID and secret access key\.
 **Important**  
-If you've downloaded the CSV file, you should delete it after you've completed step 2. Don't worry, you can always create new access keys later if you need to.
+Keep your access keys in a safe place\. You should name the file something like `MyLightsailKeys.csv` so that you don't struggle to find them later\. If you've downloaded the CSV file from the IAM console, you should delete it after you've completed step 2\. You can create a new access keys later if you need to\.
 
 ## Step 2: Configure the AWS CLI<a name="set-up-access-keys-"></a>
 
