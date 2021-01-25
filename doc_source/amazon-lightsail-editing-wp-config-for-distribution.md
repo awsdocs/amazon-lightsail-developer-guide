@@ -1,6 +1,6 @@
 # Configuring your WordPress instance to work with your Amazon Lightsail distribution<a name="amazon-lightsail-editing-wp-config-for-distribution"></a>
 
- *Last updated: July 23, 2020* 
+ *Last updated: December 03, 2020* 
 
 In this guide, we show you how to configure your WordPress instance to work with your Amazon Lightsail distribution\. To configure your WordPress instance to work with your distribution, determine if: 
 + **Your WordPress website uses Hypertext Transfer Protocol \(HTTP\) only** \- If your website uses HTTP only, and is not configured to use HTTPS, then you must follow the instructions in the [Configure your WordPress instance to work with your distribution using SSL/TLS termination](#configuring-non-https-wordpress-for-distribution) section of this guide\.
@@ -58,7 +58,7 @@ We recommend that you create a snapshot of your WordPress instance before gettin
 1. Enter the following command to restart the Apache service on your instance\.
 
    ```
-   sudo /opt/bitnami/ctlscript.sh restart Apache
+   sudo /opt/bitnami/ctlscript.sh restart apache
    ```
 
 1. Wait a few moments for your the Apache service to restart, then test that your distribution is caching your content\. For more information, see [Testing your Amazon Lightsail distribution](amazon-lightsail-testing-distribution.md)\.
