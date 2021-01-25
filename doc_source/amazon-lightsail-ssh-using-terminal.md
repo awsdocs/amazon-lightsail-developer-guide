@@ -96,10 +96,18 @@ In the following procedure you will change the permissions of your private key f
      + cPanel & WHM instances: `centos`
    + *public\-ip\-address* with the public IP address of your instance that you noted from the Lightsail console earlier in this guide\.
 
-   **Example:**
+   **Example with aboslute path:**
 
    ```
    ssh -i /Users/user/Keys/LightsailDefaultKey-us-west-2.pem ec2-user@192.0.1.0
+   ```
+   
+   **Example with relative path:**
+
+   Notice the `./` prefixing the `pem` file.  Omitting `./` and simply writing `LightsailDefaultKey-us-west-2.pem` will not work.
+
+   ```
+   ssh -i ./LightsailDefaultKey-us-west-2.pem ec2-user@192.0.1.0
    ```
 
    You are successfully connected to your instance if you see the welcome message for your instance\. The following example shows the welcome message for an Amazon Linux 2 instance; other instances blueprints have a similar welcome message\. After you're connected, you can execute commands on your instance in Lightsail\. To disconnect, enter `exit` and press Enter\.  
