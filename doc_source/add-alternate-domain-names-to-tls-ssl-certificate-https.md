@@ -35,7 +35,7 @@ The total number of domains and subdomains must not exceed 10, so you can add up
    + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.
 
 1. Enter your domains and subdomains in the list\. Choose the plus icon to add a new line\.  
-![\[Create domains and subdomains for your SSL/TLS certificate\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/animated-gif-create-domain-and-subdomains-ssl-tls-certificate.gif)
+![\[Create domains and subdomains for your SSL/TLS certificate\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/animated-gif-create-domain-and-subdomains-ssl-tls-certificate.gif)
 
 1. Choose **Create**\.
 

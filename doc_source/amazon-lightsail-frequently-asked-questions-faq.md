@@ -70,7 +70,7 @@ Additionally, AWS Support offers an array of paid plans to cover your individual
 A Lightsail instance is a virtual private server \(VPS\) that lives in the AWS Cloud\. Use your Lightsail instances to store your data, run your code, and build web\-based applications or websites\. Your instances can connect to each other and to other AWS resources through both public \(internet\) and private \(VPC\) networking\. You can create, manage, and connect easily to instances right from the Lightsail console\.
 
 **What is a Lightsail plan?**  
-Also referred to as a bundle, a Lightsail plan includes a virtual server with a fixed amount of memory \(RAM\) and compute \(vCPUs\), SSD\-based storage \(disks\), and a free data transfer allowance\. Lightsail plans also offer static IP addresses \(5 per account\) and DNS management \(3 domain zones per account\)\. Lightsail plans are charged on an hourly, on\-demand basis, so you only pay for a plan when you're using it\.
+Also referred to as a bundle, a Lightsail plan includes a virtual server with a fixed amount of memory \(RAM\) and compute \(vCPUs\), SSD\-based storage \(disks\), and a free data transfer allowance\. Lightsail plans also offer static IPv4 addresses, and DNS management\. Lightsail plans are charged on an hourly, on\-demand basis, so you only pay for a plan when you're using it\.
 
 **What software can I run on my instances?**  
 Lightsail offers a range of operating system and application templates that are automatically installed when you create a new Lightsail instance\. Application templates include WordPress, WordPress Multisite, cPanel & WHM, Django, Drupal, Ghost, Joomla\!, Magento, Redmine, LAMP, Nginx \(LEMP\), MEAN, and Node\.js\.  
@@ -106,8 +106,8 @@ You can connect your Lightsail instances to Amazon VPC resources in your AWS acc
 Note that you need to have a default Amazon VPC set up in your AWS account in order for VPC peering with Lightsail to work\. AWS accounts created before December 2013 do not have a default VPC, and you will need to set one up\. Find out more about setting up your default VPC [here](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html)\.
 
 **What is the difference between stopping and deleting my instance?**  
-When you stop your instance, it is powered down at its current state and is available for you to start again at any time\. Stopping your instance will release its public IP, so it is recommended that you use static IPs for instances that must retain the same IP after they stop\.  
-When you delete your instance, you are performing a destructive action\. Unless you have created an instance snapshot, all of your instance data will be lost and you cannot recover it again\. Automatic snapshots are also deleted with the instance unless you keep them by copying them as manual snapshots\. The instance's public and private IPs will also be released\. If you were using a static IP with that instance, the static IP is detached, but remains in your account\.
+When you stop your instance, it is powered down at its current state and is available for you to start again at any time\. Stopping your instance will release its public IPv4 address, so it is recommended that you use static IPv4 addresses for instances that must retain the same IP after they are stopped and started\. Note that the public IPv6 addresses attached to instances don't change even when instances are stopped and started\.  
+When you delete your instance, you are performing a destructive action\. Unless you have created an instance snapshot, all of your instance data will be lost and you cannot recover it again\. Automatic snapshots are also deleted with the instance unless you keep them by copying them as manual snapshots\. The instance's public and private IP addresses will also be released\. If you were using a static IPv4 address with that instance, the static IPv4 address is detached, but remains in your account\.
 
 ## Container services<a name="amazon-lightsail-faq-containers"></a>
 
@@ -173,6 +173,9 @@ Lightsail container service public endpoints automatically redirect all HTTP req
 **Do container services support monitoring and alerting?**  
 Container services provide metrics for CPU utilization and memory utilization across the nodes of your service\. Alerting based on these metrics is currently not supported\. 
 
+**Do Lightsail container services support IPv6?**  
+Lightsail container service HTTPS endpoints support both IPv4 and IPv6\. Pv6 cannot be disabled on container services\.
+
 ## Databases<a name="amazon-lightsail-faq-databases"></a>
 
 **What are Lightsail managed databases?**  
@@ -225,6 +228,9 @@ By default, your Lightsail managed database is created in private mode, which se
 
 **Can I manage the ports used by my Lightsail managed database?**  
 No, Lightsail automatically manages your ports for security purposes, opening Port 3306 for MySQL for all Lightsail managed databases in public mode\. If your database is in private mode, your database is only open to resources running in your Lightsail account via the internal network\.
+
+**Do Lightsail managed databases services support IPv6?**  
+Lightsail managed databases do not support IPv6\.
 
 ## Block storage<a name="amazon-lightsail-faq-block-storage"></a>
 
@@ -293,6 +299,12 @@ Session persistence enables the load balancer to bind a visitor's session to a s
 **What kind of connections do Lightsail load balancers support?**  
 Lightsail load balancers support HTTP and HTTPS connections\.
 
+**Do Lightsail load balancers support IPv6?**  
+Lightsail load balancers created after January 12, 2021, operate in dual\-stack mode by default \(i\.e\., they accept client traffic over both IPv4 and IPv6 protocol\)\. IPv6 can be enabled on load balancers created before this date through a toggle on the Networking tab of the load balancer's management page\. IPv6 can be disabled on any load balancer using this toggle too\.
+
+**Do the instances behind a load balancer need to be IPv6 enabled to use the load balancer which is IPv6 enabled?**  
+No\. Load balancers accept both IPv4 and IPv6 traffic, and seamlessly convert it to IPv4 when communicating with the instances in the backend\. Hence, instances behind a load balancer can either be dual\-stack or IPv4 only\.
+
 ## Content delivery network distributions<a name="amazon-lightsail-faq-cdn-distributions"></a>
 
 **What can I do with Lightsail CDN distributions?**  
@@ -301,8 +313,8 @@ Lightsail content delivery network \(CDN\) distributions make it easy for you to
 **What types of resources can I use as the origin of my distributions?**  
 Lightsail distributions allow you to use your Lightsail instances and load balancers as origins\. Lightsail containers are not currently supported as origins\. Resources outside of Lightsail, such as S3 buckets, are not supported\.
 
-**Do I need to attach a static IP to my Lightsail instance in order to use it as an origin for my Lightsail distribution?**  
-Yes, static IPs are required to be attached to instances that are specified as origins\.
+**Do I need to attach a static IPv4 address to my Lightsail instance in order to use it as an origin for my Lightsail distribution?**  
+Yes, static IPv4 addresses are required to be attached to instances that are specified as origins\.
 
 **How do I setup a Lightsail distribution with my WordPress website?**  
 Simply create your distribution, select your WordPress instance as the origin, choose your plan, and you’re all set\. Lightsail distributions automatically configure your distribution settings to optimize performance for most WordPress configurations\.
@@ -353,6 +365,12 @@ Yes, you can move your Lightsail distribution by creating a similarly configured
 
 **How is Lightsail CDN intended to be used?**  
 Lightsail CDN distributions are created using fixed\-priced bundles of data transfer to make the cost of using the service simple and predictable\. Distribution bundles are designed to cover a month’s worth of usage\. Using distribution bundles in a way to avoid incurring overage fees \(including, but not limited to, frequently upgrading or downgrading bundles, or using an excessively large number of distributions with a single origin\) is beyond the intended scope of use and is not permitted\. In addition, workloads that involve a high number of requests per second or large amount of video streaming are not permitted\. Engaging in these behaviors may result in throttling or suspension of your data services or account\.
+
+**Do Lightsail CDN distributions support IPv6?**  
+All Lightsail CDN distributions have IPv6 enabled by default\. The distribution hostnames resolve to both IPv4 and IPv6 addresses\. IPv6 can be disabled via a toggle on the Networking tab of the CDN's management page\.
+
+**Do the origins need to be IPv6 enabled to work with the Lightsail CDN distributions?**  
+No\. CDN distributions accept both IPv6 and IPv4 traffic, and seamlessly convert it to IPv4 when communicating with the origins in the backend\. Hence, origins behind a distribution can either be dual\-stack or IPv4 only\.
 
 ## Certificates<a name="amazon-lightsail-faq-certificates"></a>
 
@@ -430,10 +448,13 @@ Snapshots can also be exported to Amazon EC2 to create new resources within that
 ## Networking<a name="amazon-lightsail-faq-networking"></a>
 
 **How do I use IPs in Lightsail?**  
-Each Lightsail instance automatically gets a private IP address and a public IP address\. You can use the private IP to transmit data between Lightsail instances and AWS resources privately, for free\. You can use the public IP to connect to your instance from the Internet, such as through a registered domain name or through an SSH or RDP connection from your local computer\. You can also attach a static IP to the instance, which substitutes the public IP with an IP address that doesn't change even if the instance is stopped and started\.
+Each Lightsail instance automatically gets a private IPv4 address, a public IPv4 address, and a public IPv6 address \(IPv6 must be manually enabled for instances created before January 12, 2021\)\. You can use the private IP to transmit data between Lightsail instances and AWS resources privately, for free\. You can use the public IP to connect to your instance from the Internet, such as through a registered domain name or through an SSH or RDP connection from your local computer\. You can also attach a static IPv4 address to the instance, which substitutes the public IPv4 address with an IPv4 address that doesn't change even if the instance is stopped and started\. Lightsail doesn’t currently support static IPv6 addresses\.
+
+**Does Lightsail support IPv6\-only instances?**  
+Lightsail instances support dual\-stack \(IPv4 and IPv6\) and IPv4\-only configurations\. Currently, IPv6\-only mode is not supported\.
 
 **What is a static IP?**  
-A [static IP](understanding-static-ip-addresses-in-amazon-lightsail.md) is a fixed, public IP that is dedicated to your Lightsail account\. You can assign a static IP to an instance, replacing its public IP\. If you decide to replace your instance with another one, you can reassign the static IP to the new instance\. In this way, you don't have to reconfigure any external systems \(like DNS records\) to point to a new IP every time you want to replace your instance\.
+A [static IP](understanding-static-ip-addresses-in-amazon-lightsail.md) is a fixed, public IP that is dedicated to your Lightsail account\. You can assign a static IPv4 address to an instance, replacing its public IPv4\. If you decide to replace your instance with another one, you can reassign the static IP to the new instance\. In this way, you don't have to reconfigure any external systems \(like DNS records\) to point to a new IP address every time you want to replace your instance\. Lightsail currently supports static IPs for IPv4 only\. Static IPv6 addresses are not available\. However, IPv6 addresses assigned to the instance remain unchanged until the instance is deleted or the IPv6 address is manually released by disabling IPv6 on the instance\.
 
 **What are DNS records?**  
 DNS is a globally distributed service that translates human readable names like www\.example\.com into numeric IP addresses, like 192\.0\.2\.1 that computers use to connect to each other\. With Lightsail, you can easily map your registered domain names such as photos\.example\.com to the public IPs of your Lightsail instances\. In this way, when users type human readable names like example\.com into their browsers, Lightsail automatically translates the address into the IP of the instance you want to direct your users to\. Each of these translations is referred to as a DNS query\.  
@@ -469,8 +490,8 @@ Lightsail load balancers cost $18 USD per month\.
 **What does certificate management cost?**  
 Lightsail certificates and certificate management are free with use of a Lightsail load balancer\.
 
-**What do Lightsail static IPs cost?**  
-They're free in Lightsail, as long as you are using them\! You don't pay for a static IP if it is attached to an instance\. Public IPs are a scarce resource and Lightsail is committed to helping to use them efficiently, so we charge a small $0\.005 USD/hour fee for static IPs not attached to an instance for more than 1 hour\.
+**What do Lightsail static IPv4 addresses cost?**  
+They're free in Lightsail, as long as you are using them\! You don't pay for a static IPv4 address if it is attached to an instance\. Public IP addresses are a scarce resource and Lightsail is committed to helping to use them efficiently, so we charge a small $0\.005 USD/hour fee for static IPs not attached to an instance for more than 1 hour\.
 
 **What does data transfer cost?**  
 Your instance, database, and content delivery network \(CDN\) distribution plans include a data transfer allowance\.  

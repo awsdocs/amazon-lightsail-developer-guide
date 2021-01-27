@@ -36,12 +36,12 @@ Complete the following procedure to view the custom domains that are currently e
 1. Choose the name of the container service for which you want to view the enabled custom domains\.
 
 1. Locate the custom domain values in the heading of the container service management page, as shown in the following example\. These are the custom domains that are currently enabled for the container service\.  
-![\[Custom domains for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/container-service-custom-domains-heading.png)
+![\[Custom domains for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/container-service-custom-domains-heading.png)
 
 1. On the container service management page, choose the **Custom domains** tab\.
 
    The certificates currently attached to your container service, and the custom domains being used under each attached certificate, are listed under the **Custom domain SSL/TLS certificates** section of the page\.  
-![\[Custom domain certificates for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/container-service-custom-domains-certificate.png)
+![\[Custom domain certificates for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/container-service-custom-domains-certificate.png)
 
 ## Enable custom domains for a container service<a name="container-service-enable-custom-domains"></a>
 
@@ -62,10 +62,10 @@ Complete the following procedure to enable custom domains for your Lightsail con
    If you have no certificates, then you must first create an SSL/TLS certificate for your domains, and then validate it, before you can attach it to your container service\. For more information, see [Creating SSL/TLS certificates for your Amazon Lightsail container services](amazon-lightsail-creating-container-services-certificates.md)\.
 
 1. In the dropdown menu that appears, select a valid certificate for the domains that you want to use with your container service\.  
-![\[Choosing a custom domain for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/container-service-custom-domains-picker.png)
+![\[Choosing a custom domain for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/container-service-custom-domains-picker.png)
 
 1. Choose the domains for the selected certificate that you want to use with your container service\.  
-![\[Choosing a custom domain for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/container-service-custom-domains-picker-checkbox.png)
+![\[Choosing a custom domain for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/container-service-custom-domains-picker-checkbox.png)
 
 1. Choose **Attach**\. After a few moments, traffic for the domain that you selected will begin to be accepted by your container service\.
 **Important**  

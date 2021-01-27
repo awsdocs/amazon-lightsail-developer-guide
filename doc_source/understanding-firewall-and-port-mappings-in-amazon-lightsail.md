@@ -23,7 +23,7 @@ Each Lightsail instance has two firewalls; one for IPv4 addresses and another fo
 
 Firewall rules are always permissive; you can't create rules that deny access\. You add rules to your instance's firewalls to allow traffic to reach your instance\. When you add a rule to your instance's firewall, you specify the protocol to use, the port to open, and the IPv4 and IPv6 addresses that are allowed to connect to your instance, as shown in the following example \(for IPv4\)\. You can also specify an application layer protocol type, which is a preset that specifies the protocol and port range for you based on the service that you plan to use on your instance\.
 
-![\[IPv4 firewall in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/firewall-rule-example.png)
+![\[IPv4 firewall in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/firewall-rule-example.png)
 
 Firewall rules, and their configurable parameters are explained in the next few sections of this guide\.
 

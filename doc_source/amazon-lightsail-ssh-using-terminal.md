@@ -24,7 +24,7 @@ In the following procedure you sign in to the Lightsail console to confirm your 
 1. Confirm that the instance is in a running state, and make note of the public IP address of your instance\.
 
    The state of your instance and its public IP address are listed next the name of your instance as shown in the following example\.  
-![\[The status and public IP address of an instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-status-and-public-ip-address.png)
+![\[The status and public IP address of an instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-status-and-public-ip-address.png)
 
 ## Step 2: Confirm the SSH key pair being used by your instance<a name="terminal-ssh-confirm-key-pair"></a>
 
@@ -33,26 +33,26 @@ In the following procedure you confirm the SSH key pair that is being used by yo
 1. In the **Instances** tab of the Lightsail home page, choose the name of the instance that you want to connect to\.
 
    The **Instance management** page appears, with various tab options to manage your instance\.  
-![\[Instance management page in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-instance-management-page.png)
+![\[Instance management page in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-instance-management-page.png)
 
 1. In the **Connect** tab, scroll down to see the key pair that is being used by your instance\. There are two possibilities:
 
    1. The following example shows an instance that uses the default key pair for the AWS Region in which you created your instance\. If your instance is using the default key pair, then you can continue to step 3 of this procedure to download the private key of the key pair\. Lightsail stores the private key only for the default key pair of each AWS Region\.  
-![\[Default key pair used for a Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-default-key-pair.png)
+![\[Default key pair used for a Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-default-key-pair.png)
 
    1. The following example shows an instance that uses a custom key pair that you either uploaded or created\. If your instance is using a custom key pair, then you need to locate the private key of the custom key pair where you store your keys\. If you lost the private key of the custom key pair, then you will not be able to establish an SSH connection to your instance using your own client\. However, you can continue to use the browser\-based SSH client available in the Lightsail console\. Continue to the next [Step 3: Change the permissions of your private key and connect to your instance using SSH](#terminal-ssh-change-key-file-permissions) section of this guide after you locate the private key of the custom key pair\.  
-![\[Custom key pair used for a Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-custom-key-pair.png)
+![\[Custom key pair used for a Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-custom-key-pair.png)
 
 1. Choose **Account** on the top navigation menu, then choose **Account**\.  
-![\[Account menu in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-console-account-menu.png)
+![\[Account menu in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-console-account-menu.png)
 
    The **Account management** page appears, with various tab options to manage your account settings\.  
-![\[Account management page in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-account-management-page.png)
+![\[Account management page in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-account-management-page.png)
 
 1. Choose the **SSH keys** tab\.
 
 1. Scroll down, and choose **Download** next to the default key of the AWS Region of the instance that you want to connect to\.  
-![\[Download private key of default key pair from the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-public-key-download.png)
+![\[Download private key of default key pair from the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-public-key-download.png)
 
    The private key is downloaded to your local machine\. You might want to move the downloaded key to a directory in which you store all of your SSH keys, such as a "Keys" folder in your user's home directory\. You will need to refer to the directory where the private key is saved in the next section of this guide\.
 
@@ -111,4 +111,4 @@ In the following procedure you will change the permissions of your private key f
    ```
 
    You are successfully connected to your instance if you see the welcome message for your instance\. The following example shows the welcome message for an Amazon Linux 2 instance; other instances blueprints have a similar welcome message\. After you're connected, you can execute commands on your instance in Lightsail\. To disconnect, enter `exit` and press Enter\.  
-![\[SSH connectione stablished with a Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-ssh-connection-established.png)
+![\[SSH connectione stablished with a Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-ssh-connection-established.png)

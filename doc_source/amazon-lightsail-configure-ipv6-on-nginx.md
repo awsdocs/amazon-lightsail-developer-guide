@@ -21,7 +21,7 @@ Complete the following procedure to configure IPv6 on a Nginx instance in Lights
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. In the **Instances** tab of the Lightsail home page, locate the Ubuntu 16 instance that you wish to configure, and choose the browser\-based SSH client icon to connect to it using SSH\.  
-![\[Browser-based SSH client incon in the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/lightsail-nginx-ssh-quick-connect.png)
+![\[Browser-based SSH client incon in the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsail-nginx-ssh-quick-connect.png)
 
 1. After you're connected to your instance, enter the following command to determine if your instance is listening to IPv6 requests over port 80\. Be sure to replace *<IPv6Address>* with the IPv6 address assigned to your instance\.
 
@@ -37,9 +37,9 @@ Complete the following procedure to configure IPv6 on a Nginx instance in Lights
 
    You will see a response similar to one of the following examples:
    + If your instance is not listening to IPv6 requests over port 80, then you will see a response with a **Failed to connect** error message\. You should continue to complete steps 4 through 9 of this procedure\.  
-![\[IPv6 not configured on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/lightsail-nginx-ssh-curl-result-not-configured.png)
+![\[IPv6 not configured on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsail-nginx-ssh-curl-result-not-configured.png)
    + If your instance is listening to IPv6 requests over port 80, then you will see a response with the HTML code of the home page of your instance as shown in the following example\. You should stop here; you do not need to complete steps 4 through 9 of this procedure because your instance is already configure to for IPv6\.  
-![\[IPv6 configured on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/lightsail-nginx-ssh-curl-result-configured.png)
+![\[IPv6 configured on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsail-nginx-ssh-curl-result-configured.png)
 
 1. Enter the following command to open the nginx\.conf configuration file using Vim\.
 
@@ -56,7 +56,7 @@ Complete the following procedure to configure IPv6 on a Nginx instance in Lights
    ```
 
    The file will look like the following when done:  
-![\[Nginx configuration file on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/lightsail-nginx-ssh-nginx-conf-file.png)
+![\[Nginx configuration file on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsail-nginx-ssh-nginx-conf-file.png)
 
 1. Press the **Esc** key to exit insert mode in Vim, then type `:wq!` and press **Enter** to save your edits \(write\) and quit Vim\.
 
@@ -79,4 +79,4 @@ Complete the following procedure to configure IPv6 on a Nginx instance in Lights
    ```
 
    You will see a response similar to the following example\. If your instance is listening to IPv6 requests over port 80, then you will see a response with the HTML code of the home page of your instance\.  
-![\[IPv6 configured on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/lightsail-nginx-ssh-curl-result-configured.png)
+![\[IPv6 configured on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsail-nginx-ssh-curl-result-configured.png)

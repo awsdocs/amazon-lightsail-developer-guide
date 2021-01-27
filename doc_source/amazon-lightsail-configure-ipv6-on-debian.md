@@ -21,7 +21,7 @@ Complete the following procedure to configure IPv6 on a Debian 8 instance in Lig
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. In the **Instances** tab of the Lightsail home page, locate the Debian 8 instance that you wish to configure, and choose the browser\-based SSH client icon to connect to it using SSH\.  
-![\[Browser-based SSH client icon in the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/lightsail-debian-ssh-quick-connect.png)
+![\[Browser-based SSH client icon in the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsail-debian-ssh-quick-connect.png)
 
 1. After you're connected to your instance, enter the following command to view the IP addresses configured on your instance\.
 
@@ -31,9 +31,9 @@ Complete the following procedure to configure IPv6 on a Debian 8 instance in Lig
 
    You will see a response similar to one of the following examples:
    + If your instance *does not* recognize its IPv6 address, then you will not see it listed in the response\. You should continue to complete steps 4 through 9 of this procedure\.  
-![\[IPv6 not configured on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/lightsail-debian-ssh-ip-addr-ipv6-not-configured.png)
+![\[IPv6 not configured on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsail-debian-ssh-ip-addr-ipv6-not-configured.png)
    + If your instance does recognize its IPv6 address, then you will see it listed in the response with a `scope global` as shown in this example\. You should stop here; you do not need to complete steps 4 through 9 of this procedure because your instance is already configure to recognize its IPv6 address\.  
-![\[IPv6 configured on the instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/lightsail-debian-ssh-ip-addr-ipv6-configured.png)
+![\[IPv6 configured on the instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsail-debian-ssh-ip-addr-ipv6-configured.png)
 
 1. Enter the following command to open the `interfaces` configuration file using Nano\.
 
@@ -48,7 +48,7 @@ Complete the following procedure to configure IPv6 on a Debian 8 instance in Lig
    ```
 
    The file will look like the following when done:  
-![\[Interfaces configuration file on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/lightsail-debian-ssh-interfaces-file.png)
+![\[Interfaces configuration file on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsail-debian-ssh-interfaces-file.png)
 
 1. Press the **Ctrl\+Esc** keys to exit Nano\.
 
@@ -69,4 +69,4 @@ Complete the following procedure to configure IPv6 on a Debian 8 instance in Lig
    ```
 
    You will see a response similar to the following example\. If your instance does recognize its IPv6 address, then you will see it listed in the response with a label of `scope global` as shown in this example\.  
-![\[IPv6 configured on the instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/lightsail-debian-ssh-ip-addr-ipv6-configured.png)
+![\[IPv6 configured on the instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsail-debian-ssh-ip-addr-ipv6-configured.png)

@@ -17,7 +17,7 @@ You need the one\-time login URL to access the Plesk panel as an administrator\.
    ```
 
    You should see a response similar to the following example, which contains the one\-time login URL:  
-![\[One-time sign in for your Plesk instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/plesk-one-time-sign-in.png)
+![\[One-time sign in for your Plesk instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/plesk-one-time-sign-in.png)
 **Important**  
 If you recently attached a static IP to your Plesk instance, you might get a one\-time login URL that uses the old public IP address\. Reboot the instance, and then run the above command again to get a one\-time login URL that uses the new static, public IP address\.
 

@@ -21,4 +21,4 @@ You might want to customize your health check path\. For example, if your home p
 1. On the **Target instances** tab, choose **Customize health checking**\.
 
 1. Type a valid path for your health check, and then choose **Save**\.  
-![\[Customize the health check path\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/customize-health-checking-path.png)
+![\[Customize the health check path\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/customize-health-checking-path.png)

@@ -42,7 +42,7 @@ The following are the key elements of Lightsail container services that you shou
 
 A container service is the Lightsail compute resource that you can create in any AWS Region in which Lightsail is available\. You can create and delete container services at any time\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md) and [Deleting Amazon Lightsail container services](amazon-lightsail-deleting-container-services.md)\.
 
-![\[Lighstail container service diagram\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-container-service-diagram.png)
+![\[Lighstail container service diagram\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-container-service-diagram.png)
 
 ### Container service capacity \(scale and power\)<a name="container-services-capacity"></a>
 

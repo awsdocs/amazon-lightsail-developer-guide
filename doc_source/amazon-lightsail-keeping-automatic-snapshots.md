@@ -27,12 +27,12 @@ Complete the following steps to keep automatic snapshots for an instance using t
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the Lightsail home page, choose the **Instances** tab\.  
-![\[The Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-home-page-instances-storage.png)
+![\[The Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-home-page-instances-storage.png)
 
 1. Choose the name of the instance for which you want to keep automatic snapshots\.
 
 1. On the instance management page, choose the **Snapshots** tab\.  
-![\[The instance management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-instance-management-snapshots.png)
+![\[The instance management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-instance-management-snapshots.png)
 
 1. Under the **Automatic snapshots** section, choose the ellipsis icon next to the automatic snapshot that you want to keep, then choose **Keep snapshot**\.
 
@@ -67,7 +67,7 @@ Complete the following steps to keep automatic snapshots for an instance or bloc
    ```
 
    You should see a result similar to the following, which lists the available automatic snapshots:  
-![\[Get auto snapshots operation results containing the available auto snapshots for an instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-available-auto-backups-operation.png)
+![\[Get auto snapshots operation results containing the available auto snapshots for an instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-available-auto-backups-operation.png)
 
 1. Enter the following command to keep an automatic snapshot for a specific resource:
 
@@ -89,7 +89,7 @@ Complete the following steps to keep automatic snapshots for an instance or bloc
    ```
 
    You should see a result similar to the following example:  
-![\[Copy snapshot operation result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-copy-snapshot-operation.png)
+![\[Copy snapshot operation result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-copy-snapshot-operation.png)
 
    The automatic snapshot is copied as a manual snapshot after a few moments\. Manual snapshots are kept until you delete them\.
 **Important**  

@@ -19,7 +19,7 @@ Here's how to log in to your WordPress blog\.
 1. Paste the IP address into your browser\.
 
    You should see something like this:  
-![\[WordPress blog made using Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/wordpress-blog-lightsail-bitnami-new.png)
+![\[WordPress blog made using Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/wordpress-blog-lightsail-bitnami-new.png)
 
 1. Choose **Manage** in the lower right corner\.
 
@@ -40,19 +40,19 @@ Here's how to log in to your WordPress blog\.
 If you're in a directory other than the user home directory, then type `cat $HOME/bitnami_application_password`\.
 
    You should see something like this:  
-![\[Getting the WordPress password from the browser-based SSH terminal\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-bitnami-wordpress-password.png)
+![\[Getting the WordPress password from the browser-based SSH terminal\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-bitnami-wordpress-password.png)
 
 1. Highlight your password in the terminal screen, then choose the clipboard icon\.
 
 1. Highlight the text you want to copy in the clipboard text box, then press Ctrl\+C or Cmd\+C to copy the text to your local clipboard\.  
-![\[Copying text using the browser-based clipboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/lightsail-terminal-ssh-rdp-clipboard.png)
+![\[Copying text using the browser-based clipboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsail-terminal-ssh-rdp-clipboard.png)
 **Important**  
 You should save your password somewhere at this time\. You can always change it later to something that's easier to remember\.
 
 1. Paste your password into the WordPress login page, and then choose **Log In**\.
 
    If you succeed, you'll see the WordPress Dashboard\.  
-![\[Successful login to the WordPress Dashboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-wordpress-dashboard.png)
+![\[Successful login to the WordPress Dashboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-wordpress-dashboard.png)
 
 ## Step 2: Update your profile or password in the WordPress Dashboard<a name="create-a-new-admin-user-in-wordpress"></a>
 

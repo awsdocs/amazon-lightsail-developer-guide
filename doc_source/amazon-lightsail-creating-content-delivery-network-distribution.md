@@ -38,7 +38,7 @@ An *origin* is the definitive source of content for your distribution\. When you
 
 You can choose only one origin per distribution\. You can change the origin at any time after you create your distribution\. For more information, see [Changing the origin of your distribution in Amazon Lightsail](amazon-lightsail-changing-distribution-origin.md)\.
 
-![\[Distribution origin selector\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-distribution-choose-origin.png)
+![\[Distribution origin selector\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-distribution-choose-origin.png)
 
 ## Origin protocol policy<a name="distribution-origin-protocol-policy"></a>
 
@@ -203,7 +203,7 @@ Complete the following procedure to create a distribution\.
 1. \(Optional\) To change your origin protocol policy, choose the pencil icon displayed next to the current origin protocol policy that your distribution uses\. For more information, see [Origin protocol policy](#distribution-origin-protocol-policy)\.
 
    This option is listed in the **Choose your origin** section of the page, under the origin resource you selected for your distribution\.  
-![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/origin-protocol-policy.png)
+![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/origin-protocol-policy.png)
 
 1. Choose the caching preset for your distribution\. For more information, see [Caching preset](#distribution-caching-preset)\.
 

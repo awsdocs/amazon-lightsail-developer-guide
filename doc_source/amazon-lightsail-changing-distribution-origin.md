@@ -47,7 +47,7 @@ Complete the following procedure to change your distribution's origin\.
 1. \(Optional\) To change your origin protocol policy, choose the pencil icon displayed next to the current origin protocol policy that your distribution uses\. For more information, see [Origin protocol policy](#changing-distribution-origin-protocol-policy)\.
 
    This option is listed in the **Choose your origin** section of the page, under the origin resource you selected for your distribution\.  
-![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/origin-protocol-policy.png)
+![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/origin-protocol-policy.png)
 
 1. Choose **HTTP only** or **HTTPS only**, then choose **Save** to save the origin protocol policy\.
 

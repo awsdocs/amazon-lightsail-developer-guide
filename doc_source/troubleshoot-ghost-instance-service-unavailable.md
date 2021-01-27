@@ -11,7 +11,7 @@ After you create a new Ghost instance in Amazon Lightsail, and try to access you
 1. On the Lightsail home page, choose the **Instances** tab\.
 
 1. Choose the browser\-based SSH client icon for your Ghost instance\.  
-![\[Browser-based SSH client in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-ghost-quick-connect.png)
+![\[Browser-based SSH client in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-ghost-quick-connect.png)
 
 1. After the SSH client is connected, enter the following command to restart all services on the instance:
 
@@ -20,12 +20,12 @@ After you create a new Ghost instance in Amazon Lightsail, and try to access you
    ```
 
    You should see a result similar to the following example:  
-![\[Ghost service restarted.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-restart-ghost-services.png)
+![\[Ghost service restarted.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-restart-ghost-services.png)
 
 1. Browse to the public IP address of your instance to confirm that your Ghost website is up and running\.
 
    The public IP address of your instance is listed next to the instance name in the **Instances** tab of the Lightsail console\.  
-![\[Instance public IP address.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-ghost-public-ip.png)
+![\[Instance public IP address.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-ghost-public-ip.png)
 
    When you browse to the public IP of your new Ghost instance, you should see the default Ghost website template:  
-![\[Ghost default website template.\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/amazon-lightsail-ghost-website.png)
+![\[Ghost default website template.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-ghost-website.png)

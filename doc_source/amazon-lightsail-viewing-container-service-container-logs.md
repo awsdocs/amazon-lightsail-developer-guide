@@ -8,7 +8,7 @@ Every container in your Amazon Lightsail container service deployment generates 
 
 Container logs can have hundreds of entries per day\. Use the filtering options to reduce the number of entries displayed in your log window, and make it easier to find what you're looking for\. You can filter container logs by a start and end date \(in local time\), and by a specific term\. When filtering by a term, you can choose to include or exclude log entries for the term you specify\.
 
-![\[Container service log filters in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/container-service-container-log-filter.png)
+![\[Container service log filters in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/container-service-container-log-filter.png)
 
 The *include* or *exclude* filter term looks for an exact match that is case\-sensitive\. For example, if you specify to include only log events that have `HTTP` in the message, then you will see all log events that include `HTTP` in the message, but none that include `http` in the message\. If you specify to exclude `Error`, then you will see all log events that don't include `Error` in the message, and you will also see log events that include `ERROR` in the message\.
 
@@ -39,7 +39,7 @@ Complete the following procedure to view the container logs of your Lightsail co
    The container log opens in a new browser window\. You can scroll down to view more log entries, and refresh the page to load the newest set of entries\. The filtering options are displayed at the bottom of the page\.
 **Note**  
 Log entries are displayed in ascending order, and in Coordinated Universal Time \(UTC\)\. That is, the oldest log entries are at the top, and you must scroll down to see newer log entries\.  
-![\[Container log in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/a7664053563006144d6133a21b463972/images/container-service-container-log.png)
+![\[Container log in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/container-service-container-log.png)
 
 ## Additional information about container services<a name="view-contgainer-logs-additional-info"></a>
 
