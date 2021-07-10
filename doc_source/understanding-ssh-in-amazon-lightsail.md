@@ -1,7 +1,7 @@
 # SSH and connecting to your Lightsail instance<a name="understanding-ssh-in-amazon-lightsail"></a>
 
 **Note**  
-Secure SHell \(SSH\) is a protocol for securely connecting to a virtual private server \(or Lightsail *instance*\)\. SSH works by creating a public key and a private key that match the remote server to an authorized user\. Using that key pair, you can connect to your Lightsail instance using a browser\-based SSH terminal\.
+Secure Shell \(SSH\) is a protocol for securely connecting to a virtual private server \(or Lightsail *instance*\)\. SSH works by creating a public key and a private key that match the remote server to an authorized user\. Using that key pair, you can connect to your Lightsail instance using a browser\-based SSH terminal\.
 
  *Last updated: October 23, 2020* 
 
