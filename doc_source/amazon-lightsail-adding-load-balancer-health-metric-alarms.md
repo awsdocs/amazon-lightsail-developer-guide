@@ -36,11 +36,11 @@ The following limits apply to alarms:
 
 Before you configure a metric alarm, you should view the historical data of the metric\. Identify the metric's low\-levels, mid\-levels, and high\-levels over a period of the last two weeks\. In the following instance outgoing network traffic \(`NetworkOut`\) metric graph example, the low\-levels are 0\-10 KB per hour, the mid\-levels are between 10\-20 KB per hour, and the high\-levels are between 20\-80 KB per hour\.
 
-![\[Instance NetworkOut example.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-networkout-graph-example.png)
+![\[Instance NetworkOut example.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-networkout-graph-example.png)
 
 If you configure the alarm threshold to be **greater than or equal to** somewhere in the low\-level range \(e\.g\., 5 KB per hour\), then you will get more frequent, and potentially unnecessary alarm notifications\. If you configure the alarm threshold to be **greater than or equal to** somewhere in the high\-level range \(e\.g\., 20 KB per hour\), then you will get less frequent alarm notifications, but that might be more important to investigate\. When you configure an alarm, and enable it, an alarm line representing the threshold appears on the graph as shown in the following example\. The alarm line labeled as 1 represents the threshold for Alarm 1, and the alarm line labeled as 2 represents the threshold for Alarm 2\.
 
-![\[Instance NetworkOut example, with alarm line.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-networkout-graph-example-alarmed.png)
+![\[Instance NetworkOut example, with alarm line.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-networkout-graph-example-alarmed.png)
 
 ## Creating load balancer metric alarms using the Lightsail console<a name="creating-load-balancer-alarms"></a>
 

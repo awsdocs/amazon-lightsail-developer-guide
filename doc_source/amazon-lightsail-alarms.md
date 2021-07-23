@@ -2,7 +2,7 @@
 
  *Last updated: February 27, 2020* 
 
-You can create an alarm in Amazon Lightsail that watches a single metric for your instances, databases, and load balancers\. The alarm can be configured to notify you based on the value of the metric relative to a threshold that you specify\. Notifications can be a banner displayed in the Lightsail console, an email sent to your email address, and an SMS text message sent to your mobile phone number\. In this guide, we describe the alarm conditions and settings that you can configure\.
+You can create an alarm in Amazon Lightsail that watches a single metric for your instances, databases, load balancers, and content delivery network \(CDN\) distributions\. The alarm can be configured to notify you based on the value of the metric relative to a threshold that you specify\. Notifications can be a banner displayed in the Lightsail console, an email sent to your email address, and an SMS text message sent to your mobile phone number\. In this guide, we describe the alarm conditions and settings that you can configure\.
 
 **Contents**
 + [Configuring an alarm](#configuring-alarm)
@@ -15,7 +15,7 @@ You can create an alarm in Amazon Lightsail that watches a single metric for you
 
 ## Configuring an alarm<a name="configuring-alarm"></a>
 
-To add an alarm in the Lightsail console, browse to the **Metrics** tab of your instance, database, or load balancer\. You then choose the metric you want to monitor, and choose **Add alarm**\. You can add two alarms per metric\. For more information about metrics, see [Resource metrics in Amazon Lightsail](amazon-lightsail-resource-health-metrics.md)\.
+To add an alarm in the Lightsail console, browse to the **Metrics** tab of your instance, database, load balancer, or CDN distribution\. You then choose the metric you want to monitor, and choose **Add alarm**\. You can add two alarms per metric\. For more information about metrics, see [Resource metrics in Amazon Lightsail](amazon-lightsail-resource-health-metrics.md)\.
 
 To configure the alarm, you first identify a threshold value, which is the metric value at which point the alarm will change states \(e\.g\., change from an `OK` state to an `ALARM` state, or vice versa\)\. For more information, see [Alarms states](#alarm-states)\. You then select a comparison operator that will be used to compare the metric to the threshold\. The available operators are **greater than or equal to**, **greater than**, **less than**, and **less than or equal to**\.
 
@@ -42,13 +42,13 @@ Alarms are triggered for state changes only\. Alarms are not triggered simply be
 
 With the previously described alarm conditions in mind, you can configure an alarm that goes into an `ALARM` state when an instance’s CPU utilization is greater than or equal to 5 percent one time in a single 5\-minute period\. The following example shows the settings for this alarm in the Lightsail console\.
 
-![\[Example of a CPU utilization alarm.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-cpu-utilization-alarm-example.png)
+![\[Example of a CPU utilization alarm.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-cpu-utilization-alarm-example.png)
 
 In this example, if the instance’s CPU utilization metric reports a 5 percent or above utilization in just one data point, the alarm changes from an `OK` state to an `ALARM` state\. Each subsequent data point reported that is 5 percent or above utilization maintains the alarm at an `ALARM` state\. When the instance’s CPU utilization metric reports a 4\.9 percent or below utilization in just one data point, the alarm changes from an `ALARM` state to an `OK` state\.
 
 The following graph further illustrates this alarm\. The dotted red line represents the 5% CPU utilization threshold, and the blue dots represent metric data points\. The alarm is in an `OK` state for the first data point\. The second data point changes the alarm to an `ALARM` state because the data point is greater than the threshold\. The third and fourth data points maintain the `ALARM` state, because the data points continue to be greater than the threshold\. The fifth data point changes the alarm to an `OK` state because the data point is less than the threshold\.
 
-![\[Example of an alarming metric.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-graphed-metric-example.png)
+![\[Example of an alarming metric.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-graphed-metric-example.png)
 
 ## Configure how Lightsail alarms treat missing data<a name="missing-data"></a>
 
@@ -98,7 +98,7 @@ If data points are missing soon after you create an alarm, and the metric was be
 
 ### Graph A<a name="missing-data-graph-a"></a>
 
-![\[Missing data graph A.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-alarm-graph-a.png)
+![\[Missing data graph A.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-alarm-graph-a.png)
 
 In the preceding graphed metric, data point 1 is within threshold, data point 2 is missing, data point 3 is breaching, data point 4 is missing, and data point 5 is breaching\. Given that there are three valid data points in the evaluation range, this metric has zero missing data points\. If you configured an alarm to treat missing data points as:
 + **Not breaching** — The alarm would be in an OK state\.
@@ -108,7 +108,7 @@ In the preceding graphed metric, data point 1 is within threshold, data point 2 
 
 ### Graph B<a name="missing-data-graph-b"></a>
 
-![\[Missing data graph B.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-alarm-graph-b.png)
+![\[Missing data graph B.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-alarm-graph-b.png)
 
 In the preceding graphed metric, data point 1 is within threshold, and data points 2 through 5 are missing\. Given that there is only one data point in the evaluation range, this metric has two missing data points\. If you configured an alarm to treat missing data points as:
 + **Not breaching** — The alarm would be in an OK state\.
@@ -120,7 +120,7 @@ In this scenario, the alarm would stay in an OK state, even if missing data is t
 
 ### Graph C<a name="missing-data-graph-c"></a>
 
-![\[Missing data graph C.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-alarm-graph-c.png)
+![\[Missing data graph C.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-alarm-graph-c.png)
 
 All data points are missing in the preceding graphed metric\. Given that all data points are missing in the evaluation range, this metric has three missing data points\. If you configured an alarm to treat missing data points as:
 + **Not breaching** — The alarm would be in an OK state\.
@@ -130,7 +130,7 @@ All data points are missing in the preceding graphed metric\. Given that all dat
 
 ### Graph D<a name="missing-data-graph-d"></a>
 
-![\[Missing data graph D.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-alarm-graph-d.png)
+![\[Missing data graph D.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-alarm-graph-d.png)
 
 In the preceding graphed metric, data point 1 is within threshold, data point 2 is breaching, data point 3 is breaching, data point 4 is missing, and data point 5 is breaching\. Given that there are four valid data points in the evaluation range, this metric has zero missing data points\. If you configured an alarm to treat missing data points as:
 + **Not breaching** — The alarm would be in an ALARM state\.
@@ -142,7 +142,7 @@ In this scenario, the alarm goes to ALARM state in all cases\. This is because t
 
 ### Graph E<a name="missing-data-graph-e"></a>
 
-![\[Missing data graph E.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-alarm-graph-e.png)
+![\[Missing data graph E.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-alarm-graph-e.png)
 
 In the preceding graphed metric, data points 1 and 2 are missing, data point 3 is breaching, and data point 4 and 5 are missing\. Given that there is only one data point in the evaluation range, this metric has two missing data points\. If you configured an alarm to treat missing data points as:
 + **Not breaching** — The alarm would be in an OK state\.
@@ -154,7 +154,7 @@ In graphs F, G, H, I, and J, the **Datapoints to alarm** is 2 while **Evaluation
 
 ### Graph F<a name="missing-data-graph-f"></a>
 
-![\[Missing data graph F.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-alarm-graph-f.png)
+![\[Missing data graph F.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-alarm-graph-f.png)
 
 In the preceding graphed metric, data point 1 within threshold, data point 2 is missing, data point 3 is breaching, data point 4 is missing, and data point 5 is breaching\. Given that there are three data points in the evaluation range, this metric has zero missing data points\. If you configured an alarm to treat missing data points as:
 + **Not breaching** — The alarm would be in an ALARM state\.
@@ -164,7 +164,7 @@ In the preceding graphed metric, data point 1 within threshold, data point 2 is 
 
 ### Graph G<a name="missing-data-graph-g"></a>
 
-![\[Missing data graph G.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-alarm-graph-g.png)
+![\[Missing data graph G.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-alarm-graph-g.png)
 
 In the preceding graphed metric, data points 1 and 2 are within threshold, data point 3 is breaching, data point 4 is within threshold, data point 5 is breaching\. Given that there are five data points in the evaluation range, this metric has zero missing data points\. If you configured an alarm to treat missing data points as:
 + **Not breaching** — The alarm would be in an ALARM state\.
@@ -174,7 +174,7 @@ In the preceding graphed metric, data points 1 and 2 are within threshold, data 
 
 ### Graph H<a name="missing-data-graph-h"></a>
 
-![\[Missing data graph H.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-alarm-graph-h.png)
+![\[Missing data graph H.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-alarm-graph-h.png)
 
 In the preceding graphed metric, data point 1 is within threshold, data point 2 is missing, data point 3 is breaching, and data points 4 and 5 are missing\. Given that there are two data points in the evaluation range, this metric has one missing data point\. If you configured an alarm to treat missing data points as:
 + **Not breaching** — The alarm would be in an OK state\.
@@ -184,7 +184,7 @@ In the preceding graphed metric, data point 1 is within threshold, data point 2 
 
 ### Graph I<a name="missing-data-graph-i"></a>
 
-![\[Missing data graph I.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-alarm-graph-i.png)
+![\[Missing data graph I.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-alarm-graph-i.png)
 
 In the preceding graphed metric, data points 1 through 4 are missing, and data point 5 is within threshold\. Given that there is one data point in the evaluation range, this metric has two missing data points\. If you configured an alarm to treat missing data points as:
 + **Not breaching** — The alarm would be in an OK state\.
@@ -194,7 +194,7 @@ In the preceding graphed metric, data points 1 through 4 are missing, and data p
 
 ### Graph J<a name="missing-data-graph-j"></a>
 
-![\[Missing data graph J.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-alarm-graph-j.png)
+![\[Missing data graph J.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-alarm-graph-j.png)
 
 In the preceding graphed metric, data points 1 and 2 are missing, data point 3 is breaching, and data point 4 and 5 are missing\. Given that there is one data point in the evaluation range, this metric has two missing data points\. If you configured an alarm to treat missing data points as:
 + **Not breaching** — The alarm would be in an OK state\.
@@ -208,4 +208,5 @@ Here are some articles to help you manage alarms in Lightsail:
 + [Creating instance metric alarms in Amazon Lightsail](amazon-lightsail-adding-instance-health-metric-alarms.md)
 + [Creating database metric alarms in Amazon Lightsail](amazon-lightsail-adding-database-health-metric-alarms.md)
 + [Creating load balancer metric alarms in Amazon Lightsail](amazon-lightsail-adding-load-balancer-health-metric-alarms.md)
++ [Creating distribution metric alarms in Amazon Lightsail](amazon-lightsail-adding-distribution-health-metric-alarms.md)
 + [Deleting or disabling metric alarms in Amazon Lightsail](amazon-lightsail-deleting-health-metric-alarms.md)

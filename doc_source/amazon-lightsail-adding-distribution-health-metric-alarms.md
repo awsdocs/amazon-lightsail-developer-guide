@@ -26,11 +26,11 @@ The following limits apply to alarms:
 
 Before you configure a metric alarm for your distribution, you should view the historical data of the metric\. Identify the metric's low\-levels, mid\-levels, and high\-levels over a period of the last two weeks\. In the following requests  metric graph example, the low\-levels are 0\-10 requests, the mid\-levels are between 10\-50 requests, and the high\-levels are between 50\-250 requests\.
 
-![\[Distribution requests example.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-distribution-requests-graph-example.png)
+![\[Distribution requests example.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-distribution-requests-graph-example.png)
 
 If you configure the alarm threshold to be **greater than or equal to** somewhere in the low\-level range \(e\.g\., 5 requests\), then you will get more frequent, and potentially unnecessary alarm notifications\. If you configure the alarm threshold to be **greater than or equal to** somewhere in the high\-level range \(e\.g\., 150 request\), then you will get less frequent alarm notifications, but that might be more important to investigate\. When you configure an alarm, and enable it, an alarm line representing the threshold appears on the graph as shown in the following example\. The alarm line labeled as 1 represents the threshold for Alarm 1, and the alarm line labeled as 2 represents the threshold for Alarm 2\.
 
-![\[Distribution metric example, with alarm line.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-networkout-transmit-graph-example-alarmed.png)
+![\[Distribution metric example, with alarm line.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-networkout-transmit-graph-example-alarmed.png)
 
 ## Default alarm settings<a name="default-distribution-alarm-settings"></a>
 

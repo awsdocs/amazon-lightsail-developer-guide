@@ -1,8 +1,8 @@
 # Compliance Validation for Amazon Lightsail<a name="amazon-lightsail-compliance"></a>
 
- *Last updated: January 26, 2021* 
+ *Last updated: February 1, 2021* 
 
-Lightsail is not in scope of any AWS compliance programs\. Your compliance responsibility when using Lightsail is determined by the sensitivity of your data, your company's compliance objectives, and applicable laws and regulations\. AWS provides the following resources to help with compliance:
+AWS provides the following resources to help with compliance:
 + [Security and Compliance Quick Start Guides](https://aws.amazon.com/quickstart/?awsf.quickstart-homepage-filter=categories%23security-identity-compliance) – These deployment guides discuss architectural considerations and provide steps for deploying security\- and compliance\-focused baseline environments on AWS\.
 + [AWS Compliance Resources](https://aws.amazon.com/compliance/resources/) – This collection of workbooks and guides might apply to your industry and location\.
 + [Evaluating Resources with Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html) in the *AWS Config Developer Guide* – The AWS Config service assesses how well your resource configurations comply with internal practices, industry guidelines, and regulations\.

@@ -76,30 +76,30 @@ You must include `https://` in your browser's address bar when navigating to the
    This is the password that you specified earlier in the [Step 1: Change the root user password](#amazon-lightsail-cpanel-root-user-password) section of this guide\.
 
 1. Choose **Log in**\.  
-![\[WHM sign in page\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/whm-sign-in-page.png)
+![\[WHM sign in page\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/whm-sign-in-page.png)
 
 1. Read the cPanel & WHM terms, then choose **Agree to all** if you would like to proceed\.  
-![\[cPanel & WHM terms\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/cpanel-whm-terms.png)
+![\[cPanel & WHM terms\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/cpanel-whm-terms.png)
 
 1. On the **Get started with a Free cPanel Trial** page, choose **Log in** to log in to the cPanel store\.
 
    You must sign in to the cPanel store in order to associate your trial license to your account\. If you don't have a cPanel store account, you should still choose **Log in**, and you will be given the option to create one\.  
-![\[cPanel get started with a free trial\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/cpanel-free-trial-getting-started.png)
+![\[cPanel get started with a free trial\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/cpanel-free-trial-getting-started.png)
 
 1. In the **Authorization Request** page that appears, enter your email address or username, and the password for your cPanel store account\.
 
    If you don't have a cPanel store account, then choose **Create Account** and follow the prompts to create your new cPanel store account\. You will be asked to enter your email address, and will be sent an email to set your cPanel store account password\. We recommend that you set your cPanel store account password using a new browser tab\. When your password is set, you can close that tab and return to your instance to authorize your account, and continue to the next step of this procedure\.
 
 1. Choose **Sign in**\.  
-![\[cPanel authorization request\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/cpanel-authorization-request.png)
+![\[cPanel authorization request\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/cpanel-authorization-request.png)
 
    After you sign in, your cPanel & WHM instance will acquire a 15\-day trial license that is associated with your cPanel store account\. Go to the [Manage Licenses](http://store.cpanel.net/my/licenses) page in the cPanel store to view your issued licenses, including trial licenses\.
 
 1. Choose **Server Setup** to continue\.  
-![\[cPanel trial license confirmation\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/cpanel-trial-license-confirmation.png)
+![\[cPanel trial license confirmation\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/cpanel-trial-license-confirmation.png)
 
 1. Choose **Skip** in the email address and name servers page\. You can configure these later\.  
-![\[cPanel email address and nameservers configuration\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/cpanel-email-nameserver-configuration.png)
+![\[cPanel email address and nameservers configuration\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/cpanel-email-nameserver-configuration.png)
 
    The WHM console appears, where you can manage the settings and features for cPanel\.
 
@@ -108,28 +108,28 @@ You must include `https://` in your browser's address bar when navigating to the
 Complete the following steps to change the hostname of your instance, so that you don't have to use its public IP address to access the WHM console\. You should also change the IP address of your instance to the new static IP address that you attached to your instance earlier in the [Step 2: Attach a static IP address to your cPanel & WHM instance](#amazon-lightsail-cpanel-attach-static-ip) section of this guide\.
 
 1. Choose the navigation menu icon in the top\-left section of the WHM console\.  
-![\[WHM navigation menu icon\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-whm-menu-icon.png)
+![\[WHM navigation menu icon\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-whm-menu-icon.png)
 
 1. Enter `Change hostname` in the search text box in the WHM console, then choose the **Change hostname** option in the results\.  
-![\[Change the hostname of your cPanel & WHM instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-whm-change-hostname.png)
+![\[Change the hostname of your cPanel & WHM instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-whm-change-hostname.png)
 
 1. Enter the hostname that you want to use to access the WHM console in the **New hostname** text box\. For example, enter `management.example.com` or `administration.example.com`\.
 **Note**  
 You can only specify a subdomain as the hostname, and you cannot specify `whm` or `cpanel` as the subdomain\.  
-![\[Change the hostname of your cPanel & WHM instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-whm-new-hostname.png)
+![\[Change the hostname of your cPanel & WHM instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-whm-new-hostname.png)
 
 1. Choose **Change**\.
 
 1. Choose the navigation menu icon in the top\-left section of the WHM console\.  
-![\[WHM navigation menu icon\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-whm-menu-icon.png)
+![\[WHM navigation menu icon\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-whm-menu-icon.png)
 
 1. Choose **Basic WebHost Manager Setup**\.  
-![\[Basic WebHost Manager Setup\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-cpanel-whm-basic-setup.png)
+![\[Basic WebHost Manager Setup\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-cpanel-whm-basic-setup.png)
 
 1. Under the **All** tab, scroll down and find the **Basic Config** section of the page\.
 
 1. In the IPv4 address text box, enter the new static IP address of the instance\.  
-![\[IPv4 address text box\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-cpanel-whm-ip-address.png)
+![\[IPv4 address text box\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-cpanel-whm-ip-address.png)
 
 1. Scroll to the bottom of the page and choose **Save Changes**\.
 **Note**  

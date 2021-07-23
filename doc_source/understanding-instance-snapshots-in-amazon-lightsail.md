@@ -1,6 +1,6 @@
 # Snapshots in Amazon Lightsail<a name="understanding-instance-snapshots-in-amazon-lightsail"></a>
 
- *Last updated: September 24, 2020* 
+ *Last updated: March 12, 2021* 
 
 You can create point\-in\-time snapshots of instances, databases, and block storage disks in Amazon Lightsail, and use them as baselines to create new resources or for data backup\. A snapshot contains all of the data that is needed to restore your resource \(from the moment when the snapshot was taken\)\. When you restore a resource by creating it from a snapshot, the new resource begins as an exact replica of the original resource that was used to create the snapshot\. You will be billed a [snapshot storage fee](https://aws.amazon.com/lightsail/pricing/) for snapshots on your Lightsail account; whether they are manual snapshots, automatic snapshots, copied snapshots, or system disk snapshots\. Your resources can fail at any time—create snapshots frequently to avoid permanently losing your data\.
 

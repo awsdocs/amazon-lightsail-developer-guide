@@ -22,7 +22,7 @@ Keep the following in mind when you enable and use IPv6:
 + The IPv6 address for an instance persists when you stop and start your instance\. It's released only when you delete your instance, or disable IPv6 for your instance\. You cannot get the IPv6 address back after you perform either of those actions\.
 + All IPv6 addresses that are assigned to your instances are public and reachable over the internet\. There are no private IPv6 addresses that are assigned to your instances\.
 + IPv4 and IPv6 addresses for instances are independent of each other; you must configure instance firewall rules separately for IPv4 and IPv6\. For more information, see [Instance firewalls in Amazon Lightsail](understanding-firewall-and-port-mappings-in-amazon-lightsail.md)\.
-+ Not all instance blueprints available in Lightsail become aware of their IPv6 address automatically when IPv6 enabled\. Instances that use the following blueprints require additional configuration steps after you enable IPv6 for them:
++ Not all instance blueprints available in Lightsail are automatically configured for IPv6 when IPv6 is enabled\. Instances that use the following blueprints require additional configuration steps after you enable IPv6 for them:
   + **cPanel** – For more information, see [Configuring IPv6 on cPanel instances in Amazon Lightsail](amazon-lightsail-configure-ipv6-on-cpanel.md)\.
   + **Debian 8** – For more information, see [Configuring IPv6 on Debian 8 instances in Amazon Lightsail](amazon-lightsail-configure-ipv6-on-debian.md)\.
   + **GitLab** – For more information, see [Configuring IPv6 on GitLab instances in Amazon Lightsail](amazon-lightsail-configure-ipv6-on-gitlab.md)\.
@@ -43,11 +43,11 @@ Complete the following procedure to enable IPv6 for instances, CDN distributions
 1. Choose the **Networking** tab in the resource's management page\.
 
 1. In the **IPv6 Networking** section of the page, choose the toggle to enable IPv6 for the resource\.  
-![\[Enable IPv6 in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsail-enable-ipv6.png)
+![\[Enable IPv6 in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-enable-ipv6.png)
 
    Be aware of the following items after you enable IPv6 for a resource:
    + If you enable IPv6 for a CDN distribution or load balancer, then that resource begins accepting IPv6 traffic\. If you enable IPv6 for an instance, then an IPv6 address is assigned to it, and the IPv6 firewall becomes available, as shown in the following example\.  
-![\[The instance IPv6 firewall in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsail-ipv6-firewall.png)
+![\[The instance IPv6 firewall in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-ipv6-firewall.png)
    + Instances that use the following blueprints require additional steps after enabling IPv6 to ensure the instance becomes aware of its new IPv6 address:
      + **cPanel** – For more information, see [Configuring IPv6 on cPanel instances in Amazon Lightsail](amazon-lightsail-configure-ipv6-on-cpanel.md)\.
      + **Debian 8** – For more information, see [Configuring IPv6 on Debian 8 instances in Amazon Lightsail](amazon-lightsail-configure-ipv6-on-debian.md)\.
@@ -70,4 +70,4 @@ Complete the following procedure to disable IPv6 for instances, CDN distribution
 1. Choose the **Networking** tab in the resource's management page\.
 
 1. In the **IPv6 Networking** section of the page, choose the toggle to disable IPv6 for the resource\.  
-![\[Disable IPv6 in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsail-disable-ipv6.png)
+![\[Disable IPv6 in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-disable-ipv6.png)

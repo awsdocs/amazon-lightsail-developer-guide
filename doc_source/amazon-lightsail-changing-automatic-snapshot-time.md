@@ -1,6 +1,6 @@
 # Changing the automatic snapshot time for instances or disks in Amazon Lightsail<a name="amazon-lightsail-changing-automatic-snapshot-time"></a>
 
- *Last updated: October 2, 2019* 
+ *Last updated: May 20, 2021* 
 
 When you [enable the automatic snapshots feature](amazon-lightsail-configuring-automatic-snapshots.md) for an instance or block storage disk, Lightsail creates daily snapshots of the resource during the [default automatic snapshot time](#default-automatic-snapshot-times), or a time you specify\. Follow the steps in this guide to change the automatic snapshot time for your resource\.
 
@@ -28,19 +28,20 @@ You cannot create manual snapshots when an automatic snapshot is being created\.
 ## Default automatic snapshot times for AWS Regions<a name="default-automatic-snapshot-times"></a>
 
 If you don't specify an automatic snapshot time when you enable automatic snapshots, then Lightsail assigns one of the following default automatic snapshot times\. The times depend on the AWS Region where your instance or block storage disk is located:
-+ US East \(Ohio\): 03:00 UTC
-+ US East \(N\. Virginia\): 06:00 UTC
-+ US West \(Oregon\): 06:00 UTC
-+ Asia Pacific \(Mumbai\): 17:00 UTC
-+ Asia Pacific \(Seoul\): 13:00 UTC
-+ Asia Pacific \(Singapore\): 14:00 UTC
-+ Asia Pacific \(Sydney\): 12:00 UTC
-+ Asia Pacific \(Tokyo\): 13:00 UTC
-+ Canada \(Central\): 06:00 UTC
-+ EU \(Frankfurt\): 20:00 UTC
-+ EU \(Ireland\): 22:00 UTC
-+ EU \(London\): 06:00 UTC
-+ EU \(Paris\): 07:00 UTC
++ US East \(Ohio\) \(us\-east\-2\): 03:00 UTC
++ US East \(N\. Virginia\) \(us\-east\-1\): 06:00 UTC
++ US West \(Oregon\) \(us\-west\-2\): 06:00 UTC
++ Asia Pacific \(Mumbai\) \(ap\-south\-1\): 17:00 UTC
++ Asia Pacific \(Seoul\) \(ap\-northeast\-2\): 13:00 UTC
++ Asia Pacific \(Singapore\) \(ap\-southeast\-1\): 14:00 UTC
++ Asia Pacific \(Sydney\) \(ap\-southeast\-2\): 12:00 UTC
++ Asia Pacific \(Tokyo\) \(ap\-northeast\-1\): 13:00 UTC
++ Canada \(Central\) \(ca\-central\-1\): 06:00 UTC
++ EU \(Frankfurt\) \(eu\-central\-1\): 20:00 UTC
++ EU \(Ireland\) \(eu\-west\-1\): 22:00 UTC
++ EU \(London\) \(eu\-west\-2\): 06:00 UTC
++ EU \(Paris\) \(eu\-west\-3\): 07:00 UTC
++ EU \(Stockholm\) \(eu\-north\-1\): 08:00 UTC
 
 ## Changing the automatic snapshot time for instances using the Lightsail console<a name="changing-automatic-snapshot-time-using-console"></a>
 
@@ -49,12 +50,12 @@ Complete the following steps to change the automatic snapshot time for an instan
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the Lightsail home page, choose the **Instances** tab\.  
-![\[The Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-home-page-instances-storage.png)
+![\[The Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-home-page-instances-storage.png)
 
 1. Choose the name of the instance for which you want to change the automatic snapshot time\.
 
 1. On the instance management page, choose the **Snapshots** tab\.  
-![\[The instance management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-instance-management-snapshots.png)
+![\[The instance management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-instance-management-snapshots.png)
 
 1. Under the **Automatic snapshots** section, choose **Change snapshot time**\.
 
@@ -90,7 +91,7 @@ Complete the following steps to change the automatic snapshot time for an instan
    ```
 
    You should see a result similar to the following example:  
-![\[Enable auto snapshot operation result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-update-auto-snapshot-time-operation.png)
+![\[Enable auto snapshot operation result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-update-auto-snapshot-time-operation.png)
 
    The automatic snapshot time is updated after a few moments\. A restriction may apply to the effective date of your new automatic snapshot time\. For more information, see [Automatic snapshot time restrictions](#automatic-snapshot-time-restrictions)\.
 **Note**  

@@ -1,8 +1,11 @@
-# Amazon Lightsail Resource\-Based Policy Examples<a name="security_iam_resource-based-policy-examples"></a>
+# Amazon Lightsail Resource\-Level Permissions Policy Examples<a name="security_iam_resource-based-policy-examples"></a>
 
- *Last updated: October 8, 2020* 
+ *Last updated: February 26, 2021* 
 
-The term *resource\-based permissions* refers to the ability to specify which resources users are allowed to perform actions on\. Amazon Lightsail supports resource\-level permissions\. This means that for certain Lightsail actions, you can control when users are allowed to use those actions based on conditions that have to be fulfilled, or specific resources that users are allowed to use or edit\. For example, you can also grant users permissions to manage an instance or database with a specific Amazon Resource Name \(ARN\)\.
+The term *resource\-level permissions* refers to the ability to specify which resources users are allowed to perform actions on\. Amazon Lightsail supports resource\-level permissions\. This means that for certain Lightsail actions, you can control when users are allowed to use those actions based on conditions that have to be fulfilled, or specific resources that users are allowed to use or edit\. For example, you can grant users permissions to manage an instance or database with a specific Amazon Resource Name \(ARN\)\.
+
+**Important**  
+Lightsail does not support resource\-level permissions for some API actions\. For more information, see [Support for resource\-level permissions and authorization based on tags in Amazon Lightsail](resource-level-permissions-and-auth-based-on-tags-support.md)\.
 
 For more information about the resources that are created or modified by the Lightsail actions, and the ARNs and Lightsail condition keys that you can use in an IAM policy statement, see [Actions, Resources, and Condition Keys for Amazon Lightsail](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonlightsail.html) in the *IAM User Guide*\.
 
@@ -92,7 +95,7 @@ The following policy grants access to reboot/start/stop an instance, manage inst
 
 To get the ARN for your instance, use the `GetInstance` Lightsail API action, and specify the name of the instance using the `instanceName` parameter\. Your instance ARN will be listed in the results of that action as shown in the following example\. For more information, see [GetInstance](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetInstance.html) in the *Amazon Lightsail API Reference*\.
 
-![\[An instance ARN in the GetInstance results.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-instance-arn.png)
+![\[An instance ARN in the GetInstance results.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-instance-arn.png)
 
 ## Allow management of a specific database<a name="security_iam_resource-based-policy-examples-manage-specific-database"></a>
 
@@ -177,4 +180,4 @@ The following policy grants access to reboot/start/stop and update a specific da
 
 To get the ARN for your database, use the `GetRelationalDatabase` Lightsail API action, and specify the name of the database using the `relationalDatabaseName` parameter\. Your database ARN will be listed in the results of that action as shown in the following example\. For more information, see [GetRelationalDatabase](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabase.html) in the *Amazon Lightsail API Reference*\.
 
-![\[A database ARN in the GetRelationalDatabase results.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-database-arn.png)
+![\[A database ARN in the GetRelationalDatabase results.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-database-arn.png)

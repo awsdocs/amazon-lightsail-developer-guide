@@ -1,13 +1,10 @@
 # Creating SSL/TLS certificates for your Amazon Lightsail container services<a name="amazon-lightsail-creating-container-services-certificates"></a>
 
- *Last updated: November 12, 2020* 
+ *Last updated: May 26, 2021* 
 
 You can create Amazon Lightsail TLS/SSL certificates for your Lightsail container service\. When you create a certificate, you specify the primary and alternate domain names for the certificate\. When you enable custom domains for your container service, and choose the certificate, you can choose up to four domains from the certificate that will be added as the custom domains of your container service\. After you update the DNS record of your domains to direct traffic to your container service, your service accepts the traffic and serves your content using HTTPS\. There is a quota for the number of certificates that you can create\. For more information, see [Lightsail service quotas](https://docs.aws.amazon.com/general/latest/gr/lightsail.html)\.
 
 For more information about SSL/TLS certificates, see [SSL/TLS certificates in Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)\.
-
-**Important**  
-If you use a Lightsail DNS zone to manage the DNS of your domain, then you can route traffic only for subdomains \(e\.g\., www\.example\.com\) to your container services\. You cannot route traffic for the apex of your domain \(e\.g\. example\.com\) to your container services\. To route traffic for the apex of your domain to your container service, you must use a DNS hosting provider that will allow you to create alias records that route traffic for the apex of your domain to another domain, as opposed to an IP address\.
 
 ## Prerequisites<a name="creating-container-service-certificate-prerequisites"></a>
 
@@ -37,7 +34,7 @@ Complete the following procedure to create an SSL/TLS certificate for your conta
 
 1. \(Optional\) Enter another domain name \(e\.g\., www\.example\.com\) into the **Alternate domains and subdomains** field\.
 
-   You can add up to nine alternate domains to your certificate\. You up to four of your certificate's domains with your container service after you enable custom domains and select the certificate for your service\.
+   You can add up to nine alternate domains to your certificate\. You can use up to four of your certificate's domains with your container service after you enable custom domains and select the certificate for your service\.
 
 1. Choose **Create**\.
 
@@ -51,7 +48,7 @@ These are the general steps to manage your Lightsail container service after it'
 
 1. Create your container service in your Lightsail account\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md)\.
 
-1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like Docker Hub\. For more information, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
+1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like the Amazon ECR Public Gallery or Docker Hub\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
 
 1. If you plan to push container images from your local machine to your service, install software on your local machine that you need to create your own container images and push them to your Lightsail container service\. For more information, see the following guides:
    + [Installing software to manage container images for your Amazon Lightsail container services](amazon-lightsail-install-software.md)

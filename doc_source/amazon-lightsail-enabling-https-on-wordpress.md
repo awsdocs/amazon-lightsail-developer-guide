@@ -48,10 +48,10 @@ Complete the following steps to connect to your instance using the browser\-base
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the Lightsail home page, choose the SSH quick connect icon for your WordPress instance\.  
-![\[SSH quick connect on the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-wordpress-ssh-quick-connect.png)
+![\[SSH quick connect on the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-wordpress-ssh-quick-connect.png)
 
    The browser\-based SSH client terminal window opens\. You are successfully connected to your instance via SSH if you see the Bitnami logo as shown in the following example\.  
-![\[Browser-based SSH client terminal window in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-ssh-session-bncert.png)
+![\[Browser-based SSH client terminal window in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-ssh-session-bncert.png)
 
 ## Step 4: Confirm the bncert tool is installed on your instance<a name="https-wordpress-bncert-install"></a>
 
@@ -67,9 +67,9 @@ Complete the following steps to ensure the Bitnami HTTPS configuration tool \(`b
    + If you see `command not found` in the response as shown in the following example, then the `bncert` tool is not installed on your instance\. Continue to the next step in this procedure to install the `bncert` tool on your instance\.
 **Important**  
 The `bncert` tool can only be used on WordPress instances that are *Certified by Bitnami*\. Alternately, you can use the Certbot tool to enable HTTPS on your WordPress instance\. For more information, see [Tutorial: Using Let’s Encrypt SSL certificates with your WordPress instance in Amazon Lightsail](amazon-lightsail-using-lets-encrypt-certificates-with-wordpress.md)\.  
-![\[Message confirming the bncert tool is not installed\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/run-bncert-tool-fail.png)
+![\[Message confirming the bncert tool is not installed\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/run-bncert-tool-fail.png)
    + If you see `Welcome to the Bitnami HTTPS configuration tool` in the response as shown in the following example, then the `bncert` tool is installed on your instance\. Continue to the [Step 5: Enable HTTPS on your WordPress instance](#https-wordpress-enable) section of this guide\.  
-![\[Message confirming the bncert tool is installed\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/run-bncert-tool-success.png)
+![\[Message confirming the bncert tool is installed\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/run-bncert-tool-success.png)
 
 1. Enter the following command to download the `bncert` run file to your instance\.
 
@@ -114,15 +114,15 @@ Complete the following procedure to enable HTTPs on your WordPress instance afte
    ```
 
    You should see a message similar to the following example\.  
-![\[Running the bncert tool\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/run-bncert-tool-success.png)
+![\[Running the bncert tool\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/run-bncert-tool-success.png)
 
    If the `bncert` tool has been installed on your instance for a while, then you might see a message indicating that an updated version of the tool is available\. Choose to download it as shown in the following example, and then enter the `sudo /opt/bitnami/bncert-tool` command to run the `bncert` tool again\.  
-![\[Message indicating a new version of the bncert tool is available\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/bncert-update-required.png)
+![\[Message indicating a new version of the bncert tool is available\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/bncert-update-required.png)
 
 1. Enter your primary domain name and alternate domain names separated by a space as shown in the following example\.
 
    If your domain is not configured to route traffic to the public IP address of your instance, the `bncert` tool will ask you to make that configuration before continuing\. Your domain must be routing traffic to the public IP address of the instance from which you are using the `bncert` tool to enable HTTPS on the instance\. This confirms that you own the domain, and serves as the validation for your certificate\.  
-![\[Entering the primary and alternate domain names\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/bncert-domain-names.png)
+![\[Entering the primary and alternate domain names\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/bncert-domain-names.png)
 
 1. The `bncert` tool will ask you how you want your website's redirection to be configured\. These are the options available: 
    + **Enable HTTP to HTTPS redirection** \- Specifies whether users who browse to the HTTP version of your website \(i\.e\., `http:/example.com`\) are automatically redirected to the HTTPS version \(i\.e\., `https://example.com`\)\. We recommend enabling this option because it forces all visitors to use the encrypted connection\. Type `Y` and press **Enter** to enable it\.
@@ -130,22 +130,22 @@ Complete the following procedure to enable HTTPs on your WordPress instance afte
    + **Enable www to non\-www redirection** \- Specifies whether users who browse to your domain's `www` subdomain \(i\.e\., `https://www.example.com`\) are automatically redirected to the apex of your domain \(i\.e\., `https://example.com`\)\. We recommend disabling this, if you enabled non\-`www` redirection to `www`\. Type `N` and press **Enter** to disable it\.
 
    Your selections should look like the following example\.  
-![\[Website redirection options\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/bncert-enable-disable-redirection.png)
+![\[Website redirection options\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/bncert-enable-disable-redirection.png)
 
 1. The changes that are going to be made are listed\. Type `Y` and press **Enter** to confirm and continue\.  
-![\[Confirming the changes\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/bncert-confirm-changes.png)
+![\[Confirming the changes\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/bncert-confirm-changes.png)
 
 1. Enter your email address to associate with your Let's Encrypt certificate and press **Enter**\.  
-![\[Associating your email address with your Let's Encrypt certificate\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/bncert-email-address.png)
+![\[Associating your email address with your Let's Encrypt certificate\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/bncert-email-address.png)
 
 1. Review the Let's Encrypt Subscriber Agreement\. Type `Y` and press **Enter** to accept the agreement and continue\.  
-![\[Review the Let's Encrypt subscriber agreement\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/bncert-lets-ecrypt-agreement.png)
+![\[Review the Let's Encrypt subscriber agreement\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/bncert-lets-ecrypt-agreement.png)
 
    The actions are performed to enable HTTPS on your instance, including requesting the certificate and configuring the redirections you specified\.  
-![\[Actions being performed\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/bncert-performing-actions.png)
+![\[Actions being performed\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/bncert-performing-actions.png)
 
    Your certificate is successfully issued and validated, and the redirections are successfully configured on your instance if you see a message similar to the following example\.  
-![\[Actions successfully completed\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/bncert-success-conf.png)
+![\[Actions successfully completed\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/bncert-success-conf.png)
 
    The `bncert` tool will perform an automatic renewal of your certificate every 80 days before it expires\. Repeat the above steps if you wish to use additional domains and subdomains with your instance, and you want to enable HTTPS for those domains\.
 
@@ -158,6 +158,6 @@ After you enable HTTPS on your WordPress instance, you should confirm that your 
 **Note**  
 You might have to refresh, and clear your browser's cache to see the change\.
 
-![\[Secured website confirmation\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/bncert-secured-website.png)
+![\[Secured website confirmation\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/bncert-secured-website.png)
 
 You might also notice that the non\-`www` address redirects to the `www` subdomain of your domain, or vice versa depending on the option you selected when running the `bncert` tool\.

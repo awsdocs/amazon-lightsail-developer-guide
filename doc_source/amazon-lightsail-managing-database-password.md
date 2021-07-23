@@ -1,6 +1,6 @@
 # Managing your database password in Amazon Lightsail<a name="amazon-lightsail-managing-database-password"></a>
 
- *Last updated: March 15, 2019* 
+ *Last updated: March 12, 2021* 
 
 When you create a new database in Amazon Lightsail, you can let Lightsail create a strong password for you or specify your own\. You can view or change the current database password at any time in the Lightsail console\.
 
@@ -13,12 +13,12 @@ When you create a new database in Amazon Lightsail, you can let Lightsail create
 1. Choose the name of the database for which you want to manage the password\.
 
 1. On the **Connect** tab, under the **User name and passwords** section, choose **Show** to view the current database password\.  
-![\[Show database password\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-database-show-password.png)
+![\[Show database password\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-database-show-password.png)
 
 1. To change the database password, choose **Change password**\.
 
-   You can opt to have Lightsail create a strong password for you, or you can enter your own password into the text box\. Your password must be at least eight characters in length\. You can use any character except the "at" sign \( @ \), forward slash \( / \), quotation mark \( " \), or space\.  
-![\[Changing your database password\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-database-change-password.png)
+   You can opt to have Lightsail create a strong password for you, or you can enter your own password into the text box\.The password can include any printable ASCII character except "/", """, or "@"\. For MySQL databases, the password must contain from 8 to 41 characters\. For PostgreSQL, the password must contain from 8 to 128 characters\.  
+![\[Changing your database password\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-database-change-password.png)
 
 1. Choose **Save** when you’re done\.
 

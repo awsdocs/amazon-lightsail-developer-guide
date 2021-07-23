@@ -40,7 +40,7 @@ These are the general steps to manage your Lightsail container service after it'
 
 1. Create your container service in your Lightsail account\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md)\.
 
-1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like Docker Hub\. For more information, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
+1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like the Amazon ECR Public Gallery or Docker Hub\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
 
 1. If you plan to push container images from your local machine to your service, install software on your local machine that you need to create your own container images and push them to your Lightsail container service\. For more information, see the following guides:
    + [Installing software to manage container images for your Amazon Lightsail container services](amazon-lightsail-install-software.md)

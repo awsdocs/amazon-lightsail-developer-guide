@@ -3,9 +3,9 @@
 **Note**  
 A firewall in Amazon Lightsail controls the traffic allowed to connect to your instance at the protocol and port level\. When you create a new instance, its firewall is preconfigured with a set of default rules that allow basic access to your instance\. Edit your instance's firewall, at any time, by adding and deleting firewall rules to allow traffic to reach your instance\.
 
- *Last updated: January 12, 2021* 
+ *Last updated: April 1, 2021* 
 
-The firewall in the Amazon Lightsail console acts as a virtual firewall that controls the traffic allowed to connect to your instance\. Each instance that you create in Lightsail has two firwalls; one for IPv4 addresses and another for IPv6 addresses \. Each firewall contains a set of rules that filter traffic coming into the instance\. Both firewalls are independent of each other; you must configure firewall rules separately for IPv4 and IPv6\. Edit your instance's firewall, at any time, by adding and deleting rules to allow or restrict traffic\. 
+The firewall in the Amazon Lightsail console acts as a virtual firewall that controls the traffic allowed to connect to your instance\. Each instance that you create in Lightsail has two firewalls; one for IPv4 addresses and another for IPv6 addresses \. Each firewall contains a set of rules that filter traffic coming into the instance\. Both firewalls are independent of each other; you must configure firewall rules separately for IPv4 and IPv6\. Edit your instance's firewall, at any time, by adding and deleting rules to allow or restrict traffic\. 
 
 **Contents**
 + [Understanding Lightsail firewalls](#understanding-firewalls)
@@ -23,7 +23,7 @@ Each Lightsail instance has two firewalls; one for IPv4 addresses and another fo
 
 Firewall rules are always permissive; you can't create rules that deny access\. You add rules to your instance's firewalls to allow traffic to reach your instance\. When you add a rule to your instance's firewall, you specify the protocol to use, the port to open, and the IPv4 and IPv6 addresses that are allowed to connect to your instance, as shown in the following example \(for IPv4\)\. You can also specify an application layer protocol type, which is a preset that specifies the protocol and port range for you based on the service that you plan to use on your instance\.
 
-![\[IPv4 firewall in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/firewall-rule-example.png)
+![\[IPv4 firewall in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/firewall-rule-example.png)
 
 Firewall rules, and their configurable parameters are explained in the next few sections of this guide\.
 
@@ -108,7 +108,7 @@ When you create a new instance, its IPv4 and IPv6 firewalls are preconfigured wi
 SSH \- TCP \- 22 \- all IP addresses  
 HTTP \- TCP \- 80 \- all IP addresses
 
-**WordPress, Ghost, Joomla\!, and Drupal \(CMS applications\)**  
+**WordPress, Ghost, Joomla\!, PrestaShop, and Drupal \(CMS applications\)**  
 SSH \- TCP \- 22 \- all IP addresses  
 HTTP \- TCP \- 80 \- all IP addresses  
 HTTPS \- TCP \- 443 \- all IP addresses

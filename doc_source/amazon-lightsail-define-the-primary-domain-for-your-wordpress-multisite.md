@@ -1,6 +1,6 @@
 # Define the primary domain for your WordPress Multisite instance in Amazon Lightsail<a name="amazon-lightsail-define-the-primary-domain-for-your-wordpress-multisite"></a>
 
- *Last updated: November 18, 2018* 
+ *Last updated: June 18, 2021* 
 
 A WordPress Multisite instance in Amazon Lightsail is designed to use multiple domains, or subdomains, for each blog site that you create within that instance\. Because of this, you must define the primary domain to use for the main blog of your WordPress Multisite instance\.
 
@@ -19,27 +19,27 @@ Complete these steps to ensure that your domain, such as `example.com`, redirect
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the Lightsail home page, choose the SSH quick connect icon for your WordPress Multisite instance\.  
-![\[SSH quick connect on the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/wp-multisite-ssh-quick-connect.png)
-
-1. After your Lightsail browser\-based SSH session is connected, enter the following command to change the directory to `/opt/bitnami/apps/wordpress`:
-
-   ```
-   cd /opt/bitnami/apps/wordpress
-   ```
+![\[SSH quick connect on the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/wp-multisite-ssh-quick-connect.png)
 
 1. Enter the following command to define the primary domain name for your WordPress Multisite instance\. Be sure to replace `<domain>` with the correct domain name for your WordPress Multisite\.
 
    ```
-   sudo ./bnconfig --machine_hostname <domain>
+   sudo /opt/bitnami/configure_app_domain --domain <domain>
    ```
 
    Example:
 
    ```
-   sudo ./bnconfig --machine_hostname domains.com
+   sudo /opt/bitnami/configure_app_domain --domain example.com
    ```
+**Note**  
+If this command fails, you might be using an older version of the WordPress Multisite instance\. Try running the following commands instead, and be sure to replace `<domain>` with the correct domain name for your WordPress Multisite\.  
 
-1. Enter the following command to keep the bnconfig tool from automatically running every time the server restarts\. The bnconfig tool runs automatically every time the server starts to reset the machine hostname to its IP address\. This is an undesirable action when using a custom domain name\.
+   ```
+   cd /opt/bitnami/apps/wordpress
+   sudo ./bnconfig --machine_hostname <domain>
+   ```
+After running that command, enter the following command to keep the bnconfig tool from automatically running every time the server restarts\.  
 
    ```
    sudo mv bnconfig bnconfig.disabled

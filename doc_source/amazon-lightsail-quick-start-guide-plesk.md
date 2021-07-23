@@ -17,7 +17,7 @@ You need the one\-time login URL to access the Plesk panel as an administrator\.
    ```
 
    You should see a response similar to the following example, which contains the one\-time login URL:  
-![\[One-time sign in for your Plesk instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/plesk-one-time-sign-in.png)
+![\[One-time sign in for your Plesk instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/plesk-one-time-sign-in.png)
 **Important**  
 If you recently attached a static IP to your Plesk instance, you might get a one\-time login URL that uses the old public IP address\. Reboot the instance, and then run the above command again to get a one\-time login URL that uses the new static, public IP address\.
 
@@ -30,7 +30,7 @@ For more information, see [Set up and configure Plesk on Lightsail](set-up-and-c
 Paste the one\-time login URL into a web browser\. Follow the instructions on the page to create your sign in credentials for Plesk\. You should see an option to add your domain to Plesk when you sign in for the first time\.
 
 **Note**  
-You might see a browser warning that your connection is not private, not secure, or that there’s a security risk\. This happens because your Plesk instance does not yet have an SSL/TLS certified applied to it\. In the browser window, choose **Advanced**, **Details**, or **More information** to view the options that are available\. Then choose to proceed to the website even if it’s not private or secure\.
+You might see a browser warning that your connection is not private, not secure, or that there’s a security risk\. This happens because your Plesk instance does not yet have an SSL/TLS certificate applied to it\. In the browser window, choose **Advanced**, **Details**, or **More information** to view the options that are available\. Then choose to proceed to the website even if it’s not private or secure\.
 
 For more information, see [Set up and configure Plesk on Lightsail](set-up-and-configure-plesk-stack-on-lightsail.md)\.
 

@@ -1,13 +1,21 @@
 # Installing the Amazon Lightsail container services plugin<a name="amazon-lightsail-install-software"></a>
 
- *Last updated: November 12, 2020* 
+ *Last updated: February 23, 2020* 
 
-You can use the Amazon Lightsail console to create your Lightsail container services, and create deployments using container images from on an online public registry, such as Docker Hub\. But to create your own container images, and push them to your container service, you must install the following additional software on the same computer on which you plan to create your container images:
+You can use the Amazon Lightsail console to create your Lightsail container services, and create deployments using container images from on an online public registry, such as Amazon ECR Public Gallery or Docker Hub\. But to create your own container images, and push them to your container service, you must install the following additional software on the same computer on which you plan to create your container images:
 + **Docker** – Allows you to run, test, and create your own container images that you can then use with your Lightsail container service\.
 + **AWS Command Line Interface \(AWS CLI\)** – Allows you to specify parameters of the container images you create, and then push them to your Lightsail container service\. Version 2\.1\.1 and later will work with the Lightsail Control plugin\.
 + **Lightsail Control \(lightsailctl\) plugin** – Enables the AWS CLI to access the container images that are on the local machine\.
 
 The following sections of this guide describe where to go to download these software packages, and how to install them\. For more information about container services, see [Container services in Amazon Lightsail](amazon-lightsail-container-services.md)\.
+
+**Contents**
++ [Install Docker](#install-software-docker)
++ [Install the AWS CLI](#install-software-aws-cli)
++ [Install the Lightsail Control plugin](#install-software-lightsailctl)
+  + [Install the lightsailctl plugin on Windows](#install-lightsailctl-on-windows)
+  + [Install the lightsailctl plugin on macOS](#install-lightsailctl-on-macos)
+  + [Install the lightsailctl plugin on Linux](#install-lightsailctl-on-linux)
 
 ## Install Docker<a name="install-software-docker"></a>
 
@@ -56,7 +64,7 @@ Complete the following procedure to install the lightsailctl plugin on Windows\.
 1. Choose the **Windows Start** button, and then search for `cmd`\.
 
 1. Right\-click the **Command Prompt** application in the results, and choose **Run as administrator**\.  
-![\[Run Command Prompt as administrator\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lightsailctl-cmd-run-as-administrator.png)
+![\[Run Command Prompt as administrator\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsailctl-cmd-run-as-administrator.png)
 **Note**  
 You may see a prompt that asks if you want to allow Command Prompt to make changes to your device\. You must choose **Yes** to continue with the installation\.
 
@@ -67,13 +75,27 @@ You may see a prompt that asks if you want to allow Command Prompt to make chang
    ```
 
    You should see a result similar to the following example\.  
-![\[Command line response to setx command\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/lighstailctl-setx-command.png)
+![\[Command line response to setx command\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lighstailctl-setx-command.png)
 
    You are now ready to use the AWS Command Line Interface \(AWS CLI\) to push container images to your Lightsail container service\. For more information, see [Pushing and managing container images on your Amazon Lightsail container services](amazon-lightsail-pushing-container-images.md)\.
 
 ### Install the lightsailctl plugin on macOS<a name="install-lightsailctl-on-macos"></a>
 
-Complete the following procedure to install the lightsailctl plugin on macOS\.
+Complete one of the following procedures to download and install the lightsailctl plugin on macOS\.
+
+**Homebrew download and install**
+
+1. Open a terminal window\.
+
+1. Enter the following command to download and install the lightsailctl plugin\.
+
+   ```
+   brew install aws/tap/lightsailctl
+   ```
+**Note**  
+For more information about Homebrew, see the [Homebrew](https://brew.sh/) website\.
+
+**Manual download and install**
 
 1. Open a terminal window\.
 
@@ -95,7 +117,7 @@ Complete the following procedure to install the lightsailctl plugin on macOS\.
    xattr -c /usr/local/bin/lightsailctl
    ```
 
-   You are now ready to use the AWS CLI to push container images to your Lightsail container service\. For more information, see [Pushing and managing container images on your Amazon Lightsail container services](amazon-lightsail-pushing-container-images.md)\.
+You are now ready to use the AWS CLI to push container images to your Lightsail container service\. For more information, see [Pushing and managing container images on your Amazon Lightsail container services](amazon-lightsail-pushing-container-images.md)\.
 
 ### Install the lightsailctl plugin on Linux<a name="install-lightsailctl-on-linux"></a>
 
@@ -137,7 +159,7 @@ These are the general steps to manage your Lightsail container service after it'
 
 1. Create your container service in your Lightsail account\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md)\.
 
-1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like Docker Hub\. For more information, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
+1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like the Amazon ECR Public Gallery or Docker Hub\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
 
 1. If you plan to push container images from your local machine to your service, install software on your local machine that you need to create your own container images and push them to your Lightsail container service\. For more information, see the following guides:
    + [Installing software to manage container images for your Amazon Lightsail container services](#amazon-lightsail-install-software)

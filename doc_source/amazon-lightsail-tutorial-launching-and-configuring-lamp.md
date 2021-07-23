@@ -26,17 +26,17 @@ Get your LAMP instance up and running in Lightsail\. For more information about 
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the **Instances** tab of the Lightsail home page, choose **Create instance**\.  
-![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lamp-tutorial-01.png)
+![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lamp-tutorial-01.png)
 
 1. Choose the AWS Region and Availability Zone for your instance\.  
-![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-wordpress-tutorial-02.png)
+![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-wordpress-tutorial-02.png)
 
 1. Choose your instance image\.
 
    1. Choose **Linux/Unix** as the platform\.
 
    1. Choose **LAMP \(PHP 7\)** as the blueprint\.  
-![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lamp-tutorial-03.png)
+![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lamp-tutorial-03.png)
 
 1. Choose an instance plan\.
 
@@ -49,15 +49,15 @@ Get your LAMP instance up and running in Lightsail\. For more information about 
    + Must contain 2 to 255 characters\.
    + Must start and end with an alphanumeric character or number\.
    + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.  
-![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lamp-tutorial-04.png)
+![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lamp-tutorial-04.png)
 
 1. Choose one of the following options to add tags to your instance:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
@@ -68,7 +68,7 @@ For more information about key\-only and key\-value tags, see [Tags in Amazon Li
 The default password to sign in to your database in LAMP is stored on your instance\. Retrieve it by connecting to your instance using the browser\-based SSH terminal in the Lightsail console and running a special command\. For more information, see [Getting the application user name and password for your Certified by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md) in the Lightsail documentation\.
 
 1. On the **Instances** tab of the Lightsail home page, choose the SSH quick\-connect icon for your LAMP instance\.  
-![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lamp-tutorial-05.png)
+![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lamp-tutorial-05.png)
 
 1. After the browser\-based SSH client window opens, enter the following command to retrieve the default application password:
 
@@ -79,7 +79,7 @@ The default password to sign in to your database in LAMP is stored on your insta
 If you're in a directory other than the user home directory, then enter `cat $HOME/bitnami_application_password`\.
 
 1. Make note of the password displayed on the screen\. You use this password later to install Bitnami applications on your instance, or to access the MySQL database with the user name of `root`\.  
-![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lamp-tutorial-06.png)
+![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lamp-tutorial-06.png)
 
 ## Step 4: Install an application on top of your LAMP instance<a name="install-an-application-on-lamp"></a>
 
@@ -94,31 +94,31 @@ The default public IP for your LAMP instance changes if you stop and start the i
 Create a static IP address and attach it to your LAMP instance\. For more information, see [Create a static IP and attach it to an instance in Amazon Lightsail](lightsail-create-static-ip.md) in the Lightsail documentation\.
 
 1. On the **Instances** tab of the Lightsail home page, choose your running LAMP instance\.  
-![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lamp-tutorial-09.png)
+![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lamp-tutorial-09.png)
 
 1. Choose the **Networking** tab, then choose **Create static IP**\.  
-![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-wordpress-tutorial-10.png)
+![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-wordpress-tutorial-10.png)
 
 1. The static IP location, and attached instance are pre\-selected based on the instance that you chose earlier in this tutorial\.  
-![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lamp-tutorial-11.png)
+![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lamp-tutorial-11.png)
 
 1. Name your static IP, then choose **Create**\.  
-![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-wordpress-tutorial-12.png)
+![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-wordpress-tutorial-12.png)
 
 ## Step 6: Create a Lightsail DNS zone and map a domain to your LAMP instance<a name="creating-a-dns-zone"></a>
 
 Transfer management of your domain's DNS records to Lightsail\. This allows you to more easily map a domain to your LAMP instance, and manage all of your website’s resources using the Lightsail console\. For more information, see [Creating a DNS zone to manage your domain’s DNS records in Amazon Lightsail](lightsail-how-to-create-dns-entry.md) in the Lightsail documentation\.
 
 1. On the **Networking** tab of the Lightsail home page, choose **Create DNS zone**\.  
-![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-wordpress-tutorial-13.png)
+![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-wordpress-tutorial-13.png)
 
 1. Enter your domain, then choose **Create DNS zone**\.  
-![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-wordpress-tutorial-14.png)
+![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-wordpress-tutorial-14.png)
 
 1. Make note of the name server addresses listed on the page\.
 
    You add these name server addresses to your domain name’s registrar to transfer management of your domain’s DNS records to Lightsail\.  
-![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-wordpress-tutorial-15.png)
+![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-wordpress-tutorial-15.png)
 
 1. After management of your domain’s DNS records are transferred to Lightsail, add an A record to point the apex of your domain to your LAMP instance, as follows:
 
@@ -129,7 +129,7 @@ Transfer management of your domain's DNS records to Lightsail\. This allows you 
    1. In the **Maps to** box, choose the static IP that you attached to the LAMP instance in the previous step of this tutorial\.
 
    1. Choose the save icon\.  
-![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-wordpress-tutorial-16.png)
+![\[Launching and configuring a LAMP instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-wordpress-tutorial-16.png)
 
    Allow time for the change to propagate through the internet's DNS before your domain begins routing traffic to your LAMP instance\.
 

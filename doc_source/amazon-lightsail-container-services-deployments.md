@@ -27,7 +27,7 @@ For more information about container services, see [Container services in Amazon
 Complete the following prerequisites before you get started with creating a deployment in your container service:
 + Create your container service in your Lightsail account\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md)\.
 + Identify the container images that you want to use when you launch containers on your container service\.
-  + Find container images on a public registry, such as Docker Hub\. For more information, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
+  + Find container images on a public registry, such as the Amazon ECR Public Gallery or Docker Hub\. For more information, see [Amazon ECR Public Gallery](https://gallery.ecr.aws/) in the *Amazon ECR Public User Guide* and [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
   + Create container images on your local machine, then push them to your Lightsail container service\. For more information, see the following guides:
     + [Installing software to manage container images for your Amazon Lightsail container services](amazon-lightsail-install-software.md)
     + [Creating container images for your Amazon Lightsail container services](amazon-lightsail-creating-container-images.md)
@@ -41,12 +41,12 @@ This section describes the parameters that you can specify for the container ent
 
 You can add up to 10 container entries in your deployment\. Each container entry has the following parameters that you can specify:
 
-![\[Deployment configuration of a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/container-service-deployment-config.png)
+![\[Deployment configuration of a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/container-service-deployment-config.png)
 + **Container name** – Enter a name for the container\. All containers within a deployment must have unique names, and must contain only alphanumeric characters and hyphens\. A hyphen can separate words but it cannot be at the start or end of the name\.
 + **Source image** – Specify a source container image for the container\. You can specify container images from the following sources:
-  + A public registry, such as Docker Hub or some other public container image registry\. To specify a container image from Docker Hub, enter the name of the container image repository \(i\.e\., `nginx`\) or the name of the container image repository plus the version tag \(i\.e\., `nginx:latest`\) that you want to use\.
+  + A public registry, such as the Amazon ECR Public Gallery, Docker Hub, or some other public container image registry\. To specify a container image from Docker Hub, enter the name of the container image repository \(i\.e\., `nginx`\) or the name of the container image repository plus the version tag \(i\.e\., `nginx:latest`\) that you want to use\.
 
-    For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
+    For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
 **Note**  
 When you create your container service, you have the option to create an example deployment using an Nginx or Redis container image from Docker Hub\. Example deployments are pre\-configured to demonstrate how to launch a container on your service\.
   + Images pushed from your local machine to your container service\. To specify a stored image, choose Choose stored images, and then select the image that you want to use\.
@@ -65,7 +65,7 @@ You can use your own custom domain name with your container service\. For more i
 
 The public endpoint of your deployment, and container service, has the following parameters that you can specify:
 
-![\[Public endpoint of a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/container-service-deployment-public-endpoint-config.png)
+![\[Public endpoint of a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/container-service-deployment-public-endpoint-config.png)
 + **Endpoint container** – Select the name of the container in your deployment that will serve as the public endpoint of your container service\. Only the containers that have an HTTP or HTTPS port open in the deployment are listed in the dropdown menu\.
 + **Port** – Select the HTTP or HTTPS port to use for the public endpoint\. Only the HTTP and HTTPS ports that are open on the selected container are listed in the dropdown menu\. Select an HTTP port if the selected container is not configured to support an HTTPS connection when first launched\.
 **Note**  
@@ -134,7 +134,7 @@ Complete the following procedure to create or modify a deployment on your Lights
    + If your container service has not had a deployment, choose **Create a deployment**\.
 
      The deployment form opens, where you can edit existing deployment parameters, or enter new deployment parameters\.  
-![\[Container service deployment form in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/container-service-deployment-form.png)
+![\[Container service deployment form in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/container-service-deployment-form.png)
 
 1. Enter the parameters of your deployment\. For more information about the deployment parameters that you can specify, see the [Deployment parameters](#creating-container-deployments-parameters) section earlier in this guide\.
 
@@ -154,7 +154,7 @@ These are the general steps to manage your Lightsail container service after it'
 
 1. Create your container service in your Lightsail account\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md)\.
 
-1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like Docker Hub\. For more information, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
+1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like the Amazon ECR Public Gallery or Docker Hub\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
 
 1. If you plan to push container images from your local machine to your service, install software on your local machine that you need to create your own container images and push them to your Lightsail container service\. For more information, see the following guides:
    + [Installing software to manage container images for your Amazon Lightsail container services](amazon-lightsail-install-software.md)

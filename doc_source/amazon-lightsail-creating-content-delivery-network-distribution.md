@@ -8,7 +8,7 @@ In this guide, we show you how to create an Amazon Lightsail distribution using 
 + [Prerequisites](#distribution-prerequisites)
 + [Origin resource](#distribution-origin-resource)
 + [Origin protocol policy](#distribution-origin-protocol-policy)
-+ [Caching preset](#distribution-caching-preset)
++ [Caching behavior and caching presets](#distribution-caching-preset)
 + [Best for WordPress caching preset](#wordpress-distribution-preset)
 + [Default behavior](#distribution-default-behavior)
 + [Directory and file overrides](#distribution-directory-file-overrides)
@@ -22,23 +22,25 @@ In this guide, we show you how to create an Amazon Lightsail distribution using 
 
 Complete the following prerequisites before you get started with creating a distribution:
 
-1. Create a Lightsail instance to host your content\. The instance serves as the origin of your distribution\. The origin stores the original, definitive version of your content\. For more information, see [Create an Amazon Lightsail instance](how-to-create-amazon-lightsail-instance-virtual-private-server-vps.md)\.
+1. Complete one of the following, depending on whether you want to use an instance or a bucket with your distribution\.
+   + Create a Lightsail instance to host your content\. The instance serves as the origin of your distribution\. The origin stores the original, definitive version of your content\. For more information, see [Create an Amazon Lightsail instance](how-to-create-amazon-lightsail-instance-virtual-private-server-vps.md)\.
 
-1. Attach a Lightsail static IP to your instance\. Your instance's default public IP address changes if you stop and start your instance, which will break the connection between your distribution and your origin instance\. A static IP does not change if you stop and start your instance\. For more information, see [Create a static IP and attach it to an instance in Amazon Lightsail](lightsail-create-static-ip.md)\.
+     Attach a Lightsail static IP to your instance\. Your instance's default public IP address changes if you stop and start your instance, which will break the connection between your distribution and your origin instance\. A static IP does not change if you stop and start your instance\. For more information, see [Create a static IP and attach it to an instance in Amazon Lightsail](lightsail-create-static-ip.md)\.
 
-   You can create a static IP and attach it to your instance when you create your distribution\. You don't have to attach a static IP to your instance before getting started with creating your distribution\.
+     Upload your content and files to your instance\. Your files, also known as *objects*, typically include web pages, images, and media files, but can be anything that can be served over HTTP\.
+   + Create a Lightsail bucket to store your static content\. The bucket serves as the origin of your distribution\. The origin stores the original, definitive version of your content\. For more information, see [Creating buckets in Amazon Lightsail](amazon-lightsail-creating-buckets.md)\.
 
-1. Upload your content and files to your instance\. Your files, also known as *objects*, typically include web pages, images, and media files, but can be anything that can be served over HTTP\.
+     Upload files to your bucket using the Lightsail console, AWS Command Line Interface \(AWS CLI\), and AWS APIs\. For more information about uploading files, see [Uploading files to a bucket in Amazon Lightsail](amazon-lightsail-uploading-files-to-a-bucket.md#amazon-lightsail-uploading-files-to-a-bucket.title)\.
 
 1. \(Optional\) Create a Lightsail load balancer if your website requires fault tolerance\. Then attach multiple copies of your instance to your load balancer\. You can configure your load balancer \(with one or more instances attached to it\) as the origin of your distribution, instead of configuring your instance as the origin\. For more information, see [Create a Lightsail load balancer and attach instances to it](create-lightsail-load-balancer-and-attach-lightsail-instances.md)\.
 
 ## Origin resource<a name="distribution-origin-resource"></a>
 
-An *origin* is the definitive source of content for your distribution\. When you create your distribution, you choose the Lightsail instance or Lightsail load balancer \(with one or more instances attached to it\) that hosts the content of your website or web application\.
+An *origin* is the definitive source of content for your distribution\. When you create your distribution, you choose the Lightsail instance, bucket, or load balancer \(with one or more instances attached to it\) that hosts the content of your website or web application\.
 
 You can choose only one origin per distribution\. You can change the origin at any time after you create your distribution\. For more information, see [Changing the origin of your distribution in Amazon Lightsail](amazon-lightsail-changing-distribution-origin.md)\.
 
-![\[Distribution origin selector\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-distribution-choose-origin.png)
+![\[Distribution origin selector\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-distribution-choose-origin.png)
 
 ## Origin protocol policy<a name="distribution-origin-protocol-policy"></a>
 
@@ -48,11 +50,17 @@ You can choose one of the following origin protocol policies for your distributi
 + **HTTP Only** \- Your distribution uses only HTTP to access the origin\. This is the default setting\.
 + **HTTPS Only** \- Your distribution uses only HTTPS to access the origin\.
 
-The steps to edit your origin protocol policy are included in the following [Create a distribution](#creating-a-distribution) section later in this guide\.
+The steps to edit your origin protocol policy are included in the [Create a distribution](#creating-a-distribution) section later in this guide\.
 
-## Caching preset<a name="distribution-caching-preset"></a>
+**Note**  
+When you select a Lightsail bucket as the origin of your distribution, the **Origin protocol policy** defaults to **HTTP only**\. You cannot change the origin protocol policy when a bucket is the origin of your distribution\.
+
+## Caching behavior and caching presets<a name="distribution-caching-preset"></a>
 
 A *caching preset* automatically configures the settings of your distribution for the type of content that you host on your origin\. For example, choosing the **Best for static content** preset automatically configures your distribution with settings that work best with static websites\. If your website is hosted on a WordPress instance, then choose the **Best for WordPress** preset to have your distribution automatically configured to work with your WordPress website\.
+
+**Note**  
+The caching preset options are not available when you select a Lightsail bucket as the origin of your distribution\. We automatically apply distribution settings that are best for static content being stored in a bucket\.
 
 You can choose one of the follow caching presets for your distribution:
 + **Best for static content** \- This preset configures your distribution to *cache everything*\. This preset is ideal if you host static content \(e\.g\., static HTML pages\) on your origin, or content that does not change for each user who visits your website\. All content on your distribution is cached when you choose this preset\.
@@ -74,6 +82,9 @@ You must edit the WordPress configuration file in your instance to make your Wor
 
 A *default behavior* specifies how your distribution handles content caching\. The default behavior of your distribution is automatically specified for you depending on the [caching preset](#distribution-caching-preset) that you select\. If you select a different default behavior, then the caching preset is automatically changed to **Custom settings**\.
 
+**Note**  
+The default behavior options are not available when you select a Lightsail bucket as the origin of your distribution\. We automatically apply distribution settings that are best for static content being stored in a bucket\.
+
 You can choose one of the follow default behaviors for your distribution:
 + **Cache everything** \- This behavior configures your distribution to cache and serve your entire website as static content\. This option is ideal if your origin hosts content that doesn't change depending on who views it, or if your website does not use cookies, headers, or query strings to personalize content\.
 + **Cache nothing** \- This behavior configures your distribution to cache only the origin files and folder paths that you specify\. This option is ideal if your website or web application uses cookies, headers, and query strings to personalize content for individual users\. If you select this option, you *must* specify the [directory and file path overrides](#distribution-directory-file-overrides) to cache\.
@@ -83,6 +94,9 @@ You can choose one of the follow default behaviors for your distribution:
 A *directory and file override* can be used to override, or add an exception to, the default behavior you selected\. For example, if you chose to *cache everything*, use an override to specify a directory, file, or file type that your distribution shouldn't cache\. Alternately, if you chose to *cache nothing*, use an override to specify a directory, file, or file type that your distribution should cache\.
 
 In the **Directory and file overrides** section of the page, you can specify a path to a directory or a file to cache, or not cache\. Use an asterisk symbol to specify wildcard directories \(`path/to/assets/*`\), and file types \(`*.html`, `*jpg`, `*js`\)\. Directories and file paths are case\-sensitive\.
+
+**Note**  
+The directory and file override options are not available when you select a Lightsail bucket as the origin of your distribution\. Everything that is stored in the selected bucket is cached\.
 
 These are just a few examples of how you can specify directory and file overrides:
 + Specify the following to cache all files in the document root of an Apache web server running on a Lightsail instance\.
@@ -123,6 +137,9 @@ These are just a few examples of how you can specify directory and file override
 ## Advanced cache settings<a name="distribution-advanced-settings"></a>
 
 The *advanced settings* can be used to specify the cache lifespan of content on your distribution, the allowed HTTP methods, HTTP header forwarding, cookie forwarding, and query string forwarding\. The advanced settings that you specify apply only to the directory and files that your distribution caches, including the directory and file overrides that you specify as **Cache**\.
+
+**Note**  
+The advanced cache settings are not available on the **Create distribution** page when you select a Lightsail bucket as the origin of your distribution\. We automatically apply distribution settings that are best for static content being stored in a bucket\. However, you can modify the advanced cache settings in the distribution management page after your distribution is created\.
 
 You can configure the following advanced settings:
 
@@ -198,22 +215,34 @@ Complete the following procedure to create a distribution\.
 
    Distributions are global resources\. They can reference an origin in any AWS Region, and distribute its content globally\.
 
-1. Choose your origin\. An origin can be an instance or a load balancer \(with one or more instances attached to it\)\. For more information, see [Origin resource](#distribution-origin-resource)\.
+1. Choose your origin\. An origin can be a Lightsail instance, bucket, or a load balancer \(with one or more instances attached to it\)\. For more information, see [Origin resource](#distribution-origin-resource)\.
 
 1. \(Optional\) To change your origin protocol policy, choose the pencil icon displayed next to the current origin protocol policy that your distribution uses\. For more information, see [Origin protocol policy](#distribution-origin-protocol-policy)\.
 
-   This option is listed in the **Choose your origin** section of the page, under the origin resource you selected for your distribution\.  
-![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/origin-protocol-policy.png)
+   This option is listed in the **Choose your origin** section of the page, under the origin resource you selected for your distribution\.
+**Note**  
+When you select a Lightsail bucket as the origin of your distribution, the **Origin protocol policy** defaults to **HTTP only**\. You cannot change the origin protocol policy when a bucket is the origin of your distribution\.  
+![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/origin-protocol-policy.png)
 
-1. Choose the caching preset for your distribution\. For more information, see [Caching preset](#distribution-caching-preset)\.
+1. Choose the caching behavior \(also known as a caching preset\) for your distribution\. For more information, see [Caching behavior and caching preset](#distribution-caching-preset)\.
+**Note**  
+The caching preset options are not available when you select a Lightsail bucket as the origin of your distribution\. We automatically apply distribution settings that are best for static content being stored in a bucket\.
 
 1. \(Optional\) Choose **Show all settings** to view additional caching behavior settings for your distribution\.
+**Note**  
+The caching behavior settings are not available when you select a Lightsail bucket as the origin of your distribution\. We automatically apply distribution settings that are best for static content being stored in a bucket\.
 
 1. \(Optional\) Choose the default behavior for your distribution\. For more information, see [Default behavior](#distribution-default-behavior)\.
+**Note**  
+The default behavior options are not available when you select a Lightsail bucket as the origin of your distribution\. We automatically apply distribution settings that are best for static content being stored in a bucket\.
 
 1. \(Optional\) Choose **Add path** to add a directory and file override to your distribution's caching behavior\. For more information, see [Directory and file overrides](#distribution-directory-file-overrides)\.
+**Note**  
+The directory and file override options are not available when you select a Lightsail bucket as the origin of your distribution\. We automatically apply distribution settings that are best for static content being stored in a bucket\.
 
 1. \(Optional\) Choose the pencil icon displayed next to the advanced setting you want to edit for your distribution\. For more information, see [Advanced cache settings](#distribution-advanced-settings)\.
+**Note**  
+The advanced cache settings are not available on the **Create distribution** page when you select a Lightsail bucket as the origin of your distribution\. We automatically apply distribution settings that are best for static content being stored in a bucket\. However, you can modify the advanced cache settings in the distribution management page after your distribution is created\.
 
 1. Choose your distribution plan\. For more information, see [Distribution plans](#distribution-plan)\.
 
@@ -235,7 +264,7 @@ Complete the following procedure to create a distribution\.
 
 We recommend that you complete the following next steps after your distribution is up and running\.
 
-1. \(Optional\) If your distribution's origin is a WordPress instance, you must edit the WordPress configuration file in your instance to make your WordPress website work with your distribution\. For more information, see [Configuring your WordPress instance to work with your Amazon Lightsail distribution](amazon-lightsail-editing-wp-config-for-distribution.md)\.
+1. If your distribution's origin is a WordPress instance, you must edit the WordPress configuration file in your instance to make your WordPress website work with your distribution\. For more information, see [Configuring your WordPress instance to work with your Amazon Lightsail distribution](amazon-lightsail-editing-wp-config-for-distribution.md)\.
 
 1. \(Optional\) Create a Lightsail DNS zone to manage your domain's DNS in the Lightsail console\. This allows you to easily map your domain to your Lightsail resources\. For more information, see [Creating a DNS zone to manage your domain’s DNS records in Amazon Lightsail](lightsail-how-to-create-dns-entry.md)\. Alternately, you can continue hosting your domain's DNS where it's currently being hosted\.
 

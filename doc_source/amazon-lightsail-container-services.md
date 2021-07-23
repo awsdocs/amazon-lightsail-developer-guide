@@ -7,7 +7,7 @@ An Amazon Lightsail container service is a compute resource to which you can dep
 
 An Amazon Lightsail container service is a highly scalable compute and networking resource on which you can deploy, run, and manage containers\. A container is a standard unit of software that packages code and its dependencies together so the application runs quickly and reliably from one computing environment to another\.
 
-You can think of your Lightsail container service as a computing environment that lets you run containers in the AWS infrastructure by using images that you create on your local machine and push to your service, or images from an online repository, like Docker Hub\.
+You can think of your Lightsail container service as a computing environment that lets you run containers in the AWS infrastructure by using images that you create on your local machine and push to your service, or images from an online repository, like Amazon ECR Public Gallery or Docker Hub\.
 
 You can also run containers locally, on your local machine, by installing software such as Docker\. Amazon Elastic Container Service \(Amazon ECS\) and Amazon Elastic Compute Cloud \(Amazon EC2\) are other resources within the AWS infrastructure on which you can run containers\. For more information, see the [Amazon ECS Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)\.
 
@@ -42,7 +42,7 @@ The following are the key elements of Lightsail container services that you shou
 
 A container service is the Lightsail compute resource that you can create in any AWS Region in which Lightsail is available\. You can create and delete container services at any time\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md) and [Deleting Amazon Lightsail container services](amazon-lightsail-deleting-container-services.md)\.
 
-![\[Lighstail container service diagram\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-container-service-diagram.png)
+![\[Lighstail container service diagram\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-container-service-diagram.png)
 
 ### Container service capacity \(scale and power\)<a name="container-services-capacity"></a>
 
@@ -85,7 +85,7 @@ Every deployment that you create in your container service is saved as a deploym
 When you create a deployment, you must specify a source container image for each container entry in your deployment\. Immediately after you create your deployment, your container service pulls the images from the sources you specify and uses them to create your containers\.
 
 The images that you specify can originate from the following sources:
-+ **A public registry**, such as Docker Hub or some other public container image registry\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
++ **A public registry**, such as Amazon ECR Public Gallery, Docker Hub, or some other public container image registry\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
 **Note**  
 When you create your container service, you have the option to create an example deployment using an Nginx or Redis container image from Docker Hub\. Example deployments are pre\-configured to demonstrate how to launch a container on your service\.
 + **Images pushed from your local machine** to your container service\. If you create container images on your local machine, you can push them to your container service to use them when creating a deployment\. For more information, see [Creating container images for your Amazon Lightsail container services](amazon-lightsail-creating-container-images.md) and [Pushing and managing container images on your Amazon Lightsail container services](amazon-lightsail-pushing-container-images.md)\.
@@ -151,7 +151,7 @@ These are the general steps to manage your Lightsail container service if you pl
 
 1. Create your container service in your Lightsail account\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md)\.
 
-1. Find container images that you want to use from a public registry, such as Docker Hub\. For more information, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
+1. Find container images that you want to use from a public registry, such as Amazon ECR Public Gallery or Docker Hub\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
 
 1. Create a deployment in your container service that configures and launches your containers\. For more information, see [Creating and managing deployments for your Amazon Lightsail container services](amazon-lightsail-container-services-deployments.md)\.
 

@@ -5,7 +5,7 @@
 **Note**  
 Configure Amazon Lightsail to notify you when a metric for one of your resources crosses a specified threshold\. You can be notified by a banner displayed in the Lightsail console, an email, or an SMS text message\.
 
-You can configure Lightsail to notify you when a metric for one of your instances, databases, or load balancers crosses a specified threshold\. Notifications can be in the form of a banner displayed in the Lightsail console, an email sent to an address you specify, or an SMS text message sent to a mobile phone number you specify\.
+You can configure Lightsail to notify you when a metric for one of your instances, databases, load balancers, or content delivery network \(CDN\) distributions crosses a specified threshold\. Notifications can be in the form of a banner displayed in the Lightsail console, an email sent to an address you specify, or an SMS text message sent to a mobile phone number you specify\.
 
 To get notifications, you must configure an alarm that monitors a metric for one of your resources\. For example, you can configure an alarm that notifies you when your instance's outgoing network traffic is greater than 500 kilobytes during a specified length of time\. For more information, see [Alarms in Amazon Lightsail](amazon-lightsail-alarms.md)\.
 

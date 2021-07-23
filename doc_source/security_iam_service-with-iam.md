@@ -46,6 +46,9 @@ For actions that don't support resource\-level permissions, such as listing oper
 "Resource": "*"
 ```
 
+**Important**  
+Lightsail does not support resource\-level permissions for some API actions\. For more information, see [Support for resource\-level permissions and authorization based on tags in Amazon Lightsail](resource-level-permissions-and-auth-based-on-tags-support.md)\.
+
 The Lightsail instance resource has the following ARN:
 
 ```
@@ -104,9 +107,7 @@ To view examples of Lightsail identity\-based policies, see [Amazon Lightsail Id
 
 ## Lightsail Resource\-Based Policies<a name="security_iam_service-with-iam-resource-based-policies"></a>
 
-Resource\-based policies are JSON policy documents that specify what actions a specified principal can perform on the Lightsail resource and under what conditions\. Lightsail supports resource\-based permissions policies\.
-
-For more information, see [Amazon Lightsail Resource\-Based Policy Examples](security_iam_resource-based-policy-examples.md)\.
+Lightsail does not support resource\-based policies\.
 
 ## Access Control Lists \(ACLs\)<a name="security_iam_service-with-iam-acls"></a>
 
@@ -114,7 +115,12 @@ Lightsail does not support Access Control Lists \(ACLs\)\.
 
 ## Authorization Based on Lightsail Tags<a name="security_iam_service-with-iam-tags"></a>
 
-You can attach tags to Lightsail resources or pass tags in a request to Lightsail\. To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `lightsail:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\. For more information about tagging Lightsail resources, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
+You can attach tags to Lightsail resources or pass tags in a request to Lightsail\. To control access based on tags, you provide tag information in the [condition element](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) of a policy using the `lightsail:ResourceTag/key-name`, `aws:RequestTag/key-name`, or `aws:TagKeys` condition keys\.
+
+**Important**  
+Lightsail does not support authorization based on tags for some API actions\. For more information, see [Support for resource\-level permissions and authorization based on tags in Amazon Lightsail](resource-level-permissions-and-auth-based-on-tags-support.md)\.
+
+For more information about tagging Lightsail resources, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
 To view an example identity\-based policy for limiting access to a resource based on the tags on that resource, see [Allowing Creation and Deletion of Lightsail Resources Based on Tags](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/security_iam_id-based-policy-examples#security_iam_id-based-policy-examples-view-widget-tags)\.
 

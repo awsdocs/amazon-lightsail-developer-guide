@@ -1,8 +1,8 @@
 # Adding notification contacts in Amazon Lightsail<a name="amazon-lightsail-adding-editing-notification-contacts"></a>
 
- *Last updated: February 27, 2020* 
+ *Last updated: May 18, 2021* 
 
-You can configure Amazon Lightsail to notify you when a metric for one of your instances, databases, or load balancers crosses a specified threshold\. Notifications can be in the form of a banner displayed in the Lightsail console, an email sent to an address you specify, or an SMS text message sent to a mobile phone number you specify\. To be notified by email and SMS text message, you must add your email address and mobile phone number as notification contacts in each AWS Region where you want to monitor your resources\. For more information about notifications, see [Notifications in Amazon Lightsail](amazon-lightsail-notifications.md)\.
+You can configure Amazon Lightsail to notify you when a metric for one of your instances, databases, load balancers, or content delivery network \(CDN\) distributions crosses a specified threshold\. Notifications can be in the form of a banner displayed in the Lightsail console, an email sent to an address you specify, or an SMS text message sent to a mobile phone number you specify\. To be notified by email and SMS text message, you must add your email address and mobile phone number as notification contacts in each AWS Region where you want to monitor your resources\. For more information about notifications, see [Notifications in Amazon Lightsail](amazon-lightsail-notifications.md)\.
 
 **Note**  
 SMS text messaging is not supported in all AWS Regions in which you can create Lightsail resources, and text messages cannot be sent to some countries and regions of the world\. For more information, see [SMS text messaging support](#sms-support)\.
@@ -28,10 +28,10 @@ SMS text messaging is not supported in all AWS Regions in which you can create L
 SMS messaging is supported in the following AWS Regions\. These are Regions where SMS text messaging is supported by the Amazon Simple Notification Service \(Amazon SNS\), which is used by Lightsail to send you notifications:
 + US East \(N\. Virginia\) \(us\-east\-1\)
 + US West \(Oregon\) \(us\-west\-2\)
-+ Europe \(Ireland\) \(eu\-west\-1\)
-+ Asia Pacific \(Tokyo\) \(ap\-northeast\-1\)
 + Asia Pacific \(Singapore\) \(ap\-southeast\-1\)
 + Asia Pacific \(Sydney\) \(ap\-southeast\-2\)
++ Asia Pacific \(Tokyo\) \(ap\-northeast\-1\)
++ Europe \(Ireland\) \(eu\-west\-1\)
 
 For a list of countries and regions of the world where SMS text messages can be sent, and the latest AWS Regions in which SMS text messaging is supported, see [Supported Regions and Countries](https://docs.aws.amazon.com/sns/latest/dg/sns-supported-regions-countries.html) in the *Amazon SNS Developer Guide*\.
 
@@ -39,11 +39,11 @@ For a list of countries and regions of the world where SMS text messages can be 
 
 When you add an email address as a notification contact in Lightsail, a verification request is sent to that address\. The verification request email contains a link that the recipient must click to confirm that they want to receive Lightsail notifications\. Notifications are not sent to the email address until after it is verified\. The verification comes from *AWS Notifications <no\-reply@sns\.amazonaws\.com>*, with a subject of *AWS Notification \- Subscription Confirmation*\. SMS messaging does not require verification\.
 
-![\[Verification request email.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-email-verification.png)
+![\[Verification request email.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-email-verification.png)
 
 Check the mailbox's spam and junk folders if the verification request is not in the inbox folder\. If the verification request got lost, or was deleted, choose **Resend verification** in the notification banner that is displayed in the Lightsail console, and in the **Account** page\.
 
-![\[Email waiting verification banner in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-email-verification-banner.png)
+![\[Email waiting verification banner in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-email-verification-banner.png)
 
 ## Adding notification contacts using the Lightsail console<a name="adding-notification-contacts-console"></a>
 
@@ -54,42 +54,42 @@ Complete the following steps to add notification contacts using the Lightsail co
 1. On the Lightsail home page, choose **Account** on the top navigation menu\.
 
 1. Choose **Account** in the drop\-down menu\.  
-![\[Account menu in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-account-drop-down.png)
+![\[Account menu in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-account-drop-down.png)
 
 1. Choose **Add email address** or **Add SMS number** in the **Notification contacts** section on the **Profile & contacts** tab\.  
-![\[Notification contacts in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-notification-contacts.png)
+![\[Notification contacts in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-notification-contacts.png)
 
 1. Complete one of the following steps:
    + If you are adding an email address, choose the AWS Region where you want to add the notification contact\. Enter your email address into the text box\.  
-![\[Select an AWS Region when adding a notification contact.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-email-notification-contact-region-menu.png)
+![\[Select an AWS Region when adding a notification contact.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-email-notification-contact-region-menu.png)
    + If you are adding an SMS number, choose the AWS Region where you want to add the notification contact\. Choose the country of your mobile number, and enter it into the text box\. The country code is already entered for you\.
 **Note**  
 SMS text messaging is not supported in all AWS Regions in which you can create Lightsail resources, and text messages cannot be sent to some countries and regions of the world\. For more information, see [SMS text messaging support](#sms-support)\.  
-![\[Select an AWS Region when adding a notification contact.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-sms-notification-contact-region-menu.png)
+![\[Select an AWS Region when adding a notification contact.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-sms-notification-contact-region-menu.png)
 
 1. Choose **Add contact**\.
 
    When you add an email address as a notification contact, a verification request is sent to that address\. The verification request email contains a link that the recipient must click to confirm that they want to receive Lightsail notifications\. SMS messaging does not require verification\.  
-![\[Email verification prompt after adding an email notification contacts in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-email-verification-modal.png)
+![\[Email verification prompt after adding an email notification contacts in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-email-verification-modal.png)
 
 1. Choose **I understand**\.
 
    Your email address or mobile phone number is added to the **Notification contacts** section\. Email addresses are not verified until you complete the verification process in the following steps\. Notifications are not sent to the email address until after you verify it\. Choose **Resend** next to one of your regional email addresses to send another verification request if the verification request got lost, or was deleted\.
 **Note**  
 SMS messaging does not require verification\. Therefore, you don’t need to complete steps 8 through 10 in this procedure after you add an SMS notification contact\.  
-![\[Notification contacts added in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-added-notification-contacts.png)
+![\[Notification contacts added in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-added-notification-contacts.png)
 
 1. Open the inbox for the email address that you added as a notification contact in Lightsail\.
 
 1. Open the **AWS Notification \- Subscription Confirmation** email from **no\-reply@sns\.amazonaws\.com**\.
 **Note**  
 Check the mailbox's spam and junk folders if the verification request is not in the inbox folder\.  
-![\[Verification email request.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-email-verification-request.png)
+![\[Verification email request.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-email-verification-request.png)
 
 1. Choose **Confirm subscription** in the email to confirm that you want to receive Lightsail notifications\.
 
    A browser window opens to the following page confirming your subscription\. To unsubscribe, choose **click here to unsubscribe** on the page\. Or, if you have closed the page, complete the steps to [delete your notification contacts](amazon-lightsail-deleting-notification-contacts.md)\.  
-![\[Email verification subscription.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-email-verification-subscribe.png)
+![\[Email verification subscription.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-email-verification-subscribe.png)
 
 ## Adding notification contacts using the AWS CLI<a name="adding-notification-contacts-cli"></a>
 

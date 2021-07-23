@@ -1,6 +1,6 @@
 # Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail<a name="log-in-to-your-bitnami-application-running-on-amazon-lightsail"></a>
 
- *Last updated: January 13, 2020* 
+ *Last updated: April 1, 2021* 
 
 Bitnami provides many of the application instance images, or blueprints, that you can create as Amazon Lightsail instances, which are your virtual private servers\. These blueprints are described as “Certified by Bitnami” in the instance creation page in the Lightsail console\.
 
@@ -27,6 +27,9 @@ These are the default application and database user names for Lightsail instance
 Not all Bitnami blueprints include an application or a database\. The user name is listed as not applicable \(N/A\) when these are not included in the blueprint\.
 + WordPress, including WordPress Multisite
   + Application user name: `user`
+  + Database user name: `root`
++ PrestaShop
+  + Application user name: `user@example.com`
   + Database user name: `root`
 + Django
   + Application user name: N/A
@@ -73,10 +76,10 @@ The default application and database password are stored on your instance\. You 
 1. If you haven't already, create an instance using a “Certified by Bitnami” blueprint\. For more information, see [Create an Amazon Lightsail VPS](how-to-create-amazon-lightsail-instance-virtual-private-server-vps.md)
 
 1. On the Lightsail home page, choose the quick connect icon for the instance you want to connect to\.  
-![\[Open the browser-based SSH client with quick connect.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-wordpress-quick-connect.png)
+![\[Open the browser-based SSH client with quick connect.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-wordpress-quick-connect.png)
 
    The browser\-based SSH client window opens, as shown in the following example\.  
-![\[Browser-based SSH client in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-bitnami-terminal-window.png)
+![\[Browser-based SSH client in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-bitnami-terminal-window.png)
 
 1. Type the following command to retrieve the default application password:
 
@@ -87,12 +90,12 @@ The default application and database password are stored on your instance\. You 
 If you're in a directory other than the user home directory, then type `cat $HOME/bitnami_application_password`\.
 
    You should see a response similar to this, which contains the application password:  
-![\[Bitnami default application password.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-bitnami-application-password.png)
+![\[Bitnami default application password.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-bitnami-application-password.png)
 
 1. In the terminal screen, highlight the password, then choose the clipboard icon in the bottom right corner of the browser\-based SSH client window\.
 
 1. In the clipboard text box, highlight the text you want to copy, then press **Ctrl\+C** or **Cmd\+C** to copy the text to your local clipboard\.  
-![\[Browser-based SSH client clipboard text box.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-bitnami-browser-ssh-terminal-clipboard-password.png)
+![\[Browser-based SSH client clipboard text box.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-bitnami-browser-ssh-terminal-clipboard-password.png)
 **Important**  
 Make sure to save your password somewhere at this time\. You can later change it to something that's easier to remember\.
 
@@ -105,19 +108,19 @@ For instances created from the WordPress, Joomla, Magento, Drupal, GitLab CE, an
 1. In a browser window, navigate to the public IP address for your instance\.
 
    The Bitnami application home page opens\. The home page displays according to the Bitnami blueprint you chose for your instance\. For example, this is the WordPress application home page:  
-![\[The Bitnami application home page for WordPress.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-bitnami-application-home-page.png)
+![\[The Bitnami application home page for WordPress.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-bitnami-application-home-page.png)
 
 1. Choose the Bitnami logo at the bottom right corner of the application home page to go to the application information page\.
 **Note**  
 The GitLab CE application doesn't display a Bitnami logo\. Instead, sign in using the user name and password text fields displayed on the GitLab CE home page\.
 
    The application information page contains the default user name and a link to the login page for the application on your instance\.  
-![\[Bitnami application information page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-bitnami-application-information-page.png)
+![\[Bitnami application information page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-bitnami-application-information-page.png)
 
 1. Choose the login link on the page to go to the log in page for the application on your instance\.
 
 1. Type the user name and the password you just acquired, then choose **Log In**\.  
-![\[The log in page for WordPress.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-bitnami-wordpress-application-login.png)
+![\[The log in page for WordPress.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-bitnami-wordpress-application-login.png)
 
 ## Next steps<a name="bitnami-instances-next-steps"></a>
 

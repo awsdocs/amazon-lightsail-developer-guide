@@ -10,7 +10,7 @@ Of course, you'll need a Lightsail load balancer first\. [Learn how to create a 
 
 The first thing you're going to want to do is [configure your Lightsail instances for load balancing](configure-lightsail-instances-for-load-balancing.md)\. Once that's done, you can attach an instance to your load balancer\. Attaching an instance starts the health checking process, and you get a **Passed** or **Failed** message on the load balancer management page\.
 
-![\[Health check status indicator\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/target-instances-health-check-passed.png)
+![\[Health check status indicator\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/target-instances-health-check-passed.png)
 
 You can also customize your health check path\. For example, if your home page loads slowly or has a lot of images on it, you can configure Lightsail to check a different page that loads faster\. [Learn more about customizing the health check path](enable-set-up-health-checking-for-lightsail-load-balancer-metrics.md)
 

@@ -15,7 +15,7 @@ Complete the following procedure to delete your container service\.
 1. Choose the name of the container service you want to delete\.
 
 1. Choose the ellipsis icon in the tab menu, then choose the **Delete**\.  
-![\[Delete tab for the container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/continer-service-delete-tab.png)
+![\[Delete tab for the container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/continer-service-delete-tab.png)
 
 1. Choose **Delete container service** to delete your service\.
 
@@ -31,7 +31,7 @@ These are the general steps to manage your Lightsail container service after it'
 
 1. Create your container service in your Lightsail account\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md)\.
 
-1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like Docker Hub\. For more information, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
+1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like the Amazon ECR Public Gallery or Docker Hub\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
 
 1. If you plan to push container images from your local machine to your service, install software on your local machine that you need to create your own container images and push them to your Lightsail container service\. For more information, see the following guides:
    + [Installing software to manage container images for your Amazon Lightsail container services](amazon-lightsail-install-software.md)

@@ -1,12 +1,13 @@
 # Frequently Asked Questions in Amazon Lightsail<a name="amazon-lightsail-frequently-asked-questions-faq"></a>
 
- *Last updated: November 12, 2020* 
+ *Last updated: July 14, 2021* 
 
 This topic answers frequently asked questions \(FAQ\)\. If you have a FAQ that is not answered here, use the **Questions? Comments?** feedback button at the bottom of the page\. You can also post a question in the [Lightsail discussion forum](https://forums.aws.amazon.com/forum.jspa?forumID=231)\.
 
 **Contents**
 + [General](#amazon-lightsail-frequently-asked-questions-faq-general)
 + [Instances](#amazon-lightsail-faq-instances)
++ [Object storage and buckets](#amazon-lightsail-faq-buckets)
 + [Container services](#amazon-lightsail-faq-containers)
 + [Databases](#amazon-lightsail-faq-databases)
 + [Block storage](#amazon-lightsail-faq-block-storage)
@@ -50,6 +51,7 @@ Lightsail is currently available in all the Availability Zones in the following 
 • EU \(Ireland\) \(eu\-west\-1\)  
 • EU \(London\) \(eu\-west\-2\)  
 • EU \(Paris\) \(eu\-west\-3\)  
+• EU \(Stockholm\) \(eu\-north\-1\)  
 For more information, see [AWS Regions and Availability Zones in Lightsail](understanding-regions-and-availability-zones-in-amazon-lightsail.md)\.
 
 **What are Availability Zones?**  
@@ -73,7 +75,7 @@ A Lightsail instance is a virtual private server \(VPS\) that lives in the AWS C
 Also referred to as a bundle, a Lightsail plan includes a virtual server with a fixed amount of memory \(RAM\) and compute \(vCPUs\), SSD\-based storage \(disks\), and a free data transfer allowance\. Lightsail plans also offer static IPv4 addresses, and DNS management\. Lightsail plans are charged on an hourly, on\-demand basis, so you only pay for a plan when you're using it\.
 
 **What software can I run on my instances?**  
-Lightsail offers a range of operating system and application templates that are automatically installed when you create a new Lightsail instance\. Application templates include WordPress, WordPress Multisite, cPanel & WHM, Django, Drupal, Ghost, Joomla\!, Magento, Redmine, LAMP, Nginx \(LEMP\), MEAN, and Node\.js\.  
+Lightsail offers a range of operating system and application templates that are automatically installed when you create a new Lightsail instance\. Application templates include WordPress, WordPress Multisite, cPanel & WHM, PrestaShop, Django, Drupal, Ghost, Joomla\!, Magento, Redmine, LAMP, Nginx \(LEMP\), MEAN, and Node\.js\.  
 You can install additional software on your instances by using the in\-browser SSH or your own SSH client\.
 
 **What operating systems can I use with Amazon Lightsail?**  
@@ -109,6 +111,57 @@ Note that you need to have a default Amazon VPC set up in your AWS account in or
 When you stop your instance, it is powered down at its current state and is available for you to start again at any time\. Stopping your instance will release its public IPv4 address, so it is recommended that you use static IPv4 addresses for instances that must retain the same IP after they are stopped and started\. Note that the public IPv6 addresses attached to instances don't change even when instances are stopped and started\.  
 When you delete your instance, you are performing a destructive action\. Unless you have created an instance snapshot, all of your instance data will be lost and you cannot recover it again\. Automatic snapshots are also deleted with the instance unless you keep them by copying them as manual snapshots\. The instance's public and private IP addresses will also be released\. If you were using a static IPv4 address with that instance, the static IPv4 address is detached, but remains in your account\.
 
+## Object storage and buckets<a name="amazon-lightsail-faq-buckets"></a>
+
+**What can I do with Lightsail object storage?**  
+You can store your static content, such as images, videos, and HTML files in a bucket in the Lightsail object storage service\. You can use the objects stored in your bucket with your websites and applications\. Lightsail object storage can be associated to your Lightsail CDN distribution with a few simple clicks, making it quick and easy to accelerate the delivery of your content to a global audience\. It can also be used as a low cost, secure backup solution\. For more information, see [Object storage in Amazon Lightsail](buckets-in-amazon-lightsail.md)\.
+
+**What does Lightsail object storage cost?**  
+Lightsail object storage has three different fixed\-priced bundles in all AWS Regions where Lightsail is available\. The first bundle is $1/month and is free for the first 12 months\. This bundle includes 5 GB storage capacity and 25 GB of data transfer\. The second bundle is $3 per month and includes 100 GB storage capacity and 250 GB of data transfer\. Lastly, the third bundle is $5 per month and includes 250 GB of storage capacity and 500 GB data transfer\. Lightsail object storage includes unlimited data transfer into your bucket, as the bundled data transfer allowance is used only for data transfer out from your bucket\.
+
+**Does Lightsail object storage have overage charges?**  
+When you exceed the monthly storage capacity or data transfer allowance of your object storage plan, you will get charged for the additional amount\. For more information, see the [Lightsail pricing page](https://aws.amazon.com/lightsail/pricing/)\.
+
+**How does my data transfer allowance work with object storage?**  
+You can consume your data transfer allowance by transferring data into and out of Lightsail object storage, except for the following:  
+• Data transferred into Lightsail object storage from the internet  
+• Data transfer between Lightsail object storage resources  
+• Data transferred out from Lightsail object storage to another Lightsail resource in the same AWS Region \(including to a resource in a different AWS account, but in the same AWS Region\)  
+• Data transferred out from Lightsail object storage to a Lightsail CDN distribution
+
+**Can I change the plan associated with my Lightsail bucket?**  
+Yes, you can change your Lightsail object storage plan one time within your monthly AWS billing cycle\.
+
+**Can I copy objects from Lightsail object storage to Amazon S3?**  
+Yes, copying from Lightsail object storage to Amazon S3 is supported\. For more information, see [How can I copy all objects from one Amazon S3 bucket to another bucket?](https://aws.amazon.com/premiumsupport/knowledge-center/move-objects-s3-bucket/) in the *AWS Premium Support Knowledge Center*\.
+
+**How do I get started with Lightsail object storage?**  
+To use Lightsail object storage, you must first create a bucket that is used to store your data\. For more information, see Creating buckets in Amazon Lightsail\. After your bucket is up and running, you can start adding objects to your bucket by uploading files using the Lightsail console or by configuring your application to put content like logs or other application data in the bucket\. Alternatively, you can also get started with Lightsail object storage through the use of AWS Command Line Interface \(AWS CLI\)\.
+
+**How do I upload objects to my bucket?**  
+To upload object\(s\) to your bucket, like images or other static files, choose “Upload” from the “Objects” top navigation tab and select the correct filed or directory from your computer\. Alternately, drag and drop files and directories from your desktop into the marked area in the Lightsail object storage console\.
+
+**Can I block public access to my bucket?**  
+Lightsail buckets and objects are set to private by default, meaning that only users with appropriate permissions have access to the bucket and objects\. A user can change this default setting and either make individual objects public and read only in a private bucket or opt to make the entire bucket public and read only\. When a user makes a bucket or object public, anyone in the world can read its content\. For more information, see [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
+
+**How do I provide programmatic access to my bucket?**  
+You can use either access keys or roles for programmatic access to your bucket\. First, select the bucket you want to programmatically connect to in the Lightsail console\. Second, under the “Permissions” tab, create an access key or assign a role to your Lightsail instance and then configure your website or application code to use your bucket\. This behavior may vary depending on how you plan to use object storage with your website or application\. For more information, see [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
+
+**How do I share a bucket with other AWS accounts?**  
+Lightsail makes cross\-account sharing easy by allowing you to share access to your bucket with the AWS account ID that you specify in the Cross\-account access section of the bucket management page\. After you specify an AWS account ID, that account will have read\-only access to the bucket\. For more information, see [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
+
+**What is versioning?**  
+Versioning allows you to preserve, retrieve, and restore every version of every object storage in your bucket, providing an additional level of protection from accidental overwrites and deletes\.\. For more information, see [Enabling and suspending object versioning in a bucket in Amazon Lightsail](amazon-lightsail-managing-bucket-object-versioning.md)\.
+
+**How do I associate my Lightsail bucket to my Lightsail CDN distribution?**  
+Lightsail object storage can be associated to Lightsail CDN distributions with a few simple clicks, making it quick and easy to accelerate the delivery of your content to a global audience\. To do so, create a Lightsail CDN distribution and simply select the Lightsail bucket as the origin of your Lightsail CDN distribution\. For more information, see [Using an Amazon Lightsail bucket with a Lightsail content delivery network distribution](amazon-lightsail-using-distributions-with-buckets.md)\.
+
+**What limits are there for the Lightsail object storage service?**  
+You can create up to 20 buckets in the Lightsail object storage service per account\. There is no limit to the number of objects that you can store in a bucket\. You can store all of your objects in a single bucket, or you can organize them across several buckets\.
+
+**Does Lightsail object storage support monitoring and alerting?**  
+With Lightsail object storage, customers can easily view metrics on the total used space within a bucket and number of objects within the bucket\. Alerting based on these metrics is also supported\. For more information, see [Viewing metrics for your bucket in Amazon Lightsail](amazon-lightsail-viewing-bucket-metrics.md) and [Creating bucket metric alarms in Amazon Lightsail](amazon-lightsail-adding-bucket-metric-alarms.md)\.
+
 ## Container services<a name="amazon-lightsail-faq-containers"></a>
 
 **What can I do with Lightsail container services?**  
@@ -118,7 +171,7 @@ Lightsail container services provide an easy way to run containerized applicatio
 Yes\. Lightsail supports Linux\-based Docker containers\. Windows containers are currently not supported\.
 
 **How do I use my Docker container images with Lightsail container service?**  
-You can use either container images on registries like Docker Hub or build your own custom image and push it to Lightsail in a few easy steps using the AWS CLI\. For more information, see [Pushing and managing container images on your Amazon Lightsail container services](amazon-lightsail-pushing-container-images.md)\.
+You can use either container images on registries like Amazon ECR Public Registry and Docker Hub, or build your own custom image and push it to Lightsail in a few easy steps using the AWS CLI\. For more information, see [Pushing and managing container images on your Amazon Lightsail container services](amazon-lightsail-pushing-container-images.md)\.
 
 **Can I pull my container images from a private container registry?**  
 Currently, only public container registries are supported by Lightsail container services\. Alternately, you can push your custom container images from your local machine to Lightsail to keep them private\. 
@@ -130,7 +183,7 @@ Yes, container service power and scale can be changed at any time even after the
 Lightsail provides a HTTPS endpoint for every container service in the format “*<service\-name>*\.*<random\-guid>*\.*<aws\-region\-name>*\.cs\.amazonlightsail\.com\. Only the service name can be customized\. Alternately, you can use a custom domain name\. For more information, see [Enabling and managing custom domains for your Amazon Lightsail container services](amazon-lightsail-enabling-container-services-custom-domains.md)\.
 
 **Can I use custom domains for the HTTPS endpoint of a Lightsail container service?**  
-Yes\. You can create and attach an SSL/TLS certificate with custom domain names to your container service from within Lightsail\. The certificates need to be domain validated\. If you manage your domain via Lightsail DNS, you can create CNAME records mapping to your container services\. Creating an A\-record for a container service while using Lightsail DNS zones is not currently supported\. Alternately, you can use a DNS provider who supports adding ALIAS records, mapping your apex domain to the Lightsail container service default hostname\. For more information, see [Enabling and managing custom domains for your Amazon Lightsail container services](amazon-lightsail-enabling-container-services-custom-domains.md)\.
+Yes\. You can create and attach an SSL/TLS certificate with custom domain names to your container service in Lightsail\. The certificates must be domain validated\. If you the DNS of your domain using a Lightsail DNS zone, you can add an address \(A for IPv4 or AAAA for IPv6\) to map the apex of your domain \(e\.g\., `example.com`\) or a subdomain \(e\.g\., `www.example.com`\) to your container services\. You can also add a canonical \(CNAME\) record to map a subdomain \(e\.g\., `www.example.com`\) to your container services\. Alternately, you can use a DNS hosting provider who supports adding ALIAS records to map the apex of your domain \(\.e\.g, `example.com`\) to the default domain \(public DNS\) of your Lightsail container service\. For more information, see [Enabling and managing custom domains for your Amazon Lightsail container services](amazon-lightsail-enabling-container-services-custom-domains.md)\.
 
 **What do Lightsail container services cost?**  
 Lightsail container services are billed on an on\-demand hourly rate, so you pay only for what you use\. For every Lightsail container service you use, we charge you the fixed hourly price, up to the maximum monthly service price\. Maximum monthly service price can be calculated by multiplying the base price of the power of your service with the scale of your service\. For example, a service of Micro power and scale of 2 will cost a maximum of $10\*2=$20/month\. The least expensive Lightsail container service starts at $0\.0094 USD/hour \($7 USD/month\)\. Additional data transfer charges may apply for usage above the free\-quota of 500 GB per month for each service\. 
@@ -152,7 +205,8 @@ Every container service comes with a data transfer quota \(500 GB per month\)\. 
 • EU \(Frankfurt\) \(eu\-central\-1\): $0\.09 USD/GB  
 • EU \(Ireland\) \(eu\-west\-1\): $0\.09 USD/GB  
 • EU \(London\) \(eu\-west\-2\): $0\.09 USD/GB  
-• EU \(Paris\) \(eu\-west\-3\): $0\.09 USD/GB
+• EU \(Paris\) \(eu\-west\-3\): $0\.09 USD/GB  
+• EU \(Stockholm\) \(eu\-north\-1\): $0\.09 USD/GB
 
 **What is the difference between stopping and deleting my container service?**  
 When you disable your container service, your container nodes are in a disabled state and the public endpoint of the service returns a HTTP status code ‘503’\. Enabling the service restores it to the last active deployment\. Power and scale configurations are also retained\. Public endpoint name does not change after re\-enabling\. Deployment history and container images are preserved\.  
@@ -378,7 +432,7 @@ No\. CDN distributions accept both IPv6 and IPv4 traffic, and seamlessly convert
 SSL/TLS certificates are used to establish the identity of your website or application and secure connections between browsers and your website\. Lightsail provides a signed certificate to use with your load balancer, and the load balancer provides SSL/TLS termination before routing verified traffic to your target instances over the secure AWS network\. Lightsail certificates can only be used with Lightsail load balancers, not with individual Lightsail instances\.
 
 **How do I validate my certificate?**  
-Lightsail certificates are domain validated, meaning that you need to provide proof of identity by validating that you own or have access to your website’s domain before the certificate can be provisioned by the certificate authority\. When you request a new certificate, Lightsail will prompt you to add a CNAME to the DNS zone\(s\) of the domain or domains you are validating\. You will add this CNAME wherever you currently manage your DNS zones – either Lightsail DNS management or an external DNS hosting provider \(e\.g\., Route 53, GoDaddy, Namecheap, etc\.\)\. Once your certificate is validated, you can remove the CNAME record from your DNS zone, if desired\.
+Lightsail certificates are domain validated, meaning that you need to provide proof of identity by validating that you own or have access to your website’s domain before the certificate can be provisioned by the certificate authority\. When you request a new certificate, Lightsail will prompt you to add a CNAME to the DNS zone\(s\) of the domain or domains you are validating\. You will add this CNAME wherever you currently manage your DNS zones – either Lightsail DNS management or an external DNS hosting provider \(e\.g\., Route 53, GoDaddy, Namecheap, etc\.\)\.
 
 **What happens if I cannot validate my domain?**  
 You must be able to validate that you own a domain for security purposes\. This means if you or someone in your organization can't add a DNS record to validate your certificate for any reason, you will not be able to use an HTTPS\-enabled load balancer with Lightsail\.
@@ -521,6 +575,7 @@ When you exceed the monthly free data transfer allowance of your instance plan, 
 • EU \(Ireland\) \(eu\-west\-1\): $0\.09 USD/GB  
 • EU \(London\) \(eu\-west\-2\): $0\.09 USD/GB  
 • EU \(Paris\) \(eu\-west\-3\): $0\.09 USD/GB  
+• EU \(Stockholm\) \(eu\-north\-1\): $0\.09 USD/GB  
 Instances created in different Availability Zones can communicate between zones privately and for free, and are much less likely to be impaired concurrently\. Availability Zones enable you to build highly available applications and websites without increasing the cost of data transfer or compromising your application's security\.  
 When you exceed the data transfer allowance of your Lightsail CDN distribution plan, you are charged for all data transfer OUT\. The charge for data transfer above your distribution’s allowance is different from Lightsail instances and is as follows:  
 • Asia Pacific: $0\.13 USD/GB  
@@ -575,7 +630,8 @@ Lightsail offers you an easy way to run and scale a wide set of cloud\-based app
 Exporting to Amazon EC2 allows you to run your application on a wider set of instance types, ranging from virtual machines with more CPU power, memory, and networking capabilities, to specialized or accelerated instances with FPGAs and GPUs\. In addition, Amazon EC2 performs less automatic management and set\-up, allowing you more control over how you configure your cloud environment, such as your VPC\. 
 
 **How does exporting to Amazon EC2 work?**  
-To get started, you need to export your manual snapshot of a Lightsail instance or block storage disk\. Snapshots of cPanel & WHM, Django, and Ghost instances cannot be exported to Amazon EC2 at this time\. Customers who are comfortable with Amazon EC2 can then use the Amazon EC2 creation wizard or API to create a new Amazon EC2 instances or Amazon EBS volumes, as they would from an existing EC2 AMI or EBS volume\. Alternatively, Lightsail also provides a guided Lightsail console experience to help you easily create a new EC2 instance\.
+To get started, you need to export your manual snapshot of a Lightsail instance or block storage disk\. Customers who are comfortable with Amazon EC2 can then use the Amazon EC2 creation wizard or API to create a new Amazon EC2 instances or Amazon EBS volumes, as they would from an existing EC2 AMI or EBS volume\. Alternatively, Lightsail also provides a guided Lightsail console experience to help you easily create a new EC2 instance\.  
+ Snapshots of cPanel & WHM, Django, and Ghost instances cannot be exported to Amazon EC2 at this time\. 
 
 **How am I billed?**  
 Using the export to Amazon EC2 feature is free\. Once you have exported your manual snapshots to Amazon EC2, you will be charged for the Amazon EC2 image separately and in addition to your Lightsail manual snapshot\. Any new Amazon EC2 instances you launch will also be billed by Amazon EC2, including their Amazon EBS storage volume\(s\) and data transfer\. Refer to the [Amazon EC2 pricing page](https://aws.amazon.com/ec2/pricing/) for details on the pricing for your new instance and resources\. Lightsail resources that continue to run in your Lightsail account will continue to be billed at their regular rates until they are deleted\.
@@ -584,7 +640,7 @@ Using the export to Amazon EC2 feature is free\. Once you have exported your man
 The export feature allows you to export manual Lightsail disk snapshots but doesn't currently support manual snapshots of managed databases\. Disk snapshots can be rehydrated as Amazon EBS volumes from the Amazon EC2 console or API\.
 
 **What Lightsail resources can I export?**  
-The Lightsail export to Amazon EC2 feature is designed to support the export of Linux and Windows instances and their attached block storage \(if applicable\) to Amazon EC2\. It also supports the export of unattached block storage disks to Amazon EBS\. It does not currently support the export of load balancers, databases, static IPs or DNS records\. Additionally, snapshots of cPanel & WHM, Django, and Ghost instances cannot be exported to Amazon EC2 at this time\.
+The Lightsail export to Amazon EC2 feature is designed to support the export of Linux and Windows instance snapshots to Amazon EC2\. It also supports the export of block storage disk snapshots to Amazon EBS\. It does not currently support the export of databases, container services, content delivery network \(CDN\) distributions, load balancers, static IPs, and DNS records\. Additionally, snapshots of Django, Ghost, and cPanel & WHM instances cannot be exported to Amazon EC2 at this time\.
 
 ## Tags in Lightsail<a name="amazon-lightsail-faq-tagging"></a>
 

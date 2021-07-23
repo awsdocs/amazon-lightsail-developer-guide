@@ -40,14 +40,14 @@ Certbot is a client used to request a certificate from Let’s Encrypt and deplo
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the Lightsail home page, choose the SSH quick connect icon for the instance that you want to connect to\.  
-![\[SSH quick connect on the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-wordpress-ssh-quick-connect.png)
+![\[SSH quick connect on the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-wordpress-ssh-quick-connect.png)
 
 1. After your Lightsail browser\-based SSH session is connected, enter the following command to update the packages on your instance:
 
    ```
    sudo apt-get update
    ```  
-![\[Update the packages on your instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-wordpress-ssh-lets-encrypt-update-packages.png)
+![\[Update the packages on your instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-wordpress-ssh-lets-encrypt-update-packages.png)
 
 1. Enter the following command to install the software properties package\. Certbot’s developers use a Personal Package Archive \(PPA\) to distribute Certbot\. The software properties package makes it more efficient to work with PPAs\.
 
@@ -57,9 +57,13 @@ Certbot is a client used to request a certificate from Let’s Encrypt and deplo
 **Note**  
 If you encounter a `Could not get lock` error when running the `sudo apt-get install` command, please wait approximately 15 minutes and try again\. This error may be caused by a cron job that is using the Apt package management tool to install unattended upgrades\.
 
-1. Enter the following command to add Certbot to the local apt repository:
+1. Enter the following commands to install the GPG package, and add Certbot to the local apt repository:
 **Note**  
 Step 5 applies only to instances that use the Ubuntu Linux distribution\. Skip this step if your instance uses the Debian Linux distribution\.
+
+   ```
+   sudo apt-get install gpg -y
+   ```
 
    ```
    sudo apt-add-repository ppa:certbot/certbot -y
@@ -114,7 +118,7 @@ Begin the process of requesting a certificate from Let’s Encrypt\. Using Certb
    ```
 
    You should see a result similar to the following:  
-![\[Confirm the the domain environment variables.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-ssh-lets-encrypt-confirm-variables.png)
+![\[Confirm the the domain environment variables.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-ssh-lets-encrypt-confirm-variables.png)
 
 1. Enter the following command to start Certbot in interactive mode\. This command tells Certbot to use a manual authorization method with DNS challenges to verify domain ownership\. It requests a wildcard certificate for your top\-level domain, as well as its subdomains\.
 
@@ -131,7 +135,7 @@ Begin the process of requesting a certificate from Let’s Encrypt\. Using Certb
 1. Let’s Encrypt now prompts you to verify that you own the domain specified\. You do this by adding TXT records to the DNS records for your domain\. A set of TXT record values are provided as shown in the following example:
 **Note**  
 Let's Encrypt may provide a single or multiple TXT records that you must use for verification\. In this example, we were provided with two TXT records to use for verification\.  
-![\[TXT records for Let's Encrypt certificates.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-ssh-lets-encrypt-text-records.png)
+![\[TXT records for Let's Encrypt certificates.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-ssh-lets-encrypt-text-records.png)
 
 1. Keep the Lightsail browser\-based SSH session open—you return to it later in this tutorial\. Continue to the [next section](#add-a-text-record-to-your-domains-dns-zone-lets-encrypt-wordpress) of this tutorial\.
 
@@ -149,12 +153,12 @@ To learn more about how to create a Lightsail DNS zone for your domain, see [Cre
 1. Under the **DNS zones** section of the page, choose the DNS Zone for the domain that you specified in the Certbot certificate request\.
 
 1. In the DNS zone editor, choose **Add record**\.  
-![\[DNS zone editor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-dns-zone-editor.png)
+![\[DNS zone editor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-dns-zone-editor.png)
 
 1. In the record type drop\-down menu, choose **TXT record**\.
 
 1. Enter the values specified by the Let’s Encrypt certificate request into the **Subdomain** and **Responds with** fields as shown in the following screenshot\.  
-![\[TXT records in the Lightsail DNS zone editor.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-dns-zone-editor-text-records.png)
+![\[TXT records in the Lightsail DNS zone editor.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-dns-zone-editor-text-records.png)
 
 1. Choose the Save icon\.
 
@@ -181,13 +185,13 @@ Use the MxToolbox utility to confirm that the TXT records have propagated to the
    ```
    _acme-challenge.example.com
    ```  
-![\[MXTookbox TXT record lookup.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-mxtoobox-text-record-lookup.png)
+![\[MXTookbox TXT record lookup.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-mxtoobox-text-record-lookup.png)
 
 1. Choose **TXT Lookup** to run the check\.
 
 1. One of the following responses occurs:
    + If your TXT records have propagated to the internet’s DNS, you see a response similar to the one shown in the following screenshot\. Close the browser window and continue to the [next section](#complete-the-lets-encrypt-certificate-request-wordpress) of this tutorial\.  
-![\[Confirmation that TXT records propagated.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-mxtoobox-propagated-text-record-lookup.png)
+![\[Confirmation that TXT records propagated.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-mxtoobox-propagated-text-record-lookup.png)
    + If your TXT records have not propagated to the internet’s DNS, you see a **DNS Record not found** response\. Confirm that you added the correct DNS records to your domains’ DNS zone\. If you added the correct records, wait a while longer to let your domain’s DNS records propagate, and run the TXT lookup again\.
 
 ## Step 6: Complete the Let’s Encrypt SSL certificate request<a name="complete-the-lets-encrypt-certificate-request-wordpress"></a>
@@ -197,12 +201,12 @@ Go back to the Lightsail browser\-based SSH session for your WordPress instance 
 **To complete the Let’s Encrypt SSL certificate request**
 
 1. In the Lightsail browser\-based SSH session for your WordPress instance, press **Enter** to continue your Let’s Encrypt SSL certificate request\. If successful, a response similar to the one shown in the following screenshot appears:  
-![\[Successful Let's Encrypt cretificate request.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-ssh-lets-encrypt-request-success.png)
+![\[Successful Let's Encrypt cretificate request.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-ssh-lets-encrypt-request-success.png)
 
    The message confirms that your certificate, chain, and key files are stored in the `/etc/letsencrypt/live/domain/` directory\. Make sure to replace `domain` with your domain, such as `/etc/letsencrypt/live/example.com/`\.
 
 1. Make note of the expiration date specified in the message\. You use it to renew your certificate by that date\.  
-![\[Let's Encrypt certificate renewal date.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-ssh-lets-encrypt-renewal-date.png)
+![\[Let's Encrypt certificate renewal date.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-ssh-lets-encrypt-renewal-date.png)
 
 1. Now that you have the Let’s Encrypt SSL certificate, continue to the [next section](#link-the-lets-encrypt-certificate-files-in-the-apache-directory-wordpress) of this tutorial\.
 
@@ -219,7 +223,7 @@ Create links to the Let’s Encrypt SSL certificate files in the Apache server d
    ```
 
    You should see a response similar to the following:  
-![\[Instance services stopped.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-ssh-stop-services.png)
+![\[Instance services stopped.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-ssh-stop-services.png)
 
 1. Enter the following command to set an environment variable for your domain\. You can more efficiently copy and paste commands to link the certificate files\. Be sure to replace `domain` with the name of your registered domain name\.
 
@@ -240,7 +244,7 @@ Create links to the Let’s Encrypt SSL certificate files in the Apache server d
    ```
 
    You should see a result similar to the following:  
-![\[Confirm the the domain environment variable.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-ssh-lets-encrypt-confirm-domain-variable.png)
+![\[Confirm the the domain environment variable.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-ssh-lets-encrypt-confirm-domain-variable.png)
 
 1. Enter the following commands individually to rename your existing certificate files as backups, if any:
    + For newer instances that use the Debian Linux distribution:
@@ -297,7 +301,7 @@ Create links to the Let’s Encrypt SSL certificate files in the Apache server d
    ```
 
    You should see a result similar to the following:  
-![\[Instance services started.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-ssh-start-services.png)
+![\[Instance services started.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-ssh-start-services.png)
 
    The SSL certificate files for your WordPress instance are now in the correct directory\.
 
@@ -322,12 +326,12 @@ For more information, see [Getting the application user name and password for yo
 1. Choose **Plugins** from the left navigation pane\.
 
 1. Choose **Add New** from the top of the Plugins page\.  
-![\[Add a new plugin in WordPress.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-wordpress-add-new-plugin.png)
+![\[Add a new plugin in WordPress.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-wordpress-add-new-plugin.png)
 
 1. Search for **Really Simple SSL**\.
 
 1. Choose **Install Now** next to the Really Simple SSL plugin in the search results\.  
-![\[The Really Simple SSL plugin for WordPress.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-wordpress-really-simple-ssl-plugin.png)
+![\[The Really Simple SSL plugin for WordPress.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-wordpress-really-simple-ssl-plugin.png)
 
 1. After it’s done installing, choose **Activate**\.
 

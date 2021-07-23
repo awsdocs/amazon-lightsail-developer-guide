@@ -1,6 +1,6 @@
 # Billing in Amazon Lightsail<a name="understanding-your-amazon-lightsail-bill"></a>
 
- *Last updated: July 23, 2019* 
+ *Last updated: May 20, 2021* 
 
 Billing for Amazon Lightsail is handled through Amazon Web Services \(AWS\) billing\. To view your Lightsail bill, go to the [AWS Billing and Cost Management Dashboard](https://console.aws.amazon.com/billing/), or choose **Billing** on the top navigation bar of the Lightsail console\. For more information about pricing, see the [Lightsail pricing page](https://aws.amazon.com/lightsail/pricing/)\.
 
@@ -13,13 +13,13 @@ To view a detailed breakdown of your monthly Lightsail bill:
    The billing dashboard home page displays a high\-level month\-to\-date breakdown of your bill\.
 
 1. Choose **Bill Details** on the dashboard home page, or choose **Bills** in the left navigation pane, to view a detailed version of your monthly bill\.  
-![\[AWS Billing and Cost Management Dashboard home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-billing-dashboard-home-page.png)
+![\[AWS Billing and Cost Management Dashboard home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-billing-dashboard-home-page.png)
 
 1. Choose the **Date** drop\-down menu to select a month other than the current month\.  
-![\[Date selector in the AWS Billing and Cost Management Dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-billing-dashboard-date-drop-down.png)
+![\[Date selector in the AWS Billing and Cost Management Dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-billing-dashboard-date-drop-down.png)
 
 1. Scroll down on the **Bills** page, and expand the Lightsail line item to view detailed usage for each region\.  
-![\[Detailed monthly bill for Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-detailed-monthly-bill.png)
+![\[Detailed monthly bill for Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-detailed-monthly-bill.png)
 
 ## Billing usage types<a name="billing-usage-types"></a>
 
@@ -45,16 +45,17 @@ For the following usage types that specify a **Region** code, see the [Region co
 ## Region codes in your bill<a name="amazon-lightsail-region-codes-in-bill"></a>
 
 Lightsail billing and usage reports use codes and abbreviations\. For example, for usage type, region is replaced with one of the following abbreviations:
-+ **APN1:** Tokyo \(ap\-northeast\-1\)
-+ **APN2:** Seoul \(ap\-northeast\-2\)
-+ **APS1:** Singapore \(ap\-southeast\-1\)
-+ **APS2:** Sydney \(ap\-southeast\-2\)
-+ **APS3:** Mumbai \(ap\-south\-1\)
-+ **CAN1:** Montreal \(ca\-central\-1\)
-+ **EU:** Ireland \(eu\-west\-1\)
-+ **EUC1:** Frankfurt \(eu\-central\-1\)
-+ **EUW2:** London \(eu\-west\-2\)
-+ **EUW3:** Paris \(eu\-west\-3\)
-+ **USE1:** Virginia \(us\-east\-1\)
-+ **USE2:** Ohio \(us\-east\-2\)
-+ **USW2:** Oregon \(us\-west\-2\)
++ **APN1:** Asia Pacific \(Tokyo\) \(ap\-northeast\-1\)
++ **APN2:** Asia Pacific \(Seoul\) \(ap\-northeast\-2\)
++ **APS1:** Asia Pacific \(Singapore\) \(ap\-southeast\-1\)
++ **APS2:** Asia Pacific \(Sydney\) \(ap\-southeast\-2\)
++ **APS3:** Asia Pacific \(Mumbai\) \(ap\-south\-1\)
++ **CAN1:** Canada \(Central\) \(ca\-central\-1\)
++ **EU:** EU \(Ireland\) \(eu\-west\-1\)
++ **EUC1:** EU \(Frankfurt\) \(eu\-central\-1\)
++ **EUW2:** EU \(London\) \(eu\-west\-2\)
++ **EUW3:** EU \(Paris\) \(eu\-west\-3\)
++ **EUN1:** EU \(Stockholm\) \(eu\-north\-1\)
++ **USE1:** US East \(N\. Virginia\) \(us\-east\-1\)
++ **USE2:** US East \(Ohio\) \(us\-east\-2\)
++ **USW2:** US West \(Oregon\) \(us\-west\-2\)

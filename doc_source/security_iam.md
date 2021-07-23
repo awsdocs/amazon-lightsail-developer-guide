@@ -94,5 +94,5 @@ When multiple types of policies apply to a request, the resulting permissions ar
 To help you manage security in Lightsail, see the following articles:
 + [How Amazon Lightsail Works with IAM](security_iam_service-with-iam.md)
 + [Amazon Lightsail Identity\-Based Policy Examples](security_iam_id-based-policy-examples.md)
-+ [Amazon Lightsail Resource\-Based Policy Examples](security_iam_resource-based-policy-examples.md)
++ [Amazon Lightsail Resource\-Level Permissions Policy Examples](security_iam_resource-based-policy-examples.md)
 + [Troubleshooting Amazon Lightsail Identity and Access](security_iam_troubleshoot.md)

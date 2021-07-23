@@ -3,7 +3,7 @@
 **Note**  
 In Lightsail, you can create instances \(*virtual private servers*\) and other resources worldwide\. Choose an AWS Region that is closest to your users\. In addition, you can create your resources in one or more Availability Zones\. By creating your instances in separate Availability Zones, you protect your applications from a failure in a single location\.
 
- *Last updated: May 7, 2018* 
+ *Last updated: May 20, 2021* 
 
 When creating resources in Amazon Lightsail, create them in an AWS Region that is closest to your users\. For example, if your blog traffic comes mostly from Switzerland, choose **Frankfurt** or **Paris**\.
 
@@ -24,8 +24,9 @@ Lightsail is available in the following AWS Regions:
 + EU \(Ireland\) \(eu\-west\-1\)
 + EU \(London\) \(eu\-west\-2\)
 + EU \(Paris\) \(eu\-west\-3\)
++ EU \(Stockholm\) \(eu\-north\-1\)
 
-![\[Supported AWS Regions in Amazon Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-regions_720.png)
+![\[Supported AWS Regions in Amazon Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-regions_720.png)
 
 ## SSH keys and Lightsail regions<a name="ssh-keys-and-regions"></a>
 
@@ -45,7 +46,7 @@ When you work with a Lightsail instance using the AWS Command Line Interface \(A
 
 Availability Zones are collections of data centers that run on physically distinct, independent infrastructure\. Availability Zones are engineered to be highly reliable\. Common points of failure such as generators and cooling equipment are not shared between Availability Zones\. Availability Zones are also physically separate, so that even an extreme disaster such as a fire, tornado, or flood will affect only the single Availability Zone where it occurred\.
 
-![\[How Availability Zones work in Amazon Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-availability-zones-example.png)
+![\[How Availability Zones work in Amazon Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-availability-zones-example.png)
 
 Each AWS Region has two to six Availability Zones, which are indicated by a letter following the region name \(e\.g\., `us-east-2a`\)\. You can create Lightsail instances in only one Availability Zone at a time\. You might not see all Availability Zones at the time you create your instance\. If you don't see the list of Availability Zones at all, be sure that you have selected a region in the previous step\.
 

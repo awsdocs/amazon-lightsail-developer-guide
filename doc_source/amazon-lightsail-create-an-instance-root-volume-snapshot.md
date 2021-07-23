@@ -39,11 +39,11 @@ aws lightsail create-disk-snapshot --region us-west-2 --instance-name Amazon_Lin
 
 If successful, you will see a result similar to the following:
 
-![\[Back up an instance root volume in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-create-root-volume-disk-snapshot.png)
+![\[Back up an instance root volume in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-create-root-volume-disk-snapshot.png)
 
 Wait a few minutes for the snapshot to be created\. After it’s created, you can view it in the Lightsail home page by choosing the **Snapshots** tab and scrolling to the Disk Snapshots section, as shown in the following example\.
 
-![\[Root volume disk snapshot in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-root-volume-disk-snapshot.png)
+![\[Root volume disk snapshot in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-root-volume-disk-snapshot.png)
 
 ## Step 3: Create a block storage disk from a snapshot and attach it to an instance<a name="create-block-storage-disk-from-snapshot"></a>
 
@@ -72,18 +72,18 @@ The new block storage disk is created in the same AWS Region as the source snaps
 
 1. Choose one of the following options to add tags to your disk:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
 1. Choose **Create disk**\.
 
 1. After the disk is created, choose the instance that you want to attach the disk to in the **Select an instance** drop\-down menu\. This is shown in the following example\.  
-![\[Attach a snapshot to an instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-attach-root-volume-disk.png)
+![\[Attach a snapshot to an instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-attach-root-volume-disk.png)
 
 1. Choose **Attach** to attach the disk to the selected instance\.
 
@@ -96,7 +96,7 @@ To access a block storage disk after attaching it to an instance, you must mount
 **Mount and access a block storage disk on a Linux or Unix instance**
 
 1. On the [Lightsail home page](https://lightsail.aws.amazon.com/), choose the browser\-based SSH client icon for the Linux or Unix instance to which you attached the block storage disk\.  
-![\[The browser-based SSH icon in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-ssh-quick-connect.png)
+![\[The browser-based SSH icon in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-ssh-quick-connect.png)
 
 1. After the browser\-based SSH client is connected, enter the following command to view the block storage disk devices attached to the instance:
 
@@ -105,7 +105,7 @@ To access a block storage disk after attaching it to an instance, you must mount
    ```
 
    You should see a result similar to the following example\. In this example, `xvdf1` is the block storage disk attached to the instance that is not yet mounted because it doesn’t have a mount point\. Also, the result omits `/dev/` from the device name, so the device name is actually `/dev/xvdf1`\.  
-![\[Blocked storage devices attached to a Linux or Unix instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-attached-block-storage-devices.png)
+![\[Blocked storage devices attached to a Linux or Unix instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-attached-block-storage-devices.png)
 
 1. Enter the following command to create a mount point for the block storage disk\.
 
@@ -144,23 +144,23 @@ To access a block storage disk after attaching it to an instance, you must mount
    ```
 
    You should see a result similar to the following example\. In this example, the *xvdf1* device is now mounted and accessible at the */home/ec2\-user/xvdf* directory\. You can now access block storage disk and its contents by going to the mount point directory\.  
-![\[Blocked storage devices attached to a Linux or Unix instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-attached-block-storage-devices-mounted.png)
+![\[Blocked storage devices attached to a Linux or Unix instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-attached-block-storage-devices-mounted.png)
 
 **Bring a block storage disk online and access it on a Windows instance**
 
 1. On the [Lightsail home page](https://lightsail.aws.amazon.com/), choose the browser\-based RDP client icon for the Windows instance to which you attached the block storage disk\.  
-![\[The browser-based RDP icon in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-rdp-quick-connect.png)
+![\[The browser-based RDP icon in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-rdp-quick-connect.png)
 
 1. After the browser\-based SSH client is connected, search for **Computer Management** in the Windows taskbar, then choose **Computer Management** from the results\.  
-![\[Computer Managmeent on a Windows instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-windows-computer-management.png)
+![\[Computer Managmeent on a Windows instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-windows-computer-management.png)
 
 1. In the left navigation menu of the **Computer Management** console, choose **Disk Management**, as shown in the following example\.  
-![\[Disk Management on a Windows instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-windows-disk-management.png)
+![\[Disk Management on a Windows instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-windows-disk-management.png)
 
 1. Locate the disk that you recently attached to the instance\. It should be labeled as Offline\.
 
 1. Right\-click the **Offline** label, then choose **Online**\.  
-![\[Offline disk on a Windows instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-windows-disk-management-offline.png)
+![\[Offline disk on a Windows instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-windows-disk-management-offline.png)
 
    The disk should now be labeled as **Online**, and a drive letter should be associated with it\. You can now access the block storage disk and its contents by opening File Explorer and browsing to the designated drive letter\.  
-![\[Online disk on a Windows instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-windows-disk-management-online.png)
+![\[Online disk on a Windows instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-windows-disk-management-online.png)

@@ -1,6 +1,6 @@
 # Creating Amazon Lightsail container services<a name="amazon-lightsail-creating-container-services"></a>
 
- *Last updated: November 12, 2020* 
+ *Last updated: April 1, 2021* 
 
 In this guide, we show you how to create an Amazon Lightsail container service using the Lightsail console, and describe the container service settings that you can configure\.
 
@@ -28,12 +28,27 @@ You are charged for your container service whether it's enabled or disabled, and
 
 Your container service can be in one of the following states:
 + **Pending** – Your container service is being created\.
-+ **Ready** – Your container service is running, but it does not have an active deployment\.
-+ **Disabled** – Your container service is disabled, and its active deployment and containers, if any, are shut down\.
-+ **Updating** – The capacity or custom domains of your container service are being updated\.
++ **Ready** – Your container service is running but it does not have an active container deployment\.
 + **Deploying** – Your deployment is being launched to your container service\.
-+ **Running** – Your deployment is currently active, and containers are running on your container service\.
++ **Running** – Your container service is running and it has an active container deployment\.
++ **Updating** – Your container service capacity or its custom domains are being updated\.
 + **Deleting** – Your container service is being deleted\. Your container service is in this state after you choose to delete, and it's in this state only for a brief moment\.
++ **Disabled** – Your container service is disabled, and its active deployment and containers, if any, are shut down\.
+
+**Container service sub\-status**
+
+If your container service is in a **Deploying** or **Updating** state, then one of the following additional sub\-states is displayed below the container service stte:
++ **Creating system resources** \- The system resources for your container service are being created\.
++ **Creating network infrastructure** \- The network infrastructure for your container service are being created\.
++ **Provisioning certificate** \- The SSL/TLS certificate for your container service is being created\.
++ **Provisioning service** \- Your container service is being provisioned\.
++ **Creating deployment** \- Your deployment is being created on your container service\.
++ **Evaluating health check** \- The health of your deployment is being evaluated\.
++ **Activating deployment** \- Your deployment is being activated\.
+
+If your container service is in a **Pending** state, then one of the following additional sub\-states is displayed below the container service state:
++ **Certificate limit exceeded** \- The SSL/TLS certificate required for your container service exceeds the maximum number of certificates allowed for your account\.
++ **Unknown error** \- An error was experienced when your container service was being created\.
 
 ## Create a container service<a name="create-container-service"></a>
 
@@ -79,11 +94,11 @@ The name that you specify will be part of the default domain name of your contai
 
 1. Choose one of the following options to add tags to your container service:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
@@ -99,7 +114,7 @@ These are the general steps to manage your Lightsail container service after it'
 
 1. Create your container service in your Lightsail account\. For more information, see [Creating Amazon Lightsail container services](#amazon-lightsail-creating-container-services)\.
 
-1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like Docker Hub\. For more information, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
+1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like the Amazon ECR Public Gallery or Docker Hub\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
 
 1. If you plan to push container images from your local machine to your service, install software on your local machine that you need to create your own container images and push them to your Lightsail container service\. For more information, see the following guides:
    + [Installing software to manage container images for your Amazon Lightsail container services](amazon-lightsail-install-software.md)

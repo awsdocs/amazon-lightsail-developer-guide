@@ -1,6 +1,6 @@
 # Choose an Amazon Lightsail instance image<a name="compare-options-choose-lightsail-instance-image"></a>
 
- *Last updated: September 4, 2020* 
+ *Last updated: April 1, 2021* 
 
 Lightsail provides several options for you to create your virtual private server\. This topic helps you decide which operating system \(OS\), application, or development stack is right for your project\. We organized the applications by functional area \(e\.g\., CMS and e\-Commerce\)\.
 
@@ -39,12 +39,13 @@ The primary differences between Amazon Linux 2 and Amazon Linux \(2018\) are:
 Learn more about [Amazon Linux 2](https://aws.amazon.com/amazon-linux-2/)\.
 
 ** **Amazon Linux \(2018\)** **  
+Standard support for Amazon Linux \(2018\) has ended\. It is receiving only critical maintenance and will no longer support new Lightsail and AWS features\. We strongly recommend that you use the Amazon Linux 2 blueprint instead\.
 The Amazon Linux image is a supported and maintained Linux image provided by Amazon Web Services \(AWS\) for use on Lightsail and Amazon EC2\. It's designed to provide a stable, secure, and high\-performance execution environment for applications running on Lightsail\. It includes packages that enable easy integration with AWS, such as the AWS Command Line Interface \(AWS CLI\) and AWS API tools\. AWS provides ongoing security and maintenance updates to all instances running the Amazon Linux AMI\.  
 Learn more about [Amazon Linux \(2018\)](https://aws.amazon.com/amazon-linux-ami/)\.
 
-** **CentOS 7** **  
+** **CentOS 7 and 8** **  
 CentOS is a Linux distribution that provides a free, enterprise\-class, community\-supported computing platform functionally compatible with its upstream source, Red Hat Enterprise Linux\.  
-[Learn more about CentOS](https://aws.amazon.com/marketplace/pp/B00O7WM7QW)\.
+[Learn more about CentOS 7 and 8](https://docs.centos.org/en-US/docs/)\.
 
 ** **Debian 8, 9, and 10** **  
 Debian is a computer operating system composed of software packages released as free and open source software primarily under the GNU General Public License along with other free software licenses\. Debian GNU/Linux, which includes the GNU OS tools and Linux kernel, is a popular and influential Linux distribution\. It is distributed with access to repositories containing thousands of software packages ready for installation and use\.  
@@ -87,6 +88,10 @@ WordPress Multisite is great for organizations such as universities, corporation
 ** **cPanel & WebHost Manager \(WHM\)** **  
 cPanel & WHM is a suite of tools built for Linux OS that gives you the ability to automate web hosting tasks via a simple graphical user interface\. Its goal — to make managing servers easier for you and managing websites easier for your customers\.  
 [Learn more about cPanel & WHM](https://cpanel.net/products/cpanel-whm-features/)\.
+
+** **PrestaShop certified by Bitnami** **  
+PrestaShop is one of the most prolific eCommerce solutions in the world\. It is free and open source software, with a community of over 1 million active members\. It is designed to get your online store up and running quickly, with a preconfigured theme that enables you to start selling almost immediately along with a Live Configurator for easily customizing the look of your site\. PrestaShop features multi\-store support, customizable URLs, multiple payment gateway options \(including PayPal and Stripe\), and marketplace integration with Amazon, eBay, Facebook and more\.  
+[Learn more about PrestaShop](https://prestashop.com)\.
 
 ** **Ghost certified by Bitnami** **  
 Ghost is a publishing platform that is suitable for everything from personal blogs to major news websites\. Built on Node\.js, its modern technology stack makes it versatile and flexible for developers seeking to integrate with other applications and tools, while maintaining ease of use for content creators\.  

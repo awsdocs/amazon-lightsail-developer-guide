@@ -2,7 +2,7 @@
 
  *Last updated: July 23, 2020* 
 
-In this guide, we show you how to change the origin of your Amazon Lightsail distribution after you create it\. An origin is the definitive source of content for your distribution\. When you create your distribution, you choose the Lightsail instance or Lightsail load balancer \(with one or more instances attached to it\) that hosts the content of your website or web application\. For more information, see [Content delivery network distributions in Amazon Lightsail](amazon-lightsail-content-delivery-network-distributions.md)\.
+In this guide, we show you how to change the origin of your Amazon Lightsail distribution after you create it\. An origin is the definitive source of content for your distribution\. When you create your distribution, you choose the Lightsail instance, Lightsail bucket, or Lightsail load balancer \(with one or more instances attached to it\) that hosts the content of your website or web application\. For more information, see [Content delivery network distributions in Amazon Lightsail](amazon-lightsail-content-delivery-network-distributions.md)\.
 
 You can change the origin at any time after you create your distribution\. When you change the origin, your distribution immediately begins replicating the change to the edge locations\. Your distribution will continue to forward requests to the previous origin in a given edge location until the distribution is updated to the new origin in that edge location\.
 
@@ -38,7 +38,7 @@ Complete the following procedure to change your distribution's origin\.
 
    Distributions are global resources\. They can reference an origin in any AWS Region, and distribute its content globally\.
 
-1. Choose your origin\. An origin can be an instance or a load balancer \(with one or more instances attached to it\)
+1. Choose your origin\. An origin can be an instance, bucket, or a load balancer \(with one or more instances attached to it\)\.
 
 1. Choose **Save** to update your distribution with your new origin\.
 
@@ -46,8 +46,10 @@ Complete the following procedure to change your distribution's origin\.
 
 1. \(Optional\) To change your origin protocol policy, choose the pencil icon displayed next to the current origin protocol policy that your distribution uses\. For more information, see [Origin protocol policy](#changing-distribution-origin-protocol-policy)\.
 
-   This option is listed in the **Choose your origin** section of the page, under the origin resource you selected for your distribution\.  
-![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/origin-protocol-policy.png)
+   This option is listed in the **Choose your origin** section of the page, under the origin resource you selected for your distribution\.
+**Note**  
+When you select a Lightsail bucket as the origin of your distribution, the **Origin protocol policy** defaults to **HTTP only**\. You cannot change the origin protocol policy when a bucket is the origin of your distribution\.  
+![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/origin-protocol-policy.png)
 
 1. Choose **HTTP only** or **HTTPS only**, then choose **Save** to save the origin protocol policy\.
 

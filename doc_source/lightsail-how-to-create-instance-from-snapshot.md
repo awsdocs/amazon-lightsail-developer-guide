@@ -11,15 +11,15 @@ You must have a snapshot of an instance before you can create another instance f
 1. Choose the **Snapshots** tab\.
 
 1. Under the **Manual snapshots** section of the page, choose the actions menu icon \(⋮\) next to the snapshot from which you want to create a new instance, and choose **Create new instance**\.  
-![\[Manage snapshot menu\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-create-new-linux-unix-based-lightsail-instance-from-snapshot.png)
+![\[Manage snapshot menu\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-create-new-linux-unix-based-lightsail-instance-from-snapshot.png)
 
 1. On the **Create an instance from a snapshot** page, you have a few optional settings to decide on at the top\. For example, you can change the Availability Zone, [add a launch script](lightsail-how-to-configure-server-additional-data-shell-script.md), or [change the way you connect to your instance](understanding-ssh-in-amazon-lightsail.md)\.
 
    You can accept all the defaults and move on to the next step\.
 
-1. Choose the plan \(or *bundle*\) for your new instance\. At this point, you can choose to create a larger bundle size if you'd like\.
+1. Choose the plan \(or *bundle*\) for your new instance\. At this point, you can choose to create an instance that uses a larger bundle size than the original instance\.
 **Note**  
-You cannot create a smaller bundle size from a snapshot\. Lightsail will gray out all the bundle options that are smaller than the bundle you originally used to make your snapshot\.
+You cannot create a an instance that uses a smaller bundle size than the original instance\. Smaller bundle size options will be unavailable for selection\.
 
 1. Enter a name for your instance\.
 
@@ -31,14 +31,16 @@ You cannot create a smaller bundle size from a snapshot\. Lightsail will gray ou
 
 1. Choose one of the following options to add tags to your instance:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/c61ab0669fef62b2778d591e8e619b4d/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
 1. Choose **Create instance**\.
 
    Lightsail takes you to the management page for your new instance, and you can start managing your new instance\.
+**Important**  
+Custom firewall rules that were created on the original instance are not re\-created on your new instance created from a snapshot\. Only the default rules are created\. For more information, see [Default instance firewall rules](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/understanding-firewall-and-port-mappings-in-amazon-lightsail#default-lightsail-firewall-rules)\.
