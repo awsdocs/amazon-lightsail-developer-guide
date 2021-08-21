@@ -33,7 +33,7 @@ Now that you have the default user password, navigate to your WordPress websiteâ
 
 1. Choose **Manage** in the bottom right corner of your WordPress website home page\.
 **Note**  
-If the **Manage** banner is not shown, you can reach the application information page by adding the following path to your public IP address: `http:192.0.2.3/bitnami/index.html`\.
+If the **Manage** banner is not shown, you can reach the application information page by adding the following path to your public IP address: `http:192.0.2.3/bitnami/index.html`\ or `http:192.0.2.3/wp-admin`\.
 
 1. Sign in using the default user name \(user\) and the default password retrieved earlier in this guide\.
 
