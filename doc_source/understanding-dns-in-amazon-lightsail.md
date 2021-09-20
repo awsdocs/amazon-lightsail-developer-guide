@@ -20,7 +20,7 @@ An apex domain, also known as a root domain, is a domain that does not contain a
 DNS routes easy\-to\-remember domain names, such as `example.com`, to the IP addresses of web servers\.  
 For more information, see [Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System) on *Wikipedia*\.
 
-**DNS record**  
+**DNS record**   
 A DNS record is a mapping parameter\. It tells the DNS server which IP address or hostname a domain or subdomain is associated with\.  
 For more information, see [List of DNS record types](https://en.wikipedia.org/wiki/List_of_DNS_record_types) on *Wikipedia*\.
 
