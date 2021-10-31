@@ -134,7 +134,7 @@ To access a block storage disk after attaching it to an instance, you must mount
    **Example:**
 
    ```
-   sudo mount /dev/xvdf1 xvdf
+   sudo mount /dev/xvdf1  xvdf
    ```
 
 1. Enter the following command to view the block storage disk devices attached to the instance:
