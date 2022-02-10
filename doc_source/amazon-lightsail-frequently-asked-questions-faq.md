@@ -120,7 +120,7 @@ You can store your static content, such as images, videos, and HTML files in a b
 Lightsail object storage has three different fixed\-priced bundles in all AWS Regions where Lightsail is available\. The first bundle is $1/month and is free for the first 12 months\. This bundle includes 5 GB storage capacity and 25 GB of data transfer\. The second bundle is $3 per month and includes 100 GB storage capacity and 250 GB of data transfer\. Lastly, the third bundle is $5 per month and includes 250 GB of storage capacity and 500 GB data transfer\. Lightsail object storage includes unlimited data transfer into your bucket, as the bundled data transfer allowance is used only for data transfer out from your bucket\.
 
 **Does Lightsail object storage have overage charges?**  
-When you exceed the monthly storage capacity or data transfer allowance of your object storage plan, you will get charged for the additional amount\. For more information, see the [Lightsail pricing page](https://aws.amazon.com/lightsail/pricing/)\.
+When you exceed the per bucket monthly storage capacity or data transfer allowance of your object storage plan, you will get charged for the additional amount\. For more information, see the [Lightsail pricing page](https://aws.amazon.com/lightsail/pricing/)\.
 
 **How does my data transfer allowance work with object storage?**  
 You can consume your data transfer allowance by transferring data into and out of Lightsail object storage, except for the following:  
@@ -130,7 +130,7 @@ You can consume your data transfer allowance by transferring data into and out o
 • Data transferred out from Lightsail object storage to a Lightsail CDN distribution
 
 **Can I change the plan associated with my Lightsail bucket?**  
-Yes, you can change your Lightsail object storage plan one time within your monthly AWS billing cycle\.
+Yes, you can change your Lightsail object storage plan once per bucket within your monthly AWS billing cycle\.
 
 **Can I copy objects from Lightsail object storage to Amazon S3?**  
 Yes, copying from Lightsail object storage to Amazon S3 is supported\. For more information, see [How can I copy all objects from one Amazon S3 bucket to another bucket?](https://aws.amazon.com/premiumsupport/knowledge-center/move-objects-s3-bucket/) in the *AWS Premium Support Knowledge Center*\.
