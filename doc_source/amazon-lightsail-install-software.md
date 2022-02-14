@@ -55,7 +55,7 @@ The following lists all releases of the lightsailctl plugin and the features and
 
 Complete the following procedure to install the lightsailctl plugin on Windows\.
 
-1. Download the installer from the following URL, and save it to the `C:\Temp\lightsailctl\` directory\.
+1. Download the executable from the following URL, and save it to the `C:\Temp\lightsailctl\` directory\.
 
    ```
    https://s3.us-west-2.amazonaws.com/lightsailctl/latest/windows-amd64/lightsailctl.exe
@@ -64,7 +64,7 @@ Complete the following procedure to install the lightsailctl plugin on Windows\.
 1. Choose the **Windows Start** button, and then search for `cmd`\.
 
 1. Right\-click the **Command Prompt** application in the results, and choose **Run as administrator**\.  
-![\[Run Command Prompt as administrator\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsailctl-cmd-run-as-administrator.png)
+![\[Run Command Prompt as administrator\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lightsailctl-cmd-run-as-administrator.png)
 **Note**  
 You may see a prompt that asks if you want to allow Command Prompt to make changes to your device\. You must choose **Yes** to continue with the installation\.
 
@@ -75,7 +75,7 @@ You may see a prompt that asks if you want to allow Command Prompt to make chang
    ```
 
    You should see a result similar to the following example\.  
-![\[Command line response to setx command\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lighstailctl-setx-command.png)
+![\[Command line response to setx command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lighstailctl-setx-command.png)
 
    You are now ready to use the AWS Command Line Interface \(AWS CLI\) to push container images to your Lightsail container service\. For more information, see [Pushing and managing container images on your Amazon Lightsail container services](amazon-lightsail-pushing-container-images.md)\.
 

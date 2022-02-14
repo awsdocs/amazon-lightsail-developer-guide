@@ -24,13 +24,13 @@ We recommend that you create a snapshot of your WordPress instance before gettin
 1. After you're connected to your instance, enter the following command to create a backup of the `wp-config.php` file\. If something goes wrong, you can restore the file using the backup\.
 
    ```
-   sudo cp /opt/bitnami/wordpress/wp-config.php /opt/bitnami/wordpress/wp-config.php.backup
+   sudo cp /opt/bitnami/apps/wordpress/htdocs/wp-config.php /opt/bitnami/apps/wordpress/htdocs/wp-config.php.backup
    ```
 
 1. Enter the following command to open the `wp-config.php` file using Vim\.
 
    ```
-   sudo vim /opt/bitnami/wordpress/wp-config.php
+   sudo vim /opt/bitnami/apps/wordpress/htdocs/wp-config.php
    ```
 
 1. Press `I` to enter insert mode in Vim\.
@@ -66,7 +66,7 @@ We recommend that you create a snapshot of your WordPress instance before gettin
 1. If something went wrong, re\-connect to your instance using the browser\-based SSH client\. Run the following command to restore the `wp-config.php` file using the backup you created earlier in this guide\.
 
    ```
-   sudo cp /opt/bitnami/wordpress/wp-config.php.backup /opt/bitnami/wordpress/wp-config.php
+   sudo cp /opt/bitnami/apps/wordpress/htdocs/wp-config.php.backup /opt/bitnami/apps/wordpress/htdocs/wp-config.php
    ```
 
 ## Configure your WordPress instance to work with your distribution using end\-to\-end encryption<a name="configuring-https-wordpress-for-distribution"></a>

@@ -24,7 +24,7 @@ Complete the following procedure to configure IPv6 on a cPanel & WHM instance in
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. In the **Instances** tab of the Lightsail home page, locate the cPanel & WHM instance that you wish to configure, and choose the browser\-based SSH client icon to connect to it using SSH\.  
-![\[Browser-based SSH client icon in the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-cpanel-ssh-quick-connect.png)
+![\[Browser-based SSH client icon in the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lightsail-cpanel-ssh-quick-connect.png)
 
 1. After you're connected to your instance, enter the following command to open the `ifcfg-eth0` network interface configuration file using Nano\.
 
@@ -40,7 +40,7 @@ Complete the following procedure to configure IPv6 on a cPanel & WHM instance in
    ```
 
    The result should look like the following example\.  
-![\[Network interfaces configuration file on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-cpanel-network-interface-configuration-file.png)
+![\[Network interfaces configuration file on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lightsail-cpanel-network-interface-configuration-file.png)
 
 1. Press **CTRL\+C** on your keyboard to exit the file\.
 
@@ -49,40 +49,40 @@ Complete the following procedure to configure IPv6 on a cPanel & WHM instance in
 1. Close the browser\-based SSH window and toggle back to the Lightsail console\.
 
 1. In the **Instances** tab of the Lightsail home page, choose the actions menu \(⋮\) for the cPanel & WHM instance, and choose **Reboot**\.  
-![\[Instance reboot option on the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-cpanel-instance-reboot.png)
+![\[Instance reboot option on the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lightsail-cpanel-instance-reboot.png)
 
    Wait a few minutes for your instance to be done rebooting before continuing to the next step\.
 
 1. In the **Instances** tab of the Lightsail home page, make note of the IPv6 address assigned to your cPanel & WHM instance\.  
-![\[Instance IPv6 address on the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-cpanel-ipv6-address.png)
+![\[Instance IPv6 address on the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lightsail-cpanel-ipv6-address.png)
 
 1. Open a new browser tab, and sign in to the Web Host Manager \(WHM\) of your cPanel & WHM instance\.
 
 1. In the left navigation pane of the WHM console, choose **Basic WebHost Manager Setup**\.  
-![\[Basic WebHost Manager Setup option in the navigation pane.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-cpanel-basic-webhost-manager-menu-option.png)
+![\[Basic WebHost Manager Setup option in the navigation pane.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lightsail-cpanel-basic-webhost-manager-menu-option.png)
 
 1. In the **All** tab, find the text for the **IPv6 address to use**, then enter the IPv6 address assigned to your instance\. You should have made note of the IPv6 address assigned to your instance from step 9 of this procedure\.  
-![\[IPv6 address of the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-cpanel-ipv6-address-entry.png)
+![\[IPv6 address of the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lightsail-cpanel-ipv6-address-entry.png)
 
 1. Scroll to the bottom for the page and choose **Save Changes**\.
 
 1. In the left navigation pane of the WHM console, choose **Tweak Settings**\.  
-![\[Tweak settings option in the navigation pane.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-cpanel-tweak-settings.png)
+![\[Tweak settings option in the navigation pane.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lightsail-cpanel-tweak-settings.png)
 
 1. In the **All** tab, scroll down to find the **Listen on IPv6 Addresses** setting, and set it to **On**\.  
-![\[Listen to IPv6 address option.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-cpanel-listen-to-ipv6-addresses.png)
+![\[Listen to IPv6 address option.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lightsail-cpanel-listen-to-ipv6-addresses.png)
 
 1. Scroll to the bottom for the page and choose **Save**\.
 
 1. Toggle back to the Lightsail console\.
 
 1. In the **Instances** tab of the Lightsail home page, choose the actions menu \(⋮\) for the cPanel & WHM instance, and choose **Reboot**\.  
-![\[Instance reboot option on the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-cpanel-instance-reboot.png)
+![\[Instance reboot option on the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lightsail-cpanel-instance-reboot.png)
 
    Wait a few minutes for your instance to be done rebooting before continuing to the next step\.
 
 1. Choose the browser\-based SSH client icon for the cPanel & WHM instance to connect to it using SSH\.  
-![\[Browser-based SSH client icon in the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-cpanel-ssh-quick-connect.png)
+![\[Browser-based SSH client icon in the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lightsail-cpanel-ssh-quick-connect.png)
 
 1. After you're connected to your instance, enter the following command to view the IP addresses configured on your instance, and confirm that it is now recognizing its assigned IPv6 address\.
 
@@ -91,7 +91,7 @@ Complete the following procedure to configure IPv6 on a cPanel & WHM instance in
    ```
 
    You will see a response similar to the following example\. If your instance does recognize its IPv6 address, then you will see it listed in the response with a label of **scope global** as shown in this example\.  
-![\[IPv6 configured on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-cpanel-ssh-ip-addr-ipv6-configured.png)
+![\[IPv6 configured on the instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lightsail-cpanel-ssh-ip-addr-ipv6-configured.png)
 
 1. Enter the following command to confirm that your instance is able to ping an IPv6 address\.
 
@@ -100,4 +100,4 @@ Complete the following procedure to configure IPv6 on a cPanel & WHM instance in
    ```
 
    The result should look like the following example, which confirms that your instance is able to ping IPv6 addresses\.  
-![\[Ping6 result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/lightsail-cpanel-ssh-ping6-result.png)
+![\[Ping6 result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lightsail-cpanel-ssh-ping6-result.png)

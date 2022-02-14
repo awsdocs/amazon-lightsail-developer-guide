@@ -15,14 +15,14 @@ Complete the following procedure to view objects stored in a bucket using the Li
 1. Choose the name of the bucket for which you want to view objects\.
 
 1. The **Objects browser** pane in the **Objects tab** displays the objects and folders that are stored in your bucket\.  
-![\[The object browser pane in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-bucket-object-browser-pane.png)
+![\[The object browser pane in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-bucket-object-browser-pane.png)
 
 1. Browse to the location of the object for which you want to view properties\.
 
 1. Add a checkmark next to the object for which you want to view properties\.
 
 1. The **Object properties** pane on the right side of the page displays information about the object\.  
-![\[The object properties pane in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-bucket-object-properties-pane.png)
+![\[The object properties pane in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-bucket-object-properties-pane.png)
 
    The information displayed includes:
 
@@ -80,7 +80,7 @@ These commands use the `--query` parameter to filter the response of the `list-o
    ```
 
    For the preceding command, you should see a result similar to the following example\.  
-![\[Result of the AWS CLI list-objects-v2 command\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-s3api-list-objects-v2-result.png)
+![\[Result of the AWS CLI list-objects-v2 command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-s3api-list-objects-v2-result.png)
 
    Listing object keys that start with the `archived/` object key name prefix:
 
@@ -89,7 +89,7 @@ These commands use the `--query` parameter to filter the response of the `list-o
    ```
 
    For the preceding command, you should see a result similar to the following example\.  
-![\[Result of the AWS CLI list-objects-v2 command\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-s3api-list-objects-v2-prefix-result.png)
+![\[Result of the AWS CLI list-objects-v2 command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-s3api-list-objects-v2-prefix-result.png)
 
 ## Managing buckets and objects in Lightsail<a name="viewing-objects-managing-buckets-and-objects"></a>
 
@@ -101,7 +101,7 @@ These are the general steps to manage your Lightsail object storage bucket:
 
 1. Get started with the Lightsail object storage service by creating a bucket\. For more information, see [Creating buckets in Amazon Lightsail](amazon-lightsail-creating-buckets.md)\.
 
-1. Learn about the access permissions that you can configure for your bucket\. You can make all objects in your bucket public or private, or you can choose to make individual objects public\. You can also grant access to your bucket by creating access keys, attaching instances to your bucket, and granting access to other AWS accounts\. For more information, see [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
+1. Learn about security best practices for buckets and the access permissions that you can configure for your bucket\. You can make all objects in your bucket public or private, or you can choose to make individual objects public\. You can also grant access to your bucket by creating access keys, attaching instances to your bucket, and granting access to other AWS accounts\. For more information, see [Security Best Practices for Amazon Lightsail object storage](amazon-lightsail-bucket-security-best-practices.md) and [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
 
    After learning about bucket access permissions, see the following guides to grant access to your bucket:
    + [Configuring bucket access permissions in Amazon Lightsail](amazon-lightsail-configuring-bucket-permissions.md)
@@ -109,6 +109,12 @@ These are the general steps to manage your Lightsail object storage bucket:
    + [Creating access keys for a bucket in Amazon Lightsail](amazon-lightsail-creating-bucket-access-keys.md)
    + [Configuring resource access for a bucket in Amazon Lightsail](amazon-lightsail-configuring-bucket-resource-access.md)
    + [Configuring cross\-account access for a bucket in Amazon Lightsail](amazon-lightsail-configuring-bucket-cross-account-access.md)
+
+1. Learn how to enable access logging for your bucket, and how to use access logs to audit the security of your bucket\. For more information, see the following guides\.
+   + [Access logging for buckets in the Amazon Lightsail object storage service](amazon-lightsail-bucket-access-logs.md)
+   + [Access log format for a bucket in the Amazon Lightsail object storage service](amazon-lightsail-bucket-access-log-format.md)
+   + [Enabling access logging for a bucket in the Amazon Lightsail object storage service](amazon-lightsail-enabling-bucket-access-logs.md)
+   + [Using access logs for a bucket in Amazon Lightsail to identify requests](amazon-lightsail-using-bucket-access-logs.md)
 
 1. Create an IAM policy that grants a user the ability to manage a bucket in Lightsail\. For more information, see [IAM policy to manage buckets in Amazon Lightsail](amazon-lightsail-bucket-management-policies.md)\.
 

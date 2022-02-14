@@ -1,8 +1,11 @@
 # Quick start guide: Plesk on Amazon Lightsail<a name="amazon-lightsail-quick-start-guide-plesk"></a>
 
- *Last updated: February 11, 2020* 
+ *Last updated: September 30, 2021* 
 
 Here are a few steps you should take to get started after your Plesk instance is up and running on Amazon Lightsail:
+
+**Important**  
+If you experience issues after launching your Plesk instance, go to the Plesk support page to see if there are updates that need to be installed on the instance\. For more information, see the [Plesk help center](https://support.plesk.com/hc/en-us) and [Plesk Updates](https://docs.plesk.com/en-US/obsidian/administrator-guide/plesk-updates.59215/) in the *Plesk Documentation and Help Portal*\.
 
 ## Step 1: Get the one\-time login URL for your Plesk instance<a name="amazon-lightsail-plesk-one-time-login-url"></a>
 
@@ -17,7 +20,7 @@ You need the one\-time login URL to access the Plesk panel as an administrator\.
    ```
 
    You should see a response similar to the following example, which contains the one\-time login URL:  
-![\[One-time sign in for your Plesk instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/plesk-one-time-sign-in.png)
+![\[One-time sign in for your Plesk instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/plesk-one-time-sign-in.png)
 **Important**  
 If you recently attached a static IP to your Plesk instance, you might get a one\-time login URL that uses the old public IP address\. Reboot the instance, and then run the above command again to get a one\-time login URL that uses the new static, public IP address\.
 

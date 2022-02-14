@@ -1,12 +1,12 @@
 # Creating access keys for a bucket in Amazon Lightsail<a name="amazon-lightsail-creating-bucket-access-keys"></a>
 
- *Last updated: July 14, 2021* 
+ *Last updated: August 17, 2021* 
 
 Use access keys to create a set of credentials that grant full access to a bucket and its objects\. You can configure access keys on your software or plugin so that it can have full read and write access to a bucket using the AWS APIs, and AWS SDKs\. You can also configure access keys on the AWS CLI\.
 
 Access keys consist of an access key ID and a secret access key as a set\. The secret access key is visible only when you create it\. If your secret access key isn't copied, is lost, or becomes compromised, you should delete your access key and create a new one\. You can have a maximum of two access keys per bucket\. Even though you can have two, having one access key for your bucket is useful when you need to rotate the key\. To rotate an access key, create a new one, configure it on your software and test it, and then delete the earlier key\. After you delete an access key, it's gone forever and can't be restored\. It can only be replaced with a new access key\.
 
-For more information about permission options, see [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\. For more information about buckets, see [Object storage in Amazon Lightsail](buckets-in-amazon-lightsail.md)\.
+For more information about permission options, see [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\. For more information about security best practices, see [Security Best Practices for Amazon Lightsail object storage](amazon-lightsail-bucket-security-best-practices.md)\. For more information about buckets, see [Object storage in Amazon Lightsail](buckets-in-amazon-lightsail.md)\.
 
 ## Create access keys for a bucket<a name="create-bucket-access-keys"></a>
 
@@ -37,6 +37,8 @@ Store your access key ID and secret access key in a secure location\. If it beco
 1. Choose **Continue** to finish\.
 
    The new access key is listed in the **Access keys** section of the page\. If your access key becomes compromised, or lost, delete it and create a new one\.
+**Note**  
+The **Last used** colunmn displayed next to each access key identifies when the key was last used\. A dash is displayed when the key has not been used\. Expand the access key node to view the service and AWS Region where the key was last used\.
 
 ## Managing buckets and objects in Lightsail<a name="bucket-access-keys-managing-buckets-and-objects"></a>
 
@@ -48,7 +50,7 @@ These are the general steps to manage your Lightsail object storage bucket:
 
 1. Get started with the Lightsail object storage service by creating a bucket\. For more information, see [Creating buckets in Amazon Lightsail](amazon-lightsail-creating-buckets.md)\.
 
-1. Learn about the access permissions that you can configure for your bucket\. You can make all objects in your bucket public or private, or you can choose to make individual objects public\. You can also grant access to your bucket by creating access keys, attaching instances to your bucket, and granting access to other AWS accounts\. For more information, see [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
+1. Learn about security best practices for buckets and the access permissions that you can configure for your bucket\. You can make all objects in your bucket public or private, or you can choose to make individual objects public\. You can also grant access to your bucket by creating access keys, attaching instances to your bucket, and granting access to other AWS accounts\. For more information, see [Security Best Practices for Amazon Lightsail object storage](amazon-lightsail-bucket-security-best-practices.md) and [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
 
    After learning about bucket access permissions, see the following guides to grant access to your bucket:
    + [Configuring bucket access permissions in Amazon Lightsail](amazon-lightsail-configuring-bucket-permissions.md)
@@ -56,6 +58,12 @@ These are the general steps to manage your Lightsail object storage bucket:
    + [Creating access keys for a bucket in Amazon Lightsail](#amazon-lightsail-creating-bucket-access-keys)
    + [Configuring resource access for a bucket in Amazon Lightsail](amazon-lightsail-configuring-bucket-resource-access.md)
    + [Configuring cross\-account access for a bucket in Amazon Lightsail](amazon-lightsail-configuring-bucket-cross-account-access.md)
+
+1. Learn how to enable access logging for your bucket, and how to use access logs to audit the security of your bucket\. For more information, see the following guides\.
+   + [Access logging for buckets in the Amazon Lightsail object storage service](amazon-lightsail-bucket-access-logs.md)
+   + [Access log format for a bucket in the Amazon Lightsail object storage service](amazon-lightsail-bucket-access-log-format.md)
+   + [Enabling access logging for a bucket in the Amazon Lightsail object storage service](amazon-lightsail-enabling-bucket-access-logs.md)
+   + [Using access logs for a bucket in Amazon Lightsail to identify requests](amazon-lightsail-using-bucket-access-logs.md)
 
 1. Create an IAM policy that grants a user the ability to manage a bucket in Lightsail\. For more information, see [IAM policy to manage buckets in Amazon Lightsail](amazon-lightsail-bucket-management-policies.md)\.
 

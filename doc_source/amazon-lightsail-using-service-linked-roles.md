@@ -1,10 +1,10 @@
 # Using Service\-Linked Roles for Amazon Lightsail<a name="amazon-lightsail-using-service-linked-roles"></a>
 
- *Last updated: November 28, 2018* 
+ *Last updated: January 14, 2022* 
 
-Amazon Lightsail uses AWS Identity and Access Management \(IAM\)[ service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that is linked directly to Lightsail\. Service\-linked roles are predefined by Lightsail and include all the permissions that the service requires to call other AWS services on your behalf\. 
+Amazon Lightsail uses AWS Identity and Access Management \(IAM\)[ service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that is linked directly to Lightsail\. Service\-linked roles are predefined by Lightsail and include all the permissions that Lightsail requires to call other AWS services on your behalf\. 
 
-A service\-linked role makes setting up Lightsail easier because you don’t have to manually add the necessary permissions\. Lightsail defines the permissions of its service\-linked roles, and unless defined otherwise, only Lightsail can assume its roles\. The defined permissions include the trust policy and the permissions policy, and that permissions policy cannot be attached to any other IAM entity\.
+A service\-linked role makes setting up Lightsail easier because you don’t have to manually add the necessary permissions\. Lightsail defines the permissions of its service\-linked roles, and unless defined otherwise, only Lightsail can assume its roles\. The defined permissions include the trust policy and the permissions policy, which cannot be attached to any other IAM entity\.
 
 You can delete a service\-linked role only after first deleting their related resources\. This protects your Lightsail resources because you can't inadvertently remove permission to access the resources\.
 
@@ -12,7 +12,7 @@ For information about other services that support service\-linked roles, see [AW
 
 ## Service\-Linked Role Permissions for Lightsail<a name="slr-permissions"></a>
 
-Lightsail uses the service\-linked role named **AWSServiceRoleForLightsail** – Role to export Lightsail instance and block storage disk snapshots to Amazon Elastic Compute Cloud \(Amazon EC2\)\.
+Lightsail uses the service\-linked role named **AWSServiceRoleForLightsail** – Role to export Lightsail instance and block storage disk snapshots to Amazon Elastic Compute Cloud \(Amazon EC2\), and to get the current account\-level Block Public Access configuration from Amazon Simple Storage Service \(Amazon S3\)\.
 
 The AWSServiceRoleForLightsail service\-linked role trusts the following services to assume the role:
 + `lightsail.amazonaws.com`
@@ -22,10 +22,8 @@ The role permissions policy allows Lightsail to complete the following actions o
 + Action: `ec2:DescribeSnapshots` on all AWS resources\.
 + Action: `ec2:CopyImage` on all AWS resources\.
 + Action: `ec2:DescribeImages` on all AWS resources\.
-+ Action: `kms:Decrypt` on Lightsail\-managed keys\.
-+ Action: `kms:DescribeKey` on Lightsail\-managed keys\.
-+ Action: `kms:CreateGrant` on Lightsail\-managed keys\.
 + Action: `cloudformation:DescribeStacks` on all AWS CloudFormation stacks\.
++ Action: `s3:GetAccountPublicAccessBlock` on all AWS resources\.
 
 ### Service\-Linked Role Permissions<a name="service-linked-role-permissions"></a>
 
@@ -112,9 +110,9 @@ Alternatively, you can use an AWS managed policy to provide full access to the s
 
 ## Creating a Service\-Linked Role for Lightsail<a name="create-slr"></a>
 
-You don't need to manually create a service\-linked role\. When you export your Lightsail instance or block storage disk snapshot to Amazon EC2 in the AWS Management Console, the AWS CLI, or the AWS API, Lightsail creates the service\-linked role for you\. 
+You don't need to manually create a service\-linked role\. When you export your Lightsail instance or block storage disk snapshot to Amazon EC2, or create or update a Lightsail bucket in the AWS Management Console, the AWS CLI, or the AWS API, Lightsail creates the service\-linked role for you\. 
 
-If you delete this service\-linked role, and then need to create it again, you can use the same process to recreate the role in your account\. When you export your Lightsail instance or block storage disk snapshot to Amazon EC2, Lightsail creates the service\-linked role for you again\. 
+If you delete this service\-linked role and need to create it again, you can use the same process to recreate the role in your account\. When you export your Lightsail instance or block storage disk snapshot to Amazon EC2, or create or update a Lightsail bucket, Lightsail creates the service\-linked role for you again\. 
 
 **Important**  
 You must configure IAM permissions to allow Lightsail to create the service\-linked role\. To do this, complete the steps that are in the following *Service\-Linked Role Permissions* section\.

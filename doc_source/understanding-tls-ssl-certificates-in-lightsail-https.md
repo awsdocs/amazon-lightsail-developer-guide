@@ -41,7 +41,7 @@ You can create up to two SSL/TLS certificates per load balancer\. Only one certi
 
 To enable HTTPS on your load balancer, you must follow these steps in order\.
 
-![\[HTTPS process overview\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/create-https-load-balancer-process-summary.png)
+![\[HTTPS process overview\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/create-https-load-balancer-process-summary.png)
 
 You can get started with enabling HTTPS on your load balancer by following these links\.
 +  [Create a Lightsail load balancer and attach instances to it](create-lightsail-load-balancer-and-attach-lightsail-instances.md) 

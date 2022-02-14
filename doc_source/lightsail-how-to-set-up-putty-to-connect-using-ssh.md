@@ -31,7 +31,7 @@ You have several options for getting your private key\. You might want to use th
 1. Choose **Account** on the top navigation bar, and then choose **Account** from the drop\-down\.
 
 1. Choose the **SSH Keys** tab\.  
-![\[SSH key pairs in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-ssh-key-pairs.png)
+![\[SSH key pairs in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-ssh-key-pairs.png)
 
 1. Choose one of the following options depending on which private key you prefer to use:
    + **To use the default private key that Lightsail generates**, choose **Download** next to the default private key for the AWS Region where your instance is located\.
@@ -81,7 +81,7 @@ You're almost there\! Hang on while we make one last change\.
 Port 22 is already open for SSH on your Lightsail instance, so accept the default port\.
 
 1. Under **Connection**, expand **SSH**, and then choose **Auth**\.  
-![\[PuTTY and the SSH Auth option in the configuration dialog\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/putty-configuration-connection-ssh-auth.png)
+![\[PuTTY and the SSH Auth option in the configuration dialog\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/putty-configuration-connection-ssh-auth.png)
 
 1. Choose **Browse** to navigate to the `.ppk` file that you created in the previous step, and then choose **Open**\.
 

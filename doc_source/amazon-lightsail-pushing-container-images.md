@@ -31,7 +31,7 @@ Complete the following procedure to push your container images to your container
    ```
 
 1. In the result, locate the name \(repository name\) and tag of the container image that you want to push to your container service\. Make a note of it because you will need it in the next step\.  
-![\[Docker container images on a local machine\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-container-service-docker-images.png)
+![\[Docker container images on a local machine\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-container-service-docker-images.png)
 
 1. Enter the following command to push the container image on your local machine to your container service\.
 
@@ -55,7 +55,7 @@ Complete the following procedure to push your container images to your container
    ```
 
    You should see a result similar to the following example, which confirms that your container image was pushed to your container service\.  
-![\[Docker container image pushed to a Lightsail container service\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-container-service-pushed-image.png)
+![\[Docker container image pushed to a Lightsail container service\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-container-service-pushed-image.png)
 
    Refer to the following [View container images stored on your container service](#view-pushed-container-images) section of this guide to view your pushed container image in your container service on the Lightsail console\.
 
@@ -74,7 +74,7 @@ Complete the following procedure to view container images that were pushed, and 
 The **Images** tab is not displayed if you have not pushed images to your container service\. To display the images tab for your container service you must first push container images to your service\.
 
    The **Images** page lists the container images that were pushed to your container service, and are currently being stored on your service\. Container images that are being used in a current deployment cannot be deleted and are listed with a grayed\-out delete icon\.  
-![\[The stored images page of the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-container-services-stored-images-page.png)
+![\[The stored images page of the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-container-services-stored-images-page.png)
 
    You can create deployments using container images stored on your service\. For more information, see Creating and managing deployments for your Amazon Lightsail container services\.
 

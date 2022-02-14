@@ -1,6 +1,6 @@
 # Compliance Validation for Amazon Lightsail<a name="amazon-lightsail-compliance"></a>
 
- *Last updated: February 1, 2021* 
+ *Last updated: January 10, 2022* 
 
 AWS provides the following resources to help with compliance:
 + [Security and Compliance Quick Start Guides](https://aws.amazon.com/quickstart/?awsf.quickstart-homepage-filter=categories%23security-identity-compliance) – These deployment guides discuss architectural considerations and provide steps for deploying security\- and compliance\-focused baseline environments on AWS\.

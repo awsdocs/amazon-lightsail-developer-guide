@@ -49,7 +49,7 @@ Complete the following procedure to change your distribution's origin\.
    This option is listed in the **Choose your origin** section of the page, under the origin resource you selected for your distribution\.
 **Note**  
 When you select a Lightsail bucket as the origin of your distribution, the **Origin protocol policy** defaults to **HTTP only**\. You cannot change the origin protocol policy when a bucket is the origin of your distribution\.  
-![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/origin-protocol-policy.png)
+![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/origin-protocol-policy.png)
 
 1. Choose **HTTP only** or **HTTPS only**, then choose **Save** to save the origin protocol policy\.
 

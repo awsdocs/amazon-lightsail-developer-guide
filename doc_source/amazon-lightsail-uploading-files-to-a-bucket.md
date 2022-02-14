@@ -1,6 +1,6 @@
 # Uploading files to a bucket in Amazon Lightsail<a name="amazon-lightsail-uploading-files-to-a-bucket"></a>
 
- *Last updated: July 14, 2021* 
+ *Last updated: Januay 10, 2022* 
 
 When you upload a file to your bucket in the Amazon Lightsail object storage service, it is stored as an object\. Objects consist of the file data and metadata that describe the object\. You can have any number of objects in a bucket\.
 
@@ -51,7 +51,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
 1. Enter the following command to upload a file to your bucket\.
 
    ```
-   aws s3api put-object --bucket BucketName --key ObjectKey --body LocalDirectory
+   aws s3api put-object --bucket BucketName --key ObjectKey --body LocalDirectory --acl bucket-owner-full-control
    ```
 
    In the command, replace the following example text with your own:
@@ -63,16 +63,16 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    + On a Linux or Unix computer:
 
      ```
-     aws s3api put-object --bucket DOC-EXAMPLE-BUCKET --key images/sailbot.jpg --body home/user/Pictures/sailbot.jpg
+     aws s3api put-object --bucket DOC-EXAMPLE-BUCKET --key images/sailbot.jpg --body home/user/Pictures/sailbot.jpg --acl bucket-owner-full-control
      ```
    + On a Windows computer:
 
      ```
-     aws s3api put-object --bucket DOC-EXAMPLE-BUCKET --key images/sailbot.jpg --body "C:\Users\user\Pictures\sailbot.jpg"
+     aws s3api put-object --bucket DOC-EXAMPLE-BUCKET --key images/sailbot.jpg --body "C:\Users\user\Pictures\sailbot.jpg" --acl bucket-owner-full-control
      ```
 
    You should see a result similar to the following example:  
-![\[Result of the AWS CLI put-object command\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-s3api-put-object-result.png)
+![\[Result of the AWS CLI put-object command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-s3api-put-object-result.png)
 
 ## Managing buckets and objects in Lightsail<a name="uploading-files-managing-buckets-and-objects"></a>
 
@@ -84,7 +84,7 @@ These are the general steps to manage your Lightsail object storage bucket:
 
 1. Get started with the Lightsail object storage service by creating a bucket\. For more information, see [Creating buckets in Amazon Lightsail](amazon-lightsail-creating-buckets.md)\.
 
-1. Learn about the access permissions that you can configure for your bucket\. You can make all objects in your bucket public or private, or you can choose to make individual objects public\. You can also grant access to your bucket by creating access keys, attaching instances to your bucket, and granting access to other AWS accounts\. For more information, see [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
+1. Learn about security best practices for buckets and the access permissions that you can configure for your bucket\. You can make all objects in your bucket public or private, or you can choose to make individual objects public\. You can also grant access to your bucket by creating access keys, attaching instances to your bucket, and granting access to other AWS accounts\. For more information, see [Security Best Practices for Amazon Lightsail object storage](amazon-lightsail-bucket-security-best-practices.md) and [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
 
    After learning about bucket access permissions, see the following guides to grant access to your bucket:
    + [Configuring bucket access permissions in Amazon Lightsail](amazon-lightsail-configuring-bucket-permissions.md)
@@ -92,6 +92,12 @@ These are the general steps to manage your Lightsail object storage bucket:
    + [Creating access keys for a bucket in Amazon Lightsail](amazon-lightsail-creating-bucket-access-keys.md)
    + [Configuring resource access for a bucket in Amazon Lightsail](amazon-lightsail-configuring-bucket-resource-access.md)
    + [Configuring cross\-account access for a bucket in Amazon Lightsail](amazon-lightsail-configuring-bucket-cross-account-access.md)
+
+1. Learn how to enable access logging for your bucket, and how to use access logs to audit the security of your bucket\. For more information, see the following guides\.
+   + [Access logging for buckets in the Amazon Lightsail object storage service](amazon-lightsail-bucket-access-logs.md)
+   + [Access log format for a bucket in the Amazon Lightsail object storage service](amazon-lightsail-bucket-access-log-format.md)
+   + [Enabling access logging for a bucket in the Amazon Lightsail object storage service](amazon-lightsail-enabling-bucket-access-logs.md)
+   + [Using access logs for a bucket in Amazon Lightsail to identify requests](amazon-lightsail-using-bucket-access-logs.md)
 
 1. Create an IAM policy that grants a user the ability to manage a bucket in Lightsail\. For more information, see [IAM policy to manage buckets in Amazon Lightsail](amazon-lightsail-bucket-management-policies.md)\.
 

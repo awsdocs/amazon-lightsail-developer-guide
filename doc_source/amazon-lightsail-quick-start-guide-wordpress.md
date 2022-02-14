@@ -1,6 +1,6 @@
 # Quick start guide: WordPress on Amazon Lightsail<a name="amazon-lightsail-quick-start-guide-wordpress"></a>
 
- *Last updated: August 13, 2018* 
+ *Last updated: February 10, 2022* 
 
 Here are a few steps you should take to get started after your WordPress instance is up and running on Amazon Lightsail:
 
@@ -19,7 +19,7 @@ You need the default application password to sign in to your WordPress websiteâ€
 If you're in a directory other than the user home directory, then enter `cat $HOME/bitnami_application_password`\.
 
    You should see a response similar to this, which contains the default application password:  
-![\[Bitnami default application password.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-bitnami-application-password.png)
+![\[Bitnami default application password.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-bitnami-application-password.png)
 
 For more information, see [Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
 
@@ -33,12 +33,12 @@ Now that you have the default user password, navigate to your WordPress websiteâ
 
 1. Choose **Manage** in the bottom right corner of your WordPress website home page\.
 **Note**  
-If the **Manage** banner is not shown, you can reach the application information page by adding the following path to your public IP address: `http:192.0.2.3/bitnami/index.html`\ or `http:192.0.2.3/wp-admin`\.
+If the **Manage** banner is not shown, you can reach the application information page by browsing to `http://<public-ip-address>/bitnami/index.html`, or the sign in page by browsing to `http://<public-ip-address>/wp-admin/`\. Replace `<public-ip-address>` with the public IP address of your instance\.
 
 1. Sign in using the default user name \(user\) and the default password retrieved earlier in this guide\.
 
    The WordPress administration dashboard appears\.  
-![\[The WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-wordpress-dashboard.png)
+![\[The WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-wordpress-dashboard.png)
 
 For more information, see [Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)
 

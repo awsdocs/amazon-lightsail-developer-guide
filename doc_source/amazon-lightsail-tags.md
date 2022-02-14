@@ -3,13 +3,13 @@
 **Note**  
 Amazon Lightsail allows you to assign labels to your resources as tags\. Each tag is a label consisting of a key and an optional value that can make it more efficient to manage, search for, and filter resources\.
 
- *Last updated: November 28, 2018* 
+ *Last updated: August 18, 2021* 
 
 Amazon Lightsail allows you to assign labels to your resources as tags\. Each tag is a label consisting of a key and an optional value that can make it efficient to manage, search for, and filter resources\. Although there are no inherent types of tags, they let you categorize Lightsail resources by purpose, owner, environment, or other criteria\. This is useful when you have many resources of the same type\. You can quickly identify a specific resource based on the tags you've assigned to it\. For example, define a set of tags for your resources that helps you track each resource’s project, or priority\.
 
 A key without a value is referred to as a key\-only tag in Lightsail\. A key with a value is referred to as a key\-value tag\. The following diagram illustrates how tagging works\. In this example, each resource has a set of key\-value and key\-only tags\. The key\-value tags identify projects and priorities, and key\-only tags identify customers and application versions\.
 
-![\[Tagging in Amazon Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-tags.png)
+![\[Tagging in Amazon Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-tags.png)
 
 ## Organize billing and control access using tags<a name="organize-billing-and-control-access-using-tags"></a>
 
@@ -23,6 +23,9 @@ You can tag most Lightsail resources when you create them, or after they are cre
 
 The following Lightsail resources can be tagged in the Lightsail console:
 + Instances
++ Container services
++ Content delivery network \(CDN\) distributions
++ Buckets
 + Databases
 + Disks
 + DNS zones

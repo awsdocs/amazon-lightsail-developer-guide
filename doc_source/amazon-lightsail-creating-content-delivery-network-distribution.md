@@ -1,6 +1,6 @@
 # Creating Amazon Lightsail distributions<a name="amazon-lightsail-creating-content-delivery-network-distribution"></a>
 
- *Last updated: July 23, 2020* 
+ *Last updated: January 25, 2022* 
 
 In this guide, we show you how to create an Amazon Lightsail distribution using the Lightsail console, and describe the distribution settings that you can configure\. For more information about distributions, see [Content delivery network distributions in Amazon Lightsail](amazon-lightsail-content-delivery-network-distributions.md)\.
 
@@ -22,25 +22,26 @@ In this guide, we show you how to create an Amazon Lightsail distribution using 
 
 Complete the following prerequisites before you get started with creating a distribution:
 
-1. Complete one of the following, depending on whether you want to use an instance or a bucket with your distribution\.
-   + Create a Lightsail instance to host your content\. The instance serves as the origin of your distribution\. The origin stores the original, definitive version of your content\. For more information, see [Create an Amazon Lightsail instance](how-to-create-amazon-lightsail-instance-virtual-private-server-vps.md)\.
+1. Complete one of the following, depending on whether you want to use an instance, container service, or a bucket with your distribution\.
+   + **Create a Lightsail instance to host your content\.** The instance serves as the origin of your distribution\. The origin stores the original, definitive version of your content\. For more information, see [Create an Amazon Lightsail instance](how-to-create-amazon-lightsail-instance-virtual-private-server-vps.md)\.
 
-     Attach a Lightsail static IP to your instance\. Your instance's default public IP address changes if you stop and start your instance, which will break the connection between your distribution and your origin instance\. A static IP does not change if you stop and start your instance\. For more information, see [Create a static IP and attach it to an instance in Amazon Lightsail](lightsail-create-static-ip.md)\.
+     **Attach a Lightsail static IP to your instance\.** Your instance's default public IP address changes if you stop and start your instance, which will break the connection between your distribution and your origin instance\. A static IP does not change if you stop and start your instance\. For more information, see [Create a static IP and attach it to an instance in Amazon Lightsail](lightsail-create-static-ip.md)\.
 
-     Upload your content and files to your instance\. Your files, also known as *objects*, typically include web pages, images, and media files, but can be anything that can be served over HTTP\.
+     **Upload your content and files to your instance\.** Your files, also known as *objects*, typically include web pages, images, and media files, but can be anything that can be served over HTTP\.
+   + **Create a Lightsail container service to host your website or web application\.** The container service serves as the origin of your distribution\. The origin stores the original, definitive version of your content\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md)\.
    + Create a Lightsail bucket to store your static content\. The bucket serves as the origin of your distribution\. The origin stores the original, definitive version of your content\. For more information, see [Creating buckets in Amazon Lightsail](amazon-lightsail-creating-buckets.md)\.
 
-     Upload files to your bucket using the Lightsail console, AWS Command Line Interface \(AWS CLI\), and AWS APIs\. For more information about uploading files, see [Uploading files to a bucket in Amazon Lightsail](amazon-lightsail-uploading-files-to-a-bucket.md#amazon-lightsail-uploading-files-to-a-bucket.title)\.
+     Upload files to your bucket using the Lightsail console, AWS Command Line Interface \(AWS CLI\), and AWS APIs\. For more information about uploading files, see [Uploading files to a bucket in Amazon Lightsail](amazon-lightsail-uploading-files-to-a-bucket.md)\.
 
 1. \(Optional\) Create a Lightsail load balancer if your website requires fault tolerance\. Then attach multiple copies of your instance to your load balancer\. You can configure your load balancer \(with one or more instances attached to it\) as the origin of your distribution, instead of configuring your instance as the origin\. For more information, see [Create a Lightsail load balancer and attach instances to it](create-lightsail-load-balancer-and-attach-lightsail-instances.md)\.
 
 ## Origin resource<a name="distribution-origin-resource"></a>
 
-An *origin* is the definitive source of content for your distribution\. When you create your distribution, you choose the Lightsail instance, bucket, or load balancer \(with one or more instances attached to it\) that hosts the content of your website or web application\.
+An *origin* is the definitive source of content for your distribution\. When you create your distribution, you choose the Lightsail instance, container service, bucket, or load balancer \(with one or more instances attached to it\) that hosts the content of your website or web application\.
 
 You can choose only one origin per distribution\. You can change the origin at any time after you create your distribution\. For more information, see [Changing the origin of your distribution in Amazon Lightsail](amazon-lightsail-changing-distribution-origin.md)\.
 
-![\[Distribution origin selector\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-distribution-choose-origin.png)
+![\[Distribution origin selector\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-distribution-choose-origin.png)
 
 ## Origin protocol policy<a name="distribution-origin-protocol-policy"></a>
 
@@ -215,14 +216,16 @@ Complete the following procedure to create a distribution\.
 
    Distributions are global resources\. They can reference an origin in any AWS Region, and distribute its content globally\.
 
-1. Choose your origin\. An origin can be a Lightsail instance, bucket, or a load balancer \(with one or more instances attached to it\)\. For more information, see [Origin resource](#distribution-origin-resource)\.
+1. Choose your origin\. An origin can be a Lightsail instance, container service, bucket, or a load balancer \(with one or more instances attached to it\)\. For more information, see [Origin resource](#distribution-origin-resource)\.
+**Important**  
+If you choose a Lightsail container service as the origin of your distribution, Lightsail automatically adds the default domain name of your distribution as a custom domain on your container service\. This enables traffic to be routed between your distribution and your container service\. However, there are some circumstances in which you might need to manually add the default domain name of your distribution to your container service\. For more information, see [Add the default domain of an Amazon Lightsail distribution to Lightsail container service](amazon-lightsail-adding-distribution-default-domain-to-container-service.md)\.
 
 1. \(Optional\) To change your origin protocol policy, choose the pencil icon displayed next to the current origin protocol policy that your distribution uses\. For more information, see [Origin protocol policy](#distribution-origin-protocol-policy)\.
 
    This option is listed in the **Choose your origin** section of the page, under the origin resource you selected for your distribution\.
 **Note**  
 When you select a Lightsail bucket as the origin of your distribution, the **Origin protocol policy** defaults to **HTTP only**\. You cannot change the origin protocol policy when a bucket is the origin of your distribution\.  
-![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/origin-protocol-policy.png)
+![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/origin-protocol-policy.png)
 
 1. Choose the caching behavior \(also known as a caching preset\) for your distribution\. For more information, see [Caching behavior and caching preset](#distribution-caching-preset)\.
 **Note**  

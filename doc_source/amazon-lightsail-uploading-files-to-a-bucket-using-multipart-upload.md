@@ -1,6 +1,6 @@
 # Uploading files to a bucket in Amazon Lightsail using multipart upload<a name="amazon-lightsail-uploading-files-to-a-bucket-using-multipart-upload"></a>
 
- *Last updated: July 14, 2021* 
+ *Last updated: January 10, 2022* 
 
 Multipart upload allows you to upload a single file to your bucket as a set of parts\. Each part is a contiguous portion of the file's data\. You can upload these file parts independently and in any order\. If transmission of any part fails, you can retransmit that part without affecting other parts\. After all parts of your file are uploaded, Amazon S3 assembles these parts and creates the object in your bucket in Amazon Lightsail\. In general, when your object size reaches 100 MB, you should consider using multipart uploads instead of uploading the object in a single operation\. For more information about buckets, see [Object storage in Amazon Lightsail](buckets-in-amazon-lightsail.md)\.
 
@@ -109,7 +109,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
 1. Enter the following command to create a multipart upload for your bucket\.
 
    ```
-   aws s3api create-multipart-upload --bucket BucketName --key ObjectKey
+   aws s3api create-multipart-upload --bucket BucketName --key ObjectKey --acl bucket-owner-full-control
    ```
 
    In the command, replace the following example text with your own:
@@ -119,11 +119,11 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    Example:
 
    ```
-   aws s3api create-multipart-upload --bucket DOC-EXAMPLE-BUCKET --key sailbot.mp4
+   aws s3api create-multipart-upload --bucket DOC-EXAMPLE-BUCKET --key sailbot.mp4 --acl bucket-owner-full-control
    ```
 
    You should see a result similar to the following example\. The response includes an `UploadID`, which you must specify in subsequent commands to upload parts, and to complete the multipart upload for this object\.  
-![\[Result of the create-multipart-upload command\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-s3api-create-multipart-upload-result.png)
+![\[Result of the create-multipart-upload command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-s3api-create-multipart-upload-result.png)
 
    After you have the `UploadID` for your multipart upload, continue to the following [Upload a part using the AWS CLI](#upload-a-part) section of this guide and start uploading parts\.
 
@@ -139,7 +139,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
 1. Enter the following command to upload a part to your bucket\.
 
    ```
-   aws s3api upload-part --bucket BucketName --key ObjectKey --part-number Number --body FilePart --upload-id "UploadID"
+   aws s3api upload-part --bucket BucketName --key ObjectKey --part-number Number --body FilePart --upload-id "UploadID"  --acl bucket-owner-full-control
    ```
 
    In the command, replace the following example text with your own:
@@ -152,11 +152,11 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    Example:
 
    ```
-   aws s3api upload-part --bucket DOC-EXAMPLE-BUCKET --key sailbot.mp4 --part-number 1 --body sailbot.mp4.001 --upload-id "R4QU.mO.exampleiHWiLOeNw7JtXX7OotRhTLsXXCzF21CZdYlfj5lfjtiMnpzVw2WPj.exampleBTmL_N_.42.DlHYOTsITFsX.tO3XOUTTAHiCxY5VR8jWRGdkVkUG"
+   aws s3api upload-part --bucket DOC-EXAMPLE-BUCKET --key sailbot.mp4 --part-number 1 --body sailbot.mp4.001 --upload-id "R4QU.mO.exampleiHWiLOeNw7JtXX7OotRhTLsXXCzF21CZdYlfj5lfjtiMnpzVw2WPj.exampleBTmL_N_.42.DlHYOTsITFsX.tO3XOUTTAHiCxY5VR8jWRGdkVkUG" --acl bucket-owner-full-control
    ```
 
    You should see a result similar to the following example\. Repeat the `upload-part` command for each part you upload\. The response for each of your upload part requests will include an `ETag` value for the part that you uploaded\. Record the `ETag` values for each of the parts that you upload\. You will need all of the `ETag` values to complete the multipart upload, which is covered later in this guide\.  
-![\[Result of the upload-part command\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-s3api-upload-part-result.png)
+![\[Result of the upload-part command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-s3api-upload-part-result.png)
 
 ## List parts of a multipart upload using the AWS CLI<a name="list-parts-of-multipart-upload"></a>
 
@@ -187,7 +187,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    ```
 
    You should see a result similar to the following example\. The response lists all of the part numbers and `ETag` values for the parts that you uploaded in the multipart upload\. Copy these values to your clipboard, and continue to the [Create a multipart upload \.json](#create-multipart-upload-json-file) section of this guide\.  
-![\[Result of the list-parts command\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-s3api-list-parts-result.png)
+![\[Result of the list-parts command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-s3api-list-parts-result.png)
 
 ## Create a multipart upload \.json file<a name="create-multipart-upload-json-file"></a>
 
@@ -196,10 +196,10 @@ Complete the following procedure to create a multipart upload \.json file that d
 1. Open a text editor, and paste the response from the `list-parts` command that you requested in the previous section of this guide\.
 
    The result should look like the following example\.  
-![\[asdf\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-multipart-upload-json-file-1.png)
+![\[asdf\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-multipart-upload-json-file-1.png)
 
 1. Reformat the text file as shown in the following example:  
-![\[asdf\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-multipart-upload-json-file-2.png)
+![\[asdf\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-multipart-upload-json-file-2.png)
 
 1. Save the text file to your computer as `mpstructure.json`, and continue to the [Complete a multipart upload using the AWS CLI](#complete-multipart-upload) section of this guide\.
 
@@ -215,7 +215,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
 1. Enter the following command to upload a part to your bucket\.
 
    ```
-   aws s3api complete-multipart-upload --multipart-upload file://JSONFileName --bucket BucketName --key ObjectKey --upload-id "UploadID"
+   aws s3api complete-multipart-upload --multipart-upload file://JSONFileName --bucket BucketName --key ObjectKey --upload-id "UploadID"  --acl bucket-owner-full-control
    ```
 
    In the command, replace the following example text with your own:
@@ -225,11 +225,11 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    + *UploadID* \- The upload ID of the multipart upload that you created earlier in this guide\.
 
    ```
-   aws s3api complete-multipart-upload --multipart-upload file://mpstructure.json --bucket DOC-EXAMPLE-BUCKET --key sailbot.mp4 --upload-id "R4QU.mO.exampleiHWiLOeNw7JtXX7OotRhTLsXXCzF21CZdYlfj5lfjtiMnpzVw2WPj.exampleBTmL_N_.42.DlHYOTsITFsX.tO3XOUTTAHiCxY5VR8jWRGdkVkUG"
+   aws s3api complete-multipart-upload --multipart-upload file://mpstructure.json --bucket DOC-EXAMPLE-BUCKET --key sailbot.mp4 --upload-id "R4QU.mO.exampleiHWiLOeNw7JtXX7OotRhTLsXXCzF21CZdYlfj5lfjtiMnpzVw2WPj.exampleBTmL_N_.42.DlHYOTsITFsX.tO3XOUTTAHiCxY5VR8jWRGdkVkUG" --acl bucket-owner-full-control
    ```
 
    You should see a response similar to the following example\. This confirms that the multipart upload is completed\. The object is now assembled and available in the bucket\.  
-![\[Result of the complete-multipart-upload command\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-s3api-complete-multipart-upload-result.png)
+![\[Result of the complete-multipart-upload command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-s3api-complete-multipart-upload-result.png)
 
 ## List multipart uploads for a bucket using the AWS CLI<a name="list-multipart-uploads"></a>
 
@@ -255,7 +255,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    ```
 
    You should see a response similar to the following example\.  
-![\[Result of the list-multipart-uploads command\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-s3api-list-multipart-uploads-result.png)
+![\[Result of the list-multipart-uploads command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-s3api-list-multipart-uploads-result.png)
 
 ## Stop a multipart upload using the AWS CLI<a name="stop-multipart-uploads"></a>
 
@@ -269,7 +269,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
 1. Enter the following command to upload a part to your bucket\.
 
    ```
-   aws s3api abort-multipart-upload --bucket BucketName --key ObjectKey --upload-id "UploadID"
+   aws s3api abort-multipart-upload --bucket BucketName --key ObjectKey --upload-id "UploadID" --acl bucket-owner-full-control
    ```
 
    In the command, replace the following example text with your own:
@@ -280,7 +280,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    Example:
 
    ```
-   aws s3api abort-multipart-upload --bucket DOC-EXAMPLE-BUCKET --key sailbot.mp4 --upload-id "R4QU.mO.exampleiHWiLOeNw7JtXX7OotRhTLsXXCzF21CZdYlfj5lfjtiMnpzVw2WPj.exampleBTmL_N_.42.DlHYOTsITFsX.tO3XOUTTAHiCxY5VR8jWRGdkVkUG"
+   aws s3api abort-multipart-upload --bucket DOC-EXAMPLE-BUCKET --key sailbot.mp4 --upload-id "R4QU.mO.exampleiHWiLOeNw7JtXX7OotRhTLsXXCzF21CZdYlfj5lfjtiMnpzVw2WPj.exampleBTmL_N_.42.DlHYOTsITFsX.tO3XOUTTAHiCxY5VR8jWRGdkVkUG" --acl bucket-owner-full-control
    ```
 
    This command does not return a response\. You can run a `list-multipart-uploads` command to confirm that the multipart upload was stopped\.
@@ -295,7 +295,7 @@ These are the general steps to manage your Lightsail object storage bucket:
 
 1. Get started with the Lightsail object storage service by creating a bucket\. For more information, see [Creating buckets in Amazon Lightsail](amazon-lightsail-creating-buckets.md)\.
 
-1. Learn about the access permissions that you can configure for your bucket\. You can make all objects in your bucket public or private, or you can choose to make individual objects public\. You can also grant access to your bucket by creating access keys, attaching instances to your bucket, and granting access to other AWS accounts\. For more information, see [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
+1. Learn about security best practices for buckets and the access permissions that you can configure for your bucket\. You can make all objects in your bucket public or private, or you can choose to make individual objects public\. You can also grant access to your bucket by creating access keys, attaching instances to your bucket, and granting access to other AWS accounts\. For more information, see [Security Best Practices for Amazon Lightsail object storage](amazon-lightsail-bucket-security-best-practices.md) and [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
 
    After learning about bucket access permissions, see the following guides to grant access to your bucket:
    + [Configuring bucket access permissions in Amazon Lightsail](amazon-lightsail-configuring-bucket-permissions.md)
@@ -303,6 +303,12 @@ These are the general steps to manage your Lightsail object storage bucket:
    + [Creating access keys for a bucket in Amazon Lightsail](amazon-lightsail-creating-bucket-access-keys.md)
    + [Configuring resource access for a bucket in Amazon Lightsail](amazon-lightsail-configuring-bucket-resource-access.md)
    + [Configuring cross\-account access for a bucket in Amazon Lightsail](amazon-lightsail-configuring-bucket-cross-account-access.md)
+
+1. Learn how to enable access logging for your bucket, and how to use access logs to audit the security of your bucket\. For more information, see the following guides\.
+   + [Access logging for buckets in the Amazon Lightsail object storage service](amazon-lightsail-bucket-access-logs.md)
+   + [Access log format for a bucket in the Amazon Lightsail object storage service](amazon-lightsail-bucket-access-log-format.md)
+   + [Enabling access logging for a bucket in the Amazon Lightsail object storage service](amazon-lightsail-enabling-bucket-access-logs.md)
+   + [Using access logs for a bucket in Amazon Lightsail to identify requests](amazon-lightsail-using-bucket-access-logs.md)
 
 1. Create an IAM policy that grants a user the ability to manage a bucket in Lightsail\. For more information, see [IAM policy to manage buckets in Amazon Lightsail](amazon-lightsail-bucket-management-policies.md)\.
 

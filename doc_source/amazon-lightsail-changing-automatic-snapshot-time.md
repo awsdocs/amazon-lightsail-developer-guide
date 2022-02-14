@@ -50,12 +50,12 @@ Complete the following steps to change the automatic snapshot time for an instan
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the Lightsail home page, choose the **Instances** tab\.  
-![\[The Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-home-page-instances-storage.png)
+![\[The Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-home-page-instances-storage.png)
 
 1. Choose the name of the instance for which you want to change the automatic snapshot time\.
 
 1. On the instance management page, choose the **Snapshots** tab\.  
-![\[The instance management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-instance-management-snapshots.png)
+![\[The instance management page in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-instance-management-snapshots.png)
 
 1. Under the **Automatic snapshots** section, choose **Change snapshot time**\.
 
@@ -91,7 +91,7 @@ Complete the following steps to change the automatic snapshot time for an instan
    ```
 
    You should see a result similar to the following example:  
-![\[Enable auto snapshot operation result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-update-auto-snapshot-time-operation.png)
+![\[Enable auto snapshot operation result.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-update-auto-snapshot-time-operation.png)
 
    The automatic snapshot time is updated after a few moments\. A restriction may apply to the effective date of your new automatic snapshot time\. For more information, see [Automatic snapshot time restrictions](#automatic-snapshot-time-restrictions)\.
 **Note**  

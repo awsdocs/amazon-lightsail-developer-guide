@@ -29,12 +29,12 @@ Use the Amazon EC2 console to create a new key pair that you can use to replace 
 1. From the left navigation pane, choose **Key Pairs**\.
 
 1. Choose **Create key pair**\.  
-![\[Key pairs in the Amazon EC2 console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-ec2-console-key-pairs.png)
+![\[Key pairs in the Amazon EC2 console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-ec2-console-key-pairs.png)
 
 1. Enter a name for the key into the **Key pair name** text box, then choose **Create**\.
 
    The new private key is automatically downloaded\. Make note of where the private key is saved\. You need it in the following *Create the public key using PuTTYgen* section of this guide to create a public key\.  
-![\[Create key pairs in the Amazon EC2 console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-ec2-console-create-key-pair.png)
+![\[Create key pairs in the Amazon EC2 console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-ec2-console-create-key-pair.png)
 
 ## Create the public key using PuTTYgen<a name="create-the-public-key-using-puttygen"></a>
 
@@ -48,12 +48,12 @@ For more information about how to configure PuTTY to connect to your Linux or Un
 1. Start PuTTYgen\.
 
    For example, choose the **Windows Start** menu, choose **All Programs**, choose **PuTTY**, and choose **PuTTYgen**\.  
-![\[PuTTY Key Generator.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/puttygen-key-generator.png)
+![\[PuTTY Key Generator.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/puttygen-key-generator.png)
 
 1. Choose **Load**\.
 
    By default, PuTTYgen displays only files with the \.PPK extension\. To locate your \.PEM file, select the option to display files of all types\.  
-![\[Load the Lightsail private key to the PuTTY Key Generator.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-putty-load-ec2-private-key.png)
+![\[Load the Lightsail private key to the PuTTY Key Generator.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-putty-load-ec2-private-key.png)
 
 1. Navigate to the location of your private key that was created earlier in this guide\. Choose the private key, and then choose **Open**\.
 
@@ -62,7 +62,7 @@ For more information about how to configure PuTTY to connect to your Linux or Un
 1. Highlight the contents of the **Public key** text box and copy it to your clipboard by pressing **Ctrl\+C** if you’re using Windows, or **Cmd\+C** if you’re using macOS\.
 
    Open a text editor, such as Notepad or TextEdit, and paste the public key text into it by pressing **Ctrl\+V** if you're using Windows, or **Cmd\+V** if you're using macOS\. Save the file with your public key text; you will need it later in this guide\.  
-![\[PuTTY key generator.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-putty-key-generator.png)
+![\[PuTTY key generator.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-putty-key-generator.png)
 
 1. Continue to the [Connect to your Linux or Unix instance in Amazon EC2](#connect-to-your-linux-or-unix-instance-in-amazon-ec2) section of this guide to connect to your EC2 instance and add the public key\.
 
@@ -85,7 +85,7 @@ Public key content is saved in the `~/.ssh/authorized_keys` file on Linux and Un
    ```
 **Note**  
 These steps use Vim for demonstration purposes\. However, you can use any text editor for these steps\.  
-![\[Lightsail default key.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-lightsail-default-ssh-key.png)
+![\[Lightsail default key.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-lightsail-default-ssh-key.png)
 
 1. Press the `I` key to enter the insert mode in the Vim editor\.
 
@@ -94,7 +94,7 @@ These steps use Vim for demonstration purposes\. However, you can use any text e
 1. Copy and paste the public key text that you saved earlier in this guide\.
 
    The result should look like the following:  
-![\[Lightsail default key.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-lightsail-default-ssh-key-and-new-key.png)
+![\[Lightsail default key.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-lightsail-default-ssh-key-and-new-key.png)
 
 1. Press the `ESC` key, and then enter `:wq!` to save your edits, and quit Vim\.
 
@@ -105,7 +105,7 @@ These steps use Vim for demonstration purposes\. However, you can use any text e
    ```
 
    You should see a result similar to the following:  
-![\[Lightsail default key.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-restarting-sshd.png)
+![\[Lightsail default key.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-restarting-sshd.png)
 
    Your new public key is now added to your instance\. To test the new key pair, disconnect from your instance\. Configure PuTTY to use your new private key instead of the Lightsail default key\. If you’re able to successfully connect to your instance using your new key pair, continue to the [Remove the Lightsail default key](#remove-the-lightsail-default-key) section of this guide to remove the Lightsail default key\.
 
@@ -124,7 +124,7 @@ Remove the Lightsail default key after you’ve added a new public key to your i
 1. Press the `I` key to enter the insert mode in the Vim editor\.
 
 1. Delete the line that ends with `LightsailDefaultKeyPair`\. This is the Lightsail default key\.  
-![\[Lightsail default key.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-lightsail-default-delete-ssh-key.png)
+![\[Lightsail default key.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-lightsail-default-delete-ssh-key.png)
 
 1. Press the `ESC` key, and then enter `:wq!` to save your edits, and quit Vim\.
 
@@ -135,7 +135,7 @@ Remove the Lightsail default key after you’ve added a new public key to your i
    ```
 
    You should see a result similar to the following:  
-![\[Lightsail default key.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-restarting-sshd.png)
+![\[Lightsail default key.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-restarting-sshd.png)
 
    The Lightsail default key is now removed from your instance\. Your instance will now refuse connections that use the Lightsail default key\. Continue to the [Remove the Lightsail system key](#remove-the-lightsail-system-ssh-key) section of this guide to remove the Lightsail system key\.
 
@@ -174,6 +174,6 @@ The Lightsail system key, also known as the `lightsail_instance_ca.pub` key, on 
    ```
 
    You should see a result similar to the following:  
-![\[Lightsail default key.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-restarting-sshd.png)
+![\[Lightsail default key.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-restarting-sshd.png)
 
    The `lightsail_instance_ca.pub` key is now removed from your instance\. The associated `sshd_config` file is updated to exclude that key\.

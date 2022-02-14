@@ -1,6 +1,6 @@
 # Frequently Asked Questions in Amazon Lightsail<a name="amazon-lightsail-frequently-asked-questions-faq"></a>
 
- *Last updated: July 14, 2021* 
+ *Last updated: February 10, 2022* 
 
 This topic answers frequently asked questions \(FAQ\)\. If you have a FAQ that is not answered here, use the **Questions? Comments?** feedback button at the bottom of the page\. You can also post a question in the [Lightsail discussion forum](https://forums.aws.amazon.com/forum.jspa?forumID=231)\.
 
@@ -81,6 +81,9 @@ You can install additional software on your instances by using the in\-browser S
 **What operating systems can I use with Amazon Lightsail?**  
 Lightsail currently supports 7 Linux or Unix\-like distributions: Amazon Linux, Amazon Linux 2, CentOS, Debian, FreeBSD, OpenSUSE, and Ubuntu, as well as three Windows Server versions: 2012 R2, 2016, and 2019\.
 
+**Do I need to bring my own license to use Lightsail instances?**  
+All instance blueprints available on Lightsail include a license, except for the cPanel & WHM blueprint\. That blueprint includes a 15\-day trial license\. For more information, see [Quick start guide: cPanel & WHM on Amazon Lightsail](amazon-lightsail-quick-start-guide-cpanel.md)\. For all other instance blueprints, you don't need to bring your own license \(BYOL\)\.
+
 **How do I create a Lightsail instance?**  
 After logging in to Lightsail, you can use the Lightsail [console](https://lightsail.aws.amazon.com/ls/webapp), command line interface \(CLI\), or API to create and manage instances\.  
 The first time you log in to the console, choose Create Instance\. The create instance page is where you can choose the software, location, and name for your instance\. Once you choose Create, your new instance will spin up automatically within minutes\.
@@ -120,7 +123,7 @@ You can store your static content, such as images, videos, and HTML files in a b
 Lightsail object storage has three different fixed\-priced bundles in all AWS Regions where Lightsail is available\. The first bundle is $1/month and is free for the first 12 months\. This bundle includes 5 GB storage capacity and 25 GB of data transfer\. The second bundle is $3 per month and includes 100 GB storage capacity and 250 GB of data transfer\. Lastly, the third bundle is $5 per month and includes 250 GB of storage capacity and 500 GB data transfer\. Lightsail object storage includes unlimited data transfer into your bucket, as the bundled data transfer allowance is used only for data transfer out from your bucket\.
 
 **Does Lightsail object storage have overage charges?**  
-When you exceed the per bucket monthly storage capacity or data transfer allowance of your object storage plan, you will get charged for the additional amount\. For more information, see the [Lightsail pricing page](https://aws.amazon.com/lightsail/pricing/)\.
+When you exceed the monthly storage capacity or data transfer allowance of the selected storage plan for an individual bucket, you will get charged for the additional amount\. For more information, see the [Lightsail pricing page](https://aws.amazon.com/lightsail/pricing/)\.
 
 **How does my data transfer allowance work with object storage?**  
 You can consume your data transfer allowance by transferring data into and out of Lightsail object storage, except for the following:  
@@ -130,7 +133,7 @@ You can consume your data transfer allowance by transferring data into and out o
 • Data transferred out from Lightsail object storage to a Lightsail CDN distribution
 
 **Can I change the plan associated with my Lightsail bucket?**  
-Yes, you can change your Lightsail object storage plan once per bucket within your monthly AWS billing cycle\.
+Yes, you can change the storage plan of an individual Lighstail bucket one time within your monthly AWS billing cycle\.
 
 **Can I copy objects from Lightsail object storage to Amazon S3?**  
 Yes, copying from Lightsail object storage to Amazon S3 is supported\. For more information, see [How can I copy all objects from one Amazon S3 bucket to another bucket?](https://aws.amazon.com/premiumsupport/knowledge-center/move-objects-s3-bucket/) in the *AWS Premium Support Knowledge Center*\.
@@ -527,7 +530,11 @@ Lightsail instances and managed databases incur charges until they are deleted\.
 
 **Can I try Lightsail instances for free?**  
 Yes\! Whether you're an existing or new AWS customer, you get 750 hours of free usage of the $3\.50 USD Lightsail plan for free\. You also can try Lightsail plans that include a Windows Server license for free using the $8 USD Windows plan\.  
-You can use your 750 hours of usage across as many instances as you like\. For example, you can run a single Lightsail instance for a whole month, or 10 Lightsail instances for 75 hours\. The free trial offer is only applicable to usage within the first calendar month from when you sign up to use Lightsail\.
+You can use your 750 hours of usage across as many instances as you like\. For example, you can run a single Lightsail instance for a whole month, or 10 Lightsail instances for 75 hours\. The free trial offer is only applicable to usage within the first calendar month from when you sign up to use Lightsail\.  
+For a limited time, Lightsail is extending its free tier to include three months free on select instance plans\. The offer applies to new or existing AWS accounts who started using Lightsail on or after July 8, 2021\. Offer only applies to one bundle per account\. Standard charges apply after the first 750 hours of usage of the selected bundle each month\.  
+You can use the following instance plans free for three months:  
++ Linux/Unix instance plans: $3\.50 USD per month, $5 USD per month, and $10 USD per month
++ Windows instance plans: $8 USD per month, $12 USD per month, and $20 USD per month
 
 **What do Lightsail managed databases cost?**  
 Lightsail managed databases come in 4 plan sizes and start at $15 USD per month for a 1GB RAM database instance with 40 GB of SSD storage and 100 GB data transfer allowance\. High Availability plans costs two times the Standard plan prices, because they run an additional database instance and storage disk in another Availability zone for redundancy\.

@@ -36,36 +36,36 @@ In this section of the tutorial, you will connect to your MySQL 5\.6 database an
    Complete the following steps to choose the correct version of mysqldump to use in MySQL Workbench:
 
    1. In MySQL Workbench, choose **Edit**, and then choose **Preferences**\.  
-![\[MySQL Workbench Edit menu\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-file-preferences.png)
+![\[MySQL Workbench Edit menu\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-file-preferences.png)
 
    1. Choose **Administration** in the navigation pane\. 
 
    1. In the **Workbench Preferences** window that appears, choose the ellipsis button next to the **Path to mysqldump Tool** text box\.   
-![\[MySQL Workbench Preferences\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-preferences.png)
+![\[MySQL Workbench Preferences\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-preferences.png)
 
    1. Browse to the location of the appropriate `mysqldump` executable file, and double\-click it\.
 
       In Windows, the `mysqldump.exe` file is typically located in the `C:\Program Files\MySQL\MySQL Server 5.6\bin` directory\. In Linux, enter `which mysqldump` in the terminal to see where the **mysqldump** file is located\.  
-![\[Locating the mysqldump file\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-mysqldump-file.png)
+![\[Locating the mysqldump file\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-mysqldump-file.png)
 
    1. Choose **OK** in the in the **Workbench Preferences window**\.   
-![\[Saving MySQL Workbench preferences\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-preferences-save.png)
+![\[Saving MySQL Workbench preferences\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-preferences-save.png)
 
 1. Choose **Data Export** in the **Navigator** pane  
-![\[MySQL Workbench data export option\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-data-export.png)
+![\[MySQL Workbench data export option\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-data-export.png)
 
 1. In the **Data Export** tab that appears, add a checkmark next to the tables that you wish to export\.
 **Note**  
 In this example, we chose the `bitnami_wordpress` table that contains data for a WordPress website on a "Certified by Bitnami" WordPress instance\.  
-![\[MySQL Workbench tables to export\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-export-table.png)
+![\[MySQL Workbench tables to export\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-export-table.png)
 
 1. In the **Export Options** section, choose **Export to Self\-Contained File**, and then make a note of the directory in which the export file will be saved\.  
-![\[MySQL Workbench export options\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-export-options.png)
+![\[MySQL Workbench export options\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-export-options.png)
 
 1. Choose **Start Export**\.
 
 1. Wait for the export to complete before continuing to the next section of this tutorial\.  
-![\[MySQL Workbench export progress\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-export-progress.png)
+![\[MySQL Workbench export progress\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-export-progress.png)
 
 ## Step 4: Connect to your MySQL 5\.7 database and import the data<a name="migrate-mysql-5-6-connect-to-mysql-5-7"></a>
 
@@ -74,27 +74,27 @@ In this section of the tutorial, you will connect to your MySQL 5\.7 database an
 1. Connect to your MySQL 5\.7 database using MySQL Workbench on your local computer\.
 
 1. Choose **Data Import/Restore** in the **Navigator** pane\.  
-![\[MySQL Workbench data export option\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-data-import.png)
+![\[MySQL Workbench data export option\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-data-import.png)
 
 1. In the **Data Import** tab that appears, choose **Import from Self\-Contained File**, and then choose the ellipsis button next to the text box\.  
-![\[MySQL Workbench import file\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-import-file.png)
+![\[MySQL Workbench import file\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-import-file.png)
 
 1. Browse to the location where the export file was saved, and double\-click it\.  
-![\[MySQL Workbench create new schema\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-choose-export-file.png)
+![\[MySQL Workbench create new schema\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-choose-export-file.png)
 
 1. Choose **New** in the **Default Schema to be imported To** section\.  
-![\[MySQL Workbench create new schema\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-create-new-schema.png)
+![\[MySQL Workbench create new schema\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-create-new-schema.png)
 
 1. Enter the name of the schema in the **Create Schema** window that appears\.
 **Note**  
 In this example, we enter `bitnami_wordpress` because that is the name of the database table that we exported\.  
-![\[MySQL Workbench name of new schema\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-schema-name.png)
+![\[MySQL Workbench name of new schema\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-schema-name.png)
 
 1. Choose **Start Import**\.  
-![\[MySQL Workbench start import\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-start-import.png)
+![\[MySQL Workbench start import\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-start-import.png)
 
 1. Wait for the import to complete before continuing to the next section of this tutorial\.   
-![\[MySQL Workbench import progress\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/mysql-workbench-import-progress.png)
+![\[MySQL Workbench import progress\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/mysql-workbench-import-progress.png)
 
 ## Step 5: Test your application and complete the migration<a name="migrate-mysql-5-6-test-your-application"></a>
 

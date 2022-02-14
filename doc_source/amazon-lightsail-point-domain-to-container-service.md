@@ -1,12 +1,15 @@
-# Pointing your domains to your Amazon Lightsail container services<a name="amazon-lightsail-point-domain-to-container-service"></a>
+# Routing traffic for a domain in Amazon Lightsail to a Lightsail container service<a name="amazon-lightsail-point-domain-to-container-service"></a>
 
  *Last updated: May 26, 2021* 
 
 You must point your registered domain names to your Amazon Lightsail container service after you enabled custom domains for your service\. You do this by adding an alias record to the DNS zone of each of the domains specified on the certificates that you're using with your container service\. All of the records that you add should point to the default domain \(e\.g\., `https://<ServiceName>.<RandomGUID>.<AWSRegion>.cs.amazonlightsail.com`\) of your container service\.
 
-In this guide, we provide you with the procedure to point your domains to your container service using a Lightsail DNS zone\. The procedure to point your domains to your container service using a different DNS hosting provider, like Domain\.com or GoDaddy, might be similar\. For more information about Lightsail DNS zones, see [DNS in Amazon Lightsail](understanding-dns-in-amazon-lightsail.md)\.
+In this guide, we provide you with the procedure to point your domains to your container service using a Lightsail DNS zone\. For more information about Lightsail DNS zones, see [DNS in Amazon Lightsail](understanding-dns-in-amazon-lightsail.md)\.
 
 For more information about container services, see [Container services in Amazon Lightsail](amazon-lightsail-container-services.md)\.
+
+**Note**  
+If you're using Route 53 to host the DNS of your domain, then you should add the alias record to the hosted zone of your domain in Route 53\. For more information, see [Routing traffic for a domain in Route 53 to an Amazon Lightsail container service](amazon-lightsail-route-53-alias-record-for-container-service.md)\.
 
 ## Prerequisite<a name="point-domain-to-container-service-prerequisite"></a>
 

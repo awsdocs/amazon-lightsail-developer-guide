@@ -10,7 +10,7 @@ In Amazon Lightsail, you can choose from three options in each region to set up 
 + **Create new**\. When creating your instance, choose **Change key pair**, and then choose **Create new** to get a new public and private key pair for connecting\. This enables you to use a client such as PuTTY to connect securely to your instance\. In this option, Lightsail creates and manages the SSH keys\.
 + **Upload new**\. When creating your instance, choose **Change key pair**, and then choose **Upload new**\. This enables you to use an SSH client such as PuTTY to connect securely to your instance\. In this option, you are using an existing SSH key that you might also use with another service, such as GitHub\.
 
-To learn more about SSH, see [Secure SHell](https://en.wikipedia.org/wiki/Secure_Shell) on Wikipedia\.
+To learn more about SSH, see [Secure Shell](https://en.wikipedia.org/wiki/Secure_Shell) on Wikipedia\.
 
 ## SSH keys and AWS Regions<a name="ssh-keys-and-aws-regions"></a>
 

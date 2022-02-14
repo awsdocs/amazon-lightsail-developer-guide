@@ -1,6 +1,6 @@
 # How Amazon Lightsail Works with IAM<a name="security_iam_service-with-iam"></a>
 
- *Last updated: February 18, 2020* 
+ *Last updated: September 2, 2021* 
 
 Before you use IAM to manage access to Lightsail, you should understand what IAM features are available to use with Lightsail\. To get a high\-level view of how Lightsail and other AWS services work with IAM, see [AWS Services That Work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) in the *IAM User Guide*\.
 
@@ -142,6 +142,4 @@ Lightsail supports service\-linked roles\. For details about creating or managin
 
 ### Service Roles<a name="security_iam_service-with-iam-roles-service"></a>
 
-This feature allows a service to assume a [service role](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-role) on your behalf\. This role allows the service to access resources in other services to complete an action on your behalf\. Service roles appear in your IAM account and are owned by the account\. This means that an IAM administrator can change the permissions for this role\. However, doing so might break the functionality of the service\.
-
-Lightsail supports service roles\. 
+Lightsail does not support service roles\.

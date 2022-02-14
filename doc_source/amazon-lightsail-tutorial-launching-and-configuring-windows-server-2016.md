@@ -1,6 +1,6 @@
 # Tutorial: Launch and configure a Windows Server 2016 instance in Amazon Lightsail<a name="amazon-lightsail-tutorial-launching-and-configuring-windows-server-2016"></a>
 
- *Last updated: November 1, 2018* 
+ *Last updated: August 19 ,2021* 
 
 Amazon Lightsail is the easiest way to get started with Amazon Web Services \(AWS\) if you just need virtual private servers\. Lightsail includes everything you need to launch your project quickly – a virtual machine, SSD\-based storage, data transfer, DNS management, and a static IP – for a low, predictable price\.
 
@@ -25,21 +25,26 @@ Get your Windows Server 2016 instance up and running in Lightsail\. For more inf
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the **Instances** tab of the Lightsail home page, choose **Create instance**\.  
-![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lamp-tutorial-01.png)
+![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lamp-tutorial-01.png)
 
 1. Choose the AWS Region and Availability Zone for your instance\.  
-![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-wordpress-tutorial-02.png)
+![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-wordpress-tutorial-02.png)
 
 1. Choose your instance image\.
 
    1. Choose **Microsoft Windows** as the platform\.
 
    1. Choose **OS Only**, then choose **Windows Server 2016** as the blueprint\.  
-![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-ws-tutorial-03.png)
+![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-ws-tutorial-03.png)
 
 1. Choose an instance plan\.
 
    A plan includes a low, predictable cost, machine configuration \(RAM, SSD, vCPU\), and data transfer allowance\. You can try the $8 USD Lightsail plan without charge for one month \(up to 750 hours\)\. AWS credits one free month to your account\.
+**Note**  
+For a limited time, Lightsail is extending its free tier to include three months free on select instance plans\. The offer applies to new or existing AWS accounts who started using Lightsail on or after July 8, 2021\. Offer only applies to one bundle per account\. Standard charges apply after the first 750 hours of usage of the selected bundle each month\.  
+You can use the following instance plans free for three months:  
+Linux/Unix instance plans: $3\.50 USD per month, $5 USD per month, and $10 USD per month
+Windows instance plans: $8 USD per month, $12 USD per month, and $20 USD per month
 
 1. Enter a name for your instance\.
 
@@ -48,15 +53,15 @@ Get your Windows Server 2016 instance up and running in Lightsail\. For more inf
    + Must contain 2 to 255 characters\.
    + Must start and end with an alphanumeric character or number\.
    + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.  
-![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-ws-tutorial-04.png)
+![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-ws-tutorial-04.png)
 
 1. Choose one of the following options to add tags to your instance:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
@@ -67,10 +72,10 @@ For more information about key\-only and key\-value tags, see [Tags in Amazon Li
 Connect to your Windows Server 2016 instance using the browser\-based RDP client in the Lightsail console\. For more information, see [Connecting to your Windows instance in Amazon Lightsail](connect-to-your-windows-based-instance-using-amazon-lightsail.md)\.
 
 1. On the **Instances** tab of the Lightsail home page, choose the RDP quick\-connect icon for your Windows Server 2016 instance\.  
-![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-ws-tutorial-05.png)
+![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-ws-tutorial-05.png)
 
 1. After the browser\-based RDP client window opens, you can begin configuring your Windows Server 2016 instance:  
-![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-ws-tutorial-06.png)
+![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-ws-tutorial-06.png)
 
 ## Step 4: Create a Lightsail static IP address and attach it to your Windows Server 2016 instance<a name="tutorial-launching-and-configuring-windows-server-2016-creating-a-lightsail-static-ip"></a>
 
@@ -79,13 +84,13 @@ The default public IP for your Windows Server 2016 instance changes if you stop 
 Create a static IP address and attach it to your Windows Server 2016 instance\. For more information, see [Create a static IP and attach it to an instance in Amazon Lightsail](lightsail-create-static-ip.md) in the Lightsail documentation\.
 
 1. On the **Instances** tab of the Lightsail home page, choose your running Windows Server 2016 instance\.  
-![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-ws-tutorial-09.png)
+![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-ws-tutorial-09.png)
 
 1. Choose the **Networking** tab, then choose **Create static IP**\.  
-![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-wordpress-tutorial-10.png)
+![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-wordpress-tutorial-10.png)
 
 1. The static IP location, and attached instance are pre\-selected based on the instance that you chose earlier in this tutorial\.  
-![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-ws-tutorial-11.png)
+![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-ws-tutorial-11.png)
 
 1. Entger a name for your static IP\.
 
@@ -96,22 +101,22 @@ Create a static IP address and attach it to your Windows Server 2016 instance\. 
    + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.
 
 1. Choose **Create**\.  
-![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-wordpress-tutorial-12.png)
+![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-wordpress-tutorial-12.png)
 
 ## Step 5: Create a Lightsail DNS zone and map a domain to your Windows Server 2016 instance<a name="tutorial-launching-and-configuring-windows-server-2016-creating-a-dns-zone"></a>
 
 Transfer management of your domain's DNS records to Lightsail\. This allows you to more easily map a domain to your Windows Server 2016 instance, and manage all of your website’s resources using the Lightsail console\. For more information, see [Creating a DNS zone to manage your domain’s DNS records in Amazon Lightsail](lightsail-how-to-create-dns-entry.md) in the Lightsail documentation\.
 
 1. On the **Networking** tab of the Lightsail home page, choose **Create DNS zone**\.  
-![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-wordpress-tutorial-13.png)
+![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-wordpress-tutorial-13.png)
 
 1. Enter your domain, then choose **Create DNS zone**\.  
-![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-wordpress-tutorial-14.png)
+![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-wordpress-tutorial-14.png)
 
 1. Make note of the name server addresses listed on the page\.
 
    You add these name server addresses to your domain name’s registrar to transfer management of your domain’s DNS records to Lightsail\.  
-![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-wordpress-tutorial-15.png)
+![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-wordpress-tutorial-15.png)
 
 1. After management of your domain’s DNS records are transferred to Lightsail, add an A record to point the apex of your domain to your Windows Server 2016 instance, as follows:
 
@@ -122,7 +127,7 @@ Transfer management of your domain's DNS records to Lightsail\. This allows you 
    1. In the **Maps to** box, choose the static IP that you attached to the Windows Server 2016 instance in the previous step of this tutorial\.
 
    1. Choose the save icon\.  
-![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-wordpress-tutorial-16.png)
+![\[Launching and configuring a Windows Server 2016 instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-wordpress-tutorial-16.png)
 
    Allow time for the change to propagate through the internet's DNS before your domain begins routing traffic to your Windows Server 2016 instance\.
 

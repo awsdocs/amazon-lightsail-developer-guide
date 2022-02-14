@@ -17,7 +17,7 @@ Complete the following prerequisites if you haven't already:
   + [Download FileZilla Client for Mac OS X](https://filezilla-project.org/download.php?platform=osx)
   + [Download FileZilla Client for Linux](https://filezilla-project.org/download.php?platform=linux)
 + Get the public IP address of your instance\. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/), and then copy the public IP address that is displayed next to your instance, as shown in the following example:  
-![\[The public IP for an instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-instance-public-ip.png)
+![\[The public IP for an instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-instance-public-ip.png)
 
 ## Get the SSH key for your instance<a name="get-the-ssh-key-for-your-instance"></a>
 
@@ -33,7 +33,7 @@ If you’re using your own key pair, or you created a key pair using the Lightsa
 1. Choose the **SSH Keys** tab\.
 
 1. Choose **Download** next to the default private key for the region where your instance is located\.  
-![\[SSH keypairs in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-ssh-key-pairs.png)
+![\[SSH keypairs in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-ssh-key-pairs.png)
 
 1. Save your private key in a secured location on your local drive\.
 
@@ -46,7 +46,7 @@ Complete the following steps to configure FileZilla to connect to your instance\
 1. Choose **File**, **Site Manager**\.
 
 1. Choose **New site**, then give your site a name\.  
-![\[New site configuration in FileZilla.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-filezilla-sftp-new-site.png)
+![\[New site configuration in FileZilla.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-filezilla-sftp-new-site.png)
 
 1. In the **Protocol** dropdown, choose **SFTP – SSH File Transfer Protocol**\.
 
@@ -66,19 +66,19 @@ Complete the following steps to configure FileZilla to connect to your instance\
 If you are using a different user name than the default user names listed here, then you might need to give the user write permissions to your instance\.
 
 1. Next to the **Key File** text box, choose **Browse**\.  
-![\[SFTP configuration in FileZilla.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-filezilla-sftp-configuration.png)
+![\[SFTP configuration in FileZilla.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-filezilla-sftp-configuration.png)
 
 1. Locate the private key file that you downloaded from the Lightsail console earlier in this procedure, and then choose **Open**\.
 **Note**  
 If you are using Windows, change the default file type to **All files** when searching for your pem file\.  
-![\[File extention setting in FileZilla open dialog\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-filezilla-file-extention-setting.png)
+![\[File extention setting in FileZilla open dialog\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-filezilla-file-extention-setting.png)
 
 1. Choose **Connect**\.
 
-1. You may see a prompt similar to the following example, indicating that the host key is uknkown\. Choose **OK** to acknowledge the prompt and connect to your instance\.  
-![\[Unknown host key in FileZilla.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-filezilla-unknown-hostkeypng)
+1. You may see a prompt similar to the following example, indicating that the host key is unknown\. Choose **OK** to acknowledge the prompt and connect to your instance\.  
+![\[Unknown host key in FileZilla.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-filezilla-unknown-hostkeypng)
 
    You are successfully connected if you see status messages similar to the following example:  
-![\[FileZilla successfully connected to an instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-filezilla-sftp-successfully-connected.png)
+![\[FileZilla successfully connected to an instance in Lightsail.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-filezilla-sftp-successfully-connected.png)
 
    For more information about using FileZilla, including how to transfer files between your local computer and your instance, see the [FileZilla Wiki page](https://wiki.filezilla-project.org/Using)\.

@@ -3,7 +3,7 @@
 **Note**  
 An Amazon Lightsail container service is a compute resource to which you can deploy your Docker images\. When you deploy your images to your Lightsail container service, the service automatically launches and runs your containers in the AWS infrastructure\. Containers are standard units of software that package code and dependencies so the applications run quickly and reliably from one computing environment to another\.
 
- *Last updated: November 12, 2020* 
+ *Last updated: November 1, 2021* 
 
 An Amazon Lightsail container service is a highly scalable compute and networking resource on which you can deploy, run, and manage containers\. A container is a standard unit of software that packages code and its dependencies together so the application runs quickly and reliably from one computing environment to another\.
 
@@ -42,7 +42,7 @@ The following are the key elements of Lightsail container services that you shou
 
 A container service is the Lightsail compute resource that you can create in any AWS Region in which Lightsail is available\. You can create and delete container services at any time\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md) and [Deleting Amazon Lightsail container services](amazon-lightsail-deleting-container-services.md)\.
 
-![\[Lighstail container service diagram\]](https://d9yljz1nd5001.cloudfront.net/en_us/cdafd3c2a6d9edfefee89eda217b0068/images/amazon-lightsail-container-service-diagram.png)
+![\[Lighstail container service diagram\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-container-service-diagram.png)
 
 ### Container service capacity \(scale and power\)<a name="container-services-capacity"></a>
 
@@ -74,11 +74,15 @@ You can specify the following parameters for each container entry in a deploymen
 **Note**  
 Only one container in a deployment can be made publicly accessible for each container service\.
 
-Your container service can have one active deployment at a time, and a deployment can have up to 10 container entries\. You can create a deployment at the same time as you create your container service, or you can create it after your service is up and running\. For more information, see [Creating and managing deployments for your Amazon Lightsail container services]()\.
+The following health check parameters will apply to the public endpoint of a deployment after it's launched:
++ The directory path on which to perform a health check\.
++ Advanced health check settings, such as interval seconds, timeout seconds, success codes, healthy threshold, and unhealthy threshold\.
+
+Your container service can have one active deployment at a time, and a deployment can have up to 10 container entries\. You can create a deployment at the same time as you create your container service, or you can create it after your service is up and running\. For more information, see [Creating and managing deployments for your Amazon Lightsail container services](amazon-lightsail-container-services-deployments.md)\.
 
 ### Deployment versions<a name="container-services-deployment-versions"></a>
 
-Every deployment that you create in your container service is saved as a deployment version\. If you modify the parameters of an existing deployment, the containers are re\-deployed to your service and the modified deployment results in a new deployment version\. The latest 50 deployment versions for each container service are saved\. You can use any of the 50 deployment versions to create a new deployment in the same container service\. For more information, see [Creating and managing deployments for your Amazon Lightsail container services]()\.
+Every deployment that you create in your container service is saved as a deployment version\. If you modify the parameters of an existing deployment, the containers are re\-deployed to your service and the modified deployment results in a new deployment version\. The latest 50 deployment versions for each container service are saved\. You can use any of the 50 deployment versions to create a new deployment in the same container service\. For more information, see [Creating and managing deployments for your Amazon Lightsail container services](amazon-lightsail-container-services-deployments.md)\.
 
 ### Container image sources<a name="container-services-image-sources"></a>
 
