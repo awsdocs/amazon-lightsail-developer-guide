@@ -16,16 +16,16 @@ To learn how to connect MySQL Workbench to your database, see [Connecting to you
 1. Choose **Data Import/Restore** from the left\-navigation menu\.
 
 1. In the Data Import pane, choose **Import from Self\-Contained File** under the **Import Options** section\.  
-![\[Importing a self-contained .SQL file\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-import-from-self-contained-file.png)
+![\[Importing a self-contained .SQL file\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-import-from-self-contained-file.png)
 
 1. Choose the ellipsis button to browse your local drive for the \.SQL file that you want to import\.
 
 1. Choose the \.SQL file to import, then choose **Open**\.
 
 1. Choose the **Default Target Schema** drop\-down menu, then select the existing database to import the file to\. You can also create a new database by choosing **New**\.  
-![\[Choosing a default target schema\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-default-schema-to-import-to.png)
+![\[Choosing a default target schema\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-default-schema-to-import-to.png)
 
 1. Choose **Start Import** to start the import\.
 
    Your import may take a few minutes or more depending on the size of the \.SQL file\. After the import is complete, you should see a message similar to the following:  
-![\[Import completed\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-import-finished.png)
+![\[Import completed\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-import-finished.png)

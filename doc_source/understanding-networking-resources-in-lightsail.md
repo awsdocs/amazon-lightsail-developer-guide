@@ -19,4 +19,4 @@ You can create *DNS zones* to make it easier to find your web application\. For 
 
 ## Load balancers<a name="networking-resources-load-balancers"></a>
 
-You can create *load balancers* to add redundancy or to handle more traffic\. For more information, see [Load balancers in Amazon Lightsail](understanding-lightsail-load-balancers.md)\.
+You can create *load balancers* to add redundancy or to handle more traffic\. For more information, see [Amazon Lightsail load balancers](understanding-lightsail-load-balancers.md)\.

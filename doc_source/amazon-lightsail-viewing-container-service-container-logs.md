@@ -8,7 +8,7 @@ Every container in your Amazon Lightsail container service deployment generates 
 
 Container logs can have hundreds of entries per day\. Use the filtering options to reduce the number of entries displayed in your log window, and make it easier to find what you're looking for\. You can filter container logs by a start and end date \(in local time\), and by a specific term\. When filtering by a term, you can choose to include or exclude log entries for the term you specify\.
 
-![\[Container service log filters in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/container-service-container-log-filter.png)
+![\[Container service log filters in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-service-container-log-filter.png)
 
 The *include* or *exclude* filter term looks for an exact match that is case\-sensitive\. For example, if you specify to include only log events that have `HTTP` in the message, then you will see all log events that include `HTTP` in the message, but none that include `http` in the message\. If you specify to exclude `Error`, then you will see all log events that don't include `Error` in the message, and you will also see log events that include `ERROR` in the message\.
 
@@ -39,7 +39,7 @@ Complete the following procedure to view the container logs of your Lightsail co
    The container log opens in a new browser window\. You can scroll down to view more log entries, and refresh the page to load the newest set of entries\. The filtering options are displayed at the bottom of the page\.
 **Note**  
 Log entries are displayed in ascending order, and in Coordinated Universal Time \(UTC\)\. That is, the oldest log entries are at the top, and you must scroll down to see newer log entries\.  
-![\[Container log in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/container-service-container-log.png)
+![\[Container log in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-service-container-log.png)
 
 ## Additional information about container services<a name="view-contgainer-logs-additional-info"></a>
 
@@ -49,7 +49,7 @@ These are the general steps to manage your Lightsail container service after it'
 
 1. Create your container service in your Lightsail account\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md)\.
 
-1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like the Amazon ECR Public Gallery or Docker Hub\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
+1. If you plan to use container images from a public registry, find container images from a public registry such as the Amazon ECR Public Gallery\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\.
 
 1. If you plan to push container images from your local machine to your service, install software on your local machine that you need to create your own container images and push them to your Lightsail container service\. For more information, see the following guides:
    + [Installing software to manage container images for your Amazon Lightsail container services](amazon-lightsail-install-software.md)

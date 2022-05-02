@@ -19,7 +19,7 @@ You need the default application password to access pre\-installed applications 
 If you're in a directory other than the user home directory, then enter `cat $HOME/bitnami_application_password`\.
 
    You should see a response similar to this, which contains the default application password:  
-![\[Bitnami default application password.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-bitnami-application-password.png)
+![\[Bitnami default application password.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-bitnami-application-password.png)
 
 For more information, see [Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
 

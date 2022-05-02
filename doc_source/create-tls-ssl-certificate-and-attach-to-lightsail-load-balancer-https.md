@@ -2,7 +2,7 @@
 
  *Last updated: August 20, 2018* 
 
-After you create a Lightsail load balancer, you can attach a Transport Layer Security \(TLS\) certificate to enable HTTPS\. The SSL/TLS certificate lets your load balancer handle encrypted web traffic so that you can provide a more secure experience for your users\. To learn more, see [SSL/TLS certificates in Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)\.
+After you create a Lightsail load balancer, you can attach a Transport Layer Security \(TLS\) certificate to enable HTTPS\. The SSL/TLS certificate lets your load balancer handle encrypted web traffic so that you can provide a more secure experience for your users\. To learn more, see [SSL/TLS certificates in Amazon Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)\.
 
 ## Prerequisites<a name="create-ssl-tls-certificate-prerequisites"></a>
 
@@ -40,7 +40,7 @@ Before you get started, you will need the following\.
    Lightsail begins the validation process\. You have 72 hours to verify that you own your domain\.
 
    After you create your certificate, you see the certificate along with the domain name and all your alternate domains and subdomains\. You need to create a DNS record for each domain and subdomain\.  
-![\[Certificate pending validation with domains and subdomains\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-certificate-validation.png)
+![\[Certificate pending validation with domains and subdomains\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-certificate-validation.png)
 
 ## Next step<a name="create-ssl-tls-certificate-next-steps"></a>
 +  [Verify that you own your domain](verify-tls-ssl-certificate-using-dns-cname-https.md) 

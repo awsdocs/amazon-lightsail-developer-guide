@@ -18,7 +18,7 @@ In the following diagram:
 + 2 represents your distribution, or the edge locations that pull, cache, and serve content from your origin\.
 + 3 represents your users who are served content from the edge locations\.
 
-![\[Lightsail distribution diagram\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/distribution-diagram.png)
+![\[Lightsail distribution diagram\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/distribution-diagram.png)
 
 **Note**  
 This diagram is for illustration purpose only and doesn't show actual edge locations\. For more information about edge locations, see [Edge locations and IP address ranges](#edge-locations) later in this guide\.
@@ -86,7 +86,7 @@ Here are some articles to help you manage distributions in Lightsail:
 + [Disabling custom domains for your Amazon Lightsail distributions](amazon-lightsail-disabling-distribution-custom-domains.md)
 + [Viewing distribution metrics in Amazon Lightsail](amazon-lightsail-viewing-distribution-health-metrics.md)
 + [Deleting your Amazon Lightsail distribution](amazon-lightsail-deleting-distribution.md)
-+ [SSL/TLS certificates in Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)
++ [SSL/TLS certificates in Amazon Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)
 + [Creating SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-create-a-distribution-certificate.md)
 + [Validating SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-validating-a-distribution-certificate.md)
 + [Viewing SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-viewing-distribution-certificates.md)

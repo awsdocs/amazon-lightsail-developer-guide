@@ -74,9 +74,9 @@ Complete the following steps to connect to your MySQL database using SSL\.
 1. Type the password for the database user you specified in the previous command when prompted, and press **Enter**\.
 
    You should see a result similar to the following example:  
-![\[MySQL database connection.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-mysql-ssl-connection.png)
+![\[MySQL database connection.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-mysql-ssl-connection.png)
 
 1. Type **status**, and press **Enter** to view the status of your connection\.
 
    Your connection is encrypted if you see a value of “Cipher in use is” next to SSL\.  
-![\[MySQL database connection status.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-mysql-ssl-status.png)
+![\[MySQL database connection status.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-mysql-ssl-status.png)

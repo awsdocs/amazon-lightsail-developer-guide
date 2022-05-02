@@ -5,7 +5,7 @@
 After you create your Lightsail load balancer and create a certificate, you need to verify that you control all the domains and subdomains where you want to have encrypted \(HTTPS\) traffic\.
 
 **Note**  
-For more information about Lightsail load balancers, see [Lightsail load balancers](understanding-lightsail-load-balancers.md)\.
+For more information about Lightsail load balancers, see [Amazon Lightsail load balancers](understanding-lightsail-load-balancers.md)\.
 
 **Contents**
 + [Step 1: Create a Lightsail DNS zone for your domain](#verify-ssl-tls-create-dns-zone)
@@ -31,12 +31,12 @@ The certificate that you created in the Lightsail load balancer provides a set o
 1. Scroll to the **Certificates** section of the page, then highlight all of the CNAME records displayed on the page, including the records for alternate domains and subdomains\.
 
    Press **Ctrl\+C** if you’re using Windows, or **Cmd\+C** if you’re using Mac, to copy them to your clipboard\.  
-![\[Certificate pending validation with domains and subdomains.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/example.certificate-validation-with-subdomains.png)
+![\[Certificate pending validation with domains and subdomains.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/example.certificate-validation-with-subdomains.png)
 
 1. Open a text editor, such as Notepad if you're using Windows, or TextEdit if you're using Mac\. In the text file, press **Ctrl\+V** if you’re using Windows, or **Cmd\+V** if you’re using Mac, to paste the values into the text file\.
 
    Leave this text file open; you will need these CNAME values when adding the records to your domain's DNS zone later in this guide\.  
-![\[Text file with certificate CNAME records.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-ssl-tls-cname-records-text-file.png)
+![\[Text file with certificate CNAME records.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-ssl-tls-cname-records-text-file.png)
 
 1. Choose **Home** on the top navigation bar of the Lightsail console\.
 
@@ -71,10 +71,10 @@ Adding a CNAME record that contains the domain name \(such as `.example.com`\) w
    You can also [add an alias \(A\) record to point to your load balancer](add-alias-record-for-lightsail-load-balancer.md) while you're on the DNS zone management page\.
 
    When finished, your DNS zone should look like the following screenshot\.  
-![\[CNAMES in Lightsail ready to be submitted for validation.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/dns-validation-cname-with-alternate-names.png)
+![\[CNAMES in Lightsail ready to be submitted for validation.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/dns-validation-cname-with-alternate-names.png)
 
    After some time, your domain is verified and you will see the following message on the **Inbound traffic** tab of the load balancer management page\.  
-![\[Successful validation of domain.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/example-com-verified-and-ready-to-use.png)
+![\[Successful validation of domain.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/example-com-verified-and-ready-to-use.png)
 
 ## Next step<a name="verify-ssl-tls-next-step"></a>
 

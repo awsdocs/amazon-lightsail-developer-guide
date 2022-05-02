@@ -17,7 +17,7 @@ Complete the following procedure to filter objects in a bucket using the Lightsa
 1. In the **Objects** tab, type an object prefix in the **Filter by name** text box\.
 
    The list of objects in the folder that you're currently viewing are filtered to match the text you enter\. The following example shows that if you enter `sail`, the list of objects on the page are filtered to display only those that start with `sail`\.  
-![\[Filtering bucket objects in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-filter-bucket-objects-using-console.png)
+![\[Filtering bucket objects in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-filter-bucket-objects-using-console.png)
 
    To filter the list of objects in a different folder, navigate to that folder\. Then, enter the object prefix into the **Filter by name** text box there\.
 
@@ -49,7 +49,7 @@ This command uses the `--query` parameter to filter the response of the `list-ob
    ```
 
    You should see a result similar to the following example\.  
-![\[Result of the AWS CLI list-objects-v2 command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-s3api-list-objects-v2-prefix-result.png)
+![\[Result of the AWS CLI list-objects-v2 command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-s3api-list-objects-v2-prefix-result.png)
 
 ## Managing buckets and objects in Lightsail<a name="filtering-objects-managing-buckets-and-objects"></a>
 
@@ -64,6 +64,7 @@ These are the general steps to manage your Lightsail object storage bucket:
 1. Learn about security best practices for buckets and the access permissions that you can configure for your bucket\. You can make all objects in your bucket public or private, or you can choose to make individual objects public\. You can also grant access to your bucket by creating access keys, attaching instances to your bucket, and granting access to other AWS accounts\. For more information, see [Security Best Practices for Amazon Lightsail object storage](amazon-lightsail-bucket-security-best-practices.md) and [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
 
    After learning about bucket access permissions, see the following guides to grant access to your bucket:
+   + [Block public access for buckets in Amazon Lightsail](amazon-lightsail-block-public-access-for-buckets.md)
    + [Configuring bucket access permissions in Amazon Lightsail](amazon-lightsail-configuring-bucket-permissions.md)
    + [Configuring access permissions for individual objects in a bucket in Amazon Lightsail](amazon-lightsail-configuring-individual-object-access.md)
    + [Creating access keys for a bucket in Amazon Lightsail](amazon-lightsail-creating-bucket-access-keys.md)

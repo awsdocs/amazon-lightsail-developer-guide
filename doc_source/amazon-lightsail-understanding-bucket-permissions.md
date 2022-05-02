@@ -1,6 +1,6 @@
 # Understanding bucket permissions in Amazon Lightsail<a name="amazon-lightsail-understanding-bucket-permissions"></a>
 
- *Last updated: July 14, 2021* 
+ *Last updated: March 9, 2022* 
 
 By default, all Amazon Lightsail object storage resources—buckets and objects—are private\. This means that only the bucket owner, the Lightsail account that created it, can access the bucket and its objects\. The bucket owner can optionally grant access to others\. You can grant access to a bucket and its objects in the following ways:
 + **Read\-only access** – The following options control read\-only access to a bucket and its objects through the bucket's URL \(for example, `https://DOC-EXAMPLE-BUCKET.us-east-1.amazonaws.com/media/sailbot.jpg`\)\.
@@ -10,6 +10,7 @@ By default, all Amazon Lightsail object storage resources—buckets and objects�
 + **Read and write access** – The following options control full read and write access to a bucket and its objects\. Use these options with the AWS Command Line Interface \(AWS CLI\), AWS APIs, and AWS SDKs\.
   + **Access keys** – Use access keys to grant access to applications or plugins\. For more information, see [Access keys](#bucket-access-keys) later in this guide\.
   + **Resource access** – Use resource access to grant access to a Lightsail instance\. For more information, see [Resource access](#bucket-resource-access) later in this guide\.
++ **Amazon Simple Storage Service block public access** – Use the Amazon Simple Storage Service \(Amazon S3\) account\-level block public access feature to centrally limit public access to buckets in Amazon S3 and in Lightsail\. Block public access can make all Amazon S3 and Lightsail buckets private regardless of the individual bucket and object permissions that might have been configured\. For more information, see [Amazon S3 block public access](#s3-block-public-access) later in this guide\.
 
 For more information about buckets, see [Object storage in Amazon Lightsail](buckets-in-amazon-lightsail.md)\. For more information about security best practices, see [Security Best Practices for Amazon Lightsail object storage](amazon-lightsail-bucket-security-best-practices.md)\.
 
@@ -48,6 +49,10 @@ Use resource access to grant full read and write access to a bucket and its obje
 
 For more information about configuring resource access, see [Configuring resource access for a bucket](amazon-lightsail-configuring-bucket-resource-access.md)\.
 
+## Amazon S3 block public access<a name="s3-block-public-access"></a>
+
+Use the Amazon S3 block public access feature to centrally limit public access to buckets in Amazon S3 and in Lightsail\. Block public access can make all Amazon S3 and Lightsail buckets private regardless of the individual bucket and object permissions that might have been configured\. You can use the Amazon S3 console, AWS CLI, AWS SDKs, and REST API to configure block public access settings for all buckets in your account, including those in the Lightsail object storage service\. For more information, see [Block public access for buckets in Amazon Lightsail](amazon-lightsail-block-public-access-for-buckets.md)\.
+
 ## Managing buckets and objects in Lightsail<a name="bucket-permissions-managing-buckets-and-objects"></a>
 
 These are the general steps to manage your Lightsail object storage bucket:
@@ -61,6 +66,7 @@ These are the general steps to manage your Lightsail object storage bucket:
 1. Learn about security best practices for buckets and the access permissions that you can configure for your bucket\. You can make all objects in your bucket public or private, or you can choose to make individual objects public\. You can also grant access to your bucket by creating access keys, attaching instances to your bucket, and granting access to other AWS accounts\. For more information, see [Security Best Practices for Amazon Lightsail object storage](amazon-lightsail-bucket-security-best-practices.md) and [Understanding bucket permissions in Amazon Lightsail](#amazon-lightsail-understanding-bucket-permissions)\.
 
    After learning about bucket access permissions, see the following guides to grant access to your bucket:
+   + [Block public access for buckets in Amazon Lightsail](amazon-lightsail-block-public-access-for-buckets.md)
    + [Configuring bucket access permissions in Amazon Lightsail](amazon-lightsail-configuring-bucket-permissions.md)
    + [Configuring access permissions for individual objects in a bucket in Amazon Lightsail](amazon-lightsail-configuring-individual-object-access.md)
    + [Creating access keys for a bucket in Amazon Lightsail](amazon-lightsail-creating-bucket-access-keys.md)

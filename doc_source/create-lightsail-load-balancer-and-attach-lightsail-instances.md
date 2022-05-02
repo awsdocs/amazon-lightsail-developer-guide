@@ -2,7 +2,7 @@
 
  *Last updated: June 12, 2019* 
 
-Create a Lightsail load balancer to add redundancy to your application or to handle more web traffic\. After the load balancer is created, you can attach the Lightsail instances that you want to balance\. To learn more, see [Lightsail load balancers](understanding-lightsail-load-balancers.md)
+Create a Lightsail load balancer to add redundancy to your application or to handle more web traffic\. After the load balancer is created, you can attach the Lightsail instances that you want to balance\. To learn more, see [Amazon Lightsail load balancers](understanding-lightsail-load-balancers.md)
 
 ## Prerequisite<a name="create-lightsail-load-balancer-prerequisite"></a>
 
@@ -30,11 +30,11 @@ By default, the load balancer will be created with port 80 open to accept HTTP r
 
 1. Choose one of the following options to add tags to your load balancer:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 

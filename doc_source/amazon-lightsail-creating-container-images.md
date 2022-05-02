@@ -86,7 +86,7 @@ Complete the following procedure to create a Dockerfile, and build a `mystaticwe
    ```
 
    You should see a result similar to the following example, showing the new container image created\.  
-![\[Result of docker images command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/docker-images-command-result.png)
+![\[Result of docker images command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/docker-images-command-result.png)
 
    Your newly built container image is ready to be tested by using it to run a new container on your local machine\. Continue to the next [Step 3: Run your new container image](#create-container-image-run-container) section of this guide\.
 
@@ -107,10 +107,10 @@ Complete the following steps to run the new container image you created\.
    ```
 
    You should see a result similar to the following example, showing the new running container\.  
-![\[Result of docker container command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/docker-container-command-result.png)
+![\[Result of docker container command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/docker-container-command-result.png)
 
 1. To confirm that the container is up and running, open a new browser window and browse to `http://localhost:8080`\. You should see a message similar to the following example\. This confirms that your container is up and running on your local machine\.  
-![\[Static website running on a Docker container\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/container-mystaticsite-hello-world.png)
+![\[Static website running on a Docker container\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-mystaticsite-hello-world.png)
 
    Your newly built container image is ready to be pushed to your Lightsail account so that you can deploy it to your Lightsail container service\. For more information, see [Pushing and managing container images on your Amazon Lightsail container services](amazon-lightsail-pushing-container-images.md)\.
 
@@ -127,7 +127,7 @@ Complete the following steps to clean up the containers running on your local ma
    ```
 
    You should see a result similar to the following, which lists the names of the containers running on your local machine\.  
-![\[Result of docker container command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/docker-container-command-result.png)
+![\[Result of docker container command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/docker-container-command-result.png)
 
 1. Run the following command to remove the running container that you created earlier in this guide\. This forces the container to be stopped, and permanently deletes it\.
 
@@ -157,7 +157,7 @@ These are the general steps to manage your Lightsail container service after it'
 
 1. Create your container service in your Lightsail account\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md)\.
 
-1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like the Amazon ECR Public Gallery or Docker Hub\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
+1. If you plan to use container images from a public registry, find container images from a public registry such as the Amazon ECR Public Gallery\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\.
 
 1. If you plan to push container images from your local machine to your service, install software on your local machine that you need to create your own container images and push them to your Lightsail container service\. For more information, see the following guides:
    + [Installing software to manage container images for your Amazon Lightsail container services](amazon-lightsail-install-software.md)

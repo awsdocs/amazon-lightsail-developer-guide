@@ -42,11 +42,11 @@ Plesk is not supported on the $3\.50 USD per month Lightsail plan\.
 
 1. Choose one of the following options to add tags to your instance:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
@@ -61,7 +61,7 @@ If you want to use Plesk on Amazon Lightsail for web hosting, you should [attach
 Complete the following steps to configure a username and password for your Plesk instance, and sign in to the Plesk panel for the first time\.
 
 1. In the **Instances** tab of the Lightsail home page, choose the SSH quick connect icon for the Plesk instance that you want to set up\.  
-![\[Connect to your Plesk on Amazon Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/connect-quickly-to-your-plesk-instance-terminal.png)
+![\[Connect to your Plesk on Amazon Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/connect-quickly-to-your-plesk-instance-terminal.png)
 
 1. Enter the following command\.
 
@@ -70,17 +70,17 @@ Complete the following steps to configure a username and password for your Plesk
    ```
 
    You should see a result similar to the following example\.  
-![\[One-time sign in for your Plesk instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/plesk-one-time-sign-in.png)
+![\[One-time sign in for your Plesk instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/plesk-one-time-sign-in.png)
 **Important**  
 If you recently attached a static IP to your Plesk instance, you might get a one\-time login URL that uses the old public IP address\. Reboot the instance, and run the above command again to get a one\-time login URL that uses the new static IP address\.
 
 1. Highlight the URL shown in the browser\-based SSH window, then choose the clipboard icon, and copy the URL to your local clipboard\.  
-![\[The clipboard for the web-based SSH session.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/plesk-clipboard-copy.png)
+![\[The clipboard for the web-based SSH session.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/plesk-clipboard-copy.png)
 
 1. Open a new browser window, and browse to the URL that you copied\.
 
    You might see a browser warning that your connection is not private, not secure, or that there’s a security risk\. This happens because your Plesk instance does not yet have an SSL/TLS certified applied to it\. The prompt may be different than what is shown in the following example depending on the browser you use\.  
-![\[Chrome warning for private connection.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/chrome-private-connection.png)
+![\[Chrome warning for private connection.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/chrome-private-connection.png)
 
 1. Complete one of the following steps depending on the browser that you use:
    + **Chrome** — Choose **Advanced**, and then choose **Proceed** to continue to the Plesk set up page\.
@@ -91,12 +91,12 @@ If you recently attached a static IP to your Plesk instance, you might get a one
 1. Enter your contact name, email address, and password\.
 
    In this page, you can change the default `admin` contact name if you prefer to use something different\. However, that is only the display name; your username to sign in to Plesk will continue to be `admin`\.  
-![\[Configuring your username, and password, for Plesk.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/plesk-sign-in-configuration.png)
+![\[Configuring your username, and password, for Plesk.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/plesk-sign-in-configuration.png)
 
 1. Confirm that you accept the end\-user license agreement, and choose **Enter Plesk**\.
 
    If successful, you will be signed in to the Plesk panel where you can add your domain, and begin managing your websites\.  
-![\[The Plesk panel.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/plesk-panel.png)
+![\[The Plesk panel.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/plesk-panel.png)
 
 If you need to sign in again later, just navigate to `https://PublicIPAddress:8443`\. Replace *PublicIPAddress* with the public IP address or static IP address of your instance\. For example, `https://192.0.2.0/:8443`\. Then enter the username and password you created earlier to sign in to the Plesk panel\.
 

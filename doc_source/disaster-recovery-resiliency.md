@@ -9,4 +9,4 @@ For more information about AWS Regions and Availability Zones, see [AWS Global I
 In addition to the AWS global infrastructure, Lightsail offers several features to help support your data resiliency and backup needs\.
 + Copying instance and disk snapshots across Regions\. For more information, see [Snapshots in Amazon Lightsail](understanding-instance-snapshots-in-amazon-lightsail.md)\.
 + Automating instance and disk snapshots snapshots\. For more information, see [Snapshots in Amazon Lightsail](understanding-instance-snapshots-in-amazon-lightsail.md)\.
-+ Distributing incoming traffic across multiple instances in a single Availability Zone or multiple Availability Zones using a load balancer\. For more information, see [Lightsail load balancers](understanding-lightsail-load-balancers.md)\.
++ Distributing incoming traffic across multiple instances in a single Availability Zone or multiple Availability Zones using a load balancer\. For more information, see [Amazon Lightsail load balancers](understanding-lightsail-load-balancers.md)\.

@@ -38,12 +38,12 @@ Complete the following procedure to view the custom domains that are currently e
 1. Choose the name of the container service for which you want to view the enabled custom domains\.
 
 1. Locate the custom domain values in the heading of the container service management page, as shown in the following example\. These are the custom domains that are currently enabled for the container service\.  
-![\[Custom domains for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/container-service-custom-domains-heading.png)
+![\[Custom domains for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-service-custom-domains-heading.png)
 
 1. On the container service management page, choose the **Custom domains** tab\.
 
    The certificates currently attached to your container service, and the custom domains being used under each attached certificate, are listed under the **Custom domain SSL/TLS certificates** section of the page\.  
-![\[Custom domain certificates for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/container-service-custom-domains-certificate.png)
+![\[Custom domain certificates for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-service-custom-domains-certificate.png)
 
 ## Enable custom domains for a container service<a name="container-service-enable-custom-domains"></a>
 
@@ -64,10 +64,10 @@ Complete the following procedure to enable custom domains for your Lightsail con
    If you have no certificates, then you must first create an SSL/TLS certificate for your domains, and then validate it, before you can attach it to your container service\. For more information, see [Creating SSL/TLS certificates for your Amazon Lightsail container services](amazon-lightsail-creating-container-services-certificates.md)\.
 
 1. In the dropdown menu that appears, select a valid certificate for the domains that you want to use with your container service\.  
-![\[Choosing a custom domain for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/container-service-custom-domains-picker.png)
+![\[Choosing a custom domain for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-service-custom-domains-picker.png)
 
 1. Choose the domains for the selected certificate that you want to use with your container service\.  
-![\[Choosing a custom domain for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/container-service-custom-domains-picker-checkbox.png)
+![\[Choosing a custom domain for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-service-custom-domains-picker-checkbox.png)
 
 1. Choose **Attach**\. After a few moments, traffic for the domain that you selected will begin to be accepted by your container service\.
 **Important**  
@@ -107,7 +107,7 @@ These are the general steps to manage your Lightsail container service after it'
 
 1. Create your container service in your Lightsail account\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md)\.
 
-1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like the Amazon ECR Public Gallery or Docker Hub\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
+1. If you plan to use container images from a public registry, find container images from a public registry such as the Amazon ECR Public Gallery\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\.
 
 1. If you plan to push container images from your local machine to your service, install software on your local machine that you need to create your own container images and push them to your Lightsail container service\. For more information, see the following guides:
    + [Installing software to manage container images for your Amazon Lightsail container services](amazon-lightsail-install-software.md)

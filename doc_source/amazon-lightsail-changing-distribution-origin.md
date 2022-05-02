@@ -49,7 +49,7 @@ Complete the following procedure to change your distribution's origin\.
    This option is listed in the **Choose your origin** section of the page, under the origin resource you selected for your distribution\.
 **Note**  
 When you select a Lightsail bucket as the origin of your distribution, the **Origin protocol policy** defaults to **HTTP only**\. You cannot change the origin protocol policy when a bucket is the origin of your distribution\.  
-![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/origin-protocol-policy.png)
+![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/origin-protocol-policy.png)
 
 1. Choose **HTTP only** or **HTTPS only**, then choose **Save** to save the origin protocol policy\.
 
@@ -75,7 +75,7 @@ Here are some articles to help you manage distributions in Lightsail:
 + [Disabling custom domains for your Amazon Lightsail distributions](amazon-lightsail-disabling-distribution-custom-domains.md)
 + [Viewing distribution metrics in Amazon Lightsail](amazon-lightsail-viewing-distribution-health-metrics.md)
 + [Deleting your Amazon Lightsail distribution](amazon-lightsail-deleting-distribution.md)
-+ [SSL/TLS certificates in Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)
++ [SSL/TLS certificates in Amazon Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)
 + [Creating SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-create-a-distribution-certificate.md)
 + [Validating SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-validating-a-distribution-certificate.md)
 + [Viewing SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-viewing-distribution-certificates.md)

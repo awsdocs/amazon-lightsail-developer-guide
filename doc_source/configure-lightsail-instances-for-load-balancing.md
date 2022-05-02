@@ -1,4 +1,4 @@
-# Configure your Lightsail instances for load balancing<a name="configure-lightsail-instances-for-load-balancing"></a>
+# Configure your Amazon Lightsail instances for load balancing<a name="configure-lightsail-instances-for-load-balancing"></a>
 
  *Last updated: November 29, 2017* 
 
@@ -27,7 +27,7 @@ See [WordPress on AWS](https://cloudonaut.io/wordpress-on-aws-you-are-holding-it
  **Configuration recommendations before using a Lightsail load balancer** 
 + In Lightsail, the Node\.js stack certified by Bitnami contains Node\.js, Apache, Redis \(an in\-memory database\), and Python\. Depending on the application you're deploying, you can load balance across a few servers\. However, you would need to configure a load balancer to balance the traffic among all the web servers and move Redis to another server\.
 + Split the Redis server to another server to communicate with all the instances\. Add a database server, if necessary\.
-+ One of the primary use cases for Redis is to cache data locally so you don't have to constantly hit the central database\. We recommend that you [enable session persistence](enable-session-stickiness-persistence-or-change-cookie-duration.md) to leverage the performance improvement from Redis\.
++ One of the primary use cases for Redis is to cache data locally so you don't have to constantly hit the central database\. We recommend that you enable session persistence to leverage the performance improvement from Redis\. For more information, see [Enable session persistence for Amazon Lightsail load balancers](enable-session-stickiness-persistence-or-change-cookie-duration.md)\.
 + You can also have a shared Redis node, so you can also share a node or use a local cache on each machine using session persistence\.
 + Consider including the `mod_proxy_balancer` in the Apache server, if you want to deploy a load balancer using Apache\.
 
@@ -39,7 +39,7 @@ For more information, see [Scaling Node\.js applications](https://medium.freecod
 
  **Configuration recommendations before using a Lightsail load balancer** 
 + You can use an AWS reference deployment of Magento that uses additional components, such as an Amazon RDS database: [Magento on the AWS Cloud: Quick Start Reference Deployment](http://docs.aws.amazon.com/quickstart/latest/magento/welcome.html)\.
-+ Be sure to enable session persistence\. Magento uses a shopping cart, and this helps ensure that customers who make multiple visits across more than one session will retain items in their shopping carts when they return for a new session\. [Learn more about session persistence](enable-session-stickiness-persistence-or-change-cookie-duration.md)
++ Be sure to enable session persistence\. Magento uses a shopping cart, and this helps ensure that customers who make multiple visits across more than one session will retain items in their shopping carts when they return for a new session\. For more information, see [Enable session persistence for Amazon Lightsail load balancers](enable-session-stickiness-persistence-or-change-cookie-duration.md)\.
 
 ## GitLab<a name="configure-gitlab-application-for-lightsail-load-balancer"></a>
 
@@ -111,7 +111,7 @@ You can have one or more Lightsail instances running Nginx and attached to a Lig
  **Configuration recommendations before using a Lightsail load balancer** 
 
 Although there is no official documentation on the Joomla website, there are some discussions on their community forums\. Some users managed to horizontally scale their Joomla instances having a cluster with the following configuration:
-+ A Lightsail load balancer configured to enable session persistence\. [Learn more about session persistence](enable-session-stickiness-persistence-or-change-cookie-duration.md)
++ A Lightsail load balancer configured to enable session persistence\. For more information, see [Enable session persistence for Amazon Lightsail load balancers](enable-session-stickiness-persistence-or-change-cookie-duration.md)\.
 + Several Lightsail instances running Joomla attached to the load balancer with the document root of Joomla\! synchronized\. You can do this using tools like rsync, having an NFS server that is in charge of synchronizing the content among all Lightsail instances, or sharing files using AWS\.
 + Several database servers configured with a replication cluster\.
 + The same cache system configured in each Lightsail instance\. There are some useful extensions, such as [JotCache](https://extensions.joomla.org/extension/jotcache/)\.

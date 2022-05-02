@@ -27,7 +27,7 @@ The database parameters differ depending on the database engine; therefore, you 
    In the command, replace *DatabaseName* with the name of your database\.
 
    You should see a result similar to the following example:  
-![\[Get relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-get-database-parameters-result.png)
+![\[Get relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-get-database-parameters-result.png)
 **Note**  
 A next page token ID is listed if the parameter results are paginated\. Make note of the next page token ID and use it as shown in the next step to view the next page of parameter results\.
 
@@ -74,6 +74,6 @@ After you have the name of the parameter you want to change, perform the followi
     If the parameter's apply type is `dynamic`, the parameter can be applied with an `immediate` apply method and the database will begin using the new parameter value immediately\. However, if the parameter apply type is `static`, the parameter can only be applied with a `pending-reboot` apply method and the database will begin using the new parameter only after it’s restarted\.
 
   You should see a result similar to the following example:  
-![\[Change relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-update-database-parameters-result.png)
+![\[Change relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-update-database-parameters-result.png)
 
   The database parameter is updated depending on the apply method used\.

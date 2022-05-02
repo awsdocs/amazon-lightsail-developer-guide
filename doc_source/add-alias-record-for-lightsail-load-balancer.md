@@ -37,7 +37,7 @@ Allow time for the change to propagate through the internet's DNS\. This may tak
 1. Choose **Create record**\.
 
    The **Quick create record** page appears\.  
-![\[Create a record in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/create-record-set-alias-record-route-53-blank.png)
+![\[Create a record in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/create-record-set-alias-record-route-53-blank.png)
 **Note**  
 If you see the **Choose routing policy** page, then choose **Switch to quick create** to switch to the quick create wizard before continuing with the following steps\.
 
@@ -60,7 +60,7 @@ If you see the **Choose routing policy** page, then choose **Switch to quick cre
    Lightsail already performs health checks on your load balancer\. For more information, see [Health checking for your Lightsail load balancer](enable-set-up-health-checking-for-lightsail-load-balancer-metrics.md)\.
 
    Your record should look like the following example\.  
-![\[Create a record in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/create-record-set-alias-record-route-53.png)
+![\[Create a record in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/create-record-set-alias-record-route-53.png)
 
 1. Choose **Create records** to add the record to your hosted zone\.
 **Note**  

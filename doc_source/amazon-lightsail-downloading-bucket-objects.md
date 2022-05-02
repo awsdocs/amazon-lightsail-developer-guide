@@ -19,7 +19,7 @@ Complete the following procedure to download objects from a bucket using the Lig
 1. Add a checkmark next to the object that you want to download\.
 
 1. In the **Object information** pane, choose the download icon\.  
-![\[Download icon for an object in a bucket\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/bucket-object-download-icon.png)
+![\[Download icon for an object in a bucket\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/bucket-object-download-icon.png)
 
    Depending on the configuration of your browser, the file that you chose is either displayed on the page or is downloaded to your computer\. If the file is displayed on the page, you can right\-click it and choose **Save as** to save it to your computer\.
 
@@ -50,7 +50,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    ```
 
    You should see a result similar to the following example:  
-![\[Result of the AWS CLI download-object command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-s3api-download-object-result.png)
+![\[Result of the AWS CLI download-object command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-s3api-download-object-result.png)
 
 ## Managing buckets and objects in Lightsail<a name="downloading-objects-managing-buckets-and-objects"></a>
 
@@ -65,6 +65,7 @@ These are the general steps to manage your Lightsail object storage bucket:
 1. Learn about security best practices for buckets and the access permissions that you can configure for your bucket\. You can make all objects in your bucket public or private, or you can choose to make individual objects public\. You can also grant access to your bucket by creating access keys, attaching instances to your bucket, and granting access to other AWS accounts\. For more information, see [Security Best Practices for Amazon Lightsail object storage](amazon-lightsail-bucket-security-best-practices.md) and [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
 
    After learning about bucket access permissions, see the following guides to grant access to your bucket:
+   + [Block public access for buckets in Amazon Lightsail](amazon-lightsail-block-public-access-for-buckets.md)
    + [Configuring bucket access permissions in Amazon Lightsail](amazon-lightsail-configuring-bucket-permissions.md)
    + [Configuring access permissions for individual objects in a bucket in Amazon Lightsail](amazon-lightsail-configuring-individual-object-access.md)
    + [Creating access keys for a bucket in Amazon Lightsail](amazon-lightsail-creating-bucket-access-keys.md)

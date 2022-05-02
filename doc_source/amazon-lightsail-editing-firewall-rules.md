@@ -1,6 +1,6 @@
 # Adding and editing firewall rules in Amazon Lightsail<a name="amazon-lightsail-editing-firewall-rules"></a>
 
- *Last updated: January 12, 2021* 
+ *Last updated: February 22, 2022* 
 
 You can add rules to the IPv4 and IPv6 firewalls of your Amazon Lightsail instance to control the traffic that is allowed to connect to it\. When you add a firewall rule, you can specify the application layer protocol type, protocol, ports, and the source IPv4 or IPv6 addresses that are allowed to connect to your instance\. For more information about firewalls, see [Firewall and ports in Amazon Lightsail](understanding-firewall-and-port-mappings-in-amazon-lightsail.md)\.
 
@@ -66,6 +66,8 @@ Complete the following steps to delete instance firewalls rule in the Lightsail 
 1. Complete one of the following steps depending on whether the source IP for the rule is an IPv4 or IPv6 address:
    + To delete an IPv4 firewall rule, scroll down to the **IPv4 Firewall** section of the page, and choose **Delete** \(the trash icon\) next to an existing rule to delete it\.
    + To delete an IPv6 firewall rule, scroll down to the **IPv6 Firewall** section of the page, and choose **Delete** \(the trash icon\) next to an existing rule to delete it\.
+**Important**  
+Firewall rules affect only traffic that flows in through the public IP address of an instance\. It does not affect traffic that flows in through the private IP address of an instance, which can originate from Lightsail resources in your account, in the same AWS Region, or resources in a peered virtual private cloud \(VPC\), in the same AWS Region\. For example, if you delete the SSH rule \(TCP port 22\) from the instance firewall, other instances in the same Lightsail account, and in the same AWS Region, can continue to connect to it using SSH by specifying the private IP address of the instance\.
 
    The firewall rule is deleted after a few moments\.
 

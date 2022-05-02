@@ -2,7 +2,7 @@
 
  *Last updated: July 23, 2020* 
 
-You can delete Amazon Lightsail SSL/TLS certificates that you're no longer using on your distributions\. For example, your certificate might be expired and you've already attached an updated certificate that's validated\. For more information about certificates, see [SSL/TLS certificates in Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)\. For more information about distributions, see [Content delivery network distributions in Amazon Lightsail](amazon-lightsail-content-delivery-network-distributions.md)\.
+You can delete Amazon Lightsail SSL/TLS certificates that you're no longer using on your distributions\. For example, your certificate might be expired and you've already attached an updated certificate that's validated\. For more information about certificates, see [SSL/TLS certificates in Amazon Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)\. For more information about distributions, see [Content delivery network distributions in Amazon Lightsail](amazon-lightsail-content-delivery-network-distributions.md)\.
 
 Deleting an SSL/TLS certificate is final and can't be undone\. You have a quota of certificates you can create over a 365\-day period\. For more information, see [Lightsail service quotas](https://docs.aws.amazon.com/general/latest/gr/lightsail.html#limits_lightsail) in the *AWS General Reference*\.
 
@@ -42,7 +42,7 @@ Here are some articles to help you manage distributions in Lightsail:
 + [Disabling custom domains for your Amazon Lightsail distributions](amazon-lightsail-disabling-distribution-custom-domains.md)
 + [Viewing distribution metrics in Amazon Lightsail](amazon-lightsail-viewing-distribution-health-metrics.md)
 + [Deleting your Amazon Lightsail distribution](amazon-lightsail-deleting-distribution.md)
-+ [SSL/TLS certificates in Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)
++ [SSL/TLS certificates in Amazon Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)
 + [Creating SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-create-a-distribution-certificate.md)
 + [Validating SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-validating-a-distribution-certificate.md)
 + [Viewing SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-viewing-distribution-certificates.md)

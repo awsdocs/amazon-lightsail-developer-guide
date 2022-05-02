@@ -16,7 +16,7 @@ All emergency restore backups are deleted when data import mode is enabled\. Cre
 1. Choose the name of the database for which you want to configure data import mode\.
 
 1. On the **Connect** tab, under the **Data import mode** section, use the toggle to turn on the data import mode\. Likewise, after the import is complete, use the toggle to turn it off\.  
-![\[The data import mode toggle in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-database-data-import-mode-toggle.png)
+![\[The data import mode toggle in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-database-data-import-mode-toggle.png)
 
    Now that the data import mode is enabled, database backup operations are suspended\. We recommend that you enable data import mode temporarily\. Use it only when it’s necessary for you to import large amounts of data into your database\. Disable data import mode as soon as you’re done to restore backup operations\.
 **Note**  

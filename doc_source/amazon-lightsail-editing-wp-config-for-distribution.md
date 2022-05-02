@@ -1,6 +1,6 @@
 # Configuring your WordPress instance to work with your Amazon Lightsail distribution<a name="amazon-lightsail-editing-wp-config-for-distribution"></a>
 
- *Last updated: January 12, 2021* 
+ *Last updated: February 23, 2022* 
 
 In this guide, we show you how to configure your WordPress instance to work with your Amazon Lightsail distribution\. To configure your WordPress instance to work with your distribution, determine if: 
 + **Your WordPress website uses Hypertext Transfer Protocol \(HTTP\) only** \- If your website uses HTTP only, and is not configured to use HTTPS, then you must follow the instructions in the [Configure your WordPress instance to work with your distribution using SSL/TLS termination](#configuring-non-https-wordpress-for-distribution) section of this guide\.
@@ -24,13 +24,13 @@ We recommend that you create a snapshot of your WordPress instance before gettin
 1. After you're connected to your instance, enter the following command to create a backup of the `wp-config.php` file\. If something goes wrong, you can restore the file using the backup\.
 
    ```
-   sudo cp /opt/bitnami/apps/wordpress/htdocs/wp-config.php /opt/bitnami/apps/wordpress/htdocs/wp-config.php.backup
+   sudo cp /opt/bitnami/wordpress/wp-config.php /opt/bitnami/wordpress/wp-config.php.backup
    ```
 
 1. Enter the following command to open the `wp-config.php` file using Vim\.
 
    ```
-   sudo vim /opt/bitnami/apps/wordpress/htdocs/wp-config.php
+   sudo vim /opt/bitnami/wordpress/wp-config.php
    ```
 
 1. Press `I` to enter insert mode in Vim\.
@@ -66,12 +66,12 @@ We recommend that you create a snapshot of your WordPress instance before gettin
 1. If something went wrong, re\-connect to your instance using the browser\-based SSH client\. Run the following command to restore the `wp-config.php` file using the backup you created earlier in this guide\.
 
    ```
-   sudo cp /opt/bitnami/apps/wordpress/htdocs/wp-config.php.backup /opt/bitnami/apps/wordpress/htdocs/wp-config.php
+   sudo cp /opt/bitnami/wordpress/wp-config.php.backup /opt/bitnami/wordpress/wp-config.php
    ```
 
 ## Configure your WordPress instance to work with your distribution using end\-to\-end encryption<a name="configuring-https-wordpress-for-distribution"></a>
 
-All Lightsail distributions have HTTPS enabled by default for their default domain \(e\.g\., 123456abcdef\.cloudfront\.net\)\. When you configure a WordPress instance that uses HTTPS as the origin of your distribution, you can configure your distribution to forward all content requests to your instance using an encrypted connection\. The connection between your website visitors and your distribution is encrypted \(using HTTPS\), and so is the connection between your distribution and your instance\. This configuration is known as end\-to\-end encryption\. To enable this configuration, you must configure your distribution's origin protocol policy to **HTTPS only**\. For more information, see [Origin protocol policy](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-changing-distribution-origin#changing-distribution-origin-protocol-policy)\. If you don't configure your distribution's origin policy to **HTTPS only**, your website visitors will see an error\.
+All Lightsail distributions have HTTPS enabled by default for their default domain \(e\.g\., `123456abcdef.cloudfront.net`\)\. When you configure a WordPress instance that uses HTTPS as the origin of your distribution, you can configure your distribution to forward all content requests to your instance using an encrypted connection\. The connection between your website visitors and your distribution is encrypted \(using HTTPS\), and so is the connection between your distribution and your instance\. This configuration is known as end\-to\-end encryption\. To enable this configuration, you must configure your distribution's origin protocol policy to **HTTPS only**\. For more information, see [Origin protocol policy](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-changing-distribution-origin#changing-distribution-origin-protocol-policy)\. If you don't configure your distribution's origin policy to **HTTPS only**, your website visitors will see an error\.
 
 ## Additional information about distributions<a name="distributions-editing-wp-config-additional-information"></a>
 
@@ -91,7 +91,7 @@ Here are some articles to help you manage distributions in Lightsail:
 + [Disabling custom domains for your Amazon Lightsail distributions](amazon-lightsail-disabling-distribution-custom-domains.md)
 + [Viewing distribution metrics in Amazon Lightsail](amazon-lightsail-viewing-distribution-health-metrics.md)
 + [Deleting your Amazon Lightsail distribution](amazon-lightsail-deleting-distribution.md)
-+ [SSL/TLS certificates in Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)
++ [SSL/TLS certificates in Amazon Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)
 + [Creating SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-create-a-distribution-certificate.md)
 + [Validating SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-validating-a-distribution-certificate.md)
 + [Viewing SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-viewing-distribution-certificates.md)

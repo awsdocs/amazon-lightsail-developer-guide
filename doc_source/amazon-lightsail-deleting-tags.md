@@ -18,12 +18,12 @@ Instances, container services, CDN distributions, buckets, databases, disks, DNS
 1. Choose the resource that you want to delete tags from\.
 
 1. On the management page for the resource you selected, choose the **Tags** tab\.  
-![\[Tags tab in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-tags-tab.png)
+![\[Tags tab in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-tags-tab.png)
 
 1. Do one of the following, depending on the type of tag that you want to delete from the resource:
 
    1. Choose **Edit key\-only tags**, then choose the delete icon \(X\) for the tag that you want to delete from the resource\. Choose **Save** when you’re done deleting tags to remove them from the resource, or choose **Cancel** to not remove them\.  
-![\[Deleting a key-only tag in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-delete-key-only-tag.png)
+![\[Deleting a key-only tag in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-delete-key-only-tag.png)
 
    1. To remove a key\-value tag, choose the delete icon \(X\) for the key\-value tag\. At the prompt, choose **Yes, delete** to remove the key\-value tag, or choose **No, cancel** to not remove it\.  
-![\[Deleting a key-value tag in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-delete-key-value-tag.png)
+![\[Deleting a key-value tag in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-delete-key-value-tag.png)

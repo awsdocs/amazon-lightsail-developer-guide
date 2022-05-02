@@ -27,7 +27,7 @@ Complete the following procedure to get default domain name of your container se
 
 1. In the header section of your container service management page, make note of your default domain name\. Your container service default domain name is similar to `<ServiceName>.<RandomGUID>.<AWSRegion>.cs.amazonlightsail.com`\.
 
-   You must add this value as part of an canonical name \(CNAME\) record in the DNS of your domains\. We recommend that you copy and paste this value into a text file that you can refer to later\. For more information, see the following [Add the CNAME records to your domain's DNS zone](#add-container-service-default-domain-record) section of this guide\.
+   You must add this value as part of a canonical name \(CNAME\) record in the DNS of your domains\. We recommend that you copy and paste this value into a text file that you can refer to later\. For more information, see the following [Add the CNAME records to your domain's DNS zone](#add-container-service-default-domain-record) section of this guide\.
 
 ## Add a record to your domain's DNS zone<a name="add-container-service-default-domain-record"></a>
 
@@ -56,7 +56,7 @@ Complete the following procedure to add an address \(A for IPv4 or AAAA for IPv6
 
 1. Choose the save icon to save the record to your DNS zone\.
 
-   Repeat these steps to add additional DNS records for domains on your certificate that you are using with your container service\. Allow time for changes to propagate through the internet's DNS\. After a few minutes, you should see if your domain is pointing to your container service\.
+   Repeat these steps to add additional DNS records for domains on your certificate that you are using with your container service\. Allow time for changes to propagate through the Internet’s DNS\. After a few minutes, you should see if your domain is pointing to your container service\.
 
 ## Additional information about container services<a name="point-domain-to-container-service-additional-info"></a>
 
@@ -66,7 +66,7 @@ These are the general steps to manage your Lightsail container service after it'
 
 1. Create your container service in your Lightsail account\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md)\.
 
-1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like the Amazon ECR Public Gallery or Docker Hub\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
+1. If you plan to use container images from a public registry, find container images from a public registry such as the Amazon ECR Public Gallery\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\.
 
 1. If you plan to push container images from your local machine to your service, install software on your local machine that you need to create your own container images and push them to your Lightsail container service\. For more information, see the following guides:
    + [Installing software to manage container images for your Amazon Lightsail container services](amazon-lightsail-install-software.md)

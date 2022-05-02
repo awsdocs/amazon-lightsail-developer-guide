@@ -48,7 +48,7 @@ When you add an A record to your DNS zone, and choose the name of your distribut
 
 1. Choose the save icon to save the record to your DNS zone\.
 
-   Repeat these steps to add additional DNS records for domains on your certificate that you are using with your distribution\. Allow time for changes to propagate through the internet's DNS\. After a few minutes, you should see if your domain is pointing to your distribution\. You should also test your distribution\. For more information, see the following [Testing your Amazon Lightsail distribution](amazon-lightsail-testing-distribution.md)\.
+   Repeat these steps to add additional DNS records for domains on your certificate that you are using with your distribution\. Allow time for changes to propagate through the Internet’s DNS\. After a few minutes, you should see if your domain is pointing to your distribution\. You should also test your distribution\. For more information, see the following [Testing your Amazon Lightsail distribution](amazon-lightsail-testing-distribution.md)\.
 
 ## Additional information<a name="point-domain-to-distribution-additional-information"></a>
 
@@ -68,7 +68,7 @@ Here are some articles to help you manage distributions in Lightsail:
 + [Disabling custom domains for your Amazon Lightsail distributions](amazon-lightsail-disabling-distribution-custom-domains.md)
 + [Viewing distribution metrics in Amazon Lightsail](amazon-lightsail-viewing-distribution-health-metrics.md)
 + [Deleting your Amazon Lightsail distribution](amazon-lightsail-deleting-distribution.md)
-+ [SSL/TLS certificates in Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)
++ [SSL/TLS certificates in Amazon Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)
 + [Creating SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-create-a-distribution-certificate.md)
 + [Validating SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-validating-a-distribution-certificate.md)
 + [Viewing SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-viewing-distribution-certificates.md)

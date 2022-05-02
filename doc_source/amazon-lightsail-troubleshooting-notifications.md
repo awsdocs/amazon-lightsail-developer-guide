@@ -10,12 +10,12 @@ The following list describes common notification contact issues that you may exp
 When you add an email address as a notification contact in Lightsail, a verification request is sent to that address\. The verification request email contains a link that the recipient must click to confirm that they want to receive Lightsail notifications\. Notifications are not sent to the email address until after it is verified\. The verification comes from *AWS Notifications <no\-reply@sns\.amazonaws\.com>*, with a subject of *AWS Notification \- Subscription Confirmation*\. SMS messaging does not require verification\.  
 Check the mailbox's spam and junk folders if the verification request is not in the inbox folder\. If the verification request got lost, or was deleted, choose **Resend verification** in the notification banner that is displayed in the Lightsail console, and in the **Account** page\.  
 
-![\[Resend email verification in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-email-verification-banner-resend.png)
+![\[Resend email verification in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-email-verification-banner-resend.png)
 
 **I see **null** listed as my email notification contact\.**  
 Email addresses must be verified within 24 hours after they are added\. If you fail to verify an email within 24 hours, that email is automatically given a status of `invalid` and it is removed from Lightsail\. That is why you might see a value of **null** for one or more of your email notification contacts\.  
 
-![\[Null email notification contact in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-null-email-notification-contact.png)
+![\[Null email notification contact in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-null-email-notification-contact.png)
 To fix this issue, remove the **null** email notification contact, and add the correct email address again\. Ensure that you verify the email address immediately after adding it to Lightsail\. For more information, see [Notifications in Amazon Lightsail](amazon-lightsail-notifications.md)\.
 
 **I have not received SMS text message notifications, or I stopped receiving them recently**  

@@ -41,7 +41,7 @@ An *origin* is the definitive source of content for your distribution\. When you
 
 You can choose only one origin per distribution\. You can change the origin at any time after you create your distribution\. For more information, see [Changing the origin of your distribution in Amazon Lightsail](amazon-lightsail-changing-distribution-origin.md)\.
 
-![\[Distribution origin selector\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-distribution-choose-origin.png)
+![\[Distribution origin selector\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-distribution-choose-origin.png)
 
 ## Origin protocol policy<a name="distribution-origin-protocol-policy"></a>
 
@@ -225,7 +225,7 @@ If you choose a Lightsail container service as the origin of your distribution, 
    This option is listed in the **Choose your origin** section of the page, under the origin resource you selected for your distribution\.
 **Note**  
 When you select a Lightsail bucket as the origin of your distribution, the **Origin protocol policy** defaults to **HTTP only**\. You cannot change the origin protocol policy when a bucket is the origin of your distribution\.  
-![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/origin-protocol-policy.png)
+![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/origin-protocol-policy.png)
 
 1. Choose the caching behavior \(also known as a caching preset\) for your distribution\. For more information, see [Caching behavior and caching preset](#distribution-caching-preset)\.
 **Note**  
@@ -297,7 +297,7 @@ Here are some articles to help you manage distributions in Lightsail:
 + [Disabling custom domains for your Amazon Lightsail distributions](amazon-lightsail-disabling-distribution-custom-domains.md)
 + [Viewing distribution metrics in Amazon Lightsail](amazon-lightsail-viewing-distribution-health-metrics.md)
 + [Deleting your Amazon Lightsail distribution](amazon-lightsail-deleting-distribution.md)
-+ [SSL/TLS certificates in Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)
++ [SSL/TLS certificates in Amazon Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)
 + [Creating SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-create-a-distribution-certificate.md)
 + [Validating SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-validating-a-distribution-certificate.md)
 + [Viewing SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-viewing-distribution-certificates.md)

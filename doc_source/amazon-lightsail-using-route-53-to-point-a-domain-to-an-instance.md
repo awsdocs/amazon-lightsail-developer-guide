@@ -30,7 +30,7 @@ This procedure is also documented in the Route 53 Developer Guide\. For more inf
 1. Choose **Create record**\.
 
    The **Quick create record** page appears\.  
-![\[Create a record in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/create-record-set-alias-record-route-53-blank.png)
+![\[Create a record in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/create-record-set-alias-record-route-53-blank.png)
 **Note**  
 If you see the **Choose routing policy** page, then choose **Switch to quick create** to switch to the quick create wizard before continuing with the following steps\.
 
@@ -45,7 +45,7 @@ An address \(A\) record maps a domain, such as `example.com`, or a subdomain, su
    1. Enter the static IP address \(public IP address\) of your Lightsail instance in the **Value** text box\.
 
    1. Keep the TTL of 300, and the routing policy as **Simple routing**\.  
-![\[Address record example in a Route 53 hosted zone.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-route-53-hosted-zone-a-record.png)
+![\[Address record example in a Route 53 hosted zone.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-route-53-hosted-zone-a-record.png)
 **CNAME \- Routes traffic to another domain name and to some AWS resources**  
 A canonical name \(CNAME\) record maps an alias or subdomain, such as `www.example.com`, to a domain, such as `example.com`, or a subdomain, such as `www2.example.com`\. A CNAME record redirects one domain to another\.  
 
@@ -56,7 +56,7 @@ A canonical name \(CNAME\) record maps an alias or subdomain, such as `www.examp
    1. Enter a domain \(i\.e\., `example.com`\) or subdomain \(i\.e\., `another.example.com`\) in the **Value** text box\.
 
    1. Keep the TTL of 300, and the routing policy as **Simple routing**\.  
-![\[Canonical name record example in a Route 53 hosted zone.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-route-53-hosted-zone-cname-record.png)
+![\[Canonical name record example in a Route 53 hosted zone.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-route-53-hosted-zone-cname-record.png)
 
 1. Choose **Create records** to add the record to your hosted zone\.
 **Note**  

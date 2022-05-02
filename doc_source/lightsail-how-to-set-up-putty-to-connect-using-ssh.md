@@ -1,6 +1,6 @@
 # Download and set up PuTTY to connect using SSH in Amazon Lightsail<a name="lightsail-how-to-set-up-putty-to-connect-using-ssh"></a>
 
- *Last updated: October 24, 2020* 
+ *Last updated: April 11, 2022* 
 
 You can use an SSH client like PuTTY to connect to your Lightsail instance\. PuTTY requires a copy of your private SSH key\. You might already have a key, or you might want to use the key pair that Lightsail creates\. Either way, we've got you covered\. For more information about SSH, see [SSH and connecting to your Lightsail instance](understanding-ssh-in-amazon-lightsail.md)\. This topic walks you through the steps to download a key pair and set up PuTTY to connect to your instance\.
 
@@ -30,12 +30,12 @@ You have several options for getting your private key\. You might want to use th
 
 1. Choose **Account** on the top navigation bar, and then choose **Account** from the drop\-down\.
 
-1. Choose the **SSH Keys** tab\.  
-![\[SSH key pairs in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-ssh-key-pairs.png)
+1. Choose the **SSH Keys** tab\.
 
 1. Choose one of the following options depending on which private key you prefer to use:
-   + **To use the default private key that Lightsail generates**, choose **Download** next to the default private key for the AWS Region where your instance is located\.
-   + **To create a new key pair in Lightsail**, choose **Create New**\. Choose the AWS Region where your instance is located, and choose **Create**\. Enter a name, and choose **Generate key pair**\. You will be given the option to download the private key\.
+   + **To use the default private key that Lightsail generates**, in the **Default keys** section of the page, choose the download icon next to the default private key for the AWS Region where your instance is located\.  
+![\[SSH key pairs in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-ssh-key-pairs.png)
+   + **To create a new key pair in Lightsail**, in the **Custom keys** section of the page, choose **Create key pair**\. Choose the AWS Region where your instance is located, and choose **Create**\. Enter a name, and choose **Generate key pair**\. You will be given the option to download the private key\.
 **Important**  
 You can only download the private key once\. Save it in a secured location\.
    + **To use your own key pair**, choose **Upload New**\. Choose the AWS Region where your instance is located, and choose **Upload**\. Choose **Upload file**, and then locate the file in your local drive\. Choose **Upload key** when you're ready to upload your public key file to Lightsail\.
@@ -81,7 +81,7 @@ You're almost there\! Hang on while we make one last change\.
 Port 22 is already open for SSH on your Lightsail instance, so accept the default port\.
 
 1. Under **Connection**, expand **SSH**, and then choose **Auth**\.  
-![\[PuTTY and the SSH Auth option in the configuration dialog\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/putty-configuration-connection-ssh-auth.png)
+![\[PuTTY and the SSH Auth option in the configuration dialog\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/putty-configuration-connection-ssh-auth.png)
 
 1. Choose **Browse** to navigate to the `.ppk` file that you created in the previous step, and then choose **Open**\.
 

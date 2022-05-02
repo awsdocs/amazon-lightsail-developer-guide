@@ -35,10 +35,10 @@ Static IP addresses can only be attached to instances in the same Region\.
 1. Choose **Create**\.
 
    Now when you go to the home page, you see a static IP address that you can manage\.  
-![\[Static IP address attached to an instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-static-ip-attached-to-an-instance.png)
+![\[Static IP address attached to an instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-static-ip-attached-to-an-instance.png)
 
    Also, on the **Networking** tab of your instance's management page, you'll see a blue pushpin next to your public IP address\. This indicates that the IP address is now static\.  
-![\[The Networking tab of the manage instance page\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-static-ip-pushpin.png)
+![\[The Networking tab of the manage instance page\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-static-ip-pushpin.png)
 
 **Important**  
 Static IP addresses are free while attached to a resource\. You can manage up to five at a time\.

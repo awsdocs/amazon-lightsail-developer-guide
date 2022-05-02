@@ -1,88 +1,40 @@
-# Delete instance SSH keys in Amazon Lightsail<a name="amazon-lightsail-remove-ssh-key-on-instance"></a>
+# Managing keys stored on an instance in Amazon Lightsail<a name="amazon-lightsail-remove-ssh-key-on-instance"></a>
 
- *Last updated: June 6, 2021* 
+ *Last updated: February 24, 2022* 
 
-A key pair, consisting of a private key and a public key, is a set of security credentials that you use to prove your identity when establishing an SSH connection to an instance in Amazon Lightsail\. The public key is added on the instance, and the private key is kept in a safe place on your local computer, which you use when connecting to your instance\.
+You can establish a secure connection to your Amazon Lightsail instances using key pairs\. Lightsail configures the public key of a key pair on your Linux or Unix instance when you first create it\. You use the private key of the key pair to authenticate to your instance when establishing an SSH connection to it\. For more information about keys, see [Key pairs and connecting to instances in Amazon Lightsail](understanding-ssh-in-amazon-lightsail.md)\.
 
-When you create a Lightsail instance, you can choose to use the Lightsail default key pair for the AWS Region in which you create the instance or you can use a custom key pair that you either create using the Lightsail console, or upload\. Later, after the instance is up and running, you can change the key pair on your instance\. For example, if a user in your organization requires access to the instance using a separate key pair, you can add that key pair to your instance\. Or, if someone has a copy of the private key \(the `.PEM` file\) and you want to prevent them from connecting to your instance \(for example, if they've left your organization\), you can replace the key pair with a new one or remove it\.
+After your instance is up and running, you can change the key pair that is used to connect to your instance by adding a new public key on the instance, or by replacing the public key \(deleting the existing public key and adding a new one\) on the instance\. You might do this for the following reasons:
++ If a user in your organization requires access to the instance using a separate key pair, you can add the public key to your instance\.
++ If you need to secure a new instance that was created from the snapshot of an instance which used a compromised key\.
++ If someone has a copy of the private key and you want to prevent them from connecting to your instance \(for example, if they left your organization\), you can delete the public key on the instance and replace it with a new one\.
 
-To add or replace a key pair, you must be able to connect to your instance\. Complete the procedure in this guide to add or replace a key pair on your instance in Lightsail\.
+To add or replace a key on your instance, you must be able to connect to your instance\. If you've lost your existing private key, you can connect to your instance using the Lightsail browser\- based SSH client\. For more information, see [Connecting to your Linux or Unix instance in Amazon Lightsail](lightsail-how-to-connect-to-your-instance-virtual-private-server.md)\.
 
 **Contents**
-+ [Create a key pair using the Lightsail console](#create-a-key-pair-using-lightsail)
-+ [Create a key pair using ssh\-keygen](#create-a-key-pair-using-ssh-keygen)
-+ [Add a public key to your instance](#add-a-public-key)
-+ [Delete existing public keys from your instance](#delete-existing-public-key)
-+ [Delete an uploaded or created key in the Lightsail console](#delete-uploaded-created-key)
-+ [Remove a Lightsail default key](#remove-default-lightsail-key)
++ Step 1: [Learn about the process](#learn-about-the-process)
++ Step 2: [Create a key pair](#create-a-key-pair)
++ Step 3: [Add a public key to your instance](#add-public-key-to-instance)
++ Step 4: [Connect to your instance using the new key pair](#connect-to-instance-new-key-pair)
++ Step 5: [Delete an existing public key from your instance](#delete-public-key-from-instance)
 
-## Create a key pair using Lightsail<a name="create-a-key-pair-using-lightsail"></a>
+## Step 1: Learn about the process<a name="learn-about-the-process"></a>
 
-Complete the following procedure to create a key pair using the Lightsail console\. You can add the public key to your Lightsail instance after it's created\. Alternately, you can [use ssh\-keygen to generate a key pair](#create-a-key-pair-using-ssh-keygen) for your instance\.
+Following are the general steps to add and remove keys on an instance\. If you want to remove a key from your instance without adding a new key, see Step 5: [Delete an existing public key from your instance](#delete-public-key-from-instance) later in this guide\.
 
-1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
+1. **Create a key pair** – To add a new key to your instance you must first create a new key pair\. You can create a custom or default key pair using the Lightsail console, or on your local computer using a third\-party tool, such as ssh\-keygen\. Both methods generate a new key pair, which consist of a public key and a private key\. For more information, see Step 2: [Create a key pair](#create-a-key-pair) later in this guide\.
 
-1. On the Lightsail home page, choose **Account** on the top navigation menu\.
+1. **Add a public key to your instance** – After you create a key pair, you connect to your instance using SSH and add the public key of the key pair to your instance\. For more information, see Step 3: [Add a public key to your instance](#add-public-key-to-instance) later in this guide\.
 
-1. Choose **Account** in the dropdown menu\.
+1. **Test that you can connect to your instance using the new key pair** – After the public key of the key pair is saved on the instance, you should test that you can use the private key of the key pair to connect to the instance using SSH\. For more information, see Step 4: [Connect to your instance using the new key pair](#connect-to-instance-new-key-pair) later in this guide\.
 
-1. Choose the **SSH keys** tab\.
+1. **Remove an old public key from your instance** – After you successfully connect to your instance using the new key, you can remove an old public key from the instance\. Complete this step to prevent a user from connecting to an instance using an old key pair\. For more information, see Step 5: [Delete an existing public key from your instance](#delete-public-key-from-instance) later in this guide\.
 
-1. Choose **Create new**\.
+## Step 2: Create a key pair<a name="create-a-key-pair"></a>
 
-1. Choose the AWS Region in which you want to create the key pair\.
+Complete the following procedure to create a key pair on your local computer using ssh\-keygen\.
 
-1. Choose **Create**\.  
-![\[Create SSH key pair in an AWS Region\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-create-ssh-key-pair-region.png)
-
-1. Enter a name for your new key pair\.
-
-1. Choose **Generate key pair**\.  
-![\[Name your SSH key pair\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-name-ssh-key-pair.png)
-
-1. Choose **Download key** to download the private key \(`.PEM`\) file of the key pair\.
-
-   This is the only time you can download the private key\. Treat the private key as security credential for your instance, and store it somewhere safe\.  
-![\[SSH key pair created\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-key-pair-created.png)
-
-1. Save the file to the following folder:
-   + On Windows: `C:\Users\%USERNAME%\.ssh`
-   + On Linux: `$HOME/.ssh`
-
-   The public key is now stored in the Lightsail console, which you can use when creating new Lightsail instances\. The private key is stored in the `.ssh` folder on your computer\.
-
-   This action doesn't add the public key to Lightsail instances that were previously created\. To do that, you must generate the public key of the key pair using the private key you downloaded\.
-
-   Complete the following steps to generate the public key using the private key\.
-
-1. Open a Command Prompt or Terminal window\.
-
-1. Enter the following command to generate a public key using the private key you downloaded from the Lightsail console\.
-
-   ```
-   ssh-keygen -y -f PrivateKeyFile > PublicKeyFile
-   ```
-
-   In the command, replace:
-   + *PrivateKeyFile* with the name of the private key file you downloaded from the Lightsail console\.
-   + *PublicKeyFile* with the name of the public key file you want to create\.
-
-   **Example**
-
-   ```
-   ssh-keygen -y -f MyCustomKeyPair.pem > MyCustomKeyPair.pub
-   ```
-
-1. Open the public key file, and copy the text in the file\. You will add this public key text to your instance in the next section of this guide\.  
-![\[Contents of the public key file\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-ssh-keygen-public-key.png)
-
-   Continue to the [Add a public key to your instance](#add-a-public-key) section of this guide to add your new public key to your Lightsail instance\.
-
-## Create a key pair using ssh\-keygen<a name="create-a-key-pair-using-ssh-keygen"></a>
-
-Complete the following procedure to create a key pair using ssh\-keygen\. You can add the public key to your Lightsail instance after it's created\. Alternately, you can [use the Lightsail console to generate a key pair](#create-a-key-pair-using-lightsail) for your instance\.
-
-1. Open a Command Prompt or Terminal window\.
+1. Open Command Prompt or Terminal on your local computer\.
 
 1. Enter the following command to create a key pair\.
 
@@ -90,124 +42,88 @@ Complete the following procedure to create a key pair using ssh\-keygen\. You ca
    ssh-keygen -t rsa
    ```
 
-1. The command prompts you to enter the path to the file in which you want to save the key\. Enter the path and file name, and then press **Enter**\. In the following example, we specified the `my_key` file name for demonstration purposes\.  
-![\[Result of the ssh-keygen command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-ssh-keygen-command.png)
+1. Specify a directory location on your computer where the key pair should be saved\.
 
-1. The command prompts you to enter a passphrase\. The passphrase is not mandatory\. However, it is recommended that you specify a passphrase to protect your private key against unauthorized use\.  
-![\[Passphrase for ssh-keygen\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-ssh-keygen-command-passphrase.png)
+   For example:
+   + On Windows: `C:\Users\<UserName>\.ssh\<KeyPairName>`
+   + On macOS, Linux or Unix: `/home/<UserName>/.ssh/<KeyPairName>`
 
-1. Enter the passphrase again to confirm it\.  
-![\[Enter the passphrase for ssh-keygen again\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-ssh-keygen-command-second-passphrase.png)
+   Replace `<UserName>` with the name of the user you are currently signed in as, and replace `<KeyPairName>` with the name of your new key pair\.
 
-   The command generates an SSH key pair consisting of a public key and a private key\.  
-![\[Keys saved\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-ssh-keygen-command-keys-saved.png)
+   In the following example, we specified the `C:\Keys` directory on our Windows computer, and gave the new key a name of `MyNewLightsailCustomKey`\.  
+![\[Directory location C:\Keys\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-01.png)
 
-1. Open the public key \(`.PUB`\) file, and copy the text in the file\. You will add this public key text to your instance in the next section of this guide\.  
-![\[Contents of the public key file\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-ssh-keygen-public-key.png)
+1. Enter a passphrase for your key and press **Enter**\. You will not see the passphrase as you enter it\.
 
-   Continue to the [Add a public key to your instance](#add-a-public-key) section of this guide to add your new public key to your Lightsail instance\.
+   You will need this passphrase later when configuring the private key on an SSH client to connect to an instance that has the public key configured on it\.  
+![\[Passphrase\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-02.png)
 
-## Add a public key to your instance<a name="add-a-public-key"></a>
+1. Enter the passphrase again to confirm it and press **Enter**\. You will not see the passphrase as you enter it\.  
+![\[Passphrase\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-03.png)
 
-Complete the following procedure to add the public key to your instance\. Public key content is saved in the `~/.ssh/authorized_keys` file on instances\.
+1. A prompt confirms that your private key and public key have been saved to the specified directory\.  
+![\[Identity file save location\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-04.png)
 
-1. Connect to your instance using SSH\.
+1. Open the public key \(\.PUB\) file, and copy the text in the file\.  
+![\[Copy to contents of the public key file\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-05.png)
 
-1. Enter the following command to edit the `authorized_keys` file using the Vim text editor\.
-**Note**  
-These steps use Vim for demonstration purposes\. However, you can use any text editor for these steps\.
+Continue to the next section of this guide to add your new public key to your Lightsail instance\.
 
-   ```
-   sudo vim ~/.ssh/authorized_keys
-   ```
+## Step 3: Add a public key to your instance<a name="add-public-key-to-instance"></a>
 
-   You should see a result similar to the following example, which shows the current public keys configured on your instance\. In our case, the Lightsail default key for the AWS Region in which the instance was created is the only public key configured on our instance\.  
-![\[Contents of the authorzied_keys file\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-authorized-keys-contents.png)
-
-1. Press the `I` key to enter the insert mode in the Vim editor\.
-
-1. Enter a line break after the last public key on the file\.
-
-1. Paste the public key text that you copied earlier in this guide \(after creating a new key pair\)\.
-
-   You should see a result similar to the following example\.  
-![\[New public key added to authorized_keys file\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-authorized-keys-new-key-added.png)
-
-1. Press the **ESC** key, and then enter `:wq!` to save your edits and quit Vim\.
-
-   Your new public key is now added to your instance\. To test the new key pair, disconnect from your instance, and reconnect to it using the private key pair that you created earlier in this guide\. For more information, see [SSH and connecting to your Lightsail instance](understanding-ssh-in-amazon-lightsail.md)\. If you’re able to successfully connect to your instance using your new key pair, continue to the [Delete existing public keys from your instance](#delete-existing-public-key) section of this guide to remove the Lightsail default key\.
-
-## Delete existing public keys from your instance<a name="delete-existing-public-key"></a>
-
-Complete the following procedure to remove a public key from your instance after you’ve added a new public key, and successfully connected to it using the new key pair\.
-
-1. Connect to your instance using SSH\.
-
-1. Enter the following command to edit the `authorized_keys` file using the Vim text editor\.
-
-   ```
-   sudo vim ~/.ssh/authorized_keys
-   ```
-
-1. Press the `I` key to enter the insert mode in the Vim editor\.
-
-1. Delete the line of text that contains the public key that you want to remove from your instance\.  
-![\[Delete old key from authorized_keys file\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-authorized-keys-delete-old-key.png)
-
-   The result should look like the following example, in which only our new public key is left\.  
-![\[Old key deleted from authorized_keys file\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-authorized-keys-old-key-deleted.png)
-
-1. Press the **ESC** key, and then enter `:wq!` to save your edits and quit Vim\.
-
-   The deleted public key is now removed from your instance\. Your instance will now refuse connections that use that key pair\.
-
-## Delete an uploaded or created key in the Lightsail console<a name="delete-uploaded-created-key"></a>
-
-Complete the following procedure to delete a key from the Lightsail console that you uploaded or created\. This prevents the key from being used when you create new Lightsail instances in the future\. However, deleting a key in this way doesn't delete the public key from instances that were previously created using that key or from snapshots of those instances\. It also doesn't delete the private key on your local computer\. To delete the public key from instances, see the [Delete existing public keys from your instance](#delete-existing-public-key) section earlier in this guide\.
-
-**Note**  
-Your Lightsail default key pairs do not need to be deleted for cost savings\. You are not charged for them\. For more information about removing the default key, see the [Remove a Lightsail default key](#remove-default-lightsail-key) section later in this guide\.
+Complete the following procedure to add the public key to your instance\. Public key content is saved in the `~/.ssh/authorized_keys` file on Linux and Unix instances\.
 
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
-1. On the Lightsail home page, choose **Account** on the top navigation menu\.
+1. Choose the **Instances** tab on the Lightsail home page\.
 
-1. Choose **Account** in the dropdown menu\.  
-![\[Account menu option\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-account-drop-down.png)
+1. Choose the browser\-based SSH client icon for the instance that you want to connect to\.  
+![\[Choose the browser based SSH client\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-06.png)
 
-1. Choose the **SSH keys** tab\.
+1. After you're connected, enter the following command to edit the *authorized\_keys* file using the text editor of your choice\. The following steps use Vim for demonstration purposes\.
 
-1. Scroll down until you find the AWS Region for which you want to delete a key that you uploaded or created using the Lightsail console\.
+   ```
+   sudo vim ~/.ssh/authorized_keys
+   ```
 
-1. Choose the **X** icon next to the key that you want to delete\.  
-![\[Delete key from Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-delete-custom-key.png)
+   You should see a result similar to the following example, which shows the current public keys configured on your instance\. In our case, the Lightsail default key for the AWS Region in which the instance was created in, is the only public key configured on the instance\.  
+![\[Edit the authorized keys file\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-07.png)
 
-1. In the confirmation prompt that appears, choose **Yes** to delete the key, or choose **No** to not delete it\.  
-![\[Confirm deletion of key\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-delete-custom-key-pair-confirmation.png)
+1. Press the **I** key to enter insert mode in the Vim editor\.
 
-## Remove a Lightsail default key<a name="remove-default-lightsail-key"></a>
+1. Enter a line break after the last public key on the file\.
 
-You cannot remove and replace the Lightsail default key for an AWS Region on your own\. If you need to revoke access, or if the default key becomes compromised, complete the following procedure to submit a request for us to remove and replace the Lightsail default key for an AWS Region\. This prevents the key from being used when you create new Lightsail instances in the future\.
+1. Paste the public key text that you copied earlier in this guide \(after creating a new key pair\)\. You should see a result similar to the following example:  
+![\[Paste the public key\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-08.png)
 
-**Important Information**  
-Your Lightsail default key pairs do not need to be deleted for cost savings\. You are not charged for them\.  
-A new default key pair will be automatically generated upon deletion of the original default key pair\.
+1. Press the **ESC** key\. Next, type `:wq!` and press **Enter** to save your edits and exit the Vim editor\.
 
-1. Browse to the [Support Center](https://console.aws.amazon.com/support/)
+The new public key is now added to your instance\. Continue to the next section of this guide to connect to your instance using the new key pair\.
 
-1. Choose **Create case**\.
+## Step 4: Connect to your instance using the new key pair<a name="connect-to-instance-new-key-pair"></a>
 
-1. Choose **Account and billing support**\.
+To test the new key pair, disconnect from your instance, and reconnect to it using the private key that you created earlier in this guide\. For more information, see [Key pairs and connecting to instances in Amazon Lightsail](understanding-ssh-in-amazon-lightsail.md)\. After you successfully connect to your instance using the new key, you can remove an old key from the instance\. Continue to the next step to learn how to delete public keys from your instance\.
 
-1. Choose **Account** in the **Type** dropdown menu\.  
-![\[Type dropdown menu on the Create case page\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-create-case-type-drop-down.png)
+## Step 5: Delete an existing public key from your instance<a name="delete-public-key-from-instance"></a>
 
-1. Choose **Security** in the **Category** dropdown menu\.  
-![\[Category dropdown menu on the Create case page\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-create-case-category-drop-down.png)
+Complete the following procedure to remove a public key from your instance\. This prevents a user from connecting to an instance using an old key pair\. Do this after you successfully connect to the instance using the new key pair\.
 
-1. In the **Subject** and **Description** fields of the ticket, describe your request as shown in the following example\.  
-![\[Information in Subject and Description fields of case\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-create-case-subject-description.png)
+1. Connect to your instance using SSH\.
 
-1. Choose your own preferences for the contact options, and then choose **Submit**\.
+1. Enter the following command to edit the *authorized\_keys* file using the text editor of your choice\. The following steps use Vim for demonstration purposes\.
 
-   The Lightsail default key for the AWS Region that you specified will be deleted after a few days\. You should avoid creating new Lightsail instances in that AWS Region until the key is replaced\.
+   ```
+   sudo vim ~/.ssh/authorized_keys
+   ```
+
+1. Press the letter **I** key to enter insert mode in the Vim editor\.
+
+1. Delete the line of text that contains the public key that you want to remove from your instance\.  
+![\[Delete old public key\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-09.png)
+
+   The result should look like the following example, where the new public key the only key that displays\.  
+![\[Keep new public key\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-10.png)
+
+1. Press the **ESC** key\. Next, type `:wq!` and press **Enter** to save your edits and exit the Vim editor\.
+
+The deleted public key is now removed from your instance\. Your instance will refuse connections that use the private key of that key pair\.

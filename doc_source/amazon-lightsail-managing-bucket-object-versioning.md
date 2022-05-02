@@ -22,7 +22,7 @@ The versioning state applies to all \(not some\) of the objects in that bucket\.
 
 If you enable versioning for a bucket, the Lightsail object storage service automatically generates a unique version ID for the object that is being stored\. For example, in one bucket you can have two objects with the same key but different version IDs, such as `photo.gif` \(version 111111\) and `photo.gif` \(version 121212\)\.
 
-![\[Bucket versioning enabled\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-bucket-versioning-versioning-enabled.png)
+![\[Bucket versioning enabled\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-bucket-versioning-versioning-enabled.png)
 
 Version IDs cannot be edited\. They are Unicode, UTF\-8 encoded, URL\-ready, opaque strings that are no more than 1,024 bytes long\. The following is an example of a version ID:
 
@@ -74,7 +74,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    ```
 
    You should see a result similar to the following example:  
-![\[Response to the update bucket request\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-update-bucket-objects-versioning-cli.png)
+![\[Response to the update bucket request\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-update-bucket-objects-versioning-cli.png)
 
 ## Managing buckets and objects in Lightsail<a name="versioning-managing-buckets-and-objects"></a>
 
@@ -89,6 +89,7 @@ These are the general steps to manage your Lightsail object storage bucket:
 1. Learn about security best practices for buckets and the access permissions that you can configure for your bucket\. You can make all objects in your bucket public or private, or you can choose to make individual objects public\. You can also grant access to your bucket by creating access keys, attaching instances to your bucket, and granting access to other AWS accounts\. For more information, see [Security Best Practices for Amazon Lightsail object storage](amazon-lightsail-bucket-security-best-practices.md) and [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
 
    After learning about bucket access permissions, see the following guides to grant access to your bucket:
+   + [Block public access for buckets in Amazon Lightsail](amazon-lightsail-block-public-access-for-buckets.md)
    + [Configuring bucket access permissions in Amazon Lightsail](amazon-lightsail-configuring-bucket-permissions.md)
    + [Configuring access permissions for individual objects in a bucket in Amazon Lightsail](amazon-lightsail-configuring-individual-object-access.md)
    + [Creating access keys for a bucket in Amazon Lightsail](amazon-lightsail-creating-bucket-access-keys.md)

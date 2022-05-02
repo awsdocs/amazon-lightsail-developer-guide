@@ -2,7 +2,7 @@
 
  *Last updated: February 23, 2020* 
 
-You can use the Amazon Lightsail console to create your Lightsail container services, and create deployments using container images from on an online public registry, such as Amazon ECR Public Gallery or Docker Hub\. But to create your own container images, and push them to your container service, you must install the following additional software on the same computer on which you plan to create your container images:
+You can use the Amazon Lightsail console to create your Lightsail container services, and create deployments using container images from an online public registry, such as Amazon ECR Public Gallery\. To create your own container images, and push them to your container service, you must install the following additional software on the same computer on which you plan to create your container images:
 + **Docker** – Allows you to run, test, and create your own container images that you can then use with your Lightsail container service\.
 + **AWS Command Line Interface \(AWS CLI\)** – Allows you to specify parameters of the container images you create, and then push them to your Lightsail container service\. Version 2\.1\.1 and later will work with the Lightsail Control plugin\.
 + **Lightsail Control \(lightsailctl\) plugin** – Enables the AWS CLI to access the container images that are on the local machine\.
@@ -64,7 +64,7 @@ Complete the following procedure to install the lightsailctl plugin on Windows\.
 1. Choose the **Windows Start** button, and then search for `cmd`\.
 
 1. Right\-click the **Command Prompt** application in the results, and choose **Run as administrator**\.  
-![\[Run Command Prompt as administrator\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lightsailctl-cmd-run-as-administrator.png)
+![\[Run Command Prompt as administrator\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsailctl-cmd-run-as-administrator.png)
 **Note**  
 You may see a prompt that asks if you want to allow Command Prompt to make changes to your device\. You must choose **Yes** to continue with the installation\.
 
@@ -75,7 +75,7 @@ You may see a prompt that asks if you want to allow Command Prompt to make chang
    ```
 
    You should see a result similar to the following example\.  
-![\[Command line response to setx command\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/lighstailctl-setx-command.png)
+![\[Command line response to setx command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lighstailctl-setx-command.png)
 
    You are now ready to use the AWS Command Line Interface \(AWS CLI\) to push container images to your Lightsail container service\. For more information, see [Pushing and managing container images on your Amazon Lightsail container services](amazon-lightsail-pushing-container-images.md)\.
 
@@ -159,7 +159,7 @@ These are the general steps to manage your Lightsail container service after it'
 
 1. Create your container service in your Lightsail account\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md)\.
 
-1. If you plan to use container images from a public registry, find container images that you want to use from a public registry like the Amazon ECR Public Gallery or Docker Hub\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\. For more information about Docker Hub, see [Docker Hub Quickstart](https://docs.docker.com/docker-hub/) in the *Docker documentation*\.
+1. If you plan to use container images from a public registry, find container images from a public registry such as the Amazon ECR Public Gallery\. For more information about Amazon ECR Public, see [What Is Amazon Elastic Container Registry Public?](https://docs.aws.amazon.com/AmazonECR/latest/public/what-is-ecr.html) in the *Amazon ECR Public User Guide*\.
 
 1. If you plan to push container images from your local machine to your service, install software on your local machine that you need to create your own container images and push them to your Lightsail container service\. For more information, see the following guides:
    + [Installing software to manage container images for your Amazon Lightsail container services](#amazon-lightsail-install-software)

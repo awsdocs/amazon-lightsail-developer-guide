@@ -1,19 +1,28 @@
 # Security Best Practices for Amazon Lightsail object storage<a name="amazon-lightsail-bucket-security-best-practices"></a>
 
- *Last updated: October 28, 2021* 
+ *Last updated: March 9, 2022* 
 
 Amazon Lightsail object storage provides a number of security features to consider as you develop and implement your own security policies\. The following best practices are general guidelines and don’t represent a complete security solution\. Because these best practices might not be appropriate or sufficient for your environment, treat them as helpful considerations rather than prescriptions\.
 
 **Contents**
 + [Preventative security best practices](#bucket-security-best-practices-preventative-practices)
+  + [Implement least privilege access](#bucket-security-best-practices-least-privilege-access)
+  + [Verify that your Lightsail buckets are not publicly accessible](#bucket-security-best-practices-verify-bucket-permissions)
+  + [Enable block public access in Amazon S3](#bucket-security-best-practices-block-public-access)
+  + [Attach instances to buckets to grant full programmatic access](#bucket-security-best-practices-attach-instances)
+  + [Use cross\-account access to give other AWS accounts access to objects in your bucket](#bucket-security-best-practices-cross-account-access)
+  + [Encryption of data](#bucket-security-best-practices-data-encryption)
+  + [Enable versioning](#bucket-security-best-practices-enable-versioning)
 + [Monitoring and auditing best practices](#bucket-security-best-practices-monitoring-auditing)
+  + [Enable access logging and perform periodic security and access audits](#bucket-security-best-practices-enable-access-logging)
+  + [Identify, tag, and audit your Lightsail buckets](#bucket-security-best-practices-identify-tag)
+  + [Implement monitoring using AWS monitoring tools](#bucket-security-best-practices-monitoring-tools)
+  + [Use AWS CloudTrail](#bucket-security-best-practices-cloudtrail)
+  + [Monitor AWS security advisories](#bucket-security-best-practices-security-advisories)
 
 ## Preventative security best practices<a name="bucket-security-best-practices-preventative-practices"></a>
 
 The following best practices can help prevent security incidents with Lightsail buckets\.
-
-**Important**  
-Amazon Lightsail object storage resources do not take into account Amazon S3 Block Public Access configurations\. Lightsail bucket permissions are only configurable within Lightsail\. If the account\-level Block Public Access has been configured in Amazon S3, Lightsail buckets are not included in that configuration\. We recommend that you don't use Lightsail object storage if you have account\-level Block Public Access configured in Amazon S3\.
 
 ### Implement least privilege access<a name="bucket-security-best-practices-least-privilege-access"></a>
 
@@ -25,25 +34,29 @@ For more information about creating an IAM policy to manage buckets, see [IAM po
 
 Buckets and objects are private by default\. Keep your bucket private by having the bucket access permission set to **All objects are private**\. For the majority of use\-cases, you don't need to make your bucket or individual objects public\. For more information, see [Configuring access permissions for individual objects in a bucket in Amazon Lightsail](amazon-lightsail-configuring-individual-object-access.md)\.
 
-![\[Bucket access permissions in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-bucket-access-permission-all-objects-private.png)
+![\[Bucket access permissions in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-bucket-access-permission-all-objects-private.png)
 
 However, if you are using your bucket to host media for your website or application, under certain scenarios, you might need to make your bucket or individual objects public\. You can configure one of the following options to make your bucket or individual objects public:
 + If only some of the objects in a bucket need to be public \(read\-only\) to anyone on the internet, then change the bucket access permission to **Individual objects can be made public and read\-only**, and change only the objects that need to be public to **Public \(read\-only\)**\. This option keeps the bucket private, but gives you the option to make individual objects public\. Don't make an individual object public if it contains sensitive or confidential information that you don't want to be publicly accessible\. If you make individual objects public, you should periodically validate the public accessibility of each individual object\.   
-![\[Bucket access permissions in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-bucket-access-permission-individual-objects-public.png)
+![\[Bucket access permissions in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-bucket-access-permission-individual-objects-public.png)
 + If all objects in the bucket need to be public \(read\-only\) to anyone on the internet, then change the bucket access permission to **All objects are public and read\-only**\. Don't use this option if any of your objects in the bucket contain sensitive or confidential information\.  
-![\[Bucket access permissions in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-bucket-access-permission-all-objects-public.png)
+![\[Bucket access permissions in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-bucket-access-permission-all-objects-public.png)
 + If you previously changed a bucket to be public, or changed individual objects to be public, you can quickly change the bucket and all its objects to be private by changing the bucket access permission to **All objects are private**\.  
-![\[Bucket access permissions in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-bucket-access-permission-all-objects-private.png)
+![\[Bucket access permissions in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-bucket-access-permission-all-objects-private.png)
+
+### Enable block public access in Amazon S3<a name="bucket-security-best-practices-block-public-access"></a>
+
+Lightsail object storage resources take into account both Lightsail bucket access permissions and Amazon S3 account\-level block public access configurations when allowing or denying public access\. With Amazon S3 account\-level block public access, account administrators and bucket owners can centrally limit public access to their Amazon S3 and Lightsail buckets\. Block public access can make all Amazon S3 and Lightsail buckets private regardless of how the resources are created, and regardless of the individual bucket and object permissions that might have been configured\. For more information, see [Block public access for buckets in Amazon Lightsail](amazon-lightsail-block-public-access-for-buckets.md)\.
 
 ### Attach instances to buckets to grant full programmatic access<a name="bucket-security-best-practices-attach-instances"></a>
 
 Attaching an instance to a Lightsail object storage bucket is the most secure way to provide access to the bucket\. The **Resource access** functionality, which is how you attach an instance to a bucket, grants the instance full programmatic access to the bucket\. With this method, you don't have to store bucket credentials directly in the instance or application, and you don't have to periodically rotate the credentials\. For example, some WordPress plugins can access a bucket that the instance has access to\. For more information, see [Configuring resource access for a bucket in Amazon Lightsail](amazon-lightsail-configuring-bucket-resource-access.md) and [Tutorial: Connecting a WordPress instance to an Amazon Lightsail bucket](amazon-lightsail-connecting-buckets-to-wordpress.md)\.
 
-![\[Bucket resource access in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-bucket-resource-access-attached.png)
+![\[Bucket resource access in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-bucket-resource-access-attached.png)
 
 However, if the application is not on a Lightsail instance, then you can create and configure bucket access keys\. Bucket access keys are long term credentials that are not automatically rotated\.
 
-![\[Bucket access keys in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-bucket-access-keys.png)
+![\[Bucket access keys in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-bucket-access-keys.png)
 
 You can create and use access keys to grant applications or plugins full programmatic access to objects in your bucket\. If you use an access key with your bucket, you should periodically rotate your keys and take inventory of the existing keys\. Confirm the date an access key was last used, and the AWS Region in which it was used, correspond with your expectations of how the key should be used\. The date an access key was last used is displayed in the Lightsail console; in the **Access keys** section of the **Permissions** tab of a bucket's management page\. Delete access keys that are not being used\.
 
@@ -53,7 +66,7 @@ If you accidentally share your secret access key with the public, you should del
 
 You can use cross\-account access to make objects in a bucket accessible to a specific individual who has an AWS account without making the bucket and its objects public\. If you've configured cross account access, make sure that the account IDs listed are the correct accounts that you want to give access to objects in your bucket\. For more information, see [Configuring cross\-account access for a bucket in Amazon Lightsail](amazon-lightsail-configuring-bucket-cross-account-access.md)\.
 
-![\[Bucket cross-account access in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-bucket-cross-account-access.png)
+![\[Bucket cross-account access in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-bucket-cross-account-access.png)
 
 ### Encryption of data<a name="bucket-security-best-practices-data-encryption"></a>
 
@@ -104,6 +117,7 @@ These are the general steps to manage your Lightsail object storage bucket:
 1. Learn about security best practices for buckets and the access permissions that you can configure for your bucket\. You can make all objects in your bucket public or private, or you can choose to make individual objects public\. You can also grant access to your bucket by creating access keys, attaching instances to your bucket, and granting access to other AWS accounts\. For more information, see [Security Best Practices for Amazon Lightsail object storage](#amazon-lightsail-bucket-security-best-practices) and [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
 
    After learning about bucket access permissions, see the following guides to grant access to your bucket:
+   + [Block public access for buckets in Amazon Lightsail](amazon-lightsail-block-public-access-for-buckets.md)
    + [Configuring bucket access permissions in Amazon Lightsail](amazon-lightsail-configuring-bucket-permissions.md)
    + [Configuring access permissions for individual objects in a bucket in Amazon Lightsail](amazon-lightsail-configuring-individual-object-access.md)
    + [Creating access keys for a bucket in Amazon Lightsail](amazon-lightsail-creating-bucket-access-keys.md)

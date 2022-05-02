@@ -27,5 +27,5 @@ You might have reached your quota for the number of disks you can create\. Or yo
 **I can't attach my disk to my Lightsail instance**  
 If you encounter the following error, you need to recreate your disk in the same AWS Region and Availability Zone as the instance where you plan to attach the disk\.  
 
-![\[Block storage disk can't be attached because it's in the wrong Availability Zone\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/block-storage-disk-in-different-zone-than-lightsail-instance.png)
+![\[Block storage disk can't be attached because it's in the wrong Availability Zone\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/block-storage-disk-in-different-zone-than-lightsail-instance.png)
  *Actual error message:* **There are currently no instances in the *AWS Region* that can use this disk\.** 

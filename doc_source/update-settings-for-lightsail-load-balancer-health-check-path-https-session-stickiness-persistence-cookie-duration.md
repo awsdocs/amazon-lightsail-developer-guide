@@ -8,9 +8,9 @@ Of course, you'll need a Lightsail load balancer first\. [Learn how to create a 
 
 ## Health checking<a name="instance-health-checking"></a>
 
-The first thing you're going to want to do is [configure your Lightsail instances for load balancing](configure-lightsail-instances-for-load-balancing.md)\. Once that's done, you can attach an instance to your load balancer\. Attaching an instance starts the health checking process, and you get a **Passed** or **Failed** message on the load balancer management page\.
+The first thing you're going to want to do is [configure your Amazon Lightsail instances for load balancing](configure-lightsail-instances-for-load-balancing.md)\. Once that's done, you can attach an instance to your load balancer\. Attaching an instance starts the health checking process, and you get a **Passed** or **Failed** message on the load balancer management page\.
 
-![\[Health check status indicator\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/target-instances-health-check-passed.png)
+![\[Health check status indicator\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/target-instances-health-check-passed.png)
 
 You can also customize your health check path\. For example, if your home page loads slowly or has a lot of images on it, you can configure Lightsail to check a different page that loads faster\. [Learn more about customizing the health check path](enable-set-up-health-checking-for-lightsail-load-balancer-metrics.md)
 
@@ -24,6 +24,4 @@ You can set up HTTPS to create a more secure experience for your website users\.
 
 Session persistence is useful if you're storing session information locally in the user's browser\. For example, you might be running a Magento e\-commerce application with a shopping cart on Lightsail\. If you turn on session persistence, your users can add items to their shopping carts,end their sessions, and still find the items in their carts when they come back\.
 
-You can also adjust the cookie duration for the persistent session\. This is useful if you want to have a particularly long or short duration\.
-
- [Learn more about session persistence](enable-session-stickiness-persistence-or-change-cookie-duration.md) 
+You can also adjust the cookie duration for the persistent session\. This is useful if you want to have a particularly long or short duration\. For more information, see [Enable session persistence for Amazon Lightsail load balancers](enable-session-stickiness-persistence-or-change-cookie-duration.md)\.

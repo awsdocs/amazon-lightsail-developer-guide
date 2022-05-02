@@ -1,4 +1,4 @@
-# SSL/TLS certificates in Lightsail<a name="understanding-tls-ssl-certificates-in-lightsail-https"></a>
+# SSL/TLS certificates in Amazon Lightsail<a name="understanding-tls-ssl-certificates-in-lightsail-https"></a>
 
 **Note**  
 Amazon Lightsail uses SSL/TLS certificates to handle encrypted web traffic \(HTTPS requests\)\. You can create certificates, verify domain ownership, and then attach the validated certificates to a Lightsail load balancer or distribution\.
@@ -41,7 +41,7 @@ You can create up to two SSL/TLS certificates per load balancer\. Only one certi
 
 To enable HTTPS on your load balancer, you must follow these steps in order\.
 
-![\[HTTPS process overview\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/create-https-load-balancer-process-summary.png)
+![\[HTTPS process overview\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/create-https-load-balancer-process-summary.png)
 
 You can get started with enabling HTTPS on your load balancer by following these links\.
 +  [Create a Lightsail load balancer and attach instances to it](create-lightsail-load-balancer-and-attach-lightsail-instances.md) 
@@ -49,4 +49,4 @@ You can get started with enabling HTTPS on your load balancer by following these
 +  [Verify domain ownership](verify-tls-ssl-certificate-using-dns-cname-https.md) 
 +  [Attach your validated certificate to enable HTTPS](attach-validated-certificate-to-load-balancer.md) 
 
-For more information about load balancers, see [Lightsail load balancers](understanding-lightsail-load-balancers.md)\.
+For more information about load balancers, see [Amazon Lightsail load balancers](understanding-lightsail-load-balancers.md)\.

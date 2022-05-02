@@ -1,14 +1,14 @@
 # Remove the Bitnami banner from "Certified by Bitnami" blueprint applications on Amazon Lightsail instances<a name="amazon-lightsail-remove-bitnami-banner"></a>
 
- *Last updated: November 4, 2020* 
+ *Last updated: February 23, 2022* 
 
 Some of the "Certified by Bitnami" blueprints that can be selected for Amazon Lightsail instances display a Bitnami banner on the home page of the application\. In the following example from a "Certified by Bitnami" WordPress instance, the Bitnami banner is displayed in the bottom\-right corner of the home page\. In this guide, we show you how to permanently remove the Bitnami icon from the home page of the application on your instance\.
 
-![\[Bitnami banner on the WordPress application home page\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/bitnami-banner.png)
+![\[Bitnami banner on the WordPress application home page\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/bitnami-banner.png)
 
 Not all "Certified by Bitnami" blueprint applications display the Bitnami banner on the home page of the application\. Visit the home page of your Lightsail instance to determine if a Bitnami banner is displayed\. In the following example from a "Certified by Bitnami" Nginx instance, the Bitnami icon is not displayed\. Instead, a place\-holder information page is displayed, which is eventually replaced by the application that you choose to deploy on your instance\. If your instance doesn't display a Bitnami banner, then you don't have to follow the procedures in this guide\.
 
-![\[The Nginx application home page without a Bitnami banner\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/no-bitnami-banner.png)
+![\[The Nginx application home page without a Bitnami banner\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/no-bitnami-banner.png)
 
 ## Remove the Bitnami banner from your instance<a name="remove-bitnami-banner"></a>
 
@@ -17,7 +17,7 @@ Complete the following procedure to confirm that your instance has a Bitnami ico
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. In the **Instances** tab of the Lightsail home page, copy the public IP address of the instance that you want to confirm\.  
-![\[Public IP address of a Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-instance-public-ip-address.png)
+![\[Public IP address of a Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-instance-public-ip-address.png)
 
 1. Open a new browser tab, enter the public IP address of your instance into the address bar, and press **Enter**\.
 
@@ -26,27 +26,25 @@ Complete the following procedure to confirm that your instance has a Bitnami ico
    1. If the Bitnami icon is not displayed on the page, then stop following these procedures\. You don't need to remove the Bitnami icon from the home page of your application\.
 
    1. If the Bitnami icon is displayed in the lower\-right corner of the page as shown in the following example, then continue to the following set of steps to remove it\.  
-![\[Bitnami banner on the WordPress application home page\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/bitnami-banner.png)
+![\[Bitnami banner on the WordPress application home page\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/bitnami-banner.png)
 
    In the following set of steps, you will connect to your instance using the Lightsail browser\-based SSH client\. After you're connected, you will run the Bitnami Configuration Tool \(bnconfig\) tool to remove the Bitnami icon from the home page of your application\. The bnconfig tool is a command line tool that allows you to configure you’re the application on your "Certified by Bitnami" blueprint instance\. For more information, see [Learn About The Bitnami Configuration Tool](https://docs.bitnami.com/aws/faq/configuration/understand-bnconfig/) in the *Bitnami documentation*\.
 
 1. Return to the browser tab that is on the Lightsail home page\.
 
 1. Choose the browser\-based SSH client icon that is next to the name of the instance that you wish to connect to\.  
-![\[The browser-based SSH client icon for a Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/browser-based-ssh-client-icon.png)
+![\[The browser-based SSH client icon for a Lightsail instance\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/browser-based-ssh-client-icon.png)
 
 1. After the SSH client is connected to your instance, enter one of the following commands:
 
-   1. If your instance uses Apache, then enter the following command\. The first part of this command disables the Bitnami banner, and the second part restarts the Apache service\.
+   1. If your instance uses Apache, then enter one of the following commands\. If one of the commands fails, try the other\. The first part of this command disables the Bitnami banner, and the second part restarts the Apache service\.
 
       ```
       sudo /opt/bitnami/apps/wordpress/bnconfig --disable_banner 1 && sudo /opt/bitnami/ctlscript.sh restart apache
       ```
 
-   1. If your instance uses Nginx, then enter the following command\. The first part of this command disables the Bitnami banner, and the second part restarts the Nginx service\.
-
       ```
-      sudo /opt/bitnami/apps/wordpress/bnconfig --disable_banner 1 && sudo /opt/bitnami/ctlscript.sh restart nginx
+      sudo /opt/bitnami/wordpress/bnconfig --disable_banner 1 && sudo /opt/bitnami/ctlscript.sh restart apache
       ```
 
    You can confirm that the process was successful by browsing to the public IP address of your instance and confirming that the Bitnami icon is gone\.

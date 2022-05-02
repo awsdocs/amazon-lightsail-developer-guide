@@ -37,11 +37,11 @@ Windows instance plans: $8 USD per month, $12 USD per month, and $20 USD per mon
 
 1. Choose one of the following options to add tags to your instance:
    + **Add key\-only tags** or **Edit key\-only tags** \(if tags have already been added\)\. Enter your new tag into the tag key text box, and press **Enter**\. Choose **Save** when you’re done entering your tags to add them, or choose **Cancel** to not add them\.  
-![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-key-only-tags.png)
+![\[Key-only tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-key-only-tags.png)
    + **Create a key\-value tag**, then enter a key into the **Key** text box, and a value into the **Value** text box\. Choose **Save** when you’re done entering your tags, or choose **Cancel** to not add them\.
 
      Key\-value tags can only be added one at a time before saving\. To add more than one key\-value tag, repeat the previous steps\.  
-![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-key-value-tag.png)
+![\[Key-value tags in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-key-value-tag.png)
 **Note**  
 For more information about key\-only and key\-value tags, see [Tags in Amazon Lightsail](amazon-lightsail-tags.md)\.
 
@@ -54,15 +54,15 @@ Within minutes, your Lightsail instance is ready and you can connect to it via S
 ## How to connect to your instance<a name="create-an-instance-connect-to-your-instance"></a>
 
 1. From the Lightsail home page, choose the menu on the right of your instance's name, and then choose **Connect**\.  
-![\[Connect to your instance from the home page\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-connect-to-your-instance.png)
+![\[Connect to your instance from the home page\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-connect-to-your-instance.png)
 
    Alternately, you can open your instance management page and choose the **Connect** tab\.  
-![\[Connect to your instance from the instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-connect-to-your-instance-from-instance-management-page.png)
+![\[Connect to your instance from the instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-connect-to-your-instance-from-instance-management-page.png)
 **Note**  
 If you want to connect to your instance using an SSH client such as PuTTy, you can follow this procedure: [Set up PuTTy to connect to your Lightsail instance](lightsail-how-to-set-up-putty-to-connect-using-ssh.md)\.
 
 1. You can now type commands into the terminal and manage your Lightsail instance without setting up an SSH client\.  
-![\[Browser-based SSH terminal in Amazon Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-bitnami-terminal-window.png)
+![\[Browser-based SSH terminal in Amazon Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-bitnami-terminal-window.png)
 
 ## Next steps<a name="create-an-instance-next-steps"></a>
 

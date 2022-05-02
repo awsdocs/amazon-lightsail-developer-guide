@@ -3,9 +3,9 @@
 **Note**  
 A firewall in Amazon Lightsail controls the traffic allowed to connect to your instance at the protocol and port level\. When you create a new instance, its firewall is preconfigured with a set of default rules that allow basic access to your instance\. Edit your instance's firewall, at any time, by adding and deleting firewall rules to allow traffic to reach your instance\.
 
- *Last updated: April 1, 2021* 
+ *Last updated: February 22, 2022* 
 
-The firewall in the Amazon Lightsail console acts as a virtual firewall that controls the traffic allowed to connect to your instance\. Each instance that you create in Lightsail has two firewalls; one for IPv4 addresses and another for IPv6 addresses \. Each firewall contains a set of rules that filter traffic coming into the instance\. Both firewalls are independent of each other; you must configure firewall rules separately for IPv4 and IPv6\. Edit your instance's firewall, at any time, by adding and deleting rules to allow or restrict traffic\. 
+The firewall in the Amazon Lightsail console acts as a virtual firewall that controls the traffic allowed to connect to your instance through its public IP address\. Each instance that you create in Lightsail has two firewalls; one for IPv4 addresses and another for IPv6 addresses\. Each firewall contains a set of rules that filter traffic coming into the instance\. Both firewalls are independent of each other; you must configure firewall rules separately for IPv4 and IPv6\. Edit your instance's firewall, at any time, by adding and deleting rules to allow or restrict traffic\. 
 
 **Contents**
 + [Understanding Lightsail firewalls](#understanding-firewalls)
@@ -23,7 +23,10 @@ Each Lightsail instance has two firewalls; one for IPv4 addresses and another fo
 
 Firewall rules are always permissive; you can't create rules that deny access\. You add rules to your instance's firewalls to allow traffic to reach your instance\. When you add a rule to your instance's firewall, you specify the protocol to use, the port to open, and the IPv4 and IPv6 addresses that are allowed to connect to your instance, as shown in the following example \(for IPv4\)\. You can also specify an application layer protocol type, which is a preset that specifies the protocol and port range for you based on the service that you plan to use on your instance\.
 
-![\[IPv4 firewall in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/firewall-rule-example.png)
+![\[IPv4 firewall in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/firewall-rule-example.png)
+
+**Important**  
+Firewall rules affect only traffic that flows in through the public IP address of an instance\. It does not affect traffic that flows in through the private IP address of an instance, which can originate from Lightsail resources in your account, in the same AWS Region, or resources in a peered virtual private cloud \(VPC\), in the same AWS Region\. 
 
 Firewall rules, and their configurable parameters are explained in the next few sections of this guide\.
 
@@ -90,7 +93,7 @@ The following application layer protocol types are available in the Lightsail co
 + **HTTPS** – Choose this option when you want to enable web browsers to establish an encrypted connection to a website that is hosted on your instance\. This enables TCP over port 443\.
 + **MySQL/Aurora** – Choose this option to enable a client to connect to a MySQL or Aurora database hosted on your instance\. This enables TCP over port 3306\. 
 + **Oracle\-RDS** – Choose this option to enable a client to connect to an Oracle or RDS database hosted on your instance\. This enables TCP over port 1521\.
-+ **Ping \(ICMP\)** – Choose this option to enable your instance to respond to requests using the Ping utility\. On the IPv4 fireall, this enables ICMP type 8 \(echo\) and code \-1 \(all codes\)\. On the IPv6 firewall, this enables ICMP type 129 \(echo reply\) and code 0\.
++ **Ping \(ICMP\)** – Choose this option to enable your instance to respond to requests using the Ping utility\. On the IPv4 firewall, this enables ICMP type 8 \(echo\) and code \-1 \(all codes\)\. On the IPv6 firewall, this enables ICMP type 129 \(echo reply\) and code 0\.
 + **RDP** – Choose this option to enable an RDP client to connect to your instance\. This enables TCP over port 3389\.
 + **SSH** – Choose this option to enable an SSH client to connect to your instance\. This enables TCP over port 22\.
 

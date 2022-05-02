@@ -53,7 +53,7 @@ You must install the AWS CLI and configure it for Lightsail before continuing wi
    In the example, *MyExampleBucket* is the source bucket for which access logs will be created, *MyExampleLogDestinationBucket* is the destination bucket where the access logs will be saved, and *logs/MyExampleBucket/* is the object key name prefix for the access logs\.
 
    You should see a result similar to the following example after running the command\. The source bucket is updated, and the access logs should begin generating and being stored on the destination bucket\.  
-![\[Access logging for a bucket enabled\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-enable-access-logging-for-a-bucket.png)
+![\[Access logging for a bucket enabled\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-enable-access-logging-for-a-bucket.png)
 
 ## Disabling access logging using the AWS CLI<a name="disabling-access-logging"></a>
 
@@ -79,7 +79,7 @@ You must install the AWS CLI and configure it for Lightsail before continuing wi
    ```
 
    You should see a result similar to the following example after running the command\.  
-![\[Access logging for a bucket disabled\]](https://d9yljz1nd5001.cloudfront.net/en_us/2c7274df55d082980824e6f5d4268a07/images/amazon-lightsail-disable-access-logging-for-a-bucket.png)
+![\[Access logging for a bucket disabled\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-disable-access-logging-for-a-bucket.png)
 
 ## Managing buckets and objects in Lightsail<a name="enabling-bucket-access-log-managing-buckets-and-objects"></a>
 
@@ -94,6 +94,7 @@ These are the general steps to manage your Lightsail object storage bucket:
 1. Learn about security best practices for buckets and the access permissions that you can configure for your bucket\. You can make all objects in your bucket public or private, or you can choose to make individual objects public\. You can also grant access to your bucket by creating access keys, attaching instances to your bucket, and granting access to other AWS accounts\. For more information, see [Security Best Practices for Amazon Lightsail object storage](amazon-lightsail-bucket-security-best-practices.md) and [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
 
    After learning about bucket access permissions, see the following guides to grant access to your bucket:
+   + [Block public access for buckets in Amazon Lightsail](amazon-lightsail-block-public-access-for-buckets.md)
    + [Configuring bucket access permissions in Amazon Lightsail](amazon-lightsail-configuring-bucket-permissions.md)
    + [Configuring access permissions for individual objects in a bucket in Amazon Lightsail](amazon-lightsail-configuring-individual-object-access.md)
    + [Creating access keys for a bucket in Amazon Lightsail](amazon-lightsail-creating-bucket-access-keys.md)

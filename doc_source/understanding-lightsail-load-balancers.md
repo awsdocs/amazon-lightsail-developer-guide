@@ -1,24 +1,24 @@
-# Lightsail load balancers<a name="understanding-lightsail-load-balancers"></a>
+# Amazon Lightsail load balancers<a name="understanding-lightsail-load-balancers"></a>
 
 **Note**  
-You can use Lightsail load balancers to add redundancy to your web application or to handle more web traffic\. You can attach Lightsail instances to your load balancer, and then you can configure HTTPS with a validated SSL/TLS certificate\. Lightsail also performs health checks on your instances so that you can monitor error codes, response time, and more\.
+You can use Lightsail load balancers to add redundancy to your web application or to handle more web traffic\. You can attach Lightsail instances to your load balancer, and then you can configure HTTPS with a validated SSL/TLS certificate\. Lightsail load balancers also perform HTTP to HTTPS redirection, TLS protocol configuration, instance health checks, and session persistence\.
 
- *Last updated: November 29, 2017* 
+ *Last updated: April 26, 2022* 
 
-A Lightsail load balancer distributes incoming web traffic among multiple Lightsail instances, in multiple Availability Zones\. Load balancing increases the availability and fault tolerance of the application on your instances\.
-
-You can add and remove instances from your Lightsail load balancer as your needs change, without disrupting the overall flow of requests to your application\.
+A Lightsail load balancer distributes incoming web traffic among multiple Lightsail instances, in multiple Availability Zones\. Load balancing increases the availability and fault tolerance of the application on your instances\. You can add and remove instances from your Lightsail load balancer as your needs change, without disrupting the overall flow of requests to your application\.
 
 With Lightsail load balancing, we create a DNS host name and route any requests sent to this host name to a pool of target Lightsail instances\. You can add as many target instances to your load balancer as you like, as long as you stay within your Lightsail account quotas for total number of instances\.
 
 ## Lightsail load balancer features<a name="lightsail-load-balancer-features"></a>
 
-The following features can be configured on Lightsail load balancers:
-+ You can set up HTTPS using a validated SSL/TLS certificate so that your load balancer can also handle encrypted traffic\. For more information, see [SSL/TLS certificates in Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)\.
-**Note**  
-By default, a Lightsail load balancer handles unencrypted traffic requests \(HTTP\) through port 80\.
-+ By default, a Lightsail load balancer performs health checks on the attached instances at the root of the web application\. The health checks monitor the health of the instances so that the load balancer can send requests only to the healthy instances\. For more information, see [Health checking for a Lightsail load balancer](understanding-lightsail-load-balancer-health-checking.md)\.
-+ You can also enable *session persistence* for your users\. This is helpful if you're storing session information locally in the user's browser\. For example, you might be running a Magento e\-commerce application with a shopping cart on Lightsail\. If your users add items to their shopping cart and then end their session, when they come back the shopping cart items will still be there if you turn on session persistence\. [Learn more about session persistence](enable-session-stickiness-persistence-or-change-cookie-duration.md)
+Lightsail load balancers offer the following features:
++ **HTTPS encryption** — By default, Lightsail load balancers handle unencrypted \(HTTP\) traffic requests through port 80\. Activate HTTPS encryption by attaching a validated Lightsail SSL/TLS certificate to your load balancer\. This allows your load balancer to handle encrypted \(HTTPS\) traffic requests through port 443\. For more information, see [SSL/TLS certificates in Amazon Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)\.
+
+  The following features are available after you activate HTTPS encryption on your load balancer:
+  + **HTTP to HTTPS redirection** — Activate HTTP to HTTPS redirection to automatically redirect HTTP requests to an HTTPS encrypted connection\. For more information, see [Configuring HTTP to HTTPS redirection for your Amazon Lightsail load balancer](amazon-lightsail-configure-load-balancer-https-redirection.md)\.
+  + **TLS security policies** — Configure a TLS security policy on your load balancer\. For more information, see [Configuring TLS security policies on your Amazon Lightsail load balancers](amazon-lightsail-configure-load-balancer-tls-security-policy.md)\.
++ **Health checking** — By default, health checks are performed on the attached instances at the root of the web application that is running on them\. The health checks monitor the health of the instances so that the load balancer can send requests only to the healthy instances\. For more information, see [Health checking for a Lightsail load balancer](understanding-lightsail-load-balancer-health-checking.md)\.
++ **Session persistence** — Configure session persistence if you're storing session information locally in your website visitors' browsers\. For example, you might be running a Magento e\-commerce application with a shopping cart on your load\-balanced Lightsail instances\. If your website visitors add items to their shopping carts, and then end their sessions, when they come back, the shopping cart items will still be there if you configured session persistence\. For more information, see [Enable session persistence for Amazon Lightsail load balancers](enable-session-stickiness-persistence-or-change-cookie-duration.md)\.
 
 ## When to use load balancers<a name="when-to-use-lightsail-load-balancers"></a>
 
@@ -30,14 +30,10 @@ You can use a load balancer to create a highly available website\. *High availab
 
 ## Recommended Lightsail applications for load balancing<a name="which-applications-are-good-for-load-balancing"></a>
 
-Not all Lightsail applications need load balancers\. If you decide to create a load\-balanced application, you must configure your application first\. For example, to prepare a LAMP stack application for load balancing, you should first create a centralized, dedicated database on a separate Lightsail instance for all the target instances to read/write from\. You might also consider sharing the file system, depending on the type of application you want to deploy\.
-
-We have blueprint\-specific instructions in the following topic: [Configure your instances for load balancing](configure-lightsail-instances-for-load-balancing.md)\.
+Not all Lightsail applications need load balancers\. If you decide to create a load\-balanced application, you must configure your application first\. For example, to prepare a LAMP stack application for load balancing, you should first create a centralized, dedicated database for all the target instances to read from and write to\. You might also consider creating centralized media storage, such as a Lightsail object storage bucket\. For more information, see [Configure your Amazon Lightsail instances for load balancing](configure-lightsail-instances-for-load-balancing.md)\.
 
 ## Get started using load balancers<a name="get-started-using-lightsail-load-balancers"></a>
 
-You can [create a load balancer](create-lightsail-load-balancer-and-attach-lightsail-instances.md) using the Lightsail console, the AWS Command Line Interface, or the Lightsail API\.
+You can [create a load balancer](create-lightsail-load-balancer-and-attach-lightsail-instances.md) using the Lightsail console, the AWS Command Line Interface \(AWS CLIAWS CLI\), or the Lightsail API\. You must also [configure your instances for load balancing](configure-lightsail-instances-for-load-balancing.md)\.
 
-You must also [configure your instances for load balancing](configure-lightsail-instances-for-load-balancing.md)\.
-
-Once you create your load balancer and attach your configured instances, you can enable HTTPS using the following topic\. [Set up HTTPS for your Lightsail load balancer](create-tls-ssl-certificate-and-attach-to-lightsail-load-balancer-https.md)
+After you create your load balancer and attach your configured instances, you can enable HTTPS using the following topic\. For more information, see [Create an SSL/TLS certificate for your Lightsail load balancer](create-tls-ssl-certificate-and-attach-to-lightsail-load-balancer-https.md)\.
