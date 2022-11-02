@@ -42,11 +42,11 @@ We recommend that you create a snapshot of your WordPress instance before gettin
    define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/');
    ```
 
-1. Add the following lines of code to the file, where you previously deleted the code\.
+1. Add the following lines of code to the file, where you previously deleted the code\.  Add www to DOMAIN if you would like it so.
 
    ```
-   define('WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST'] . '/');
-   define('WP_HOME', 'https://' . $_SERVER['HTTP_HOST'] . '/');
+   define('WP_SITEURL', 'https://DOMAIN/');
+   define('WP_HOME', 'https://DOMAIN/');
    if (isset($_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO'])
    && $_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO'] === 'https') {
    $_SERVER['HTTPS'] = 'on';
