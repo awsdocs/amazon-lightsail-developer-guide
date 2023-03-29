@@ -102,7 +102,7 @@ For more information about Homebrew, see the [Homebrew](https://brew.sh/) websit
 1. Enter the following command to download the lightsailctl plugin and copy it to the bin folder\.
 
    ```
-   curl "https://s3.us-west-2.amazonaws.com/lightsailctl/latest/darwin-amd64/lightsailctl" -o "/usr/local/bin/lightsailctl"
+   curl "https://s3.us-west-2.amazonaws.com/lightsailctl/latest/darwin-$(uname -m)/lightsailctl" -o "/usr/local/bin/lightsailctl"
    ```
 
 1. Enter the following command to make the plugin executable\.
