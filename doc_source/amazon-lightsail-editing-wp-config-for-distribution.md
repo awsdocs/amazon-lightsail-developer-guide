@@ -1,6 +1,6 @@
 # Configuring your WordPress instance to work with your Amazon Lightsail distribution<a name="amazon-lightsail-editing-wp-config-for-distribution"></a>
 
- *Last updated: February 23, 2022* 
+ *Last updated: April 14, 2023* 
 
 In this guide, we show you how to configure your WordPress instance to work with your Amazon Lightsail distribution\. To configure your WordPress instance to work with your distribution, determine if: 
 + **Your WordPress website uses Hypertext Transfer Protocol \(HTTP\) only** \- If your website uses HTTP only, and is not configured to use HTTPS, then you must follow the instructions in the [Configure your WordPress instance to work with your distribution using SSL/TLS termination](#configuring-non-https-wordpress-for-distribution) section of this guide\.
@@ -42,16 +42,27 @@ We recommend that you create a snapshot of your WordPress instance before gettin
    define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/');
    ```
 
-1. Add the following lines of code to the file, where you previously deleted the code\.  Add www to DOMAIN if you would like it so.
+1. Add one of the following lines of code to the file depending on the version of WordPress that you're using:
+   + If you're using version 3\.3 or lower, add the following lines of code where you previously deleted the code\.
 
-   ```
-   define('WP_SITEURL', 'https://DOMAIN/');
-   define('WP_HOME', 'https://DOMAIN/');
-   if (isset($_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO'])
-   && $_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO'] === 'https') {
-   $_SERVER['HTTPS'] = 'on';
-   }
-   ```
+     ```
+     define('WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST'] . '/');
+     define('WP_HOME', 'https://' . $_SERVER['HTTP_HOST'] . '/');
+     if (isset($_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO'])
+     && $_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO'] === 'https') {
+     $_SERVER['HTTPS'] = 'on';
+     }
+     ```
+   + If you're using version 3\.3\.1\-5 or higher, add the following lines of code where you previously deleted the code\.
+
+     ```
+     define('WP_SITEURL', 'http://DOMAIN/');
+     define('WP_HOME', 'http://DOMAIN/');
+     if (isset($_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO'])
+     && $_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO'] === 'https') {
+     $_SERVER['HTTPS'] = 'on';
+     }
+     ```
 
 1. Press the **Esc** key to exit insert mode in Vim, then type `:wq!` and press **Enter** to save your edits \(write\) and quit Vim\.
 

@@ -1,6 +1,6 @@
 # Add the default domain of a distribution to a Lightsail container service<a name="amazon-lightsail-adding-distribution-default-domain-to-container-service"></a>
 
- *Last updated: January 25, 2022* 
+ *Last updated: November 1, 2022* 
 
 You can choose an Amazon Lightsail container service as the origin of a content delivery network \(CDN\) distribution\. The distribution then caches and serves the website or web application hosted on your container service\. If you're using a Lightsail distribution with your Lightsail container service, Lightsail automatically adds the default domain name of your distribution as a custom domain on your container service\. This enables traffic to be routed between your distribution and your container service\. However, you *must* perform the steps outlined in this guide to manually add the default domain name of your distribution to your container service under the following circumstances:
 + If something goes wrong and your distribution's default domain name is not automatically added to your container service\.

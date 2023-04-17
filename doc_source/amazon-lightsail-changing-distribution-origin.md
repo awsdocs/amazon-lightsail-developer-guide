@@ -1,6 +1,6 @@
 # Changing the origin of your Amazon Lightsail distribution<a name="amazon-lightsail-changing-distribution-origin"></a>
 
- *Last updated: July 23, 2020* 
+ *Last updated: November 30, 2022* 
 
 In this guide, we show you how to change the origin of your Amazon Lightsail distribution after you create it\. An origin is the definitive source of content for your distribution\. When you create your distribution, you choose the Lightsail instance, Lightsail bucket, or Lightsail load balancer \(with one or more instances attached to it\) that hosts the content of your website or web application\. For more information, see [Content delivery network distributions in Amazon Lightsail](amazon-lightsail-content-delivery-network-distributions.md)\.
 
@@ -48,8 +48,8 @@ Complete the following procedure to change your distribution's origin\.
 
    This option is listed in the **Choose your origin** section of the page, under the origin resource you selected for your distribution\.
 **Note**  
-When you select a Lightsail bucket as the origin of your distribution, the **Origin protocol policy** defaults to **HTTP only**\. You cannot change the origin protocol policy when a bucket is the origin of your distribution\.  
-![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/origin-protocol-policy.png)
+When you select a Lightsail bucket as the origin of your distribution, the **Origin protocol policy** defaults to **HTTPS only**\. You cannot change the origin protocol policy when a bucket is the origin of your distribution\.  
+![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/origin-protocol-policy.png)
 
 1. Choose **HTTP only** or **HTTPS only**, then choose **Save** to save the origin protocol policy\.
 

@@ -43,11 +43,11 @@ Complete the following procedure to enable IPv6 for instances, CDN distributions
 1. Choose the **Networking** tab in the resource's management page\.
 
 1. In the **IPv6 Networking** section of the page, choose the toggle to enable IPv6 for the resource\.  
-![\[Enable IPv6 in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-enable-ipv6.png)
+![\[Enable IPv6 in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-enable-ipv6.png)
 
    Be aware of the following items after you enable IPv6 for a resource:
    + If you enable IPv6 for a CDN distribution or load balancer, then that resource begins accepting IPv6 traffic\. If you enable IPv6 for an instance, then an IPv6 address is assigned to it, and the IPv6 firewall becomes available, as shown in the following example\.  
-![\[The instance IPv6 firewall in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-ipv6-firewall.png)
+![\[The instance IPv6 firewall in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-ipv6-firewall.png)
    + Instances that use the following blueprints require additional steps after enabling IPv6 to ensure the instance becomes aware of its new IPv6 address:
      + **cPanel** – For more information, see [Configuring IPv6 on cPanel instances in Amazon Lightsail](amazon-lightsail-configure-ipv6-on-cpanel.md)\.
      + **Debian 8** – For more information, see [Configuring IPv6 on Debian 8 instances in Amazon Lightsail](amazon-lightsail-configure-ipv6-on-debian.md)\.
@@ -70,4 +70,4 @@ Complete the following procedure to disable IPv6 for instances, CDN distribution
 1. Choose the **Networking** tab in the resource's management page\.
 
 1. In the **IPv6 Networking** section of the page, choose the toggle to disable IPv6 for the resource\.  
-![\[Disable IPv6 in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-disable-ipv6.png)
+![\[Disable IPv6 in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-disable-ipv6.png)

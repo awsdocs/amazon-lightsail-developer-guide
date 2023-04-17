@@ -3,7 +3,7 @@
 **Note**  
 IP addresses enable resources in your Amazon Lightsail account to communicate with each other, and with resources over the internet\. Lightsail instances, container services, content delivery network \(CDN\) distributions, and load balancers support both the IPv4 and IPv6 addressing protocols\.
 
- *Last updated: April 1, 2021* 
+ *Last updated: July 14, 2022* 
 
 You can communicate with your Lightsail instance, and other Lightsail resources, using their IP addresses\. For example, using the public IP address of your instance, you can check the network status of your instance \(using PING\), establish an SSH connection to your instance, and route traffic to your instance from a custom domain name\. There are many more things you can do with the IP address of your Lightsail resources\.
 
@@ -25,11 +25,11 @@ The private IP address of your instance can be accessible to other AWS resources
 
 The IP addresses of your instance are displayed in the following areas of the Lightsail console:
 + The following example shows the public IP address of an instance on the Lightsail home page\.  
-![\[Instance IP addresses on the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-home-page-ip-addresses.png)
+![\[Instance IP addresses on the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-home-page-ip-addresses.png)
 + The following example shows the public and private IP addresses of an instance in the header area of the instance management page\.  
-![\[Instance IP addresses in the header area of the instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-header-ip-addresses.png)
+![\[Instance IP addresses in the header area of the instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-header-ip-addresses.png)
 + The following example shows the public and private IP addresses of an instance on the **Networking** tab of the instance management page\.  
-![\[Instance IP addresses in the Networking tab of the instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-networking-tab-ip-addresses.png)
+![\[Instance IP addresses in the Networking tab of the instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-networking-tab-ip-addresses.png)
 
 Keep the following in mind when using the IPv4 addresses of your instances:
 + The public IP address of your instance might change\. Give your instance an IP address that never changes by attaching a static IP to it\. For more information, see the [Static IP addresses for instances](#static-ip-addresses-for-instances) section of this guide\.
@@ -38,17 +38,17 @@ Keep the following in mind when using the IPv4 addresses of your instances:
 
 ## Static IPv4 addresses for instances<a name="static-ip-addresses-for-instances"></a>
 
-The default public IPv4 address that is assigned to your instance when you create it will change when you stop and start your instance\. You can optionally create and attach a static IPv4 address to your instance\. The static IPv4 address replaces the default public IPv4 address of your instance, and it stays the same when you stop and start your instance\. For more information, see [Create a static IP and attach it to an instance in Amazon Lightsail](lightsail-create-static-ip.md)\.
+The default public IPv4 address that is assigned to your instance when you create it will change when you stop and start your instance\. You can optionally create and attach a static IPv4 address to your instance\. The static IPv4 address replaces the default public IPv4 address of your instance, and it stays the same when you stop and start your instance\. You can attach one static IP to an instance\. For more information, see [Create a static IP and attach it to an instance in Amazon Lightsail](lightsail-create-static-ip.md)\.
 
 After you create a static IP, and attach it to your instance, it is displayed in the following areas of the Lightsail console:
 + The following example shows the static IP address of an instance on the Lightsail home page\. The thumbtack icon signifies that the public IP address is static\.  
-![\[Instance static IP address in the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-home-page-static-ip-address.png)
+![\[Instance static IP address in the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-home-page-static-ip-address.png)
 + The following example shows the static IP address of an instance in the header area of the instance management page\. The thumbtack icon signifies that the public IP address is static\.  
-![\[Instance static IP address in the header area of the instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-header-static-ip-address.png)
+![\[Instance static IP address in the header area of the instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-header-static-ip-address.png)
 + The following example shows the static IP address of an instance on the **Networking** tab of the instance management page\. The default public IP address is no longer listed, and it has been replaced by the static IP address\. The thumbtack icon signifies that the public IP address is static\.  
-![\[Instance static IP address in the networking tab of the instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-networking-tab-static-ip-address.png)
+![\[Instance static IP address in the networking tab of the instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-networking-tab-static-ip-address.png)
 + You can view all of the static IPs that you've created by going to the Networking tab of the Lightsail home page as shown in the following example\.  
-![\[All static IP addresses in the Networking tab of the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-all-static-ip-addresses.png)
+![\[All static IP addresses in the Networking tab of the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-all-static-ip-addresses.png)
 
 ## IPv6 for instances, container services, CDN distributions, and load balancers<a name="ipv6-for-resources"></a>
 
@@ -56,11 +56,11 @@ IPv6 is enabled by default for Lightsail instances, container services, CDN dist
 
 After you enable IPv6 for a resource, it is displayed in the following areas of the Lightsail console:
 + The following example shows the IPv6 address of an instance on the Lightsail home page\.  
-![\[Instance IPv6 address in the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-home-page-ipv6-address.png)
+![\[Instance IPv6 address in the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-home-page-ipv6-address.png)
 + The following example shows the IPv6 address of a resource in the header area of the resource's management page\.  
-![\[Instance IPv6 address in the header area of the instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-header-ipv6-address.png)
+![\[Instance IPv6 address in the header area of the instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-header-ipv6-address.png)
 + The following example shows the IPv6 address of a resource on the Networking tab of the resource management page\.  
-![\[Instance IPv6 address in the Networking tab of the instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-networking-ipv6-address.png)
+![\[Instance IPv6 address in the Networking tab of the instance management page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-networking-ipv6-address.png)
 
 Keep the following in mind when you enable and use IPv6 for your resources:
 + Your resources can communicate over IPv4 only, or over IPv4 and IPv6 \(in dual\-stack mode\) when you enable IPv6 for a resource\.

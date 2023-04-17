@@ -15,14 +15,14 @@ Complete the following procedure to view objects stored in a bucket using the Li
 1. Choose the name of the bucket for which you want to view objects\.
 
 1. The **Objects browser** pane in the **Objects tab** displays the objects and folders that are stored in your bucket\.  
-![\[The object browser pane in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-bucket-object-browser-pane.png)
+![\[The object browser pane in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-bucket-object-browser-pane.png)
 
 1. Browse to the location of the object for which you want to view properties\.
 
 1. Add a checkmark next to the object for which you want to view properties\.
 
 1. The **Object properties** pane on the right side of the page displays information about the object\.  
-![\[The object properties pane in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-bucket-object-properties-pane.png)
+![\[The object properties pane in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-bucket-object-properties-pane.png)
 
    The information displayed includes:
 
@@ -80,7 +80,7 @@ These commands use the `--query` parameter to filter the response of the `list-o
    ```
 
    For the preceding command, you should see a result similar to the following example\.  
-![\[Result of the AWS CLI list-objects-v2 command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-s3api-list-objects-v2-result.png)
+![\[Result of the AWS CLI list-objects-v2 command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-s3api-list-objects-v2-result.png)
 
    Listing object keys that start with the `archived/` object key name prefix:
 
@@ -89,7 +89,7 @@ These commands use the `--query` parameter to filter the response of the `list-o
    ```
 
    For the preceding command, you should see a result similar to the following example\.  
-![\[Result of the AWS CLI list-objects-v2 command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-s3api-list-objects-v2-prefix-result.png)
+![\[Result of the AWS CLI list-objects-v2 command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-s3api-list-objects-v2-prefix-result.png)
 
 ## Managing buckets and objects in Lightsail<a name="viewing-objects-managing-buckets-and-objects"></a>
 

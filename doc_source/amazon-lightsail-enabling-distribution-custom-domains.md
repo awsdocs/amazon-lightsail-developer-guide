@@ -1,10 +1,11 @@
 # Enabling custom domains for your Amazon Lightsail distributions<a name="amazon-lightsail-enabling-distribution-custom-domains"></a>
 
- *Last updated: July 23, 2020* 
+ *Last updated: December 29, 2022* 
 
 Enable custom domains for your Amazon Lightsail distribution to use your registered domain names with your distribution\. Before you enable custom domains, your distribution accepts traffic only for the default domain that is associated with your distribution when you first create it \(e\.g\., `123456abcdef.cloudfront.net`\)\. When you enable custom domains, you must choose the Lightsail SSL/TLS certificate that you created for the domains that you want to use with your distribution\. After you enable custom domains, your distribution accepts traffic for all of the domains that are associated with the certificate that you chose\.
 
 **Important**  
+Only one certificate can be in use at a time per distribution\. If you disable custom domains on your distribution, your distribution is no longer able to handle HTTPS traffic for your registered domain until you enable custom domains again\.  
 The domain names associated with the SSL/TLS certificate cannot be in use by another distribution across all Amazon Web Services \(AWS\) accounts, including distributions on the Amazon CloudFront service\. You will be able to create the certificate for the domains, but you will not be able to use it with your distribution\.
 
 For more information about distributions, see [Content delivery network distributions in Amazon Lightsail](amazon-lightsail-content-delivery-network-distributions.md)\.
@@ -27,17 +28,19 @@ Complete the following procedure to enable custom domains for your distribution\
 
 1. Choose the **Custom domains** tab on your distribution's management page\.
 
-1. Under the **Use your custom domains with HTTPS** section of the page, use the toggle to enable custom domains with HTTPS for your distribution\.
+1. Choose **Attach certificate**\.
 
-1. To enable custom domains, choose the SSL/TLS certificate that you want to use with your distribution\.
+   If you have no certificates, then you must first create and validate an SSL/TLS certificate for your domains, before you can attach it to your distribution\. For more information, see [Creating SSL/TLS certificates for your Amazon Lightsail distribution](amazon-lightsail-create-a-distribution-certificate.md)\.
 
-   The domain names that are specified on the certificate are the domain names that are added to your distribution\.
+1. In the dropdown menu that appears, select a valid certificate for the domain\(s\) that you want to use with your distribution\.
 
-1. Choose **Save**\.
+1. Verify the certificate information is correct, then choose **Attach**\.
 
-   Your request to enable custom domains is submitted, and the status of your distribution is changed to **In progress**\. After a while, the status of your distribution changes to **Enabled**\.
+1. The distribution's **Status** will change to **Updating**\. After the status changes to **Enabled**, the certificate's domain will appear in the **Custom domains** section\. 
 
-After you enable custom domains for your distribution, you should update the DNS records of the domains so that traffic for those domains is directed to your distribution\. You do this by creating alias records that point to the default domain name of your distribution \(e\.g\., `123456abcdef.cloudfront.net`\)\. For more information, see [Pointing your domains to your Amazon Lightsail distributions](amazon-lightsail-point-domain-to-distribution.md)\.
+1. Choose **Add domain assignment** to point the domain to your distribution\.
+
+1. Verify the certificate and DNS information are correct, then choose **Add assignment**\. After a few moments, traffic for the domain that you selected will begin to be accepted by your distribution\.
 
 ## Additional information<a name="enabling-distribution-custom-domains-additional-information"></a>
 

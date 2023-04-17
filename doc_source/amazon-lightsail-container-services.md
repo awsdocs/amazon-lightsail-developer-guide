@@ -11,7 +11,7 @@ You can think of your Lightsail container service as a computing environment tha
 
 You can also run containers locally, on your local machine, by installing software such as Docker\. Amazon Elastic Container Service \(Amazon ECS\) and Amazon Elastic Compute Cloud \(Amazon EC2\) are other resources within the AWS infrastructure on which you can run containers\. For more information, see the [Amazon ECS Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)\.
 
-**Contents:**
+**Contents**
 + [Understanding containers](#understanding-containers)
 + [Understanding Lightsail container services](#understanding-lightsail-container-services)
   + [Lightsail container services](#lightsail-container-services)
@@ -42,7 +42,7 @@ The following are the key elements of Lightsail container services that you shou
 
 A container service is the Lightsail compute resource that you can create in any AWS Region in which Lightsail is available\. You can create and delete container services at any time\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md) and [Deleting Amazon Lightsail container services](amazon-lightsail-deleting-container-services.md)\.
 
-![\[Lighstail container service diagram\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-container-service-diagram.png)
+![\[Lighstail container service diagram\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-container-service-diagram.png)
 
 ### Container service capacity \(scale and power\)<a name="container-services-capacity"></a>
 

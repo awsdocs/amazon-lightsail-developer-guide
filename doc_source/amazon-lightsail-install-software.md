@@ -30,7 +30,7 @@ Always install the latest version of Docker\. Older versions of Docker are not g
 
 The AWS CLI is an open source tool that enables you to interact with AWS services, such as Lightsail, using commands in your command\-line shell\. You must install and use the AWS CLI to push your container images, created on your local machine, to your Lightsail container service\.
 
-The AWS is available in the following versions:
+The AWS CLI is available in the following versions:
 + **Version 2\.x** – The current, generally available release of the AWS CLI\. This is the most recent major version of the AWS CLI and supports all of the latest features, including the ability to push container images to your Lightsail container services\. Version 2\.1\.1 and later will work with the Lightsail Control plugin\.
 + **Version 1\.x** – The previous version of the AWS CLI that is available for backwards compatibility\. This version does not support the ability to push your container images to your Lightsail container services\. Therefore, you must install the AWS CLI version 2 instead\.
 
@@ -64,7 +64,7 @@ Complete the following procedure to install the lightsailctl plugin on Windows\.
 1. Choose the **Windows Start** button, and then search for `cmd`\.
 
 1. Right\-click the **Command Prompt** application in the results, and choose **Run as administrator**\.  
-![\[Run Command Prompt as administrator\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsailctl-cmd-run-as-administrator.png)
+![\[Run Command Prompt as administrator\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsailctl-cmd-run-as-administrator.png)
 **Note**  
 You may see a prompt that asks if you want to allow Command Prompt to make changes to your device\. You must choose **Yes** to continue with the installation\.
 
@@ -75,9 +75,29 @@ You may see a prompt that asks if you want to allow Command Prompt to make chang
    ```
 
    You should see a result similar to the following example\.  
-![\[Command line response to setx command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lighstailctl-setx-command.png)
+![\[Command line response to setx command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lighstailctl-setx-command.png)
 
-   You are now ready to use the AWS Command Line Interface \(AWS CLI\) to push container images to your Lightsail container service\. For more information, see [Pushing and managing container images on your Amazon Lightsail container services](amazon-lightsail-pushing-container-images.md)\.
+The `setx` command will truncate beyond 1024 characters\. Use the following procedure to manually set the path environment variable if you already have multiple variables set in your PATH\. 
+
+1. On the **Start** menu, open **Control Panel**\.
+
+1. Choose **System and Security**, then **System**\.
+
+1. Choose **Advanced system settings**\.
+
+1. On the **Advanced** tab of the **System Properties** dialog box, choose **Environment Variables**\.
+
+1. In the **System Variables** box of the **Environment Variables** dialog box, select **Path**\.
+
+1. Choose the **Edit** button located under the **System Variables** box\.  
+![\[Windows system variables\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-windows-system-variables.png)
+
+1. Choose **New**, then enter the following path: `C:\Temp\lightsailctl\`  
+![\[Windows environment variables\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-windows-edit-env-variable.png)
+
+1. Choose **OK** in three successive dialog boxes, and then close the **System** dialog box\.
+
+You are now ready to use the AWS Command Line Interface \(AWS CLI\) to push container images to your Lightsail container service\. For more information, see [Pushing and managing container images on your Amazon Lightsail container services](amazon-lightsail-pushing-container-images.md)\.
 
 ### Install the lightsailctl plugin on macOS<a name="install-lightsailctl-on-macos"></a>
 

@@ -9,7 +9,7 @@ If you create a new deployment, then the existing utilization metrics of your co
 
 For more information about container services, see [Container services in Amazon Lightsail](amazon-lightsail-container-services.md)\.
 
-**Contents:**
+**Contents**
 + [Prerequisites](#creating-container-deployments-prerequisites)
 + [Deployment parameters](#creating-container-deployments-parameters)
   + [Container entry parameters](#creating-deployments-container-entry)
@@ -42,7 +42,7 @@ This section describes the parameters that you can specify for the container ent
 
 You can add up to 10 container entries in your deployment\. Each container entry has the following parameters that you can specify:
 
-![\[Deployment configuration of a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-service-deployment-config.png)
+![\[Deployment configuration of a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/container-service-deployment-config.png)
 + **Container name** – Enter a name for the container\. All containers within a deployment must have unique names, and must contain only alphanumeric characters and hyphens\. A hyphen can separate words but it cannot be at the start or end of the name\.
 + **Source image** – Specify a source container image for the container\. You can specify container images from the following sources:
   + A public registry, such as the Amazon ECR Public Gallery, or some other public container image registry\.
@@ -64,7 +64,7 @@ You can use your own custom domain name with your container service\. For more i
 
 The public endpoint of your deployment, and container service, has the following parameters that you can specify:
 
-![\[Public endpoint of a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-service-deployment-public-endpoint-config.png)
+![\[Public endpoint of a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/container-service-deployment-public-endpoint-config.png)
 + **Endpoint container** – Select the name of the container in your deployment that will serve as the public endpoint of your container service\. Only the containers that have an HTTP or HTTPS port open in the deployment are listed in the dropdown menu\.
 + **Port** – Select the HTTP or HTTPS port to use for the public endpoint\. Only the HTTP and HTTPS ports that are open on the selected container are listed in the dropdown menu\. Select an HTTP port if the selected container is not configured to support an HTTPS connection when first launched\.
 **Note**  
@@ -90,15 +90,15 @@ Using environment variables, you can open communications between containers with
 
 To open communication between containers within the same container service, add an environment variable to your container deployment that references `localhost` as shown in the following example\.
 
-![\[Container deployment with a localhost environment variable in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-container-service-environment-variable-localhost.png)
+![\[Container deployment with a localhost environment variable in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-container-service-environment-variable-localhost.png)
 
 To open communication between containers that are in different container services, add an environment variable to your container deployment that references the private domain \(for example, `container-service-1.service.local`\) of the other container service as shown in the following example\.
 
-![\[Container deployment with a private domain environment variable in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-container-service-environment-variable-private-domain.png)
+![\[Container deployment with a private domain environment variable in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-container-service-environment-variable-private-domain.png)
 
 To open communication between containers and other resources, add an environment variable to your container deployment that references the public endpoint URL of the resource\. For example, the public endpoint of a Lightsail managed database is typically `ls-123abc.czoexamplezqi.us-west-2.rds.amazonaws.com`\. So you should reference that in the environment variable as shown in the following example\.
 
-![\[Container deployment with a resource public endpoint URL environment variable in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-container-service-environment-variable-service.png)
+![\[Container deployment with a resource public endpoint URL environment variable in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-container-service-environment-variable-service.png)
 
 ## Container logs<a name="creating-deployments-container-logs"></a>
 
@@ -155,7 +155,7 @@ Complete the following procedure to create or modify a deployment on your Lights
    + If your container service has not had a deployment, choose **Create a deployment**\.
 
      The deployment form opens, where you can edit existing deployment parameters, or enter new deployment parameters\.  
-![\[Container service deployment form in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-service-deployment-form.png)
+![\[Container service deployment form in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/container-service-deployment-form.png)
 
 1. Enter the parameters of your deployment\. For more information about the deployment parameters that you can specify, see the [Deployment parameters](#creating-container-deployments-parameters) section earlier in this guide\.
 

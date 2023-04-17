@@ -1,6 +1,6 @@
 # Frequently Asked Questions in Amazon Lightsail<a name="amazon-lightsail-frequently-asked-questions-faq"></a>
 
- *Last updated: February 10, 2022* 
+ *Last updated: August 23, 2022* 
 
 This topic answers frequently asked questions \(FAQ\)\. If you have a FAQ that is not answered here, use the **Questions? Comments?** feedback button at the bottom of the page\. You can also post a question in the [Lightsail discussion forum](https://forums.aws.amazon.com/forum.jspa?forumID=231)\.
 
@@ -16,6 +16,7 @@ This topic answers frequently asked questions \(FAQ\)\. If you have a FAQ that i
 + [Certificates](#amazon-lightsail-faq-certificates)
 + [Manual and automatic snapshots](#amazon-lightsail-faq-snapshots)
 + [Networking](#amazon-lightsail-faq-networking)
++ [Domains](#amazon-lightsail-faq-domains)
 + [Billing and account management](#amazon-lightsail-frequently-asked-questions-faq-billing-and-account-management)
 + [Export to Amazon Elastic Compute Cloud \(Amazon EC2\)](#amazon-lightsail-faq-export-to-ec2)
 + [Tags in Lightsail](#amazon-lightsail-faq-tagging)
@@ -31,7 +32,7 @@ Amazon Lightsail is the easiest way to get started with AWS for developers, smal
 You can create preconfigured virtual private servers \(instances\) that include everything to easily deploy and manage your application, or create databases for which the security and health of the underlying infrastructure and operating system is managed by Lightsail\. Lightsail is best suited to projects that require a few dozen instances or less, and developers who prefer a simple management interface\. Common use cases for Lightsail include running websites, web applications, business software, blogs, e\-commerce sites, and more\. As your project grows, you can use load balancers and attached block storage with your instance to increase redundancy and uptime and access dozens of other AWS services to add new capabilities\.
 
 **Does Lightsail offer an API?**  
-Yes\. Everything you do in the Lightsail console is backed by a publically available API\. Learn how to install and use the Lightsail [CLI](https://docs.aws.amazon.com/cli/latest/reference/lightsail/index.html) and [API](http://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/Welcome.html)\.
+Yes\. Everything you do in the Lightsail console is backed by a publicly available API\. Learn how to install and use the Lightsail\.[CLI](https://docs.aws.amazon.com/cli/latest/reference/lightsail/index.html) and [API](http://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/Welcome.html)\.
 
 **How do I sign up for Lightsail?**  
 To start using Lightsail, choose [Get Started](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?client=lightsail) and log in\. You use your Amazon Web Services account to access Lightsail; if you don't already have one, you'll be prompted to create one\.
@@ -58,11 +59,11 @@ For more information, see [AWS Regions and Availability Zones in Lightsail](unde
 Availability Zones are collections of data centers that run on physically distinct, independent infrastructure and are engineered to be highly reliable\. Common points of failure such as generators and cooling equipment are not shared between Availability Zones\. Additionally, Availability Zones are physically separate, so that even extremely uncommon disasters such as fires, tornadoes, or flooding can affect only a single Availability Zone\.
 
 **What are the Lightsail service quotas?**  
-For the latest Lightsail service quotas, including which quotas can be increased, see the [Lightsail service quotas](https://docs.aws.amazon.com/general/latest/gr/lightsail.html#limits_lightsail) in the *AWS General Reference*\. If you need to increase a quota, please open a case with [customer service](https://console.aws.amazon.com/support/home?region=us-east-1)\.
+For the latest Lightsail service quotas, including which quotas can be increased, see the [Lightsail service quotas](https://docs.aws.amazon.com/general/latest/gr/lightsail.html#limits_lightsail) in the *AWS General Reference*\. If you need to increase a quota, please open a case with [AWS Support](https://console.aws.amazon.com/support/home?region=us-east-1)\.
 
 **How can I get more help?**  
 We're here for you\. Our context\-sensitive **Help** panel in Lightsail offers immediate helpful tips about your actions in the console\. From the Lightsail console, you can also access a library of [getting started guides](https://lightsail.aws.amazon.com/ls/docs/getting-started), [overviews](https://lightsail.aws.amazon.com/ls/docs/overview), and [how\-to topics](https://lightsail.aws.amazon.com/ls/docs/how-to)\. And if you want to use the Lightsail API, or AWS CLI, Lightsail has a full API reference for all supported programming languages\. You can also use Lightsail support resources\.  
-If you have an issue with your account or billing, contact [customer service](https://console.aws.amazon.com/support/home?region=us-east-2#/) online\. You get free 24x7 access with your Lightsail account\.  
+If you have an issue with your account or billing, contact [AWS Support](https://console.aws.amazon.com/support/home?region=us-east-2#/) online\. You get free 24x7 access with your Lightsail account\.  
 If you have a general question about how to use Lightsail, search the Lightsail documentation and [support forums](https://forums.aws.amazon.com/forum.jspa?forumID=231)\.  
 Additionally, AWS Support offers an array of paid plans to cover your individual needs\.
 
@@ -133,7 +134,7 @@ You can consume your data transfer allowance by transferring data into and out o
 • Data transferred out from Lightsail object storage to a Lightsail CDN distribution
 
 **Can I change the plan associated with my Lightsail bucket?**  
-Yes, you can change the storage plan of an individual Lighstail bucket one time within your monthly AWS billing cycle\.
+Yes, you can change the storage plan of an individual Lightsail bucket one time within your monthly AWS billing cycle\.
 
 **Can I copy objects from Lightsail object storage to Amazon S3?**  
 Yes, copying from Lightsail object storage to Amazon S3 is supported\. For more information, see [How can I copy all objects from one Amazon S3 bucket to another bucket?](https://aws.amazon.com/premiumsupport/knowledge-center/move-objects-s3-bucket/) in the *AWS Premium Support Knowledge Center*\.
@@ -186,7 +187,7 @@ Yes, container service power and scale can be changed at any time even after the
 Lightsail provides a HTTPS endpoint for every container service in the format `<service-name>.<random-guid>.<aws-region-name>.cs.amazonlightsail.com`\. Only the service name can be customized\. Alternately, you can use a custom domain name\. For more information, see [Enabling and managing custom domains for your Amazon Lightsail container services](amazon-lightsail-enabling-container-services-custom-domains.md)\.
 
 **Can I use custom domains for the HTTPS endpoint of a Lightsail container service?**  
-Yes\. You can create and attach an SSL/TLS certificate with custom domain names to your container service in Lightsail\. The certificates must be domain validated\. If you the DNS of your domain using a Lightsail DNS zone, you can add an address \(A for IPv4 or AAAA for IPv6\) to map the apex of your domain \(e\.g\., `example.com`\) or a subdomain \(e\.g\., `www.example.com`\) to your container services\. You can also add a canonical \(CNAME\) record to map a subdomain \(e\.g\., `www.example.com`\) to your container services\. Alternately, you can use a DNS hosting provider who supports adding ALIAS records to map the apex of your domain \(\.e\.g, `example.com`\) to the default domain \(public DNS\) of your Lightsail container service\. For more information, see [Enabling and managing custom domains for your Amazon Lightsail container services](amazon-lightsail-enabling-container-services-custom-domains.md)\.
+Yes\. You can create and attach an SSL/TLS certificate with custom domain names to your container service in Lightsail\. The certificates must be domain validated\. If the DNS of your domain uses a Lightsail DNS zone, you can route traffic for the apex of your domain \(`example.com`\) or a subdomain \(`www.example.com`\) to your container services\. Alternately, you can use a DNS hosting provider who supports adding ALIAS records to map the apex of your domain \(`example.com`\) to the default domain \(public DNS\) of your Lightsail container service\. For more information, see [Enabling and managing custom domains for your Amazon Lightsail container services](amazon-lightsail-enabling-container-services-custom-domains.md)\.
 
 **What do Lightsail container services cost?**  
 Lightsail container services are billed on an on\-demand hourly rate, so you pay only for what you use\. For every Lightsail container service you use, we charge you the fixed hourly price, up to the maximum monthly service price\. Maximum monthly service price can be calculated by multiplying the base price of the power of your service with the scale of your service\. For example, a service of Micro power and scale of 2 will cost a maximum of $10\*2=$20/month\. The least expensive Lightsail container service starts at $0\.0094 USD/hour \($7 USD/month\)\. Additional data transfer charges may apply for usage above the free\-quota of 500 GB per month for each service\. 
@@ -247,7 +248,7 @@ They can also allow you to scale your application to accept larger amounts of tr
 Lightsail manages a range of maintenance activities and security for your managed database and its underlying infrastructure\. Lightsail automatically backs up your database and allows point in time restore from the past 7 days using the database restore tool, to help protect against data loss or component failure\. Lightsail also automatically encrypts your data at rest and in motion for increased security and stores your database password for easy and secure connections to your database\. On the maintenance side, Lightsail runs maintenance on your database during your set maintenance window\. This maintenance include automatic upgrades to the latest minor database version and all management of the underlying infrastructure and operating system\.
 
 **What kinds of databases and what versions of these databases does Lightsail support?**  
-Lightsail managed databases support the latest major versions of MySQL\. Currently, these versions are MySQL 5\.6, 5\.7, and 8\.0\. Lightsail only provides the latest minor version for each major version option\.
+Lightsail managed databases support the latest major versions of MySQL and PostgreSQL\. Currently, these versions are MySQL 5\.7, MySQL 8\.0, PostgreSQL 9, PostgreSQL 10, PostgreSQL 11, and PostgreSQL 12\. Lightsail only provides the latest minor version for each major version option\.
 
 **What managed database plans does Lightsail offer?**  
 Lightsail offers 4 sizes of managed databases in standard and high availability plans\. Each plan comes with a fixed amount of storage and a monthly allowance of data transfer\. You can also scale up to larger plans over time, as needed, and switch between standard and high availability plans\. High availability plans mirror the same resources as standard plans and additionally include a standby database running in a separate Availability Zones from your primary database for redundancy\.
@@ -423,7 +424,7 @@ Yes, you can move your Lightsail distribution by creating a similarly configured
 Lightsail CDN distributions are created using fixed\-priced bundles of data transfer to make the cost of using the service simple and predictable\. Distribution bundles are designed to cover a month’s worth of usage\. Using distribution bundles in a way to avoid incurring overage fees \(including, but not limited to, frequently upgrading or downgrading bundles, or using an excessively large number of distributions with a single origin\) is beyond the intended scope of use and is not permitted\. In addition, workloads that involve a high number of requests per second or large amount of video streaming are not permitted\. Engaging in these behaviors may result in throttling or suspension of your data services or account\.
 
 **Do Lightsail CDN distributions support IPv6?**  
-All Lightsail CDN distributions have IPv6 enabled by default\. The distribution hostnames resolve to both IPv4 and IPv6 addresses\. IPv6 can be disabled via a toggle on the Networking tab of the CDN's management page\.
+All Lightsail CDN distributions have IPv6 enabled by default\. The distribution hostnames resolve to both IPv4 and IPv6 addresses\. IPv6 can be disabled by using a toggle on the Networking tab of the CDN's management page\.
 
 **Do the origins need to be IPv6 enabled to work with the Lightsail CDN distributions?**  
 No\. CDN distributions accept both IPv6 and IPv4 traffic, and seamlessly convert it to IPv4 when communicating with the origins in the backend\. Hence, origins behind a distribution can either be dual\-stack or IPv4 only\.
@@ -434,7 +435,7 @@ No\. CDN distributions accept both IPv6 and IPv4 traffic, and seamlessly convert
 SSL/TLS certificates are used to establish the identity of your website or application and secure connections between browsers and your website\. Lightsail provides a signed certificate to use with your load balancer, and the load balancer provides SSL/TLS termination before routing verified traffic to your target instances over the secure AWS network\. Lightsail certificates can only be used with Lightsail load balancers, not with individual Lightsail instances\.
 
 **How do I validate my certificate?**  
-Lightsail certificates are domain validated, meaning that you need to provide proof of identity by validating that you own or have access to your website’s domain before the certificate can be provisioned by the certificate authority\. When you request a new certificate, Lightsail will prompt you to add a CNAME to the DNS zone\(s\) of the domain or domains you are validating\. You will add this CNAME wherever you currently manage your DNS zones – either Lightsail DNS management or an external DNS hosting provider \(e\.g\., Route 53, GoDaddy, Namecheap, etc\.\)\.
+Lightsail certificates are domain validated, meaning that you need to provide proof of identity by validating that you own or have access to your website’s domain before the certificate can be provisioned by the certificate authority\. When you request a new certificate, Lightsail will attempt to automatically validate the certificate\. If the certificate cannot be validated automatically, Lightsail will prompt you to add a CNAME record to the DNS zone\(s\) of the domain or domains you are validating\. You’ll have 72 hours to add the CNAME record wherever you currently manage your DNS zones – either Lightsail DNS management or an external DNS hosting provider\.
 
 **What happens if I cannot validate my domain?**  
 You must be able to validate that you own a domain for security purposes\. This means if you or someone in your organization can't add a DNS record to validate your certificate for any reason, you will not be able to use an HTTPS\-enabled load balancer with Lightsail\.
@@ -512,12 +513,38 @@ Lightsail instances support dual\-stack \(IPv4 and IPv6\) and IPv4\-only configu
 **What is a static IP?**  
 A [static IP](understanding-static-ip-addresses-in-amazon-lightsail.md) is a fixed, public IP that is dedicated to your Lightsail account\. You can assign a static IPv4 address to an instance, replacing its public IPv4\. If you decide to replace your instance with another one, you can reassign the static IP to the new instance\. In this way, you don't have to reconfigure any external systems \(like DNS records\) to point to a new IP address every time you want to replace your instance\. Lightsail currently supports static IPs for IPv4 only\. Static IPv6 addresses are not available\. However, IPv6 addresses assigned to the instance remain unchanged until the instance is deleted or the IPv6 address is manually released by disabling IPv6 on the instance\.
 
+**How many static IPs can I attach to an instance?**  
+You can attach one static IP to an instance\.
+
 **What are DNS records?**  
-DNS is a globally distributed service that translates human readable names like www\.example\.com into numeric IP addresses, like 192\.0\.2\.1 that computers use to connect to each other\. With Lightsail, you can easily map your registered domain names such as photos\.example\.com to the public IPs of your Lightsail instances\. In this way, when users type human readable names like example\.com into their browsers, Lightsail automatically translates the address into the IP of the instance you want to direct your users to\. Each of these translations is referred to as a DNS query\.  
-It's important to know that to use a domain in Lightsail, you must first register it\. You can register new domains using [Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-register.html), or your preferred DNS registrar\.
+DNS is a globally distributed service that translates human readable names like `www.example.com` into alphanumeric IP addresses, like `192.0.2.1` that computers use to connect to each other\. With Lightsail, you can easily map your registered domain names such as `photos.example.com` to the public IPs of your Lightsail instances\. In this way, when users type human readable names like `example.com` into their browsers, Lightsail automatically translates the address into the IP of the instance you want to direct your users to\. Each of these translations is referred to as a DNS query\.  
+It's important to know that to use a domain in Lightsail, you must first register it\. You can register domains by using [Lightsail](amazon-lightsail-domain-registration.md), or your preferred DNS registrar\.
 
 **Can I manage firewall settings for my instance?**  
 Yes\. You can control the data traffic for your instances by using the Lightsail firewall\. From the Lightsail console, you can set rules about which ports of your instance are publicly accessible for different types of traffic\.
+
+## Domains<a name="amazon-lightsail-faq-domains"></a>
+
+**What can I do with Lightsail domains?**  
+Lightsail domains allow you to register and manage domains for your website or application\. If you have domains that are registered with other providers, you can transfer management of those domains to Lightsail\. You can also point those domains to your Lightsail resources\.
+
+**What top\-level domains \(TLDs\) can I use?**  
+Lightsail uses the same generic TLDs as Amazon Route 53\. If you would like to register a geographic domain, we recommend you use the Route 53 console\. Your geographic domain will be available in the Lightsail console after it has been registered using Route 53\. For more information about the TLDs that Lightsail supports, see [Domains that you can register with Amazon Route 53 in the Amazon Route 53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/registrar-tld-list.html#registrar-tld-list-index-generic) \.
+
+**Can I make Lightsail the DNS service for my existing domain?**  
+You can transfer DNS management of a domain that you registered using another DNS service provider to Lightsail\. For more information, see [Creating a DNS zone to manage your domain’s DNS records in Amazon Lightsail](lightsail-how-to-create-dns-entry.md)\.
+
+**How do I get started with domain registration in Lightsail?**  
+After logging in to Lightsail, you can use the [Lightsail console](https://lightsail.aws.amazon.com/) to create and manage domains\. For more information, see [Domain registration in Lightsail](amazon-lightsail-domain-registration.md)\.
+
+**When should I register a domain in Lightsail versus Route 53?**  
+Tasks such as registering a domain, creating DNS zones, and routing traffic for a domain to Lightsail resources are done in Lightsail\. We recommend using Route 53 for advanced tasks, such as extending domain registrations, transferring domains, including traffic policies, and creating private hosted zones\. 
+
+**Can I transfer my domain to Lightsail?**  
+You can transfer your domain to Route 53\. After the domain transfer is complete, your domain will be available in the Lightsail console\. For more information, see [Managing a Lightsail domain in Amazon Route 53](amazon-lightsail-manage-domain-advanced.md)\.
+
+**What Lightsail resources can I use with domains?**  
+After registering a domain in Lightsail, you can point your domain to a Lightsail instance, container, load balancer, static IP, or content distribution network \(CDN\)\.
 
 ## Billing and account management<a name="amazon-lightsail-frequently-asked-questions-faq-billing-and-account-management"></a>
 
@@ -530,10 +557,14 @@ Lightsail instances and managed databases incur charges until they are deleted\.
 **Can I try Lightsail instances for free?**  
 Yes\! Whether you're an existing or new AWS customer, you get 750 hours of free usage of the $3\.50 USD Lightsail plan for free\. You also can try Lightsail plans that include a Windows Server license for free using the $8 USD Windows plan\.  
 You can use your 750 hours of usage across as many instances as you like\. For example, you can run a single Lightsail instance for a whole month, or 10 Lightsail instances for 75 hours\. The free trial offer is only applicable to usage within the first calendar month from when you sign up to use Lightsail\. If your account is linked to an organization \(under AWS Organizations\), only one account within the organization can benefit from the AWS Free Tier offers\.  
-For a limited time, Lightsail is extending its free tier to include three months free on select instance plans\. The offer applies to new or existing AWS accounts who started using Lightsail on or after July 8, 2021\. Offer only applies to one bundle per account\. Standard charges apply after the first 750 hours of usage of the selected bundle each month\.  
+For a limited time, Lightsail is extending its free trial to include three months free on select instance plans\. The offer applies to new or existing AWS accounts who started using Lightsail on or after July 8, 2021\. Offer only applies to one bundle per account\. Standard charges apply after the first 750 hours of usage of the selected bundle each month\.  
 You can use the following instance plans free for three months:  
 + Linux/Unix instance plans: $3\.50 USD per month, $5 USD per month, and $10 USD per month
 + Windows instance plans: $8 USD per month, $12 USD per month, and $20 USD per month
+
+**When does the Lightsail free trial start? **  
+The Lightsail free trial benefits start when the first free trial eligible resource is launched\.  
+The extended three\-month free trial for instances and databases is applicable only on select plans \(bundles\)\. The offer applies to new or existing AWS accounts that started using Lightsail on or after July 8, 2021\. For more information, see the [Lightsail pricing page](https://aws.amazon.com/lightsail/pricing/)\.
 
 **What do Lightsail managed databases cost?**  
 Lightsail managed databases come in 4 plan sizes and start at $15 USD per month for a 1GB RAM database instance with 40 GB of SSD storage and 100 GB data transfer allowance\. High Availability plans costs two times the Standard plan prices, because they run an additional database instance and storage disk in another Availability zone for redundancy\.
@@ -609,8 +640,11 @@ Data transfer allowances for Lightsail managed databases are the same in all reg
 Every Lightsail instance plan includes a data transfer allowance\. For example, using the $3\.50 USD per month plan, your instance can send to the internet and receive from the internet up to 1 TB of data each month, at no extra charge\. Your data transfer allowance resets every month, and your instance can consume it whenever it needs to within the month\.  
 After your instance reaches its data transfer allowance for the month, data transfer out to the internet is billed starting at $0\.09 USD per GB depending on the AWS Region in which your instance is located\. If you delete your instance and create another one in the same month, in the same AWS Region, the free data transfer allowance is shared between the two instances\.
 
+**What do Lightsail domains cost?**  
+The prices listed in the linked \.pdf file apply for new domain name registrations, renewals of existing domain name registrations as of December 22 2021\. All prices include a DNS zone and privacy protection\. For information about the cost of registering domains, see [Amazon Route 53 Pricing for Domain Registration](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf), and [Domain registration in Lightsail](amazon-lightsail-domain-registration.md)\. 
+
 **What does Lightsail DNS management cost?**  
-DNS management is free within Lightsail\. You can create up to 3 DNS zones and as many records as you want for each DNS zone\. You also get a monthly allowance of 3 million DNS queries per month to your zones\. Beyond your first 3 million queries in a month, you are charged $0\.40 USD per 1 million DNS queries\.
+DNS management is free within Lightsail\. You can create up to 6 DNS zones and as many records as you want for each DNS zone\. You also get a monthly allowance of 3 million DNS queries per month to your zones\. Beyond your first 3 million queries in a month, you are charged $0\.40 USD per 1 million DNS queries\.
 
 **What do Lightsail snapshots cost?**  
 Lightsail snapshots \(manual and automatic\) cost $0\.05 USD/GB\-month to store\. This means that if you create a snapshot of an instance that is using 28 GB of space, and keep it for a month, you pay $1\.40 USD for the month\.  

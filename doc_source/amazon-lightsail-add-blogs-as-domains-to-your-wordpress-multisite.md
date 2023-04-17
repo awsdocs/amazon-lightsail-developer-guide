@@ -1,6 +1,6 @@
 # Add blogs as domains to your WordPress Multisite instance in Amazon Lightsail<a name="amazon-lightsail-add-blogs-as-domains-to-your-wordpress-multisite"></a>
 
- *Last updated: February 23, 2022* 
+ *Last updated: November 1, 2022* 
 
 A WordPress Multisite instance in Amazon Lightsail is designed to use multiple domains, or subdomains, for each blog site that you create within that instance\. In this guide, we’ll show you how to add a blog site using a different domain than your main blog’s primary domain on your WordPress Multisite instance\. For example, if your main blog’s primary domain is `example.com`, you can create new blog sites that use the `another-example.com` and `third-example.com` domains on the same instance\.
 
@@ -28,30 +28,30 @@ You must complete step 4 listed in the prerequisites section of this guide befor
 
 1. Sign in to the administration dashboard of your WordPress Multisite instance\.
 **Note**  
-For more information, see [Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
+For more information, see [Getting the application user name and password for your Bitnami instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
 
 1. Choose **My Sites**, then **Network Admin**, and **Sites** in the top navigation pane\.  
-![\[Sites menu in the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-multisite-add-blogs-as-subdomains-sites-menu.png)
+![\[Sites menu in the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-multisite-add-blogs-as-subdomains-sites-menu.png)
 
 1. Choose **Add New** to add a new blog site\.
 
 1. Enter a site address into the **Site Address \(URL\)** text box\. This is domain that will be used for the new blog site\. For example, if your new blog site will use `example-blog.com` as the domain, then enter `example-blog` into the **Site Address \(URL\)** text box\. Ignore the primary domain suffix displayed on the page\.  
-![\[Ignore the domain suffix in the WordPress administration dashboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-multisite-add-blogs-as-domains-ignore-domain-suffix.png)
+![\[Ignore the domain suffix in the WordPress administration dashboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-multisite-add-blogs-as-domains-ignore-domain-suffix.png)
 
 1. Enter a site title, select a site language, and enter an admin email\.
 
 1. Choose **Add Site**\.
 
 1. Choose **Edit Site** in the confirmation banner that appears on the page\. This will redirect you to edit the details of the site that you recently created\.  
-![\[Edit Site page\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-multisite-add-blogs-as-domains-edit-site.png)
+![\[Edit Site page\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-multisite-add-blogs-as-domains-edit-site.png)
 
 1. In the **Edit Site** page, change the subdomain that is listed in the **Site Address \(URL\)** text box to the apex domain that you want to use\. In this example, we specified `http://example-blog.com`\.  
-![\[Edit site address\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-multisite-add-blogs-as-domains-edit-site-address.png)
+![\[Edit site address\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-multisite-add-blogs-as-domains-edit-site-address.png)
 
 1. Choose **Save Changes**\.
 
    At this point, the new blog site has been created in your WordPress Multisite instance, but the domain is not yet configured to route to the new blog site\. Continue to the next step to add an address record \(A record\) to your domain’s DNS zone\.  
-![\[Sites list in the WordPress administartion dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-multisite-add-blogs-as-domains-sites-list.png)
+![\[Sites list in the WordPress administration dashboard.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-multisite-add-blogs-as-domains-sites-list.png)
 
 ## Add an address record \(A record\) to your domain’s DNS zone<a name="add-address-record-to-your-domains-dns-zone"></a>
 
@@ -60,23 +60,23 @@ Complete these steps to point the domain for your new blog site to your WordPres
 For demonstration purposes, we’ll use the Lightsail DNS zone\. However, the steps may be similar for other DNS zones typically hosted by domain registrars\.
 
 **Important**  
-You can create a maximum of three DNS zones in the Lightsail console\. If you need more DNS zones, we recommend using Amazon Route 53 to manage your domain’s DNS records\. For more information, see [Making Amazon Route 53 the DNS Service for an Existing Domain](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html)\.
+You can create a maximum of six DNS zones in the Lightsail console\. If you need more DNS zones, we recommend using Amazon Route 53 to manage your domain’s DNS records\. For more information, see [Making Amazon Route 53 the DNS Service for an Existing Domain](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/MigratingDNS.html)\.
 
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
-1. On the Lightsail home page, choose the **Networking** tab\.
+1. On the Lightsail home page, choose the **Domains & DNS** tab\.
 
 1. Under the **DNS zones** section of the page, choose the DNS zone for your new blog site’s domain\.
 
-1. In the DNS zone editor, choose **Add record**\.  
-![\[The DNS zone editor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-multisite-add-blogs-as-domains-dns-zone.png)
+1. In the DNS zone editor, choose the **DNS records** tab\. Then, choose **Add record**\.  
+![\[The DNS zone editor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-multisite-add-blogs-as-domains-dns-zone.png)
 
 1. Choose **A record** in the record type drop\-down menu\.
 
-1. In the **Subdomain** text box, enter an “at” \(@\) symbol to create a record for the root of the domain\.
+1. In the **Record name** text box, enter an “at” \(@\) symbol to create a record for the root of the domain\.
 
 1. In the **Resolves to** text box, choose the static IP address attached to your WordPress Multisite instance\.  
-![\[Adding an address record to the DNS zone in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-multisite-add-blogs-as-domains-a-record.png)
+![\[Adding an address record to the DNS zone in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-multisite-add-blogs-as-domains-a-record.png)
 
 1. Choose the Save icon\.
 
@@ -89,7 +89,7 @@ When you add blog sites as domains to your WordPress Multisite instance, you mus
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the Lightsail home page, choose the SSH quick connect icon for your WordPress Multisite instance\.  
-![\[SSH quick connect on the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-multisite-ssh-quick-connect.png)
+![\[SSH quick connect on the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-multisite-ssh-quick-connect.png)
 
 1. After your Lightsail browser\-based SSH session is connected, enter the following command to open and edit the `wp-config.php` file of your instance using Vim:
 
@@ -112,7 +112,7 @@ If this command fails, you might be using an older version of the WordPress Mult
    ```
 
    The file will look like the following when done:  
-![\[Edit to the wp-config file\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-multisite-add-blogs-as-domains-wp-config-edit.png)
+![\[Edit to the wp-config file\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-multisite-add-blogs-as-domains-wp-config-edit.png)
 
 1. Press the **Esc** key to exit insert mode in Vim, then type `:wq!` and press **Enter** to save your edits \(write\) and quit Vim\.
 

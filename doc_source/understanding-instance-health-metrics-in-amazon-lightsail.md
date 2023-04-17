@@ -3,22 +3,24 @@
 **Note**  
 Lightsail provides several health metrics for your resources to help you diagnose problems and keep your application running smoothly\.
 
- *Last updated: July 14, 2021* 
+ *Last updated: August 23, 2022* 
 
 You can view the following Amazon Lightsail resource metrics over different time periods\. For more information about resource metrics in Lightsail, see [Resource metrics in Amazon Lightsail](amazon-lightsail-resource-health-metrics.md)\.
 
 ## Instance metrics<a name="understanding-instance-metrics"></a>
 
 The following instance metrics are available\. For more information, see [Viewing instance metrics in Amazon Lightsail](amazon-lightsail-viewing-instance-health-metrics.md)\.
-+ **Burst capacity \(`BurstCapacityPercentage` and `BurstCapacityTime`\)** — Burst capacity percentage represents the percentage of burst capacity available to your instance\. Burst capacity minutes represents the time available for your instance to burst at 100% CPU utilization\. Your instance consumes burst capacity when operating in the bursting zone and accrues it when in the sustainable zone\. Burst capacity minutes is consumed at the full rate only when your instance operates at 100% CPU utilization\. For more information about instance burst capacity, see [Viewing instance burst capacity in Amazon Lightsail](amazon-lightsail-viewing-instance-burst-capacity.md)\.
 + **CPU utilization \(`CPUUtilization`\)** — The percentage of allocated compute units that are currently in use on the instance\. This metric identifies the processing power to run the applications on the instance\. Tools in your operating system can show a lower percentage than Lightsail when the instance is not allocated a full processor core\.
 
   When viewing the CPU utilization metric graphs for your instances in the Lightsail console, you will see sustainable, and burstable zones\. For more information about what these zones mean, see [CPU utilization sustainable and burstable zones](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-viewing-instance-health-metrics#cpu-utilization-zones)\.
++ **Burst capacity minutes \(`BurstCapacityTime`\) and percentage \(`BurstCapacityPercentage`\)** — Burst capacity minutes represent the amount of time available for your instance to burst at 100% CPU utilization\. Burst capacity percentage is the percentage of CPU performance available to your instance\. Your instance continuously consumes and accrues burst capacity\. Burst capacity minutes are consumed at the full rate only when your instance operates at 100% CPU utilization\. For more information about instance burst capacity, see [Viewing instance burst capacity in Amazon Lightsail](amazon-lightsail-viewing-instance-burst-capacity.md)\.
 + **Incoming network traffic \(`NetworkIn`\)** — The number of bytes received on all network interfaces by the instance\. This metric identifies the volume of incoming network traffic to the instance\. The number reported is the number of bytes received during the period\. Because this metric is reported in 5\-minute intervals, divide the reported number by 300 to find Bytes/second\.
 + **Outgoing network traffic \(`NetworkOut`\)** — The number of bytes sent out on all network interfaces by the instance\. This metric identifies the volume of outgoing network traffic from the instance\. The number reported is the number of bytes sent during the period\. Because this metric is reported in 5\-minute intervals, divide the reported number by 300 to find Bytes/second\.
 + **Status check failures \(`StatusCheckFailed`\)** — Reports whether the instance passed or failed both the instance status check and the system status check\. This metric can be either 0 \(passed\) or 1 \(failed\)\. This metric is available at a 1\-minute frequency\.
 + **Instance status check failures \(`StatusCheckFailed_Instance`\)** — Reports whether the instance passed or failed the instance status check\. This metric can be either 0 \(passed\) or 1 \(failed\)\. This metric is available at a 1\-minute frequency\.
 + **System status check failures \(`StatusCheckFailed_System`\)** — Reports whether the instance passed or failed the system status check\. This metric can be either 0 \(passed\) or 1 \(failed\)\. This metric is available at a 1\-minute frequency\.
++ **System status check failures \(`StatusCheckFailed_System`\)** — Reports whether the instance passed or failed the system status check\. This metric can be either 0 \(passed\) or 1 \(failed\)\. This metric is available at a 1\-minute frequency\.
++ **No token metadata requests \(`MetadataNoToken`\)** — The number of times that the instance metadata service was successfully accessed without a token\. This metric determines if there are any processes accessing instance metadata by using Instance Metadata Service Version 1, which doesn't use a token\. If all requests use token\-backed sessions, such as Instance Metadata Service Version 2, the value is 0\. For more information, see [Instance metadata and user data in Amazon Lightsail](amazon-lightsail-instance-metadata.md)\.
 
 ## Database metrics<a name="understanding-database-metrics"></a>
 

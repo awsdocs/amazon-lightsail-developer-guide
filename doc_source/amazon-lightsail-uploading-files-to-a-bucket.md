@@ -1,6 +1,6 @@
 # Uploading files to a bucket in Amazon Lightsail<a name="amazon-lightsail-uploading-files-to-a-bucket"></a>
 
- *Last updated: Januay 10, 2022* 
+ *Last updated: September 6, 2022* 
 
 When you upload a file to your bucket in the Amazon Lightsail object storage service, it is stored as an object\. Objects consist of the file data and metadata that describe the object\. You can have any number of objects in a bucket\.
 
@@ -72,7 +72,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
      ```
 
    You should see a result similar to the following example:  
-![\[Result of the AWS CLI put-object command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-s3api-put-object-result.png)
+![\[Result of the AWS CLI put-object command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-s3api-put-object-result.png)
 
 ## Managing buckets and objects in Lightsail<a name="uploading-files-managing-buckets-and-objects"></a>
 

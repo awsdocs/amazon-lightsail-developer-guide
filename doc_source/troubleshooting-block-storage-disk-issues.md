@@ -1,16 +1,20 @@
 # Troubleshooting disk issues in Lightsail<a name="troubleshooting-block-storage-disk-issues"></a>
 
- *Last updated: November 14, 2017* 
+ *Last updated: March 20, 2023* 
 
 You might encounter errors with your block storage disks in Lightsail\. This topic identifies common issues and workarounds for those errors\.
 
 ## General disk errors<a name="general-disk-errors"></a>
 
-Choose the issue below that best describes your problem, and follow the links to fix the issue\. If you encounter an issue that's not in the list, use the **Questions? Comments?** link at the bottom of this page to submit feedback or contact AWS Customer Support\.
+Choose the issue below that best describes your problem, and follow the links to fix the issue\. If you encounter an issue that's not in the list, use the **Questions? Comments?** link at the bottom of this page to submit feedback or contact [AWS Support](https://aws.amazon.com/premiumsupport/)\.
 
 **I can't delete a disk because it's still attached to an instance\.**  
 Try detaching the disk from your instance first, and then try to delete the disk\. For more information, see [Detach and delete a block storage disk in Lightsail](detach-and-delete-block-storage-disks.md)\.  
  *Actual error message:* **You can't perform this operation because the disk is still attached to a Lightsail instance: *YOUR\_INSTANCE*** 
+
+**My disk has a status of error\.**  
+ The **error** status indicates that the underlying hardware related to your Lightsail disk has failed\. You can restore the disk from a recent snapshot, otherwise the data associated with the disk is unrecoverable\. For more information, see [Creating a block storage disk from a snapshot in Amazon Lightsail](create-new-block-storage-disk-from-snapshot.md)\.  
+You are not billed for disks with a status of **error**\. 
 
 **I can't detach a disk because the Lightsail instance is still running\.**  
 Try stopping your instance first, and then try to detach the disk\. For more information, see [Stop an instance in Lightsail](lightsail-how-to-start-stop-or-restart-your-instance-virtual-private-server.md)\.  
@@ -27,5 +31,5 @@ You might have reached your quota for the number of disks you can create\. Or yo
 **I can't attach my disk to my Lightsail instance**  
 If you encounter the following error, you need to recreate your disk in the same AWS Region and Availability Zone as the instance where you plan to attach the disk\.  
 
-![\[Block storage disk can't be attached because it's in the wrong Availability Zone\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/block-storage-disk-in-different-zone-than-lightsail-instance.png)
+![\[Block storage disk can't be attached because it's in the wrong Availability Zone\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/block-storage-disk-in-different-zone-than-lightsail-instance.png)
  *Actual error message:* **There are currently no instances in the *AWS Region* that can use this disk\.** 

@@ -19,7 +19,7 @@ Once you have a default Amazon VPC, follow these instructions to peer your Light
 1. Choose the **Advanced** tab\.
 
 1. Choose **Enable VPC peering** under the AWS Region where you want to enable it\.  
-![\[Enable VPC peering on the Account page\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-enable-vpc-peering.png)
+![\[Enable VPC peering on the Account page\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-enable-vpc-peering.png)
 
    If the peering connection fails, try to enable VPC peering again\. If it doesn't work, contact [AWS Customer Support](https://console.aws.amazon.com/support/home/)\.
 

@@ -42,14 +42,14 @@ Complete the following procedure to configure the security group so that your Wo
 1. In the **Endpoint & port** section, make a note of the **Endpoint name** and **Port** of the **Writer instance**\. You will need these later when configuring your Lightsail instance to connect to the database\.
 
 1. In the **Security** section, choose the active VPC security group link\. You will be redirected to your database’s security group\.  
-![\[Connectivity & security tab screenshot of the Amazon RDS console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-aurora-db-select-writer-instance.png)
+![\[Connectivity & security tab screenshot of the Amazon RDS console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-aurora-db-select-writer-instance.png)
 
 1. Make sure that the security group for your Aurora database is selected\.
 
 1. Choose the **Inbound rules** tab\.
 
 1. Choose **Edit inbound rules**\.  
-![\[Inbound rules tab screenshot of the Amazon RDS console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-aurora-select-security-group.png)
+![\[Inbound rules tab screenshot of the Amazon RDS console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-aurora-select-security-group.png)
 
 1. In the **Edit inbound rules** page, choose **Add rule**\.
 
@@ -60,7 +60,7 @@ Complete the following procedure to configure the security group so that your Wo
 1. In the **Source** text box, add the private IP address of your WordPress instance\. You must enter the IP addresses in CIDR notation, which means that you must append `/32`\. For example, to allow `192.0.2.0`, enter `192.0.2.0/32`\.
 
 1. Choose **Save rules**\.  
-![\[Inbound rules detail screenshot of the Amazon RDS console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-aurora-add-security-group-rule.png)
+![\[Inbound rules detail screenshot of the Amazon RDS console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-aurora-add-security-group-rule.png)
 
 ## Step 3: Connect to your Aurora database from your Lightsail instance<a name="connect-to-aurora-database-from-lightsail-instance"></a>
 
@@ -69,10 +69,10 @@ Complete the following procedure to confirm that you can connect to your Aurora 
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the Lightsail home page, choose the **Instances** tab\.  
-![\[Lightsail homepage.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-aurora-homepage-select-instances-tab.png)
+![\[Lightsail homepage.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-aurora-homepage-select-instances-tab.png)
 
 1. Choose the browser\-based SSH client icon for your WordPress instance to connect to it using SSH\.  
-![\[Browser-based SSH client icon.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-aurora-browser-based-ssh-client.png)
+![\[Browser-based SSH client icon.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-aurora-browser-based-ssh-client.png)
 
 1. After you're connected to your instance, enter the following command to connect to your Aurora database\. In the command, replace *DatabaseEndpoint* with the endpoint address of your Aurora database and replace *Port* with the port of your database\. Replace *MyUserName* with the name of the user that you entered when creating the database\.
 
@@ -81,7 +81,7 @@ Complete the following procedure to confirm that you can connect to your Aurora 
    ```
 
    You should see a response similar to the following example, which confirms that your instance can access and connect to your Aurora database\.  
-![\[Successful MySQL connection response.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-aurora-mysql-connect-message.png)
+![\[Successful MySQL connection response.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-aurora-mysql-connect-message.png)
 
    If you don’t see this response, or you get an error message, then you might need to configure the security group of your Aurora database to allow the private IP address of your Lightsail instance to connect to it\. For more information, see the [Configure the security group for your Aurora database](#configure-aurora-security-group) section of this guide\.
 
@@ -92,7 +92,7 @@ Now that you’ve confirmed you can connect to your database from your instance,
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. In the **Instances** tab, choose the browser\-based SSH client for your WordPress instance\.  
-![\[Browser-based SSH client icon.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-aurora-browser-based-ssh-client.png)
+![\[Browser-based SSH client icon.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-aurora-browser-based-ssh-client.png)
 
 1. After the browser\-based SSH client is connected to your WordPress instance, enter the following command\. The command transfers the data from the `bitnami_wordpress` database that is on your instance and moves it to your Aurora database\. In the command, replace *DatabaseUserName* with the name of the primary user that you entered when creating the Aurora database\. Replace *DatabaseEndpoint* with the endpoint address of your Aurora database\.
 
@@ -109,10 +109,10 @@ Now that you’ve confirmed you can connect to your database from your instance,
 1. At the `Enter password` prompt, enter the password for your Aurora database, and press **Enter**\.
 
    You won't be able to see the password while you type it\.  
-![\[Password prompt screenshot.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-aurora-mysql-dump-1.png)
+![\[Password prompt screenshot.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-aurora-mysql-dump-1.png)
 
    If the data transfer succeeds, a response similar to the following example is displayed:  
-![\[Successful transfer response.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-aurora-mysql-dump-2.png)
+![\[Successful transfer response.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-aurora-mysql-dump-2.png)
 
    If you get an error, confirm that you’re using the correct database user name, password, and endpoint, and try again\.
 
@@ -157,7 +157,7 @@ After you transfer your application data to your Aurora database, you should con
    ```
 
    A result similar to the following example appears, displaying your configuration details:  
-![\[WordPress configuration file.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-aurora-wpconfig.png)
+![\[WordPress configuration file.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-aurora-wpconfig.png)
 
 1. Enter the following command to restart the web services on your instance:
 
@@ -166,7 +166,7 @@ After you transfer your application data to your Aurora database, you should con
    ```
 
    When the services restart, a result similar to the following example is displayed:  
-![\[WordPress instances restart confirmation.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wp-aurora-service-restart.png)
+![\[WordPress instances restart confirmation.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wp-aurora-service-restart.png)
 
    Congratulations\! Your WordPress site is now configured to use your Aurora database\.
 **Note**  

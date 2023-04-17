@@ -23,7 +23,7 @@ Complete the following procedure to test your distribution\. We use the Chrome w
 1. Choose a static object, such as an image file \(\.jpg, \.png, \.gif\)\.
 
 1. In the **Header** panel that appears, you should see that the `via` and `x-cache` headers both mention CloudFront\. This confirms that your distribution is caching and serving content from your origin\. your   
-![\[Distribution test result\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/distribution-test-result.png)
+![\[Distribution test result\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/distribution-test-result.png)
 
 ## Additional information<a name="testing-distribution-additional-information"></a>
 

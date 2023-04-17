@@ -23,7 +23,7 @@ Complete the following procedure to configure HTTPS redirection on your load bal
 1. Choose the **Inbound traffic** tab\.
 
 1. In the **Protocols** section of the page, you can perform one of the following actions:  
-![\[The toggle to activate or deactivate HTTP to HTTPS redirection on a load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lighstail-load-balancer-redirection-toggle.png)
+![\[The toggle to activate or deactivate HTTP to HTTPS redirection on a load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lighstail-load-balancer-redirection-toggle.png)
    + Toggle the direction option to active to turn on HTTP to HTTPS redirection\.
    + Toggle the direction option to inactive to turn off HTTP to HTTPS redirection\.
 

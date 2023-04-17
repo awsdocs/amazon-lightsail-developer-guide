@@ -1,8 +1,8 @@
 # Using Amazon Route 53 to point a domain to an Amazon Lightsail instance<a name="amazon-lightsail-using-route-53-to-point-a-domain-to-an-instance"></a>
 
-*Last updated: March 8, 2021*
+*Last updated: November 1, 2022*
 
-The DNS zone in Amazon Lightsail makes it easy to point a registered domain name, like `example.com`, to your website running on a Lightsail instance\. You can create up to three Lightsail DNS zones \(for three domains\), and not all DNS record types are supported\. For more information about Lightsail DNS zones, see [DNS in Amazon Lightsail](understanding-dns-in-amazon-lightsail.md)\.
+The DNS zone in Amazon Lightsail makes it easy to point a registered domain name, like `example.com`, to your website running on a Lightsail instance\. You can create up to six Lightsail DNS zones, and not all DNS record types are supported\. For more information about Lightsail DNS zones, see [DNS in Amazon Lightsail](understanding-dns-in-amazon-lightsail.md)\.
 
 If the Lightsail DNS zone is too limited for you, then we recommend using an Amazon Route 53 hosted zone to manage your domain’s DNS records\. You can manage the DNS for up to 500 domains using Route 53, and it supports a greater variety of DNS record types\. Or, you might already be using Route 53 to manage your domain’s DNS records and prefer to continue using it\. This guide shows you how to edit the DNS records for a domain managed in Route 53 to point to your Lightsail instance\.
 
@@ -30,7 +30,7 @@ This procedure is also documented in the Route 53 Developer Guide\. For more inf
 1. Choose **Create record**\.
 
    The **Quick create record** page appears\.  
-![\[Create a record in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/create-record-set-alias-record-route-53-blank.png)
+![\[Create a record in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/create-record-set-alias-record-route-53-blank.png)
 **Note**  
 If you see the **Choose routing policy** page, then choose **Switch to quick create** to switch to the quick create wizard before continuing with the following steps\.
 
@@ -45,7 +45,7 @@ An address \(A\) record maps a domain, such as `example.com`, or a subdomain, su
    1. Enter the static IP address \(public IP address\) of your Lightsail instance in the **Value** text box\.
 
    1. Keep the TTL of 300, and the routing policy as **Simple routing**\.  
-![\[Address record example in a Route 53 hosted zone.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-route-53-hosted-zone-a-record.png)
+![\[Address record example in a Route 53 hosted zone.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-route-53-hosted-zone-a-record.png)
 **CNAME \- Routes traffic to another domain name and to some AWS resources**  
 A canonical name \(CNAME\) record maps an alias or subdomain, such as `www.example.com`, to a domain, such as `example.com`, or a subdomain, such as `www2.example.com`\. A CNAME record redirects one domain to another\.  
 
@@ -56,7 +56,7 @@ A canonical name \(CNAME\) record maps an alias or subdomain, such as `www.examp
    1. Enter a domain \(i\.e\., `example.com`\) or subdomain \(i\.e\., `another.example.com`\) in the **Value** text box\.
 
    1. Keep the TTL of 300, and the routing policy as **Simple routing**\.  
-![\[Canonical name record example in a Route 53 hosted zone.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-route-53-hosted-zone-cname-record.png)
+![\[Canonical name record example in a Route 53 hosted zone.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-route-53-hosted-zone-cname-record.png)
 
 1. Choose **Create records** to add the record to your hosted zone\.
 **Note**  

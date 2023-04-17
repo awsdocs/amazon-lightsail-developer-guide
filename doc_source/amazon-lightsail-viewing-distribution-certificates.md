@@ -1,6 +1,6 @@
 # Viewing SSL/TLS certificates for your Amazon Lightsail distribution<a name="amazon-lightsail-viewing-distribution-certificates"></a>
 
- *Last updated: July 23, 2020* 
+ *Last updated: November 1, 2022* 
 
 You can view the Amazon Lightsail SSL/TLS certificates that you created for your Lightsail distributions\. You do this by accessing the management page of any distribution in the Lightsail console\.
 
@@ -26,9 +26,9 @@ Complete the following procedure to view your distribution SSL/TLS certificates\
 
 1. Choose the **Custom domains** tab on your distribution's management page\.
 
-1. Scroll down to the **Certificates** section of the page\.
+1. Scroll down to the **Attached certificates** section of the page\.
 
-   All of your distribution certificates are listed under the **Certificates** section of the page\. Choose **Show details** to view your certificate's important dates, encryption details, identification, and validation records\. Your certificates are valid for 13 months from the date you created them, after which time Lightsail attempts to automatically revalidate them\. Don't delete the CNAME records that you added to your domain because they are required when your certificate is re\-validated on the **Valid until** date listed\.
+   All of your distribution certificates are listed under the **Attached certificates** section of the page\. Expand **Validation details** to view your certificate's important dates, encryption details, identification, and validation records\. Your certificates are valid for 13 months from the date you created them, after which time Lightsail attempts to automatically revalidate them\. Don't delete the CNAME records that you added to your domain because they are required when your certificate is re\-validated on the **Valid until** date listed\.
 
    After you have a valid SSL/TLS certificate to use with your distribution, you should enable custom domains so that you can use the domain names of the certificate on your distribution\. For more information, see [Enabling custom domains for your Amazon Lightsail distributions](amazon-lightsail-enabling-distribution-custom-domains.md)\.
 

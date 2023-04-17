@@ -1,18 +1,21 @@
 # Attach a validated SSL/TLS certificate to your Lightsail load balancer<a name="attach-validated-certificate-to-load-balancer"></a>
 
- *Last updated: November 29, 2017* 
+ *Last updated: November 1, 2022* 
 
-After you verify that you control your domain, you'll receive the following notification on the Lightsail load balancer management page\.
+After you verify that you control your domain, the certificate's status will change to **Valid**\.
 
-![\[Successful validation of domain\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/example-com-verified-and-ready-to-use.png)
+![\[Successful validation of domain\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/example-com-verified-and-ready-to-use.png)
 
 Your next step is to attach the certificate to your Lightsail load balancer\.
 
 1. From the Lightsail home page, choose **Networking**\.
 
-1. Choose your load balancer to manage it\.
+1. Choose your load balancer\.
 
-1. Select your certificate from the dropdown list where it says **Select an SSL/TLS certificate to enable HTTPS**\.
+1. Choose the **Custom domains** tab\.
 
-   Your certificate attaches and the yellow warning icon on the tab is gone\.  
-![\[HTTPS enabled with certificate attached\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/https-enabled-with-validated-certificate.png)
+1. In the **Certificates** section, choose **Attach certificate**\.
+
+1. Select a certificate from the dropdown list\.
+
+1. Choose **Attach** to attach the certificate\.

@@ -13,12 +13,12 @@ When you create a new database in Amazon Lightsail, you can let Lightsail create
 1. Choose the name of the database for which you want to manage the password\.
 
 1. On the **Connect** tab, under the **User name and passwords** section, choose **Show** to view the current database password\.  
-![\[Show database password\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-database-show-password.png)
+![\[Show database password\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-database-show-password.png)
 
 1. To change the database password, choose **Change password**\.
 
    You can opt to have Lightsail create a strong password for you, or you can enter your own password into the text box\.The password can include any printable ASCII character except "/", """, or "@"\. For MySQL databases, the password must contain from 8 to 41 characters\. For PostgreSQL, the password must contain from 8 to 128 characters\.  
-![\[Changing your database password\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-database-change-password.png)
+![\[Changing your database password\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-database-change-password.png)
 
 1. Choose **Save** when you’re done\.
 

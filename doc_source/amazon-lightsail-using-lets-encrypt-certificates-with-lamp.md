@@ -1,13 +1,13 @@
 # Tutorial: Using Let’s Encrypt SSL certificates with your LAMP instance in Amazon Lightsail<a name="amazon-lightsail-using-lets-encrypt-certificates-with-lamp"></a>
 
- *Last updated: October 15, 2020* 
+ *Last updated: December 7, 2022* 
 
 Amazon Lightsail makes it easy to secure your websites and applications with SSL/TLS using Lightsail load balancers\. However, using a Lightsail load balancer might not generally be the right choice\. Perhaps your site doesn't need the scalability or fault tolerance load balancers provide, or maybe you're optimizing for cost\.
 
 In the latter case, you might consider using Let's Encrypt to obtain a free SSL certificate\. If so, that's no problem\. You can integrate those certificates with Lightsail instances\. This tutorial shows you how to request a Let’s Encrypt wildcard certificate using Certbot, and integrate it with your LAMP instance\.
 
 **Note**  
-The Linux distribution used by "Certified by Bitnami" instances changed from Ubuntu to Debian in July, 2020\. Because of this change, some of the steps in this tutorial will differ depending on the Linux distribution of your instance\. All "Certified by Bitnami" instances created after the change use the Debian Linux distribution\. Instances created before the change will continue to use the Ubuntu Linux distribution\. To check the distribution of your instance, run the `uname -a `command\. The response will show either Ubuntu or Debian as your instance's Linux distribution\.
+The Linux distribution used by Bitnami blueprints changed from Ubuntu to Debian in July, 2020\. Because of this change, some of the steps in this tutorial will differ depending on the Linux distribution of your instance\. All Bitnami blueprint instances created after the change use the Debian Linux distribution\. Instances created before the change will continue to use the Ubuntu Linux distribution\. To check the distribution of your instance, run the `uname -a `command\. The response will show either Ubuntu or Debian as your instance's Linux distribution\.
 
 **Contents**
 + [Step 1: Complete the prerequisites](#complete-the-prerequisites-lets-encrypt-lamp)
@@ -26,7 +26,7 @@ Complete the following prerequisites if you haven’t already done so:
 + Create a LAMP instance in Lightsail\. To learn more, see [Create an Amazon Lightsail instance](how-to-create-amazon-lightsail-instance-virtual-private-server-vps.md)\.
 + Register a domain name, and get administrative access to edit its DNS records\. To learn more, see [DNS in Amazon Lightsail](understanding-dns-in-amazon-lightsail.md)\.
 **Note**  
-We recommend that you manage your domain’s DNS records using a Lightsail DNS zone\. To learn more, see [Creating a DNS zone to manage your domain’s DNS records in Amazon Lightsail](lightsail-how-to-create-dns-entry.md)\.
+We recommend that you manage your domain’s DNS records using a Lightsail DNS zone\. To learn more, see [Creating a DNS zone to manage your domain’s DNS records in Lightsail](lightsail-how-to-create-dns-entry.md)\.
 + Use the browser\-based SSH terminal in the Lightsail console to perform the steps in this tutorial\. However, you can also use your own SSH client, such as PuTTY\. To learn more about configuring PuTTY, see [Download and set up PuTTY to connect using SSH in Amazon Lightsail](lightsail-how-to-set-up-putty-to-connect-using-ssh.md)\.
 
 After you've completed the prerequisites, continue to the [next section](#install-certbot-on-your-instance-lamp) of this tutorial\.
@@ -40,14 +40,14 @@ Certbot is a client used to request a certificate from Let’s Encrypt and deplo
 1. Sign in to the [Lightsail console](https://lightsail.aws.amazon.com/)\.
 
 1. On the Lightsail home page, choose the SSH quick connect icon for the instance that you want to connect to\.  
-![\[SSH quick connect on the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-lamp-ssh-quick-connect.png)
+![\[SSH quick connect on the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-lamp-ssh-quick-connect.png)
 
 1. After your Lightsail browser\-based SSH session is connected, enter the following command to update the packages on your instance:
 
    ```
    sudo apt-get update
    ```  
-![\[Update the packages on your instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-lamp-ssh-lets-encrypt-update-packages.png)
+![\[Update the packages on your instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-lamp-ssh-lets-encrypt-update-packages.png)
 
 1. Enter the following command to install the software properties package\. Certbot’s developers use a Personal Package Archive \(PPA\) to distribute Certbot\. The software properties package makes it more efficient to work with PPAs\.
 
@@ -116,7 +116,7 @@ Begin the process of requesting a certificate from Let’s Encrypt\. Using Certb
    ```
 
    You should see a result similar to the following:  
-![\[Confirm the domain environment variables.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-ssh-lets-encrypt-confirm-variables.png)
+![\[Confirm the domain environment variables.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-ssh-lets-encrypt-confirm-variables.png)
 
 1. Enter the following command to start Certbot in interactive mode\. This command tells Certbot to use a manual authorization method with DNS challenges to verify domain ownership\. It requests a wildcard certificate for your top\-level domain, as well as its subdomains\.
 
@@ -133,7 +133,7 @@ Begin the process of requesting a certificate from Let’s Encrypt\. Using Certb
 1. Let’s Encrypt now prompts you to verify that you own the domain specified\. You do this by adding TXT records to the DNS records for your domain\. A set of TXT record values are provided as shown in the following example:
 **Note**  
 Let's Encrypt may provide a single or multiple TXT records that you must use for verification\. In this example, we were provided with two TXT records to use for verification\.  
-![\[TXT records for Let's Encrypt certificates.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-ssh-lets-encrypt-text-records.png)
+![\[TXT records for Let's Encrypt certificates.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-ssh-lets-encrypt-text-records.png)
 
 1. Keep the Lightsail browser\-based SSH session open—you return to it later in this tutorial\. Continue to the [next section](#add-a-text-record-to-your-domains-dns-zone-lets-encrypt-lamp) of this tutorial\.
 
@@ -142,25 +142,27 @@ Let's Encrypt may provide a single or multiple TXT records that you must use for
 Adding a TXT record to your domain’s DNS zone verifies that you own the domain\. For demonstration purposes, we use the Lightsail DNS zone\. However, the steps might be similar for other DNS zones typically hosted by domain registrars\.
 
 **Note**  
-To learn more about how to create a Lightsail DNS zone for your domain, see [Creating a DNS zone to manage your domain’s DNS records in Amazon Lightsail](lightsail-how-to-create-dns-entry.md)\.
+To learn more about how to create a Lightsail DNS zone for your domain, see [Creating a DNS zone to manage your domain’s DNS records in Lightsail](lightsail-how-to-create-dns-entry.md)\.
 
 **To add TXT records to your domain’s DNS zone in Lightsail**
 
-1. On the Lightsail home page, choose the **Networking** tab\.
+1. On the Lightsail home page, choose the **Domains & DNS** tab\.
 
 1. Under the **DNS zones** section of the page, choose the DNS Zone for the domain that you specified in the Certbot certificate request\.
 
-1. In the DNS zone editor, choose **Add record**\.  
-![\[DNS zone editor in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-dns-zone-editor.png)
+1. In the DNS zone editor, choose **DNS records**\.
 
-1. In the record type drop\-down menu, choose **TXT record**\.
+1. Choose **Add record**\.
 
-1. Enter the values specified by the Let’s Encrypt certificate request into the **Subdomain** and **Responds with** fields as shown in the following screenshot\.  
-![\[TXT records in the Lightsail DNS zone editor.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-dns-zone-editor-text-records.png)
+1. In the **Record type** drop\-down menu, choose **TXT record**\.
 
-1. Choose the Save icon\.
+1. Enter the values specified by the Let’s Encrypt certificate request into the **Record name** and **Responds with** fields\.
+**Note**  
+The Lightsail console pre\-populates the apex portion of your domain\. For example, if you want to add the `_acme-challenge.example.com` subdomain, then you only have to enter `_acme-challenge` into the text box, and Lightsail adds the `.example.com` portion for you when you save the record\.
 
-1. Repeat steps 3 through 6 to add the second set of TXT records specified by the Let’s Encrypt certificate request\.
+1. Choose **Save**\.
+
+1. Repeat steps 4 through 7 to add the second set of TXT records specified by the Let’s Encrypt certificate request\.
 
 1. Keep the Lightsail console browser window open—you return to it later in this tutorial\. Continue to the [next section](#confirm-the-text-records-have-propagated-lets-encrypt-lamp) of this tutorial\.
 
@@ -185,13 +187,13 @@ Use the MxToolbox utility to confirm that the TXT records have propagated to the
    ```
    _acme-challenge.example.com
    ```  
-![\[MXTookbox TXT record lookup.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-mxtoobox-text-record-lookup.png)
+![\[MXTookbox TXT record lookup.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-mxtoobox-text-record-lookup.png)
 
 1. Choose **TXT Lookup** to run the check\.
 
 1. One of the following responses occurs:
    + If your TXT records have propagated to the internet’s DNS, you see a response similar to the one shown in the following screenshot\. Close the browser window and continue to the [next section](#complete-the-lets-encrypt-certificate-request-lamp) of this tutorial\.  
-![\[Confirmation that TXT records propagated.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-mxtoobox-propagated-text-record-lookup.png)
+![\[Confirmation that TXT records propagated.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-mxtoobox-propagated-text-record-lookup.png)
    + If your TXT records have not propagated to the internet’s DNS, you see a **DNS Record not found** response\. Confirm that you added the correct DNS records to your domains’ DNS zone\. If you added the correct records, wait a while longer to let your domain’s DNS records propagate, and run the TXT lookup again\.
 
 ## Step 6: Complete the Let’s Encrypt SSL certificate request<a name="complete-the-lets-encrypt-certificate-request-lamp"></a>
@@ -201,12 +203,12 @@ Go back to the Lightsail browser\-based SSH session for your LAMP instance and c
 **To complete the Let’s Encrypt SSL certificate request**
 
 1. In the Lightsail browser\-based SSH session for your LAMP instance, press **Enter** to continue your Let’s Encrypt SSL certificate request\. If successful, a response similar to the one shown in the following screenshot appears:  
-![\[Successful Let's Encrypt certificate request.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-ssh-lets-encrypt-request-success.png)
+![\[Successful Let's Encrypt certificate request.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-ssh-lets-encrypt-request-success.png)
 
    The message confirms that your certificate, chain, and key files are stored in the `/etc/letsencrypt/live/Domain/` directory\. *Domain* will be your registered domain name, such as `/etc/letsencrypt/live/example.com/`\.
 
 1. Make note of the expiration date specified in the message\. You use it to renew your certificate by that date\.  
-![\[Let's Encrypt certificate renewal date.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-ssh-lets-encrypt-renewal-date.png)
+![\[Let's Encrypt certificate renewal date.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-ssh-lets-encrypt-renewal-date.png)
 
 1. Now that you have the Let’s Encrypt SSL certificate, continue to the [next section](#link-the-lets-encrypt-certificate-files-in-the-apache-directory-lamp) of this tutorial\.
 
@@ -223,7 +225,7 @@ Create links to the Let’s Encrypt SSL certificate files in the Apache server d
    ```
 
    You should see a response similar to the following:  
-![\[Instance services stopped.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-ssh-stop-services.png)
+![\[Instance services stopped.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-ssh-stop-services.png)
 
 1. Enter the following command to set an environment variable for your domain\.
 
@@ -246,7 +248,7 @@ Create links to the Let’s Encrypt SSL certificate files in the Apache server d
    ```
 
    You should see a result similar to the following:  
-![\[Confirm the the domain environment variable.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-ssh-lets-encrypt-confirm-domain-variable.png)
+![\[Confirm the the domain environment variable.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-ssh-lets-encrypt-confirm-domain-variable.png)
 
 1. Enter the following commands individually to rename your existing certificate files as backups, if any:
    + For newer instances that use the Debian Linux distribution:
@@ -295,7 +297,7 @@ Create links to the Let’s Encrypt SSL certificate files in the Apache server d
    ```
 
    You should see a result similar to the following:  
-![\[Instance services started.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-ssh-start-services.png)
+![\[Instance services started.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-ssh-start-services.png)
 
    Your LAMP instance is now configured to use SSL encryption\. However, traffic is not automatically redirected from HTTP to HTTPS\.
 
@@ -326,7 +328,7 @@ This tutorial uses Vim for demonstration purposes; however, you can use any text
    ```
 
    The result should look like the following:  
-![\[Apache configuration file edited for HTTP to HTTPS redirection.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-lamp-ssh-lets-encrypt-apache-config-file.png)
+![\[Apache configuration file edited for HTTP to HTTPS redirection.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-lamp-ssh-lets-encrypt-apache-config-file.png)
 
 1. Press the **ESC** key, and then enter `:wq` to write \(save\) your edits, and quit Vim\.
 

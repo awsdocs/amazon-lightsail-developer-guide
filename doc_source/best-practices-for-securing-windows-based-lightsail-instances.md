@@ -10,7 +10,7 @@ When you create a Windows Server\-based instance, Lightsail randomly generates a
 
 ## Managing your password<a name="best-practices-windows-security-password-management"></a>
 
-You can change the password on your Windows Server\-based instance to something you can remember\. This might be useful if you want to use a remote desktop client to access your Lightsail instance\. Lightsail never stores a password you generate\.
+You can change the password on your Windows Server\-based instance\. This might be useful if you want to use a remote desktop client to access your Lightsail instance\. Lightsail never stores a password you generate\.
 
 **Note**  
 You can use either the Lightsail\-generated password or your own custom password with the browser\-based RDP client in Lightsail\. If you use a custom password, you will be prompted for your password every time you log in\. It's easier to use the Lightsail\-generated default password with the browser\-based RDP client if you want quick access to your instance\. 
@@ -28,7 +28,7 @@ We recommend keeping your Windows Server\-based Lightsail instances updated with
 1. Type `sconfig`, and then press `Enter`\.
 
    Windows Update Settings \(number 5\) are at `Automatic` by default\.  
-![\[Server configuration in Windows Server 2016\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/configure-server-windows-based-lightsail.png)
+![\[Server configuration in Windows Server 2016\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/configure-server-windows-based-lightsail.png)
 
 1. To download and install new updates, type `6`, and then press `Enter`\.
 
@@ -37,7 +37,7 @@ We recommend keeping your Windows Server\-based Lightsail instances updated with
 1. Type `A` again to install **\(A\)ll updates**, and then press `Enter`\.
 
    When finished, you see a message with the installation results and more instructions \(if those apply\)\.  
-![\[Successfully downloaded and updated Windows Server 2016 security patch\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/download-install-updates-configure-server-windows-based-lightsail.png)
+![\[Successfully downloaded and updated Windows Server 2016 security patch\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/download-install-updates-configure-server-windows-based-lightsail.png)
 
 ## Enabling Account Lockout Policy in Windows Server<a name="best-practices-windows-security-enable-lockout"></a>
 
@@ -49,7 +49,7 @@ For more information, see [Account Lockout Policy](https://technet.microsoft.com
 
 By default, we open the following ports on your Windows Server\-based instances\.
 
-![\[Firewall settings\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/windows-ports-firewall-open-by-default.png)
+![\[Firewall settings\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/windows-ports-firewall-open-by-default.png)
 
 The ports you enable are exposed to the world and can't be restricted by source IP\. To restrict access to your instance, you can turn off these ports and only enable them when you need to access your instance\. Here's how:
 
@@ -60,6 +60,6 @@ The ports you enable are exposed to the world and can't be restricted by source 
 1. On the **Networking** page for your instance, choose **Edit rules**\.
 
 1. Delete the RDP/TCP/3389 rule by choosing the orange "x" next to the rule\.  
-![\[Close your RDP port by deleting this rule\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/windows-ports-firewall-delete-rdp-port.png)
+![\[Close your RDP port by deleting this rule\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/windows-ports-firewall-delete-rdp-port.png)
 
 1. Choose **Save**\.

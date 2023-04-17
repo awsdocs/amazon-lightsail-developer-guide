@@ -16,7 +16,7 @@ Add key\-value tags to the Lightsail resources that you want to organize in your
 
 It's a good idea to devise a set of tag keys that represent how you want to organize your costs\. Your cost allocation report displays the tag keys as additional columns with the applicable values for each row\. Therefore, it's more efficient to track your costs if you use a consistent set of tag keys\. For example, you can tag several Lightsail resources with a specific cost center\. You do this with a “Cost center” key and a numerical value pairing\. Then organize your billing information to see the billing for that cost center across several resources\. The following example shows key\-value tags that could be used to organize cost allocation:
 
-![\[Key-value tags for cost allocation.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-key-value-tags-for-cost-allocation.png)
+![\[Key-value tags for cost allocation.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-key-value-tags-for-cost-allocation.png)
 
 ## Step 2: Activate user\-defined cost allocation tags<a name="activate-user-defined-cost-allocation-tags"></a>
 

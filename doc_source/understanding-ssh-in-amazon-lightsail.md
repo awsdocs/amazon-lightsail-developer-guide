@@ -6,7 +6,7 @@ A key pair is a set of security credentials that you use to prove your identity 
 
 The key pair files contain the following text:
 
-![\[key pair file example\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/key-pairs-and-connecting-to-instances-01.png)
+![\[key pair file example\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/key-pairs-and-connecting-to-instances-01.png)
 
 On Linux and Unix instances, the private key allows you to establish a secure SSH connection to your instance\. On Windows instances, the private key decrypts the default administrator password that you use to establish a secure RDP connection to your instance\. 
 

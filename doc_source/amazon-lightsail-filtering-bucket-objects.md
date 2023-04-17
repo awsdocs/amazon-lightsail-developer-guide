@@ -17,7 +17,7 @@ Complete the following procedure to filter objects in a bucket using the Lightsa
 1. In the **Objects** tab, type an object prefix in the **Filter by name** text box\.
 
    The list of objects in the folder that you're currently viewing are filtered to match the text you enter\. The following example shows that if you enter `sail`, the list of objects on the page are filtered to display only those that start with `sail`\.  
-![\[Filtering bucket objects in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-filter-bucket-objects-using-console.png)
+![\[Filtering bucket objects in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-filter-bucket-objects-using-console.png)
 
    To filter the list of objects in a different folder, navigate to that folder\. Then, enter the object prefix into the **Filter by name** text box there\.
 
@@ -49,7 +49,7 @@ This command uses the `--query` parameter to filter the response of the `list-ob
    ```
 
    You should see a result similar to the following example\.  
-![\[Result of the AWS CLI list-objects-v2 command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-s3api-list-objects-v2-prefix-result.png)
+![\[Result of the AWS CLI list-objects-v2 command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-s3api-list-objects-v2-prefix-result.png)
 
 ## Managing buckets and objects in Lightsail<a name="filtering-objects-managing-buckets-and-objects"></a>
 

@@ -6,7 +6,7 @@ You can delete objects from your bucket in the Amazon Lightsail object storage s
 
 For more information about buckets, see [Object storage in Amazon Lightsail](buckets-in-amazon-lightsail.md)\.
 
-**Contents:**
+**Contents**
 + [Deleting objects from a version\-enabled bucket](#deleting-objects-from-version-enabled-buckets)
 + [Delete objects using the Lightsail console](#deleting-objects-lightsail-console)
 + [Delete object versions using the Lightsail console](#deleting-object-versions-lightsail-console)
@@ -116,7 +116,7 @@ Deleting object versions is only possible for version\-enabled buckets\. For mor
    ```
 
    You should see a result similar to the following example:  
-![\[Result of the AWS CLI delete-object command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-s3api-delete-object-version-result.png)
+![\[Result of the AWS CLI delete-object command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-s3api-delete-object-version-result.png)
 
 ## Delete multiple objects or object versions using the AWS CLI<a name="delete-objects-aws-cli"></a>
 
@@ -186,7 +186,7 @@ Deleting object versions is only possible for version\-enabled buckets\. For mor
      ```
 
    You should see a result similar to the following example:  
-![\[Result of the AWS CLI delete-objects command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-s3api-delete-objects-version-result.png)
+![\[Result of the AWS CLI delete-objects command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-s3api-delete-objects-version-result.png)
 
 ## Managing buckets and objects in Lightsail<a name="deleting-objects-managing-buckets-and-objects"></a>
 

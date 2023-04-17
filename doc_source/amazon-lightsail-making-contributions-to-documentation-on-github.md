@@ -25,7 +25,7 @@ Before you get started:
 1. Find the Lightsail guide that you want to edit\.
 
 1. With the guide open, choose **Edit it on GitHub** as shown in the following example\.  
-![\[Edit a guide guide on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-edit-on-github.png)
+![\[Edit a guide guide on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-edit-on-github.png)
 
 1. Sign in to GitHub, if you haven't already\.
 
@@ -48,7 +48,7 @@ Before you get started:
 1. Sign in to GitHub and go to the [Lightsail developer guide repository](https://github.com/awsdocs/amazon-lightsail-developer-guide)\.
 
 1. Choose **Create new file**\.  
-![\[Create new file on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-github-create-new-file.png)
+![\[Create new file on GitHub.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-github-create-new-file.png)
 
 1. Name your file and enter the text for your guide into the **Edit new file** text box\.
 

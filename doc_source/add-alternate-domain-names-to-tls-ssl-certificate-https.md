@@ -1,6 +1,6 @@
-# Add alternate domains and subdomains to your SSL/TLS certificate in Amazon Lightsail<a name="add-alternate-domain-names-to-tls-ssl-certificate-https"></a>
+# Add alternate domains and subdomains to your SSL/TLS certificate in Lightsail<a name="add-alternate-domain-names-to-tls-ssl-certificate-https"></a>
 
- *Last updated: November 29, 2017* 
+ *Last updated: November 1, 2022* 
 
 When you create your SSL/TLS certificate for your Lightsail load balancer, you can add alternate domains and subdomains to it\. These alternate names help ensure that all traffic to your load balancer is encrypted\.
 
@@ -18,15 +18,13 @@ The total number of domains and subdomains must not exceed 10, so you can add up
 
 1. On the Lightsail home page, choose the **Networking** tab\.
 
-1. Choose your Lightsail load balancer to manage it\.
+1. Choose your Lightsail load balancer\.
 
-1. Choose **Inbound traffic**\.
+1. Choose the **Custom domains** tab\.
 
 1. Choose **Create certificate**\.
 
-1. Enter your primary domain \(e\.g\., `www.example.com`\)\.
-
-1. Enter a name for your certificate or accept the default\.
+1. Enter a name for your certificate or accept the default name\.
 
    Resource names:
    + Must be unique within each AWS Region in your Lightsail account\.
@@ -34,10 +32,9 @@ The total number of domains and subdomains must not exceed 10, so you can add up
    + Must start and end with an alphanumeric character or number\.
    + Can include alphanumeric characters, numbers, periods, dashes, and underscores\.
 
-1. Enter your domains and subdomains in the list\. Choose the plus icon to add a new line\.  
-![\[Create domains and subdomains for your SSL/TLS certificate\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/animated-gif-create-domain-and-subdomains-ssl-tls-certificate.gif)
+1. Enter your primary domain \(`www.example.com`\), and up to 9 alternate domains or subdomains\.
 
-1. Choose **Create**\.
+1. Choose **Create certificate**\.
 
    Once created, you have 72 hours to verify that you own your domain\.
 

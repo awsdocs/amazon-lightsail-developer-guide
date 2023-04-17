@@ -1,6 +1,6 @@
 # Viewing instance burst capacity in Amazon Lightsail<a name="amazon-lightsail-viewing-instance-burst-capacity"></a>
 
- *Last updated: May 20, 2021* 
+ *Last updated: July 6, 2022* 
 
 Amazon Lightsail offers instances that provide a baseline amount of CPU performance, but also have the ability to temporarily provide additional CPU performance above the baseline as needed\. This is referred to as bursting\. The baseline performance and ability to burst are governed by the following instance metrics:
 + **CPU utilization** – The percentage of allocated compute units that are in use on your instance\. This metric identifies the processing power used to run applications on your instance\.
@@ -49,7 +49,7 @@ For more information about the sustainable and burstable zones, see [Identifying
 
 All Lightsail instance plans accrue 4\.17% of CPU burst capacity per hour\. The maximum CPU burst capacity that can be accrued is equivalent to the amount of CPU burst capacity percentage that can be earned in a 24\-hour period\. Your instance stops accruing CPU burst capacity when the CPU burst capacity percentage reaches 100%\.
 
-![\[CPU burst capacity accrual and consumption\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-cpu-burst-capacity-consumption.png)
+![\[CPU burst capacity accrual and consumption\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-cpu-burst-capacity-consumption.png)
 
 Accrued CPU burst capacity on a running instance does not expire\. However, CPU burst capacity does not persist between instance stops and starts\. If you stop your instance, it loses all its accrued burst capacity\.
 
@@ -61,7 +61,7 @@ Additionally, some Lightsail instances start in launch mode, which temporarily r
 
 On the CPU utilization metric graph for your instances, you will see a sustainable zone, and a burstable zone\. In the following CPU utilization metric graph example, the performance baseline is 10% because the instance uses the Linux or Unix\-based $5 USD/month instance plan\.
 
-![\[Sustainable and burstable zones on the CPU utilization graph\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/cpu-utilization-burstable-zone.png)
+![\[Sustainable and burstable zones on the CPU utilization graph\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/cpu-utilization-burstable-zone.png)
 
 Your Lightsail instance can operate in the sustainable zone indefinitely with no impact to the operation of your system\. Your instance may begin operating in the burstable zone when under heavy load, such as when compiling code, installing new software, running a batch job, or serving peak load requests\. While operating in the burstable zone, your instance is consuming a higher amount of CPU cycles\. Therefore, it can only operate in this zone for a limited period of time\.
 
@@ -71,13 +71,13 @@ The period of time your instance can operate in the burstable zone is dependent 
 
 The CPU overview page in the Lightsail console displays your instance's CPU utilization in comparison to its available CPU burst capacity\. In the following CPU overview example, the CPU burst capacity percentage has increased because the instance has continuously operated below its baseline in the sustainable zone\.
 
-![\[CPU overview page in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/cpu-overview-page.png)
+![\[CPU overview page in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/cpu-overview-page.png)
 
-The remaining CPU burst capacity graph view can be switched between CPU burst capacity percentage and minutes\. Your instance consumes more CPU burst capacity when operating in the bursting zone\. The CPU burst capacity minutes metric is the amount of time available for your instance to burst at 100% CPU utilization, It is consumed at the same rate as your instance's current CPU utilization percentage when operating in the burstable zone\. For example, a Linux or Unix\-based $5 USD/month instance has a CPU utilization baseline of 10%, and accrues 3 minutes of CPU burst capacity minutes per hour\. Therefore, if the instance operates at:
-+ 100% CPU utilization in the burstable zone for a 60\-minute period, then it consumes CPU burst capacity minutes at a 100% rate in that period\. The instance consumes 60 minutes of CPU burst capacity, and accrues 3 minutes, for a total consumption of 57 minutes\.
-+ 50% CPU utilization in the burstable zone for a 60\-minute period, then it consumes CPU burst capacity minutes at a 50% rate in that period\. The instance consumes 30 minutes of CPU burst capacity, and accrues 3 minutes, for a total consumption of 27 minutes\.
+The remaining CPU burst capacity graph view can be switched between CPU burst capacity percentage and minutes\. Your instance consumes more CPU burst capacity when operating in the bursting zone\. The CPU burst capacity minutes metric is the amount of time available for your instance to burst at 100% CPU utilization, It is consumed at the same rate as your instance's current CPU utilization percentage when operating in the burstable zone\. For example, a Linux or Unix\-based $5 USD/month instance has a CPU utilization baseline of 10%, and accrues 6 minutes of CPU burst capacity minutes per hour\. Therefore, if the instance operates at:
++ 100% CPU utilization in the burstable zone for a 60\-minute period, then it consumes CPU burst capacity minutes at a 100% rate in that period\. The instance consumes 60 minutes of CPU burst capacity, and accrues 6 minutes, for a net consumption of 54 minutes\.
++ 50% CPU utilization in the burstable zone for a 60\-minute period, then it consumes CPU burst capacity minutes at a 50% rate in that period\. The instance consumes 30 minutes of CPU burst capacity, and accrues 6 minutes, for a net consumption of 24 minutes\.
 + 10% CPU utilization at the instance's baseline for a 60\-minute period, then it consumes CPU burst capacity minutes at a 10% rate in that period\. The instance consumes 6 minutes of CPU burst capacity, and accrues 6 minutes\. When an instance operates at its baseline, the CPU burst capacity minutes doesn't increase or decrease\.
-+ 5% CPU utilization in the sustainable zone for a 60\-minute period, then it consumes CPU burst capacity minutes at a 5% rate in that period\. The instance consumed 3 minutes of CPU burst capacity, and accrued 6 minutes, for a total accrual of 3 minutes\.
++ 5% CPU utilization in the sustainable zone for a 60\-minute period, then it consumes CPU burst capacity minutes at a 5% rate in that period\. The instance consumed 3 minutes of CPU burst capacity, and accrued 6 minutes, for a net accrual of 3 minutes\.
 
 Alternately, if the instance has accrued 60 minutes of CPU burst capacity, then it can operate at 100% CPU utilization for 60 minutes, at 50% for 120 minutes, or at 25% at 150 minutes\.
 
@@ -98,18 +98,18 @@ Complete the following steps to access the CPU overview page, and view your inst
 1. On the Lightsail home page, choose the **Instances** tab\.
 
 1. Choose the name of the instance for which you want to view CPU utilization and burst capacity\.  
-![\[Instances tab in the Lightsail home page\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/cpu-utilization-instances-tab.png)
+![\[Instances tab in the Lightsail home page\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/cpu-utilization-instances-tab.png)
 
 1. Choose the **Metrics** tab on the instance management page\.  
-![\[Metrics tab in the instance management page\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/cpu-utilization-metrics-tab.png)
+![\[Metrics tab in the instance management page\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/cpu-utilization-metrics-tab.png)
 
 1. Choose **CPU overview** in the drop\-down menu under the **Metrics graphs** heading\.  
-![\[CPU overview option in the metrics tab\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/cpu-utilization-cpu-overview.png)
+![\[CPU overview option in the metrics tab\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/cpu-utilization-cpu-overview.png)
 
    The page displays **Average CPU utilization per 5 minutes** and **Remaining CPU burst capacity** graphs\.
 **Note**  
 The **Remaining CPU burst capacity** graph might display a **Launch mode** zone for a short period of time after you create an instance\. Some Lightsail instances start in launch mode, which temporarily removes some of the performance limitations that are typically present on burstable instances\. Launch mode allows you to run resource\-intensive scripts at launch without affecting the overall performance of your instance\.  
-![\[CPU overview page in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/cpu-overview-page.png)
+![\[CPU overview page in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/cpu-overview-page.png)
 
 1. You can perform the following actions on the metric graphs:
    + For the burst capacity graph, select **Show capacity as percentage of total** to change the view from burst capacity minutes available to burst capacity percentage available\.

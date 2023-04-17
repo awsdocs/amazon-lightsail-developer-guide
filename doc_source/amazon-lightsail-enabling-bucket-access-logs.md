@@ -53,7 +53,7 @@ You must install the AWS CLI and configure it for Lightsail before continuing wi
    In the example, *MyExampleBucket* is the source bucket for which access logs will be created, *MyExampleLogDestinationBucket* is the destination bucket where the access logs will be saved, and *logs/MyExampleBucket/* is the object key name prefix for the access logs\.
 
    You should see a result similar to the following example after running the command\. The source bucket is updated, and the access logs should begin generating and being stored on the destination bucket\.  
-![\[Access logging for a bucket enabled\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-enable-access-logging-for-a-bucket.png)
+![\[Access logging for a bucket enabled\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-enable-access-logging-for-a-bucket.png)
 
 ## Disabling access logging using the AWS CLI<a name="disabling-access-logging"></a>
 
@@ -79,7 +79,7 @@ You must install the AWS CLI and configure it for Lightsail before continuing wi
    ```
 
    You should see a result similar to the following example after running the command\.  
-![\[Access logging for a bucket disabled\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-disable-access-logging-for-a-bucket.png)
+![\[Access logging for a bucket disabled\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-disable-access-logging-for-a-bucket.png)
 
 ## Managing buckets and objects in Lightsail<a name="enabling-bucket-access-log-managing-buckets-and-objects"></a>
 

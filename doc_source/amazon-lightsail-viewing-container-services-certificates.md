@@ -1,6 +1,6 @@
 # Viewing SSL/TLS certificates for your Amazon Lightsail container services<a name="amazon-lightsail-viewing-container-services-certificates"></a>
 
- *Last updated: November 12, 2020* 
+ *Last updated: November 1, 2022* 
 
 You can view the Amazon Lightsail SSL/TLS certificates that you created for your Lightsail container service\. You do this by accessing the management page of any container service in the Lightsail console\.
 
@@ -8,7 +8,7 @@ For more information about SSL/TLS certificates, see [SSL/TLS certificates in Am
 
 ## Prerequisites<a name="viewing-container-service-certificates-prerequisites"></a>
 
-Before you get started, you need to create a Lightsail container service\. For more information, see [Creating Amazon Lightsail container services and Container services in Amazon Lightsail](amazon-lightsail-creating-container-services.md)\.
+Before you get started, you need to create a Lightsail container service\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md) and [Container services in Amazon Lightsail](amazon-lightsail-container-services.md)\.
 
 You also should have created an SSL/TLS certificate for your container service\. For more information, see [Creating SSL/TLS certificates for your Amazon Lightsail container services](amazon-lightsail-creating-container-services-certificates.md)\.
 
@@ -26,9 +26,9 @@ Complete the following procedure to view your container service SSL/TLS certific
 
 1. Choose the **Custom domains** tab on your container service management page\.
 
-1. Scroll down to the **Certificates** section of the page\.
+1. Scroll down to the **Attached certificates** section of the page\.
 
-   All of your certificates are listed under the **Certificates** section of the page\. Choose **Show details** to view your certificate's important dates, encryption details, identification, and validation records\. Your certificates are valid for 13 months from the date you created them, after which time Lightsail attempts to automatically revalidate them\. Don't delete the CNAME records that you added to your domain because they are required when your certificate is re\-validated on the **Valid until** date listed\.
+   All of your certificates are listed under the **Attached certificates** section of the page\. Choose **Details** to view your certificate's important dates, encryption details, identification, and domains\. Choose **Validation details** to view your certificate's validation records\. Your certificates are valid for 13 months from the date you created them, after which time Lightsail attempts to automatically revalidate them\. Don't delete the CNAME records that you added to your domain because they are required when your certificate is re\-validated on the **Valid until** date listed\.
 
    After you have a valid SSL/TLS certificate to use with your container service, you should enable custom domains so that you can use the domain names of the certificate on your service\. For more information, see [Enabling and managing custom domains for your Amazon Lightsail container services](amazon-lightsail-enabling-container-services-custom-domains.md)\.
 

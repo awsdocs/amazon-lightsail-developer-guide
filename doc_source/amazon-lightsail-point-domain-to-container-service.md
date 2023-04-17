@@ -1,6 +1,6 @@
 # Routing traffic for a domain in Amazon Lightsail to a Lightsail container service<a name="amazon-lightsail-point-domain-to-container-service"></a>
 
- *Last updated: May 26, 2021* 
+ *Last updated: November 1, 2022* 
 
 You must point your registered domain names to your Amazon Lightsail container service after you enabled custom domains for your service\. You do this by adding an alias record to the DNS zone of each of the domains specified on the certificates that you're using with your container service\. All of the records that you add should point to the default domain \(e\.g\., `https://<ServiceName>.<RandomGUID>.<AWSRegion>.cs.amazonlightsail.com`\) of your container service\.
 
@@ -33,9 +33,11 @@ Complete the following procedure to get default domain name of your container se
 
 Complete the following procedure to add an address \(A for IPv4 or AAAA for IPv6\) record, or canonical \(CNAME\) record to your domain's DNS zone\.
 
-1. On the Lightsail home page, choose the **Networking** tab\.
+1. On the Lightsail home page, choose the **Domains & DNS** tab\.
 
 1. Under the **DNS zones** section of the page, choose the domain name to which you want to add the record that will direct traffic for your domain to your container service\.
+
+1. Choose the **DNS records** tab\.
 
 1. Complete one of the following steps depending on the current state of your DNS zone:
    + If you haven't added an A, AAAA, or CNAME record, choose **Add record**\.
@@ -46,7 +48,7 @@ Complete the following procedure to add an address \(A for IPv4 or AAAA for IPv6
    + Add an AAAA record to map the apex of your domain \(e\.g\., `example.com`\) or a subdomain \(e\.g\., `www.example.com`\) to your container service under the IPv6 network\.
    + Add a CNAME record to map a subdomain \(e\.g\., `www.example.com`\) to the public domain \(default DNS\) of your container service\.
 
-1. In the **Subdomain** text box, enter one of the following options:
+1. In the **Record name** text box, enter one of the following options:
    + For an A record or AAAA record, enter `@` to route traffic for the apex of your domain \(e\.g\., `example.com`\) to your container service, or enter a subdomain \(e\.g\., `www`\) to route traffic for a subdomain \(e\.g\., `www.example.com`\) to your container service\.
    + For a CNAME record, enter a subdomain \(e\.g\., `www`\) to route traffic for a subdomain \(e\.g\., `www.example.com`\) to your container service\.
 

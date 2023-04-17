@@ -20,7 +20,7 @@ You can use the default private key that Lightsail provides, a new private key f
    + CentOS instances: `centos`
    + Debian instances: `admin`
    + Ubuntu instances: `ubuntu`
-   + Certified by Bitnami instances: `bitnami`
+   + Bitnami instances: `bitnami`
    + Plesk instances: `ubuntu`
    + cPanel & WHM instances: `centos`
 

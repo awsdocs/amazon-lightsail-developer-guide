@@ -1,14 +1,34 @@
 # Point your domain to your Lightsail load balancer<a name="add-alias-record-for-lightsail-load-balancer"></a>
 
- *Last updated: May 13, 2021* 
+ *Last updated: December 2, 2022* 
 
 After you [verify that you control the domain where you want to have encrypted \(HTTPS\) traffic](verify-tls-ssl-certificate-using-dns-cname-https.md), you need to add an address \(A\) record to your domain's DNS hosting provider that points your domain to your Lightsail load balancer\. In this guide, we show you how to add the A record to a Lightsail DNS zone, and an Amazon Route 53 hosted zone\.
 
-## Add an A record in Lightsail<a name="add-address-record-lightsail"></a>
+## Add an A record using the DNS zone \- Assignments page<a name="add-a-record-assignments"></a>
 
-1. On the Lightsail home page, choose **Networking**\.
+1. On the Lightsail home page, choose **Domains & DNS**\.
 
 1. Choose the DNS zone you want to manage\.
+
+1. Choose the **Assignments** tab\.
+
+1. Choose **Add assignment**\.
+
+1. In the **Select a domain name** field, choose whether to use the domain name, or a subdomain of the domain\.
+
+1. In the **Select a resource** drop down, select the load balancer you want to assign the domain to\.
+
+1. Choose **Assign**\.
+
+Allow time for the change to propagate through the internet's DNS\. This may take a few minutes to several hours\.
+
+## Add an A record using the DNS zone \- DNS records page<a name="add-address-record-lightsail"></a>
+
+1. On the Lightsail home page, choose **Domains & DNS**\.
+
+1. Choose the DNS zone you want to manage\.
+
+1. Choose the **DNS records** tab\.
 
 1. Complete one of the following steps depending on the current state of your DNS zone:
    + If you haven't added an A record, choose **Add record**\.
@@ -16,7 +36,7 @@ After you [verify that you control the domain where you want to have encrypted \
 
 1. Choose **A record** in the **Record type** dropdown menu\.
 
-1. In the **Subdomain** text box, enter one of the following options:
+1. In the **Record name** text box, enter one of the following options:
    + Enter `@` to route traffic for the apex of your domain \(e\.g\., `example.com`\) to your load balancer\.
    + Enter `www` to route traffic for the www subdomain \(e\.g\., `www.example.com`\) to your load balancer\.
 
@@ -37,7 +57,7 @@ Allow time for the change to propagate through the internet's DNS\. This may tak
 1. Choose **Create record**\.
 
    The **Quick create record** page appears\.  
-![\[Create a record in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/create-record-set-alias-record-route-53-blank.png)
+![\[Create a record in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/create-record-set-alias-record-route-53-blank.png)
 **Note**  
 If you see the **Choose routing policy** page, then choose **Switch to quick create** to switch to the quick create wizard before continuing with the following steps\.
 
@@ -60,7 +80,7 @@ If you see the **Choose routing policy** page, then choose **Switch to quick cre
    Lightsail already performs health checks on your load balancer\. For more information, see [Health checking for your Lightsail load balancer](enable-set-up-health-checking-for-lightsail-load-balancer-metrics.md)\.
 
    Your record should look like the following example\.  
-![\[Create a record in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/create-record-set-alias-record-route-53.png)
+![\[Create a record in Route 53 to point an alias to your Lightsail load balancer\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/create-record-set-alias-record-route-53.png)
 
 1. Choose **Create records** to add the record to your hosted zone\.
 **Note**  

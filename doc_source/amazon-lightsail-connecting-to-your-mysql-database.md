@@ -24,7 +24,7 @@ Get your database endpoint and port information from the Lightsail console\. You
 1. On the **Connect** tab, under the **Endpoint and port** section, note the endpoint and port information\.
 
    We recommend copying the endpoint to your clipboard to avoid entering it incorrectly\. To do that, highlight the endpoint and press **Ctrl\+C** if you’re using Windows, or **Cmd\+C** if you’re using macOS, to copy it to your clipboard\. Then, press **Ctrl\+V** or **Cmd\+V** as appropriate to paste it\.  
-![\[Database endpoint and port in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-mysql-database-endpoint-and-port.png)
+![\[Database endpoint and port in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-mysql-database-endpoint-and-port.png)
 
 1. On the **Connect** tab, under the **User name and passwords** section, make note of the user name, then choose **Show** under the **Password** section to view the current database password\.
 
@@ -51,7 +51,7 @@ For more information about using MySQL Workbench, see the [MySQL Workbench Manua
 1. Choose the **Database** menu, then choose **Manage connections**\.
 
 1. Enter the following information into the form that displays:  
-![\[MySQL Workbench connection configuration\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-mysql-workbench-connection-manager.png)
+![\[MySQL Workbench connection configuration\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-mysql-workbench-connection-manager.png)
    + **Connection Name** — We recommend using a name for the connection that is similar to your database\. This helps you identify it in the future\.
    + **Connection Method** — Choose **Standard \(TCP/IP\)**\. 
    + **Port** — Enter the port for your database that you obtained earlier\. The default port for MySQL is 3306\.
@@ -63,7 +63,7 @@ For more information about using MySQL Workbench, see the [MySQL Workbench Manua
 1. Choose **Test connection** to determine if the client can establish a connection with your database\.
 
    If the connection is successful, a prompt similar to the following example displays\. After you read the information, choose **OK** to close it\.  
-![\[MySQL Workbench successful connection test\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-mysql-workbench-successful-connection.png)
+![\[MySQL Workbench successful connection test\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-mysql-workbench-successful-connection.png)
 
 1. Choose **New** to save the new connection details, then choose **Close** to close the connections management window\.
 
@@ -72,7 +72,7 @@ For more information about using MySQL Workbench, see the [MySQL Workbench Manua
 1. To connect to your database, choose your new database connection\.
 
    If the connection is successful, a window similar to the following example displays\.  
-![\[MySQL Workbench workspace\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-mysql-workbench-workspace.png)
+![\[MySQL Workbench workspace\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-mysql-workbench-workspace.png)
 
 ## Next steps<a name="connecting-to-your-mysql-database-next-steps"></a>
 

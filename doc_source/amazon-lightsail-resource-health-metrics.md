@@ -3,7 +3,7 @@
 **Note**  
 Monitor the performance of your instances, databases, distributions, load balancers, container services, and buckets in Amazon Lightsail by checking and collecting their metric data\. Establish a baseline over time, so that you can configure alarms to more easily detect anomalies and issues with the performance of your resources\.
 
- *Last updated: July 14, 2021* 
+ *Last updated: August 23, 2022* 
 
 Amazon Lightsail reports metric data for instances, databases, content delivery network \(CDN\) distributions, load balancers, container services, and buckets\. You can view and monitor this data in the Lightsail console\. Monitoring is an important part of maintaining the reliability, availability, and performance of your resources\. Monitor and collect metric data from your resources regularly so that you can more readily debug a multi\-point failure, if one occurs\.
 
@@ -35,13 +35,13 @@ Data points with a period of 60 seconds \(1 minute resolution\) are available fo
 
 Data points that are initially available with a shorter period are aggregated together for long\-term storage\. For example, data points with a 1 minute granularity remain available for 15 days with 1 minute resolution\. After 15 days this data is still available, but is aggregated and is retrievable only with a resolution of 5 minutes\. After 63 days, the data is further aggregated and is available with a resolution of 1 hour\. If you need availability of metrics longer than these periods, you can use the Lightsail API, AWS Command Line Interface \(AWS CLI\), and SDKs to retrieve the data points for offline or different storage\.
 
-For more information, see [GetInstanceMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetInstanceMetricData.html), [GetLoadBalancerMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerMetricData.html), [GetDistributionMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetDistributionMetricData.html), and [GetRelationalDatabaseMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseMetricData.html) in the *Lightsail API reference*\.
+For more information, see [GetInstanceMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetInstanceMetricData.html), [GetBucketMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketMetricData.html), [GetLoadBalancerMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerMetricData.html), [GetDistributionMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetDistributionMetricData.html), and [GetRelationalDatabaseMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseMetricData.html) in the *Lightsail API reference*\.
 
 ### Statistics<a name="concepts-statistics"></a>
 
 Metric statistics are the means in which data is aggregated over a period of time\. Example statistics include `Average`, `Sum`, and `Maximum`\. For example, instance CPU utilization metric data can be averaged using the `Average` statistic, database connections can be added using the `Sum` statistic, the maximum load balancer response time can be retrieved using the `Maximum` statistic, and so on\.
 
-For a list of available metric statistics, see [statistics for GetInstanceMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetInstanceMetricData.html#Lightsail-GetInstanceMetricData-request-statistics), [statistics for GetLoadBalancerMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerMetricData.html#Lightsail-GetLoadBalancerMetricData-request-statistics), [statistics for GetDistributionMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetDistributionMetricData.html#Lightsail-GetDistributionMetricData-request-statistics), and [statistics for GetRelationalDatabaseMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseMetricData.html#Lightsail-GetRelationalDatabaseMetricData-request-statistics) in the *Lightsail API reference*\.
+For a list of available metric statistics, see [statistics for GetInstanceMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetInstanceMetricData.html#Lightsail-GetInstanceMetricData-request-statistics), [statistics for GetBucketMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketMetricData.html#Lightsail-GetBucketMetricData-request-statistics), [statistics for GetLoadBalancerMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerMetricData.html#Lightsail-GetLoadBalancerMetricData-request-statistics), [statistics for GetDistributionMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetDistributionMetricData.html#Lightsail-GetDistributionMetricData-request-statistics), and [statistics for GetRelationalDatabaseMetricData](https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetRelationalDatabaseMetricData.html#Lightsail-GetRelationalDatabaseMetricData-request-statistics) in the *Lightsail API reference*\.
 
 ### Units<a name="concepts-units"></a>
 
@@ -64,15 +64,16 @@ An alarm watches a single metric over a specified period of time, and notifies y
 ### Instance metrics<a name="overview-instance-metrics"></a>
 
 The following instance metrics are available\. For more information, see [Viewing instance metrics in Amazon Lightsail](amazon-lightsail-viewing-instance-health-metrics.md)\.
-+ **Burst capacity \(`BurstCapacityPercentage` and `BurstCapacityTime`\)** — Burst capacity percentage is the percentage of CPU performance available to your instance\. Burst capacity minutes is the amount of time available for your instance to burst at 100% CPU utilization\. Your instance continuously consumes and accrues burst capacity\. Burst capacity minutes is consumed at the full rate only when your instance operates at 100% CPU utilization\. For more information about instance burst capacity, see [Viewing instance burst capacity in Amazon Lightsail](amazon-lightsail-viewing-instance-burst-capacity.md)\.
 + **CPU utilization \(`CPUUtilization`\)** — The percentage of allocated compute units that are currently in use on the instance\. This metric identifies the processing power to run the applications on the instance\. Tools in your operating system can show a lower percentage than Lightsail when the instance is not allocated a full processor core\.
 
   When viewing the CPU utilization metric graphs for your instances in the Lightsail console, you will see sustainable, and burstable zones\. For more information about what these zones mean, see [CPU utilization sustainable and burstable zones](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-viewing-instance-health-metrics#cpu-utilization-zones)\.
++ **Burst capacity minutes \(`BurstCapacityTime`\) and percentage \(`BurstCapacityPercentage`\)** — Burst capacity minutes represent the amount of time available for your instance to burst at 100% CPU utilization\. Burst capacity percentage is the percentage of CPU performance available to your instance\. Your instance continuously consumes and accrues burst capacity\. Burst capacity minutes are consumed at the full rate only when your instance operates at 100% CPU utilization\. For more information about instance burst capacity, see [Viewing instance burst capacity in Amazon Lightsail](amazon-lightsail-viewing-instance-burst-capacity.md)\.
 + **Incoming network traffic \(`NetworkIn`\)** — The number of bytes received on all network interfaces by the instance\. This metric identifies the volume of incoming network traffic to the instance\. The number reported is the number of bytes received during the period\. Because this metric is reported in 5\-minute intervals, divide the reported number by 300 to find Bytes/second\.
 + **Outgoing network traffic \(`NetworkOut`\)** — The number of bytes sent out on all network interfaces by the instance\. This metric identifies the volume of outgoing network traffic from the instance\. The number reported is the number of bytes sent during the period\. Because this metric is reported in 5\-minute intervals, divide the reported number by 300 to find Bytes/second\.
 + **Status check failures \(`StatusCheckFailed`\)** — Reports whether the instance passed or failed both the instance status check and the system status check\. This metric can be either 0 \(passed\) or 1 \(failed\)\. This metric is available at a 1\-minute frequency\.
 + **Instance status check failures \(`StatusCheckFailed_Instance`\)** — Reports whether the instance passed or failed the instance status check\. This metric can be either 0 \(passed\) or 1 \(failed\)\. This metric is available at a 1\-minute frequency\.
 + **System status check failures \(`StatusCheckFailed_System`\)** — Reports whether the instance passed or failed the system status check\. This metric can be either 0 \(passed\) or 1 \(failed\)\. This metric is available at a 1\-minute frequency\.
++ **No token metadata requests \(`MetadataNoToken`\)** — The number of times that the instance metadata service was successfully accessed without a token\. This metric determines if there are any processes accessing instance metadata by using Instance Metadata Service Version 1, which doesn't use a token\. If all requests use token\-backed sessions, such as Instance Metadata Service Version 2, then the value is 0\. For more information, see [Instance metadata and user data in Amazon Lightsail](amazon-lightsail-instance-metadata.md)\.
 
 ### Database metrics<a name="overview-database-metrics"></a>
 
@@ -87,12 +88,12 @@ The following database metrics are available\. For more information, see [Viewin
 ### Distribution metrics<a name="overview-distribution-metrics"></a>
 
 The following distribution metrics are available\. For more information, see [Viewing distribution metrics in Amazon Lightsail](amazon-lightsail-viewing-distribution-health-metrics.md)\.
-+ **Requests** — The total number of viewer requests received by your distribution, for all HTTP methods, and for both HTTP and HTTPS requests\.
-+ **Bytes uploaded** — The number of bytes uploaded to your origin by your distribution, using POST and PUT requests\.
-+ **Bytes downloaded** — The number of bytes downloaded by viewers for GET, HEAD, and OPTIONS requests\.
-+ **Total error rate** — The percentage of all viewer requests for which the response’s HTTP status code was 4xx or 5xx\.
-+ **HTTP 4xx error rate** — The percentage of all viewer requests for which the response’s HTTP status code was 4xx\. In these cases, the client or client viewer may have made an error\. For example, a status code of 404 \(Not Found\) means that the client requested an object that could not be found\.
-+ **HTTP 5xx error rate** — The percentage of all viewer requests for which the response’s HTTP status code was 5xx\. In these cases, the origin server did not satisfy the request\. For example, a status code of 503 \(Service Unavailable\) means that the origin server is currently unavailable\.
++ **Requests \(`Requests`\)** — The total number of viewer requests received by your distribution, for all HTTP methods, and for both HTTP and HTTPS requests\.
++ **Bytes uploaded \(`BytesUploaded`\)** — The number of bytes uploaded to your origin by your distribution, using POST and PUT requests\.
++ **Bytes downloaded \(`BytesDownloaded`\)** — The number of bytes downloaded by viewers for GET, HEAD, and OPTIONS requests\.
++ **Total error rate \(`TotalErrorRate`\)** — The percentage of all viewer requests for which the response’s HTTP status code was 4xx or 5xx\.
++ **HTTP 4xx error rate \(`4xxErrorRate`\)** — The percentage of all viewer requests for which the response’s HTTP status code was 4xx\. In these cases, the client or client viewer may have made an error\. For example, a status code of 404 \(Not Found\) means that the client requested an object that could not be found\.
++ **HTTP 5xx error rate \(`5xxErrorRate`\)** — The percentage of all viewer requests for which the response’s HTTP status code was 5xx\. In these cases, the origin server did not satisfy the request\. For example, a status code of 503 \(Service Unavailable\) means that the origin server is currently unavailable\.
 
 ### Load balancer metrics<a name="overview-load-balancer-metrics"></a>
 
@@ -113,14 +114,14 @@ The following load balancer metrics are available\. For more information, see [V
 ### Container service metrics<a name="overview-container-service-metrics"></a>
 
 The following container service metrics are available\. For more information, see [Viewing container service metrics in Amazon Lightsail](amazon-lightsail-viewing-container-services-metrics.md)\.
-+ **CPU utilization** — The average percentage of compute units that are currently in use across all nodes of your container service\. This metric identifies the processing power required to run containers on your container service\.
-+ **Memory utilization** — The average percentage of memory that is currently in use across all nodes of your container service\. This metric identifies the memory required to run containers on your container service\.
++ **CPU utilization \(`CPUUtilization`\)** — The average percentage of compute units that are currently in use across all nodes of your container service\. This metric identifies the processing power required to run containers on your container service\.
++ **Memory utilization \(`MemoryUtilization`\)** — The average percentage of memory that is currently in use across all nodes of your container service\. This metric identifies the memory required to run containers on your container service\.
 
 ### Bucket metrics<a name="overview-bucket-metrics-available"></a>
 
 The following bucket metrics are available\. For more information, see [Viewing bucket metrics in Amazon Lightsail](amazon-lightsail-viewing-bucket-metrics.md)\.
-+ **Bucket size** — The amount of data stored in a bucket\. This value is calculated by summing the size of all objects in the bucket \(both current and noncurrent objects\), including the size of all parts for all incomplete multipart uploads to the bucket\.
-+ **Number of objects** — The total number of objects stored in a bucket\. This value is calculated by counting all objects in the bucket \(both current and noncurrent objects\) and the total number of parts for all incomplete multipart uploads to the bucket\.
++ **Bucket size \(`BucketSizeBytes`\)** — The amount of data stored in a bucket\. This value is calculated by summing the size of all objects in the bucket \(both current and noncurrent objects\), including the size of all parts for all incomplete multipart uploads to the bucket\.
++ **Number of objects \(`NumberOfObjects`\)** — The total number of objects stored in a bucket\. This value is calculated by counting all objects in the bucket \(both current and noncurrent objects\) and the total number of parts for all incomplete multipart uploads to the bucket\.
 
 **Note**  
 Bucket metric data is not reported when your bucket is empty\.

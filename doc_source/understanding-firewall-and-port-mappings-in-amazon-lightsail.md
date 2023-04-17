@@ -3,7 +3,7 @@
 **Note**  
 A firewall in Amazon Lightsail controls the traffic allowed to connect to your instance at the protocol and port level\. When you create a new instance, its firewall is preconfigured with a set of default rules that allow basic access to your instance\. Edit your instance's firewall, at any time, by adding and deleting firewall rules to allow traffic to reach your instance\.
 
- *Last updated: February 22, 2022* 
+ *Last updated: January 30, 2023* 
 
 The firewall in the Amazon Lightsail console acts as a virtual firewall that controls the traffic allowed to connect to your instance through its public IP address\. Each instance that you create in Lightsail has two firewalls; one for IPv4 addresses and another for IPv6 addresses\. Each firewall contains a set of rules that filter traffic coming into the instance\. Both firewalls are independent of each other; you must configure firewall rules separately for IPv4 and IPv6\. Edit your instance's firewall, at any time, by adding and deleting rules to allow or restrict traffic\. 
 
@@ -23,7 +23,7 @@ Each Lightsail instance has two firewalls; one for IPv4 addresses and another fo
 
 Firewall rules are always permissive; you can't create rules that deny access\. You add rules to your instance's firewalls to allow traffic to reach your instance\. When you add a rule to your instance's firewall, you specify the protocol to use, the port to open, and the IPv4 and IPv6 addresses that are allowed to connect to your instance, as shown in the following example \(for IPv4\)\. You can also specify an application layer protocol type, which is a preset that specifies the protocol and port range for you based on the service that you plan to use on your instance\.
 
-![\[IPv4 firewall in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/firewall-rule-example.png)
+![\[IPv4 firewall in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/firewall-rule-example.png)
 
 **Important**  
 Firewall rules affect only traffic that flows in through the public IP address of an instance\. It does not affect traffic that flows in through the private IP address of an instance, which can originate from Lightsail resources in your account, in the same AWS Region, or resources in a peered virtual private cloud \(VPC\), in the same AWS Region\. 
@@ -33,6 +33,9 @@ Firewall rules, and their configurable parameters are explained in the next few 
 ## Creating firewall rules<a name="creating-firewall-rules"></a>
 
 Create a firewall rule to enable a client to establish a connection with your instance, or with an application running on your instance\. For example, to enable all web browsers to connect to the WordPress application on your instance, you configure a firewall rule that enables the Transmission Control Protocol \(TCP\) over port 80 from any IP address\. If this rule is already configured on your instance's firewall, then you can delete it to block web browsers from being able to connect to the WordPress application on your instance\.
+
+**Important**  
+You can use the Lightsail console to add up to 30 source IP addresses at a time\. To add up to 60 IP addresses at a time, use the Lightsail API, AWS Command Line Interface \(AWS CLI\), or an AWS SDK\. This quota is enforced separately for IPv4 rules and IPv6 rules\. For example, a firewall can have 60 inbound rules for IPv4 traffic and 60 inbound rules for IPv6 traffic\. We recommend you consolidate individual IP addresses into CIDR ranges\. For more information, see the [Specifying source IP addresses](#specifying-source-ip-addresses) section of this guide\.
 
 You can also enable an SSH client to connect to your instance, to perform administrative tasks on the server, by configuring a firewall rule that enables TCP over port 22 only from the IP address of the computer that needs to establish a connection\. In this case, you would not want to allow any IP address to establish an SSH connection to your instance; since doing so could lead to a security risk on your instance\.
 
@@ -63,6 +66,8 @@ Here are some of the commonly used ports along with the services that use them:
 + Secure Shell \(SSH\) uses port 22\.
 + Telnet remote login service, and unencrypted text messages uses port 23\.
 + Simple Mail Transfer Protocol \(SMTP\) email routing uses port 25\.
+**Important**  
+To enable SMTP on your instance, you must also configure reverse DNS for your instance\. Otherwise, your email might be limited over TCP port 25\. For more information, see [Configuring reverse DNS for an email server on your Amazon Lightsail instance](amazon-lightsail-configuring-reverse-dns.md)\.
 + Domain Name System \(DNS\) service uses port 53\.
 + Hypertext Transfer Protocol \(HTTP\) used by web browsers to connect to websites uses port 80\.
 + Post Office Protocol \(POP3\) used by email clients to retrieve email from a server uses port 110\.
@@ -164,5 +169,5 @@ RDP \- TCP \- 3389 \- all IP addresses
 ## More information about firewalls<a name="firewall-more-information"></a>
 
 The following are some articles to help you manage firewalls in Lightsail\.
-+ [Adding and editing firewall rules in Amazon Lightsail](amazon-lightsail-editing-firewall-rules.md)
++ [Adding and editing instance firewall rules in Amazon Lightsail](amazon-lightsail-editing-firewall-rules.md)
 + [Firewall rules reference](amazon-lightsail-firewall-rules-reference.md)

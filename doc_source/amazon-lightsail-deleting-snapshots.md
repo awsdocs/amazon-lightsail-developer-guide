@@ -11,7 +11,7 @@ Delete instance, database, and disk snapshots in Amazon Lightsail if you no long
 1. Find the Lightsail resource whose snapshot you want to delete, and choose the right\-arrow to expand the list of of available snapshots for that resource\.
 
 1. Choose the actions menu icon \(⋮\) next to the snapshot you want to delete, and choose **Delete snapshot**\.  
-![\[Delete a snapshot in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-delete-snapshot-menu-option.png)
+![\[Delete a snapshot in the Lightsail console.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-delete-snapshot-menu-option.png)
 
 1. Choose **Yes** to confirm that you want to delete the snapshot\.
 **Important**  
@@ -22,7 +22,7 @@ This is a permanent operation and can't be undone\. You will lose all data on th
 1. From the Lightsail home page, choose **Snapshots**\.
 
 1. Find the Lightsail resource whose snapshots you want to delete, and choose the right\-arrow to expand the list of snapshots\.  
-![\[Use the shortcut menu to show your disk snapshots and delete multiple disk snapshots\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/animated-gif-delete-disk-snapshot-multiple.gif)
+![\[Use the shortcut menu to show your disk snapshots and delete multiple disk snapshots\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/animated-gif-delete-disk-snapshot-multiple.gif)
 
 1. Choose **Delete multiple**\.
 

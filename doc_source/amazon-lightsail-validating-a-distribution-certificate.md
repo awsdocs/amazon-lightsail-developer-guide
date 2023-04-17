@@ -1,10 +1,12 @@
 # Validating SSL/TLS certificates for your Amazon Lightsail distribution<a name="amazon-lightsail-validating-a-distribution-certificate"></a>
 
- *Last updated: July 23, 2020* 
+ *Last updated: November 1, 2022* 
 
-You must validate an Amazon Lightsail SSL/TLS certificate after you created it and before you can use it with your Lightsail distribution\. When you validate a certificate, you verify that you control all the domain names that you specified for the certificate when you created it\. You do this by adding canonical name \(CNAME\) records to the DNS zone of each of the domains specified on the certificate\. The records that you need to add are listed in the Lightsail console\.
+An Amazon Lightsail SSL/TLS certificate must be validated after it's created, and before you can use it with your Lightsail distribution\. After your certificate request is submitted, the status of your new certificate is changed to **Attempting to validate your certificate**\. During this time, Lightsail attempts to add the certificate's validation record to the DNS of the domain names that you specified for the certificate\. After a while, the status will change to **Valid**, or **Validation timed out**\.
 
-In this guide, we provide you with the procedure to validate your certificate using a Lightsail DNS zone\. The procedure to validate your certificate using a different DNS hosting provider, like Domain\.com or GoDaddy, may be similar\. For more information about Lightsail DNS zones, see [DNS in Amazon Lightsail](understanding-dns-in-amazon-lightsail.md)\.
+If automatic validation fails you must verify that you control all the domain names that you specified for the certificate when you created it\. You do this by adding canonical name \(CNAME\) records to the DNS zone of each of the domains specified on the certificate\. The records that you need to add are listed in the **Validation details** section of the certificate\.
+
+In this guide, we provide you with the procedure to manually validate your certificate using a Lightsail DNS zone\. The procedure to validate your certificate using a different DNS hosting provider, like Domain\.com or GoDaddy, may be similar\. For more information about Lightsail DNS zones, see [DNS in Amazon Lightsail](understanding-dns-in-amazon-lightsail.md)\.
 
 For more information about SSL/TLS certificates, see [SSL/TLS certificates in Amazon Lightsail](understanding-tls-ssl-certificates-in-lightsail-https.md)\.
 
@@ -28,18 +30,16 @@ Complete the following procedure to get the CNAME records that you must add to y
 1. On the Lightsail home page, choose the **Networking** tab\.
 
 1. Choose the name of the distribution for which want to get the CNAME record values of a certificate\.  
-![\[Networking tab of the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-home-page-networking.png)
+![\[Networking tab of the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-home-page-networking.png)
 
 1. Choose the **Custom domains** tab on your distribution's management page\.  
-![\[Custom domains tab of a Lightsail distribution.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-distribution-custom-domains-tab.png)
+![\[Custom domains tab of a Lightsail distribution.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-distribution-custom-domains-tab.png)
 
-1. Scroll down to the **Certificates** section of the page\.
+1. Scroll down to the **Attached certificates** section of the page\.
 
-   All of your distribution certificates are listed under the **Certificates** section of the page, including certificates with a **Pending validation** status\.  
-![\[SSL/TLS certificates section of a Lightsail distribution.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/distribution-certificates-section.png)
+   All of your distribution certificates are listed under the **Attached certificates** section of the page, including certificates created for other Lightsail resources, and certificates that are pending validation\.
 
-1. Find the certificate that you want to validate, and make note of the **Name** and **Value** of the CNAME records that you must add for each domain listed\.  
-![\[Records to validate domain ownership for a Lightsail SSL/TLS certificate.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lighstail-certificate-validation-records.png)
+1. Find the certificate that you want to validate, expand **Validation details**, and make note of the **Name** and **Value** of the CNAME records that you must add for each domain listed\.
 
    You must add these records exactly as listed\. We recommend that you copy and paste these values into a text file that you can refer to later\. For more information, see the following [Add the CNAME records to your domain's DNS zone](#add-distribution-certificate-cname-records) section of this guide\.
 
@@ -47,24 +47,23 @@ Complete the following procedure to get the CNAME records that you must add to y
 
 Complete the following procedure to add CNAME records to your domain's DNS zone\.
 
-1. On the Lightsail home page, choose the **Networking** tab\.
+1. On the Lightsail home page, choose the **Domains & DNS** tab\.
 
-1. Under the **DNS zones** section of the page, choose the domain name to which you want to add the CNAME records to validate your certificate\.  
-![\[Networking tab of the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-home-page-networking-dns-zone.png)
+1. Under the **DNS zones** section of the page, choose the domain name to which you want to add the CNAME records to validate your certificate\.
 
-1. Choose **Add record** in the DNS zone management page\.  
-![\[Add record to Lightsail DNS zone\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-dns-zone-add-record.png)
+1. Choose the **DNS records** tab\.
 
-1. Choose **CNAME** in the DNS record type drop\-down\.
+1. Choose **Add record** in the DNS records management page\.
 
-1. In the **Subdomain** text box, enter the **Name** value of the CNAME record that you got from your certificate\.
+1. Choose **CNAME** in the **Record type** drop\-down\.
+
+1. In the **Record name** text box, enter the **Name** value of the CNAME record that you got from your certificate\.
 
    The Lightsail console pre\-populates the apex portion of your domain\. For example, if you want to add the `www.example.com` subdomain, then you only have to enter `www` into the text box, and Lightsail adds the `.example.com` portion for you when you save the record\.
 
-1. In the **Maps to** text box, enter the **Value** portion of the CNAME record that you got from your certificate\.
+1. In the **Route traffic to** text box, enter the **Value** portion of the CNAME record that you got from your certificate\.
 
-1. Confirm that the values you entered are exactly as they were listed on the certificate that you want to validate\.  
-![\[Add CNAME record to Lightsail DNS zone\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-dns-zone-cname-record.png)
+1. Confirm that the values you entered are exactly as they were listed on the certificate that you want to validate\.
 
 1. Choose the save icon to save the record to your DNS zone\.
 
@@ -77,17 +76,17 @@ Complete the following procedure to view the status of your SSL/TLS certificate 
 1. On the Lightsail home page, choose the **Networking** tab\.
 
 1. Choose the name of the distribution for which you want to view a certificate's status\.  
-![\[Networking tab of the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-home-page-networking.png)
+![\[Networking tab of the Lightsail home page.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-home-page-networking.png)
 
 1. Choose the **Custom domains** tab on your distribution's management page\.  
-![\[Custom domains tab of a Lightsail distribution.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-distribution-custom-domains-tab.png)
+![\[Custom domains tab of a Lightsail distribution.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-distribution-custom-domains-tab.png)
 
-1. Scroll down to the **Certificates** section of the page\.
+1. Scroll down to the **Attached certificates** section of the page\.
 
-   All of your distribution certificates are listed under the **Certificates** section of the page, including certificates with **Pending validation** and **Valid** statuses\.  
-![\[Validated SSL/TLS certificate\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-validated-certificate.png)
+   All of your distribution certificates are listed under the **Attached certificates** section of the page, including certificates with **Pending validation** and **Valid** statuses\.  
+![\[Validated SSL/TLS certificate\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-validated-certificate.png)
 
-   A **Valid** status confirms that you successfully validated your certificate with the CNAME records that you added to your domains\. Choose **Show details** to view your certificate's important dates, encryption details, identification, and validation records\. Your certificates are valid for 13 months from the date on which you validated them, after which time Lightsail attempts to automatically re\-validate them\. Don't delete the CNAME records that you added to your domain because they are required when your certificate is re\-validated on the **Valid until** date listed\.
+   A **Valid** status confirms that you successfully validated your certificate with the CNAME records that you added to your domains\. Choose **Details** to view your certificate's important dates, encryption details, identification, and validation records\. Your certificates are valid for 13 months from the date on which you validated them, after which time Lightsail attempts to automatically re\-validate them\. Don't delete the CNAME records that you added to your domain because they are required when your certificate is re\-validated on the **Valid until** date listed\.
 
    After you validate your SSL/TLS certificate, you should enable custom domains for your distribution to use the domain names of your certificate on your distribution\. For more information, see [Enabling custom domains for your Amazon Lightsail distributions](amazon-lightsail-enabling-distribution-custom-domains.md)\.
 

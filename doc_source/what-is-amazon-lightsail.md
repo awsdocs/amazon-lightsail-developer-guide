@@ -39,26 +39,26 @@ You can also create a Lightsail load balancer and attach target instances to cre
 + WordPress Multisite certified by Bitnami
 + cPanel & WHM
 + PrestaShop
-+ Drupal certified by Bitnami
-+ Ghost certified by Bitnami
-+ Joomla certified by Bitnami
++ Drupal packaged by Bitnami
++ Ghost packaged by Bitnami
++ Joomla packaged by Bitnami
 + Plesk Hosting Stack on Ubuntu
 
 ## E\-commerce and project management applications in Lightsail<a name="ecommerce-and-project-management-apps-in-lightsail"></a>
 
 **Linux**
-+ Magento certified by Bitnami \(eCommerce\)
-+ Redmine \(Project Management\)
++ Magento packaged by Bitnami \(eCommerce\)
++ Redmine packaged by Bitnami \(Project Management\)
 
 ## Development stacks in Lightsail<a name="what-developer-stacks-are-available-in-lightsail"></a>
 
 **Linux**
-+ LAMP stack \(PHP 7\) certified by Bitnami
-+ Node\.js certified by Bitnami
-+ MEAN Stack certified by Bitnami \(HVM\)
-+ LEMP Stack \(Nginx\) by Bitnami
-+ Django certified by Bitnami
-+ GitLab certified by Bitnami \(HVM\)
++ LAMP stack \(PHP 7\) packaged by Bitnami
++ Node\.js packaged by Bitnami
++ MEAN Stack packaged by Bitnami \(HVM\)
++ Nginx \(LEMP Stack\) packaged by Bitnami
++ Django packaged by Bitnami
++ GitLab packaged by Bitnami \(HVM\)
 
 **Windows**
 + SQL Server 2016 Express

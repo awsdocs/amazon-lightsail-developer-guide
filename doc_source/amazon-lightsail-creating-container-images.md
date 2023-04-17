@@ -8,7 +8,7 @@ In this guide, we show you how to create a container image on your local machine
 
 To complete the procedures in this guide you should possess a basic understanding of what Docker is and how it works\. For more information about Docker, see [What is Docker?](https://aws.amazon.com/docker/) and the [Docker overview](https://docs.docker.com/get-started/overview/)\.
 
-**Contents:**
+**Contents**
 + [Step 1: Complete the prerequisites](#create-container-image-prerequisite)
 + [Step 2: Create a Dockerfile and build a container image](#create-container-image-create-dockerfile)
 + [Step 3: Run your new container image](#create-container-image-run-container)
@@ -86,7 +86,7 @@ Complete the following procedure to create a Dockerfile, and build a `mystaticwe
    ```
 
    You should see a result similar to the following example, showing the new container image created\.  
-![\[Result of docker images command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/docker-images-command-result.png)
+![\[Result of docker images command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/docker-images-command-result.png)
 
    Your newly built container image is ready to be tested by using it to run a new container on your local machine\. Continue to the next [Step 3: Run your new container image](#create-container-image-run-container) section of this guide\.
 
@@ -107,10 +107,10 @@ Complete the following steps to run the new container image you created\.
    ```
 
    You should see a result similar to the following example, showing the new running container\.  
-![\[Result of docker container command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/docker-container-command-result.png)
+![\[Result of docker container command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/docker-container-command-result.png)
 
 1. To confirm that the container is up and running, open a new browser window and browse to `http://localhost:8080`\. You should see a message similar to the following example\. This confirms that your container is up and running on your local machine\.  
-![\[Static website running on a Docker container\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-mystaticsite-hello-world.png)
+![\[Static website running on a Docker container\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/container-mystaticsite-hello-world.png)
 
    Your newly built container image is ready to be pushed to your Lightsail account so that you can deploy it to your Lightsail container service\. For more information, see [Pushing and managing container images on your Amazon Lightsail container services](amazon-lightsail-pushing-container-images.md)\.
 
@@ -127,7 +127,7 @@ Complete the following steps to clean up the containers running on your local ma
    ```
 
    You should see a result similar to the following, which lists the names of the containers running on your local machine\.  
-![\[Result of docker container command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/docker-container-command-result.png)
+![\[Result of docker container command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/docker-container-command-result.png)
 
 1. Run the following command to remove the running container that you created earlier in this guide\. This forces the container to be stopped, and permanently deletes it\.
 

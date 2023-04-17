@@ -6,10 +6,9 @@ A static IP is a fixed, public IP address that you can assign and reassign to an
  *Last updated: March 23, 2017* 
 
 Learn about these common tasks for working with static IP addresses:
-+  [Create a static IP address in Lightsail](lightsail-create-static-ip.md) 
-+  [Restart, stop, or start your Lightsail instance](lightsail-how-to-start-stop-or-restart-your-instance-virtual-private-server.md) 
++ [IP addresses in Amazon Lightsail](understanding-public-ip-and-private-ip-addresses-in-amazon-lightsail.md)
++ [Create a static IP address in Lightsail](lightsail-create-static-ip.md)
++ [Restart, stop, or start your Lightsail instance](lightsail-how-to-start-stop-or-restart-your-instance-virtual-private-server.md)
 
 **Important**  
-If you stop or restart your instance without first creating a static IP address, you lose your IP address when your instance restarts\. It's always a good idea to create a static IP address for your instance\. Here's how: [Create a static IP address in Lightsail](lightsail-create-static-ip.md)\.
-
-For more information, see [Understanding public IP addresses and private IP addresses in Lightsail](understanding-public-ip-and-private-ip-addresses-in-amazon-lightsail.md)\.
+If you stop or restart your instance without first creating a static IP address and attaching it to your instance, you lose your IP address when your instance restarts\. You should create a static IP address and attach it to your instance to ensure that your instance always has the same public IP address\. For more information, see [Create a static IP address in Lightsail](lightsail-create-static-ip.md)\.

@@ -1,6 +1,6 @@
 # Quick start guide: Plesk on Amazon Lightsail<a name="amazon-lightsail-quick-start-guide-plesk"></a>
 
- *Last updated: September 30, 2021* 
+ *Last updated: December 8, 2022* 
 
 Here are a few steps you should take to get started after your Plesk instance is up and running on Amazon Lightsail:
 
@@ -20,7 +20,7 @@ You need the one\-time login URL to access the Plesk panel as an administrator\.
    ```
 
    You should see a response similar to the following example, which contains the one\-time login URL:  
-![\[One-time sign in for your Plesk instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/plesk-one-time-sign-in.png)
+![\[One-time sign in for your Plesk instance.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/plesk-one-time-sign-in.png)
 **Important**  
 If you recently attached a static IP to your Plesk instance, you might get a one\-time login URL that uses the old public IP address\. Reboot the instance, and then run the above command again to get a one\-time login URL that uses the new static, public IP address\.
 
@@ -39,7 +39,7 @@ For more information, see [Set up and configure Plesk on Lightsail](set-up-and-c
 
 ## Step 3: Attach a static IP address to your Plesk instance<a name="amazon-lightsail-plesk-attach-static-ip"></a>
 
-The default dynamic public IP address attached to your instance changes every time you stop and start the instance\. Create a static IP address, and attach it to your instance, to keep the public IP address from changing\. Later, when you use your domain name with your instance, you don’t have to update your domain’s DNS records each time you stop and start the instance\.
+The default dynamic public IP address attached to your instance changes every time you stop and start the instance\. Create a static IP address, and attach it to your instance, to keep the public IP address from changing\. Later, when you use your domain name with your instance, you don’t have to update your domain’s DNS records each time you stop and start the instance\. You can attach one static IP to an instance\.
 
 On your instance management page, under the **Networking** tab, choose **Create static IP**, then follow the instructions on the page\.
 
@@ -52,9 +52,9 @@ You can map a domain to your Plesk instance, which you can use to access your Pl
 
 To map your domain name, such as `example.com`, to your instance, you add a record to the domain name system \(DNS\) of your domain\. DNS records are typically managed and hosted at the registrar where you registered your domain\. However, we recommend that you transfer management of your domain's DNS records to Lightsail so that you can administer it using the Lightsail console\.
 
-On the Lightsail console home page, under the **Networking** tab, choose **Create DNS zone**, then follow the instructions on the page\.
+On the Lightsail console home page, under the **Domains & DNS** tab, choose **Create DNS zone**, then follow the instructions on the page\.
 
-For more information, see [Creating a DNS zone to manage your domain’s DNS records in Amazon Lightsail](lightsail-how-to-create-dns-entry.md)\.
+For more information, see [Creating a DNS zone to manage your domain’s DNS records in Lightsail](lightsail-how-to-create-dns-entry.md)\.
 
 ## Step 5: Read the Plesk documentation<a name="amazon-lightsail-plesk-read-the-bitnami-documentation"></a>
 

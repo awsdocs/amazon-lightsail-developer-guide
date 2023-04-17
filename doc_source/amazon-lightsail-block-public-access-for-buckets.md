@@ -1,21 +1,47 @@
 # Block public access for buckets in Amazon Lightsail<a name="amazon-lightsail-block-public-access-for-buckets"></a>
 
- *Last updated: March 9, 2022* 
+ *Last updated: June 22, 2022* 
 
-Amazon Simple Storage Service \(Amazon S3\) is an object storage service on which customers can store and protect data\. The Amazon Lightsail object storage service is built on Amazon S3 technology\. Amazon S3 offers a feature known as account\-level block public access, which provides centralized controls to limit public access to all Amazon S3 buckets in an account\. Block public access can make all Amazon S3 buckets in an AWS account private regardless of the individual bucket and object permissions that are configured\.
+Amazon Simple Storage Service \(Amazon S3\) is an object storage service on which customers can store and protect data\. The Amazon Lightsail object storage service is built on Amazon S3 technology\. Amazon S3 offers *account\-level block public access*, which you can use to limit public access to all S3 buckets in an AWS account\. Account\-level block public access can make all S3 buckets in an AWS account private, regardless of existing individual bucket and object permissions\.
 
-Lightsail object storage resources take into account both Lightsail bucket access permissions and Amazon S3 account\-level block public access configurations when allowing or denying public access\. The Amazon S3 account\-level block public access configuration overrides Lightsail bucket access permissions\. That is, if you enable account\-level block public access in Amazon S3, your Lightsail buckets and objects that are public become private and are no longer publicly accessible\.
+When allowing or denying public access, Lightsail object storage buckets take into account the following:
++ Lightsail bucket access permissions\. For more information see [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
++ Amazon S3 account\-level block public access configurations, which override the Lightsail bucket access permissions\.
+
+If you turn on account\-level **Block *all* public access** in Amazon S3, your public Lightsail buckets and objects become private and are no longer publicly accessible\.
 
 ## Configuring block public access settings for your account<a name="configuring-block-public-access"></a>
 
-You can use the Amazon S3 console, AWS CLI, AWS SDKs, and REST API to configure block public access settings\. For more information about block public access and how to configure it, see the following resources in the *Amazon S3 User Guide*:
+You can use the Amazon S3 console, AWS Command Line Interface \(AWS CLI\), AWS SDKs, and REST API to configure block public access settings\. You can access the account\-level block public access feature in the navigation pane of the Amazon S3 console as shown in the following example\.
+
+![\[Block public access navigation pane option in the Amazon S3 console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-s3-block-public-access-navigation-pane.png)
+
+The Amazon S3 console offers settings to block all public access, block public access granted through new or any access control lists, and block public access to buckets and objects granted through new or any public bucket or access point policies\.
+
+![\[Block public access options in the Amazon S3 console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-s3-block-public-access-in-s3-console.png)
+
+You can turn each setting **On** or **Off** in the Amazon S3 console\. In the API, the corresponding setting is `TRUE` \(On\) or `FALSE` Off\)\. The following sections describe each setting's effects on S3 buckets and Lightsail buckets\.
+
+**Note**  
+The following sections mention access control lists \(ACLs\)\. An ACL defines the users who own or have access to a bucket or individual objects\. For more information, see [Access control list overview](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html) in the *Amazon S3 User Guide\.*
++ **Block *all* public access** — Turn on this setting to block all public access to your S3 buckets, Lightsail buckets, and their corresponding objects\. This setting incorporates all of the following settings\. When you turn on this setting, only you \(the bucket owner\) and authorized users are allowed to access your buckets and their objects\. You can only turn this setting on in the Amazon S3 console\. It is not available in the AWS CLI, Amazon S3 API, or AWS SDKs\.
+  + **Block public access to buckets and objects granted through *new* access control lists \(ACLs\)** — Turn on this setting to block putting public ACLs on buckets and objects\. This setting does not impact existing ACLs\. Therefore, an object that already has a public ACL remains public\. This setting also has no impact on objects that are public due to a bucket access permission being set to **All objects are public and read\-only**\. This setting is labeled as `BlockPublicAcls` in the Amazon S3 API\.
+**Note**  
+WordPress plugins that put media in Lightsail buckets, such as the Offload Media Light plugin, might stop working when this setting is turned on\. This is because most WordPress plugins configure the public\-read ACL on objects\. WordPress plugins that toggle object ACLs might also stop working\.
+  + **Block public access to buckets and objects granted through *any* access control lists \(ACLs\)** — Turn on this setting to ignore public ACLs and block public access to buckets and objects\. This setting allows public ACLs to be put on buckets and objects, but ignores them when granting access\. For Lightsail buckets, setting a bucket's access permission to **All objects are public and read\-only** or setting an individual object's permission to **Public \(read\-only\)** is the equivalent of putting a public ACL on either\. This setting is labeled as `IgnorePublicAcls` in the Amazon S3 API\.
+  + **Block public access to buckets and objects granted through *new* public bucket or access point policies** — Turn on this setting to block the **All objects are public and read\-only** bucket access permission from being configured on your Lightsail buckets\. This setting does not impact buckets that are already configured with the **All objects are public and read\-only** bucket access permission\. This setting is labeled as `BlockPublicPolicy` in the Amazon S3 API\.
+  + **Block public and cross\-account access to buckets and objects through *any* public bucket or access point policies** — Turn on this setting to make all of your Lightsail buckets private\. This makes all Lightsail buckets private, even if they are configured with the **All objects are public and read\-only** bucket access permission\. This setting is labeled as `RestrictPublicBuckets` in the Amazon S3 API\.
+**Important**  
+This setting also blocks cross\-account access that is configured on a Lightsail bucket that is also configured with the **All objects are public and read\-only** bucket access permission in Lightsail\. To continue allowing cross\-account access, make sure to configure the Lightsail bucket with the **All objects are private** bucket access permission in Lightsail before turning on the **Block public and cross\-account access to buckets and objects through *any* public bucket or access point policies** setting in Amazon S3\.
+
+For more information about block public access and how to configure it, see the following resources in the *Amazon S3 User Guide*:
 + [Blocking public access to your Amazon S3 storage](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html)
 + [Configuring block public access settings for your account](https://docs.aws.amazon.com/AmazonS3/latest/userguide/configuring-block-public-access-account.html)
 
 Use the Lightsail console, AWS CLI, AWS SDKs, and REST API to configure access permissions for your Lightsail buckets\. For more information, see [Understanding bucket permissions in Amazon Lightsail](amazon-lightsail-understanding-bucket-permissions.md)\.
 
 **Note**  
-Lightsail uses a service\-linked role to get the current account\-level block public access configuration from Amazon S3 and apply it to Lightsail object storage resources\. Allow for at least one hour after configuring block public access in Amazon S3 for it to become effective in Lightsail\. For more information, see [Using Service\-Linked Roles for Amazon Lightsail](amazon-lightsail-using-service-linked-roles.md)\.
+Lightsail uses a service\-linked role to get the current account\-level block public access configuration from Amazon S3 and apply it to Lightsail object storage resources\. After configuring block public access in Amazon S3, wait at least one hour for it to take effect in Lightsail\. For more information, see [Using Service\-Linked Roles for Amazon Lightsail](amazon-lightsail-using-service-linked-roles.md)\.
 
 ## Managing buckets and objects in Lightsail<a name="block-public-access-managing-buckets-and-objects"></a>
 

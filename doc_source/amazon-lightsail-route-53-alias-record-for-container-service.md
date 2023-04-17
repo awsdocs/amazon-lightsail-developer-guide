@@ -1,15 +1,15 @@
 # Routing traffic for a domain in Route 53 to an Amazon Lightsail container service<a name="amazon-lightsail-route-53-alias-record-for-container-service"></a>
 
- *Last updated: September 24, 2021* 
+ *Last updated: November 1, 2022* 
 
 You can route traffic for a registered domain, such as `example.com`, to the applications running on a Lightsail container service\. You do this by adding an alias record to the hosted zone of your domain that points to the default domain of your Lightsail container service\.
 
-In this tutorial, we show you how to add an alias record for your Lightsail container service to a DNS zone in Route 53\. You can do this only by using the AWS Command Line Interface \(AWS CLI\)\. It cannot be done using the Route 53 console\.
+In this tutorial, we show you how to add an alias record for your Lightsail container service to a hosted zone in Route 53\. You can do this only by using the AWS Command Line Interface \(AWS CLI\)\. It cannot be done using the Route 53 console\.
 
 **Note**  
 If you're using Lightsail to host the DNS of your domain, then you should add the alias record to the DNS zone of your domain in Lightsail\. For more information, see [Routing traffic for a domain in Amazon Lightsail to a Lightsail container service](amazon-lightsail-point-domain-to-container-service.md)\.
 
-*Contents:*
+**Contents**
 + [Step 1: Complete the prerequisites](#route-53-container-service-prerequisites)
 + [Step 2: Get the hosted zone IDs for Lightsail container services](#route-53-container-service-hosted-zone-ids)
 + [Step 3: Create a record set JSON file](#route-53-container-service-create-record-set-json)
@@ -151,7 +151,7 @@ You must install the AWS CLI and configure it for Lightsail and Route 53 before 
    ```
 
    You should see a result similar to the following example:  
-![\[Result of the change resource record sets request\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-route-53-record-set.png)
+![\[Result of the change resource record sets request\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-route-53-record-set.png)
 
    Allow time for the change to propagate through the internet's DNS, which might take several hours\. After that is completed, internet traffic for your registered domain in Route 53 should begin routing to your Lightsail container service\.
 

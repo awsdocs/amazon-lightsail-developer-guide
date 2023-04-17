@@ -5,7 +5,7 @@
 Database parameters, also known as database system variables, define fundamental properties of a managed database in Amazon Lightsail\. For example, you can define a database parameter to limit the number of database connections, or define another parameter to limit the database buffer pool size\. This guide shows you how to get a list of the parameters for your managed database, and how to update them using the AWS Command Line Interface \(AWS CLI\)\.
 
 **Note**  
-For more information about MySQL system variables, refer to the [MySQL 5\.6](https://dev.mysql.com/doc/refman/5.6/en/server-system-variables.html), [MySQL 5\.7](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html), or [MySQL 8\.0](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html) documentation\. For more information about PostgreSQL system variables, refer to the [PostgreSQL 9\.6](https://www.postgresql.org/docs/9.6/index.html), [PostgreSQL 10](https://www.postgresql.org/docs/10/index.html), or [PostgreSQL 11](https://www.postgresql.org/docs/11/index.html) documentation\.
+For more information about MySQL system variables, refer to the [MySQL 5\.6](https://dev.mysql.com/doc/refman/5.6/en/server-system-variables.html), [MySQL 5\.7](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html), or [MySQL 8\.0](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html) documentation\. For more information about PostgreSQL system variables, refer to the [PostgreSQL 9\.6](https://www.postgresql.org/docs/9.6/index.html), [PostgreSQL 10](https://www.postgresql.org/docs/10/index.html), [PostgreSQL 11](https://www.postgresql.org/docs/11/index.html), or [PostgreSQL 12](https://www.postgresql.org/docs/12/index.html) documentation\.
 
 ## Prerequisites<a name="prerequisites-to-update-database-parameters"></a>
 + If you haven't done so already, install and configure the AWS CLI\. For more information, see [Configuring the AWS Command Line Interface to work with Amazon Lightsail](lightsail-how-to-set-up-and-configure-aws-cli.md)\.
@@ -27,7 +27,7 @@ The database parameters differ depending on the database engine; therefore, you 
    In the command, replace *DatabaseName* with the name of your database\.
 
    You should see a result similar to the following example:  
-![\[Get relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-get-database-parameters-result.png)
+![\[Get relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-get-database-parameters-result.png)
 **Note**  
 A next page token ID is listed if the parameter results are paginated\. Make note of the next page token ID and use it as shown in the next step to view the next page of parameter results\.
 
@@ -74,6 +74,6 @@ After you have the name of the parameter you want to change, perform the followi
     If the parameter's apply type is `dynamic`, the parameter can be applied with an `immediate` apply method and the database will begin using the new parameter value immediately\. However, if the parameter apply type is `static`, the parameter can only be applied with a `pending-reboot` apply method and the database will begin using the new parameter only after it’s restarted\.
 
   You should see a result similar to the following example:  
-![\[Change relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-update-database-parameters-result.png)
+![\[Change relational database parameters result\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-update-database-parameters-result.png)
 
   The database parameter is updated depending on the apply method used\.

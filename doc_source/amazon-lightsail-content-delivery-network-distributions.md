@@ -3,7 +3,7 @@
 **Note**  
 An Amazon Lightsail content delivery network \(CDN\) distribution caches your website or web application content at worldwide locations\. When your user requests content that you're serving through a distribution, the request is routed to the nearest location in terms of latency\. Lightsail distributions are backed by the Amazon CloudFront global network, which serves content from servers in 84 cities across 24 countries\.
 
- *Last updated: January 25, 2022* 
+ *Last updated: May 16, 2022* 
 
 A Lightsail distribution uses a globally distributed network of servers, also known as *edge locations*, to provide faster delivery of your content to your users\. To use a distribution, you first create and host your website or web application on a Lightsail instance or container service, or multiple instances attached to a Lightsail load balancer, or store your static content on a Lightsail bucket\. You then create and configure a Lightsail distribution to pull, cache, and serve content from your instance, container service, load balancer, or bucket\. Your instance, container service, load balancer, or bucket, also known as your distribution's *origin*, is the definitive source of your content\.
 
@@ -18,20 +18,31 @@ In the following diagram:
 + 2 represents your distribution, or the edge locations that pull, cache, and serve content from your origin\.
 + 3 represents your users who are served content from the edge locations\.
 
-![\[Lightsail distribution diagram\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/distribution-diagram.png)
+![\[Lightsail distribution diagram\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/distribution-diagram.png)
 
 **Note**  
 This diagram is for illustration purpose only and doesn't show actual edge locations\. For more information about edge locations, see [Edge locations and IP address ranges](#edge-locations) later in this guide\.
 
-This method of serving content is faster and more efficient than the traditional method of serving content from just one, central resource\. Your users access your content from locations that are nearby, as opposed to all of your users accessing the same central resource that may be far away\.
+For example, if your website is hosted in France, and a person from another area of France wants to view your content, the page will load in milliseconds\.
+
+When your visitor isn't nearby, things get a little difficult\.
+
+If a person from Australia wants to view your content, the browser will have to fetch it from a server that is located in France and then show it to that user thousands of miles away\. If users from different countries request the same content at the same time, the server becomes clogged with requests and takes longer to load and serve the content\. This affects the speed at which the content loads for the end user\.
+
+![\[Lightsail distribution example\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-cdn-use-cases.png)
+
+A CDN resolves this situation by caching your website content at edge locations\. This method of serving content is faster and more efficient than the traditional method of serving content from one central resource\. When a viewer makes a request on your website or through your application, DNS routes the request to the location that can best serve the user’s request\. Your users access your content from locations that are nearby, as opposed to all of your users accessing the same central resource that may be far away\.
 
 ## Use cases<a name="distribution-use-cases"></a>
 
+**Deliver fast, secure websites**  
 A Lightsail distribution speeds up the delivery of your content \(for example, website pages, images, style sheets, JavaScript, and so on\) to viewers *worldwide*\. By using a distribution, you can take advantage of the AWS backbone network and edge servers to give your viewers a fast, safe, and reliable experience when they visit your website\.
 
-Using a distribution to cache and serve your content also reduces the load on your origin, because most requests are served by your distribution and not your instance, container service, load balancer, or bucket\.
+**Improve your site’s security**  
+Strengthen your website and increase its performance by taking advantage of TLS termination, which reduces the load on your origin by offloading the cryptographic processing to your distribution\. You can use your registered domain name together with a Lightsail SSL/TLS certificate to enable Hypertext Transfer Protocol Secure \(HTTPS\) for your distribution\. Your users establish an encrypted HTTPS connection to your distribution, while your distribution pulls content from your origin using HTTP\.
 
-A distribution allows you to take advantage of TLS termination, which reduces the load on your origin by offloading the cryptographic processing to your distribution\. You can use your registered domain name together with a Lightsail SSL/TLS certificate to enable Hypertext Transfer Protocol Secure \(HTTPS\) for your distribution\. Your users establish an encrypted HTTPS connection to your distribution, while your distribution pulls content from your origin using HTTP\.
+**Application optimization**  
+Easily optimize your distributions for a variety of applications, including WordPress and static websites\. Using a distribution to cache and serve your content also reduces the load on your origin, because most requests are served by your distribution and not your instance, container service, load balancer, or bucket\.
 
 ## Configure your distribution<a name="configure-distribution"></a>
 

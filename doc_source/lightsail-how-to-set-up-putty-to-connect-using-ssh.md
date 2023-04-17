@@ -34,7 +34,7 @@ You have several options for getting your private key\. You might want to use th
 
 1. Choose one of the following options depending on which private key you prefer to use:
    + **To use the default private key that Lightsail generates**, in the **Default keys** section of the page, choose the download icon next to the default private key for the AWS Region where your instance is located\.  
-![\[SSH key pairs in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-ssh-key-pairs.png)
+![\[SSH key pairs in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-ssh-key-pairs.png)
    + **To create a new key pair in Lightsail**, in the **Custom keys** section of the page, choose **Create key pair**\. Choose the AWS Region where your instance is located, and choose **Create**\. Enter a name, and choose **Generate key pair**\. You will be given the option to download the private key\.
 **Important**  
 You can only download the private key once\. Save it in a secured location\.
@@ -81,7 +81,7 @@ You're almost there\! Hang on while we make one last change\.
 Port 22 is already open for SSH on your Lightsail instance, so accept the default port\.
 
 1. Under **Connection**, expand **SSH**, and then choose **Auth**\.  
-![\[PuTTY and the SSH Auth option in the configuration dialog\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/putty-configuration-connection-ssh-auth.png)
+![\[PuTTY and the SSH Auth option in the configuration dialog\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/putty-configuration-connection-ssh-auth.png)
 
 1. Choose **Browse** to navigate to the `.ppk` file that you created in the previous step, and then choose **Open**\.
 
@@ -92,7 +92,7 @@ Port 22 is already open for SSH on your Lightsail instance, so accept the defaul
    + CentOS instances: `centos`
    + Debian instances: `admin`
    + Ubuntu instances: `ubuntu`
-   + "Certified by Bitnami" instances: `bitnami`
+   + Bitnami instances: `bitnami`
    + Plesk instances: `ubuntu`
    + cPanel & WHM instances: `centos`
 

@@ -14,7 +14,7 @@ We recommend that you use multipart upload in the following ways:
 + If you're uploading large files over a stable high\-bandwidth network, multipart upload maximizes the use of your available bandwidth by uploading file parts in parallel for multi\-threaded performance\.
 + If you're uploading over a spotty network, use multipart upload to increase resiliency to network errors by avoiding upload restarts\. When using multipart upload, you retry uploads only for the interrupted parts\. There's no need to start over or upload the entire file again\.
 
-**Contents:**
+**Contents**
 + [Multipart upload process](#mutipart-upload-process)
 + [Concurrent multipart upload operations](#concurrent-multipart-upload-operations)
 + [Multipart upload retention](#multipart-upload-retention)
@@ -123,7 +123,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    ```
 
    You should see a result similar to the following example\. The response includes an `UploadID`, which you must specify in subsequent commands to upload parts, and to complete the multipart upload for this object\.  
-![\[Result of the create-multipart-upload command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-s3api-create-multipart-upload-result.png)
+![\[Result of the create-multipart-upload command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-s3api-create-multipart-upload-result.png)
 
    After you have the `UploadID` for your multipart upload, continue to the following [Upload a part using the AWS CLI](#upload-a-part) section of this guide and start uploading parts\.
 
@@ -156,7 +156,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    ```
 
    You should see a result similar to the following example\. Repeat the `upload-part` command for each part you upload\. The response for each of your upload part requests will include an `ETag` value for the part that you uploaded\. Record the `ETag` values for each of the parts that you upload\. You will need all of the `ETag` values to complete the multipart upload, which is covered later in this guide\.  
-![\[Result of the upload-part command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-s3api-upload-part-result.png)
+![\[Result of the upload-part command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-s3api-upload-part-result.png)
 
 ## List parts of a multipart upload using the AWS CLI<a name="list-parts-of-multipart-upload"></a>
 
@@ -187,7 +187,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    ```
 
    You should see a result similar to the following example\. The response lists all of the part numbers and `ETag` values for the parts that you uploaded in the multipart upload\. Copy these values to your clipboard, and continue to the [Create a multipart upload \.json](#create-multipart-upload-json-file) section of this guide\.  
-![\[Result of the list-parts command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-s3api-list-parts-result.png)
+![\[Result of the list-parts command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-s3api-list-parts-result.png)
 
 ## Create a multipart upload \.json file<a name="create-multipart-upload-json-file"></a>
 
@@ -196,10 +196,10 @@ Complete the following procedure to create a multipart upload \.json file that d
 1. Open a text editor, and paste the response from the `list-parts` command that you requested in the previous section of this guide\.
 
    The result should look like the following example\.  
-![\[asdf\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-multipart-upload-json-file-1.png)
+![\[asdf\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-multipart-upload-json-file-1.png)
 
 1. Reformat the text file as shown in the following example:  
-![\[asdf\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-multipart-upload-json-file-2.png)
+![\[asdf\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-multipart-upload-json-file-2.png)
 
 1. Save the text file to your computer as `mpstructure.json`, and continue to the [Complete a multipart upload using the AWS CLI](#complete-multipart-upload) section of this guide\.
 
@@ -229,7 +229,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    ```
 
    You should see a response similar to the following example\. This confirms that the multipart upload is completed\. The object is now assembled and available in the bucket\.  
-![\[Result of the complete-multipart-upload command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-s3api-complete-multipart-upload-result.png)
+![\[Result of the complete-multipart-upload command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-s3api-complete-multipart-upload-result.png)
 
 ## List multipart uploads for a bucket using the AWS CLI<a name="list-multipart-uploads"></a>
 
@@ -255,7 +255,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    ```
 
    You should see a response similar to the following example\.  
-![\[Result of the list-multipart-uploads command\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-s3api-list-multipart-uploads-result.png)
+![\[Result of the list-multipart-uploads command\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-s3api-list-multipart-uploads-result.png)
 
 ## Stop a multipart upload using the AWS CLI<a name="stop-multipart-uploads"></a>
 

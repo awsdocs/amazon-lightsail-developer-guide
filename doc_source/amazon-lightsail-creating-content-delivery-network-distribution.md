@@ -1,6 +1,6 @@
 # Creating Amazon Lightsail distributions<a name="amazon-lightsail-creating-content-delivery-network-distribution"></a>
 
- *Last updated: January 25, 2022* 
+ *Last updated: November 30, 2022* 
 
 In this guide, we show you how to create an Amazon Lightsail distribution using the Lightsail console, and describe the distribution settings that you can configure\. For more information about distributions, see [Content delivery network distributions in Amazon Lightsail](amazon-lightsail-content-delivery-network-distributions.md)\.
 
@@ -29,7 +29,7 @@ Complete the following prerequisites before you get started with creating a dist
 
      **Upload your content and files to your instance\.** Your files, also known as *objects*, typically include web pages, images, and media files, but can be anything that can be served over HTTP\.
    + **Create a Lightsail container service to host your website or web application\.** The container service serves as the origin of your distribution\. The origin stores the original, definitive version of your content\. For more information, see [Creating Amazon Lightsail container services](amazon-lightsail-creating-container-services.md)\.
-   + Create a Lightsail bucket to store your static content\. The bucket serves as the origin of your distribution\. The origin stores the original, definitive version of your content\. For more information, see [Creating buckets in Amazon Lightsail](amazon-lightsail-creating-buckets.md)\.
+   + **Create a Lightsail bucket to store your static content\.** The bucket serves as the origin of your distribution\. The origin stores the original, definitive version of your content\. For more information, see [Creating buckets in Amazon Lightsail](amazon-lightsail-creating-buckets.md)\.
 
      Upload files to your bucket using the Lightsail console, AWS Command Line Interface \(AWS CLI\), and AWS APIs\. For more information about uploading files, see [Uploading files to a bucket in Amazon Lightsail](amazon-lightsail-uploading-files-to-a-bucket.md)\.
 
@@ -41,7 +41,7 @@ An *origin* is the definitive source of content for your distribution\. When you
 
 You can choose only one origin per distribution\. You can change the origin at any time after you create your distribution\. For more information, see [Changing the origin of your distribution in Amazon Lightsail](amazon-lightsail-changing-distribution-origin.md)\.
 
-![\[Distribution origin selector\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-distribution-choose-origin.png)
+![\[Distribution origin selector\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-distribution-choose-origin.png)
 
 ## Origin protocol policy<a name="distribution-origin-protocol-policy"></a>
 
@@ -54,7 +54,7 @@ You can choose one of the following origin protocol policies for your distributi
 The steps to edit your origin protocol policy are included in the [Create a distribution](#creating-a-distribution) section later in this guide\.
 
 **Note**  
-When you select a Lightsail bucket as the origin of your distribution, the **Origin protocol policy** defaults to **HTTP only**\. You cannot change the origin protocol policy when a bucket is the origin of your distribution\.
+When you select a Lightsail bucket as the origin of your distribution, the **Origin protocol policy** defaults to **HTTPS only**\. You cannot change the origin protocol policy when a bucket is the origin of your distribution\.
 
 ## Caching behavior and caching presets<a name="distribution-caching-preset"></a>
 
@@ -224,8 +224,8 @@ If you choose a Lightsail container service as the origin of your distribution, 
 
    This option is listed in the **Choose your origin** section of the page, under the origin resource you selected for your distribution\.
 **Note**  
-When you select a Lightsail bucket as the origin of your distribution, the **Origin protocol policy** defaults to **HTTP only**\. You cannot change the origin protocol policy when a bucket is the origin of your distribution\.  
-![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/origin-protocol-policy.png)
+When you select a Lightsail bucket as the origin of your distribution, the **Origin protocol policy** defaults to **HTTPS only**\. You cannot change the origin protocol policy when a bucket is the origin of your distribution\.  
+![\[Origin protocol policy\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/origin-protocol-policy.png)
 
 1. Choose the caching behavior \(also known as a caching preset\) for your distribution\. For more information, see [Caching behavior and caching preset](#distribution-caching-preset)\.
 **Note**  

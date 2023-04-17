@@ -83,4 +83,4 @@ Custom \- TCP \- 25 \- The IP addresses of the hosts that communicate with your 
 
 The following are some articles to help you manage firewalls in Lightsail\.
 + [Firewall and ports in Amazon Lightsail](understanding-firewall-and-port-mappings-in-amazon-lightsail.md)
-+ [Adding and editing firewall rules in Amazon Lightsail](amazon-lightsail-editing-firewall-rules.md)
++ [Adding and editing instance firewall rules in Amazon Lightsail](amazon-lightsail-editing-firewall-rules.md)

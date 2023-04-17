@@ -1,6 +1,6 @@
 # Managing keys stored on an instance in Amazon Lightsail<a name="amazon-lightsail-remove-ssh-key-on-instance"></a>
 
- *Last updated: February 24, 2022* 
+ *Last updated: October 24, 2022* 
 
 You can establish a secure connection to your Amazon Lightsail instances using key pairs\. Lightsail configures the public key of a key pair on your Linux or Unix instance when you first create it\. You use the private key of the key pair to authenticate to your instance when establishing an SSH connection to it\. For more information about keys, see [Key pairs and connecting to instances in Amazon Lightsail](understanding-ssh-in-amazon-lightsail.md)\.
 
@@ -51,21 +51,21 @@ Complete the following procedure to create a key pair on your local computer usi
    Replace `<UserName>` with the name of the user you are currently signed in as, and replace `<KeyPairName>` with the name of your new key pair\.
 
    In the following example, we specified the `C:\Keys` directory on our Windows computer, and gave the new key a name of `MyNewLightsailCustomKey`\.  
-![\[Directory location C:\Keys\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-01.png)
+![\[Directory location C:\Keys\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/managing-keys-on-instance-01.png)
 
 1. Enter a passphrase for your key and press **Enter**\. You will not see the passphrase as you enter it\.
 
    You will need this passphrase later when configuring the private key on an SSH client to connect to an instance that has the public key configured on it\.  
-![\[Passphrase\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-02.png)
+![\[Passphrase\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/managing-keys-on-instance-02.png)
 
 1. Enter the passphrase again to confirm it and press **Enter**\. You will not see the passphrase as you enter it\.  
-![\[Passphrase\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-03.png)
+![\[Passphrase\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/managing-keys-on-instance-03.png)
 
 1. A prompt confirms that your private key and public key have been saved to the specified directory\.  
-![\[Identity file save location\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-04.png)
+![\[Identity file save location\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/managing-keys-on-instance-04.png)
 
 1. Open the public key \(\.PUB\) file, and copy the text in the file\.  
-![\[Copy to contents of the public key file\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-05.png)
+![\[Copy to contents of the public key file\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/managing-keys-on-instance-05.png)
 
 Continue to the next section of this guide to add your new public key to your Lightsail instance\.
 
@@ -78,7 +78,7 @@ Complete the following procedure to add the public key to your instance\. Public
 1. Choose the **Instances** tab on the Lightsail home page\.
 
 1. Choose the browser\-based SSH client icon for the instance that you want to connect to\.  
-![\[Choose the browser based SSH client\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-06.png)
+![\[Choose the browser based SSH client\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/managing-keys-on-instance-06.png)
 
 1. After you're connected, enter the following command to edit the *authorized\_keys* file using the text editor of your choice\. The following steps use Vim for demonstration purposes\.
 
@@ -87,14 +87,14 @@ Complete the following procedure to add the public key to your instance\. Public
    ```
 
    You should see a result similar to the following example, which shows the current public keys configured on your instance\. In our case, the Lightsail default key for the AWS Region in which the instance was created in, is the only public key configured on the instance\.  
-![\[Edit the authorized keys file\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-07.png)
+![\[Edit the authorized keys file\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/managing-keys-on-instance-07.png)
 
 1. Press the **I** key to enter insert mode in the Vim editor\.
 
 1. Enter a line break after the last public key on the file\.
 
 1. Paste the public key text that you copied earlier in this guide \(after creating a new key pair\)\. You should see a result similar to the following example:  
-![\[Paste the public key\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-08.png)
+![\[Paste the public key\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/managing-keys-on-instance-08.png)
 
 1. Press the **ESC** key\. Next, type `:wq!` and press **Enter** to save your edits and exit the Vim editor\.
 
@@ -119,10 +119,10 @@ Complete the following procedure to remove a public key from your instance\. Thi
 1. Press the letter **I** key to enter insert mode in the Vim editor\.
 
 1. Delete the line of text that contains the public key that you want to remove from your instance\.  
-![\[Delete old public key\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-09.png)
+![\[Delete old public key\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/managing-keys-on-instance-09.png)
 
    The result should look like the following example, where the new public key the only key that displays\.  
-![\[Keep new public key\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/managing-keys-on-instance-10.png)
+![\[Keep new public key\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/managing-keys-on-instance-10.png)
 
 1. Press the **ESC** key\. Next, type `:wq!` and press **Enter** to save your edits and exit the Vim editor\.
 

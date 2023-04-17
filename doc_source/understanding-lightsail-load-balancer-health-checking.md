@@ -7,7 +7,7 @@ By default, Lightsail performs health checks on your instances by fetching the r
 
 Health checking starts as soon as you attach your Lightsail instances to your load balancer, and it occurs every 30 seconds thereafter\. You can see the health check status on the load balancer management page\.
 
-![\[Health check status indicator\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/target-instances-health-check-passed.png)
+![\[Health check status indicator\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/target-instances-health-check-passed.png)
 
 ## Customize your health check path<a name="why-customize-health-check-path"></a>
 
@@ -20,7 +20,7 @@ You might want to customize your health check path\. For example, if your home p
 1. On the **Target instances** tab, choose **Customize health checking**\.
 
 1. Type a valid path for your health check, and then choose **Save**\.  
-![\[Customize the health check path\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/customize-health-checking-path.png)
+![\[Customize the health check path\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/customize-health-checking-path.png)
 
 ## Health check metrics<a name="health-check-metrics"></a>
 

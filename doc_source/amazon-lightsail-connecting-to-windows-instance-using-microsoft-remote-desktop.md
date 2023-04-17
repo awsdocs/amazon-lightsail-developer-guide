@@ -23,10 +23,10 @@ Complete the following procedure to get the required information\.
 1. Choose the **Connect** tab\.
 
 1. Choose **Show default password** to obtain the Windows administrator password for your instance\.  
-![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/connect-using-remote-desktop-mac-01.png)
+![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/connect-using-remote-desktop-mac-01.png)
 
    The prompt displays the default administrator password for your Windows instance\.  
-![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/connect-using-remote-desktop-mac-02.png)
+![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/connect-using-remote-desktop-mac-02.png)
 
 1. Copy the administrator password\. You will use it to sign in to your instance using the Microsoft Remote Desktop client later in this guide\.
 
@@ -37,26 +37,26 @@ Complete the following procedure to install the Microsoft Remote Desktop client 
 1. Open the App Store on your Mac, and search for **Microsoft Remote Desktop**\.
 
 1. Find the **Microsoft Remote Desktop** app in the search results, and choose **GET** to install the application\.  
-![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/connect-using-remote-desktop-mac-03.png)
+![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/connect-using-remote-desktop-mac-03.png)
 
 1. Open **Microsoft Remote Desktop** after the installation is complete\.
 
 1. At the top, choose the **plus \(\+\)** icon, and choose **Add PC**\.  
-![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/connect-using-remote-desktop-mac-04.png)
+![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/connect-using-remote-desktop-mac-04.png)
 
 1. In the **PC name** text box, paste the public IP address of your instance\.
 
 1. Choose **Add**\.  
-![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/connect-using-remote-desktop-mac-05.png)
+![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/connect-using-remote-desktop-mac-05.png)
 
 1. Right\-click the icon for your instance, and choose **Connect**\.  
-![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/connect-using-remote-desktop-mac-06.png)
+![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/connect-using-remote-desktop-mac-06.png)
 
 1. Enter **Administrator** into the **Username** text box, and enter the default administrator password that you got earlier in this guide into the **Password** text box\.
 
 1. Choose **Continue** to connect to your instance\.  
-![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/connect-using-remote-desktop-mac-07.png)
+![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/connect-using-remote-desktop-mac-07.png)
 
 You are now connected to your Lightsail Windows instance\.
 
-![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/connect-using-remote-desktop-mac-08.png)
+![\[Image NOT FOUND\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/connect-using-remote-desktop-mac-08.png)

@@ -1,13 +1,13 @@
 # Enabling and managing custom domains for your Amazon Lightsail container services<a name="amazon-lightsail-enabling-container-services-custom-domains"></a>
 
- *Last updated: January 25, 2022* 
+ *Last updated: December 29, 2022* 
 
 Enable custom domains for your Amazon Lightsail container service to use your registered domain names with your service\. Before you enable custom domains, your container service accepts traffic only for the default domain that is associated with your service when you first create it \(e\.g\., `containerservicename.123456abcdef.us-west-2.cs.amazonlightsail.com`\)\. When you enable custom domains, you choose the Lightsail SSL/TLS certificate that you created for the domains that you want to use with your container service, and then you choose the domains you want to use from that certificate\. After you enable custom domains, your container service accepts traffic for all of the domains that are associated with the certificate that you chose\.
 
 **Important**  
 If you choose a Lightsail container service as the origin of your distribution, Lightsail automatically adds the default domain name of your distribution as a custom domain on your container service\. This enables traffic to be routed between your distribution and your container service\. However, there are some circumstances in which you might need to manually add the default domain name of your distribution to your container service\. For more information, see [Add the default domain of an Amazon Lightsail distribution to Lightsail container service](amazon-lightsail-adding-distribution-default-domain-to-container-service.md)\.
 
-**Contents:**
+**Contents**
 + [Container service custom domain limits](#container-service-custom-domains-prerequisites)
 + [Prerequisites](#container-service-custom-domains-prerequisites)
 + [View custom domains for a container service](#container-service-view-custom-domains)
@@ -38,12 +38,11 @@ Complete the following procedure to view the custom domains that are currently e
 1. Choose the name of the container service for which you want to view the enabled custom domains\.
 
 1. Locate the custom domain values in the heading of the container service management page, as shown in the following example\. These are the custom domains that are currently enabled for the container service\.  
-![\[Custom domains for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-service-custom-domains-heading.png)
+![\[Custom domains for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/container-service-custom-domains-heading.png)
 
 1. On the container service management page, choose the **Custom domains** tab\.
 
-   The certificates currently attached to your container service, and the custom domains being used under each attached certificate, are listed under the **Custom domain SSL/TLS certificates** section of the page\.  
-![\[Custom domain certificates for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-service-custom-domains-certificate.png)
+   The custom domains being used under each attached certificate, are listed under the **Custom domain SSL/TLS certificates** section of the page\. The certificates currently attached to your container service, are listed under the **Attached certificates** section\.
 
 ## Enable custom domains for a container service<a name="container-service-enable-custom-domains"></a>
 
@@ -57,23 +56,23 @@ Complete the following procedure to enable custom domains for your Lightsail con
 
 1. On the container service management page, choose the **Custom domains** tab\.
 
-   The **Custom domains** page displays the SSL/TLS certificates currently attached to your container service, if any\. It also displays the SSL/TLS certificates that you previously created\.
+   The **Custom domains** page displays the SSL/TLS certificates currently attached to your container service, if any\.
 
 1. Choose **Attach certificate**\.
 
-   If you have no certificates, then you must first create an SSL/TLS certificate for your domains, and then validate it, before you can attach it to your container service\. For more information, see [Creating SSL/TLS certificates for your Amazon Lightsail container services](amazon-lightsail-creating-container-services-certificates.md)\.
+   If you have no certificates, then you must first create and validate an SSL/TLS certificate for your domains, before you can attach it to your container service\. For more information, see [Creating SSL/TLS certificates for your Amazon Lightsail container services](amazon-lightsail-creating-container-services-certificates.md)\.
 
-1. In the dropdown menu that appears, select a valid certificate for the domains that you want to use with your container service\.  
-![\[Choosing a custom domain for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-service-custom-domains-picker.png)
+1. In the dropdown menu that appears, select a valid certificate for the domain\(s\) that you want to use with your container service\.
 
-1. Choose the domains for the selected certificate that you want to use with your container service\.  
-![\[Choosing a custom domain for a container service in the Lightsail console\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/container-service-custom-domains-picker-checkbox.png)
+1. Verify the certificate information is correct, then choose **Attach**\.
 
-1. Choose **Attach**\. After a few moments, traffic for the domain that you selected will begin to be accepted by your container service\.
-**Important**  
-If you haven't already done so, modify the DNS of your domain to route traffic for your domain to your container service\. For more information, see [Routing traffic for a domain in Amazon Lightsail to a Lightsail container service](amazon-lightsail-point-domain-to-container-service.md) or [Routing traffic for a domain in Route 53 to an Amazon Lightsail container service](amazon-lightsail-route-53-alias-record-for-container-service.md)\.
+1. The container service's **Status** will change to **Updating**\. After the status changes to **Ready**, the certificate's domain will appear in the **Custom domains** section\.
 
-   If you already added the DNS records to the DNS of your domain, then open a new browser window and browse to the custom domain that you enabled for your container service\. The application that is running on your container service, if any, should load\.
+1. Choose **Add domain assignment** to point the domain to your container service\.
+
+1. Verify the certificate and DNS information are correct, then choose **Add assignment**\. After a few moments, traffic for the domain that you selected will begin to be accepted by your container service\.
+
+1. After you've added the domain assignment, open a new browser window and browse to the custom domain that you enabled for your container service\. The application that is running on your container service, if any, should load\.
 
 ## Disable custom domains for a container service<a name="container-service-disable-custom-domains"></a>
 
@@ -87,15 +86,13 @@ Complete the following procedure to disable custom domains for your Lightsail co
 
 1. On the container service management page, choose the **Custom domains** tab\.
 
-   The **Custom domains** page displays the SSL/TLS certificates currently attached to your container service, if any\. It also displays the SSL/TLS certificates that you previously created\.
-
-1. Choose the actions menu \(⋮\) for the certificate of the custom domains that you want to disable\.
+   The **Custom domains** page displays the SSL/TLS certificates currently attached to your container service, if any\.
 
 1. Choose one of the following options:
 
-   1. Choose **Detach** to detach the certificate from the container service, and disable all of its associated domains from the service\.
+   1. Choose **Configure container service domains** to either deselect domains that were previously selected, or to select more domains that are associated to the container service\.
 
-   1. Choose **Modify** to either deselect domains that were previously selected, or to select more domains that are associated to the container service\.
+   1. Choose **Detach** to detach the certificate from the container service, and  remove all of its associated domains from the service\.
 **Important**  
 If you haven't already done so, modify the DNS records of your domain so that traffic routes stops routing to your container service and instead routes to another resource\.
 

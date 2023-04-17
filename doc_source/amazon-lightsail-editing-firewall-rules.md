@@ -1,4 +1,4 @@
-# Adding and editing firewall rules in Amazon Lightsail<a name="amazon-lightsail-editing-firewall-rules"></a>
+# Adding and editing instance firewall rules in Amazon Lightsail<a name="amazon-lightsail-editing-firewall-rules"></a>
 
  *Last updated: February 22, 2022* 
 

@@ -1,6 +1,6 @@
 # Configure your Amazon Lightsail instances for load balancing<a name="configure-lightsail-instances-for-load-balancing"></a>
 
- *Last updated: November 29, 2017* 
+ *Last updated: December 01, 2022* 
 
 Before you attach instances to your Lightsail load balancer, you need to evaluate your application's configuration\. For example, load balancers often work better when the data tier is separated from the rest of the application\. This topic tells you about each Lightsail instance and makes recommendations about whether to load balance \(or *horizontally scale*\) and how to best configure your application\.
 
@@ -14,31 +14,27 @@ For Lightsail applications that use a database, we recommend that you separate t
 
  **Configuration recommendations before using a Lightsail load balancer** 
 + Separate your database so that every WordPress instance running behind the load balancer is storing and retrieving information from the same place\. If you need more performance from your database, you can replicate or change the processing power or memory independently of your web server\.
-+ Use a WordPress plugin that lets you store your files in Amazon S3\. This gives you a centralized place for your content or images, rather than keeping separate copies on each target instance\. That way, if you edit your content or change an image, the updates get picked up from the centralized store and your users see the same content, regardless of which instance they hit\.
-
-   [Find WordPress Amazon S3 plugins](https://wordpress.org/plugins/tags/s3/) 
-
-See [WordPress on AWS](https://cloudonaut.io/wordpress-on-aws-you-are-holding-it-wrong/)\.
++ Offload your files and static content to a Lightsail bucket\. To do this, you must install the WP Offload Media Lite plugin on your WordPress website and configure it to connect to your Lightsail bucket\. For more information, see [Tutorial: Connecting a WordPress instance to an Amazon Lightsail bucket](amazon-lightsail-connecting-buckets-to-wordpress.md)\.
 
 ## Node\.js<a name="configure-node-js-application-for-lightsail-load-balancer"></a>
 
 **Horizontally scale?** Yes, with some considerations\.
 
  **Configuration recommendations before using a Lightsail load balancer** 
-+ In Lightsail, the Node\.js stack certified by Bitnami contains Node\.js, Apache, Redis \(an in\-memory database\), and Python\. Depending on the application you're deploying, you can load balance across a few servers\. However, you would need to configure a load balancer to balance the traffic among all the web servers and move Redis to another server\.
++ In Lightsail, the Node\.js stack packaged by Bitnami contains Node\.js, Apache, Redis \(an in\-memory database\), and Python\. Depending on the application you're deploying, you can load balance across a few servers\. However, you would need to configure a load balancer to balance the traffic among all the web servers and move Redis to another server\.
 + Split the Redis server to another server to communicate with all the instances\. Add a database server, if necessary\.
 + One of the primary use cases for Redis is to cache data locally so you don't have to constantly hit the central database\. We recommend that you enable session persistence to leverage the performance improvement from Redis\. For more information, see [Enable session persistence for Amazon Lightsail load balancers](enable-session-stickiness-persistence-or-change-cookie-duration.md)\.
 + You can also have a shared Redis node, so you can also share a node or use a local cache on each machine using session persistence\.
 + Consider including the `mod_proxy_balancer` in the Apache server, if you want to deploy a load balancer using Apache\.
 
-For more information, see [Scaling Node\.js applications](https://medium.freecodecamp.org/scaling-node-js-applications-8492bd8afadc)\.
+For more information, see [Scaling Node\.js applications](https://www.freecodecamp.org/news/scaling-node-js-applications-8492bd8afadc)\.
 
 ## Magento<a name="configure-magento-application-for-lightsail-load-balancer"></a>
 
 **Horizontally scale? ** Yes\.
 
  **Configuration recommendations before using a Lightsail load balancer** 
-+ You can use an AWS reference deployment of Magento that uses additional components, such as an Amazon RDS database: [Magento on the AWS Cloud: Quick Start Reference Deployment](http://docs.aws.amazon.com/quickstart/latest/magento/welcome.html)\.
++ You can use an AWS reference deployment of Magento that uses additional components, such as an Amazon RDS database: [Terraform Magento Adobe Commerce on AWS ](https://aws.amazon.com/quickstart/terraform-modules/magento-commerce/)\.
 + Be sure to enable session persistence\. Magento uses a shopping cart, and this helps ensure that customers who make multiple visits across more than one session will retain items in their shopping carts when they return for a new session\. For more information, see [Enable session persistence for Amazon Lightsail load balancers](enable-session-stickiness-persistence-or-change-cookie-duration.md)\.
 
 ## GitLab<a name="configure-gitlab-application-for-lightsail-load-balancer"></a>
@@ -52,17 +48,14 @@ You must have the following:
 + A shared network storage server \(NFS\)
 + A centralized database \(MySQL or PostgreSQL\) for the application\. See the general guidelines about databases, above\.
 
-For more information, see the following articles on the GitLab website\.
-+  [High Availability](https://docs.gitlab.com/ee/administration/high_availability/) 
-+  [Configuring GitLab for HA](https://docs.gitlab.com/ce/administration/high_availability/gitlab.html) 
-+  [High Availability on AWS](https://docs.gitlab.com/ce/university/high-availability/aws/) 
+For more information, see [High Availability](https://docs.gitlab.com/ee/administration/reference_architectures/#high-availability-ha)on the *GitLab* website\.
 
 **Note**  
-The shared network storage server \(NFS\) referred to in the above links is not currently available with the GitLab blueprint\.
+The shared network storage server \(NFS\) referred to above, is not currently available with the GitLab blueprint\.
 
 ## Drupal<a name="configure-drupal-application-for-lightsail-load-balancer"></a>
 
-**Horizontally scale?** Yes\. Drupal has an official document describing how to horizontally scale your application: [Server Scaling](https://www.drupal.org/docs/8/managing-site-performance-and-scalability/server-scaling)\.
+**Horizontally scale?** Yes\. Drupal has an official document describing how to horizontally scale your application: [Server Scaling](https://www.drupal.org/docs/managing-site-performance-and-scalability/server-scaling)\.
 
  **Configuration recommendations before using a Lightsail load balancer** 
 
@@ -72,7 +65,7 @@ Use a module that lets you store your files in Amazon S3\. This gives you a cent
 +  [Amazon S3 File System](https://www.drupal.org/project/s3fs) 
 +  [Content Synchronization](https://www.drupal.org/project/content_sync) 
 
-For more information, see [Horizontal and Vertical Scaling](http://chimera.labs.oreilly.com/books/1230000000845/ch07.html) or [Scaling Drupal horizontally and in cloud](https://www.slideshare.net/burgerboydaddy/scaling-drupal-horizontally-and-in-cloud)\.
+For more information, see [Scaling Drupal horizontally and in cloud](https://www.slideshare.net/burgerboydaddy/scaling-drupal-horizontally-and-in-cloud)\.
 
 ## LAMP stack<a name="configure-lamp-application-for-lightsail-load-balancer"></a>
 

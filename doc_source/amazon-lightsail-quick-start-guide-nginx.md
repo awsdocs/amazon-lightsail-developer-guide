@@ -1,6 +1,6 @@
 # Quick start guide: Nginx on Amazon Lightsail<a name="amazon-lightsail-quick-start-guide-nginx"></a>
 
- *Last updated: August 13, 2018* 
+ *Last updated: December 8, 2022* 
 
 Here are a few steps you should take to get started after your Nginx instance is up and running on Amazon Lightsail:
 
@@ -19,17 +19,17 @@ You need the default application password to access pre\-installed applications 
 If you're in a directory other than the user home directory, then enter `cat $HOME/bitnami_application_password`\.
 
    You should see a response similar to this, which contains the default application password:  
-![\[Bitnami default application password.\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-bitnami-application-password.png)
+![\[Bitnami default application password.\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-bitnami-application-password.png)
 
-For more information, see [Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
+For more information, see [Getting the application user name and password for your Bitnami instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
 
 ## Step 2: Attach a static IP address to your Nginx instance<a name="amazon-lightsail-nginx-attach-static-ip"></a>
 
-The default dynamic public IP address attached to your instance changes every time you stop and start the instance\. Create a static IP address, and attach it to your instance, to keep the public IP address from changing\. Later, when you use your domain name with your instance, you don’t have to update your domain’s DNS records each time you stop and start the instance\.
+The default dynamic public IP address attached to your instance changes every time you stop and start the instance\. Create a static IP address, and attach it to your instance, to keep the public IP address from changing\. Later, when you use your domain name with your instance, you don’t have to update your domain’s DNS records each time you stop and start the instance\. You can attach one static IP to an instance\.
 
-On your instance management page, under the **Networking** tab, choose **Create static IP**, then follow the instructions on the page\.
+On your instance management page, under the **Domains & DNS** tab, choose **Create static IP**, then follow the instructions on the page\.
 
-For more information, see [Create a static IP and attach it to an instance in Amazon Lightsail](lightsail-create-static-ip.md)\.
+For more information, see [Create a static IP and attach it to an instance in Lightsail](lightsail-create-static-ip.md)\.
 
 ## Step 3: Visit your Nginx instance welcome page<a name="amazon-lightsail-nginx-sign-in"></a>
 
@@ -39,7 +39,7 @@ Navigate to the public IP address of your instance to access the application ins
 
 1. Browse to the public IP address, for example by going to `http://192.0.2.3`\.
 
-For more information, see [Getting the application user name and password for your 'Certified by Bitnami' instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
+For more information, see [Getting the application user name and password for your Bitnami instance in Amazon Lightsail](log-in-to-your-bitnami-application-running-on-amazon-lightsail.md)\.
 
 ## Step 4: Map your domain name to your Nginx instance<a name="amazon-lightsail-nginx-map-your-domain-to-your-instance"></a>
 
@@ -51,9 +51,9 @@ For more information, see [Creating a DNS zone to manage your domain’s DNS rec
 
 ## Step 5: Read the Bitnami documentation<a name="amazon-lightsail-nginx-read-the-bitnami-documentation"></a>
 
-Read the Bitnami documentation to learn how to deploy your Nginx application, enable HTTPs support with SSL certificates, upload files to the server with SFTP, and more\.
+Read the Bitnami documentation to learn how to deploy your Nginx application, enable HTTPS support with SSL certificates, upload files to the server with SFTP, and more\.
 
-For more information, see the [Bitnami Nginx for AWS cloud](https://docs.bitnami.com/aws/infrastructure/nginx/)\.
+For more information, see the [Bitnami Nginx for AWS Cloud](https://docs.bitnami.com/aws/infrastructure/nginx/)\.
 
 ## Step 6: Create a snapshot of your Nginx instance<a name="amazon-lightsail-nginx-create-a-snapshot"></a>
 

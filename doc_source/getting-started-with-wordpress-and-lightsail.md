@@ -19,9 +19,11 @@ Here's how to log in to your WordPress blog\.
 1. Paste the IP address into your browser\.
 
    You should see something like this:  
-![\[WordPress blog made using Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/wordpress-blog-lightsail-bitnami-new.png)
+![\[WordPress blog made using Lightsail\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/wordpress-blog-lightsail-bitnami-new.png)
 
 1. Choose **Manage** in the lower right corner\.
+
+   If the **Manage** banner is not shown, you can reach the sign in page by browsing to `http://<PublicIP>/wp-login.php`\. Replace `<PublicIP>` with the public IP address of your instance\.
 
 1. Choose **Login** to log in to the admin console\.
 
@@ -40,23 +42,23 @@ Here's how to log in to your WordPress blog\.
 If you're in a directory other than the user home directory, then type `cat $HOME/bitnami_application_password`\.
 
    You should see something like this:  
-![\[Getting the WordPress password from the browser-based SSH terminal\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-bitnami-wordpress-password.png)
+![\[Getting the WordPress password from the browser-based SSH terminal\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-bitnami-wordpress-password.png)
 
 1. Highlight your password in the terminal screen, then choose the clipboard icon\.
 
 1. Highlight the text you want to copy in the clipboard text box, then press Ctrl\+C or Cmd\+C to copy the text to your local clipboard\.  
-![\[Copying text using the browser-based clipboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/lightsail-terminal-ssh-rdp-clipboard.png)
+![\[Copying text using the browser-based clipboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/lightsail-terminal-ssh-rdp-clipboard.png)
 **Important**  
-You should save your password somewhere at this time\. You can always change it later to something that's easier to remember\.
+You should save your password somewhere at this time\. You can always change it later\.
 
 1. Paste your password into the WordPress login page, and then choose **Log In**\.
 
    If you succeed, you'll see the WordPress Dashboard\.  
-![\[Successful login to the WordPress Dashboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-wordpress-dashboard.png)
+![\[Successful login to the WordPress Dashboard\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-wordpress-dashboard.png)
 
 ## Step 2: Update your profile or password in the WordPress Dashboard<a name="create-a-new-admin-user-in-wordpress"></a>
 
-Now that you have access to your WordPress Dashboard, you can create another user or change your password to something that's easier to remember\.
+Now that you have access to your WordPress Dashboard, you can create another user or change your password\.
 
 1. Choose **Users**\.
 

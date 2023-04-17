@@ -54,7 +54,7 @@ You must install the AWS CLI and configure it for Lightsail and Amazon S3 before
    ```
 
    You should see a result similar to the following example:  
-![\[Result of the update bucket bundle request\]](https://d9yljz1nd5001.cloudfront.net/en_us/1490b6b36a8ed9d4b2232825b79c8222/images/amazon-lightsail-update-bucket-bundle-cli.png)
+![\[Result of the update bucket bundle request\]](https://d9yljz1nd5001.cloudfront.net/en_us/f1c62fa5316bf1df017e7afb5a0e0a21/images/amazon-lightsail-update-bucket-bundle-cli.png)
 
 ## Managing buckets and objects in Lightsail<a name="changing-plan-managing-buckets-and-objects"></a>
 
